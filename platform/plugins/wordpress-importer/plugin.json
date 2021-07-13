@@ -1,9 +1,0 @@
-{
-    "name": "Wordpress Import",
-    "namespace": "Platform\\WordpressImporter\\",
-    "provider": "Platform\\WordpressImporter\\Providers\\WordpressImporterServiceProvider",
-    "author": "Laravel Technologies",
-    "url": "https://laravel-cms.demo.gistensal.com",
-    "version": "1.0",
-    "description": "Import your wordpress posts, pages, categories, tags, and users from the WP XML export file."
-}

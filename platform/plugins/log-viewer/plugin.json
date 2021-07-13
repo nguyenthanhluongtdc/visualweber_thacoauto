@@ -1,0 +1,9 @@
+{
+    "name": "Log Viewer",
+    "namespace": "Platform\\LogViewer\\",
+    "provider": "Platform\\LogViewer\\Providers\\LogViewerServiceProvider",
+    "author": "Developer Team",
+    "url": "https://laravel-cms.demo.gistensal.com",
+    "version": "5.3",
+    "description": "Provides a log viewer for Laravel CMS"
+}

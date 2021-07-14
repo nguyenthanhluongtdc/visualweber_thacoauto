@@ -26,7 +26,7 @@
         "platform/plugin-management": "*@dev",
         "platform/shortcode": "*@dev",
         "platform/theme": "*@dev",
-        "stancl/tenancy": "^3.4",
+        "stancl/tenancy": "*@dev",
         "wikimedia/composer-merge-plugin": "^2.0"
     },
     "require-dev": {
@@ -108,6 +108,10 @@
         {
             "type": "path",
             "url": "./platform/packages/*"
+        },
+        {
+            "type": "path",
+            "url": "./platform/addons/*"
         }
     ]
 }

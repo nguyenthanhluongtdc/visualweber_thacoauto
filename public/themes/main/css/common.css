@@ -1,0 +1,254 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "MyriadPro-Cond";
+  src: url("../fonts/MyriadPro-Cond.eot");
+  src: url("../fonts/MyriadPro-Cond.eot?#iefix") format("embedded-opentype"), url("../fonts/MyriadPro-Cond.woff") format("woff"), url("../fonts/MyriadPro-Cond.ttf") format("truetype"), url("../fonts/MyriadPro-Cond.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MyriadPro-BoldCond";
+  src: url("../fonts/MyriadPro-BoldCond.eot");
+  src: url("../fonts/MyriadPro-BoldCond.eot?#iefix") format("embedded-opentype"), url("../fonts/MyriadPro-BoldCond.woff") format("woff"), url("../fonts/MyriadPro-BoldCond.ttf") format("truetype"), url("../fonts/MyriadPro-BoldCond.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.container-remake {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.color-white {
+  color: #fff;
+}
+
+.color-gray {
+  color: #3b3b3b;
+}
+
+.font-pri-bold {
+  font-family: "MyriadPro-BoldCond";
+}
+
+.font-pri {
+  font-family: "MyriadPro-Cond";
+}
+
+.font60 {
+  font-size: 60px;
+}
+
+.font20 {
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.font18 {
+  font-size: 18px;
+}
+
+.header {
+  background: #01498b;
+  height: 90px;
+}
+.header .header-wrap {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.header .header-wrap .main-menu {
+  margin-left: 54px;
+}
+.header .header-wrap .main-menu ul {
+  display: flex;
+  align-items: center;
+}
+.header .header-wrap .main-menu ul li {
+  margin-right: 30px;
+}
+.header .header-wrap .main-menu ul li a {
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.slider-main-carousel .slider-main-item {
+  position: relative;
+}
+.slider-main-carousel .slider-main-item img {
+  position: relative;
+}
+.slider-main-carousel .slider-main-item img::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: red;
+}
+.slider-main-carousel .slider-main-item .content-slider {
+  position: absolute;
+  bottom: 177px;
+  left: 10%;
+  color: #fff;
+  width: 32%;
+  z-index: 2;
+}
+.slider-main-carousel .slider-main-item .content-slider p {
+  font-size: 25px;
+  margin: 30px 0 40px 0;
+}
+.slider-main-carousel .slider-main-item .content-slider a {
+  background: #01498b;
+  padding: 12px 30px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.slider-main-carousel .slider-main-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.slider-main-carousel .owl-dots {
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background: #01498b;
+}
+
+.owl-theme .owl-dots .owl-dot {
+  outline: none;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  width: 15px;
+  height: 15px;
+}
+
+.section-news-home {
+  padding: 90px 0 60px 0;
+}
+.section-news-home h2 {
+  margin-bottom: 50px;
+}
+.section-news-home .content {
+  display: flex;
+  justify-content: space-between;
+}
+.section-news-home .content .left {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.section-news-home .content .left .item {
+  display: flex;
+  justify-content: space-between;
+}
+.section-news-home .content .left .item .item-img {
+  width: 69%;
+}
+.section-news-home .content .left .item .item-img img {
+  width: 100%;
+}
+.section-news-home .content .left .item .item-content {
+  width: 29%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.section-news-home .content .left .item .item-content h3 {
+  font-size: 30px;
+  color: #444444;
+  margin-bottom: 45px;
+  text-align: justify;
+}
+.section-news-home .content .left .item .item-content p.desc {
+  flex: 1;
+  text-align: justify;
+  color: #777676;
+}
+.section-news-home .content .left .item .item-content .city-day {
+  color: #8b8b8b;
+}
+.section-news-home .content .left .item:first-child {
+  width: 100%;
+  margin-bottom: 40px;
+}
+.section-news-home .content .left .item:nth-child(2), .section-news-home .content .left .item:nth-child(3), .section-news-home .content .left .item:nth-child(4) {
+  width: 31%;
+}
+.section-news-home .content .left .item:nth-child(2) .item-img, .section-news-home .content .left .item:nth-child(3) .item-img, .section-news-home .content .left .item:nth-child(4) .item-img {
+  display: none;
+}
+.section-news-home .content .left .item:nth-child(2) .item-content, .section-news-home .content .left .item:nth-child(3) .item-content, .section-news-home .content .left .item:nth-child(4) .item-content {
+  width: 100%;
+}
+.section-news-home .content .left .item:nth-child(2) .item-content h3, .section-news-home .content .left .item:nth-child(3) .item-content h3, .section-news-home .content .left .item:nth-child(4) .item-content h3 {
+  font-size: 20px;
+}
+.section-news-home .content .left .item:nth-child(2) .item-content p.desc, .section-news-home .content .left .item:nth-child(3) .item-content p.desc, .section-news-home .content .left .item:nth-child(4) .item-content p.desc {
+  margin-bottom: 60px;
+  height: 75px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.section-news-home .content .right {
+  width: 29%;
+}
+
+/*# sourceMappingURL=common.css.map */

@@ -1,0 +1,52 @@
+.container-remake{
+    width: 80%;
+    margin: 0 auto;
+}
+.color-white{
+    color: #fff;
+}
+.color-gray{
+    color: #3b3b3b;
+}
+.font-pri-bold{
+    font-family: $font-primary-bold;
+}
+.font-pri{
+    font-family: $font-primary;
+}
+.font60{
+    font-size: 60px;
+}
+.font20{
+    font-size: 20px;
+    line-height: 20px;
+}
+.font18{
+    font-size: 18px;
+}
+.header{
+    background: $color-primary;
+    height: 90px;
+    
+    .header-wrap{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        .main-menu{
+            margin-left: 54px;
+            ul{
+                display: flex;
+                align-items: center;
+                li{
+                    margin-right: 30px;
+                    a{
+                        text-transform: uppercase;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+

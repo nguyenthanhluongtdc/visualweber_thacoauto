@@ -2,6 +2,8 @@
 
 namespace Platform\RequestLog\Providers;
 
+use Platform\AuditLog\Models\AuditHistory;
+use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Routing\Events\RouteMatched;
 use Platform\Base\Supports\Helper;
 use Platform\Base\Traits\LoadAndPublishDataTrait;
@@ -56,6 +58,10 @@ class RequestLogServiceProvider extends ServiceProvider
 
         $this->app->booted(function () {
             $this->app->register(HookServiceProvider::class);
+
+            $schedule = $this->app->make(Schedule::class);
+
+            $schedule->command('model:prune', ['--model' => AuditHistory::class])->dailyAt('00:30');
         });
     }
 }

@@ -3,9 +3,12 @@
 namespace Platform\RequestLog\Models;
 
 use Platform\Base\Models\BaseModel;
+use Illuminate\Database\Eloquent\MassPrunable;
 
 class RequestLog extends BaseModel
 {
+    use MassPrunable;
+
     /**
      * The database table used by the model.
      *
@@ -40,4 +43,12 @@ class RequestLog extends BaseModel
         'referrer' => 'json',
         'user_id'  => 'json',
     ];
+
+    /**
+     * @return \Illuminate\Database\Query\Builder
+     */
+    public function prunable()
+    {
+        return $this->whereDate('created_at', '>', now()->subDays(30)->toDateString());
+    }
 }

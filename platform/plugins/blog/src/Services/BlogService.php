@@ -77,9 +77,9 @@ class BlogService
                     Theme::breadcrumb()->add($category->name, $category->url);
                 }
 
-                Theme::breadcrumb()->add($post->name, $post->url);
-
                 do_action(BASE_ACTION_PUBLIC_RENDER_SINGLE, POST_MODULE_SCREEN_NAME, $post);
+
+                Theme::breadcrumb()->add(SeoHelper::getTitle(), $post->url);
 
                 return [
                     'view'         => 'post',
@@ -122,11 +122,11 @@ class BlogService
                 $posts = app(PostInterface::class)
                     ->getByCategory($allRelatedCategoryIds, theme_option('number_of_posts_in_a_category', 12));
 
+                do_action(BASE_ACTION_PUBLIC_RENDER_SINGLE, CATEGORY_MODULE_SCREEN_NAME, $category);
+
                 Theme::breadcrumb()
                     ->add(__('Home'), route('public.index'))
-                    ->add($category->name, $category->url);
-
-                do_action(BASE_ACTION_PUBLIC_RENDER_SINGLE, CATEGORY_MODULE_SCREEN_NAME, $category);
+                    ->add(SeoHelper::getTitle(), $category->url);
 
                 return [
                     'view'         => 'category',
@@ -156,11 +156,11 @@ class BlogService
 
                 $posts = get_posts_by_tag($tag->id, theme_option('number_of_posts_in_a_tag', 12));
 
+                do_action(BASE_ACTION_PUBLIC_RENDER_SINGLE, TAG_MODULE_SCREEN_NAME, $tag);
+
                 Theme::breadcrumb()
                     ->add(__('Home'), route('public.index'))
-                    ->add($tag->name, $tag->url);
-
-                do_action(BASE_ACTION_PUBLIC_RENDER_SINGLE, TAG_MODULE_SCREEN_NAME, $tag);
+                    ->add(SeoHelper::getTitle(), $tag->url);
 
                 return [
                     'view'         => 'tag',

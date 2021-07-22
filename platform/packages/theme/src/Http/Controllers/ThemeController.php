@@ -139,7 +139,7 @@ class ThemeController extends BaseController
     {
         $file = public_path('themes/' . Theme::getThemeName() . '/css/style.integration.css');
         $css = $request->input('custom_css');
-        $css = htmlspecialchars(strip_tags($css));
+        $css = strip_tags($css);
 
         if (empty($css)) {
             File::delete($file);

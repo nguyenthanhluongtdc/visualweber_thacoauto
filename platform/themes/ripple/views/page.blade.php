@@ -1,5 +1,5 @@
 @if (!BaseHelper::isHomepage($page->id))
-    @php Theme::set('section-name', $page->name) @endphp
+    @php Theme::set('section-name', SeoHelper::getTitle()) @endphp
     <article class="post post--single">
         <div class="post__content">
             @if (defined('GALLERY_MODULE_SCREEN_NAME') && !empty($galleries = gallery_meta_data($page)))

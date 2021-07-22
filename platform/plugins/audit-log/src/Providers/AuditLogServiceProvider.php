@@ -2,7 +2,6 @@
 
 namespace Platform\AuditLog\Providers;
 
-use Platform\AuditLog\Commands\CleanOldLogsCommand;
 use Platform\AuditLog\Facades\AuditLogFacade;
 use Platform\AuditLog\Models\AuditHistory;
 use Platform\AuditLog\Repositories\Caches\AuditLogCacheDecorator;
@@ -65,7 +64,7 @@ class AuditLogServiceProvider extends ServiceProvider
 
             $schedule = $this->app->make(Schedule::class);
 
-            $schedule->command(CleanOldLogsCommand::class)->dailyAt('00:30');
+            $schedule->command('model:prune', ['--model' => AuditHistory::class])->dailyAt('00:30');
         });
     }
 }

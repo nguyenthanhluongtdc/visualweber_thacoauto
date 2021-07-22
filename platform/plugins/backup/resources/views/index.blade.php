@@ -7,6 +7,12 @@
         </div>
     @endif
 
+    <div class="note note-warning">
+        <p>{!! clean(trans('plugins/backup::backup.important_message1')) !!}</p>
+        <p>{!! clean(trans('plugins/backup::backup.important_message2')) !!}</p>
+        <p>{!! clean(trans('plugins/backup::backup.important_message3')) !!}</p>
+    </div>
+
     @if (auth()->user()->hasPermission('backups.create'))
         <p><button class="btn btn-primary" id="generate_backup">{{ trans('plugins/backup::backup.generate_btn') }}</button></p>
     @endif

@@ -60,12 +60,12 @@ class GalleryService
 
         Gallery::registerAssets();
 
+        do_action(BASE_ACTION_PUBLIC_RENDER_SINGLE, GALLERY_MODULE_SCREEN_NAME, $gallery);
+
         Theme::breadcrumb()
             ->add(__('Home'), route('public.index'))
             ->add(__('Galleries'), route('public.galleries'))
-            ->add($gallery->name, $gallery->url);
-
-        do_action(BASE_ACTION_PUBLIC_RENDER_SINGLE, GALLERY_MODULE_SCREEN_NAME, $gallery);
+            ->add(SeoHelper::getTitle(), $gallery->url);
 
         return [
             'view'         => 'gallery',

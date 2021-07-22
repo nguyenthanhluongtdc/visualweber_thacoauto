@@ -6,8 +6,8 @@
 
 return [
     'offline'        => env('ASSETS_OFFLINE', true),
-    'enable_version' => env('ASSETS_ENABLE_VERSION', false),
-    'version'        => env('ASSETS_VERSION', time()),
+    'enable_version' => env('ASSETS_ENABLE_VERSION', true),
+    'version'        => env('ASSETS_VERSION', get_cms_version()),
     'scripts'        => [
         'respond',
         'excanvas',

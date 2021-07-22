@@ -81,11 +81,11 @@ class PageService
                 ->registerLink(trans('packages/page::pages.edit_this_page'), route('pages.edit', $page->id));
         }
 
+        do_action(BASE_ACTION_PUBLIC_RENDER_SINGLE, PAGE_MODULE_SCREEN_NAME, $page);
+
         Theme::breadcrumb()
             ->add(__('Home'), route('public.index'))
-            ->add($page->name, $page->url);
-
-        do_action(BASE_ACTION_PUBLIC_RENDER_SINGLE, PAGE_MODULE_SCREEN_NAME, $page);
+            ->add(SeoHelper::getTitle(), $page->url);
 
         return [
             'view'         => 'page',

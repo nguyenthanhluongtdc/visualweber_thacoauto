@@ -1,5 +1,77 @@
 </div>
 
+
+<footer class="footer" id="footer">
+    <div class="footer-wrap container-remake">
+        <div class="footer-left">
+            <a href="{{ route('public.single') }}" class="logo-bottom">
+                <img src="{{ Theme::asset()->url('images/main/logobt.png') }}" alt="THACO AUTO" height="34">
+            </a>
+            <div class="thaco-contact">
+                <h1 class="font-pri-bold color-pri">CÔNG TY TNHH THACO AUTO</h1>
+                <p class="address font-pri font18">
+                    <span>Địa chỉ:</span>
+                    <span>KCN Cơ khí ô tô Chu Lai Trường Hải, Xã Tam Hiệp, Huyện Núi Thành, Tỉnh Quảng Nam ( Tìm vị trí )</span>
+                </p>
+                <p class="tax-code font-pri font18  ">
+                    <span>Mã số thuế:</span>
+                    <span> 4001221658</span>
+                </p>
+            </div>
+
+            <div class="footer-left-bottom">
+                <div class="img-bct">
+                    <img src="{{ Theme::asset()->url('images/main/bct.png') }}" alt="Bộ công thương">
+                </div>
+                <ul class="list-media">
+                    <li><a href=""><img src="{{ Theme::asset()->url('images/main/iconfb.png') }}" alt="facebook"></a></li>
+                    <li><a href=""><img src="{{ Theme::asset()->url('images/main/iconin.png') }}" alt="in"></a></li>
+                    <li><a href=""><img src="{{ Theme::asset()->url('images/main/iconyt.png') }}" alt="youtube"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-right">
+                <div class="item">
+                    <p class="title font-pri-bold font30 color-gray">Giới thiệu</p>
+                    <ul class="font-pri font18">
+                        <li><a href="" class="color-gray">Lĩnh vực hoạt động</a></li>
+                        <li><a href="" class="color-gray">Sản phẩm dịch vụ</a></li>
+                        <li><a href="" class="color-gray">Công ty tỉnh thành</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <p class="title font-pri-bold font30 color-gray">Truyền thông</p>
+                    <ul class="font-pri font18">
+                        <li><a href="" class="color-gray">Tin tức hoạt động</a></li>
+                        <li><a href="" class="color-gray">Hoạt động cộng đồng</a></li>
+                        <li><a href="" class="color-gray">Bản tin Thaco Auto</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <p class="title font-pri-bold font30 color-gray">Liên hệ</p>
+                    <ul class="font-pri font18">
+                        <li class="color-gray"><span>Hotline: </span><span><a href="tel:0980909789" class="color-gray">0980909789</a></span></li>
+                        <li class="color-gray"><span>Email: </span><span><a href="mailto:Thacoauto@gmail.com" class="color-gray">Thacoauto@gmail.com</a></span></li>
+                        <li class="color-gray"><span>Fax: </span><span><a href="tel:0980909789" class="color-gray">0980909789</a></span></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <p class="title font-pri-bold font30 color-gray">Chính sách bảo mật thông tin</p>
+                    <ul class="font-pri font18">
+                        <li><a href="" class="color-gray">Chính sách bảo mật</a></li>
+                        <li><a href="" class="color-gray">Các điều khoản và điều kiện</a></li>
+                    </ul>
+                </div>
+        </div>
+    </div>
+</footer>
+
+<div class="end-web" style="background: url('{{ Theme::asset()->url('images/main/end.jpg') }}')">
+    <div class="container-remake">
+        <p class="font-pri color-white">Giấy phép kinh doanh: 4001221658</p>
+    </div>
+</div>
+
 <!-- JS Library-->
 {!! Theme::footer() !!}
 

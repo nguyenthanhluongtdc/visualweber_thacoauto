@@ -2,11 +2,17 @@
     width: 80%;
     margin: 0 auto;
 }
+a:hover{
+    color: $color-primary;
+}
+.color-pri{
+    color: $color-primary;
+}
 .color-white{
     color: #fff;
 }
 .color-gray{
-    color: #3b3b3b;
+    color: #2e3a41;
 }
 .font-pri-bold{
     font-family: $font-primary-bold;
@@ -14,8 +20,20 @@
 .font-pri{
     font-family: $font-primary;
 }
+.font-cond{
+    font-family: $font-cond;
+}
 .font60{
     font-size: 60px;
+}
+.font40{
+    font-size: 40px;
+}
+.font30{
+    font-size: 30px;
+}
+.font25{
+    font-size: 25px;
 }
 .font20{
     font-size: 20px;

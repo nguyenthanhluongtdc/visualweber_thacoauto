@@ -44,14 +44,15 @@
             </div>
             <div class="main-menu">
                 <ul class="list-menu font-pri-bold font18">
-                    <li><a href="">GIỚI THIỆU</a></li>
+                    <li><a href="">Giới thiệu</a></li>
                     <li><a href="">Lĩnh vực sản xuất kinh doanh</a></li>
                     <li><a href="">Sản phẩm dịch vụ</a></li>
                     <li><a href="">Công ty tỉnh thành</a></li>
                     <li><a href="">Truyền thông</a></li>
                     <li><a href="">Tuyển dụng</a></li>
-                    <li><a href="">Liên hệ</a></li>
+                    <li><a href="">liên hệ</a></li>
                 </ul>
+                
             </div>
 
             <div class="search-language">

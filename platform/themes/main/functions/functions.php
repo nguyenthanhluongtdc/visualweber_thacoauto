@@ -2,6 +2,9 @@
 
 register_page_template([
     'no-sidebar' => __('No sidebar'),
+    'default' => 'Default',
+    'posts' => 'Posts',
+    'about' => 'About'
 ]);
 
 register_sidebar([

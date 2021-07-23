@@ -6,7 +6,7 @@
         <img src="{{ Theme::asset()->url('images/main/slider1.jpg') }}" alt="">
         <div class="content-slider">
             <h2 class="font-pri-bold font60">THACO AUTO GIỚI THIỆU NEW PEUGEOT 3008</h2>
-            <P class="font-pri">Peugeot – Thương hiệu xe Châu Âu với hơn 210 năm lịch sử & 100 năm dấu ấn tại Việt Nam
+            <P class="font-cond">Peugeot – Thương hiệu xe Châu Âu với hơn 210 năm lịch sử & 100 năm dấu ấn tại Việt Nam
             </P>
             <a href="" class="font-pri-bold">Xem thêm</a>
         </div>
@@ -15,7 +15,7 @@
         <img src="{{ Theme::asset()->url('images/main/slider2.jpg') }}" alt="">
         <div class="content-slider">
             <h2 class="font-pri-bold font60">THACO AUTO GIỚI THIỆU NEW PEUGEOT 3008</h2>
-            <P class="font-pri">Peugeot – Thương hiệu xe Châu Âu với hơn 210 năm lịch sử & 100 năm dấu ấn tại Việt Nam
+            <P class="font-cond">Peugeot – Thương hiệu xe Châu Âu với hơn 210 năm lịch sử & 100 năm dấu ấn tại Việt Nam
             </P>
             <a href="" class="font-pri-bold">Xem thêm</a>
         </div>
@@ -125,9 +125,23 @@
                 </h3>
             </div>
             <div class="bottom">
-                <p class="title">
-                    điểm tin
-                </p>
+                {{-- <div class="scrollbar" id="style-1">
+                    <div class="force-overflow">
+                        <ul>
+                            <li>New Morning - lựa chọn cho dòng xe đô thị 2021</li>
+                            <li>helo</li>
+                            <li>helo</li>
+                            <li>helo</li>
+                            <li>helo</li>
+                            <li>helo</li>
+                            <li>helo</li>
+                            <li>helo</li>
+                            <li>helo</li>
+                            <li>helo</li>
+                            <li>helo</li>
+                        </ul>
+                    </div>
+                </div>  --}}
             </div>
         </div>
     </div>

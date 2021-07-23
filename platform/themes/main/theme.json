@@ -1,6 +1,6 @@
 {
-    "name": "Thaco Auto",
-    "namespace": "Theme\\Ripple\\",
+    "name": "Thaco",
+    "namespace": "Theme\\Thaco\\",
     "description": "Ripple is default theme for Laravel CMS since v2.0",
     "author": "Laravel Technologies",
     "version": "5.17",

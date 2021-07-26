@@ -26,6 +26,9 @@ a:hover{
 .font-mi-bold{
     font-family: $font-my-bold;
 }
+.font-semi{
+    font-family: $font-semi;
+}
 .font60{
     font-size: 60px;
     @media(max-width : 1680px){
@@ -94,6 +97,21 @@ a:hover{
 .font15{
     font-size: 15px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .header{
     background: $color-primary;
     height: 90px;
@@ -139,6 +157,7 @@ a:hover{
                         width: 265px;
                         z-index: 2;
                         align-items: flex-start;
+                        font-family: $font-semi;
                         padding: 10px;
                         display: none;
                         &::after{
@@ -149,6 +168,15 @@ a:hover{
                             border-color: transparent transparent #cfcfcf transparent;
                             border-style: solid;
                             border-width: 15px;
+                        }
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            bottom: 100%;
+                            left: 0px;
+                            width: 100px;
+                            height: 38px;
+                            background: transparent;
                         }
                         li{
                             padding: 10px 0;

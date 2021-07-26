@@ -36,6 +36,9 @@ $('.item-shareholder').click(function(){
 $(".js-example-disabled-results").select2({
     minimumResultsForSearch: Infinity,
 });
+
+
+
 $('.slider-for').slick({
     slidesToShow: 1,
     slidesToScroll: 1,

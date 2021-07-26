@@ -6,7 +6,8 @@ register_page_template([
     'posts' => 'Posts',
     'about' => 'About',
     'media-event' => 'Media Event',
-    'media-newspapers' => 'Media newspapers'
+    'media-newspapers' => 'Media newspapers',
+    'news-thaco' => 'News Thaco'
 ]);
 
 register_sidebar([

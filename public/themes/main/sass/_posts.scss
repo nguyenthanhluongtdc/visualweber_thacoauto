@@ -411,3 +411,104 @@
         margin:  0 auto;
     }
 }
+
+
+// bản tin thaco auto 
+.news-thaco-content{
+    padding-top: 60px;
+    padding-bottom: 200px;
+    .news-thaco-top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .item{
+            width: 48%;
+            display: flex;
+            .item-img{
+                width: 45%;
+            }
+            .item-content{
+                width: 55%;
+                padding: 20px 40px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                background: #f3f3f3;
+                h5 a{
+                    color: #2e3a41;
+                }
+                p.day{
+                    margin: 5px 0 10px 0;
+                }
+                p.desc{
+                    text-align: justify;
+                    flex: 1;
+                }
+                .view-detail{
+                    color: #2e3a41;
+                    span{
+                        margin-left: 10px;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .news-thaco-list{
+        display: flex;
+        align-items: center;
+        margin-top: 50px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .news-thaco-item{
+            width: 40%;
+            .mid{
+               
+            }
+        }
+        .item-shareholder{
+            flex-direction: column;
+            .item-wrap{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+            }
+        }
+        .desc-none{
+            display: none;
+            width: 100%;
+            padding-left: 45px;
+            margin-top: 10px;
+            padding-bottom: 35px;
+            border-bottom: 1px solid #2e3a41;
+            .wrap{
+                justify-content: space-between;
+                display: flex;
+                .desc-right{
+                    a{
+                        color: #fff;
+                        background: $color-primary;
+                        padding: 7px 10px 5px;
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
+    }
+    #myList li{ display:none;
+    }
+    #loadMore {
+        color: #2e3a41;
+        cursor:pointer;
+        font-family: $font-my-bold;
+        span:last-child{
+            margin-left: 10px;
+        }
+    }
+    #loadMore:hover {
+        color:black;
+    }
+  
+}

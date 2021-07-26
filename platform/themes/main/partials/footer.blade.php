@@ -123,6 +123,17 @@
         }
     }
 });
+
+$(function () {
+    x=8;
+    $('#myList li').slice(0, 8).show();
+    $('#loadMore').on('click', function (e) {
+        e.preventDefault();
+        x = x+4;
+        $('#myList li').slice(0, x).slideDown();
+    });
+});
+
 </script>
 </body>
 </html>

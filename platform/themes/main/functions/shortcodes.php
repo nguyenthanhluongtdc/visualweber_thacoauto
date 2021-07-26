@@ -51,4 +51,9 @@ app()->booted(function () {
 
         shortcode()->setAdminConfig('all-galleries', Theme::partial('shortcodes.all-galleries-admin-config'));
     }
+
+
+    add_shortcode('filter-media', __('Filter Media'), __('Filter Media'), function () {
+        return Theme::partial('shortcodes.filter-media');
+    });
 });

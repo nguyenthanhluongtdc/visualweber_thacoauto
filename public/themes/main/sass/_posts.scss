@@ -267,3 +267,82 @@
         }
     }
 }
+
+.media-event-list{
+    padding: 60px 0;
+    .event-item{
+        margin-bottom: 50px;
+        padding-bottom: 50px;
+        border-bottom: 1px solid #7d7d7d;
+        .title{
+            display: flex;
+            margin-bottom: 55px;
+            align-items: center;
+            .title-wrap{
+                margin-left: 15px;
+                h5{
+                    text-transform: uppercase;
+                    a{
+                        color: #2e3a41;
+                    }
+                }
+                p{
+                    color: #5c5c5c;
+                }
+            }
+        }
+        .image-content{
+            display: flex;
+            justify-content: space-between;
+            .image{
+                width: 32%;
+            }
+            .content{
+                width: 65%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                p{
+                    text-align: justify;
+                    color: #5c5c5c;
+                }
+                .view-detail{
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    margin-bottom: 10px;
+                    a{
+                        color: #fff;
+                        padding: 5px 30px;
+                        background: $color-primary;
+                   
+                    }
+                }
+               
+            }
+        }
+    }
+}
+
+// thông cáo báo chí 
+.list-newspapers{
+    padding: 60px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .item-newspaper{
+        background: #f4f4f4;
+        padding: 30px;
+        width: 30%;
+        h5.title a{
+            color: #2e3a41;
+        }
+        p.desc{
+            font-size: 21px;
+            color: #2e3a41;
+            margin: 30px 0;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #2e3a41;
+            text-align: justify;
+        }
+    }
+}

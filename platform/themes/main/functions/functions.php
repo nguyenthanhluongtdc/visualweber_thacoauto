@@ -4,7 +4,9 @@ register_page_template([
     'no-sidebar' => __('No sidebar'),
     'default' => 'Default',
     'posts' => 'Posts',
-    'about' => 'About'
+    'about' => 'About',
+    'media-event' => 'Media Event',
+    'media-newspapers' => 'Media newspapers'
 ]);
 
 register_sidebar([

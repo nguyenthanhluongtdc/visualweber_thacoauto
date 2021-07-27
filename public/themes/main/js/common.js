@@ -25,6 +25,27 @@ $('.partner-home-carousel').owlCarousel({
     }
 });
 
+var galleryTop = new Swiper('.distribution-slide-left', {
+  centeredSlides: true,
+  loop: true,
+  loopedSlides: 4,
+});
+var galleryThumbs = new Swiper('.distribution-slide-right', {
+  centeredSlides: true,
+  slidesPerView: 3,
+  direction: "vertical",
+  touchRatio: 0.2,
+  slideToClickedSlide: true,
+  loop: true,
+  loopedSlides: 4,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+galleryTop.controller.control = galleryThumbs;
+galleryThumbs.controller.control = galleryTop;
+
 $('.item-shareholder').click(function(){
     $(this).find('.desc-none').toggle();
     $(this).find('.down-hide').toggle();

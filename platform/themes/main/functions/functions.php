@@ -4,10 +4,10 @@ register_page_template([
     'no-sidebar' => __('No sidebar'),
     'default' => 'Default',
     'posts' => 'Posts',
-    'about' => 'About',
     'media-event' => 'Media Event',
     'media-newspapers' => 'Media newspapers',
-    'news-thaco' => 'News Thaco'
+    'news-thaco' => 'News Thaco',
+    'production' => 'production'
 ]);
 
 register_sidebar([

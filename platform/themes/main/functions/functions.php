@@ -7,7 +7,9 @@ register_page_template([
     'media-event' => 'Media Event',
     'media-newspapers' => 'Media newspapers',
     'news-thaco' => 'News Thaco',
-    'production' => 'production'
+    'production' => 'production',
+    'news-thaco' => 'News Thaco',
+    'media-gallery' => 'Media Gallery'
 ]);
 
 register_sidebar([

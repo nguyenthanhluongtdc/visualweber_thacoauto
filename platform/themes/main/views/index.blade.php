@@ -125,23 +125,51 @@
                 </h3>
             </div>
             <div class="bottom">
-                {{-- <div class="scrollbar" id="style-1">
-                    <div class="force-overflow">
-                        <ul>
-                            <li>New Morning - lựa chọn cho dòng xe đô thị 2021</li>
-                            <li>helo</li>
-                            <li>helo</li>
-                            <li>helo</li>
-                            <li>helo</li>
-                            <li>helo</li>
-                            <li>helo</li>
-                            <li>helo</li>
-                            <li>helo</li>
-                            <li>helo</li>
-                            <li>helo</li>
-                        </ul>
+                <p class="title font-pri-bold -font16">
+                    điểm tin
+                </p>
+                <div class="scollbar-wrap">
+                    <div class="viewContainer">
+                        <div class="left-logo">
+                            <a href="#"><img src="{{ Theme::asset()->url('images/main/Homepage5.jpg') }}" alt=""></a>
+                           
+                        </div>
+                        <div class="right-title font-pri-bold font16" >
+                            <h5><a href="#">New Morning - lựa chọn cho dòng xe đô thị 2021</a></h5>
+                           
+                        </div>
                     </div>
-                </div>  --}}
+                    <div class="viewContainer">
+                        <div class="left-logo">
+                            <a href="#"><img src="{{ Theme::asset()->url('images/main/Homepage5.png') }}" alt=""></a>
+                           
+                        </div>
+                        <div class="right-title font-pri-bold font16" >
+                            <h5><a href="#">MAZDA CX-8: ĐA DẠNG PHIÊN BẢN PHÙ HỢP VỚI MỌI NHU CẦU</a></h5>
+                           
+                        </div>
+                    </div>
+                    <div class="viewContainer">
+                        <div class="left-logo">
+                            <a href="#"><img src="{{ Theme::asset()->url('images/main/Homepage6.png') }}" alt=""></a>
+                           
+                        </div>
+                        <div class="right-title font-pri-bold font16" >
+                            <h5><a href="#">New Morning - lựa chọn cho dòng xe đô thị 2021</a></h5>
+                           
+                        </div>
+                    </div>
+                    <div class="viewContainer">
+                        <div class="left-logo">
+                            <a href="#"><img src="{{ Theme::asset()->url('images/main/Homepage5.png') }}" alt=""></a>
+                           
+                        </div>
+                        <div class="right-title font-pri-bold font16" >
+                            <h5><a href="#">New Morning - lựa chọn cho dòng xe đô thị 2021</a></h5>
+                           
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -264,13 +292,14 @@
                                         Công bố thông tin phát hành cổ phiếu để tăng vốn cổ phần từ nguồn vốn chủ sở hữu
                                     </h5>
                                     <div class="desc-none">
-                                       <div class="wrap">
-                                        <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co phan.pdf</div>
-                                        <div class="desc-right">
-                                            <span class="font-cond font20">804,24KB</span>
-                                            <a href="" class="font-pri">DOWNLOAD</a>
+                                        <div class="wrap">
+                                            <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co
+                                                phan.pdf</div>
+                                            <div class="desc-right">
+                                                <span class="font-cond font20">804,24KB</span>
+                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                            </div>
                                         </div>
-                                       </div>
                                     </div>
                                 </div>
                                 <div class="right font-pri color-gray">
@@ -290,13 +319,14 @@
                                         Nghị quyết Đại hội đồng Cổ đông Công ty Cổ phần Ô tô Trường Hải
                                     </h5>
                                     <div class="desc-none">
-                                       <div class="wrap">
-                                        <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co phan.pdf</div>
-                                        <div class="desc-right">
-                                            <span class="font-cond font20">804,24KB</span>
-                                            <a href="" class="font-pri">DOWNLOAD</a>
+                                        <div class="wrap">
+                                            <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co
+                                                phan.pdf</div>
+                                            <div class="desc-right">
+                                                <span class="font-cond font20">804,24KB</span>
+                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                            </div>
                                         </div>
-                                       </div>
                                     </div>
                                 </div>
                                 <div class="right font-pri color-gray">
@@ -316,13 +346,14 @@
                                         Biên bản kiểm phiếu lấy ý kiến Cổ đông bằng văn bản
                                     </h5>
                                     <div class="desc-none">
-                                       <div class="wrap">
-                                        <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co phan.pdf</div>
-                                        <div class="desc-right">
-                                            <span class="font-cond font20">804,24KB</span>
-                                            <a href="" class="font-pri">DOWNLOAD</a>
+                                        <div class="wrap">
+                                            <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co
+                                                phan.pdf</div>
+                                            <div class="desc-right">
+                                                <span class="font-cond font20">804,24KB</span>
+                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                            </div>
                                         </div>
-                                       </div>
                                     </div>
                                 </div>
                                 <div class="right font-pri color-gray">
@@ -342,13 +373,14 @@
                                         Biên bản và Nghị quyết ĐHĐCĐ năm 2018
                                     </h5>
                                     <div class="desc-none">
-                                       <div class="wrap">
-                                        <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co phan.pdf</div>
-                                        <div class="desc-right">
-                                            <span class="font-cond font20">804,24KB</span>
-                                            <a href="" class="font-pri">DOWNLOAD</a>
+                                        <div class="wrap">
+                                            <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co
+                                                phan.pdf</div>
+                                            <div class="desc-right">
+                                                <span class="font-cond font20">804,24KB</span>
+                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                            </div>
                                         </div>
-                                       </div>
                                     </div>
                                 </div>
                                 <div class="right font-pri color-gray">
@@ -364,16 +396,18 @@
                                 </div>
                                 <div class="mid">
                                     <h5 class="title font-pri-bold font25 color-gray">
-                                        Công bố thông tin ngày đăng ký cuối cùng để thực hiện quyền tham dự Đại hội cổ đông năm 2018
+                                        Công bố thông tin ngày đăng ký cuối cùng để thực hiện quyền tham dự Đại hội cổ
+                                        đông năm 2018
                                     </h5>
                                     <div class="desc-none">
-                                       <div class="wrap">
-                                        <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co phan.pdf</div>
-                                        <div class="desc-right">
-                                            <span class="font-cond font20">804,24KB</span>
-                                            <a href="" class="font-pri">DOWNLOAD</a>
+                                        <div class="wrap">
+                                            <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co
+                                                phan.pdf</div>
+                                            <div class="desc-right">
+                                                <span class="font-cond font20">804,24KB</span>
+                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                            </div>
                                         </div>
-                                       </div>
                                     </div>
                                 </div>
                                 <div class="right font-pri color-gray">
@@ -392,13 +426,14 @@
                                         Công bố thông tin về việc bổ sung ngành nghề kinh doanh và sửa đổi điều lệ THACO
                                     </h5>
                                     <div class="desc-none">
-                                       <div class="wrap">
-                                        <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co phan.pdf</div>
-                                        <div class="desc-right">
-                                            <span class="font-cond font20">804,24KB</span>
-                                            <a href="" class="font-pri">DOWNLOAD</a>
+                                        <div class="wrap">
+                                            <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co
+                                                phan.pdf</div>
+                                            <div class="desc-right">
+                                                <span class="font-cond font20">804,24KB</span>
+                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                            </div>
                                         </div>
-                                       </div>
                                     </div>
                                 </div>
                                 <div class="right font-pri color-gray">
@@ -429,13 +464,14 @@
                                         Công bố thông tin phát hành cổ phiếu để tăng vốn cổ phần từ nguồn vốn chủ sở hữu
                                     </h5>
                                     <div class="desc-none">
-                                       <div class="wrap">
-                                        <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co phan.pdf</div>
-                                        <div class="desc-right">
-                                            <span class="font-cond font20">804,24KB</span>
-                                            <a href="" class="font-pri">DOWNLOAD</a>
+                                        <div class="wrap">
+                                            <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co
+                                                phan.pdf</div>
+                                            <div class="desc-right">
+                                                <span class="font-cond font20">804,24KB</span>
+                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                            </div>
                                         </div>
-                                       </div>
                                     </div>
                                 </div>
                                 <div class="right font-pri color-gray">
@@ -455,13 +491,14 @@
                                         Nghị quyết Đại hội đồng Cổ đông Công ty Cổ phần Ô tô Trường Hải
                                     </h5>
                                     <div class="desc-none">
-                                       <div class="wrap">
-                                        <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co phan.pdf</div>
-                                        <div class="desc-right">
-                                            <span class="font-cond font20">804,24KB</span>
-                                            <a href="" class="font-pri">DOWNLOAD</a>
+                                        <div class="wrap">
+                                            <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co
+                                                phan.pdf</div>
+                                            <div class="desc-right">
+                                                <span class="font-cond font20">804,24KB</span>
+                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                            </div>
                                         </div>
-                                       </div>
                                     </div>
                                 </div>
                                 <div class="right font-pri color-gray">
@@ -481,13 +518,14 @@
                                         Biên bản kiểm phiếu lấy ý kiến Cổ đông bằng văn bản
                                     </h5>
                                     <div class="desc-none">
-                                       <div class="wrap">
-                                        <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co phan.pdf</div>
-                                        <div class="desc-right">
-                                            <span class="font-cond font20">804,24KB</span>
-                                            <a href="" class="font-pri">DOWNLOAD</a>
+                                        <div class="wrap">
+                                            <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co
+                                                phan.pdf</div>
+                                            <div class="desc-right">
+                                                <span class="font-cond font20">804,24KB</span>
+                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                            </div>
                                         </div>
-                                       </div>
                                     </div>
                                 </div>
                                 <div class="right font-pri color-gray">
@@ -507,13 +545,14 @@
                                         Biên bản và Nghị quyết ĐHĐCĐ năm 2018
                                     </h5>
                                     <div class="desc-none">
-                                       <div class="wrap">
-                                        <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co phan.pdf</div>
-                                        <div class="desc-right">
-                                            <span class="font-cond font20">804,24KB</span>
-                                            <a href="" class="font-pri">DOWNLOAD</a>
+                                        <div class="wrap">
+                                            <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co
+                                                phan.pdf</div>
+                                            <div class="desc-right">
+                                                <span class="font-cond font20">804,24KB</span>
+                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                            </div>
                                         </div>
-                                       </div>
                                     </div>
                                 </div>
                                 <div class="right font-pri color-gray">
@@ -529,16 +568,18 @@
                                 </div>
                                 <div class="mid">
                                     <h5 class="title font-pri-bold font25 color-gray">
-                                        Công bố thông tin ngày đăng ký cuối cùng để thực hiện quyền tham dự Đại hội cổ đông năm 2018
+                                        Công bố thông tin ngày đăng ký cuối cùng để thực hiện quyền tham dự Đại hội cổ
+                                        đông năm 2018
                                     </h5>
                                     <div class="desc-none">
-                                       <div class="wrap">
-                                        <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co phan.pdf</div>
-                                        <div class="desc-right">
-                                            <span class="font-cond font20">804,24KB</span>
-                                            <a href="" class="font-pri">DOWNLOAD</a>
+                                        <div class="wrap">
+                                            <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co
+                                                phan.pdf</div>
+                                            <div class="desc-right">
+                                                <span class="font-cond font20">804,24KB</span>
+                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                            </div>
                                         </div>
-                                       </div>
                                     </div>
                                 </div>
                                 <div class="right font-pri color-gray">
@@ -557,13 +598,14 @@
                                         Công bố thông tin về việc bổ sung ngành nghề kinh doanh và sửa đổi điều lệ THACO
                                     </h5>
                                     <div class="desc-none">
-                                       <div class="wrap">
-                                        <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co phan.pdf</div>
-                                        <div class="desc-right">
-                                            <span class="font-cond font20">804,24KB</span>
-                                            <a href="" class="font-pri">DOWNLOAD</a>
+                                        <div class="wrap">
+                                            <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co
+                                                phan.pdf</div>
+                                            <div class="desc-right">
+                                                <span class="font-cond font20">804,24KB</span>
+                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                            </div>
                                         </div>
-                                       </div>
                                     </div>
                                 </div>
                                 <div class="right font-pri color-gray">
@@ -594,13 +636,14 @@
                                         Công bố thông tin phát hành cổ phiếu để tăng vốn cổ phần từ nguồn vốn chủ sở hữu
                                     </h5>
                                     <div class="desc-none">
-                                       <div class="wrap">
-                                        <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co phan.pdf</div>
-                                        <div class="desc-right">
-                                            <span class="font-cond font20">804,24KB</span>
-                                            <a href="" class="font-pri">DOWNLOAD</a>
+                                        <div class="wrap">
+                                            <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co
+                                                phan.pdf</div>
+                                            <div class="desc-right">
+                                                <span class="font-cond font20">804,24KB</span>
+                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                            </div>
                                         </div>
-                                       </div>
                                     </div>
                                 </div>
                                 <div class="right font-pri color-gray">
@@ -620,13 +663,14 @@
                                         Nghị quyết Đại hội đồng Cổ đông Công ty Cổ phần Ô tô Trường Hải
                                     </h5>
                                     <div class="desc-none">
-                                       <div class="wrap">
-                                        <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co phan.pdf</div>
-                                        <div class="desc-right">
-                                            <span class="font-cond font20">804,24KB</span>
-                                            <a href="" class="font-pri">DOWNLOAD</a>
+                                        <div class="wrap">
+                                            <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co
+                                                phan.pdf</div>
+                                            <div class="desc-right">
+                                                <span class="font-cond font20">804,24KB</span>
+                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                            </div>
                                         </div>
-                                       </div>
                                     </div>
                                 </div>
                                 <div class="right font-pri color-gray">
@@ -646,13 +690,14 @@
                                         Biên bản kiểm phiếu lấy ý kiến Cổ đông bằng văn bản
                                     </h5>
                                     <div class="desc-none">
-                                       <div class="wrap">
-                                        <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co phan.pdf</div>
-                                        <div class="desc-right">
-                                            <span class="font-cond font20">804,24KB</span>
-                                            <a href="" class="font-pri">DOWNLOAD</a>
+                                        <div class="wrap">
+                                            <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co
+                                                phan.pdf</div>
+                                            <div class="desc-right">
+                                                <span class="font-cond font20">804,24KB</span>
+                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                            </div>
                                         </div>
-                                       </div>
                                     </div>
                                 </div>
                                 <div class="right font-pri color-gray">
@@ -672,13 +717,14 @@
                                         Biên bản và Nghị quyết ĐHĐCĐ năm 2018
                                     </h5>
                                     <div class="desc-none">
-                                       <div class="wrap">
-                                        <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co phan.pdf</div>
-                                        <div class="desc-right">
-                                            <span class="font-cond font20">804,24KB</span>
-                                            <a href="" class="font-pri">DOWNLOAD</a>
+                                        <div class="wrap">
+                                            <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co
+                                                phan.pdf</div>
+                                            <div class="desc-right">
+                                                <span class="font-cond font20">804,24KB</span>
+                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                            </div>
                                         </div>
-                                       </div>
                                     </div>
                                 </div>
                                 <div class="right font-pri color-gray">
@@ -694,16 +740,18 @@
                                 </div>
                                 <div class="mid">
                                     <h5 class="title font-pri-bold font25 color-gray">
-                                        Công bố thông tin ngày đăng ký cuối cùng để thực hiện quyền tham dự Đại hội cổ đông năm 2018
+                                        Công bố thông tin ngày đăng ký cuối cùng để thực hiện quyền tham dự Đại hội cổ
+                                        đông năm 2018
                                     </h5>
                                     <div class="desc-none">
-                                       <div class="wrap">
-                                        <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co phan.pdf</div>
-                                        <div class="desc-right">
-                                            <span class="font-cond font20">804,24KB</span>
-                                            <a href="" class="font-pri">DOWNLOAD</a>
+                                        <div class="wrap">
+                                            <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co
+                                                phan.pdf</div>
+                                            <div class="desc-right">
+                                                <span class="font-cond font20">804,24KB</span>
+                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                            </div>
                                         </div>
-                                       </div>
                                     </div>
                                 </div>
                                 <div class="right font-pri color-gray">
@@ -722,13 +770,14 @@
                                         Công bố thông tin về việc bổ sung ngành nghề kinh doanh và sửa đổi điều lệ THACO
                                     </h5>
                                     <div class="desc-none">
-                                       <div class="wrap">
-                                        <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co phan.pdf</div>
-                                        <div class="desc-right">
-                                            <span class="font-cond font20">804,24KB</span>
-                                            <a href="" class="font-pri">DOWNLOAD</a>
+                                        <div class="wrap">
+                                            <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co
+                                                phan.pdf</div>
+                                            <div class="desc-right">
+                                                <span class="font-cond font20">804,24KB</span>
+                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                            </div>
                                         </div>
-                                       </div>
                                     </div>
                                 </div>
                                 <div class="right font-pri color-gray">
@@ -759,13 +808,14 @@
                                         Công bố thông tin phát hành cổ phiếu để tăng vốn cổ phần từ nguồn vốn chủ sở hữu
                                     </h5>
                                     <div class="desc-none">
-                                       <div class="wrap">
-                                        <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co phan.pdf</div>
-                                        <div class="desc-right">
-                                            <span class="font-cond font20">804,24KB</span>
-                                            <a href="" class="font-pri">DOWNLOAD</a>
+                                        <div class="wrap">
+                                            <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co
+                                                phan.pdf</div>
+                                            <div class="desc-right">
+                                                <span class="font-cond font20">804,24KB</span>
+                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                            </div>
                                         </div>
-                                       </div>
                                     </div>
                                 </div>
                                 <div class="right font-pri color-gray">
@@ -785,13 +835,14 @@
                                         Nghị quyết Đại hội đồng Cổ đông Công ty Cổ phần Ô tô Trường Hải
                                     </h5>
                                     <div class="desc-none">
-                                       <div class="wrap">
-                                        <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co phan.pdf</div>
-                                        <div class="desc-right">
-                                            <span class="font-cond font20">804,24KB</span>
-                                            <a href="" class="font-pri">DOWNLOAD</a>
+                                        <div class="wrap">
+                                            <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co
+                                                phan.pdf</div>
+                                            <div class="desc-right">
+                                                <span class="font-cond font20">804,24KB</span>
+                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                            </div>
                                         </div>
-                                       </div>
                                     </div>
                                 </div>
                                 <div class="right font-pri color-gray">
@@ -811,13 +862,14 @@
                                         Biên bản kiểm phiếu lấy ý kiến Cổ đông bằng văn bản
                                     </h5>
                                     <div class="desc-none">
-                                       <div class="wrap">
-                                        <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co phan.pdf</div>
-                                        <div class="desc-right">
-                                            <span class="font-cond font20">804,24KB</span>
-                                            <a href="" class="font-pri">DOWNLOAD</a>
+                                        <div class="wrap">
+                                            <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co
+                                                phan.pdf</div>
+                                            <div class="desc-right">
+                                                <span class="font-cond font20">804,24KB</span>
+                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                            </div>
                                         </div>
-                                       </div>
                                     </div>
                                 </div>
                                 <div class="right font-pri color-gray">
@@ -837,13 +889,14 @@
                                         Biên bản và Nghị quyết ĐHĐCĐ năm 2018
                                     </h5>
                                     <div class="desc-none">
-                                       <div class="wrap">
-                                        <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co phan.pdf</div>
-                                        <div class="desc-right">
-                                            <span class="font-cond font20">804,24KB</span>
-                                            <a href="" class="font-pri">DOWNLOAD</a>
+                                        <div class="wrap">
+                                            <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co
+                                                phan.pdf</div>
+                                            <div class="desc-right">
+                                                <span class="font-cond font20">804,24KB</span>
+                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                            </div>
                                         </div>
-                                       </div>
                                     </div>
                                 </div>
                                 <div class="right font-pri color-gray">
@@ -859,16 +912,18 @@
                                 </div>
                                 <div class="mid">
                                     <h5 class="title font-pri-bold font25 color-gray">
-                                        Công bố thông tin ngày đăng ký cuối cùng để thực hiện quyền tham dự Đại hội cổ đông năm 2018
+                                        Công bố thông tin ngày đăng ký cuối cùng để thực hiện quyền tham dự Đại hội cổ
+                                        đông năm 2018
                                     </h5>
                                     <div class="desc-none">
-                                       <div class="wrap">
-                                        <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co phan.pdf</div>
-                                        <div class="desc-right">
-                                            <span class="font-cond font20">804,24KB</span>
-                                            <a href="" class="font-pri">DOWNLOAD</a>
+                                        <div class="wrap">
+                                            <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co
+                                                phan.pdf</div>
+                                            <div class="desc-right">
+                                                <span class="font-cond font20">804,24KB</span>
+                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                            </div>
                                         </div>
-                                       </div>
                                     </div>
                                 </div>
                                 <div class="right font-pri color-gray">
@@ -887,13 +942,14 @@
                                         Công bố thông tin về việc bổ sung ngành nghề kinh doanh và sửa đổi điều lệ THACO
                                     </h5>
                                     <div class="desc-none">
-                                       <div class="wrap">
-                                        <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co phan.pdf</div>
-                                        <div class="desc-right">
-                                            <span class="font-cond font20">804,24KB</span>
-                                            <a href="" class="font-pri">DOWNLOAD</a>
+                                        <div class="wrap">
+                                            <div class="desc-left font-cond font20">CBTT phat hanh co phieu tang von co
+                                                phan.pdf</div>
+                                            <div class="desc-right">
+                                                <span class="font-cond font20">804,24KB</span>
+                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                            </div>
                                         </div>
-                                       </div>
                                     </div>
                                 </div>
                                 <div class="right font-pri color-gray">

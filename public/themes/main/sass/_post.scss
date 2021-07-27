@@ -1,0 +1,95 @@
+.post-container{
+    padding: 75px 0;
+    .post-primary{
+        h2{
+            text-transform: uppercase;
+            text-align: center;
+        }
+        .post-author-wrap{
+            margin-top: 35px;
+            width: 100%;
+            position: relative;
+            .left{
+                display: flex;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+                ul{
+                    display: flex;
+                    align-items: center;
+                    list-style: disc;
+                    li{
+                        margin-left: 40px;
+                        span.icon{
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+        p.desc{
+            margin: 95px auto;
+            width: 90%;
+            text-align: center;
+        }
+        .post__content{
+            text-align: justify;
+            ul{
+                list-style: disc;
+            }
+            p{
+                font-size: 25px;
+                color: #000000;
+                margin-bottom: 70px;
+                @media(max-width : 1680px){
+                    margin-bottom: 50px;
+                }
+                @media(max-width : 1440px){
+                    margin-bottom: 40px;
+                }
+                @media(max-width : 995px){
+                    margin-bottom: 30px;
+                }
+            }
+        }
+        .tags{
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            .post__tags {
+                margin-left: 20px;
+                a{
+                padding: 7px 10px 5px 10px;
+                background: #ebedf2;
+                margin-right: 10px;
+                color: #454343;
+                border-radius: 2px;
+                }
+            }
+        }
+    }
+}
+
+.post-relate{
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 1px solid #b7b7b7;
+   h2{
+    margin-bottom: 45px;
+    text-transform: uppercase;
+   }
+   .city-day{
+       margin: 20px 0;
+   }
+   .post__header{
+       h5{
+           a{
+               color: #454343;
+           }
+       }
+       .post__desc{
+           margin-top: 20px;
+           text-align: justify;
+       }
+   }
+}

@@ -124,6 +124,8 @@
     }
 });
 
+
+
 $(function () {
     x=8;
     $('#myList li').slice(0, 8).show();
@@ -133,6 +135,15 @@ $(function () {
         $('#myList li').slice(0, x).slideDown();
     });
 });
+
+var s1 = $('.left-logo');
+var s2 = $('.right-title');
+
+function select_scroll_1(e) { s2.scrollTop = s1.scrollTop; }
+function select_scroll_2(e) { s1.scrollTop = s2.scrollTop; }
+
+s1.addEventListener('scroll', select_scroll_1, false);
+s2.addEventListener('scroll', select_scroll_2, false);
 
 </script>
 </body>

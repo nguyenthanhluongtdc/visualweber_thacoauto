@@ -52,7 +52,37 @@ $('.item-shareholder').click(function(){
     $(this).find('.up-show').toggle();
 });
 
+$(window).scroll(function() {
+  var a = 0;
+  var oTop = $('.section-agent-system').offset().top - window.innerHeight;
+  if (a == 0 && $(window).scrollTop() > oTop) {
+    $('.agent-system__showroom__number').each(function() {
+      var $this = $(this),
+        countTo = $this.attr('data-count');
+      $({
+        countNum: $this.text()
+      }).animate({
+          countNum: countTo
+        },
 
+        {
+
+          duration: 1600,
+          easing: 'swing',
+          step: function() {
+            $this.text(Math.floor(this.countNum));
+          },
+          complete: function() {
+            $this.text(this.countNum);
+            //alert('finished');
+          }
+
+        });
+    });
+    a = 1;
+  }
+
+});
 
 $(".js-example-disabled-results").select2({
     minimumResultsForSearch: Infinity,

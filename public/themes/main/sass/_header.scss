@@ -32,6 +32,15 @@ a:hover{
 .font-semi{
     font-family: $font-semi;
 }
+.font80{
+    font-size: 80px;
+    @media(max-width : 1680px){
+        font-size: 70px;
+    }
+    @media(max-width : 1440px){
+        font-size: 65px;
+    }
+}
 .font60{
     font-size: 60px;
     @media(max-width : 1680px){

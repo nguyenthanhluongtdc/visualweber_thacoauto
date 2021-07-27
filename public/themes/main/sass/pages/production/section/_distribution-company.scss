@@ -8,7 +8,7 @@
     .distribution-slide{
         margin-top: 70px;
         width: 100vw;
-        height: 32vw;
+        height: 30vw;
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-between;
@@ -62,7 +62,6 @@
         &__right{
             width: 39%;
             background-color: #f6f6f6;
-            padding: 20px 0;
             display: flex;
             align-items: center;
             position: relative;
@@ -109,7 +108,7 @@
                 position: absolute;
             }
             .swiper-button-prev{
-                top: 101%;
+                top: 99%;
                 left: 48.5%;
                 
                 &:after{
@@ -117,7 +116,7 @@
                 }
             }
             .swiper-button-next{
-                top: 5%;
+                top: 6.5%;
                 left: 48.5%;
                 &:after{
                     background-image: url('../images/production/logo/up.png');

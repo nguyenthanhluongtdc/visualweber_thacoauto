@@ -43,6 +43,7 @@
         display: inline-flex;
         width: 100%;
         .car-block{
+            overflow: hidden;
             width: 215px;
             height: 215px;
             margin-right: 10px;
@@ -53,11 +54,22 @@
             text-align: center;
             &__parent{
                 width: 100%;
-                
+                position: relative;
                 .car-block__image{
                     width: auto;
                     height: 40px;
                     margin-bottom: 30px;
+                    position: absolute;
+                    top: 15%;
+                    left: 25%;
+                }
+                .car-block__image_left{
+                    width: auto;
+                    height: 40px;
+                    margin-bottom: 30px;
+                    position: absolute;
+                    top: 15%;
+                    left: -120%;
                 }
                 .car-block__name{
                     width: 100%;
@@ -65,10 +77,22 @@
                     transform: scale(0.75, 1);
                     color: black;
                     transition: 0.2s;
-                    &:hover{
-                        color: $color-primary;
-                    }
+                    margin-top: 40%;
                 }
+            }
+        }
+        .car-block:hover{
+            
+            .car-block__image_left{
+                left: 25%;
+                transition: all 2000ms cubic-bezier(0.19, 1, 0.22, 1);
+            }
+            .car-block__image{
+                left: 120%;
+                transition: all 1000ms cubic-bezier(0.19, 1, 0.22, 1);
+            }
+            .car-block__name{
+                color: $color-primary;
             }
         }
     }

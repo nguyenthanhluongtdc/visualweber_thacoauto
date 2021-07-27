@@ -8,10 +8,21 @@
             margin-top: 60px;
             display: flex;
             justify-content: space-between;
-            img{
+            .frame{
+                overflow: hidden;
                 max-width: 49.5%;
                 flex: 1 49.5%;
-                height: auto;
+                height: 24.1vw;
+                max-height: 465px;
+                img{
+                    width: 100%;
+                    height: auto;
+                    transition: 0.2s;
+                    &:hover{
+                        transform: scale(1.03);
+                        ;
+                    }
+                }
             }
         }
     }

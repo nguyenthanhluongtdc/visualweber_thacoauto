@@ -7,8 +7,13 @@
                  unde cupiditate quia dignissimos, beatae, vitae labore doloremque dolor atque vel ratione perferendis est!
             </div>
             <div class="export-business__image">
-                <img src="{{Theme::asset()->url('images/production/business-1.jpg')}}" alt="">
-                <img src="{{Theme::asset()->url('images/production/business-2.jpg')}}" alt="">
+                <div class="frame">
+                    <img src="{{Theme::asset()->url('images/production/business-1.jpg')}}" alt="">
+                </div>
+                <div class="frame">
+                    <img src="{{Theme::asset()->url('images/production/business-2.jpg')}}" alt="">
+                </div>
+                
             </div>
         </div>
     </div>

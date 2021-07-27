@@ -27,24 +27,28 @@
         <div class="section-value-system__car-block">
             <div class="car-block">
                 <div class="car-block__parent">
+                    <img class="car-block__image_left" src="{{Theme::asset()->url('images/value-system/xe-du-lich.png')}}" alt="">
                     <img class="car-block__image" src="{{Theme::asset()->url('images/value-system/xe-du-lich.png')}}" alt="">
                     <a class="car-block__name font25 font-mi-bold" href="#">XE DU LỊCH</a>
                 </div>
             </div>
             <div class="car-block">
                 <div class="car-block__parent">
+                    <img class="car-block__image_left" src="{{Theme::asset()->url('images/value-system/xe-bus.png')}}" alt="">
                     <img class="car-block__image" src="{{Theme::asset()->url('images/value-system/xe-bus.png')}}" alt="">
                     <a class="car-block__name font25 font-mi-bold" href="#">XE BUS</a>
                 </div>
             </div>
             <div class="car-block">
                 <div class="car-block__parent">
+                    <img class="car-block__image_left" src="{{Theme::asset()->url('images/value-system/xe-tai.png')}}" alt="">
                     <img class="car-block__image" src="{{Theme::asset()->url('images/value-system/xe-tai.png')}}" alt="">
                     <a class="car-block__name font25 font-mi-bold" href="#">XE TẢI</a>
                 </div>
             </div>
             <div class="car-block">
                 <div class="car-block__parent">
+                    <img class="car-block__image_left" src="{{Theme::asset()->url('images/value-system/xe-chuyen-dung.png')}}" alt="">
                     <img class="car-block__image" src="{{Theme::asset()->url('images/value-system/xe-chuyen-dung.png')}}" alt="">
                     <a class="car-block__name font25 font-mi-bold" href="#">XE CHUYÊN DỤNG</a>
                 </div>

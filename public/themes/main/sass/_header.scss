@@ -1,9 +1,7 @@
 .container-remake{
     width: 80%;
     margin: 0 auto;
-    @media (max-width: 1920px){
-        max-width: 1536px;
-    }
+    max-width: 1536px;
 }
 a:hover{
     color: $color-primary;

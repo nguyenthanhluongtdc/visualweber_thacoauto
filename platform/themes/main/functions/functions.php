@@ -9,7 +9,8 @@ register_page_template([
     'news-thaco' => 'News Thaco',
     'production' => 'production',
     'news-thaco' => 'News Thaco',
-    'media-gallery' => 'Media Gallery'
+    'media-gallery' => 'Media Gallery',
+    'value-system' => 'Value system',
 ]);
 
 register_sidebar([

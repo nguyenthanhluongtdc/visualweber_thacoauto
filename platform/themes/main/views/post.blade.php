@@ -41,7 +41,51 @@
         </div>
         @if (theme_option('facebook_comment_enabled_in_post', 'yes') == 'yes')
         <br />
-        {!! apply_filters(BASE_FILTER_PUBLIC_COMMENT_AREA, Theme::partial('comments')) !!}
+        {{-- {!! apply_filters(BASE_FILTER_PUBLIC_COMMENT_AREA, Theme::partial('comments')) !!} --}}
+        <div class="comment-post">
+            <div class="top-comment">
+                <div class="left">
+                    <img src="{{ Theme::asset()->url('images/media/avatar.png') }}" alt="">
+                </div>
+                <div class="right font18 font-pri">
+                    Vui lòng điền <span class="font-mi-bold">Email</span> trước khi bình luận
+                </div>
+            </div>
+            <div class="list-comment">
+                <div class="item-comment">
+                    <div class="left">
+                        <img src="{{ Theme::asset()->url('images/media/avatar.png') }}" alt="">
+                    </div>
+                    <div class="right font20 font-pri">
+                        <div class="name-wrap">
+                            <p class="name font20 font-mi-bold color-pri">Nguyễn Văn A</p>
+                            <p class="menu-name"><i class="fas fa-ellipsis-h"></i></p>
+                        </div>
+                       <p class="cmt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                        <div class="like-time">
+                            <div class="like font15 font-pri"><span><i class="fas fa-thumbs-up"></i></span> 15</div>
+                            <div class="time font15 font-pri"><span class="icon"><i class="far fa-clock"></i></span>12/12/2021</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-comment">
+                    <div class="left">
+                        <img src="{{ Theme::asset()->url('images/media/avatar.png') }}" alt="">
+                    </div>
+                    <div class="right font20 font-pri">
+                        <div class="name-wrap">
+                            <p class="name font20 font-mi-bold color-pri">Nguyễn Văn A</p>
+                            <p class="menu-name"><i class="fas fa-ellipsis-h"></i></p>
+                        </div>
+                       <p class="cmt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                        <div class="like-time">
+                            <div class="like font15 font-pri"><span><i class="fas fa-thumbs-up"></i></span> 15</div>
+                            <div class="time font15 font-pri"><span class="icon"><i class="far fa-clock"></i></span>12/12/2021</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     @endif
     </div>
 

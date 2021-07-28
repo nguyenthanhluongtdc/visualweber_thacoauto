@@ -14,7 +14,7 @@
                 </ul>
             </div>
             <div class="like-share">
-            <div class="fb-like" data-href="{{ Request::url() }}" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>
+                <div class="fb-like" data-href="{{ Request::url() }}" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
 
             </div>
         </div>
@@ -27,7 +27,7 @@
                 {!! render_object_gallery($galleries, ($post->first_category ? $post->first_category->name : __('Uncategorized'))) !!}
             @endif
             {!! clean($post->content, 'youtube') !!}
-            <div class="fb-like" data-href="{{ Request::url() }}" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>
+            <div class="fb-like fb-like-bottom" data-href="{{ Request::url() }}" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
         </div>
         <div class="tags">
             <span class="font18 font-mi-bold">Tags: </span>

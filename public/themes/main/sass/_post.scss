@@ -9,6 +9,11 @@
             margin-top: 35px;
             width: 100%;
             position: relative;
+            .like-share{
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
             .left{
                 display: flex;
                 align-items: center;
@@ -67,6 +72,10 @@
                 }
             }
         }
+    }
+    .fb-like-bottom{
+        margin-left: -10px;
+        margin-bottom: 10px;
     }
 }
 

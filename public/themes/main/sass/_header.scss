@@ -84,6 +84,9 @@ a:hover{
     @media(max-width : 1440px){
         font-size: 20px;
     }
+    @media(max-width : 1360px){
+        font-size: 16px;
+    }
 }
 .font20{
     font-size: 20px;
@@ -147,10 +150,10 @@ a:hover{
                         margin-right: 60px;
                     }
                     @media(max-width : 1680px){
-                        margin-right: 45px;
+                        margin-right: 70px;
                     }
                     @media(max-width : 1540px){
-                        margin-right: 40px;
+                        margin-right: 50px;
                     }
                     @media(max-width : 1500px){
                         margin-right: 35px;
@@ -208,6 +211,10 @@ a:hover{
                     }
                 }
             }
+        }
+        .search-language{
+            display: flex;
+            align-items: center;
         }
         .search{
             padding: 0 20px;

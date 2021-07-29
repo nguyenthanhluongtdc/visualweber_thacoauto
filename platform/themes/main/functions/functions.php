@@ -11,7 +11,8 @@ register_page_template([
     'news-thaco' => 'News Thaco',
     'media-gallery' => 'Media Gallery',
     'value-system' => 'Value system',
-    'manufacturing' => 'Manufacturing'
+    'manufacturing' => 'Manufacturing',
+    'cultural' => 'Cultural',
 ]);
 
 register_sidebar([

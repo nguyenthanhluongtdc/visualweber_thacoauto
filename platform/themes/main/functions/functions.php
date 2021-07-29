@@ -12,6 +12,7 @@ register_page_template([
     'media-gallery' => 'Media Gallery',
     'value-system' => 'Value system',
     'manufacturing' => 'Manufacturing',
+    'research-development' => 'Research & Development',
     'cultural' => 'Cultural',
 ]);
 

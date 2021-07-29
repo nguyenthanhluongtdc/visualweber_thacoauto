@@ -560,3 +560,6 @@ public/mix-manifest.json
 
 /storage/installing
 public/docs
+
+public/themes/main/css/common.css
+public/themes/main/css/common.css.map

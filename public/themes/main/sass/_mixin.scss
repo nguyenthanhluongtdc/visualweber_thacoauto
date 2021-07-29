@@ -17,3 +17,11 @@ $max) {
         @content;
     }
 }
+
+@mixin split_str($line_number) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line_number;
+}

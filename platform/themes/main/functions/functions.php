@@ -11,7 +11,7 @@ register_page_template([
     'news-thaco' => 'News Thaco',
     'media-gallery' => 'Media Gallery',
     'value-system' => 'Value system',
-
+    'cultural' => 'Cultural',
 ]);
 
 register_sidebar([

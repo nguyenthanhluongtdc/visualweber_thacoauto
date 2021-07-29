@@ -65,7 +65,14 @@
         </div>
     </div>
 </footer>
-
+<div class="action-button">
+    <div class="item-button">
+        <a href="#"><img src="{{ Theme::asset()->url('images/main/phone.png') }}" alt="phone"></a>
+    </div>
+    <div class="item-button">
+        <a href="#"><img src="{{ Theme::asset()->url('images/main/mess.png') }}" alt="phone"></a>
+    </div>
+</div>
 <div class="end-web" style="background: url('{{ Theme::asset()->url('images/main/end.jpg') }}')">
     <div class="container-remake">
         <p class="font-pri color-white font25">Giấy phép kinh doanh: 4001221658</p>

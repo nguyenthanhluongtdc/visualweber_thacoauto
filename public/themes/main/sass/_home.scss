@@ -141,6 +141,10 @@
                         display: -webkit-box;
                         -webkit-box-orient: vertical;
                         margin-bottom: 50px;
+                        @media(max-width: 1366px){
+                        margin-bottom: 55px;
+
+                        }
                         
                     }
                 }
@@ -307,6 +311,9 @@
                 padding: 0 100px;
                 @media(max-width : 1680px){
                     padding: 0 70px;
+                }
+                @media(max-width : 1440px){
+                    padding: 0 50px;
                 }
                 height: 100%;
                 flex-direction: column;

@@ -93,3 +93,34 @@
 
     }
 }
+.action-button{
+    position: fixed;
+    top: 25%;
+    right: 0;
+    .item-button{
+        background: $color-primary;
+        margin-bottom: 2px;
+        height: 70px;
+        width: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 440px;
+    right: 20px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+  
+ 

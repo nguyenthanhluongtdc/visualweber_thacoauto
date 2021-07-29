@@ -65,12 +65,20 @@
         </div>
     </div>
 </footer>
-
+<div class="action-button">
+    <div class="item-button">
+        <a href="#"><img src="{{ Theme::asset()->url('images/main/phone.png') }}" alt="phone"></a>
+    </div>
+    <div class="item-button">
+        <a href="#"><img src="{{ Theme::asset()->url('images/main/mess.png') }}" alt="phone"></a>
+    </div>
+</div>
 <div class="end-web" style="background: url('{{ Theme::asset()->url('images/main/end.jpg') }}')">
     <div class="container-remake">
         <p class="font-pri color-white font25">Giấy phép kinh doanh: 4001221658</p>
     </div>
 </div>
+<button  id="myBtn" title="Go to top"><img src="{{ Theme::asset()->url('images/main/btt.png') }}" alt="youtube"></button>
 
 <!-- JS Library-->
 {!! Theme::footer() !!}
@@ -136,15 +144,28 @@ $(function () {
     });
 });
 
-var s1 = $('.left-logo');
-var s2 = $('.right-title');
-
-function select_scroll_1(e) { s2.scrollTop = s1.scrollTop; }
-function select_scroll_2(e) { s1.scrollTop = s2.scrollTop; }
-
-s1.addEventListener('scroll', select_scroll_1, false);
-s2.addEventListener('scroll', select_scroll_2, false);
 
 </script>
+
+<script>
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    $('#myBtn').click(function() {
+        $("html, body").animate({scrollTop: 0}, 600);
+    });
+    </script>
 </body>
 </html>

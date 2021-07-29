@@ -1,0 +1,28 @@
+.section-cultural-behavior{
+    margin-top: 130px;
+    .cultural-behavior{
+        display: flex;
+        justify-content: space-between;
+        height: fit-content;
+        margin-bottom: 130px;
+        &__info{
+            max-width: 49.5%;
+            flex: 1 49.5%;
+            .cultural-behavior__title{
+                margin-bottom: 15px;
+            }
+            .cultural-behavior__content{
+                text-align: justify;
+                padding-right: 12%;
+            }
+        }
+        &__image{
+            max-width: 49.5%;
+            flex: 1 49.5%;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}

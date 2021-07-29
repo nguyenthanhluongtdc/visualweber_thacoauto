@@ -48,13 +48,13 @@ a:hover{
         font-size: 55px;
     }
     @media(max-width : 1440px){
-        font-size: 50px;
-    }
-    @media(max-width : 1367px){
         font-size: 45px;
     }
-    @media(max-width : 1199px){
+    @media(max-width : 1367px){
         font-size: 40px;
+    }
+    @media(max-width : 1366px){
+        font-size: 35px;
     }
 }
 .font50{

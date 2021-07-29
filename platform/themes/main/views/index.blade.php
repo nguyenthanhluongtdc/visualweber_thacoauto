@@ -102,6 +102,11 @@
                 </div>
 
             </div>
+
+            <div class="avatar-news">
+                <img src="{{ Theme::asset()->url('images/main/avt.png') }}" alt="avatar">
+            </div>
+
         </div>
         <div class="right">
             <div class="top">

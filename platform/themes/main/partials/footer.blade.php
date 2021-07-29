@@ -68,7 +68,7 @@
 
 <div class="end-web" style="background: url('{{ Theme::asset()->url('images/main/end.jpg') }}')">
     <div class="container-remake">
-        <p class="font-pri color-white">Giấy phép kinh doanh: 4001221658</p>
+        <p class="font-pri color-white font25">Giấy phép kinh doanh: 4001221658</p>
     </div>
 </div>
 

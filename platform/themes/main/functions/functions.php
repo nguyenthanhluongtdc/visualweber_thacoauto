@@ -13,6 +13,7 @@ register_page_template([
     'value-system' => 'Value system',
     'manufacturing' => 'Manufacturing',
     'cultural' => 'Cultural',
+    'services' => 'Services'
 ]);
 
 register_sidebar([

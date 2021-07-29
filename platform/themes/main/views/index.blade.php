@@ -122,7 +122,7 @@
                 <div class="scollbar-wrap">
                     <div class="viewContainer">
                         <div class="left-logo">
-                            <a href="#"><img src="{{ Theme::asset()->url('images/main/Homepage5.jpg') }}" alt=""></a>
+                            <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin1.jpg') }}" alt=""></a>
                            
                         </div>
                         <div class="right-title font-pri-bold font16" >
@@ -132,7 +132,7 @@
                     </div>
                     <div class="viewContainer">
                         <div class="left-logo">
-                            <a href="#"><img src="{{ Theme::asset()->url('images/main/Homepage5.png') }}" alt=""></a>
+                            <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt=""></a>
                            
                         </div>
                         <div class="right-title font-pri-bold font16" >
@@ -142,7 +142,7 @@
                     </div>
                     <div class="viewContainer">
                         <div class="left-logo">
-                            <a href="#"><img src="{{ Theme::asset()->url('images/main/Homepage6.png') }}" alt=""></a>
+                            <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin3.png') }}" alt=""></a>
                            
                         </div>
                         <div class="right-title font-pri-bold font16" >
@@ -152,7 +152,7 @@
                     </div>
                     <div class="viewContainer">
                         <div class="left-logo">
-                            <a href="#"><img src="{{ Theme::asset()->url('images/main/Homepage5.png') }}" alt=""></a>
+                            <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt=""></a>
                            
                         </div>
                         <div class="right-title font-pri-bold font16" >

@@ -38,6 +38,9 @@ a:hover{
     @media(max-width : 1440px){
         font-size: 65px;
     }
+    @media(max-width : 1199px){
+        font-size: 55px;
+    }
 }
 .font60{
     font-size: 60px;
@@ -47,9 +50,21 @@ a:hover{
     @media(max-width : 1440px){
         font-size: 50px;
     }
+    @media(max-width : 1199px){
+        font-size: 40px;
+    }
 }
 .font50{
     font-size: 50px;
+    @media(max-width : 1680px){
+        font-size: 45px;
+    }
+    @media(max-width : 1440px){
+        font-size: 40px;
+    }
+    @media(max-width : 1199px){
+        font-size: 30px;
+    }
 }
 .font40{
     font-size: 40px;
@@ -73,6 +88,10 @@ a:hover{
     }
     @media(max-width : 1400px){
         font-size: 23px;
+        line-height: 26px;
+    }
+    @media(max-width : 1199px){
+        font-size: 21px;
         line-height: 26px;
     }
 }
@@ -101,6 +120,10 @@ a:hover{
     }
     @media(max-width : 1400px){
         font-size: 15px;
+        line-height: 18px;
+    }
+    @media(max-width : 1264px){
+        font-size: 14px;
         line-height: 18px;
     }
 }

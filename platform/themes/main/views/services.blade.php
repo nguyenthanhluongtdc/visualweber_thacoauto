@@ -11,7 +11,7 @@
                 <div class="services-block__desc font20 font-pri color-white">
                     Để đảm bảo chiếc xe của bạn luôn trong tình trạng hoàn hảo và an toàn, việc bảo dưỡng định kỳ được thực hiện bởi kỹ thuật viên được đào tạo chuyên nghiệp, phụ tùng chính hãng chất lượng cao, THACO có thể cung cấp dịch vụ bảo dưỡng cũng như chế độ bảo hành phù hợp cho xe bạn.
                 </div>
-                <a href="#" class="services-block__button font-mi-bold">XEM CHI TIẾT</a>
+                <a href="/dich-vu-detail-1" class="services-block__button font-mi-bold">XEM CHI TIẾT</a>
             </div>
         </div>
         <div class="services-block">

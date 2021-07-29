@@ -4,7 +4,9 @@
 Route::group(['namespace' => 'Theme\Thaco\Http\Controllers', 'middleware' => ['web', 'core']], function () {
     Route::group(apply_filters(BASE_FILTER_GROUP_PUBLIC_ROUTE, []), function () {
 
-     
+        Route::get('/dich-vu-detail-1', function () {
+            return Theme::scope('pages/services/service-detail')->render();
+        });
 
         Route::get('ajax/search', 'ThacoController@getSearch')->name('public.ajax.search');
 

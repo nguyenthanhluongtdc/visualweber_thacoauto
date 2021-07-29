@@ -57,31 +57,34 @@
 
             </div>
 
-            <div class="search">
-                <img src="{{ Theme::asset()->url('images/main/search.png') }}" alt="">
-            </div>
-            <div class="language">
-                <div class="dropdown">
-                    <button class="dropdown-toggle" type="button" data-toggle="dropdown"><img src="{{ Theme::asset()->url('images/main/vn.png') }}" alt="">
-                        <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a rel="alternate" hreflang="en" href="{{ Language::getLocalizedURL('en') }}">
-                                <img src="{{ Theme::asset()->url('images/main/vn.png') }}" alt="">
-
-                            </a>
-                        </li>
-                        <li>
-                            <a rel="alternate" hreflang="vi" href="{{ Language::getLocalizedURL('vi') }}">
-                                <img src="{{ Theme::asset()->url('images/main/vn.png') }}" alt="">
-
-                            </a>
-                        </li>
-                    </ul>
+            <div class="search-language">
+                <div class="search">
+                    <img src="{{ Theme::asset()->url('images/main/search.png') }}" alt="">
                 </div>
+                <div class="language">
+                    <div class="dropdown">
+                        <button class="dropdown-toggle" type="button" data-toggle="dropdown"><img
+                                src="{{ Theme::asset()->url('images/main/vn.png') }}" alt="">
+                            <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a rel="alternate" hreflang="en" href="{{ Language::getLocalizedURL('en') }}">
+                                    <img src="{{ Theme::asset()->url('images/main/vn.png') }}" alt="">
+
+                                </a>
+                            </li>
+                            <li>
+                                <a rel="alternate" hreflang="vi" href="{{ Language::getLocalizedURL('vi') }}">
+                                    <img src="{{ Theme::asset()->url('images/main/vn.png') }}" alt="">
+
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
 
 
 
+                </div>
             </div>
         </div>
     </header>

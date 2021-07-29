@@ -12,18 +12,26 @@
             padding-bottom: 30px;
         }
         &__content{
+            overflow: hidden;
             ul{
                 display: grid;
+                margin-left: -1%;
                 grid-template-columns: repeat(6, 0.2fr);
                 .car-production__item{
                     // max-width: 16.5%;
                     // flex: 2 16.5%;
                     width: fit-content;
                     white-space: nowrap;
-                    margin: 0 auto 0 20px;
+                    margin: 0 auto 15px 20px;
                     position: relative;
                     padding-left: 20px;
-                    margin-bottom: 15px;
+                    @media(max-width : 1400px){
+                        padding-left: 15px;
+                        margin: 0 auto 15px 15px;
+                    }
+                    @media(max-width : 1264px){
+                        margin: 0 auto 15px 10px;
+                    }
                     &::before{
                         content: "";
                         width: 4px;

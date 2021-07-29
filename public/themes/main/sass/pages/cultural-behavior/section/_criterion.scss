@@ -1,0 +1,33 @@
+.section-criterion {
+    padding: 80px 0;
+    background-color: #f3f3f3;
+
+    .criterion {
+        &__info {
+            .criterion__title {
+                margin-bottom: 15px;
+            }
+
+            .criterion__content {
+                text-align: justify;
+            }
+        }
+
+        &__shape-text {
+            width: 100%;
+            display: flex;
+
+            .block-shape {
+                max-width: 30%;
+                flex: 1 30%;
+                position: relative;
+
+                img {
+                    position: absolute;
+                    width: 100%;
+
+                }
+            }
+        }
+    }
+}

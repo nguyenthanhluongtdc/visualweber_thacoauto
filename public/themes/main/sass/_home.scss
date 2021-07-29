@@ -1,3 +1,6 @@
+
+
+
 .slider-main-carousel{
     .slider-main-item{
         position: relative;
@@ -143,7 +146,7 @@
                 }
             }
             .item:nth-child(2) , .item:nth-child(3) ,.item:nth-child(4){
-                width: 31%;
+                width: 29.3%;
                 .item-img{
                     display: none;
                 }
@@ -320,6 +323,7 @@
                 }
                 p.desc{
                     text-align: justify;
+                    text-align-last: center;
                 }
             }
             .top-right{
@@ -392,6 +396,7 @@
                 }
                 p.desc{
                     text-align: justify;
+                    text-align-last: center;
                 }
             }
             .bottom-right{
@@ -470,7 +475,7 @@
                     color: #2e3a41;
                     padding: 0;
                    
-                    padding: 0 27px 20px;
+                    padding: 0 27px 12px;
                     @media(max-width : 1820px){
                         padding: 0 20px 20px;
                     }

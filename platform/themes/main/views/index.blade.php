@@ -5,7 +5,7 @@
     <div class="slider-main-item">
         <img src="{{ Theme::asset()->url('images/main/slider1.jpg') }}" alt="">
         <div class="content-slider">
-            <h2 class="font-pri-bold font60">THACO AUTO GIỚI THIỆU NEW PEUGEOT 3008</h2>
+            <h2 class="font-pri-bold font60" >THACO AUTO GIỚI THIỆU NEW PEUGEOT 3008</h2>
             <P class="font-cond">Peugeot – Thương hiệu xe Châu Âu với hơn 210 năm lịch sử & 100 năm dấu ấn tại Việt Nam
             </P>
             <a href="" class="font-pri-bold">Xem thêm</a>
@@ -56,11 +56,8 @@
                     <h3 class="title font-pri-bold">
                         CÔNG TY TNHH MTV ĐỒNG PHƯỚC ĐẦU TƯ 5 XE MINI BUS IVECO DAILY
                     </h3>
-                    <p class="desc font-pri font20">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
-                        maecenas accumsan lacus vel facilisis.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    <p class="desc font-pri font18">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore...
                     </p>
                     <div class="city-day font-pri font20">
                         <span class="city">Hà Nội</span>
@@ -77,11 +74,8 @@
                     <h3 class="title font-pri-bold">
                         CÔNG TY TNHH MTV ĐỒNG PHƯỚC ĐẦU TƯ 5 XE MINI BUS IVECO DAILY
                     </h3>
-                    <p class="desc font-pri font20">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
-                        maecenas accumsan lacus vel facilisis.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    <p class="desc font-pri font18">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore...
                     </p>
                     <div class="city-day font-pri font20">
                         <span class="city">Hà Nội</span>
@@ -98,11 +92,8 @@
                     <h3 class="title font-pri-bold">
                         CÔNG TY TNHH MTV ĐỒNG PHƯỚC ĐẦU TƯ 5 XE MINI BUS IVECO DAILY
                     </h3>
-                    <p class="desc font-pri font20">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
-                        maecenas accumsan lacus vel facilisis.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    <p class="desc font-pri font18">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore...
                     </p>
                     <div class="city-day font-pri font20">
                         <span class="city">Hà Nội</span>

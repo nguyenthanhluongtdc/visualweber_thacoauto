@@ -1,79 +1,126 @@
-#footer{
+#footer {
     background: #f3f3f3;
     padding: 65px 0;
-    .footer-wrap{
+
+    .footer-wrap {
         display: flex;
         justify-content: space-between;
-        .footer-left{
+
+        .footer-left {
             width: 28%;
-            .footer-left-bottom{
+
+            .footer-left-bottom {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 margin-top: 30px;
-                .img-bct{
+
+                .img-bct {
                     width: 40%;
-                    img{
+
+                    img {
                         width: 100%;
                     }
                 }
-                .list-media{
+
+                .list-media {
                     width: 40%;
                     display: flex;
                     align-items: center;
-                    li{
+
+                    li {
                         margin-right: 15px;
-                        img{
+
+                        img {
                             width: 38px;
                         }
                     }
                 }
             }
         }
-        .footer-right{
+
+        .footer-right {
             width: 60%;
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
-            .item{
+
+            .item {
                 width: 33%;
-                p.title{
+
+                p.title {
                     margin-bottom: 24px;
                 }
-                ul{
-                    li{
+
+                ul {
+                    li {
                         line-height: 36px;
                     }
                 }
             }
-            .item:last-child{
+
+            .item:last-child {
                 margin-top: 90px;
                 width: 100%;
             }
         }
     }
-    .thaco-contact{
-        h1{
+
+    .thaco-contact {
+        h1 {
             font-size: 33px;
             margin: 30px 0 14px 0;
         }
-        p{
+
+        p {
             line-height: 36px;
         }
     }
 }
 
 
-.end-web{
+.end-web {
     height: 58px;
-    .container-remake{
+
+    .container-remake {
         height: 100%;
     }
-   p{
-       font-size: 25px;
-       height: 100%;
-       display: flex;
-       align-items: center;
-       
-   }
+
+    p {
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+    }
 }
+.action-button{
+    position: fixed;
+    top: 25%;
+    right: 0;
+    .item-button{
+        background: $color-primary;
+        margin-bottom: 2px;
+        height: 70px;
+        width: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 440px;
+    right: 20px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+  
+ 

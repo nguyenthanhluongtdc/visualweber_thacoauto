@@ -116,7 +116,7 @@
     $('.slider-main-carousel').owlCarousel({
     smartSpeed: 1000,
     loop: true,
-    autoplay: false,
+    autoplay: true,
     dots: true,
     nav: false,
     responsive: {

@@ -5,7 +5,7 @@
     <div class="slider-main-item">
         <img src="{{ Theme::asset()->url('images/main/slider1.jpg') }}" alt="">
         <div class="content-slider">
-            <h2 class="font-pri-bold font60">THACO AUTO GIỚI THIỆU NEW PEUGEOT 3008</h2>
+            <h2 class="font-pri-bold font60" >THACO AUTO GIỚI THIỆU NEW PEUGEOT 3008</h2>
             <P class="font-cond">Peugeot – Thương hiệu xe Châu Âu với hơn 210 năm lịch sử & 100 năm dấu ấn tại Việt Nam
             </P>
             <a href="" class="font-pri-bold">Xem thêm</a>

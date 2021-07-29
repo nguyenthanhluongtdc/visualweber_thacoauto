@@ -63,22 +63,24 @@
                 </div>
                 <div class="language">
                     <div class="dropdown">
-                        <button class="dropdown-toggle" type="button" data-toggle="dropdown"><img
-                                src="{{ Theme::asset()->url('images/main/vn.png') }}" alt="">
+                        <button class="dropdown-toggle" type="button" data-toggle="dropdown">
+                            <img src="{{ Theme::asset()->url('images/main/vn.png') }}" alt="" class="icon-vi">
+                            <img src="{{ Theme::asset()->url('images/main/en.png') }}" alt="" class="icon-en">
                             <span class="caret"></span></button>
                         <ul class="dropdown-menu">
-                            <li>
-                                <a rel="alternate" hreflang="en" href="{{ Language::getLocalizedURL('en') }}">
-                                    <img src="{{ Theme::asset()->url('images/main/vn.png') }}" alt="">
-
-                                </a>
-                            </li>
                             <li>
                                 <a rel="alternate" hreflang="vi" href="{{ Language::getLocalizedURL('vi') }}">
                                     <img src="{{ Theme::asset()->url('images/main/vn.png') }}" alt="">
 
                                 </a>
                             </li>
+                            <li>
+                                <a rel="alternate" hreflang="en" href="{{ Language::getLocalizedURL('en') }}">
+                                    <img src="{{ Theme::asset()->url('images/main/en.png') }}" alt="">
+
+                                </a>
+                            </li>
+                           
                         </ul>
                     </div>
 

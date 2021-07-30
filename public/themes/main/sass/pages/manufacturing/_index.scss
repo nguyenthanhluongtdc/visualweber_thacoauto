@@ -21,6 +21,15 @@
     background-color: rgba($color: $color-primary, $alpha: 0.7);
     width: 100px;
     height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: 30%;
+        height: auto;
+    }
+
     @media (max-width: 1680px) {
         width: 70px;
         height: 70px;
@@ -32,17 +41,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-
-    &::before {
-        content: "\f04b";
-        font-family: "Font Awesome 5 Pro";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        z-index: 1000;
-        background-color: $color-white;
-    }
 }
 
 .section-content-main {
@@ -53,8 +51,12 @@
 
         &__colPicture {
             position: relative;
+        }
+
+        &__picture {
             img {
-                max-width: 100%;
+                width: 100%;
+                height: auto;
             }
         }
 
@@ -90,6 +92,7 @@
             padding-left: 115px;
             order: 2;
             text-align: right;
+            padding-right: 0;
         }
 
         .row-full__colPicture {
@@ -186,8 +189,15 @@
 
 @media (max-width: 767px) {
     .section-content-main {
-        .row-full__colContent {
-            margin-bottom: 1.5rem;
+        .row-full {
+            &__colContent, &__colPicture {
+                padding-left: 15px !important;
+                padding-right: 15px !important;
+            }
+
+            &__colContent {
+                margin-bottom: 1.5rem;
+            }
         }
         >div:nth-child(even) {
         

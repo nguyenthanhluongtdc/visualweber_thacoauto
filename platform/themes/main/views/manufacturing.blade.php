@@ -68,7 +68,9 @@
                 </div>
 
                 <div class="row-full__colPicture col-xl-7 col-md-6">
-                    <div class="play-video"></div>
+                    <div class="play-video"> 
+                        <img src="{{Theme::asset()->url('images/manufacturing/play.png')}}" alt="" width="" height="" /> 
+                    </div>
                     <div class="row-full__picture">
                         <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu3.jpg')}}" alt="" />
                     </div>

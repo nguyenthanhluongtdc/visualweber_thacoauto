@@ -1,0 +1,49 @@
+.section-services-detail{
+    margin-top: 55px;
+    .services-detail{
+        &__title{
+            margin-bottom: 45px;
+        }
+        &__banner{
+            width: 100%;
+            height: auto;
+            margin-bottom: 80px;
+        }
+        &__desc{
+            text-align: justify;
+            line-height: 2;
+            margin-bottom: 70px;
+        }
+        &__slide{
+            width: 100%;
+            padding-bottom: 51.5%;
+            background-color: yellow;
+            position: relative;
+            &--frame{
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                .swiper-container{
+                    background-color: red;
+                    width: 81%;
+                    height: 100%;
+                    float: left;
+                }
+            }
+            .detail-info{
+                position: absolute;
+                width: 34%;
+                padding-bottom: 32%;
+                background-color: #ccc;
+                z-index: 1;
+                &--frame{
+                    position: absolute;
+                    .text{
+                        
+                    }
+                }
+            }
+        }
+    }
+}

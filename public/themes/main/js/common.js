@@ -73,11 +73,18 @@ var galleryThumbs = new Swiper('.distribution-slide-right', {
 galleryTop.controller.control = galleryThumbs;
 galleryThumbs.controller.control = galleryTop;
 
+var swiper = new Swiper(".detail-side", {
+  pagination: {
+    el: ".swiper-pagination",
+  },
+});
+
 $('.item-shareholder').click(function(){
     $(this).find('.desc-none').toggle();
     $(this).find('.down-hide').toggle();
     $(this).find('.up-show').toggle();
 });
+
 
 $(window).scroll(function() {
   if( $(".section-agent-system").length > 0 ){

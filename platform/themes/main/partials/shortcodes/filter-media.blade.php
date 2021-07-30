@@ -1,4 +1,4 @@
-<div class="fitter-media" style="margin-top : 110px">
+<div class="fitter-media">
     <div class="fitter-media-wrap container-remake">
         <form action="">
             <select name="seleccity" id="seleccity" name="seleccity"

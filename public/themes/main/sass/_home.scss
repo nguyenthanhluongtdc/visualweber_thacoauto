@@ -562,7 +562,7 @@
                     color: #2e3a41;
                     padding: 0;
                    
-                    padding: 0 27px 12px;
+                    padding: 0 27px 13px;
                     @media(max-width : 1820px){
                         padding: 0 20px 20px;
                     }
@@ -669,12 +669,14 @@
     .partner-home-carousel{
         .item{
             position: relative;
+           
             .logo{
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
                 z-index: 2;
+                
             }
             &::before{
                 content: "";

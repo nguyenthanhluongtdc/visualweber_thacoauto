@@ -76,6 +76,7 @@ galleryThumbs.controller.control = galleryTop;
 var swiper = new Swiper(".detail-slide", {
   pagination: {
     el: ".swiper-pagination",
+    clickable: true,
   },
 });
 

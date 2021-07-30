@@ -14,7 +14,9 @@ register_page_template([
     'manufacturing' => 'Manufacturing',
     'research-development' => 'Research & Development',
     'cultural' => 'Cultural',
-    'services' => 'Services'
+    'services' => 'Services',
+    'contact' => 'Contact',
+
 ]);
 
 register_sidebar([

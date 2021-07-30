@@ -447,6 +447,15 @@
                 p.desc{
                     text-align: justify;
                     flex: 1;
+                    @media(max-width : 1640px){
+                        height: 75px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        -webkit-line-clamp: 3;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        margin-bottom: 66px;
+                    }
                 }
                 .view-detail{
                     color: #2e3a41;

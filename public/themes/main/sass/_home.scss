@@ -1,10 +1,27 @@
 
-
+@keyframes zoomEffect {
+    0% {
+        transform: scale(1, 1);
+    }   
+    50% {
+        transform: scale(1.5, 1.5);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+ 
+}
 
 .slider-main-carousel{
+    margin-top: -110px;
     .slider-main-item{
         position: relative;
+        overflow: hidden;
         img{
+            animation: 40s ease 0s normal none infinite running zoomEffect;
+            -webkit-animation: 40s ease 0s normal none infinite running zoomEffect;
+            -o-animation: 40s ease 0s normal none infinite running zoomEffect;
+            -moz--o-animation: 40s ease 0s normal none infinite running zoomEffect;
             position: relative;
             &::before{
                 position: absolute;
@@ -64,6 +81,60 @@
     width: 15px;
     height: 15px;
 }
+.scollbar-wrap-home{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    &::before{
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: #fff;
+        width: 10px;
+        content: '';
+
+    }
+}
+#hours{
+	display:block;
+    width:15%;
+    text-align:right;
+    font-size:20px;
+    height:120px;
+    overflow-y:auto;
+    img{
+        width: 70%;
+        display: flex;
+        height: 30px;
+        margin-bottom: 15px;
+    }
+}
+
+#cells{
+	display:block;
+    width:82%;
+    height:120px;
+    line-height:20px;
+    white-space: nowrap;
+    overflow-y: auto;
+    font-size:20px;
+    overflow-x : clip;
+    h5{
+        line-height: 30px;
+        margin-bottom: 15px;
+        font-size: 16px;
+        @media(max-width : 1680px){
+            font-size: 14px;
+        }
+        a{
+            color: #434343;
+            text-transform: uppercase;
+        }
+    }
+
+}
 
 .section-news-home{
     padding: 90px 0 60px 0;
@@ -79,7 +150,16 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            
+            position: relative;
+            .avatar-news{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                img{
+                    width: 55px;
+                    
+                }
+            }
             .item{
               display: flex;
               justify-content: space-between;
@@ -141,6 +221,10 @@
                         display: -webkit-box;
                         -webkit-box-orient: vertical;
                         margin-bottom: 50px;
+                        @media(max-width: 1366px){
+                        margin-bottom: 55px;
+
+                        }
                         
                     }
                 }
@@ -307,6 +391,9 @@
                 padding: 0 100px;
                 @media(max-width : 1680px){
                     padding: 0 70px;
+                }
+                @media(max-width : 1440px){
+                    padding: 0 50px;
                 }
                 height: 100%;
                 flex-direction: column;

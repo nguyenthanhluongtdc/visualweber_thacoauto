@@ -78,7 +78,9 @@
 
         .row-full__colPicture {
             order: 2;
-            padding: 0;
+            @media (min-width: 768px) {
+                padding: 0;
+            }
         }
     }
 

@@ -48,10 +48,13 @@ a:hover{
         font-size: 55px;
     }
     @media(max-width : 1440px){
-        font-size: 50px;
+        font-size: 45px;
     }
-    @media(max-width : 1199px){
+    @media(max-width : 1367px){
         font-size: 40px;
+    }
+    @media(max-width : 1366px){
+        font-size: 35px;
     }
 }
 .font50{
@@ -69,10 +72,16 @@ a:hover{
 .font40{
     font-size: 40px;
     @media(max-width : 1680px){
-        font-size: 36px;
+        font-size: 35px;
     }
     @media(max-width : 1440px){
-        font-size: 32px;
+        font-size: 30px;
+    }
+    @media(max-width : 1367px){
+        font-size: 27px;
+    }
+    @media(max-width : 1199px){
+        font-size: 25px;
     }
 }
 .font30{
@@ -103,8 +112,11 @@ a:hover{
     @media(max-width : 1440px){
         font-size: 20px;
     }
-    @media(max-width : 1360px){
+    @media(max-width : 1367px){
         font-size: 16px;
+    }
+    @media(max-width : 1199px){
+        font-size: 15px;
     }
 }
 .font20{
@@ -136,6 +148,15 @@ a:hover{
 }
 .font15{
     font-size: 15px;
+    @media(max-width : 1680px){
+        font-size: 14px;
+    }
+    @media(max-width : 1400px){
+        font-size: 13px;
+    }
+    @media(max-width : 1264px){
+        font-size: 12px;
+    }
 }
 
 
@@ -150,12 +171,20 @@ a:hover{
 
 
 
-
+#page-wrap{
+    margin-top: 110px;
+}
 
 .header{
-    background: $color-primary;
-    height: 90px;
     
+    background: rgba(0 ,0 , 0 , 0.5);
+    height: 90px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    z-index: 88;
+
     .header-wrap{
         display: flex;
         align-items: center;
@@ -167,7 +196,7 @@ a:hover{
                 display: flex;
                 align-items: center;
                 li.menu-big{
-                    margin-right: 90px;
+                    margin-right: 88px;
                     position: relative;
                     
                     @media(max-width : 1919px){
@@ -265,6 +294,27 @@ a:hover{
         .language{
             margin-left: 20px;
             button{
+                img{
+                    width: 28px;
+                    height: 28px;
+                }
+            }
+            .dropdown-menu{
+                min-width: auto;
+                width: 100%;
+                
+                align-items: center;
+                li{
+                    align-items: center;
+                    display: flex;
+                    justify-content: center;
+                    img{
+                        width: 28px;
+                        height: 28px;
+                    }
+                }
+            }
+            button{
                 background: none;
                 border: none;
                 outline: none;
@@ -281,3 +331,19 @@ a:hover{
     
 }
 
+.header-fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: $color-primary;
+    z-index: 99;
+    transition: all 0.7s ease-out;
+}
+html:lang(en) .icon-vi{
+        display: none;
+    }
+
+html:lang(vi) .icon-en{
+    display: none;
+}

@@ -73,7 +73,7 @@ var galleryThumbs = new Swiper('.distribution-slide-right', {
 galleryTop.controller.control = galleryThumbs;
 galleryThumbs.controller.control = galleryTop;
 
-var swiper = new Swiper(".detail-side", {
+var swiper = new Swiper(".detail-slide", {
   pagination: {
     el: ".swiper-pagination",
   },

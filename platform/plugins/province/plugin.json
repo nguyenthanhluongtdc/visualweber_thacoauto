@@ -1,0 +1,9 @@
+{
+    "name": "Province",
+    "namespace": "Platform\\Province\\",
+    "provider": "Platform\\Province\\Providers\\ProvinceServiceProvider",
+    "author": "N/A",
+    "url": "N/A",
+    "version": "1.0",
+    "description": "The description for module province"
+}

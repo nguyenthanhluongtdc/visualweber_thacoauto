@@ -1,4 +1,5 @@
 .services{
+    margin-top: 85px;
     .services-block{
         width: 100%;
         padding-bottom: 36.5%;
@@ -11,9 +12,6 @@
         }
         &:hover .services-block__content{
             left: 14%;
-        }
-        &:first-child{
-            margin-top: 85px;
         }
         &::before{
             content: "";

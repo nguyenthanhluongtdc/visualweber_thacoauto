@@ -2,7 +2,7 @@
     <div class="section-intro-wrapper">
         <div class="container-remake">
             <div class="section-intro">
-                <h1 class="font-pri-bold font40"> Nghiên cứu & phát triển (R&D) </h1>
+                <h1 class="section-intro__title font-pri-bold font40"> Nghiên cứu & phát triển (R&D) </h1>
                 <p class="rd-production__content font20 font-pri"> Nghiên cứu, phát triển sản phẩm (R&D) là yêu cầu tất yếu nhằm tạo ra giá trị gia tăng cho sản phẩm, nâng cao năng lực cạnh tranh của doanh nghiệp, nhất là trong bối cảnh cuộc cách mạng công nghiệp lần thứ tư đặt ra yêu cầu ngày càng cao về ứng dụng công nghệ thế hệ mới vào hoạt động sản xuất kinh doanh.
                 </p>
             </div>
@@ -11,19 +11,15 @@
         <div class="section-intro-bannerFull" style="background-image: url({{Theme::asset()->url('images/manufacturing/manu11.jpg')}})">
             <div class="bg-opacity"></div>
             <div class="content">
-                <div class="column-left">
-                    <h2 class="title font-pri-bold font40 text-white text-uppercase text-center">
-                        những con số <br>
+                <div class="column-left text-center">
+                    <h2 class="title font-pri-bold text-white text-uppercase">
+                        <span class="font30"> những con số </span> <br>
                         <span class="font60"> NỔI BẬT </span>
                     </h2>
 
-                    <div class="sub-title text-white">
+                    <div class="sub-title text-white font15">
                         Dữ liệu đến ngày 5/1/2021
                     </div>
-                </div>
-
-                <div class="column-center">
-
                 </div>
 
                 <ul class="column-right">
@@ -99,7 +95,7 @@
         </div>
 
         <div class="section-info-more-wrapper">
-            <div class="content">
+            <div class="content font20">
                 <div class="container-remake">
                     <h2 class="title font-pri-bold font40 text-uppercase ">
                         Hoạt động R&D tập trung:
@@ -130,35 +126,39 @@
             </div>
 
             <div class="list-image row">
-                <div class="col-lg-4">
+                <div class="col-sm-4 mb-sm-0 mb-3">
                     <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu5.jpg')}}" alt="" />
                 </div>
 
-                <div class="col-lg-4">
+                <div class="col-sm-4 mb-sm-0 mb-3">
                     <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu6.jpg')}}" alt="" />
                 </div>
 
-                <div class="col-lg-4">
+                <div class="col-sm-4 mb-sm-0 mb-3">
                     <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu5.jpg')}}" alt="" />
                 </div>
             </div>
 
             <div class="container-remake">
                 <div class="line-border">
-                    <div class="dark"> </div>
+                    <div class="bg-dark h-100 w-25"> </div>
                 </div>
             </div>
 
             <div class="list-news">
                 <div class="container-remake">
-                    <h2 class="title font-pri-bold font40 text-uppercase">
-                        Tin tức
-                    </h2>
+                    <div class="list-news-header d-flex justify-content-between align-items-center">
+                        <h2 class="title font-pri-bold font40 text-uppercase">
+                            Tin tức
+                        </h2>
+
+                        <a href="#" title="{!!__('Read more')!!}" class="font20 text-uppercase read-more text-dark"> {!!__('Read more')!!} >> </a>
+                    </div>
 
                     <div class="content">
                         <div class="item row mx-0">
                             <div class="col-lg-5 item__left">
-                                <div class="row p">
+                                <div class="row ">
                                     <div class="col-lg-4 sub--left">
                                         <div class="day"> 29 </div>
                                         <div class="month"> May </div>
@@ -174,13 +174,13 @@
                             <div class="col-lg-6 item__right">
                                 <div class="item__right__top">
                                     <h3 class="font30 title"> Lợi ích của công nghệ cắt Laser thép ống, thép hộp </h3>
-                                    <p class="description">
+                                    <p class="description text-dark font20">
                                         Công nghệ cắt laser được ứng dụng rộng rãi trong nhiều ngành nghề khác nhau,
                                         đặc biệt đối với ngành [...]
                                     </p>
                                 </div>
 
-                                <a class="read-more"> {!!__('Read more')!!} >> </a>
+                                <a class="read-more text-dark font20"> {!!__('Read more')!!} >> </a>
                             </div>
                         </div>
 
@@ -204,13 +204,13 @@
                                     <h3 class="font30 title">
                                         Xe tự hành AGV giải pháp vận chuyển hiệu quả
                                     </h3>
-                                    <p class="description">
+                                    <p class="description text-dark font20">
                                         Xe tự hành AGV là một phương tiện dùng để vận chuyển hàng hóa và vật tư
                                         trong nhà máy, khu công [...]
                                     </p>
                                 </div>
 
-                                <a class="read-more"> {!!__('Read more')!!} >> </a>
+                                <a class="read-more text-dark font20"> {!!__('Read more')!!} >> </a>
                             </div>
                         </div>
 
@@ -232,13 +232,13 @@
                             <div class="col-lg-6 item__right">
                                 <div class="item__right__top">
                                     <h3 class="font30 title"> Nhà chế tạo Khuôn mẫu hàng đầu miền Trung </h3>
-                                    <p class="description">
+                                    <p class="description text-dark font20">
                                         Khuôn mẫu là “nền tảng của nền công nghiệp” Khuôn mẫu được xem là
                                         “Nền tảng của nền công [...]
                                     </p>
                                 </div>
 
-                                <a class="read-more"> {!!__('Read more')!!} >> </a>
+                                <a class="read-more text-dark font20"> {!!__('Read more')!!} >> </a>
                             </div>
                         </div>
 

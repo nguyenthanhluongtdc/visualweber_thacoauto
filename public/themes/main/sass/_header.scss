@@ -338,6 +338,7 @@ a:hover{
     right: 0;
     background: $color-primary;
     z-index: 99;
+    transition: all 0.7s ease-out;
 }
 html:lang(en) .icon-vi{
         display: none;

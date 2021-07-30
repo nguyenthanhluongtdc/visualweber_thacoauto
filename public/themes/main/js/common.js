@@ -191,6 +191,7 @@ $(window).scroll(function() {
   if (scroll >= 100) {
       //clearHeader, not clearheader - caps H
       $(".header").addClass("header-fixed");
+      $('.header-fixed').css('opacity','1');
   }
   if (scroll < 100) {
     //clearHeader, not clearheader - caps H

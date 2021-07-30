@@ -184,3 +184,16 @@ $(document).ready(function () {
   AOS.init();
   app.initJs();
 });
+$(window).scroll(function() {    
+  var scroll = $(window).scrollTop();
+
+   //>=, not <=
+  if (scroll >= 100) {
+      //clearHeader, not clearheader - caps H
+      $(".header").addClass("header-fixed");
+  }
+  if (scroll < 100) {
+    //clearHeader, not clearheader - caps H
+    $(".header").removeClass("header-fixed");
+}
+}); //missing );

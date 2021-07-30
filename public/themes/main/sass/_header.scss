@@ -165,9 +165,15 @@ a:hover{
 
 
 .header{
-    background: $color-primary;
-    height: 90px;
     
+    background: rgba(0 ,0 , 0 , 0.5);
+    height: 90px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    z-index: 88;
+
     .header-wrap{
         display: flex;
         align-items: center;
@@ -179,7 +185,7 @@ a:hover{
                 display: flex;
                 align-items: center;
                 li.menu-big{
-                    margin-right: 90px;
+                    margin-right: 88px;
                     position: relative;
                     
                     @media(max-width : 1919px){
@@ -312,6 +318,15 @@ a:hover{
         }
     }
     
+}
+
+.header-fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: $color-primary;
+    z-index: 99;
 }
 html:lang(en) .icon-vi{
         display: none;

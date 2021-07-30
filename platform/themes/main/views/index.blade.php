@@ -5,7 +5,7 @@
     <div class="slider-main-item">
         <img src="{{ Theme::asset()->url('images/main/slider1.jpg') }}" alt="">
         <div class="content-slider">
-            <h2 class="font-pri-bold font60" >THACO AUTO GIỚI THIỆU NEW PEUGEOT 3008</h2>
+            <h2 class="font-pri-bold font60">THACO AUTO GIỚI THIỆU NEW PEUGEOT 3008</h2>
             <P class="font-cond">Peugeot – Thương hiệu xe Châu Âu với hơn 210 năm lịch sử & 100 năm dấu ấn tại Việt Nam
             </P>
             <a href="" class="font-pri-bold">Xem thêm</a>
@@ -26,8 +26,8 @@
 <div class="section-news-home container-remake">
     <h2 class="font-pri-bold font60 color-gray">TIN TỨC VÀ SỰ KIỆN</h2>
     <div class="content">
-        <div class="left">
-            <div class="item">
+        <div class="left" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
+            <div class="item" >
                 <div class="item-img">
                     <a href=""><img src="{{ Theme::asset()->url('images/main/new1.jpg') }}" alt=""></a>
                 </div>
@@ -57,7 +57,8 @@
                         CÔNG TY TNHH MTV ĐỒNG PHƯỚC ĐẦU TƯ 5 XE MINI BUS IVECO DAILY
                     </h3>
                     <p class="desc font-pri font18">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore...
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore...
                     </p>
                     <div class="city-day font-pri font20">
                         <span class="city">Hà Nội</span>
@@ -75,7 +76,8 @@
                         CÔNG TY TNHH MTV ĐỒNG PHƯỚC ĐẦU TƯ 5 XE MINI BUS IVECO DAILY
                     </h3>
                     <p class="desc font-pri font18">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore...
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore...
                     </p>
                     <div class="city-day font-pri font20">
                         <span class="city">Hà Nội</span>
@@ -93,7 +95,8 @@
                         CÔNG TY TNHH MTV ĐỒNG PHƯỚC ĐẦU TƯ 5 XE MINI BUS IVECO DAILY
                     </h3>
                     <p class="desc font-pri font18">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore...
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore...
                     </p>
                     <div class="city-day font-pri font20">
                         <span class="city">Hà Nội</span>
@@ -109,7 +112,7 @@
 
         </div>
         <div class="right">
-            <div class="top">
+            <div class="top" data-aos="fade-left" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="250">
                 <div class="img-item">
                     <a href="">
                         <img src="{{ Theme::asset()->url('images/main/news2.jpg') }}" alt="">
@@ -120,11 +123,11 @@
                         TẢI</a>
                 </h3>
             </div>
-            <div class="bottom">
+            <div class="bottom" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="50">
                 <p class="title font-pri-bold -font16">
                     điểm tin
                 </p>
-                <div class="scollbar-wrap">
+                {{-- <div class="scollbar-wrap">
                     <div class="viewContainer">
                         <div class="left-logo">
                             <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin1.jpg') }}" alt=""></a>
@@ -165,6 +168,48 @@
                            
                         </div>
                     </div>
+                </div> --}}
+                <div class="scollbar-wrap-home">
+                    <div id="hours">
+                        <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin3.png') }}" alt=""></a>
+                        <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt=""></a>
+                        <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin3.png') }}" alt=""></a>
+                        <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin3.png') }}" alt=""></a>
+                        <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt=""></a>
+                        <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin3.png') }}" alt=""></a>
+                        <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin3.png') }}" alt=""></a>
+                        <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt=""></a>
+                        <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin3.png') }}" alt=""></a>
+                        <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin3.png') }}" alt=""></a>
+                        <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt=""></a>
+                        <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin3.png') }}" alt=""></a>
+                    </div>
+                    <div id="cells">
+                        <h5 class="font-pri-bold "><a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
+                        </h5>
+                        <h5 class="font-pri-bold "><a href="#">MAZDA CX-8: ĐA DẠNG PHIÊN BẢN PHÙ HỢP VỚI MỌI NHU CẦU</a>
+                        </h5>
+                        <h5 class="font-pri-bold "><a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
+                        </h5>
+                        <h5 class="font-pri-bold "><a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
+                        </h5>
+                        <h5 class="font-pri-bold "><a href="#">MAZDA CX-8: ĐA DẠNG PHIÊN BẢN PHÙ HỢP VỚI MỌI NHU CẦU</a>
+                        </h5>
+                        <h5 class="font-pri-bold "><a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
+                        </h5>
+                        <h5 class="font-pri-bold "><a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
+                        </h5>
+                        <h5 class="font-pri-bold "><a href="#">MAZDA CX-8: ĐA DẠNG PHIÊN BẢN PHÙ HỢP VỚI MỌI NHU CẦU</a>
+                        </h5>
+                        <h5 class="font-pri-bold"><a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
+                        </h5>
+                        <h5 class="font-pri-bold "><a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
+                        </h5>
+                        <h5 class="font-pri-bold"><a href="#">MAZDA CX-8: ĐA DẠNG PHIÊN BẢN PHÙ HỢP VỚI MỌI NHU CẦU</a>
+                        </h5>
+                        <h5 class="font-pri-bold"><a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
+                        </h5>
+                    </div>
                 </div>
             </div>
         </div>
@@ -174,10 +219,10 @@
 {{-- lĩnh vực hoạt động --}}
 <div class="section-field-home">
     <div class="section-field-home-wrap container-remake">
-        <h2 class="font-pri-bold font60 color-gray">LĨNH VỰC HOẠT ĐỘNG</h2>
+        <h2 class="font-pri-bold font60 color-gray" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out">LĨNH VỰC HOẠT ĐỘNG</h2>
         <div class="field-home-content">
             <div class="top">
-                <div class="top-left">
+                <div class="top-left" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" >
                     <img src="{{ Theme::asset()->url('images/main/lv2.png') }}" alt="">
                     <p class="name-img font-pri-bold font18 color-pri">THACO AUTO</p>
                     <p class="title font-pri-bold font40 color-gray">sản xuất</p>
@@ -186,17 +231,17 @@
                         lắp ráp ô tô, đến giao nhận vận chuyển và phân phối, bán lẻ.</P>
                 </div>
                 <div class="top-right">
-                    <div class="top-right-item">
+                    <div class="top-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
                         <img src="{{ Theme::asset()->url('images/main/lv3.png') }}" alt="">
                         <p class="top-right-item-title font-pri-bold font30"><a href="" class="link-item-home">công
                                 nghiệp hỗ trợ & cơ khí</a></p>
                     </div>
-                    <div class="top-right-item">
+                    <div class="top-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
                         <img src="{{ Theme::asset()->url('images/main/lv1.png') }}" alt="">
                         <p class="top-right-item-title font-pri-bold font30"><a href="" class="link-item-home">sản xuất
                                 lắp ráp</a></p>
                     </div>
-                    <div class="top-right-item">
+                    <div class="top-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
                         <img src="{{ Theme::asset()->url('images/main/lv4.png') }}" alt="">
                         <p class="top-right-item-title font-pri-bold font30"><a href="" class="link-item-home">xuất
                                 khẩu</a></p>
@@ -204,7 +249,7 @@
                 </div>
             </div>
             <div class="bottom">
-                <div class="bottom-left">
+                <div class="bottom-left" data-aos="fade-down" data-aos-duration="1200" data-aos-easing="ease-in-out">
                     <img src="{{ Theme::asset()->url('images/main/lv5.png') }}" alt="">
                     <p class="name-img font-pri-bold font18 color-pri">THACO AUTO</p>
                     <p class="title font-pri-bold font40 color-gray">KINH DOANH</p>
@@ -213,22 +258,22 @@
                         nước và xuất khẩu.</P>
                 </div>
                 <div class="bottom-right">
-                    <div class="bottom-right-item">
+                    <div class="bottom-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
                         <img src="{{ Theme::asset()->url('images/main/lv6.png') }}" alt="">
                         <p class="bottom-right-item-title font-pri-bold font30"><a href="" class="link-item-home">xe du
                                 lịch</a></p>
                     </div>
-                    <div class="bottom-right-item">
+                    <div class="bottom-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
                         <img src="{{ Theme::asset()->url('images/main/lv7.png') }}" alt="">
                         <p class="bottom-right-item-title font-pri-bold font30"><a href="" class="link-item-home">XE
                                 MÁY</a></p>
                     </div>
-                    <div class="bottom-right-item">
+                    <div class="bottom-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
                         <img src="{{ Theme::asset()->url('images/main/lv8.png') }}" alt="">
                         <p class="bottom-right-item-title font-pri-bold font30"><a href="" class="link-item-home">XE
                                 TẢI, BUS</a></p>
                     </div>
-                    <div class="bottom-right-item">
+                    <div class="bottom-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
                         <img src="{{ Theme::asset()->url('images/main/lv9.png') }}" alt="">
                         <p class="bottom-right-item-title font-pri-bold font30"><a href="" class="link-item-home">DỊCH
                                 VỤ PHỤ TÙNG</a></p>
@@ -241,7 +286,7 @@
 
 {{-- quan hệ cổ đông --}}
 <div class="section-shareholder-home container-remake">
-    <div class="shareholder-home-top">
+    <div class="shareholder-home-top" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out">
         <h2 class="font-pri-bold font60 color-gray">Quan hệ cổ đông</h2>
         <div class="menu-tab-right">
             <ul class="nav nav-pills font-pri-bold color-gray" role="tablist">
@@ -268,13 +313,13 @@
 
 
     <div class="shareholder-home-content">
-        <div class="tab-content">
+        <div class="tab-content" >
             <div id="shareholder1" class="tab-pane active ">
                 <div class="tab-content-item">
-                    <div class="tab-content-left">
+                    <div class="tab-content-left" data-aos="fade-right" data-aos-duration="1200" data-aos-easing="ease-in-out">
                         <img src="{{ Theme::asset()->url('images/main/cthome1.jpg') }}" alt="">
                     </div>
-                    <div class="tab-content-right">
+                    <div class="tab-content-right" data-aos="fade-left" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="250">
                         <div class="list-content">
                             <div class="item-shareholder">
                                 <div class="left">
@@ -962,7 +1007,7 @@
 </div>
 
 {{-- đối tác --}}
-<div class="section-partner-home container-remake">
+<div class="section-partner-home container-remake" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out">
     <h2 class="font-pri-bold font60 color-gray">ĐỐI TÁC</h2>
     <div class="partner-home-carousel owl-carousel">
         <div class="item">

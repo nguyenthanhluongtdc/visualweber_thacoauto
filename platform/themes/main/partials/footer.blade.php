@@ -119,6 +119,8 @@
     autoplay: true,
     dots: true,
     nav: false,
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut',
     responsive: {
         0: {
             items: 1

@@ -45,6 +45,12 @@ $('.post-relate-carousel').owlCarousel({
       }
   }
 });
+$('#cells').on('scroll', function () {
+  $('#hours').scrollTop($(this).scrollTop());
+});
+$('#hours').on('scroll', function () {
+  $('#cells').scrollTop($(this).scrollTop());
+});
 
 var galleryTop = new Swiper('.distribution-slide-left', {
   centeredSlides: true,
@@ -164,4 +170,10 @@ $('.slider-nav').slick({
       }
     }
     ]
+});
+
+
+$(document).ready(function () {
+  AOS.init();
+  app.initJs();
 });

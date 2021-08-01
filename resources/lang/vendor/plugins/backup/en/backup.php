@@ -22,4 +22,7 @@ return [
     'proc_open_disabled_error' => 'Function <strong>proc_open()</strong> has been disabled so the system cannot backup the database. Please contact your hosting provider to enable it.',
     'database_backup_not_existed' => 'Backup database is not existed!',
     'uploads_folder_backup_not_existed' => 'Backup uploads folder is not existed!',
+    'important_message1' => 'This is a simple backup feature, it is a solution for you if your site has < 1GB data and can be used for quickly backup your site.',
+    'important_message2' => 'If you have more than 1GB images/files in local storage, you should use backup feature of your hosting or VPS.',
+    'important_message3' => 'To backup your database, function <strong>proc_open()</strong> or <strong>system()</strong> must be enabled. Contact your hosting provider to enable it if it is disabled.',
 ];

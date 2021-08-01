@@ -46,9 +46,9 @@ class Assets extends BaseAssets
      */
     public function getThemes(): array
     {
-        $themes = [];
-
         $themeFolder = '/vendor/core/core/base/css/themes';
+
+        $themes = ['default' => $themeFolder . '/default.css'];
 
         if (!File::isDirectory(public_path($themeFolder))) {
             return $themes;
@@ -57,7 +57,7 @@ class Assets extends BaseAssets
         $files = File::files(public_path($themeFolder));
 
         if (empty($files)) {
-            $files = ['default.css'];
+            return $themes;
         }
 
         foreach ($files as $file) {

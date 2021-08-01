@@ -13,7 +13,12 @@ class ContactRepository extends RepositoriesAbstract implements ContactInterface
      */
     public function getUnread($select = ['*'])
     {
-        $data = $this->model->where('status', ContactStatusEnum::UNREAD)->select($select)->get();
+        $data = $this->model
+            ->where('status', ContactStatusEnum::UNREAD)
+            ->select($select)
+            ->orderBy('created_at', 'DESC')
+            ->get();
+
         $this->resetModel();
 
         return $data;

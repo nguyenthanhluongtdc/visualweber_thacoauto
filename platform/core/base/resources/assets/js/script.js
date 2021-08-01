@@ -586,7 +586,7 @@ class Botble {
                                     }
                                 });
 
-                                CKEDITOR.instances[$el.data('result')].insertHtml(content);
+                                window.EDITOR.CKEDITOR[$el.data('result')].insertHtml(content);
 
                                 break;
                             case 'media-insert-tinymce':

@@ -53,6 +53,7 @@ class ThemeServiceProvider extends ServiceProvider
             ->loadAndPublishViews()
             ->loadAndPublishTranslations()
             ->loadRoutes(['web'])
+            ->loadMigrations()
             ->publishAssets();
 
         Event::listen(RouteMatched::class, function () {
@@ -130,7 +131,7 @@ class ThemeServiceProvider extends ServiceProvider
                             return $html;
                         }
 
-                        if (!Str::contains($headerJS, '<script>') || !Str::contains($headerJS, '</script>')) {
+                        if (!Str::contains($headerJS, '<script') || !Str::contains($headerJS, '</script>')) {
                             $headerJS = Html::tag('script', $headerJS);
                         }
 
@@ -146,7 +147,7 @@ class ThemeServiceProvider extends ServiceProvider
                             return $html;
                         }
 
-                        if (!Str::contains($bodyJS, '<script>') || !Str::contains($bodyJS, '</script>')) {
+                        if (!Str::contains($bodyJS, '<script') || !Str::contains($bodyJS, '</script>')) {
                             $bodyJS = Html::tag('script', $bodyJS);
                         }
 
@@ -162,7 +163,7 @@ class ThemeServiceProvider extends ServiceProvider
                             return $html;
                         }
 
-                        if (!Str::contains($footerJS, '<script>') || !Str::contains($footerJS, '</script>')) {
+                        if (!Str::contains($footerJS, '<script') || !Str::contains($footerJS, '</script>')) {
                             $footerJS = Html::tag('script', $footerJS);
                         }
 

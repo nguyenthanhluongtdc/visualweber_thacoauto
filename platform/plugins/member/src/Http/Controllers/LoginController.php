@@ -9,7 +9,6 @@ use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 use SeoHelper;
 use Theme;
-use URL;
 
 class LoginController extends Controller
 {
@@ -82,7 +81,7 @@ class LoginController extends Controller
         // user surpasses their maximum number of attempts they will get locked out.
         $this->incrementLoginAttempts($request);
 
-        $this->sendFailedLoginResponse($request);
+        $this->sendFailedLoginResponse();
     }
 
     /**

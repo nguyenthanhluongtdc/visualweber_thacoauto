@@ -120,7 +120,7 @@ class VerificationController extends Controller
         $member->email_verify_token = $token;
         $member->save();
 
-        $member->notify(new ConfirmEmailNotification($token));
+        $member->notify(new ConfirmEmailNotification);
 
         return $response
             ->setMessage(__('Resend email verification successfully!'));

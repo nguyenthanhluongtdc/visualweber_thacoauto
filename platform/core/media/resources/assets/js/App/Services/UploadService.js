@@ -52,6 +52,7 @@ export class UploadService {
                 formData.append('_token', $('meta[name="csrf-token"]').attr('content'));
                 formData.append('folder_id', Helpers.getRequestParams().folder_id);
                 formData.append('view_in', Helpers.getRequestParams().view_in);
+                formData.append('path', file.fullPath);
             },
             chunksUploaded: (file, done) => {
                 _self.uploadProgressContainer.find('.progress-percent').html('100%');

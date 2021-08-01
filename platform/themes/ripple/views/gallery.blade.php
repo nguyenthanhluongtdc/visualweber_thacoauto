@@ -21,6 +21,6 @@
             @endforeach
         </div>
         <br>
-        {!! apply_filters(BASE_FILTER_PUBLIC_COMMENT_AREA, Theme::partial('comments')) !!}
+        {!! apply_filters(BASE_FILTER_PUBLIC_COMMENT_AREA, theme_option('facebook_comment_enabled_in_gallery', 'yes') == 'yes' ? Theme::partial('comments') : null) !!}
     </div>
 </article>

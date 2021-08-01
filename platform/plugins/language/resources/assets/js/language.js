@@ -131,9 +131,8 @@ class LanguageManagement {
                         $('#lang_locale').val(language.lang_locale);
                         $('#lang_code').val(language.lang_code);
                         $('#flag_list').val(language.lang_flag).trigger('change');
-                        if (language.lang_is_rtl) {
-                            $('.lang_is_rtl').prop('checked', true);
-                        }
+                        $('.lang_is_rtl').prop('checked', language.lang_is_rtl);
+                        $('.lang_is_ltr').prop('checked', !language.lang_is_rtl);
                         $('#lang_order').val(language.lang_order);
 
                         $('#btn-language-submit').prop('id', 'btn-language-submit-edit').text('Update');

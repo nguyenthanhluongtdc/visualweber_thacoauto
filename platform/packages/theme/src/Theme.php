@@ -2,6 +2,7 @@
 
 namespace Platform\Theme;
 
+use Platform\Base\Supports\Helper;
 use Platform\Theme\Contracts\Theme as ThemeContract;
 use Platform\Theme\Exceptions\UnknownLayoutFileException;
 use Platform\Theme\Exceptions\UnknownPartialFileException;
@@ -385,7 +386,13 @@ class Theme implements ThemeContract
             return $theme;
         }
 
-        return Arr::first(scan_folder(theme_path()));
+        $theme = Arr::first(scan_folder(theme_path()));
+
+        if (Helper::isConnectedDatabase()) {
+            setting()->set('theme', $theme)->save();
+        }
+
+        return $theme;
     }
 
     /**

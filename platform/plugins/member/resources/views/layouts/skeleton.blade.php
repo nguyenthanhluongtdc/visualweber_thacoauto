@@ -35,6 +35,7 @@
           'character_remain': '{{ trans('core/base::forms.character_remain') }}'
         }
       };
+      var RV_MEDIA_URL = {'media_upload_from_editor': '{{ route('public.member.upload-from-editor') }}'};
   </script>
 </head>
 <body>
@@ -73,6 +74,7 @@
   <script src="{{ asset('vendor/core/plugins/member/js/app.js') }}"></script>
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+  <script src="{{ asset('vendor/core/core/media/libraries/lodash/lodash.min.js') }}"></script>
   {!! Assets::renderFooter() !!}
   @stack('scripts')
   @stack('footer')

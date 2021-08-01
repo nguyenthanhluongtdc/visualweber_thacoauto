@@ -82,6 +82,10 @@
                             <button class="btn btn-success js-dropzone-upload">
                                 <i class="fas fa-cloud-upload-alt"></i> {{ trans('core/media::media.upload') }}
                             </button>
+
+                            <button class="btn btn-success js-download-action" data-toggle="modal" data-target="#modal_download_url">
+                                <i class="fas fa-cloud-download-alt"></i> {{ trans('core/media::media.download_link') }}
+                            </button>
                         @endif
                         @if (RvMedia::hasPermission('folders.create'))
                             <button class="btn btn-success" data-toggle="modal" data-target="#modal_add_folder">
@@ -318,7 +322,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4 class="modal-title">
-                            <i class="fab fa-windows"></i> {{ trans('core/media::media.create_folder') }}
+                            <i class="fa fa-folder"></i> {{ trans('core/media::media.create_folder') }}
                         </h4>
                         <button type="button" class="close" data-dismiss-modal="#modal_add_folder" aria-label="{{ trans('core/media::media.close') }}">
                             <span aria-hidden="true">&times;</span>
@@ -431,6 +435,35 @@
                             <button type="button" class="btn btn-primary" data-dismiss-modal="#modal_empty_trash">{{ trans('core/media::media.close') }}</button>
                         </div>
                     </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" tabindex="-1" role="dialog" id="modal_download_url">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" data-downloading="{{trans('core/media::media.downloading')}}" data-text="{{ trans('core/media::media.download_link') }}">
+                            <i class="fas fa-cloud-download-alt"></i> {{ trans('core/media::media.download_link') }}
+                        </h4>
+                        <button type="button" class="close" data-dismiss-modal="#modal_download_url" aria-label="{{ trans('core/media::media.close') }}">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="rv-form form-download-url">
+                            <div id="download-form-wrapper">
+                                <div class="form-group">
+                                <textarea rows="4"
+                                          name="urls"
+                                          class="form-control"
+                                          placeholder="http://example.com/image1.jpg&#10;http://example.com/image2.jpg&#10;http://example.com/image3.jpg&#10;..."></textarea>
+                                </div>
+                                {!! Form::helper(trans('core/media::media.download_explain')) !!}
+                            </div>
+                            <button class="btn btn-success w-100" type="submit">{{ trans('core/media::media.download_link') }}</button>
+                        </form>
+                        <div class="modal-notice mt-2" id="modal-notice" style="max-height: 350px;overflow: auto"></div>
+                    </div>
                 </div>
             </div>
         </div>

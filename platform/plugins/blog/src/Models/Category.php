@@ -8,6 +8,7 @@ use Platform\Base\Models\BaseModel;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Html;
 
 class Category extends BaseModel
 {
@@ -77,6 +78,29 @@ class Category extends BaseModel
     public function children(): HasMany
     {
         return $this->hasMany(Category::class, 'parent_id');
+    }
+
+    /**
+     * @return string
+     */
+    public function getBadgeWithCountAttribute()
+    {
+        switch ($this->status->getValue()) {
+            case BaseStatusEnum::DRAFT:
+                $badge = 'bg-secondary';
+                break;
+            case BaseStatusEnum::PENDING:
+                $badge = 'bg-warning';
+                break;
+            default:
+                $badge = 'bg-success';
+                break;
+        }
+        return Html::tag('span', (string)$this->posts_count, [
+            'class'               => 'badge font-weight-bold ' . $badge,
+            'data-toggle'         => 'tooltip',
+            'data-original-title' => trans('plugins/blog::categories.total_posts', ['total' => $this->posts_count])
+        ]);
     }
 
     protected static function boot()

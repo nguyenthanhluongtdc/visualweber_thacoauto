@@ -135,6 +135,7 @@ return [
         'Istok Web',
         'Josefin Sans',
         'Josefin Slab',
+        'Jost',
         'Judson',
         'Jura',
         'Jura:500',

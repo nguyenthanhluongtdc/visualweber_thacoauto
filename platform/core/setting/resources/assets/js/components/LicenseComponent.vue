@@ -24,6 +24,13 @@
                             <p>Your license is invalid. Please activate your license!</p>
                         </div>
                         <div class="form-group">
+                            <label class="text-title-field" for="buyer">Your username on Envato</label>
+                            <input type="text" class="next-input" v-model="buyer" id="buyer" placeholder="Your Envato's username">
+                            <div>
+                                <small>If your profile page is <a href="https://codecanyon.net/user/john-smith" rel="nofollow">https://codecanyon.net/user/john-smith</a>, then your username on Envato is <strong>john-smith</strong>.</small>
+                            </div>
+                        </div>
+                        <div class="form-group">
                             <div>
                                 <div class="float-left">
                                     <label class="text-title-field" for="purchase_code">Purchase code</label>
@@ -36,15 +43,19 @@
                             <input type="text" class="next-input" v-model="purchaseCode" id="purchase_code" placeholder="Ex: 10101010-10aa-0101-a1b1010a01b10">
                         </div>
                         <div class="form-group">
-                            <label class="text-title-field" for="buyer">Your username on Envato</label>
-                            <input type="text" class="next-input" v-model="buyer" id="buyer" placeholder="Your Envato's username">
-                            <div>
-                                <small>Example: If your profile page is <a href="https://codecanyon.net/user/john-smith" rel="nofollow">https://codecanyon.net/user/john-smith</a>, then your username on Envato is <strong>john-smith</strong>.</small>
-                            </div>
-                            <p><small class="text-danger">Note: Your site IP will be added to blacklist after 5 failed attempts.</small></p>
+                            <label><input type="checkbox" name="license_rules_agreement" value="1" v-model="licenseRulesAgreement">Confirm that, according to the Envato License Terms, each license entitles one person for a single project. Creating multiple unregistered installations is a copyright violation.
+                                <a href="https://codecanyon.net/licenses/standard" target="_blank" rel="nofollow">More info</a>.</label>
                         </div>
                         <div class="form-group">
                             <button :class="activating ? 'btn btn-info button-loading' : 'btn btn-info'" type="button" @click="activateLicense()">Activate license</button>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <p><small class="text-danger">Note: Your site IP will be added to blacklist after 5 failed attempts.</small></p>
+                            <p>
+                                <small>A purchase code (license) is only valid for One Domain. Are you using this theme on a new domain? Purchase a
+                                <a href="https://codecanyon.net/user/botble/portfolio" target="_blank" rel="nofollow">new license here</a> to get a new purchase code.</small>
+                            </p>
                         </div>
                     </div>
                     <div v-if="!isLoading && verified">
@@ -91,6 +102,7 @@
                 verified: false,
                 purchaseCode: null,
                 buyer: null,
+                licenseRulesAgreement: 0,
                 activating: false,
                 deactivating: false,
                 license: null,
@@ -118,7 +130,7 @@
 
             activateLicense() {
                 this.activating = true;
-                axios.post(this.activateLicenseUrl, {purchase_code: this.purchaseCode, buyer: this.buyer})
+                axios.post(this.activateLicenseUrl, {purchase_code: this.purchaseCode, buyer: this.buyer, license_rules_agreement: this.licenseRulesAgreement})
                     .then(res =>  {
                         if (res.data.error) {
                             Botble.showError(res.data.message);

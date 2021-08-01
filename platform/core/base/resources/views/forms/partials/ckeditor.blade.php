@@ -9,4 +9,4 @@ $attributes['id'] = Arr::get($attributes, 'id', $name);
 $attributes['rows'] = Arr::get($attributes, 'rows', 4);
 @endphp
 
-{!! Form::textarea($name, $value, $attributes) !!}
+{!! Form::textarea($name, htmlentities($value), $attributes) !!}

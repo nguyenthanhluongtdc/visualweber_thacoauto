@@ -24,6 +24,13 @@ Route::group(['namespace' => 'Platform\Translation\Http\Controllers', 'middlewar
                     'permission' => 'translations.edit',
                     'middleware' => 'preventDemo',
                 ]);
+
+                Route::get('download/{locale}', [
+                    'as'         => 'translations.locales.download',
+                    'uses'       => 'TranslationController@downloadLocale',
+                    'permission' => 'translations.edit',
+                    'middleware' => 'preventDemo',
+                ]);
             });
 
             Route::group(['prefix' => 'admin'], function () {

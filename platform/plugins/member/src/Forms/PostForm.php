@@ -2,12 +2,13 @@
 
 namespace Platform\Member\Forms;
 
+use Platform\Blog\Forms\PostForm as BasePostForm;
 use Platform\Blog\Models\Post;
 use Platform\Member\Forms\Fields\CustomEditorField;
 use Platform\Member\Forms\Fields\CustomImageField;
 use Platform\Member\Http\Requests\PostRequest;
 
-class PostForm extends \Platform\Blog\Forms\PostForm
+class PostForm extends BasePostForm
 {
 
     /**
@@ -62,6 +63,6 @@ class PostForm extends \Platform\Blog\Forms\PostForm
                     'data-url'    => route('public.member.tags.all'),
                 ],
             ], true)
-            ->setBreakFieldPoint('format_type');
+            ->setBreakFieldPoint('categories[]');
     }
 }

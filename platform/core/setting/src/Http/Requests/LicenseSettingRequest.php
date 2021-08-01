@@ -14,8 +14,9 @@ class LicenseSettingRequest extends Request
     public function rules()
     {
         return [
-            'purchase_code' => 'required',
-            'buyer'         => 'required',
+            'purchase_code'           => 'required',
+            'buyer'                   => 'required',
+            'license_rules_agreement' => 'accepted:1',
         ];
     }
 }

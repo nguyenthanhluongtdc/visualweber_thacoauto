@@ -1,6 +1,7 @@
 <?php
 
 use Platform\Setting\Facades\SettingFacade;
+use Illuminate\Support\Collection;
 
 if (!function_exists('setting')) {
     /**
@@ -21,6 +22,20 @@ if (!function_exists('setting')) {
         }
 
         return SettingFacade::getFacadeRoot();
+    }
+}
+
+if (!function_exists('get_admin_email')) {
+    /**
+     * get admin email(s)
+     *
+     * @return Collection
+     */
+    function get_admin_email(): Collection
+    {
+        $email = setting('admin_email', []);
+
+        return collect(is_array($email) ? $email : [$email]);
     }
 }
 

@@ -292,7 +292,7 @@ class EmailHandler
             'site_logo'        => setting('admin_logo') ? RvMedia::getImageUrl(setting('admin_logo')) : url(config('core.base.general.logo')),
             'date_time'        => now()->toDateTimeString(),
             'date_year'        => now()->format('Y'),
-            'site_admin_email' => setting('admin_email'),
+            'site_admin_email' => get_admin_email()->first(),
         ];
     }
 
@@ -355,7 +355,7 @@ class EmailHandler
                 $exception->getFile(),
                 !empty(config('core.base.general.error_reporting.to')) ?
                     config('core.base.general.error_reporting.to') :
-                    setting('admin_email')
+                    get_admin_email()->toArray()
             );
         } catch (Exception $ex) {
             info($ex->getMessage());

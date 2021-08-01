@@ -17,6 +17,7 @@ mix
     .sass(source + '/resources/assets/sass/custom/email.scss', dist + '/css')
     .sass(source + '/resources/assets/sass/custom/error-pages.scss', dist + '/css')
     .sass(source + '/resources/assets/sass/rtl.scss', dist + '/css')
+    .sass(source + '/resources/assets/sass/tree-category.scss', dist + '/css')
 
     .js(source + '/resources/assets/js/app.js', dist + '/js')
     .js(source + '/resources/assets/js/core.js', dist + '/js')
@@ -25,6 +26,8 @@ mix
     .js(source + '/resources/assets/js/tags.js', dist + '/js')
     .js(source + '/resources/assets/js/system-info.js', dist + '/js')
     .js(source + '/resources/assets/js/repeater-field.js', dist + '/js')
+    .js(source + '/resources/assets/js/tree-category.js', dist + '/js')
+    .vue()
 
     .copyDirectory(dist + '/css', source + '/public/css')
     .copyDirectory(dist + '/js', source + '/public/js');

@@ -124,7 +124,7 @@ class PostController extends Controller
          * @var Post $post
          */
         $post = $this->postRepository->createOrUpdate(array_merge($request->except('status'), [
-            'author_id'   => auth('member')->user()->getAuthIdentifier(),
+            'author_id'   => auth('member')->id(),
             'author_type' => Member::class,
             'status'      => BaseStatusEnum::PENDING,
         ]));
@@ -167,7 +167,7 @@ class PostController extends Controller
     {
         $post = $this->postRepository->getFirstBy([
             'id'          => $id,
-            'author_id'   => auth('member')->user()->getAuthIdentifier(),
+            'author_id'   => auth('member')->id(),
             'author_type' => Member::class,
         ]);
 
@@ -203,7 +203,7 @@ class PostController extends Controller
     ) {
         $post = $this->postRepository->getFirstBy([
             'id'          => $id,
-            'author_id'   => auth('member')->user()->getAuthIdentifier(),
+            'author_id'   => auth('member')->id(),
             'author_type' => Member::class,
         ]);
 
@@ -250,7 +250,7 @@ class PostController extends Controller
     {
         $post = $this->postRepository->getFirstBy([
             'id'          => $id,
-            'author_id'   => auth('member')->user()->getAuthIdentifier(),
+            'author_id'   => auth('member')->id(),
             'author_type' => Member::class,
         ]);
 

@@ -41,7 +41,7 @@ class CreateMemberTable extends Migration
             $table->text('user_agent')->nullable();
             $table->string('reference_url', 255)->nullable();
             $table->string('reference_name', 255)->nullable();
-            $table->string('ip_address', 25)->nullable();
+            $table->string('ip_address', 39)->nullable();
             $table->integer('member_id')->unsigned()->references('id')->on('members')->index();
             $table->timestamps();
         });

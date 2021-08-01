@@ -20,6 +20,8 @@
     {!! $form->getMetaBox($key) !!}
 @endforeach
 
+@php do_action(BASE_ACTION_META_BOXES, 'top', $form->getModel()) @endphp
+@php do_action(BASE_ACTION_META_BOXES, 'side', $form->getModel()) @endphp
 @php do_action(BASE_ACTION_META_BOXES, 'advanced', $form->getModel()) @endphp
 
 {!! $form->getActionButtons() !!}

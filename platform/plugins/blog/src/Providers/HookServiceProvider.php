@@ -4,6 +4,7 @@ namespace Platform\Blog\Providers;
 
 use Assets;
 use Platform\Base\Enums\BaseStatusEnum;
+use Platform\Base\Models\BaseModel;
 use Platform\Blog\Models\Category;
 use Platform\Blog\Models\Tag;
 use Platform\Blog\Services\BlogService;
@@ -58,6 +59,10 @@ class HookServiceProvider extends ServiceProvider
 
         if (function_exists('theme_option')) {
             add_action(RENDERING_THEME_OPTIONS_PAGE, [$this, 'addThemeOptions'], 35);
+        }
+
+        if (defined('LANGUAGE_MODULE_SCREEN_NAME')) {
+            add_action(BASE_ACTION_META_BOXES, [$this, 'addLanguageChooser'], 55, 2);
         }
     }
 
@@ -229,5 +234,21 @@ class HookServiceProvider extends ServiceProvider
         }
 
         return $name;
+    }
+
+    /**
+     * @param BaseModel $model
+     * @param string $priority
+     * @return string
+     * @throws Throwable
+     */
+    public function addLanguageChooser($priority, $model)
+    {
+        if ($priority == 'head' && $model instanceof Category) {
+            $route = 'categories.index';
+            if ($route) {
+                echo view('plugins/language::partials.admin-list-language-chooser', compact('route'))->render();
+            }
+        }
     }
 }

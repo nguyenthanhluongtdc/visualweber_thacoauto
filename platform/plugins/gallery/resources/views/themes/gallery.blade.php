@@ -6,30 +6,32 @@
     </div>
 </section>
 <section class="section pt-50 pb-100">
-    <div class="container">
-            <div class="page-content">
-                <article class="post post--single">
-                    <div class="post__content">
-                        <p>
-                            {{ $gallery->description }}
-                        </p>
-                        <div id="list-photo">
-                            @foreach (gallery_meta_data($gallery) as $image)
-                                @if ($image)
-                                    <div class="item" data-src="{{ RvMedia::getImageUrl(Arr::get($image, 'img')) }}" data-sub-html="{{ clean(Arr::get($image, 'description')) }}">
-                                        <div class="photo-item">
-                                            <div class="thumb">
-                                                <a href="{{ clean(Arr::get($image, 'description')) }}">
-                                                    <img src="{{ RvMedia::getImageUrl(Arr::get($image, 'img')) }}" alt="{{ clean(Arr::get($image, 'description')) }}">
-                                                </a>
-                                            </div>
+<div class="container">
+        <div class="page-content">
+            <article class="post post--single">
+                <div class="post__content">
+                    <p>
+                        {{ $gallery->description }}
+                    </p>
+                    <div id="list-photo">
+                        @foreach (gallery_meta_data($gallery) as $image)
+                            @if ($image)
+                                <div class="item" data-src="{{ RvMedia::getImageUrl(Arr::get($image, 'img')) }}" data-sub-html="{{ clean(Arr::get($image, 'description')) }}">
+                                    <div class="photo-item">
+                                        <div class="thumb">
+                                            <a href="{{ clean(Arr::get($image, 'description')) }}">
+                                                <img src="{{ RvMedia::getImageUrl(Arr::get($image, 'img')) }}" alt="{{ clean(Arr::get($image, 'description')) }}">
+                                            </a>
                                         </div>
                                     </div>
-                                @endif
-                            @endforeach
-                        </div>
+                                </div>
+                            @endif
+                        @endforeach
                     </div>
-                </article>
-            </div>
+                    <br>
+                    {!! apply_filters(BASE_FILTER_PUBLIC_COMMENT_AREA, null) !!}
+                </div>
+            </article>
+        </div>
     </div>
 </section>

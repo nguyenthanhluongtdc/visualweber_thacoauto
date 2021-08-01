@@ -14,6 +14,8 @@ use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Arr;
 use RvMedia;
+use Storage;
+use Validator;
 
 /**
  * @since 19/08/2015 07:50 AM
@@ -95,5 +97,33 @@ class MediaFileController extends Controller
     public function postUploadFromEditor(Request $request)
     {
         return RvMedia::uploadFromEditor($request);
+    }
+
+    /**
+     * @param Request $request
+     * @return mixed
+     */
+    public function postDownloadUrl(Request $request)
+    {
+        $validator = Validator::make($request->input(), [
+            'url' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            return RvMedia::responseError($validator->messages()->first());
+        }
+
+        $result = RvMedia::uploadFromUrl($request->input('url'), $request->input('folderId'));
+
+        if ($result['error'] == false) {
+            return RvMedia::responseSuccess([
+                'id'        => $result['data']->id,
+                'src'       => Storage::url($result['data']->url),
+                'url'       => $result['data']->url,
+                'message'   => trans('core/media::media.javascript.message.success_header')
+            ]);
+        }
+
+        return RvMedia::responseError($result['message']);
     }
 }

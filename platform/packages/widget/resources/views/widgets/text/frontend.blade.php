@@ -3,6 +3,6 @@
         <h3>{{ $config['name'] }}</h3>
     </div>
     <div class="panel-content">
-        <p>{!! $config['content'] !!}</p>
+        <p>{!! app('shortcode')->compile(clean($config['content'])) !!}</p>
     </div>
 </div>

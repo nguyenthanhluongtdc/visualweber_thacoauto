@@ -1,6 +1,6 @@
 class SlugBoxManagement {
     init() {
-        $('#change_slug').on('click', event =>  {
+        $(document).on('click', '#change_slug', event =>  {
             $('.default-slug').unwrap();
             let $slug_input = $('#editable-post-name');
             $slug_input.html('<input type="text" id="new-post-slug" class="form-control" value="' + $slug_input.text() + '" autocomplete="off">');
@@ -9,7 +9,7 @@ class SlugBoxManagement {
             $(event.currentTarget).hide();
         });
 
-        $('#edit-slug-box .cancel').on('click', () => {
+        $(document).on('click', '#edit-slug-box .cancel', () => {
             let currentSlug = $('#current-slug').val();
             let $permalink = $('#sample-permalink');
             $permalink.html('<a class="permalink" href="' + $('#slug_id').data('view') + currentSlug.replace('/', '') + '">' + $permalink.html() + '</a>');
@@ -52,7 +52,7 @@ class SlugBoxManagement {
             });
         };
 
-        $('#edit-slug-box .save').on('click', () => {
+        $(document).on('click', '#edit-slug-box .save', () => {
             let $post_slug = $('#new-post-slug');
             let name = $post_slug.val();
             let id = $('#slug_id').data('id');
@@ -66,9 +66,9 @@ class SlugBoxManagement {
             }
         });
 
-        $('#name').blur(() => {
+        $(document).on('blur', '#name', (e) => {
             if ($('#edit-slug-box').hasClass('hidden')) {
-                let name = $('#name').val();
+                let name = $(e.currentTarget).val();
 
                 if (name !== null && name !== '') {
                     createSlug(name, 0, true);
@@ -79,6 +79,6 @@ class SlugBoxManagement {
     }
 }
 
-$(document).ready(() => {
+$(() => {
     new SlugBoxManagement().init();
 });

@@ -21,7 +21,7 @@ class UpdatedContentListener
             if ($event->data->id &&
                 $event->data->author_type === Member::class &&
                 auth('member')->check() &&
-                $event->data->author_id == auth('member')->user()->getAuthIdentifier()
+                $event->data->author_id == auth('member')->id()
             ) {
                 app(MemberActivityLogInterface::class)->createOrUpdate([
                     'action'         => 'your_post_updated_by_admin',

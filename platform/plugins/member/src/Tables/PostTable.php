@@ -90,7 +90,7 @@ class PostTable extends TableAbstract
                 'updated_at',
             ])
             ->where([
-                'author_id'   => auth('member')->user()->getAuthIdentifier(),
+                'author_id'   => auth('member')->id(),
                 'author_type' => Member::class,
             ]);
 

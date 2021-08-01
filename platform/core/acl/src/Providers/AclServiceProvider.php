@@ -16,6 +16,7 @@ use Platform\ACL\Repositories\Interfaces\RoleInterface;
 use Platform\ACL\Repositories\Interfaces\UserInterface;
 use Platform\Base\Supports\Helper;
 use Platform\Base\Traits\LoadAndPublishDataTrait;
+use EmailHandler;
 use Exception;
 use Illuminate\Contracts\Container\BindingResolutionException;
 use Illuminate\Routing\Events\RouteMatched;
@@ -61,7 +62,7 @@ class AclServiceProvider extends ServiceProvider
         $this->app->register(EventServiceProvider::class);
 
         $this->setNamespace('core/acl')
-            ->loadAndPublishConfigurations(['general', 'permissions'])
+            ->loadAndPublishConfigurations(['general', 'permissions', 'email'])
             ->loadAndPublishViews()
             ->loadAndPublishTranslations()
             ->publishAssets()
@@ -94,6 +95,8 @@ class AclServiceProvider extends ServiceProvider
 
         $this->app->booted(function () {
             config()->set(['auth.providers.users.model' => User::class]);
+
+            EmailHandler::addTemplateSettings('acl', config('core.acl.email', []), 'core');
 
             $this->app->register(HookServiceProvider::class);
         });

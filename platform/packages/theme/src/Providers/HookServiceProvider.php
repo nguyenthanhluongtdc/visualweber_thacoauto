@@ -3,6 +3,8 @@
 namespace Platform\Theme\Providers;
 
 use Platform\Dashboard\Supports\DashboardWidgetInstance;
+use Html;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Support\ServiceProvider;
 use Throwable;
@@ -122,6 +124,56 @@ class HookServiceProvider extends ServiceProvider
                     ],
                 ],
             ]);
+
+        add_shortcode('media', null, null, function ($shortcode) {
+            $url = rtrim($shortcode->url, '/');
+
+            $iframe = null;
+
+            if (preg_match('/^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$/',
+                $url)) {
+                if (str_contains($url, 'watch?v=')) {
+                    $url = str_replace('watch?v=', 'embed/', $url);
+                } else {
+                    $exploded = explode('/', $url);
+
+                    if (count($exploded) > 1) {
+                        $url = 'https://www.youtube.com/embed/' . Arr::last($exploded);
+                    }
+                }
+
+                $iframe = Html::tag('iframe', '', [
+                    'class'           => 'embed-responsive-item',
+                    'allowfullscreen' => true,
+                    'frameborder'     => 0,
+                    'height'          => 315,
+                    'width'           => 420,
+                    'src'             => $url,
+                ])->toHtml();
+            }
+
+            if (preg_match('/(https?:\/\/)?(www\.)?(player\.)?vimeo\.com\/([a-z]*\/)*([0-9]{6,11})[?]?.*/', $url,
+                $matches)) {
+                if (isset($matches[5])) {
+                    $videoId = $matches[5];
+
+                    $iframe = Html::tag('iframe', '', [
+                        'class'           => 'embed-responsive-item',
+                        'height'          => 315,
+                        'width'           => 420,
+                        'allow'           => 'autoplay; fullscreen; picture-in-picture',
+                        'src'             => 'https://player.vimeo.com/video/' . $videoId,
+                    ])->toHtml();
+                }
+            }
+
+            if ($iframe) {
+                return Html::tag('div', $iframe, ['class' => 'embed-responsive embed-responsive-16by9 mb30'])
+                    ->toHtml();
+            }
+
+            return null;
+        });
     }
 
     /**

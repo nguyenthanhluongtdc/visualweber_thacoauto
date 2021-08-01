@@ -13,16 +13,6 @@ class PostFormat
             'icon' => null,
             'name' => 'Default',
         ],
-        'gallery' => [
-            'key'  => 'gallery',
-            'icon' => 'fa fa-image',
-            'name' => 'Gallery',
-        ],
-        'video'   => [
-            'key'  => 'video',
-            'icon' => 'fa fa-camera',
-            'name' => 'Video',
-        ],
     ];
 
     /**

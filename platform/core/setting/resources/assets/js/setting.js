@@ -11,6 +11,8 @@ if (document.getElementById('main-settings')) {
 
 class SettingManagement {
     init() {
+        this.handleMultipleAdminEmails();
+
         $('input[data-key=email-config-status-btn]').on('change', event => {
             let _self = $(event.currentTarget);
             let key = _self.prop('id');
@@ -140,6 +142,61 @@ class SettingManagement {
                 }
             });
         });
+    }
+
+    handleMultipleAdminEmails() {
+
+        let $wrapper = $('#admin_email_wrapper');
+
+        if (!$wrapper.length) {
+            return;
+        }
+
+        let $addBtn  = $wrapper.find('#add');
+        let max = parseInt($wrapper.data('max'), 10);
+
+        let emails = $wrapper.data('emails');
+
+        if (emails.length === 0) {
+            emails = [''];
+        }
+
+        const onAddEmail = () => {
+            let count = $wrapper.find('input[type=email]').length;
+
+            if (count >= max) {
+                $addBtn.addClass('disabled');
+            } else {
+                $addBtn.removeClass('disabled');
+            }
+        }
+
+        const addEmail = (value = '') => {
+            return $addBtn.before(`<div class="d-flex mt-2 more-email align-items-center">
+                <input type="email" class="next-input" placeholder="${$addBtn.data('placeholder')}" name="admin_email[]" value="${value}" />
+                <a class="btn btn-link text-danger"><i class="fas fa-minus"></i></a>
+            </div>`)
+        }
+
+        const render = () => {
+            emails.forEach(email => {
+                addEmail(email);
+            })
+            onAddEmail();
+        }
+
+        $wrapper.on('click', '.more-email > a', function() {
+            $(this).parent('.more-email').remove();
+            onAddEmail();
+        })
+
+        $addBtn.on('click', e => {
+            e.preventDefault();
+            addEmail();
+            onAddEmail();
+        })
+
+        render();
     }
 }
 

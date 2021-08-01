@@ -43,6 +43,11 @@ Route::group(['namespace' => 'Platform\Media\Http\Controllers', 'middleware' => 
                     'as'   => 'files.upload.from.editor',
                     'uses' => 'MediaFileController@postUploadFromEditor',
                 ]);
+
+                Route::post('download-url', [
+                    'as'   => 'download_url',
+                    'uses' => 'MediaFileController@postDownloadUrl',
+                ]);
             });
 
             Route::group(['prefix' => 'folders'], function () {

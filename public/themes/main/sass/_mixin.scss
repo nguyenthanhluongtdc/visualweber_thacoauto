@@ -25,3 +25,7 @@ $max) {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: $line_number;
 }
+
+@function calculatorPixel($size, $screen) {
+    @return ($size * $screen) / 1920;
+}

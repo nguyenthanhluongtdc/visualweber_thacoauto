@@ -1,3 +1,211 @@
+.container-remake{
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1536px;
+}
+a:hover{
+    color: $color-primary;
+}
+.color-pri{
+    color: $color-primary;
+}
+.color-white{
+    color: #fff;
+}
+.color-gray{
+    color: #2e3a41;
+}
+.font-pri-bold{
+    font-family: $font-primary-bold;
+}
+.font-pri{
+    font-family: $font-primary;
+}
+.font-cond{
+    font-family: $font-cond;
+}
+.font-mi-bold{
+    font-family: $font-my-bold;
+}
+.font-semi{
+    font-family: $font-semi;
+}
+.font80{
+    font-size: 80px;
+    @media(max-width : 1680px){
+        font-size: 70px;
+    }
+    @media(max-width : 1440px){
+        font-size: 65px;
+    }
+    @media(max-width : 1199px){
+        font-size: 55px;
+    }
+}
+.font60{
+    font-size: 60px;
+    @media(max-width : 1680px){
+        font-size: 55px;
+    }
+    @media(max-width : 1440px){
+        font-size: 45px;
+    }
+    @media(max-width : 1367px){
+        font-size: 40px;
+    }
+    @media(max-width : 1366px){
+        font-size: 35px;
+    }
+}
+.font50{
+    font-size: 50px;
+    @media(max-width : 1680px){
+        font-size: 45px;
+    }
+    @media(max-width : 1440px){
+        font-size: 40px;
+    }
+    @media(max-width : 1199px){
+        font-size: 30px;
+    }
+}
+.font40{
+    font-size: 40px;
+    @media(max-width : 1680px){
+        font-size: 35px;
+    }
+    @media(max-width : 1440px){
+        font-size: 30px;
+    }
+    @media(max-width : 1367px){
+        font-size: 27px;
+    }
+    @media(max-width : 1199px){
+        font-size: 25px;
+    }
+}
+.font30{
+    font-size: 30px;
+    line-height: 36px;
+    @media(max-width : 1680px){
+        font-size: 28px;
+        line-height: 32px;
+    }
+    @media(max-width : 1440px){
+        font-size: 25px;
+        line-height: 30px;
+    }
+    @media(max-width : 1400px){
+        font-size: 23px;
+        line-height: 26px;
+    }
+    @media(max-width : 1199px){
+        font-size: 21px;
+        line-height: 26px;
+    }
+}
+.font25{
+    font-size: 25px;
+    @media(max-width : 1680px){
+        font-size: 23px;
+    }
+    @media(max-width : 1440px){
+        font-size: 20px;
+    }
+    @media(max-width : 1367px){
+        font-size: 16px;
+    }
+    @media(max-width : 1199px){
+        font-size: 15px;
+    }
+}
+.font20{
+    font-size: 20px;
+    line-height: 26px;
+    @media(max-width : 1680px){
+        font-size: 18px;
+        line-height: 21px;
+    }
+    @media(max-width : 1440px){
+        font-size: 16px;
+        line-height: 19px;
+    }
+    @media(max-width : 1400px){
+        font-size: 15px;
+        line-height: 18px;
+    }
+    @media(max-width : 1264px){
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+.font18{
+    font-size: 18px;
+    line-height: 20px;
+    @media(max-width : 1680px){
+        font-size: 16px;
+    }
+}
+.font15{
+    font-size: 15px;
+    @media(max-width : 1680px){
+        font-size: 14px;
+    }
+    @media(max-width : 1400px){
+        font-size: 13px;
+    }
+    @media(max-width : 1264px){
+        font-size: 12px;
+    }
+}
+
+.mt-100 {
+    margin-top: 100px;
+
+    @media (max-width: 1680px) {
+        margin-top: #{calculatorPixel(100,1680)}px;
+    }
+    @media (max-width: 1360px) {
+        margin-top: #{calculatorPixel(100,1360)}px;
+    }
+    @media (max-width: 992px) {
+        margin-top: #{calculatorPixel(100,992)}px;
+    }
+}
+
+.my-90 {
+    margin-top: 90px;
+    margin-bottom: 90px;
+
+    @media (max-width: 1680px) {
+        margin-top: #{calculatorPixel(90,1680)}px;
+        margin-bottom: #{calculatorPixel(90,1680)}px;
+    }
+    @media (max-width: 1360px) {
+        margin-top: #{calculatorPixel(90,1360)}px;
+        margin-bottom: #{calculatorPixel(90,1360)}px;
+    }
+    @media (max-width: 992px) {
+        margin-top: #{calculatorPixel(90,992)}px;
+        margin-bottom: #{calculatorPixel(90,992)}px;
+    }
+}
+
+.mb-90 {
+    margin-bottom: 90px;
+
+    @media (max-width: 1680px) {
+        margin-bottom: #{calculatorPixel(90,1680)}px;
+    }
+    @media (max-width: 1360px) {
+        margin-bottom: #{calculatorPixel(90,1360)}px;
+    }
+    @media (max-width: 992px) {
+        margin-bottom: #{calculatorPixel(90,992)}px;
+    }
+}
+
+
 #page-wrap{
     padding-top: 110px;
 }
@@ -201,8 +409,7 @@
                 margin-left: 10px;
             }
         }
-    }
-    
+    }    
 }
 
 .header-fixed{

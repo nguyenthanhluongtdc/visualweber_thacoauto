@@ -1,0 +1,207 @@
+#production-assemble-page {
+    img {
+        max-width: 100%;
+    }
+    .section-card {
+
+        &__body {
+
+        }
+
+        &__row {
+
+            &__picture {
+                height: 494px;
+                overflow: hidden;
+                @media (max-width: 1680px) {
+                    height: #{calculatorPixel(494,1680)}px;
+                }
+                @media (max-width: 1360px) {
+                    height: #{calculatorPixel(494,1360)}px;
+                }
+                @media (max-width: 991px) {
+                    height: max-content;
+                    padding-left: 15px !important;
+                    padding-right: 15px !important;
+                }
+
+                img {
+                    height: auto;
+                    width: 100%;
+
+                    @media (min-width: 992px) {
+                        min-height: 100%;
+                    }
+                }
+            }
+
+            &__content {
+                padding-bottom: 40px;
+                position: relative;
+
+                @media (max-width: 1360px) {
+                    padding-bottom: 20px;
+                }
+                @media (max-width: 991px) {
+                    padding-left: 15px !important;
+                    padding-right: 15px !important; 
+                }
+
+            }
+
+            &__body {
+                // padding-top: 50px;
+                // @media (max-width: 1360px) {
+                //     padding-top: 20px;
+                // }
+
+                // @media (max-width: 992px) {
+                //     padding-top: 10px;
+                // }
+
+
+                .number-order {
+                    position: relative;
+                    
+                    &::before {
+                        position: absolute;
+                        content: "";
+                        width: 55px;
+                        height: 3px;
+                        top: 50%;
+                        transform: translate(-100%, -50%);
+                        left: 0;
+                        background-color: $color-primary;
+                        @media (max-width: 1360px) {
+                            width: 20px;
+                        }
+                    }
+
+                    
+                    @media (max-width: 991px) {
+                        order: 2;
+                        flex-grow: 1;
+
+                        &::before {
+                            width: calc(100% - 100px);
+                            left: inherit;
+                            right: 0;
+                            transform: translate(-50px, -50%);
+                        }
+
+                        // &::after {
+                        //     position: absolute;
+                        //     content: "";
+                        //     height: 100%;
+                        //     width: 1px;
+                        //     left: 50px;
+                        //     top: 0;
+                        //     background-color: $color-primary;
+                        // }
+                    }
+
+                    .box {
+                        width: 50px;
+                        height: 50px;
+                        background-color: $color-primary;
+                        color: $color-white;
+                        text-align: center;
+                        line-height: 55px;
+                        margin-right: auto;
+
+                        @media (max-width: 991px) {
+                            margin-left: auto;
+                            margin-right: 0;
+                        }
+                    }
+
+                }
+                
+                &__title {
+                    margin-bottom: 40px;
+                    padding-top: 50px;
+                    @media (max-width: 1360px) {
+                        padding-top: 20px;
+                        margin-bottom: 30px;
+                    }
+
+                    @media (max-width: 991px) {
+                        margin-bottom: 20px;
+                        order: 1;
+                    }
+                }
+                
+                &__des {
+                    @include split_str(6);
+                    text-align: justify;
+                }
+            }
+
+            &__footer {
+
+            }
+
+        }
+
+        >div:nth-child(odd) {
+            .section-card__row {
+                &__picture {
+                    order: 1;
+                    padding-right: 0;
+                }
+                &__content {
+                    padding-left: 55px;
+                   
+                    @media (max-width: 1360px) {
+                        padding-left: 20px;
+                    }
+                    order: 2;
+                }
+            }
+        }
+
+        >div:nth-child(even) {
+            .section-card__row {
+                &__picture {
+                    order: 2;
+                    padding-left: 0;
+                }
+                &__content {
+                    order: 1;
+                    padding-right: 55px;
+                    
+                    @media (max-width: 1360px) {
+                        padding-right: 20px;
+                    }
+                    @media (min-width: 992px) {
+                        justify-content: flex-end;
+                        text-align: right;
+                    }
+                }
+
+                @media (max-width: 991px) {
+                    &__picture {
+                        order: 1;
+                    }
+                    &__content {
+                        order: 2;
+                    }
+                }
+
+                .number-order {
+                    .box {
+                        margin-left: auto;
+                        margin-right: 0;
+                    }
+                    &::before {
+                        left: inherit;
+                        right: 0;
+                        @media(min-width: 992px) {
+                            transform: translate(100%, -50%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

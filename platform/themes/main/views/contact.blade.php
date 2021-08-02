@@ -1,9 +1,10 @@
+
 <section class="section-info-contact">
     <div class="container-remake">
         <h2 class="contact__title font60 font-pri-bold pb-4">THÔNG TIN LIÊN HỆ</h2>
         <div class="info-contact">
            
-            <div class="info-contact-form">
+            <div class="info-contact-form"> 
                 <div class="row">
                     <div class="col-md-6 pr-0">
                             <div id="contact-form" class="form-horizontal form-contact-us">
@@ -42,9 +43,9 @@
                                             </div>
                                           
                                         </div>
-                                <div class="policy col-sm-10 float-right">
+                                <div class="policy col-sm-9 float-right">
                                     <div class="check-policy">
-                                        <input class="" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                        <input type="radio" class="radio" name="choice" id="a-opt" value="option1" checked/>
                                         <label class="" for="exampleRadios1">
                                             TÔI XÁC NHẬN CUNG CẤP THÔNG TIN CÁ NHÂN ĐỂ LIÊN HỆ VỚI THACO AUTO.
 
@@ -74,7 +75,7 @@
                             <img src="{{ Theme::asset()->url('images/contact/detail-contcact1.png') }}" alt="img-detail">
                     </div>
                     <div class="col-md-8 detail-content-wrap">
-                            <h3 class="detail-title font30 font-pri-bold mt-3 mb-3">TRỤ SỞ CHÍNH CÔNG TY Ô TÔ TRƯỜNG HẢI TẠI THÀNG PHỐ HỒ CHÍ MINH</h3>
+                            <h3 class="detail-title font40 font-pri-bold mt-4 mb-3">TRỤ SỞ CHÍNH CÔNG TY Ô TÔ TRƯỜNG HẢI TẠI TP. HỒ CHÍ MINH</h3>
                             <p class="font-pri"> <img src="{{ Theme::asset()->url('images/contact/location.png') }}" alt=""><span class="font-pri-bold">Địa chỉ: </span>Số 10 Mai Chí Thọ, P.Thủ Thiêm, TP.Thủ Đức, TP.HCM</p>
                             <p class="font-pri"><img src="{{ Theme::asset()->url('images/contact/hotline.png') }}" alt=""><span class="font-pri-bold">Hotline: </span>1900545591</p>
                             <p class="font-pri"><img src="{{ Theme::asset()->url('images/contact/fax.png') }}" alt=""><span class="font-pri-bold">Fax: </span>+84 (0)8-39977.742</p>
@@ -89,7 +90,7 @@
                         <img src="{{ Theme::asset()->url('images/contact/detail-contact2.png') }}" alt="img-detail">
                 </div>
                 <div class="col-md-8 detail-content-wrap">
-                        <h3 class="detail-title font30 font-pri-bold mt-3 mb-3">VĂN PHÒNG THACO TẠI KHU PHỨC HỢP CHU LAI - TRƯỜNG HẢI</h3>
+                        <h3 class="detail-title font40 font-pri-bold mt-3 mb-3">VĂN PHÒNG THACO TẠI KHU PHỨC HỢP CHU LAI - TRƯỜNG HẢI</h3>
                         <p class="font-pri"> <img src="{{ Theme::asset()->url('images/contact/location.png') }}" alt=""><span class="font-pri-bold">Địa chỉ: </span>Thôn 4, Xã Tam Hiệp, Huyện Núi thành, Tỉnh Quảng Nam.</p>
                         <p class="font-pri"><img src="{{ Theme::asset()->url('images/contact/hotline.png') }}" alt=""><span class="font-pri-bold">Hotline: </span>+84-0510.3567.161 - 0510.3567.162 - 0510.3567.163</p>
                         <p class="font-pri"><img src="{{ Theme::asset()->url('images/contact/fax.png') }}" alt=""><span class="font-pri-bold">Fax: </span> +84 - (0)510 - 3565777</p>
@@ -102,13 +103,14 @@
             <div class="col-md-4 img-detail">
                     <img src="{{ Theme::asset()->url('images/contact/detail-contcact1.png') }}" alt="img-detail">
             </div>
-            <div class="col-md-8   detail-content-wrap">
-                    <h3 class="detail-title font30 font-pri-bold mt-3 mb-3">VĂN PHÒNG THACO TẠI HÀ NỘI</h3>
+            <div class="col-md-8 detail-content-wrap">
+                    <h3 class="detail-title font40 font-pri-bold mt-3 mb-3">VĂN PHÒNG THACO TẠI HÀ NỘI</h3>
                     <p class="font-pri"> <img src="{{ Theme::asset()->url('images/contact/location.png') }}" alt=""><span class="font-pri-bold">Địa chỉ: </span>Lô D6, KCN Hà Nội Đài Tư, 386 Nguyễn Văn Linh, Sài Đồng, Long Biên, Hà Nội</p>
                     <p class="font-pri"><img src="{{ Theme::asset()->url('images/contact/hotline.png') }}" alt=""><span class="font-pri-bold">Hotline: </span>+84 - (0)43.8758914</p>
-                    <p class="font-pri"><img src="{{ Theme::asset()->url('images/contact/fax.png') }}" alt=""><span class="font-pri-bold"><span class="font-pri-bold">Fax: </span>043.8759857</p>
+                    <p class="font-pri"><img src="{{ Theme::asset()->url('images/contact/fax.png') }}" alt=""><span class="font-pri-bold">Fax: </span>043.8759857</p>
             </div>
         </div>
 </div>
     </div>
 </section>
+

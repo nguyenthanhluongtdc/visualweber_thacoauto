@@ -18,9 +18,11 @@
                             <div class="section-card__row__body">
                                 <div class="mb-3">
                                     <div class="d-lg-block d-flex align-item-center">
-                                        <div class="number-order font30"> <div class="box"> 1 </div> </div>
+                                        <div class="number-order font30">
+                                            <div class="box"> 1 </div>
+                                        </div>
                                         <h3 class="section-card__row__body__title text-uppercase font-pri-bold font40">
-                                            NHÀ MÁY SẢN XUẤT <br> 
+                                            NHÀ MÁY SẢN XUẤT <br>
                                             <span class="color-pri">XE DU LỊCH CAO CẤP</span> THACO
                                         </h3>
                                     </div>
@@ -50,10 +52,12 @@
 
                             <div class="section-card__row__body">
                                 <div class="mb-3">
-                                     <div class="d-lg-block d-flex align-item-center">
-                                        <div class="number-order font30"> <div class="box"> 2 </div> </div>
+                                    <div class="d-lg-block d-flex align-item-center">
+                                        <div class="number-order font30">
+                                            <div class="box"> 2 </div>
+                                        </div>
                                         <h3 class="section-card__row__body__title text-uppercase font-pri-bold font40">
-                                            NHÀ MÁY THACO <span class="color-pri"> BUS </span> 
+                                            NHÀ MÁY THACO <span class="color-pri"> BUS </span>
                                         </h3>
                                     </div>
 
@@ -81,11 +85,13 @@
                         <div class="section-card__row__content col-lg-4 d-flex flex-wrap align-content-between">
                             <div class="section-card__row__body">
                                 <div class="mb-3">
-                                   <div class="d-lg-block d-flex align-item-center">
-                                        <div class="number-order font30"> <div class="box"> 3 </div> </div>
+                                    <div class="d-lg-block d-flex align-item-center">
+                                        <div class="number-order font30">
+                                            <div class="box"> 3 </div>
+                                        </div>
                                         <h3 class="section-card__row__body__title text-uppercase font-pri-bold font40">
-                                             NHÀ MÁY 
-                                             <span class="color-pri"> TẢI </span>  THACO
+                                            NHÀ MÁY
+                                            <span class="color-pri"> TẢI </span> THACO
                                         </h3>
                                     </div>
 
@@ -113,11 +119,13 @@
                         <div class="section-card__row__content col-lg-4 d-flex flex-wrap align-content-between">
                             <div class="section-card__row__body">
                                 <div class="mb-3">
-                                     <div class="d-lg-block d-flex align-item-center">
-                                        <div class="number-order font30"> <div class="box"> 4 </div> </div>
+                                    <div class="d-lg-block d-flex align-item-center">
+                                        <div class="number-order font30">
+                                            <div class="box"> 4 </div>
+                                        </div>
                                         <h3 class="section-card__row__body__title text-uppercase font-pri-bold font40">
-                                           NHÀ MÁY THACO 
-                                           <span class="color-pri"> kia </span> 
+                                            NHÀ MÁY THACO
+                                            <span class="color-pri"> kia </span>
                                         </h3>
                                     </div>
 
@@ -145,10 +153,12 @@
                         <div class="section-card__row__content col-lg-4 d-flex flex-wrap align-content-between">
                             <div class="section-card__row__body">
                                 <div class="mb-3">
-                                     <div class="d-lg-block d-flex align-item-center">
-                                        <div class="number-order font30"> <div class="box"> 5 </div> </div>
+                                    <div class="d-lg-block d-flex align-item-center">
+                                        <div class="number-order font30">
+                                            <div class="box"> 5 </div>
+                                        </div>
                                         <h3 class="section-card__row__body__title text-uppercase font-pri-bold font40">
-                                            NHÀ MÁY THACO 
+                                            NHÀ MÁY THACO
                                             <span class="color-pri"> MAZDA </span>
                                         </h3>
                                     </div>
@@ -177,11 +187,13 @@
                         <div class="section-card__row__content col-lg-4 d-flex flex-wrap align-content-between">
                             <div class="section-card__row__body">
                                 <div class="mb-3">
-                                     <div class="d-lg-block d-flex align-item-center">
-                                        <div class="number-order font30"> <div class="box"> 6 </div> </div>
+                                    <div class="d-lg-block d-flex align-item-center">
+                                        <div class="number-order font30">
+                                            <div class="box"> 6 </div>
+                                        </div>
                                         <h3 class="section-card__row__body__title text-uppercase font-pri-bold font40">
-                                            NHÀ MÁY 
-                                            <span class="color-pri">SƠMI RƠMOOC </span>  VÀ THIẾT BỊ <br> CHUYÊN DỤNG 
+                                            NHÀ MÁY
+                                            <span class="color-pri">SƠMI RƠMOOC </span> VÀ THIẾT BỊ <br> CHUYÊN DỤNG
                                             <span class="color-pri"> HẠNG NẶNG </span>
                                         </h3>
                                     </div>
@@ -202,5 +214,50 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="box-node-left">
+        <div class="row">
+            <div class="box-symbol">
+                <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/nodelefttwo.png')}}" alt="" />
+            </div>
+
+            <div class="box-text font-pri-bold active">
+                Sản xuất
+            </div>
+        </div>
+        <div class="row">
+            <div class="box-symbol">
+                <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/nodeleftone.png')}}" alt="" />
+            </div>
+
+            <div class="box-text font-pri-bold ">
+                Sản xuất
+            </div>
+        </div>
+    </div>
+
+    <div class="box-node-right">
+        <ul class="pagination-customize">
+            <li class="pagi-item">
+                <span class="text"> NHÀ MÁY SẢN XUẤT XE DU LỊCH CAO CẤP THACO </span>
+                <a href="#" title="" class="number">
+                    1
+                </a>
+            </li>
+
+            <li class="pagi-item active">
+                <span class="text"> nhà máy thaco bus </span>
+                <a href="#" title="" class="number">
+                    2
+                </a>
+            </li>
+
+            <li class="pagi-item">
+                <a href="#" title="" class="number">
+                    3
+                </a>
+            </li>
+        </ul>
     </div>
 </div>

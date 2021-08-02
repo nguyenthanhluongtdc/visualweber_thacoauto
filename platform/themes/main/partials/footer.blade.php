@@ -8,7 +8,7 @@
                 <img src="{{ Theme::asset()->url('images/main/logobt.png') }}" alt="THACO AUTO" height="34">
             </a>
             <div class="thaco-contact">
-                <h1 class="font-pri-bold color-pri">CÔNG TY TNHH THACO AUTO</h1>
+                <h1 class="font-pri-bold color-pri font32">CÔNG TY TNHH THACO AUTO</h1>
                 <p class="address font-pri font18">
                     <span>Địa chỉ:</span>
                     <span>KCN Cơ khí ô tô Chu Lai Trường Hải, Xã Tam Hiệp, Huyện Núi Thành, Tỉnh Quảng Nam ( Tìm vị trí )</span>

@@ -7,6 +7,9 @@ Route::group(['namespace' => 'Theme\Thaco\Http\Controllers', 'middleware' => ['w
         Route::get('/dich-vu-detail-1', function () {
             return Theme::scope('pages/services/service-detail')->render();
         });
+        Route::get('/product-detail-1', function () {
+            return Theme::scope('pages/business/product/product-detail')->render();
+        });
 
         Route::get('ajax/search', 'ThacoController@getSearch')->name('public.ajax.search');
 

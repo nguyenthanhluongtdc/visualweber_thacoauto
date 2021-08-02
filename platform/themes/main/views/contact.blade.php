@@ -4,7 +4,7 @@
         <h2 class="contact__title font60 font-pri-bold pb-4">THÔNG TIN LIÊN HỆ</h2>
         <div class="info-contact">
            
-            <div class="info-contact-form"> 
+            <div class="info-contact-form mb-6"> 
                 <div class="row">
                     <div class="col-md-6 pr-0">
                             <div id="contact-form" class="form-horizontal form-contact-us">
@@ -45,11 +45,12 @@
                                         </div>
                                 <div class="policy col-sm-9 float-right">
                                     <div class="check-policy">
-                                        <input type="radio" class="radio" name="choice" id="a-opt" value="option1" checked/>
-                                        <label class="" for="exampleRadios1">
-                                            TÔI XÁC NHẬN CUNG CẤP THÔNG TIN CÁ NHÂN ĐỂ LIÊN HỆ VỚI THACO AUTO.
-
-                                        </label>
+                                        <div class="styled-input-single">
+                                            <input type="radio" name="fieldset-1" id="radio-example-one" />
+                                            <label for="radio-example-one">TÔI XÁC NHẬN CUNG CẤP THÔNG TIN CÁ NHÂN ĐỂ LIÊN HỆ VỚI THACO AUTO.</label>
+                                          </div>
+                                        {{-- <input type="radio" class="radio" name="choice" id="a-opt" value="option1" checked/> --}}
+                                        
                                       </div>
                                     <button class="btn btn-secondary" type="submit" value="SEND">
                                         Gửi

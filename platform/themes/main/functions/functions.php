@@ -16,7 +16,8 @@ register_page_template([
     'cultural' => 'Cultural',
     'services' => 'Services',
     'contact' => 'Contact',
-
+    'business-system' => 'Business system',
+    'production-assemble' => 'Production assemble',
 ]);
 
 register_sidebar([

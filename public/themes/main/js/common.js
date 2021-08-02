@@ -199,3 +199,11 @@ $(window).scroll(function() {
     $(".header").removeClass("header-fixed");
 }
 }); //missing );
+
+var swiper = new Swiper(".researchDevSwiper", {
+  slidesPerView: 3,
+  spaceBetween: 40,
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
+});

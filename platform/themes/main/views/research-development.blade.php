@@ -126,24 +126,45 @@
             </div>
 
             <div class="list-image row">
-                <div class="col-sm-4 mb-sm-0 mb-3">
-                    <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu5.jpg')}}" alt="" />
-                </div>
-
-                <div class="col-sm-4 mb-sm-0 mb-3">
-                    <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu6.jpg')}}" alt="" />
-                </div>
-
-                <div class="col-sm-4 mb-sm-0 mb-3">
-                    <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu5.jpg')}}" alt="" />
+                <div class="swiper-container researchDevSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu5.jpg')}}" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu6.jpg')}}" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu7.jpg')}}" alt="" />
+                        </div>
+                         <div class="swiper-slide">
+                            <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu5.jpg')}}" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu6.jpg')}}" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu7.jpg')}}" alt="" />
+                        </div>
+                         <div class="swiper-slide">
+                            <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu5.jpg')}}" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu6.jpg')}}" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu7.jpg')}}" alt="" />
+                        </div>
+                    </div>
+                    <div class="swiper-scrollbar"></div>
                 </div>
             </div>
 
-            <div class="container-remake">
+            {{-- <div class="container-remake">
                 <div class="line-border">
                     <div class="bg-dark h-100 w-25"> </div>
                 </div>
-            </div>
+            </div> --}}
 
             <div class="list-news">
                 <div class="container-remake">
@@ -156,22 +177,20 @@
                     </div>
 
                     <div class="content">
-                        <div class="item row mx-0">
-                            <div class="col-lg-5 item__left">
-                                <div class="row ">
-                                    <div class="col-lg-4 sub--left">
-                                        <div class="day"> 29 </div>
-                                        <div class="month"> May </div>
-                                        <div class="year"> 2021 </div>
-                                    </div>
+                        <div class="item mx-0">
+                            <div class="item__left">
+                                <div class="sub--left font-pri-bold">
+                                    <div class="day"> 29 </div>
+                                    <div class="month"> May </div>
+                                    <div class="year"> 2021 </div>
+                                </div>
 
-                                    <div class="col-lg-8 sub--right">
-                                        <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu8.jpg')}}" alt="" />
-                                    </div>
+                                <div class="sub--right">
+                                    <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu8.jpg')}}" alt="" />
                                 </div>
                             </div>
 
-                            <div class="col-lg-6 item__right">
+                            <div class="item__right">
                                 <div class="item__right__top">
                                     <h3 class="font30 title"> Lợi ích của công nghệ cắt Laser thép ống, thép hộp </h3>
                                     <p class="description text-dark font20">
@@ -180,68 +199,61 @@
                                     </p>
                                 </div>
 
-                                <a class="read-more text-dark font20"> {!!__('Read more')!!} >> </a>
+                                <a href="#" title="{!!__('Read more')!!}" class="read-more text-dark font20"> {!!__('Read more')!!} >> </a>
                             </div>
                         </div>
 
-                        <div class="item row mx-0">
-                            <div class="col-lg-5 item__left">
-                                <div class="row p">
-                                    <div class="col-lg-4 sub--left">
-                                        <div class="day"> 26 </div>
-                                        <div class="month"> May </div>
-                                        <div class="year"> 2021 </div>
-                                    </div>
+                        <div class="item mx-0">
+                            <div class="item__left">
+                                <div class="sub--left font-pri-bold">
+                                    <div class="day"> 26 </div>
+                                    <div class="month"> May </div>
+                                    <div class="year"> 2021 </div>
+                                </div>
 
-                                    <div class="col-lg-8 sub--right">
-                                        <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu9.jpg')}}" alt="" />
-                                    </div>
+                                <div class="sub--right">
+                                    <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu9.jpg')}}" alt="" />
                                 </div>
                             </div>
 
-                            <div class="col-lg-6 item__right">
+                            <div class="item__right">
                                 <div class="item__right__top">
-                                    <h3 class="font30 title">
-                                        Xe tự hành AGV giải pháp vận chuyển hiệu quả
-                                    </h3>
+                                    <h3 class="font30 title"> Lợi ích của công nghệ cắt Laser thép ống, thép hộp </h3>
                                     <p class="description text-dark font20">
-                                        Xe tự hành AGV là một phương tiện dùng để vận chuyển hàng hóa và vật tư
-                                        trong nhà máy, khu công [...]
+                                        Công nghệ cắt laser được ứng dụng rộng rãi trong nhiều ngành nghề khác nhau,
+                                        đặc biệt đối với ngành [...]
                                     </p>
                                 </div>
 
-                                <a class="read-more text-dark font20"> {!!__('Read more')!!} >> </a>
+                                <a href="#" title="{!!__('Read more')!!}" class="read-more text-dark font20"> {!!__('Read more')!!} >> </a>
                             </div>
                         </div>
 
-                        <div class="item row mx-0">
-                            <div class="col-lg-5 item__left">
-                                <div class="row p">
-                                    <div class="col-lg-4 sub--left">
-                                        <div class="day"> 22 </div>
-                                        <div class="month"> May </div>
-                                        <div class="year"> 2021 </div>
-                                    </div>
+                        <div class="item mx-0">
+                            <div class="item__left">
+                                <div class="sub--left font-pri-bold">
+                                    <div class="day"> 22 </div>
+                                    <div class="month"> May </div>
+                                    <div class="year"> 2021 </div>
+                                </div>
 
-                                    <div class="col-lg-8 sub--right">
-                                        <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu10.jpg')}}" alt="" />
-                                    </div>
+                                <div class="sub--right">
+                                    <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu10.jpg')}}" alt="" />
                                 </div>
                             </div>
 
-                            <div class="col-lg-6 item__right">
+                            <div class="item__right">
                                 <div class="item__right__top">
-                                    <h3 class="font30 title"> Nhà chế tạo Khuôn mẫu hàng đầu miền Trung </h3>
+                                    <h3 class="font30 title"> Lợi ích của công nghệ cắt Laser thép ống, thép hộp </h3>
                                     <p class="description text-dark font20">
-                                        Khuôn mẫu là “nền tảng của nền công nghiệp” Khuôn mẫu được xem là
-                                        “Nền tảng của nền công [...]
+                                        Công nghệ cắt laser được ứng dụng rộng rãi trong nhiều ngành nghề khác nhau,
+                                        đặc biệt đối với ngành [...]
                                     </p>
                                 </div>
 
-                                <a class="read-more text-dark font20"> {!!__('Read more')!!} >> </a>
+                                <a href="#" title="{!!__('Read more')!!}" class="read-more text-dark font20"> {!!__('Read more')!!} >> </a>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>

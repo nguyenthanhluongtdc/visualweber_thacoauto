@@ -98,9 +98,9 @@
     }
 
     .section-info-more-wrapper {
-        padding-top: 50px;
+        padding-top: 60px;
         .content {
-            padding-bottom: 50px;
+            padding-bottom: 60px;
 
             .title {
                 margin-bottom: 1.5rem;
@@ -134,10 +134,26 @@
                 padding-left: 15px;
                 padding-right: 15px;
             }
+
+            .swiper-container {
+                padding-bottom: 20px;
+                margin-left: -100px;
+                margin-right: -100px;
+                width: calc(100% + 200px);
+            }
+            .swiper-scrollbar {
+                width: 80%;
+                left: 50%;
+                transform: translateX(-50%);
+
+                .swiper-scrollbar-drag {
+                    background-color: #2e3a41;
+                }
+            }
         }
 
         .list-news {
-            padding-top: 50px;
+            padding-top: 60px;
             .title {
                 font-family: $font-my-bold;
             }
@@ -150,13 +166,21 @@
                     padding-top: 50px;
                     padding-bottom: 50px;
                     border-bottom: 1px solid #d0d0d0;
-
-                    @media (max-width: 992px) {
-                        .read-more {
-                            margin-top: 1.5rem;
-                        }
+                    display: flex;
+                    @media(max-width: 992px) {
+                        flex-wrap: wrap;
                     }
+
+                    .read-more {
+                       margin-top: 1.5rem;
+                    }
+
                     &__left {
+                        display: flex;
+                        @media (max-width: 992px) {
+                            flex: 0 0 100%;
+                            max-width: 100%;
+                        }
                         .sub--left {
                             background-color: $color-primary;
                             text-align: center;
@@ -164,10 +188,24 @@
                             display: flex;
                             flex-wrap: wrap;
                             align-content: center;
+                            width: 230px;
+                            height: 226px;
+                            @media(max-width: 1680px) {
+                                width: 200px;
+                                height: 197px;
+                            }
+
                             @media (max-width: 992px) {
+                                width: 35%;
                                 padding-top: 1rem;
                                 padding-bottom: 1rem;
                             }
+
+                            @media (max-width: 576px) {
+                                height: 120px;
+                                width: 40%;
+                            }
+
                             >div {
                                 flex: 0 0 100%;
                                 max-width: 100%;
@@ -177,15 +215,20 @@
                                 font-size: 40px;
                                 text-transform: uppercase;
                                 font-weight: bold;
-                                font-family: $font-my-bold;
                             }
                             .year {
                                 font-size: 20px;
-                                font-family: $font-primary;
                             }
                         }
                         .sub--right {
                             padding-left: 0;
+                            width: 336px;
+                            height: 226px;
+                            @media (max-width: 1680px) {
+                                width: 294px;
+                                height: 197px;
+                            }
+                          
                             img {
                                 height: 100%;
                                 @media (max-width) {
@@ -196,6 +239,11 @@
 
                             @media (max-width: 992px) {
                                 padding: 0;
+                                flex-grow: 1;
+                            }
+
+                            @media (max-width: 576px) {
+                                height: 120px;
                             }
                         }
                     }
@@ -206,6 +254,19 @@
                         align-content: space-between;
                         padding-top: 20px;
                         padding-bottom: 20px;
+                        flex-grow: 1;
+                        padding-left: 55px;
+                        max-width: 47%;
+                        @media (max-width: 992px) {
+                            flex: 0 0 100%;
+                            max-width: 100%;
+                            padding-left: 0;
+                        }
+
+                        &__top {
+                            flex: 0 0 100%;
+                            max-width: 100%;
+                        }
 
                         .title {
                             font-family:  $font-primary;

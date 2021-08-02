@@ -44,7 +44,7 @@ return [
         'beforeRenderTheme'  => function (Theme $theme) {
             // You may use this event to set up your assets.
 
-            $version = '5.18';
+            $version = '5.19.0';
 
             $theme->asset()->container('footer')->usePath()->add('jquery', 'plugins/jquery/jquery.min.js');
             $theme->asset()->container('footer')->usePath()

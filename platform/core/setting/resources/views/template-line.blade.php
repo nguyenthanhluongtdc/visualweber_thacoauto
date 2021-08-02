@@ -19,6 +19,8 @@
                         <th class="border-none-b"> {{ trans('core/setting::setting.description') }} </th>
                         @if ($type !== 'core')
                             <th class="border-none-b text-center"> {{ trans('core/setting::setting.enable') }}</th>
+                        @else
+                            <th>&nbsp;</th>
                         @endif
                     </tr>
                     </thead>

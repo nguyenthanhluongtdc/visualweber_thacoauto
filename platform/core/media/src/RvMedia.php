@@ -103,6 +103,7 @@ class RvMedia
             'get_breadcrumbs'          => route('media.breadcrumbs'),
             'global_actions'           => route('media.global_actions'),
             'media_upload_from_editor' => route('media.files.upload.from.editor'),
+            'download_url'             => route('media.download_url'),
         ];
     }
 
@@ -394,9 +395,12 @@ class RvMedia
 
     /**
      * @param Request $request
+     * @param int $folderId
+     * @param null $folderName
+     * @param string $fileInput
      * @return Application|ResponseFactory|JsonResponse|Response
      */
-    public function uploadFromEditor(Request $request)
+    public function uploadFromEditor(Request $request, $folderId = 0, $folderName = null, $fileInput = 'upload')
     {
         $validator = Validator::make($request->all(), [
             'upload' => 'required|image|mimes:jpg,jpeg,png,webp',
@@ -407,15 +411,12 @@ class RvMedia
                 ->header('Content-Type', 'text/html');
         }
 
-        $result = $this->handleUpload($request->file('upload'), 0, $request->input('upload_type'));
+        $folderName = $folderName ?: $request->input('upload_type');
+
+        $result = $this->handleUpload($request->file($fileInput), $folderId, $folderName);
 
         if ($result['error'] == false) {
             $file = $result['data'];
-            if ($request->input('upload_type') == 'tinymce') {
-                return response('<script>parent.setImageValue("' . $this->url($file->url) . '"); </script>')
-                    ->header('Content-Type', 'text/html');
-            }
-
             if (!$request->input('CKEditorFuncNum')) {
                 return response()->json([
                     'fileName' => File::name($this->url($file->url)),
@@ -436,12 +437,16 @@ class RvMedia
     /**
      * @param UploadedFile $fileUpload
      * @param int $folderId
-     * @param string $folderSlug
+     * @param string|null $folderSlug
      * @param bool $skipValidation
      * @return JsonResponse|array
      */
     public function handleUpload($fileUpload, $folderId = 0, $folderSlug = null, $skipValidation = false): array
     {
+        if (request()->input('path')) {
+            $folderId = $this->handleTargetFolder($folderId, request()->input('path'));
+        }
+
         if (!$fileUpload) {
             return [
                 'error'   => true,
@@ -833,5 +838,46 @@ class RvMedia
     public function canGenerateThumbnails($mimeType): bool
     {
         return RvMedia::isImage($mimeType) && !in_array($mimeType, ['image/svg+xml', 'image/x-icon']);
+    }
+
+    /**
+     *
+     * @param string $folderSlug
+     * @param int $parentId
+     * @return mixed
+     */
+    public function createFolder($folderSlug, $parentId = 0)
+    {
+        $folder = $this->folderRepository->getFirstBy(['media_folders.slug' => $folderSlug]);
+
+
+        if (!$folder) {
+            $folder = $this->folderRepository->createOrUpdate([
+                'user_id'   => Auth::check() ? Auth::id() : 0,
+                'name'      => $this->folderRepository->createName($folderSlug, 0),
+                'slug'      => $this->folderRepository->createSlug($folderSlug, 0),
+                'parent_id' => $parentId,
+            ]);
+        }
+
+        return $folder->id;
+    }
+
+    /**
+     * @param int $folderId
+     * @param string $filePath
+     * @return string
+     */
+    public function handleTargetFolder($folderId = 0, $filePath = ''): string
+    {
+        if (strpos($filePath, '/') !== false) {
+            $paths = explode('/', $filePath);
+            array_pop($paths);
+            foreach ($paths as $folder) {
+                $folderId = $this->createFolder($folder, $folderId);
+            }
+        }
+
+        return $folderId;
     }
 }

@@ -17,12 +17,19 @@ class PostRequest extends Request
      */
     public function rules()
     {
-        return [
+        $rules = [
             'name'        => 'required|max:255',
             'description' => 'max:400',
             'categories'  => 'required',
-            'format_type' => Rule::in(array_keys(PostFormat::getPostFormats(true))),
             'status'      => Rule::in(BaseStatusEnum::values()),
         ];
+
+        $postFormats = PostFormat::getPostFormats(true);
+
+        if (count($postFormats) > 1) {
+            $rules['format_type'] = Rule::in(array_keys($postFormats));
+        }
+
+        return $rules;
     }
 }

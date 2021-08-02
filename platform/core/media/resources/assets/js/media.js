@@ -4,6 +4,7 @@ import {MediaService} from './App/Services/MediaService';
 import {FolderService} from './App/Services/FolderService';
 import {UploadService} from './App/Services/UploadService';
 import {ActionsService} from './App/Services/ActionsService';
+import {DownloadService} from './App/Services/DownloadService';
 import {EditorService} from './integrate';
 
 class MediaManagement {
@@ -11,6 +12,7 @@ class MediaManagement {
         this.MediaService = new MediaService();
         this.UploadService = new UploadService();
         this.FolderService = new FolderService();
+        this.DownloadService = new DownloadService();
 
         this.$body = $('body');
     }
@@ -288,7 +290,51 @@ class MediaManagement {
                 _self.MediaService.getMedia(true);
             });
         })
-        ;
+            .off('submit', '.form-download-url').on('submit', '.form-download-url', async (event) =>  {
+                let $el = $('#modal_download_url'),
+                    $wrapper = $el.find('#download-form-wrapper'),
+                    $notice = $el.find('#modal-notice').empty();
+                event.preventDefault();
+                let $header = $el.find('.modal-title');
+                let $input = $el.find('textarea[name="urls"]').prop('disabled', true);
+                let $button = $el.find('[type="submit"]')
+                    .addClass('button-loading')
+                    .prop('disabled', true);
+
+                let url = $input.val();
+                let remainUrls = [];
+                $wrapper.slideUp();
+
+
+                // start to download
+                await _self.DownloadService.download(url, ((progress, item, url) => {
+                    let $noticeItem = $(`
+                        <div class="p-2 text-primary">
+                            <i class="fa fa-info-circle"></i>
+                            <span>${item}</span>
+                        </div>
+                    `)
+                    $notice.append($noticeItem).scrollTop($notice[0].scrollHeight);
+                    $header.html(`<i class="fas fa-cloud-download-alt"></i> ${$header.data('downloading')} (${progress})`)
+                    return (success, message = '') => {
+                        if (!success) {
+                            remainUrls.push(url)
+                        }
+                        $noticeItem.find('span').text(`${item}: ${message}`);
+                        $noticeItem
+                            .attr('class', `p-2 text-${success ? 'success' : 'danger'}`)
+                            .find('i').attr('class', success ? 'fas fa-check-circle' : 'fas fa-times-circle');
+                    }
+                }));
+
+                $wrapper.slideDown();
+                $input.val(remainUrls.join('\n')).prop('disabled', false);
+                $header.html(`<i class="fas fa-cloud-download-alt"></i> ${$header.data('text')}`);
+                $button
+                    .removeClass('button-loading')
+                    .prop('disabled', false);
+                return false;
+        });
     }
 
     handleModals() {
@@ -297,6 +343,13 @@ class MediaManagement {
         _self.$body.on('show.bs.modal', '#modal_rename_items', () => {
             ActionsService.renderRenameItems();
         });
+
+        _self.$body.on('hidden.bs.modal', '#modal_download_url', () => {
+            let $el = $('#modal_download_url');
+            $el.find('textarea').val('');
+            $el.find('#modal-notice').empty();
+        })
+
         _self.$body.off('submit', '#modal_rename_items .form-rename').on('submit', '#modal_rename_items .form-rename', event => {
             event.preventDefault();
             let items = [];

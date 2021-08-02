@@ -3,14 +3,14 @@
         @auth
             @if (BaseHelper::getAdminPrefix() != '')
                 <li class="dropdown">
-                    <a class="dropdown-toggle dropdown-header-name" style="padding-right: 10px" href="{{ url('/') }}" target="_blank"><i class="fa fa-globe"></i> <span @if (isset($themes) && setting('enable_change_admin_theme') != false) class="d-none d-sm-inline" @endif>{{ trans('core/base::layouts.view_website') }}</span> </a>
+                    <a class="dropdown-toggle dropdown-header-name" style="padding-right: 10px" href="{{ url('/') }}" target="_blank"><i class="fa fa-globe"></i> <span @if (isset($themes) && is_array($themes) && count($themes) > 1 && setting('enable_change_admin_theme') != false) class="d-none d-sm-inline" @endif>{{ trans('core/base::layouts.view_website') }}</span> </a>
                 </li>
             @endif
             @if (Auth::check())
                 {!! apply_filters(BASE_FILTER_TOP_HEADER_LAYOUT, null) !!}
             @endif
 
-            @if (isset($themes) && setting('enable_change_admin_theme') != false)
+            @if (isset($themes) && is_array($themes) && count($themes) > 1 && setting('enable_change_admin_theme') != false)
                 <li class="dropdown">
                     <a href="javascript:;" class="dropdown-toggle dropdown-header-name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span>{{ trans('core/base::layouts.theme') }}</span>

@@ -47,8 +47,9 @@ class SettingController extends BaseController
         page_title()->setTitle(trans('core/setting::setting.title'));
 
         Assets::addScriptsDirectly('vendor/core/core/setting/js/setting.js');
+        Assets::addStylesDirectly('vendor/core/core/setting/css/setting.css');
 
-        return view('core/setting::index');
+        return view('core/setting::index', ['host' => request()->getHost()]);
     }
 
     /**

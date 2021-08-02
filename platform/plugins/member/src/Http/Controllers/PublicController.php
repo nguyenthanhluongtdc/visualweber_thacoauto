@@ -4,6 +4,9 @@ namespace Platform\Member\Http\Controllers;
 
 use Assets;
 use Platform\Base\Http\Responses\BaseHttpResponse;
+use Platform\Media\Chunks\Exceptions\UploadMissingFileException;
+use Platform\Media\Chunks\Handler\DropZoneUploadHandler;
+use Platform\Media\Chunks\Receiver\FileReceiver;
 use Platform\Media\Repositories\Interfaces\MediaFileInterface;
 use Platform\Media\Services\ThumbnailService;
 use Platform\Member\Http\Requests\AvatarRequest;
@@ -17,6 +20,7 @@ use File;
 use Illuminate\Contracts\Config\Repository;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Validator;
 use RvMedia;
 use SeoHelper;
@@ -65,7 +69,7 @@ class PublicController extends Controller
     {
         $user = auth('member')->user();
 
-        SeoHelper::setTitle(auth('member')->user()->name);
+        SeoHelper::setTitle($user->name);
 
         return view('plugins/member::dashboard.index', compact('user'));
     }
@@ -107,8 +111,7 @@ class PublicController extends Controller
             }
         }
 
-        $this->memberRepository->createOrUpdate($request->except('email'),
-            ['id' => auth('member')->user()->getAuthIdentifier()]);
+        $this->memberRepository->createOrUpdate($request->except('email'), ['id' => auth('member')->id()]);
 
         $this->activityLogRepository->createOrUpdate(['action' => 'update_setting']);
 
@@ -136,7 +139,7 @@ class PublicController extends Controller
      */
     public function postSecurity(UpdatePasswordRequest $request, BaseHttpResponse $response)
     {
-        $this->memberRepository->update(['id' => auth('member')->user()->getAuthIdentifier()], [
+        $this->memberRepository->update(['id' => auth('member')->id()], [
             'password' => bcrypt($request->input('password')),
         ]);
 
@@ -200,9 +203,64 @@ class PublicController extends Controller
      */
     public function getActivityLogs(BaseHttpResponse $response)
     {
-        $activities = $this->activityLogRepository->getAllLogs(auth('member')->user()->getAuthIdentifier());
+        $activities = $this->activityLogRepository->getAllLogs(auth('member')->id());
 
         return $response->setData(ActivityLogResource::collection($activities))->toApiResponse();
+    }
+
+    /**
+     * @param Request $request
+     * @param BaseHttpResponse $response
+     * @return BaseHttpResponse|\Illuminate\Http\JsonResponse
+     */
+    public function postUpload(Request $request, BaseHttpResponse $response)
+    {
+        if (setting('media_chunk_enabled') != '1') {
+            $validator = Validator::make($request->all(), [
+                'file.0' => 'required|image|mimes:jpg,jpeg,png,webp',
+            ]);
+
+            if ($validator->fails()) {
+                return $response->setError()->setMessage($validator->getMessageBag()->first());
+            }
+
+            $result = RvMedia::handleUpload(Arr::first($request->file('file')), 0, 'accounts');
+
+            if ($result['error']) {
+                return $response->setError(true)->setMessage($result['message']);
+            }
+
+            return $response->setData($result['data']);
+        }
+
+        try {
+            // Create the file receiver
+            $receiver = new FileReceiver('file', $request, DropZoneUploadHandler::class);
+            // Check if the upload is success, throw exception or return response you need
+            if ($receiver->isUploaded() === false) {
+                throw new UploadMissingFileException;
+            }
+            // Receive the file
+            $save = $receiver->receive();
+            // Check if the upload has finished (in chunk mode it will send smaller files)
+            if ($save->isFinished()) {
+                $result = RvMedia::handleUpload($save->getFile(), 0, 'accounts');
+
+                if ($result['error'] == false) {
+                    return $response->setData($result['data']);
+                }
+
+                return $response->setError(true)->setMessage($result['message']);
+            }
+            // We are in chunk mode, lets send the current progress
+            $handler = $save->handler();
+            return response()->json([
+                'done'   => $handler->getPercentageDone(),
+                'status' => true,
+            ]);
+        } catch (Exception $exception) {
+            return $response->setError(true)->setMessage($exception->getMessage());
+        }
     }
 
     /**
@@ -210,8 +268,8 @@ class PublicController extends Controller
      * @return mixed
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      */
-    public function postUpload(Request $request)
+    public function postUploadFromEditor(Request $request)
     {
-        return RvMedia::uploadFromEditor($request);
+        return RvMedia::uploadFromEditor($request, 0, 'accounts');
     }
 }

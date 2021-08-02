@@ -75,7 +75,7 @@
         className: 'buttons-excel',
 
         text: dt => {
-            return '<i class="far fa-file-excel"></i> ' + dt.i18n('buttons.excel', BotbleVariables.languages.tables.excel);
+            return '<i class="far fa-file-excel"></i> ' + dt.i18n('buttons.excel', BotbleVariables.languages.tables.excel ? BotbleVariables.languages.tables.excel : 'Excel');
         },
 
         action: (e, dt) => {
@@ -87,7 +87,7 @@
         className: 'buttons-excel',
 
         text: dt => {
-            return '<i class="far fa-file-excel"></i> ' + dt.i18n('buttons.excel', BotbleVariables.languages.tables.excel);
+            return '<i class="far fa-file-excel"></i> ' + dt.i18n('buttons.excel', BotbleVariables.languages.tables.excel ? BotbleVariables.languages.tables.excel : 'Excel');
         },
 
         action: (e, dt) => {
@@ -104,7 +104,7 @@
         className: 'buttons-export',
 
         text: dt => {
-            return '<i class="fa fa-download"></i> ' + dt.i18n('buttons.export', BotbleVariables.languages.tables.export) + '&nbsp;<span class="caret"/>';
+            return '<i class="fa fa-download"></i> ' + dt.i18n('buttons.export', BotbleVariables.languages.tables.export ? BotbleVariables.languages.tables.export : 'Export') + '&nbsp;<span class="caret"/>';
         },
 
         buttons: ['csv', 'excel']
@@ -114,7 +114,7 @@
         className: 'buttons-csv',
 
         text: dt => {
-            return '<i class="fas fa-file-csv"></i> ' + dt.i18n('buttons.csv', BotbleVariables.languages.tables.csv);
+            return '<i class="fas fa-file-csv"></i> ' + dt.i18n('buttons.csv', BotbleVariables.languages.tables.csv ? BotbleVariables.languages.tables.csv : 'CSV');
         },
 
         action: (e, dt) => {
@@ -126,7 +126,7 @@
         className: 'buttons-csv',
 
         text: dt => {
-            return '<i class="fas fa-file-csv"></i> ' + dt.i18n('buttons.csv', BotbleVariables.languages.tables.csv);
+            return '<i class="fas fa-file-csv"></i> ' + dt.i18n('buttons.csv', BotbleVariables.languages.tables.csv ? BotbleVariables.languages.tables.csv : 'CSV');
         },
 
         action: (e, dt) => {
@@ -168,7 +168,7 @@
         className: 'buttons-print',
 
         text: dt => {
-            return '<i class="fa fa-print"></i> ' + dt.i18n('buttons.print', BotbleVariables.languages.tables.print);
+            return '<i class="fa fa-print"></i> ' + dt.i18n('buttons.print', BotbleVariables.languages.tables.print ? BotbleVariables.languages.tables.print : 'Print');
         },
 
         action: (e, dt) => {
@@ -180,7 +180,7 @@
         className: 'buttons-reset',
 
         text: dt => {
-            return '<i class="fa fa-undo"></i> ' + dt.i18n('buttons.reset', BotbleVariables.languages.tables.reset);
+            return '<i class="fa fa-undo"></i> ' + dt.i18n('buttons.reset', BotbleVariables.languages.tables.reset ? BotbleVariables.languages.tables.reset : 'Reset');
         },
 
         action: () => {
@@ -193,7 +193,7 @@
         className: 'buttons-reload',
 
         text: dt => {
-            return '<i class="fas fa-sync"></i> ' + dt.i18n('buttons.reload', BotbleVariables.languages.tables.reload);
+            return '<i class="fas fa-sync"></i> ' + dt.i18n('buttons.reload', BotbleVariables.languages.tables.reload ? BotbleVariables.languages.tables.reload : 'Reload');
         },
 
         action: (e, dt) => {
@@ -336,7 +336,7 @@
                 });
 
                 if (ids.length === 0) {
-                    Botble.showError(BotbleVariables.languages.tables.please_select_record);
+                    Botble.showError(BotbleVariables.languages.tables.please_select_record ? BotbleVariables.languages.tables.please_select_record : 'Please select at least one record to perform this action!');
                     return false;
                 }
 
@@ -399,7 +399,7 @@
                 });
 
                 if (ids.length === 0) {
-                    Botble.showError(BotbleVariables.languages.tables.please_select_record);
+                    Botble.showError(BotbleVariables.languages.tables.please_select_record ? BotbleVariables.languages.tables.please_select_record : 'Please select at least one record to perform this action!');
                     return false;
                 }
 

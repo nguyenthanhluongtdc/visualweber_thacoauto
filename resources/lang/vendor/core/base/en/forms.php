@@ -45,4 +45,7 @@ return [
     'link' => 'Link',
     'show_hide_editor' => 'Show/Hide Editor',
     'basic_info_title' => 'Basic information',
+    'expand_all' => 'Expand all',
+    'collapse_all' => 'Collapse all',
+    'view_new_tab' => 'Open in new tab',
 ];

@@ -14,7 +14,12 @@ class HookServiceProvider extends ServiceProvider
             add_shortcode('static-block', trans('plugins/block::block.static_block_short_code_name'),
                 trans('plugins/block::block.static_block_short_code_description'), [$this, 'render']);
 
-            shortcode()->setAdminConfig('static-block', view('plugins/block::partials.short-code-admin-config')->render());
+            shortcode()->setAdminConfig('static-block', function () {
+                $blocks = $this->app->make(BlockInterface::class)
+                    ->pluck('name', 'alias', ['status' => BaseStatusEnum::PUBLISHED]);
+
+                return view('plugins/block::partials.short-code-admin-config', compact('blocks'))->render();
+            });
         }
     }
 

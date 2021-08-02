@@ -123,6 +123,13 @@
 
         .modal-body {
             padding-bottom: 10px;
+
+            .input-group {
+                .input-group-prepend {
+                    border: none;
+                    background: none;
+                }
+            }
         }
     }
 }

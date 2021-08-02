@@ -3,20 +3,20 @@
 namespace Platform\Member\Http\Controllers;
 
 use Platform\Base\Events\BeforeEditContentEvent;
+use Platform\Base\Events\CreatedContentEvent;
+use Platform\Base\Events\DeletedContentEvent;
+use Platform\Base\Events\UpdatedContentEvent;
 use Platform\Base\Forms\FormBuilder;
 use Platform\Base\Http\Controllers\BaseController;
 use Platform\Base\Http\Responses\BaseHttpResponse;
 use Platform\Base\Traits\HasDeleteManyItemsTrait;
 use Platform\Member\Forms\MemberForm;
-use Platform\Member\Tables\MemberTable;
 use Platform\Member\Http\Requests\MemberCreateRequest;
 use Platform\Member\Http\Requests\MemberEditRequest;
 use Platform\Member\Repositories\Interfaces\MemberInterface;
+use Platform\Member\Tables\MemberTable;
 use Exception;
 use Illuminate\Http\Request;
-use Platform\Base\Events\CreatedContentEvent;
-use Platform\Base\Events\DeletedContentEvent;
-use Platform\Base\Events\UpdatedContentEvent;
 
 class MemberController extends BaseController
 {

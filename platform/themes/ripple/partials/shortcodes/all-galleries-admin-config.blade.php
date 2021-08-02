@@ -1,4 +1,4 @@
 <div class="form-group">
-    <label class="control-label">Limit</label>
-    <input name="limit" data-shortcode-attribute="limit" class="form-control" value="8" />
+    <label class="control-label">{{ __('Limit') }}</label>
+    {!! Form::input('text', 'limit', 8, ['class' => 'form-control']) !!}
 </div>

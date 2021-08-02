@@ -2,8 +2,10 @@
 
 namespace Platform\ACL\Notifications;
 
+use EmailHandler;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
+use Illuminate\Support\HtmlString;
 use Throwable;
 
 class ResetPasswordNotification extends Notification
@@ -43,9 +45,22 @@ class ResetPasswordNotification extends Notification
      * @return MailMessage
      * @throws Throwable
      */
+    /**
+     * Get the mail representation of the notification.
+     *
+     * @param  mixed $notifiable
+     * @return \Illuminate\Notifications\Messages\MailMessage
+     */
     public function toMail($notifiable)
     {
+        EmailHandler::setModule('acl')
+            ->setVariableValue('reset_link', route('access.password.reset', ['token' => $this->token]));
+
+        $template = 'password-reminder';
+        $content = EmailHandler::prepareData(EmailHandler::getTemplateContent($template, 'core'));
+
         return (new MailMessage)
-            ->view('core/acl::emails.reminder', ['link' => route('access.password.reset', ['token' => $this->token])]);
+            ->view(['html' => new HtmlString($content)])
+            ->subject(EmailHandler::getTemplateSubject($template));
     }
 }

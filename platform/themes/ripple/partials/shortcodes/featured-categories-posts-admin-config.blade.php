@@ -1,4 +1,4 @@
 <div class="form-group">
-    <label class="control-label">Title</label>
-    <input name="title" data-shortcode-attribute="title" class="form-control" />
+    <label class="control-label">{{ __('Title') }}</label>
+    {!! Form::input('text', 'title', null, ['class' => 'form-control']) !!}
 </div>

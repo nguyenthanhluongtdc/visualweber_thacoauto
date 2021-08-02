@@ -571,6 +571,16 @@ class LanguageServiceProvider extends ServiceProvider
                 }
 
                 $table = $model->getTable();
+
+                $joins = $data->getQuery()->joins;
+                if ($joins && is_array($joins)) {
+                    foreach ($joins as $join) {
+                        if ($join->table == 'language_meta') {
+                            return $data;
+                        }
+                    }
+                }
+
                 $data = $data
                     ->join('language_meta', 'language_meta.reference_id', $table . '.id')
                     ->where('language_meta.reference_type', get_class($model))
@@ -721,6 +731,15 @@ class LanguageServiceProvider extends ServiceProvider
         if (in_array(get_class($model), Language::supportedModels()) && Language::getCurrentAdminLocaleCode()) {
 
             if (Language::getCurrentAdminLocaleCode() !== 'all') {
+
+                $joins = $query->getQuery()->joins;
+                if ($joins && is_array($joins)) {
+                    foreach ($joins as $join) {
+                        if ($join->table == 'language_meta') {
+                            return $query;
+                        }
+                    }
+                }
 
                 $query = $query
                     ->addSelect([

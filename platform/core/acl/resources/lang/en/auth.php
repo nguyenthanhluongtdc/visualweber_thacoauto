@@ -60,4 +60,10 @@ return [
     'sign_in_below'         => 'Sign In Below',
     'languages'             => 'Languages',
     'reset_password'        => 'Reset Password',
+    'settings'                   => [
+        'email' => [
+            'title'       => 'ACL',
+            'description' => 'ACL email configuration',
+        ],
+    ],
 ];

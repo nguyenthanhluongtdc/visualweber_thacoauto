@@ -2,7 +2,7 @@
     <div class="section-intro-wrapper">
         <div class="container-remake">
             <div class="section-intro">
-                <h1 class="section-intro__title font-pri-bold font40"> Nghiên cứu & phát triển (R&D) </h1>
+                <h1 class="section-intro__title font-pri-bold font40 text-uppercase"> Nghiên cứu & phát triển (R&D) </h1>
                 <p class="rd-production__content font20 font-pri"> Nghiên cứu, phát triển sản phẩm (R&D) là yêu cầu tất yếu nhằm tạo ra giá trị gia tăng cho sản phẩm, nâng cao năng lực cạnh tranh của doanh nghiệp, nhất là trong bối cảnh cuộc cách mạng công nghiệp lần thứ tư đặt ra yêu cầu ngày càng cao về ứng dụng công nghệ thế hệ mới vào hoạt động sản xuất kinh doanh.
                 </p>
             </div>

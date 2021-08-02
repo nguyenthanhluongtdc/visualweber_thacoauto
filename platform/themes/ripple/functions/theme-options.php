@@ -208,6 +208,23 @@ app()->booted(function () {
             ],
         ])
         ->setField([
+            'id'         => 'facebook_comment_enabled_in_gallery',
+            'section_id' => 'opt-text-subsection-general',
+            'type'       => 'select',
+            'label'      => __('Enable Facebook comment in the gallery detail?'),
+            'attributes' => [
+                'name'    => 'facebook_comment_enabled_in_gallery',
+                'list'    => [
+                    'no'  => trans('core/base::base.no'),
+                    'yes' => trans('core/base::base.yes'),
+                ],
+                'value'   => 'no',
+                'options' => [
+                    'class' => 'form-control',
+                ],
+            ],
+        ])
+        ->setField([
             'id'         => 'facebook_app_id',
             'section_id' => 'opt-text-subsection-facebook-integration',
             'type'       => 'text',

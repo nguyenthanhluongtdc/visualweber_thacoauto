@@ -260,7 +260,8 @@ class PostTable extends TableAbstract
                 if (!$this->isJoined($query, 'post_categories')) {
                     $query = $query
                         ->join('post_categories', 'post_categories.post_id', '=', 'posts.id')
-                        ->join('categories', 'post_categories.category_id', '=', 'categories.id');
+                        ->join('categories', 'post_categories.category_id', '=', 'categories.id')
+                        ->select($query->getModel()->getTable() . '.*');
                 }
 
                 return $query->where('post_categories.category_id', $value);

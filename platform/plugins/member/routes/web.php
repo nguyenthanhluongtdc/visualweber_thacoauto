@@ -108,6 +108,11 @@ if (defined('THEME_MODULE_SCREEN_NAME')) {
                     'as'   => 'upload',
                     'uses' => 'PublicController@postUpload',
                 ]);
+
+                Route::post('upload-from-editor', [
+                    'as'   => 'upload-from-editor',
+                    'uses' => 'PublicController@postUploadFromEditor',
+                ]);
             });
 
             if (is_plugin_active('blog')) {
@@ -116,8 +121,7 @@ if (defined('THEME_MODULE_SCREEN_NAME')) {
                     'as'     => 'posts.',
                 ], function () {
 
-                    Route::resource('', 'PostController')
-                        ->parameters(['' => 'post']);
+                    Route::resource('', 'PostController')->parameters(['' => 'post']);
 
                 });
 

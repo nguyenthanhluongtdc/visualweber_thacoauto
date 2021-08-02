@@ -22,11 +22,13 @@
 
                 <div class="flexbox-annotated-section-content">
                     <div class="wrapper-content pd-all-20">
-                        <div class="form-group">
+                        @php $maxEmailCount = 4 @endphp
+                        <div class="form-group" id="admin_email_wrapper" data-emails="{{ json_encode(get_admin_email()) }}" data-max="{{ $maxEmailCount }}">
                             <label class="text-title-field"
                                    for="admin_email">{{ trans('core/setting::setting.general.admin_email') }}</label>
-                            <input type="email" class="next-input" name="admin_email" id="admin_email"
-                                   value="{{ setting('admin_email') }}">
+                            <a id="add" class="link" data-placeholder="email{{ '@' . $host }}"><small>+ {{ trans('core/setting::setting.email_add_more') }}</small></a>
+
+                            {{ Form::helper(trans('core/setting::setting.emails_warning', ['count' => $maxEmailCount])) }}
                         </div>
 
                         <div class="form-group">
@@ -163,7 +165,7 @@
                             </label>
                             <label class="hrv-label">
                                 <input type="radio" name="rich_editor" class="hrv-radio" value="ckeditor"
-                                       @if (setting('rich_editor', 'ckeditor') == 'ckeditor') checked @endif>CkEditor
+                                       @if (setting('rich_editor', 'ckeditor') == 'ckeditor') checked @endif>CKEditor
                             </label>
                             <label class="hrv-label">
                                 <input type="radio" name="rich_editor" class="hrv-radio" value="tinymce"
@@ -189,11 +191,13 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
-                                <input type="hidden" name="enable_change_admin_theme" value="0">
-                                <label><input type="checkbox" class="hrv-checkbox" value="1"
-                                              @if (setting('enable_change_admin_theme')) checked @endif name="enable_change_admin_theme"> {{ trans('core/setting::setting.general.enable_change_admin_theme') }} </label>
-                        </div>
+                        @if (count(Assets::getThemes()) > 1)
+                            <div class="form-group">
+                                    <input type="hidden" name="enable_change_admin_theme" value="0">
+                                    <label><input type="checkbox" class="hrv-checkbox" value="1"
+                                                  @if (setting('enable_change_admin_theme')) checked @endif name="enable_change_admin_theme"> {{ trans('core/setting::setting.general.enable_change_admin_theme') }} </label>
+                            </div>
+                        @endif
                     </div>
                 </div>
             </div>

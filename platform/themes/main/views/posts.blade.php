@@ -1,6 +1,5 @@
 
     {!! do_shortcode('[filter-media][/filter-media]') !!}
-
 <div class="container-remake">
     <div class="meida-top">
         <div class="media-top-item">

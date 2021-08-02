@@ -1,5 +1,7 @@
 ################ GLOBAL INGNORE ################
 ################################################
+public/themes/main/css/common.css
+public/themes/main/css/common.css.map
 logs/
 public/phpMyAdmin
 public/phpRedisAdmin/

@@ -19,9 +19,11 @@
                     </button>
                     <ul class="dropdown-menu">
                         @foreach ($shortcodes = shortcode()->getAll() as $key => $item)
-                            <li>
-                                <a href="{{ route('short-codes.ajax-get-admin-config', $key) }}" data-has-admin-config="{{ Arr::has($item, 'admin_config') }}" data-key="{{ $key }}" data-description="{{ $item['description'] }}">{{ $item['name'] }}</a>
-                            </li>
+                            @if ($item['name'])
+                                <li>
+                                    <a href="{{ route('short-codes.ajax-get-admin-config', $key) }}" data-has-admin-config="{{ Arr::has($item, 'admin_config') }}" data-key="{{ $key }}" data-description="{{ $item['description'] }}">{{ $item['name'] }}</a>
+                                </li>
+                            @endif
                         @endforeach
                     </ul>
                 </div>

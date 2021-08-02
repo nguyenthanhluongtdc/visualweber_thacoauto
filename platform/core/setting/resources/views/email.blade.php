@@ -1,7 +1,7 @@
 @extends('core/base::layouts.master')
 @section('content')
     {!! Form::open(['route' => ['settings.email.edit']]) !!}
-    <div class="max-width-1200">
+    <div class="max-width-1200 email-settings">
         @if (config('core.setting.general.enable_email_smtp_settings', true))
             <div class="flexbox-annotated-section">
 

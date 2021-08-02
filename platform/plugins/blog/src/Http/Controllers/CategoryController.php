@@ -2,18 +2,20 @@
 
 namespace Platform\Blog\Http\Controllers;
 
+use Assets;
 use Platform\ACL\Models\User;
 use Platform\Base\Events\BeforeEditContentEvent;
 use Platform\Base\Events\CreatedContentEvent;
 use Platform\Base\Events\DeletedContentEvent;
 use Platform\Base\Events\UpdatedContentEvent;
+use Platform\Base\Forms\FormAbstract;
 use Platform\Base\Forms\FormBuilder;
 use Platform\Base\Http\Controllers\BaseController;
 use Platform\Base\Http\Responses\BaseHttpResponse;
 use Platform\Blog\Forms\CategoryForm;
+use Platform\Blog\Models\Category;
 use Platform\Blog\Http\Requests\CategoryRequest;
 use Platform\Blog\Repositories\Interfaces\CategoryInterface;
-use Platform\Blog\Tables\CategoryTable;
 use Exception;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\Request;
@@ -38,25 +40,46 @@ class CategoryController extends BaseController
     }
 
     /**
-     * @param CategoryTable $dataTable
-     * @return Factory|View
-     *
+     * @return BaseHttpResponse|Factory|View|string
      * @throws Throwable
      */
-    public function index(CategoryTable $dataTable)
+    public function index(FormBuilder $formBuilder, Request $request, BaseHttpResponse $response)
     {
         page_title()->setTitle(trans('plugins/blog::categories.menu'));
 
-        return $dataTable->renderTable();
+        $categories = $this->categoryRepository->getCategories(['*'], [
+            'created_at' => 'DESC',
+            'is_default' => 'DESC',
+            'order'      => 'ASC',
+        ]);
+
+        $categories->load('slugable')->loadCount('posts');
+
+        if ($request->ajax()) {
+            $data = view('core/base::forms.partials.tree-categories', $this->getOptions(compact('categories')))->render();
+            return $response->setData($data);
+        }
+
+        Assets::addStylesDirectly(['vendor/core/core/base/css/tree-category.css'])
+            ->addScriptsDirectly(['vendor/core/core/base/js/tree-category.js']);
+
+        $form = $formBuilder->create(CategoryForm::class, ['template' => 'core/base::forms.form-tree-category']);
+        $form = $this->setFormOptions($form, null, compact('categories'));
+
+        return $form->renderForm();
     }
 
     /**
      * @param FormBuilder $formBuilder
-     * @return string
+     * @return BaseHttpResponse|string
      */
-    public function create(FormBuilder $formBuilder)
+    public function create(FormBuilder $formBuilder, Request $request, BaseHttpResponse $response)
     {
         page_title()->setTitle(trans('plugins/blog::categories.create'));
+
+        if ($request->ajax()) {
+            return $response->setData($this->getForm());
+        }
 
         return $formBuilder->create(CategoryForm::class)->renderForm();
     }
@@ -79,6 +102,20 @@ class CategoryController extends BaseController
 
         event(new CreatedContentEvent(CATEGORY_MODULE_SCREEN_NAME, $request, $category));
 
+        if ($request->ajax()) {
+            $category = $this->categoryRepository->findOrFail($category->id);
+
+            if ($request->input('submit') == 'save') {
+                $form = $this->getForm();
+            } else {
+                $form = $this->getForm($category);
+            }
+            $response->setData([
+                'model' => $category,
+                'form'  => $form
+            ]);
+        }
+
         return $response
             ->setPreviousUrl(route('categories.index'))
             ->setNextUrl(route('categories.edit', $category->id))
@@ -89,13 +126,17 @@ class CategoryController extends BaseController
      * @param Request $request
      * @param int $id
      * @param FormBuilder $formBuilder
-     * @return string
+     * @return BaseHttpResponse|string
      */
-    public function edit($id, FormBuilder $formBuilder, Request $request)
+    public function edit($id, FormBuilder $formBuilder, Request $request, BaseHttpResponse $response)
     {
         $category = $this->categoryRepository->findOrFail($id);
 
         event(new BeforeEditContentEvent($request, $category));
+
+        if ($request->ajax()) {
+            return $response->setData($this->getForm($category));
+        }
 
         page_title()->setTitle(trans('plugins/blog::categories.edit') . ' "' . $category->name . '"');
 
@@ -121,6 +162,20 @@ class CategoryController extends BaseController
         $this->categoryRepository->createOrUpdate($category);
 
         event(new UpdatedContentEvent(CATEGORY_MODULE_SCREEN_NAME, $request, $category));
+
+        if ($request->ajax()) {
+            $category = $this->categoryRepository->findOrFail($id);
+
+            if ($request->input('submit') == 'save') {
+                $form = $this->getForm();
+            } else {
+                $form = $this->getForm($category);
+            }
+            $response->setData([
+                'model' => $category,
+                'form'  => $form
+            ]);
+        }
 
         return $response
             ->setPreviousUrl(route('categories.index'))
@@ -174,5 +229,62 @@ class CategoryController extends BaseController
         }
 
         return $response->setMessage(trans('core/base::notices.delete_success_message'));
+    }
+
+    /**
+     * @param CategoryForm|null $model
+     * @return string
+     */
+    protected function getForm($model = null)
+    {
+        $options = ['template' => 'core/base::forms.form-no-wrap'];
+
+        if ($model) {
+            $options['model'] = $model;
+        }
+
+        $form = app(FormBuilder::class)->create(CategoryForm::class, $options);
+
+        $form = $this->setFormOptions($form, $model);
+
+        return $form->renderForm();
+    }
+
+    /**
+     * @param FormAbstract $form
+     * @param Category|null $model
+     * @param array $options
+     * @return FormAbstract
+     */
+    protected function setFormOptions($form, $model = null, $options = [])
+    {
+        if (!$model) {
+            $form->setUrl(route('categories.create'));
+        }
+
+        if (!Auth::user()->hasPermission('categories.create') && !$model) {
+            $class = $form->getFormOption('class');
+            $form->setFormOption('class', $class . ' d-none');
+        }
+
+        $form->setFormOptions($this->getOptions($options));
+
+        return $form;
+    }
+
+    /**
+     * @param array $options
+     * @return array
+     */
+    protected function getOptions($options = [])
+    {
+        return array_merge([
+            'canCreate'   => Auth::user()->hasPermission('categories.create'),
+            'canEdit'     => Auth::user()->hasPermission('categories.edit'),
+            'canDelete'   => Auth::user()->hasPermission('categories.destroy'),
+            'createRoute' => 'categories.create',
+            'editRoute'   => 'categories.edit',
+            'deleteRoute' => 'categories.destroy',
+        ], $options);
     }
 }

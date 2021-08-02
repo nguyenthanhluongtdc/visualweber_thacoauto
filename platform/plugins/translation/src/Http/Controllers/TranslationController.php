@@ -6,6 +6,7 @@ use Assets;
 use Platform\Base\Http\Controllers\BaseController;
 use Platform\Base\Http\Responses\BaseHttpResponse;
 use Platform\Base\Supports\Language;
+use Platform\Base\Supports\PclZip as Zip;
 use Platform\Translation\Http\Requests\LocaleRequest;
 use Platform\Translation\Http\Requests\TranslationRequest;
 use Platform\Translation\Manager;
@@ -16,7 +17,9 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
+use RvMedia;
 use Theme;
+use ZipArchive;
 
 class TranslationController extends BaseController
 {
@@ -378,5 +381,100 @@ class TranslationController extends BaseController
         return $response
             ->setPreviousUrl(route('translations.theme-translations'))
             ->setMessage(trans('core/base::notices.update_success_message'));
+    }
+
+    /**
+     * @param string $locale
+     * @return bool|BaseHttpResponse|\Symfony\Component\HttpFoundation\BinaryFileResponse
+     */
+    public function downloadLocale($locale)
+    {
+        $file = RvMedia::getUploadPath() . '/locale-' . $locale . '.zip';
+
+        ini_set('max_execution_time', 5000);
+
+        if (class_exists('ZipArchive', false)) {
+            $zip = new ZipArchive;
+            if ($zip->open($file, ZipArchive::CREATE) !== true) {
+                File::delete($file);
+            }
+        } else {
+            $zip = new Zip($file);
+        }
+
+        $source = resource_path('lang/' . $locale);
+
+        $arrSource = explode(DIRECTORY_SEPARATOR, str_replace('/' . $locale, '', $source));
+        $pathLength = strlen(implode(DIRECTORY_SEPARATOR, $arrSource) . DIRECTORY_SEPARATOR);
+
+        // Add each file in the file list to the archive
+        $this->recurseZip($source, $zip, $pathLength);
+
+        $jsonFile = resource_path('lang/' . $locale . '.json');
+
+        $arrSource = explode(DIRECTORY_SEPARATOR, File::dirname($jsonFile));
+        $pathLength = strlen(implode(DIRECTORY_SEPARATOR, $arrSource) . DIRECTORY_SEPARATOR);
+
+        $this->recurseZip($jsonFile, $zip, $pathLength);
+
+        foreach (File::directories(resource_path('lang/vendor')) as $module) {
+            foreach (File::directories($module) as $item) {
+                $source = $item . '/' . $locale;
+
+                if (File::isDirectory($source)) {
+                    $arrSource = explode(DIRECTORY_SEPARATOR,
+                        str_replace('/vendor/' . File::basename($module) . '/' . File::basename($item) . '/' . $locale,
+                            '', $source));
+                    $pathLength = strlen(implode(DIRECTORY_SEPARATOR, $arrSource) . DIRECTORY_SEPARATOR);
+
+                    $this->recurseZip($source, $zip, $pathLength);
+                }
+            }
+        }
+
+        if (class_exists('ZipArchive', false)) {
+            $zip->close();
+        }
+
+        if (file_exists($file)) {
+            chmod($file, 0777);
+        }
+
+        return response()->download($file)->deleteFileAfterSend();
+    }
+
+    /**
+     * @param string $src
+     * @param ZipArchive $zip
+     * @param string $pathLength
+     */
+    protected function recurseZip($src, &$zip, $pathLength): void
+    {
+        if (File::isDirectory($src)) {
+            $files = scan_folder($src);
+        } else {
+            $files = [File::basename($src)];
+            $src = File::dirname($src);
+        }
+
+        foreach ($files as $file) {
+            if (File::isDirectory($src . DIRECTORY_SEPARATOR . $file)) {
+                $this->recurseZip($src . DIRECTORY_SEPARATOR . $file, $zip, $pathLength);
+            } else {
+                if (class_exists('ZipArchive', false)) {
+                    /**
+                     * @var ZipArchive $zip
+                     */
+                    $zip->addFile($src . DIRECTORY_SEPARATOR . $file,
+                        substr($src . DIRECTORY_SEPARATOR . $file, $pathLength));
+                } else {
+                    /**
+                     * @var Zip $zip
+                     */
+                    $zip->add($src . DIRECTORY_SEPARATOR . $file, PCLZIP_OPT_REMOVE_PATH,
+                        substr($src . DIRECTORY_SEPARATOR . $file, $pathLength));
+                }
+            }
+        }
     }
 }

@@ -159,16 +159,51 @@ a:hover{
     }
 }
 
+.mt-100 {
+    margin-top: 100px;
 
+    @media (max-width: 1680px) {
+        margin-top: #{calculatorPixel(100,1680)}px;
+    }
+    @media (max-width: 1360px) {
+        margin-top: #{calculatorPixel(100,1360)}px;
+    }
+    @media (max-width: 992px) {
+        margin-top: #{calculatorPixel(100,992)}px;
+    }
+}
 
+.my-90 {
+    margin-top: 90px;
+    margin-bottom: 90px;
 
+    @media (max-width: 1680px) {
+        margin-top: #{calculatorPixel(90,1680)}px;
+        margin-bottom: #{calculatorPixel(90,1680)}px;
+    }
+    @media (max-width: 1360px) {
+        margin-top: #{calculatorPixel(90,1360)}px;
+        margin-bottom: #{calculatorPixel(90,1360)}px;
+    }
+    @media (max-width: 992px) {
+        margin-top: #{calculatorPixel(90,992)}px;
+        margin-bottom: #{calculatorPixel(90,992)}px;
+    }
+}
 
+.mb-90 {
+    margin-bottom: 90px;
 
-
-
-
-
-
+    @media (max-width: 1680px) {
+        margin-bottom: #{calculatorPixel(90,1680)}px;
+    }
+    @media (max-width: 1360px) {
+        margin-bottom: #{calculatorPixel(90,1360)}px;
+    }
+    @media (max-width: 992px) {
+        margin-bottom: #{calculatorPixel(90,992)}px;
+    }
+}
 
 
 #page-wrap{
@@ -373,8 +408,7 @@ a:hover{
                 margin-left: 10px;
             }
         }
-    }
-    
+    }    
 }
 
 .header-fixed{

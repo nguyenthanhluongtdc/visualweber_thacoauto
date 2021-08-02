@@ -3,6 +3,42 @@
 
 <div class="slider-main-carousel owl-carousel owl-theme">
     <div class="slider-main-item">
+        <img src="{{ Theme::asset()->url('images/main/homepage_banner.png') }}" alt="">
+        {{-- <div class="content-slider">
+            <h2 class="font-pri-bold font60">THACO AUTO GIỚI THIỆU NEW PEUGEOT 3008</h2>
+            <P class="font-cond">Peugeot – Thương hiệu xe Châu Âu với hơn 210 năm lịch sử & 100 năm dấu ấn tại Việt Nam
+            </P>
+            <a href="" class="font-pri-bold">Xem thêm</a>
+        </div> --}}
+    </div>
+    <div class="slider-main-item">
+        <img src="{{ Theme::asset()->url('images/main/slider1.jpg') }}" alt="">
+        {{-- <div class="content-slider">
+            <h2 class="font-pri-bold font60">THACO AUTO GIỚI THIỆU NEW PEUGEOT 3008</h2>
+            <P class="font-cond">Peugeot – Thương hiệu xe Châu Âu với hơn 210 năm lịch sử & 100 năm dấu ấn tại Việt Nam
+            </P>
+            <a href="" class="font-pri-bold">Xem thêm</a>
+        </div> --}}
+    </div>
+    <div class="slider-main-item">
+        <img src="{{ Theme::asset()->url('images/main/homepage_banner.png') }}" alt="">
+        {{-- <div class="content-slider">
+            <h2 class="font-pri-bold font60">THACO AUTO GIỚI THIỆU NEW PEUGEOT 3008</h2>
+            <P class="font-cond">Peugeot – Thương hiệu xe Châu Âu với hơn 210 năm lịch sử & 100 năm dấu ấn tại Việt Nam
+            </P>
+            <a href="" class="font-pri-bold">Xem thêm</a>
+        </div> --}}
+    </div>
+    <div class="slider-main-item">
+        <img src="{{ Theme::asset()->url('images/main/slider2.jpg') }}" alt="">
+        {{-- <div class="content-slider">
+            <h2 class="font-pri-bold font60">THACO AUTO GIỚI THIỆU NEW PEUGEOT 3008</h2>
+            <P class="font-cond">Peugeot – Thương hiệu xe Châu Âu với hơn 210 năm lịch sử & 100 năm dấu ấn tại Việt Nam
+            </P>
+            <a href="" class="font-pri-bold">Xem thêm</a>
+        </div> --}}
+    </div>  
+    {{-- <div class="slider-main-item">
         <img src="{{ Theme::asset()->url('images/main/slider1.jpg') }}" alt="">
         <div class="content-slider">
             <h2 class="font-pri-bold font60">THACO AUTO GIỚI THIỆU NEW PEUGEOT 3008</h2>
@@ -19,7 +55,7 @@
             </P>
             <a href="" class="font-pri-bold">Xem thêm</a>
         </div>
-    </div>
+    </div> --}}
 </div>
 
 
@@ -1013,50 +1049,33 @@
         <div class="item">
             {{-- <img src="{{ Theme::asset()->url('images/main/doitac1.jpg') }}" alt=""> --}}
             <div class="logo">
-                <a href=""><img src="{{ Theme::asset()->url('images/main/logo2.png') }}" alt=""></a>
+                <a href=""><img src="{{ Theme::asset()->url('images/main/bmw-logo.png') }}" alt=""></a>
             </div>
         </div>
         <div class="item">
             {{-- <img src="{{ Theme::asset()->url('images/main/doitac2.jpg') }}" alt=""> --}}
             <div class="logo">
-                <a href=""><img src="{{ Theme::asset()->url('images/main/logo1.png') }}" alt=""></a>
+                <a href=""><img src="{{ Theme::asset()->url('images/main/kia-logo.png') }}" alt=""></a>
             </div>
         </div>
         <div class="item">
             {{-- <img src="{{ Theme::asset()->url('images/main/doitac3.jpg') }}" alt=""> --}}
             <div class="logo">
-                <a href=""><img src="{{ Theme::asset()->url('images/main/logo3.png') }}" alt=""></a>
+                <a href=""><img src="{{ Theme::asset()->url('images/main/mazda-logo.png') }}" alt=""></a>
             </div>
         </div>
         <div class="item">
             {{-- <img src="{{ Theme::asset()->url('images/main/doitac4.jpg') }}" alt=""> --}}
             <div class="logo">
-                <a href=""><img src="{{ Theme::asset()->url('images/main/logo4.png') }}" alt=""></a>
+                <a href=""><img src="{{ Theme::asset()->url('images/main/mini-logo.png') }}" alt=""></a>
             </div>
         </div>
         <div class="item">
             {{-- <img src="{{ Theme::asset()->url('images/main/doitac1.jpg') }}" alt=""> --}}
             <div class="logo">
-                <a href=""><img src="{{ Theme::asset()->url('images/main/logo2.png') }}" alt=""></a>
+                <a href=""><img src="{{ Theme::asset()->url('images/main/peugeot-logo.png') }}" alt=""></a>
             </div>
         </div>
-        <div class="item">
-            {{-- <img src="{{ Theme::asset()->url('images/main/doitac2.jpg') }}" alt=""> --}}
-            <div class="logo">
-                <a href=""><img src="{{ Theme::asset()->url('images/main/logo1.png') }}" alt=""></a>
-            </div>
-        </div>
-        <div class="item">
-            {{-- <img src="{{ Theme::asset()->url('images/main/doitac3.jpg') }}" alt=""> --}}
-            <div class="logo">
-                <a href=""><img src="{{ Theme::asset()->url('images/main/logo3.png') }}" alt=""></a>
-            </div>
-        </div>
-        <div class="item">
-            {{-- <img src="{{ Theme::asset()->url('images/main/doitac4.jpg') }}" alt=""> --}}
-            <div class="logo">
-                <a href=""><img src="{{ Theme::asset()->url('images/main/logo4.png') }}" alt=""></a>
-            </div>
         </div>
     </div>
 </div>

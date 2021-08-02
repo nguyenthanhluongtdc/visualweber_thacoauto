@@ -62,30 +62,14 @@
                     <img src="{{ Theme::asset()->url('images/main/search.png') }}" alt="">
                 </div>
                 <div class="language">
-                    <div class="dropdown">
-                        <button class="dropdown-toggle" type="button" data-toggle="dropdown">
-                            <img src="{{ Theme::asset()->url('images/main/vn.png') }}" alt="" class="icon-vi">
-                            <img src="{{ Theme::asset()->url('images/main/en.png') }}" alt="" class="icon-en">
-                            <span class="caret"></span></button>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a rel="alternate" hreflang="vi" href="{{ Language::getLocalizedURL('vi') }}">
-                                    <img src="{{ Theme::asset()->url('images/main/vn.png') }}" alt="">
-
-                                </a>
-                            </li>
-                            <li>
-                                <a rel="alternate" hreflang="en" href="{{ Language::getLocalizedURL('en') }}">
-                                    <img src="{{ Theme::asset()->url('images/main/en.png') }}" alt="">
-
-                                </a>
-                            </li>
-                           
-                        </ul>
-                    </div>
-
-
-
+                    <ul class="nav-lang">
+                        <li class="nav-item lang-vi" style="pointer-events: none;opacity:0.6;">
+                            <a class="nav-link font-pri-bold font18" rel="alternate" hreflang="vi" href="{{ Language::getLocalizedURL('vi') }}">VI</a>
+                        </li>
+                        <li class="nav-item lang-en">
+                            <a class="nav-link font-pri-bold font18" rel="alternate" hreflang="en" href="{{ Language::getLocalizedURL('en') }}">EN</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

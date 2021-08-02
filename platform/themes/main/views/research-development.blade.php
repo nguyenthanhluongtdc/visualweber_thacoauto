@@ -94,7 +94,7 @@
             </div>
         </div>
 
-        <div class="section-info-more-wrapper">
+        <div class="section-info-more-wrapper font-pri">
             <div class="content font20">
                 <div class="container-remake">
                     <h2 class="title font-pri-bold font40 text-uppercase ">

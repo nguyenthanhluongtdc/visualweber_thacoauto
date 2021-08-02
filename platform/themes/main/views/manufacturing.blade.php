@@ -7,7 +7,7 @@
             </div>
         </div>
 
-        <div class="section-content-main">
+        <div class="section-content-main font-pri">
             <div class="row-full row distance-y">
                 <div class="row-full__colContent col-xl-5 col-md-6">
                     <h3 class="row-full__title font-pri-bold font40">

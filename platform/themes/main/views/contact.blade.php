@@ -1,12 +1,12 @@
 <section class="section-info-contact">
     <div class="container-remake">
+        <h2 class="contact__title font60 font-pri-bold pb-4">THÔNG TIN LIÊN HỆ</h2>
         <div class="info-contact">
-            <h2 class="contact__title font60 font-pri-bold">THÔNG TIN LIÊN HỆ</h2>
+           
             <div class="info-contact-form">
                 <div class="row">
                     <div class="col-md-6 pr-0">
-                        
-                            <div id="contact-form" class="form-horizontal form-contact-us h-100">
+                            <div id="contact-form" class="form-horizontal form-contact-us">
                                 {!! Form::open(['route' => 'public.send.contact', 'method' => 'POST']) !!}                   
                                         <div class="form-group row">
                                             <label for="" class="col-sm-3 text-label">NƠI GỬI ĐẾN:</label>
@@ -38,26 +38,22 @@
                                         <div class="form-group row">
                                             <label for="" class="col-sm-3 text-label">NỘI DUNG:</label>
                                             <div class="col-sm-9">
-                                                <textarea name="content" id="contact_content" class="form-control" rows="5" placeholder="Điền nội dung">{{ old('content') }}</textarea>
+                                                <textarea name="content" id="contact_content" class="form-control" rows="5" placeholder="{{ __('Nội dung') }}">{{ old('content') }}</textarea>
                                             </div>
                                           
                                         </div>
-                                <div class="policy col-sm-12">
+                                <div class="policy col-sm-10 float-right">
                                     <div class="check-policy">
-                                        {{-- <input class="" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked> --}}
-                                        <label class="customcheck">
-                                            
-                                            <input type="checkbox" checked="checked">
-                                            <div class="check-policy__content">
-                                            <a href="#" class="check-policy__link" title="checkbox">TÔI XÁC NHẬN CUNG CẤP THÔNG TIN CÁ NHÂN ĐỂ LIÊN HỆ VỚI THACO AUTO.</a> 
-                                            </div>
-                                            <span class="checkmark"></span>
-                                        </label>        
+                                        <input class="" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                        <label class="" for="exampleRadios1">
+                                            TÔI XÁC NHẬN CUNG CẤP THÔNG TIN CÁ NHÂN ĐỂ LIÊN HỆ VỚI THACO AUTO.
+
+                                        </label>
                                       </div>
                                     <button class="btn btn-secondary" type="submit" value="SEND">
                                         Gửi
                                     </button>
-        
+         
                                 </div>
                                 {!! Form::close() !!}
         
@@ -65,12 +61,54 @@
                        
                     </div>
                     <div class="col-md-6 pl-0">
-                        <div class="img-form h-100">
-                            <img src="{{ Theme::asset()->url('images/contact/contact-form.jpg') }}" alt="contact-img">
+                        <div class="img-form">
+                            <img src="{{ Theme::asset()->url('images/contact/contact-form.png') }}" alt="contact-img">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="detail-contact">
+                <div class="row content-contact">
+                    <div class="col-md-4 img-detail">
+                            <img src="{{ Theme::asset()->url('images/contact/detail-contcact1.png') }}" alt="img-detail">
+                    </div>
+                    <div class="col-md-8 detail-content-wrap">
+                            <h3 class="detail-title font30 font-pri-bold mt-3 mb-3">TRỤ SỞ CHÍNH CÔNG TY Ô TÔ TRƯỜNG HẢI TẠI THÀNG PHỐ HỒ CHÍ MINH</h3>
+                            <p class="font-pri"> <img src="{{ Theme::asset()->url('images/contact/location.png') }}" alt=""><span class="font-pri-bold">Địa chỉ: </span>Số 10 Mai Chí Thọ, P.Thủ Thiêm, TP.Thủ Đức, TP.HCM</p>
+                            <p class="font-pri"><img src="{{ Theme::asset()->url('images/contact/hotline.png') }}" alt=""><span class="font-pri-bold">Hotline: </span>1900545591</p>
+                            <p class="font-pri"><img src="{{ Theme::asset()->url('images/contact/fax.png') }}" alt=""><span class="font-pri-bold">Fax: </span>+84 (0)8-39977.742</p>
+                            <p class="font-pri"><img src="{{ Theme::asset()->url('images/contact/web.png') }}" alt=""><span class="font-pri-bold">Website: </span>www.truonghaiauto.com.vn</p>
+                            <p class="font-pri"><img src="{{ Theme::asset()->url('images/contact/mail.png') }}" alt=""><span class="font-pri-bold">Email: </span>rep.office@thaco.com.vn</p>
+                    </div>
+                </div>
+        </div>
+        <div class="detail-contact">
+            <div class="row content-contact">
+                <div class="col-md-4 img-detail">
+                        <img src="{{ Theme::asset()->url('images/contact/detail-contact2.png') }}" alt="img-detail">
+                </div>
+                <div class="col-md-8 detail-content-wrap">
+                        <h3 class="detail-title font30 font-pri-bold mt-3 mb-3">VĂN PHÒNG THACO TẠI KHU PHỨC HỢP CHU LAI - TRƯỜNG HẢI</h3>
+                        <p class="font-pri"> <img src="{{ Theme::asset()->url('images/contact/location.png') }}" alt=""><span class="font-pri-bold">Địa chỉ: </span>Thôn 4, Xã Tam Hiệp, Huyện Núi thành, Tỉnh Quảng Nam.</p>
+                        <p class="font-pri"><img src="{{ Theme::asset()->url('images/contact/hotline.png') }}" alt=""><span class="font-pri-bold">Hotline: </span>+84-0510.3567.161 - 0510.3567.162 - 0510.3567.163</p>
+                        <p class="font-pri"><img src="{{ Theme::asset()->url('images/contact/fax.png') }}" alt=""><span class="font-pri-bold">Fax: </span> +84 - (0)510 - 3565777</p>
+                        <p class="font-pri"><img src="{{ Theme::asset()->url('images/contact/mail.png') }}" alt=""><span class="font-pri-bold">Email: </span> chulai-truonghai@dng.vnn.vn</p>
+                </div>
+            </div>
+    </div>
+    <div class="detail-contact">
+        <div class="row content-contact">
+            <div class="col-md-4 img-detail">
+                    <img src="{{ Theme::asset()->url('images/contact/detail-contcact1.png') }}" alt="img-detail">
+            </div>
+            <div class="col-md-8   detail-content-wrap">
+                    <h3 class="detail-title font30 font-pri-bold mt-3 mb-3">VĂN PHÒNG THACO TẠI HÀ NỘI</h3>
+                    <p class="font-pri"> <img src="{{ Theme::asset()->url('images/contact/location.png') }}" alt=""><span class="font-pri-bold">Địa chỉ: </span>Lô D6, KCN Hà Nội Đài Tư, 386 Nguyễn Văn Linh, Sài Đồng, Long Biên, Hà Nội</p>
+                    <p class="font-pri"><img src="{{ Theme::asset()->url('images/contact/hotline.png') }}" alt=""><span class="font-pri-bold">Hotline: </span>+84 - (0)43.8758914</p>
+                    <p class="font-pri"><img src="{{ Theme::asset()->url('images/contact/fax.png') }}" alt=""><span class="font-pri-bold"><span class="font-pri-bold">Fax: </span>043.8759857</p>
+            </div>
+        </div>
+</div>
     </div>
 </section>

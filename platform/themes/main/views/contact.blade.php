@@ -102,7 +102,7 @@
             <div class="col-md-4 img-detail">
                     <img src="{{ Theme::asset()->url('images/contact/detail-contcact1.png') }}" alt="img-detail">
             </div>
-            <div class="col-md-8 detail-content-wrap">
+            <div class="col-md-8   detail-content-wrap">
                     <h3 class="detail-title font30 font-pri-bold mt-3 mb-3">VĂN PHÒNG THACO TẠI HÀ NỘI</h3>
                     <p class="font-pri"> <img src="{{ Theme::asset()->url('images/contact/location.png') }}" alt=""><span class="font-pri-bold">Địa chỉ: </span>Lô D6, KCN Hà Nội Đài Tư, 386 Nguyễn Văn Linh, Sài Đồng, Long Biên, Hà Nội</p>
                     <p class="font-pri"><img src="{{ Theme::asset()->url('images/contact/hotline.png') }}" alt=""><span class="font-pri-bold">Hotline: </span>+84 - (0)43.8758914</p>

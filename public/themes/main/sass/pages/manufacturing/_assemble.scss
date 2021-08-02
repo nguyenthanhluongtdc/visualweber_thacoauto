@@ -204,4 +204,114 @@
             }
         }
     }
+
+    .box-node-left {
+        position: fixed;
+        top: 270px;
+        left: 0;
+
+        .box-symbol, .box-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 68px;
+        }
+
+        .box-symbol {
+            background-color: $color-primary;
+            width: 72px;
+            border: 1px solid white;
+            padding-left: 10px;
+            border-bottom: none;
+        }
+
+        .box-text {
+            font-size: 27px;
+            color: white;
+            background-color: $color-primary;
+            padding-left: 20px;
+            padding-right: 20px;
+            display: none;
+        }
+
+        .box-text.active {
+            display: flex;
+        }
+
+        >div:first-child {
+            .box-symbol {
+                border-top: none;
+            }
+        }
+    }
+
+    .box-node-right {
+        position: fixed;
+        top: 45%;
+        right: 0;
+
+        .pagination-customize {
+            border-right: 1px solid $color-primary;
+            .pagi-item {
+                font-family: $font-primary-bold;
+                text-align: right;
+
+                .number, .text {
+                    height: 50px;
+                    display: inline-block;
+                    line-height: 53px;
+                    text-align: center;
+                }
+
+                .text {
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    text-transform: uppercase;
+                    border: 1px solid $color-primary;
+                    display: none;
+                }
+
+                .number {
+                    width: 50px;
+                    border-bottom: 1px solid $color-primary;
+                    border-left: 1px solid $color-primary;
+                   
+                    
+                    font-size: 25px;
+                    margin-left: auto;
+                }
+
+                &:hover {
+                   display: flex;
+                    .text {
+                        background-color: $color-primary;
+                        color: $color-white;
+                        display: inline-block;
+                    }
+                    .number {
+                        background-color: $color-primary;
+                        color: $color-white;
+                    }
+                }
+            }
+
+            >li:first-child {
+                .number {
+                    border-top: 1px solid $color-primary;
+                }
+            }
+            .pagi-item.active {
+                display: flex;
+                .text {
+                    background-color: $color-primary;
+                    color: $color-white;
+                    display: inline-block;
+                }
+                .number {
+                    background-color: $color-primary;
+                    color: $color-white;
+                }
+            }
+        }
+    }
 }

@@ -2,9 +2,10 @@
 @import "_variables.scss";
 @import "_reset.scss";
 @import "_fonts.scss";
-@import "_header.scss";
-@import "_footer.scss";
+@import "pages/partial/header";
+@import "pages/partial/footer";
 @import "_home.scss";
+@import "custom-config";
 @import "_posts.scss";
 @import "_post.scss";
 @import "pages/production/index";
@@ -14,4 +15,5 @@
 @import "pages/manufacturing/assemble";
 @import "pages/cultural-behavior/index";
 @import "pages/services/index";
+@import "pages/business/index";
 @import "pages/contact/contact";

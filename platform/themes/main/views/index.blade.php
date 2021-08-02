@@ -219,7 +219,7 @@
 {{-- lĩnh vực hoạt động --}}
 <div class="section-field-home">
     <div class="section-field-home-wrap container-remake">
-        <h2 class="font-pri-bold font60 color-gray" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out">LĨNH VỰC HOẠT ĐỘNG</h2>
+        <h2 class="font-pri-bold font60 color-gray" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out">SẢN XUẤT - KINH DOANH Ô TÔ & XE MÁY</h2>
         <div class="field-home-content">
             <div class="top">
                 <div class="top-left" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" >
@@ -265,8 +265,8 @@
                     </div>
                     <div class="bottom-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
                         <img src="{{ Theme::asset()->url('images/main/lv7.png') }}" alt="">
-                        <p class="bottom-right-item-title font-pri-bold font30"><a href="" class="link-item-home">XE
-                                MÁY</a></p>
+                        <p class="bottom-right-item-title font-pri-bold font30"><a href="" class="link-item-home">MÔ TÔ & XE MÁY 
+                            </a></p>
                     </div>
                     <div class="bottom-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
                         <img src="{{ Theme::asset()->url('images/main/lv8.png') }}" alt="">
@@ -1011,49 +1011,49 @@
     <h2 class="font-pri-bold font60 color-gray">ĐỐI TÁC</h2>
     <div class="partner-home-carousel owl-carousel">
         <div class="item">
-            <img src="{{ Theme::asset()->url('images/main/doitac1.jpg') }}" alt="">
+            {{-- <img src="{{ Theme::asset()->url('images/main/doitac1.jpg') }}" alt=""> --}}
             <div class="logo">
                 <a href=""><img src="{{ Theme::asset()->url('images/main/logo2.png') }}" alt=""></a>
             </div>
         </div>
         <div class="item">
-            <img src="{{ Theme::asset()->url('images/main/doitac2.jpg') }}" alt="">
+            {{-- <img src="{{ Theme::asset()->url('images/main/doitac2.jpg') }}" alt=""> --}}
             <div class="logo">
                 <a href=""><img src="{{ Theme::asset()->url('images/main/logo1.png') }}" alt=""></a>
             </div>
         </div>
         <div class="item">
-            <img src="{{ Theme::asset()->url('images/main/doitac3.jpg') }}" alt="">
+            {{-- <img src="{{ Theme::asset()->url('images/main/doitac3.jpg') }}" alt=""> --}}
             <div class="logo">
                 <a href=""><img src="{{ Theme::asset()->url('images/main/logo3.png') }}" alt=""></a>
             </div>
         </div>
         <div class="item">
-            <img src="{{ Theme::asset()->url('images/main/doitac4.jpg') }}" alt="">
+            {{-- <img src="{{ Theme::asset()->url('images/main/doitac4.jpg') }}" alt=""> --}}
             <div class="logo">
                 <a href=""><img src="{{ Theme::asset()->url('images/main/logo4.png') }}" alt=""></a>
             </div>
         </div>
         <div class="item">
-            <img src="{{ Theme::asset()->url('images/main/doitac1.jpg') }}" alt="">
+            {{-- <img src="{{ Theme::asset()->url('images/main/doitac1.jpg') }}" alt=""> --}}
             <div class="logo">
                 <a href=""><img src="{{ Theme::asset()->url('images/main/logo2.png') }}" alt=""></a>
             </div>
         </div>
         <div class="item">
-            <img src="{{ Theme::asset()->url('images/main/doitac2.jpg') }}" alt="">
+            {{-- <img src="{{ Theme::asset()->url('images/main/doitac2.jpg') }}" alt=""> --}}
             <div class="logo">
                 <a href=""><img src="{{ Theme::asset()->url('images/main/logo1.png') }}" alt=""></a>
             </div>
         </div>
         <div class="item">
-            <img src="{{ Theme::asset()->url('images/main/doitac3.jpg') }}" alt="">
+            {{-- <img src="{{ Theme::asset()->url('images/main/doitac3.jpg') }}" alt=""> --}}
             <div class="logo">
                 <a href=""><img src="{{ Theme::asset()->url('images/main/logo3.png') }}" alt=""></a>
             </div>
         </div>
         <div class="item">
-            <img src="{{ Theme::asset()->url('images/main/doitac4.jpg') }}" alt="">
+            {{-- <img src="{{ Theme::asset()->url('images/main/doitac4.jpg') }}" alt=""> --}}
             <div class="logo">
                 <a href=""><img src="{{ Theme::asset()->url('images/main/logo4.png') }}" alt=""></a>
             </div>

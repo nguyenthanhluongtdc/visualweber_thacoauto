@@ -60,10 +60,12 @@
 
                     }
                     input{
+                        width: 100%;
                     @media(max-width : 1150px){ 
                         font-size: 12px;
                         margin-top: 2px;
                      }
+                     
                    }
                     textarea.form-control {
                         background: #fff;
@@ -99,13 +101,25 @@
                         border-bottom: .5px solid #A9A9A9;
                         background: unset;
                         height: 35px; 
-                        width: 200px;
+                        width: 70%;
                         outline: none;
-                        @media(max-width : 1150px){
+                        @media(max-width : 1229px){
                            
                             font-size: 12px;
-                            width: 100px;
+                            width: 69%;
                          }
+                         @media(max-width : 600px){
+
+                            width: 100%;
+                         }
+                        //  @media(max-width : 1536px){
+
+                        //     width:175.5px;
+                        //  }
+                        //  @media(max-width : 1707px){
+
+                        //     width:155.8px;
+                        //  }
                     }
                 }
                 .policy {
@@ -321,9 +335,15 @@
             .detail-content-wrap{
                 padding: 25px 25px -5px 25px;
                 line-height: 27px;
-                ion-icon {
-                    color: #01498b;
-                  }
+                .item{
+                    display: flex;
+                    ion-icon{
+                        color: #0054a0;
+                        margin-top: 5.5px;
+                    }
+                }
+            
+                
                 @media(max-width : 990px){
                     line-height: 20px;
                 }
@@ -350,11 +370,15 @@
                 p{
                    
                     color: #0054a0;
+ 
                     @media(max-width : 1200px){
                         font-size: 15px;
                         line-height: 19px;
                     }
+                    
+                    
                 }
+                
                 h3{
                     color: #565656;
                 }

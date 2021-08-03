@@ -373,7 +373,11 @@
  
                     @media(max-width : 1200px){
                         font-size: 15px;
-                        line-height: 19px;
+                        line-height: 27px;
+                    }
+                    @media(max-width : 1400px){
+                        font-size: 15px;
+                        line-height: 27px;
                     }
                     
                     
@@ -381,6 +385,10 @@
                 
                 h3{
                     color: #565656;
+                    @media(max-width : 1200px){
+                        font-size: 25px;
+                        line-height: 15px;
+                    }
                 }
                 
             }

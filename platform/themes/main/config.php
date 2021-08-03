@@ -70,6 +70,8 @@ return [
             $theme->asset()->container('footer')->add('carousel_thumb', '//cdn.jsdelivr.net/npm/owl.carousel2.thumbs@0.1.8/dist/owl.carousel2.thumbs.min.js');
             $theme->asset()->container('footer')->add('select2', '//cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js');
             $theme->asset()->container('footer')->add('slick', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js');
+            $theme->asset()->container('footer')->add('script_ionicons', '//unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js');
+            $theme->asset()->container('footer')->add('script_ionicons_esm', '//unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js');
 
             $theme->asset()->container('footer')->add('validate', '//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js');
             $theme->asset()->container('footer')->add('validate-method', '//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/additional-methods.min.js');

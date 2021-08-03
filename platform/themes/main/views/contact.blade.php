@@ -10,7 +10,7 @@
                             <div id="contact-form" class="form-horizontal form-contact-us">
                                 {!! Form::open(['route' => 'public.send.contact', 'method' => 'POST']) !!}                   
                                         <div class="form-group row">
-                                            <label for="" class="col-sm-3 text-label">NƠI GỬI ĐẾN:</label>
+                                            <label for="" class="col-sm-3 text-label mt-3">NƠI GỬI ĐẾN:</label>
                                             <div class="col-sm-9">
                                                 <select name="" id="">
                                                     <option value="">THACO AUTO</option>
@@ -19,7 +19,7 @@
                                           
                                         </div>
                                         <div class="form-group row">
-                                            <label for="" class="col-sm-3 text-label">HỌ TÊN:</label>
+                                            <label for="" class="col-sm-3 text-label mt-3">HỌ TÊN:</label>
                                             <div class="col-sm-9 row pr-0">
                                                 <div class="col-sm-6">
                                                     <input type="text" class="form-control" id="contact_name_first" placeholder="Họ*" name="first-name" value="{{ old('name') }}"> 
@@ -30,14 +30,14 @@
                                             </div> 
                                         </div>
                                         <div class="form-group row">
-                                            <label for="" class="col-sm-3 text-label">SDT:</label>
+                                            <label for="" class="col-sm-3 text-label mt-3">SDT:</label>
                                             <div class="col-sm-9">
                                                 <input type="text" class="form-control" id="contact_phone" placeholder="+84" name="phone" value="{{ old('phone') }}">
                                             </div>
                                             
                                         </div>
                                         <div class="form-group row">
-                                            <label for="" class="col-sm-3 text-label">NỘI DUNG:</label>
+                                            <label for="" class="col-sm-3 text-label mt-3">NỘI DUNG:</label>
                                             <div class="col-sm-9">
                                                 <textarea name="content" id="contact_content" class="form-control" rows="5" placeholder="{{ __('Nội dung') }}">{{ old('content') }}</textarea>
                                             </div>

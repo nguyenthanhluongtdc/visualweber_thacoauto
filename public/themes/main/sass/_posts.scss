@@ -369,14 +369,61 @@
 
 .media-event-list{
     padding: 60px 0;
+    @media(max-width : 1680px){
+        padding: 50px 0;
+    }
+    @media(max-width : 1440px){
+        padding: 40px 0;
+    }
+    @media(max-width : 1366px){
+        padding: 30px 0;
+    }
+    @media(max-width : 1199px){
+        padding: 20px 0;
+    }
     .event-item{
         margin-bottom: 50px;
         padding-bottom: 50px;
         border-bottom: 1px solid #7d7d7d;
+        @media(max-width : 1680px){
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+        }
+        @media(max-width : 1440px){
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+        }
+        @media(max-width : 1366px){
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+        }
+        @media(max-width : 1199px){
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+        }
         .title{
             display: flex;
             margin-bottom: 55px;
             align-items: center;
+            @media(max-width : 1680px){
+                margin-bottom: 45px;
+            }
+            @media(max-width : 1440px){
+                margin-bottom: 35px;
+            }
+            @media(max-width : 1366px){
+                margin-bottom: 25px;
+            }
+            @media(max-width : 1199px){
+                margin-bottom: 15px;
+            }
+            .icon-title{
+                width: 5.5%;
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
             .title-wrap{
                 margin-left: 15px;
                 h5{
@@ -395,12 +442,36 @@
             justify-content: space-between;
             .image{
                 width: 32%;
+                @media(max-width : 1680px){
+                    width: 29%;
+                }
+                @media(max-width : 1440px){
+                    width: 26%;
+                }
+                @media(max-width : 1366px){
+                    width: 24%;
+                }
+                @media(max-width : 1199px){
+                    width: 23%;
+                }
             }
             .content{
                 width: 65%;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+                @media(max-width : 1680px){
+                    width: 68%;
+                }
+                @media(max-width : 1440px){
+                    width: 71%;
+                }
+                @media(max-width : 1366px){
+                    width: 73%;
+                }
+                @media(max-width : 1199px){
+                    width: 74%;
+                }
                 p{
                     text-align: justify;
                     color: #5c5c5c;
@@ -423,6 +494,18 @@
 }
 .page-pagination{
     padding: 30px 0 60px;
+    @media(max-width : 1680px){
+        padding: 25px 0 50px;
+    }
+    @media(max-width : 1440px){
+        padding: 20px 0 40px;
+    }
+    @media(max-width : 1366px){
+        padding: 10px 0 30px;
+    }
+    @media(max-width : 1199px){
+        padding: 5px 0 20px;
+    }
     ul{
         li{
             margin-right: 15px;
@@ -442,6 +525,18 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    @media(max-width : 1680px){
+        padding-top: 50px;
+    }
+    @media(max-width : 1440px){
+        padding-top: 40px;
+    }
+    @media(max-width : 1366px){
+        padding-top: 30px;
+    }
+    @media(max-width : 1199px){
+        padding-top: 20px;
+    }
     .item-newspaper{
         background: #f4f4f4;
         padding: 30px;
@@ -451,23 +546,33 @@
             color: #2e3a41;
         }
         p.desc{
-            font-size: 21px;
             color: #2e3a41;
             margin: 30px 0;
             padding-bottom: 30px;
             border-bottom: 1px solid #2e3a41;
             text-align: justify;
-        }
-        p.title-docx{
-            font-size: 24px;
-            
+            @media(max-width : 1680px){
+                margin: 25px 0;
+                padding-bottom: 25px;
+            }
+            @media(max-width : 1440px){
+                margin: 20px 0;
+                padding-bottom: 20px;
+            }
+            @media(max-width : 1366px){
+                margin: 15px 0;
+                padding-bottom: 15px;
+            }
+            @media(max-width : 1199px){
+                margin: 10px 0;
+                padding-bottom: 10px;
+            }
         }
         .size-dowload{
             margin: 15px 0;
             display: flex;
             align-items: center;
             span.left{
-                font-size: 24px;
                 margin-right: 25px;
             }
             span a{
@@ -490,13 +595,12 @@
                 flex-wrap: wrap;
                 flex: 1;
                 p{
-                    width: 30%;
+                    width: fit-content;
                     background: #e2e2e2;
                     text-align: center;
-                    padding: 10px;
+                    padding: 2%;
                     margin-right: 3%;
                     margin-bottom: 3%;
-
                     a{
                         color: #2e3a41;
                         font-size: 13px;
@@ -516,6 +620,22 @@
 .news-thaco-content{
     padding-top: 60px;
     padding-bottom: 200px;
+    @media(max-width : 1680px){
+        padding-top: 50px;
+        padding-bottom: 180px;
+    }
+    @media(max-width : 1440px){
+        padding-top: 40px;
+        padding-bottom: 160px;
+    }
+    @media(max-width : 1366px){
+        padding-top: 30px;
+        padding-bottom: 140px;
+    }
+    @media(max-width : 1199px){
+        padding-top: 20px;
+        padding-bottom: 120px;
+    }
     .news-thaco-top{
         display: flex;
         align-items: center;
@@ -525,6 +645,19 @@
             display: flex;
             .item-img{
                 width: 45%;
+                .post-thumbnail{
+                    width: 100%;
+                    height: 100%;
+                    a{
+                        width: 100%;
+                        height: 100%;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
             }
             .item-content{
                 width: 55%;
@@ -543,6 +676,15 @@
                     text-align: justify;
                     flex: 1;
                     @media(max-width : 1640px){
+                        height: 75px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        -webkit-line-clamp: 4;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        margin-bottom: 70px;
+                    }
+                    @media(max-width : 1366px){
                         height: 75px;
                         overflow: hidden;
                         text-overflow: ellipsis;

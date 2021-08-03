@@ -68,7 +68,7 @@
                     <a href=""><img src="{{ Theme::asset()->url('images/main/new1.jpg') }}" alt=""></a>
                 </div>
                 <div class="item-content">
-                    <h3 class="title font-pri-bold">
+                    <h3 class="title font-pri-bold font30">
                         <a href="">CÔNG TY TNHH MTV ĐỒNG PHƯỚC ĐẦU TƯ 5 XE MINI BUS IVECO DAILY</a>
                     </h3>
                     <p class="desc font-pri font20">
@@ -89,7 +89,7 @@
                     <img src="{{ Theme::asset()->url('images/main/new1.jpg') }}" alt="">
                 </div>
                 <div class="item-content">
-                    <h3 class="title font-pri-bold">
+                    <h3 class="title font-pri-bold font20">
                         CÔNG TY TNHH MTV ĐỒNG PHƯỚC ĐẦU TƯ 5 XE MINI BUS IVECO DAILY
                     </h3>
                     <p class="desc font-pri font18">
@@ -108,7 +108,7 @@
                     <img src="{{ Theme::asset()->url('images/main/new1.jpg') }}" alt="">
                 </div>
                 <div class="item-content">
-                    <h3 class="title font-pri-bold">
+                    <h3 class="title font-pri-bold font20">
                         CÔNG TY TNHH MTV ĐỒNG PHƯỚC ĐẦU TƯ 5 XE MINI BUS IVECO DAILY
                     </h3>
                     <p class="desc font-pri font18">
@@ -127,7 +127,7 @@
                     <img src="{{ Theme::asset()->url('images/main/new1.jpg') }}" alt="">
                 </div>
                 <div class="item-content">
-                    <h3 class="title font-pri-bold">
+                    <h3 class="title font-pri-bold font20">
                         CÔNG TY TNHH MTV ĐỒNG PHƯỚC ĐẦU TƯ 5 XE MINI BUS IVECO DAILY
                     </h3>
                     <p class="desc font-pri font18">
@@ -155,7 +155,7 @@
                     </a>
                 </div>
                 <h3 class="title font30">
-                    <a href="" class="font-pri-bold color-gray ">BÀN GIAO LÔ XE BUS THACO GARDEN 79CT PHỤC VỤ VẬN
+                    <a href="" class="font-pri-bold color-gray font30">BÀN GIAO LÔ XE BUS THACO GARDEN 79CT PHỤC VỤ VẬN
                         TẢI</a>
                 </h3>
             </div>

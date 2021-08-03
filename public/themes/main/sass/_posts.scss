@@ -111,6 +111,18 @@
         }
         .select2-container--default .select2-selection--single .select2-selection__arrow{
             height: 50px;
+            @media(max-width : 1680px){
+                height: 45px;
+            }
+            @media(max-width : 1440px){
+                height: 40px;
+            }
+            @media(max-width : 1366px){
+                height: 35px;
+            }
+            @media(max-width : 1199px){
+                height: 30px;
+            }
         }
         .select2-container--default .select2-results>.select2-results__options{
             font-family: $font-cond;

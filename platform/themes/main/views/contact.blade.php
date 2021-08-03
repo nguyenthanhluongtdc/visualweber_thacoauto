@@ -46,10 +46,10 @@
             <div class="policy col-sm-9 float-right">
                 <div class="check-policy">
                     <div class="styled-input-single">
-                        <input type="radio" name="fieldset-1" id="radio-example-one" />
+                        <input type="checkbox" name="fieldset-1" id="radio-example-one" />
                         <label for="radio-example-one">TÔI XÁC NHẬN CUNG CẤP THÔNG TIN CÁ NHÂN ĐỂ LIÊN HỆ VỚI THACO AUTO.</label>
                         </div>
-                    {{-- <input type="radio" class="radio" name="choice" id="a-opt" value="option1" checked/> --}}
+                    
                     
                     </div>
                 <button class="btn btn-secondary" type="submit" value="SEND">

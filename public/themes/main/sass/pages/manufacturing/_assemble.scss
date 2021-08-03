@@ -259,6 +259,7 @@
       .pagi-item {
         font-family: $font-primary-bold;
         text-align: right;
+         display: flex;
         justify-content: flex-end;
 
         .number,

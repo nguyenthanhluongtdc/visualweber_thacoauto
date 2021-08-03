@@ -5,22 +5,28 @@
 .header{
     
     background: rgba(0 ,0 , 0 , 0.5);
-    height: 90px;
+    height: 80px;
     position: fixed;
     top: 20px;
     left: 1%;
     right: 1%;
     z-index: 88;
     transition: all 0.7s ease-out;
+    @media(max-width : 1680px){
+        height: 75px;
+    }
     @media(max-width : 1620px){
-        height: 90px;
+        height: 65px;
     }
     @media(max-width : 1520px){
-        height: 70px;
+        height: 60px;
     }
     @media(max-width : 1440px){
-        height: 60px;
+        height: 55px;
         top: 10px;
+    }
+    @media(max-width : 1199px){
+        height: 50px;
     }
     .header-wrap{
         display: flex;

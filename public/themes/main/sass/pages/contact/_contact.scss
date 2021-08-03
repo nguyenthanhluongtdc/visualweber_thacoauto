@@ -4,6 +4,13 @@
     @media(max-width : 1240px){
         padding-top: 20px;
     }
+    @media(max-width : 1440px){
+        padding-top: 20px;
+    }
+    @media(max-width : 1680px){
+        padding-top: 40px;
+    }
+    
     .info-contact {
         background-color: #f3f3f3;
         .contact__title {
@@ -11,7 +18,7 @@
         }
         .info-contact-form {
             .form-contact-us {
-               padding: 55px;
+               padding: 35px;
                
                 .form-group {
                     margin-bottom: 35px;
@@ -46,6 +53,7 @@
                         height: 35px; 
                         width: 200px;
                         margin-left: 8px;
+                        
                     }
                 }
                 .policy {
@@ -54,49 +62,155 @@
                         margin-top: -20px;
                         display: flex;
                         input {
-                            margin-right: 15px;
+                            margin-right: 17px;
                         }
                         label {
+                            
                             font-size: 13px;
                             text-transform: uppercase;
                             font-family: $font-primary;
                             margin-bottom: 15px;
                             line-height: 1.2;
                         }
+                        input{
+                            color: #0054a0;
+                        }
+                        .radio{
+                            margin-left: 5.5px;
+                           
+                        }
+                        
+                        // @media(max-width : 910px){
+                        //     margin-left: -15px;
+                        // }
+
+                        .styled-input-single {
+                            position: relative;
+                            padding: 10px 0 6px 30px;
+                            text-align: left;
+                            margin-left: 10px;
+                            label {
+                              cursor: pointer;
+                              &:before,
+                              &:after {
+                                content: '';
+                                position: absolute;
+                                top: 50%;
+                                border-radius: 50%;
+                              }
+                              &:before {
+                                left: -5px;
+                                width: 20px;
+                                height: 20px;
+                                margin: -15px 0 0;
+                                background: #fff;
+                                box-shadow: 0 0 1px grey;
+                              }
+                              &:after {
+                                left: 0;
+                                width: 10px;
+                                height: 10px;
+                                margin: -10px 0 0;
+                                opacity: 0;
+                                background: #01498b;
+                                transform: translate3d(-40px, 0, 0) scale(0.5);
+                                transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
+                              }
+                            }
+                            
+                            input[type="radio"],
+                            input[type="checkbox"] {
+                              position: absolute;
+                              top: 0;
+                              left: -9999px;
+                              visibility: hidden;
+                              
+                              &:checked + label {
+                                &:before {
+                                }
+                                &:after {
+                                  transform: translate3d(0, 0, 0);
+                                  opacity: 1;
+                                }
+                              }
+                            }
+                          }
+                          
+                          
+                          
+                          .styled-input--rounded {
+                            label {
+                              &:before {
+                                border-radius: 10px;
+                              }
+                              &:after {
+                                border-radius: 6px;
+                              }
+                            }
+                          }
+                          
+                          
+                    
                     }
                     button {
-                        padding: 5px 33px;
+                        margin-left: 7px;
+                        padding: 5px 36px;
                         border: none;
                         outline: none;
                         font-size: 15px;
                         text-transform: uppercase;
                         background-color: $color-primary;
                         border-radius: unset;
-                       
+                        
+                        
                     }
-                    @media(max-width : 1140px){
-                        padding: 25px;
-                    }
+                    
                 }
+                @media(max-width : 660px){
+                    padding-bottom: 80px;
+                }
+                @media(max-width : 770px){
+                    padding-bottom: 80px;
+                }
+
+                
             }
 
             .img-form{
-                width: auto;
+                width: 100%;
                 img{
                     width: 100%;
-                    height: 573px;
+                    height: 513px;
                     @media(max-width : 1240px){
-                        height: 583px;
+                        width: 100%;
+                        height: 503px;
                     }
                     @media(max-width : 1140px){
-                        height: 613px;
+                        width: 100%;
+                        height: 513px;
                     }
                     @media(max-width : 990px){
-                       width: 97.5%;
-                       transform: translateX(15px);
+                       width: 100%;
+                       height: 523px;
                     }
                     @media(max-width : 790px){
+                        width: 97%;
+                        height: 533px;
+                        transform: translateX(16px);
+                    }
+                    @media(max-width : 760px){
+                        height: 100%;
+                    }
+                  
+                    @media(max-width : 600px){
+                        width: 95.85%;
+                        height: 100%;
+                        transform: translateX(17px);
+                    }
+                  
+                     @media(max-width : 500px){
                         width: 96.5%;
+                        height: 100%;
                      }
                 }
             }
@@ -106,24 +220,52 @@
         background-color: #f3f3f3;
         margin-top: 15px;
         .content-contact{
-            padding: 2%;
+            padding: 20px;
             .img-detail{
                 width: 100%;
 
                 img{
                     width: 100%;
+                    @media(max-width : 1500px){
+                        height: 200px;
+                    }
+                    @media(max-width : 790px){
+                        height: 100%;
+                    }
                 }
             }
             .detail-content-wrap{
                 padding: 25px 25px -5px 25px;
                 line-height: 30px;
-                
+                @media(max-width : 990px){
+                    line-height: 20px;
+                }
+                @media(max-width : 1200px){
+                    line-height: 20px;
+                }
+               
+                @media(max-width : 1500px){
+                    line-height: 25px;
+                }
+                h3{
+                    @media(max-width : 1200px){
+                        font-size: 27px;
+                        line-height: 30px;
+                    }
+                    @media(max-width : 990px){
+                        font-size: 25px;
+                    }
+                }
                 p > span{
                     margin-left: 10px;
                     
                 }
                 p{
                     color: #0054a0;
+                    @media(max-width : 1200px){
+                        font-size: 15px;
+                        line-height: 19px;
+                    }
                 }
                 h3{
                     color: #565656;

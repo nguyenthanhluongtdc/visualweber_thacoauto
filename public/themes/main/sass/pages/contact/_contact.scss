@@ -53,6 +53,7 @@
                         height: 35px; 
                         width: 200px;
                         margin-left: 8px;
+                        
                     }
                 }
                 .policy {
@@ -225,7 +226,12 @@
 
                 img{
                     width: 100%;
-                   
+                    @media(max-width : 1500px){
+                        height: 200px;
+                    }
+                    @media(max-width : 790px){
+                        height: 100%;
+                    }
                 }
             }
             .detail-content-wrap{
@@ -238,12 +244,12 @@
                     line-height: 20px;
                 }
                
-                @media(max-width : 500px){
-                
+                @media(max-width : 1500px){
+                    line-height: 25px;
                 }
                 h3{
                     @media(max-width : 1200px){
-                        font-size: 30px;
+                        font-size: 27px;
                         line-height: 30px;
                     }
                     @media(max-width : 990px){
@@ -256,6 +262,10 @@
                 }
                 p{
                     color: #0054a0;
+                    @media(max-width : 1200px){
+                        font-size: 15px;
+                        line-height: 19px;
+                    }
                 }
                 h3{
                     color: #565656;

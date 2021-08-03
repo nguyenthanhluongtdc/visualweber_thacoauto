@@ -7,7 +7,7 @@
     <div class="section-card-wrapper">
         <div class="container-remake">
             <div class="section-card">
-                <div class="section-card__body font-pri mb-90">
+                <div class="section-card__body font-pri mb-90" id="section_one">
                     <div class="section-card__row row">
                         <div class="section-card__row__picture col-lg-8">
                             <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/assemble/assemble1.jpg')}}" alt="" />
@@ -42,7 +42,7 @@
                     </div>
                 </div>
 
-                <div class="section-card__body font-pri mb-90">
+                <div class="section-card__body font-pri mb-90" id="section_two">
                     <div class="section-card__row row">
                         <div class="section-card__row__picture col-lg-8">
                             <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/assemble/assemble2.jpg')}}" alt="" />
@@ -76,7 +76,7 @@
                     </div>
                 </div>
 
-                <div class="section-card__body font-pri mb-90">
+                <div class="section-card__body font-pri mb-90" id="section_three">
                     <div class="section-card__row row">
                         <div class="section-card__row__picture col-lg-8">
                             <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/assemble/assemble3.jpg')}}" alt="" />
@@ -110,7 +110,7 @@
                     </div>
                 </div>
 
-                <div class="section-card__body font-pri mb-90">
+                <div class="section-card__body font-pri mb-90" id="section_four">
                     <div class="section-card__row row">
                         <div class="section-card__row__picture col-lg-8">
                             <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/assemble/assemble4.jpg')}}" alt="" />
@@ -144,7 +144,7 @@
                     </div>
                 </div>
 
-                <div class="section-card__body font-pri mb-90">
+                <div class="section-card__body font-pri mb-90" id="section_five">
                     <div class="section-card__row row">
                         <div class="section-card__row__picture col-lg-8">
                             <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/assemble/assemble5.jpg')}}" alt="" />
@@ -178,7 +178,7 @@
                     </div>
                 </div>
 
-                <div class="section-card__body font-pri mb-90">
+                <div class="section-card__body font-pri mb-90" id="section_six">
                     <div class="section-card__row row">
                         <div class="section-card__row__picture col-lg-8">
                             <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/assemble/assemble4.jpg')}}" alt="" />
@@ -217,22 +217,22 @@
     </div>
 
     <div class="box-node-left">
-        <div class="row">
+        <div class="row item">
             <div class="box-symbol">
                 <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/nodelefttwo.png')}}" alt="" />
             </div>
 
-            <div class="box-text font-pri-bold active">
+            <div class="box-text font-pri-bold">
                 Sản xuất
             </div>
         </div>
-        <div class="row">
+        <div class="row item">
             <div class="box-symbol">
                 <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/nodeleftone.png')}}" alt="" />
             </div>
 
             <div class="box-text font-pri-bold ">
-                Sản xuất
+               LẮP RÁP
             </div>
         </div>
     </div>
@@ -241,23 +241,59 @@
         <ul class="pagination-customize">
             <li class="pagi-item">
                 <span class="text"> NHÀ MÁY SẢN XUẤT XE DU LỊCH CAO CẤP THACO </span>
-                <a href="#" title="" class="number">
+                <a href="#section_one" title="" class="number click_scroll">
                     1
                 </a>
             </li>
 
-            <li class="pagi-item active">
+            <li class="pagi-item">
                 <span class="text"> nhà máy thaco bus </span>
-                <a href="#" title="" class="number">
+                <a href="#section_two" title="" class="number click_scroll">
                     2
                 </a>
             </li>
 
             <li class="pagi-item">
-                <a href="#" title="" class="number">
+                <a href="#section_three" title="" class="number click_scroll">
                     3
+                </a>
+            </li>
+
+            <li class="pagi-item">
+                <a href="#section_four" title="" class="number click_scroll">
+                    4
+                </a>
+            </li>
+
+            <li class="pagi-item">
+                <a href="#section_five" title="" class="number click_scroll">
+                    5
+                </a>
+            </li>
+
+            <li class="pagi-item">
+                <a href="#section_six" title="" class="number click_scroll">
+                    6
                 </a>
             </li>
         </ul>
     </div>
 </div>
+
+<script> 
+$(document).ready(function(){
+    var docEl = $(document),
+        headerEl = $('header'),
+        headerWrapEl = $('.wrapHead'),
+        navEl = $('nav'),
+        linkScroll = $('.click_scroll');
+    
+    linkScroll.click(function(e){
+        $top = $(this.hash).offset().top - 150;
+        e.preventDefault(); 
+        $('body, html').animate({
+            scrollTop: $top
+        }, 500);
+    });
+});
+</script>

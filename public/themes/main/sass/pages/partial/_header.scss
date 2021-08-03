@@ -4,7 +4,7 @@
 
 .header{
     
-    background: rgba(0 ,0 , 0 , 0.5);
+    background: rgb(20, 113, 193);
     height: 80px;
     position: fixed;
     top: 20px;
@@ -180,7 +180,6 @@
                 display: flex;
                 &:lang(vi){
                     .lang-vi{
-                        background-color: #cfcfcf 1;
                         .nav-link{
                             opacity: 1;
                         }
@@ -188,7 +187,6 @@
                 }
                 &:lang(en){
                     .lang-en{
-                        background-color: #cfcfcf;
                         .nav-link{
                             opacity: 1;
                         }
@@ -244,7 +242,7 @@
     top: 0;
     left: 0;
     right: 0;
-    background: $color-primary;
+    background: $color-primary !important;
     z-index: 99;
     transition: all 0.7s ease-out;
 }

@@ -2,7 +2,7 @@
 <section class="section-info-contact">
     <div class="container-remake">
         <h2 class="contact__title font60 font-pri-bold pb-4">THÔNG TIN LIÊN HỆ</h2>
-        <div class="info-contact">
+        <div class="info-contact"  data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="50">
            
             <div class="info-contact-form mb-6"> 
                 <div class="row">
@@ -70,10 +70,17 @@
                 </div>
             </div>
         </div>
-        <div class="detail-contact">
-                <div class="row content-contact">
+        
+        <div class="detail-contact" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                <div class="row content-contact ">
                     <div class="col-md-4 img-detail">
-                            <img src="{{ Theme::asset()->url('images/contact/detail-contcact1.png') }}" alt="img-detail">
+                        <div class="image">
+                            <div class="post-thumbnail">
+                                <a href=""><img src="{{ Theme::asset()->url('images/contact/detail-contcact1.png') }}" alt="img-detail"></a>
+                            </div>
+                        </div>
+                        
+                            
                     </div>
                     <div class="col-md-8 detail-content-wrap">
                         
@@ -86,11 +93,16 @@
                     </div>
                 </div>
         </div>
-        <div class="detail-contact">
+        <div class="detail-contact" data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease-in-out">
             <div class="row content-contact">
                 <div class="col-md-4 img-detail">
-                        <img src="{{ Theme::asset()->url('images/contact/detail-contact2.png') }}" alt="img-detail">
+                    <div class="image">
+                        <div class="post-thumbnail">
+                            <a href=""> <img src="{{ Theme::asset()->url('images/contact/detail-contact2.png') }}" alt="img-detail"></a>
+                        </div>
+                    </div>
                 </div>
+               
                 <div class="col-md-8 detail-content-wrap">
                         <h3 class="detail-title font40 font-pri-bold mt-3 mb-3">VĂN PHÒNG THACO TẠI KHU PHỨC HỢP CHU LAI - TRƯỜNG HẢI</h3>
                         <p class="font-pri"><ion-icon name="location-outline"></ion-icon><span class="font-pri-bold">Địa chỉ: </span>Thôn 4, Xã Tam Hiệp, Huyện Núi thành, Tỉnh Quảng Nam.</p>
@@ -100,10 +112,14 @@
                 </div>
             </div>
     </div>
-    <div class="detail-contact">
+    <div class="detail-contact" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
         <div class="row content-contact">
             <div class="col-md-4 img-detail">
-                    <img src="{{ Theme::asset()->url('images/contact/detail-contcact1.png') }}" alt="img-detail">
+                <div class="image">
+                    <div class="post-thumbnail">
+                        <a href=""><img src="{{ Theme::asset()->url('images/contact/detail-contcact1.png') }}" alt="img-detail"></a>
+                    </div>
+                </div>
             </div>
             <div class="col-md-8 detail-content-wrap">
                     <h3 class="detail-title font40 font-pri-bold mt-3 mb-3">VĂN PHÒNG THACO TẠI HÀ NỘI</h3>

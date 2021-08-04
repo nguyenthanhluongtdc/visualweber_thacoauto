@@ -252,4 +252,107 @@
             }
         }
     }
+
+    .box-node-right {
+        position: fixed;
+        top: 45%;
+        right: 0;
+    
+        .pagination-customize {
+          border-right: 1px solid $color-primary;
+          .pagi-item {
+            font-family: $font-primary-bold;
+            text-align: right;
+            display: flex;
+            justify-content: flex-end;
+
+            .icon {
+                img {
+                    filter: invert(42%) sepia(56%) saturate(491%) hue-rotate(174deg) brightness(89%) contrast(84%);
+                }
+            }
+    
+            .icon,
+            .text {
+                text-align: center;
+                line-height: 3.6vw;
+                height: 3.4vw;
+                max-height: 70px;
+        
+                @media(max-width : 1440px){
+                    height: 3.1vw;
+                    line-height: 3.3vw;
+                }
+                @media(max-width : 1199px){
+                    height: 2.8vw;
+                    line-height: 3.1vw;
+                }
+            }
+    
+            .text {
+              padding-left: 15px;
+              padding-right: 15px;
+              text-transform: uppercase;
+              border: 1px solid $color-primary;
+              opacity: 0;
+              pointer-events: none;
+              transition: all 400ms;
+              transform: translateX(100%);
+            }
+    
+            .icon {
+              border-bottom: 1px solid $color-primary;
+              border-left: 1px solid $color-primary;
+              font-size: 25px;
+    
+              width: 3.4vw;
+              max-width: 70px;
+              
+              @media(max-width : 1440px){
+                  width: 3.1vw;
+              }
+              @media(max-width : 1199px){
+                  width: 2.8vw;
+              }
+            }
+    
+            &:hover {
+              .text {
+                background-color: $color-primary;
+                color: $color-white;
+                opacity: 1;
+                pointer-events: all;
+                transform: translateX(0);
+              }
+              .icon {
+                background-color: $color-primary;
+                img {
+                    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(204deg) brightness(101%) contrast(101%);
+                }
+              }
+            }
+          }
+    
+          > li:first-child {
+            .icon {
+              border-top: 1px solid $color-primary;
+            }
+          }
+          .pagi-item.active {
+            .text {
+                background-color: $color-primary;
+                color: $color-white;
+                opacity: 1;
+                pointer-events: all;
+                transform: translateX(0);
+              }
+              .icon {
+                background-color: $color-primary;
+                img {
+                    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(204deg) brightness(101%) contrast(101%);
+                }
+              }
+          }
+        }
+      }
 }

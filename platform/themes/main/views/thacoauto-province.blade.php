@@ -567,10 +567,34 @@
                                 </div>
                             </div>
                         </div>
-
                       </div>
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="box-node-right">
+        <ul class="pagination-customize">
+            <li class="pagi-item active">
+                <span class="text">Thaco auto tỉnh thành </span>
+                <a href="#section_one" title="" class="icon click_scroll">
+                    <img src="{{Theme::asset()->url('images/province/node1.png')}}" alt="">
+                </a>
+            </li>
+
+            <li class="pagi-item">
+                <span class="text"> nhà máy thaco bus </span>
+                <a href="#section_two" title="" class="icon click_scroll">
+                    <img src="{{Theme::asset()->url('images/province/node2.png')}}" alt="">
+                </a>
+            </li>
+
+            <li class="pagi-item">
+                <span class="text"> NHÀ MÁY TẢI THACO </span>
+                <a href="#section_three" title="" class="icon click_scroll">
+                    <img src="{{Theme::asset()->url('images/province/node3.png')}}" alt="">
+                </a>
+            </li>
+        </ul>
     </div>
 </div>

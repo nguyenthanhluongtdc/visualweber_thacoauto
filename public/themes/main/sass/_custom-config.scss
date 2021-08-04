@@ -35,26 +35,32 @@ a:hover{
     @media(max-width : 1680px){
         font-size: 70px;
     }
+    @media(max-width : 1550px){
+        font-size: 60px;
+    }
     @media(max-width : 1440px){
-        font-size: 65px;
+        font-size: 55px;
+    }
+    @media(max-width : 1360px){
+        font-size: 50px;
     }
     @media(max-width : 1199px){
-        font-size: 55px;
+        font-size: 45px;
     }
 }
 .font60{
     font-size: 60px;
     @media(max-width : 1680px){
-        font-size: 55px;
+        font-size: 50px;
     }
     @media(max-width : 1440px){
-        font-size: 45px;
-    }
-    @media(max-width : 1367px){
         font-size: 40px;
     }
-    @media(max-width : 1366px){
+    @media(max-width : 1367px){
         font-size: 35px;
+    }
+    @media(max-width : 1199px){
+        font-size: 30px;
     }
 }
 .font50{
@@ -65,7 +71,7 @@ a:hover{
     @media(max-width : 1440px){
         font-size: 40px;
     }
-    @media(max-width : 1199px){
+    @media(max-width : 1366px){
         font-size: 30px;
     }
 }
@@ -88,7 +94,7 @@ a:hover{
     font-size: 30px;
     line-height: 36px;
     @media(max-width : 1680px){
-        font-size: 28px;
+        font-size: 27px;
         line-height: 32px;
     }
     @media(max-width : 1440px){
@@ -96,11 +102,11 @@ a:hover{
         line-height: 30px;
     }
     @media(max-width : 1400px){
-        font-size: 23px;
+        font-size: 22px;
         line-height: 26px;
     }
     @media(max-width : 1199px){
-        font-size: 21px;
+        font-size: 20px;
         line-height: 26px;
     }
 }
@@ -110,10 +116,10 @@ a:hover{
         font-size: 30px;
     }
     @media(max-width : 1400px){
-        font-size: 27px;
+        font-size: 26px;
     }
     @media(max-width : 1199px){
-        font-size: 25px;
+        font-size: 24px;
     }
 }
 .font25{
@@ -125,7 +131,22 @@ a:hover{
         font-size: 20px;
     }
     @media(max-width : 1367px){
+        font-size: 17px;
+    }
+    @media(max-width : 1199px){
         font-size: 16px;
+    }
+}
+.font24{
+    font-size: 24px;
+    @media(max-width : 1680px){
+        font-size: 22px;
+    }
+    @media(max-width : 1440px){
+        font-size: 20px;
+    }
+    @media(max-width : 1367px){
+        font-size: 17px;
     }
     @media(max-width : 1199px){
         font-size: 15px;
@@ -144,6 +165,26 @@ a:hover{
     }
     @media(max-width : 1199px){
         font-size: 15px;
+    }
+}
+.font21{
+    font-size: 21px;
+    line-height: 26px;
+    @media(max-width : 1680px){
+        font-size: 18px;
+        line-height: 21px;
+    }
+    @media(max-width : 1440px){
+        font-size: 16px;
+        line-height: 19px;
+    }
+    @media(max-width : 1400px){
+        font-size: 15px;
+        line-height: 18px;
+    }
+    @media(max-width : 1264px){
+        font-size: 14px;
+        line-height: 18px;
     }
 }
 .font20{
@@ -171,6 +212,12 @@ a:hover{
     line-height: 20px;
     @media(max-width : 1680px){
         font-size: 16px;
+    }
+    @media(max-width : 1440px){
+        font-size: 15px;
+    }
+    @media(max-width : 13660px){
+        font-size: 14px;
     }
 }
 .font15{

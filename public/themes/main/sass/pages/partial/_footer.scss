@@ -89,6 +89,18 @@
                 ul {
                     li {
                         line-height: 36px;
+                        @media(max-width : 1680px){
+                            line-height: 31px;
+                        }
+                        @media(max-width : 1440px){
+                            line-height: 28px;
+                        }
+                        @media(max-width : 1366px){
+                            line-height: 26px;
+                        }
+                        @media(max-width : 1199px){
+                            line-height: 24px;
+                        }
                     }
                 }
             }
@@ -96,6 +108,18 @@
             .item:last-child {
                 margin-top: 90px;
                 width: 100%;
+                @media(max-width : 1680px){
+                    margin-top: 75px;
+                }
+                @media(max-width : 1440px){
+                    margin-top: 60px;
+                }
+                @media(max-width : 1366px){
+                    margin-top: 45px;
+                }
+                @media(max-width : 1199px){
+                    margin-top: 30px;
+                }
             }
         }
     }
@@ -103,10 +127,34 @@
     .thaco-contact {
         h1 {
             margin: 30px 0 14px 0;
+            @media(max-width : 1680px){
+                margin: 27px 0 14px 0;
+            }
+            @media(max-width : 1440px){
+                margin: 25px 0 14px 0;
+            }
+            @media(max-width : 1366px){
+                margin: 22px 0 14px 0;
+            }
+            @media(max-width : 1199px){
+                margin: 20px 0 14px 0;
+            }
         }
 
         p {
             line-height: 36px;
+            @media(max-width : 1680px){
+                line-height: 31px;
+            }
+            @media(max-width : 1440px){
+                line-height: 28px;
+            }
+            @media(max-width : 1366px){
+                line-height: 26px;
+            }
+            @media(max-width : 1199px){
+                line-height: 24px;
+            }
         }
     }
 }
@@ -118,13 +166,13 @@
         height: 50px;
     }
     @media(max-width : 1440px){
-        height: 45px;
+        height: 42px;
     }
     @media(max-width : 1366px){
-        height: 40px;
+        height: 37px;
     }
     @media(max-width : 1199px){
-        height: 35px;
+        height: 32px;
     }
     .container-remake {
         height: 100%;

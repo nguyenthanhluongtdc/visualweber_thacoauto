@@ -1,4 +1,4 @@
-@php Theme::set('section-name', __('Search result for: ') . ' "' . Request::input('q') . '"') @endphp
+{{-- @php Theme::set('section-name', __('Search result for: ') . ' "' . Request::input('q') . '"') @endphp
 
 @if ($posts->count() > 0)
     @foreach ($posts as $post)
@@ -33,4 +33,164 @@
     <div class="alert alert-warning">
         <p>{{ __('There is no data to display!') }}</p>
     </div>
-@endif
+@endif --}}
+
+
+<div class="search-page">
+    <div class="container-remake">
+            <div class="search-intro">
+                <h1 class="font-pri-bold font60 text-center mt-5">KẾT QUẢ TÌM KIẾM</h1>
+            </div>
+            <div class="search-input row mt-5 mb-3">
+                <div class="col-sm-3">
+
+                </div>
+                <div class="col-sm-6 search-bar mb-4">
+                    <div class="row search">
+                        <div class="col-md-11">
+                            <input type="text" class="form-control" id="search-bar" placeholder="Tìm kiếm" name="search" value=""> 
+                        </div>
+                        <div class="col-md-1 input-group-append ">
+
+                                <button id="button-addon5" type="submit" class="btn"> <ion-icon name="search-outline"></ion-icon> </button>
+
+                        </div>
+                    </div>
+                    
+                   
+                    <p class="font-pri mt-2">Có 43 kết quả được tìm thấy</p>
+                </div>
+                
+            </div>
+            <div class="search-range row pb-4 mt-5">
+                <div class="col-md-10 search-cate">
+                    <div class="box pr-4">
+                        <input id="one" type="checkbox">
+                        <span class="check"></span>
+                        <label for="one" class="font-pri font15">Giới thiệu</label>
+                    </div>
+                    <div class="box ">
+                        <input id="two" type="checkbox">
+                        <span class="check"></span>
+                        <label for="two" class="font-pri font15">Lĩnh vực sản xuất kinh doanh</label>
+                    </div>
+                    <div class="box">
+                        <input id="three" type="checkbox">
+                        <span class="check"></span>
+                        <label for="three" class="font-pri font15">Truyền thông</label>
+                    </div>
+                    <div class="box">
+                        <input id="four" type="checkbox">
+                        <span class="check"></span>
+                        <label for="four" class="font-pri font15">Quan hệ cổ đông</label>
+                    </div>
+                    <div class="box">
+                        <input id="five" type="checkbox">
+                        <span class="check"></span>
+                        <label for="five" class="font-pri font15">Tuyển dụng</label>
+                    </div>
+                    
+                </div>
+                <div class="col-md-2 search-time">
+                    <div class="time-picker">
+                        <ion-icon name="calendar-outline" class="mt-3 pl-3 font15" style="margin-top: 4px"></ion-icon>
+                        <input type="date" id="datepicker" name="calendars" autocomplete="off" class="font15">
+                        <ion-icon name="chevron-down-outline" class="arrow font15"></ion-icon>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="search-result row pb-5"  data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                <div class="col-md-3 result-img pl-0">
+                    <div class="image">
+                        <div class="post-thumbnail">
+                            <a href=""> <img src="{{ Theme::asset()->url('images/search/search-3.png') }}" alt="img-detail"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 result-content" >
+                    <h3 class="font-pri-bold font30 mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, perspiciatis? Cupiditate eligen dol optio placeat.</h3>
+                    <p class="font-pri mt-3 font15">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda laborum officiis nisi omnis! Illum, quibusdam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eligendi deleniti quam amet earum laudantium.
+                    </p>
+                    <p class="font-pri date font15">20-12-20201</p>
+                </div>
+            </div>
+            <div class="search-result row pb-5" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                <div class="col-md-3 result-img pl-0">
+                    <div class="image">
+                        <div class="post-thumbnail">
+                            <a href=""> <img src="{{ Theme::asset()->url('images/search/search-4.png') }}" alt="img-detail"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 result-content">
+                    <h3 class="font-pri-bold font30 mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, perspiciatis? Cupiditate eligen dol optio placeat.</h3>
+                    <p class="font-pri mt-3 font15">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda laborum officiis nisi omnis! Illum, quibusdam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eligendi deleniti quam amet earum laudantium.
+                    </p>
+                    <p class="font-pri date font15">20-12-20201</p>
+                </div>
+            </div>
+            <div class="search-result row pb-5" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                <div class="col-md-3 result-img pl-0">
+                    <div class="image">
+                        <div class="post-thumbnail">
+                            <a href=""> <img src="{{ Theme::asset()->url('images/search/search-5.png') }}" alt="img-detail"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 result-content">
+                    <h3 class="font-pri-bold font30 mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, perspiciatis? Cupiditate eligen dol optio placeat.</h3>
+                    <p class="font-pri mt-3 font15">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda laborum officiis nisi omnis! Illum, quibusdam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eligendi deleniti quam amet earum laudantium.
+                    </p>
+                    <p class="font-pri date font15">20-12-20201</p>
+                </div>
+            </div>
+            <div class="search-result row pb-5" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                <div class="col-md-3 result-img pl-0">
+                    <div class="image">
+                        <div class="post-thumbnail">
+                            <a href=""> <img src="{{ Theme::asset()->url('images/search/search-6.png') }}" alt="img-detail"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 result-content">
+                    <h3 class="font-pri-bold font30 mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, perspiciatis? Cupiditate eligen dol optio placeat.</h3>
+                    <p class="font-pri mt-3 font15">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda laborum officiis nisi omnis! Illum, quibusdam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eligendi deleniti quam amet earum laudantium.
+                    </p>
+                    <p class="font-pri date font15">20-12-20201</p>
+                </div>
+            </div>
+            <div class="search-result row pb-5" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                <div class="col-md-3 result-img pl-0">
+                    <div class="image">
+                        <div class="post-thumbnail">
+                            <a href=""> <img src="{{ Theme::asset()->url('images/search/search-7.png') }}" alt="img-detail"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 result-content">
+                    <h3 class="font-pri-bold font30 mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, perspiciatis? Cupiditate eligen dol optio placeat.</h3>
+                    <p class="font-pri mt-3 font15">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda laborum officiis nisi omnis! Illum, quibusdam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eligendi deleniti quam amet earum laudantium.
+                    </p>
+                    <p class="font-pri date font15">20-12-20201</p>
+                </div>
+            </div>
+            
+        <div class="container d-flex justify-content-center mb-5 font-pri">         
+                            <ul class="pagination justify-content-center pagination-success">
+                                <li class="page-item active"><a class="page-link" href="#" data-abc="true">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#" data-abc="true">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#" data-abc="true">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#" data-abc="true">4</a></li>
+                                <li class="page-item"><a class="page-link" href="#" data-abc="true">5</a></li>
+                                <li class="page-item"><a class="page-link" href="#" data-abc="true">6</a></li>
+                                <li class="page-item"><a class="page-link" href="#" data-abc="true">7</a></li>
+                                <li class="page-item"><a class="page-link" href="#" data-abc="true">></a></li>
+                                <li class="page-item"><a class="page-link" href="#" data-abc="true">>></a></li>
+                            </ul>
+                    </div>
+            </div>
+    </div>
+</div>

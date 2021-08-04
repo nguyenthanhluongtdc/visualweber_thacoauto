@@ -48,11 +48,11 @@
                 <div class="col-sm-6 search-bar mb-4">
                     <div class="row search">
                         <div class="col-md-11">
-                            <input type="text" class="form-control" id="search-bar" placeholder="Tìm kiếm" name="search" value=""> 
+                            <input type="text" class="form-control font20" id="search-bar" placeholder="Tìm kiếm" name="search" value=""> 
                         </div>
                         <div class="col-md-1 input-group-append ">
 
-                                <button id="button-addon5" type="submit" class="btn"> <ion-icon name="search-outline"></ion-icon> </button>
+                                <button id="button-addon5" type="submit" class="btn"> <ion-icon name="search-outline" class="font20"></ion-icon> </button>
 
                         </div>
                     </div>
@@ -64,12 +64,13 @@
             </div>
             <div class="search-range row pb-4 mt-5">
                 <div class="col-md-10 search-cate">
-                    <div class="box pr-4">
+                    
+                    <div class="box">
                         <input id="one" type="checkbox">
                         <span class="check"></span>
                         <label for="one" class="font-pri font15">Giới thiệu</label>
                     </div>
-                    <div class="box ">
+                    <div class="box item">
                         <input id="two" type="checkbox">
                         <span class="check"></span>
                         <label for="two" class="font-pri font15">Lĩnh vực sản xuất kinh doanh</label>
@@ -93,8 +94,11 @@
                 </div>
                 <div class="col-md-2 search-time">
                     <div class="time-picker">
-                        <ion-icon name="calendar-outline" class="mt-3 pl-3 font15" style="margin-top: 4px"></ion-icon>
-                        <input type="date" id="datepicker" name="calendars" autocomplete="off" class="font15">
+                        <ion-icon name="calendar-outline" class="mt-3 pl-3 font15 calendar" style="margin-top: 4px"></ion-icon>
+                        <div class="date-frame">
+                            <input type="date" id="birthday" name="birthday" class="font15"> 
+                          </div>
+                        {{-- <input type="date" id="datepicker" name="calendars" autocomplete="off" class="font15"> --}}
                         <ion-icon name="chevron-down-outline" class="arrow font15"></ion-icon>
                     </div>
                     

@@ -177,12 +177,10 @@ var swiper = new Swiper(".researchDevSwiper", {
 });
 
 var Helper = {
-    addSelect2ToNewsFilter: function () {
-        $(".js-example-disabled-results").select2({minimumResultsForSearch: Infinity});
-    },
-    initAOS: function () {
-        AOS.init();
-        app.initJs();
+    addSelect2toNewsFilter: function(){
+      if($('.js-example-disabled-results').length > 0){
+        $('.js-example-disabled-results').select2({minimumResultsForSearch: Infinity});
+      }
     },
     changeColorHeader: function () {
         var url = window.location.href;
@@ -214,8 +212,8 @@ var Helper = {
 };
 
 $(document).ready(function () {
+    AOS.init();
+    Helper.addSelect2toNewsFilter();
     Helper.transitionHeaderFixed();
     Helper.changeColorHeader();
-    Helper.initAOS();
-    Helper.addSelect2ToNewsFilter();
 });

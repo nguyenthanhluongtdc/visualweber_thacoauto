@@ -45,7 +45,7 @@
                 <div class="col-sm-3">
 
                 </div>
-                <div class="col-sm-6 search-bar">
+                <div class="col-sm-6 search-bar mb-4">
                     <div class="row search">
                         <div class="col-md-11">
                             <input type="text" class="form-control" id="search-bar" placeholder="Tìm kiếm" name="search" value=""> 

@@ -29,3 +29,158 @@ $max) {
 @function calculatorPixel($size, $screen) {
     @return ($size * $screen) / 1920;
 }
+
+@mixin marginLeft($size, $minus) {
+    margin-left: #{$minus}#{$size}px;
+    @media only screen and (max-width: 1680px) {
+        margin-left: #{$minus}#{calculatorPixel($size, 1680)}px;
+    }
+    @media only screen and (max-width: 1368px) {
+        margin-left: #{$minus}#{calculatorPixel($size, 1368)}px;
+    }
+    @media (max-width: 992px) {
+        margin-left: #{$minus}#{calculatorPixel($size,992)}px;
+    }
+}
+
+@mixin marginRight($size, $minus) {
+    margin-right: #{$minus}#{$size}px;
+    @media only screen and (max-width: 1680px) {
+        margin-right: #{$minus}#{calculatorPixel($size, 1680)}px;
+    }
+    @media only screen and (max-width: 1368px) {
+        margin-right: #{$minus}#{calculatorPixel($size, 1368)}px;
+    }
+    @media (max-width: 992px) {
+        margin-right: #{$minus}#{calculatorPixel($size,992)}px;
+    }
+}
+
+@mixin marginTop($size, $minus) {
+    margin-top: #{$minus}#{$size}px;
+    @media only screen and (max-width: 1680px) {
+        margin-top: #{$minus}#{calculatorPixel($size, 1680)}px;
+    }
+    @media only screen and (max-width: 1368px) {
+        margin-top: #{$minus}#{calculatorPixel($size, 1368)}px;
+    }
+    @media (max-width: 992px) {
+        margin-top: #{$minus}#{calculatorPixel($size,992)}px;
+    }
+}
+
+@mixin marginBottom($size, $minus) {
+    margin-bottom: #{$minus}#{$size}px;
+    @media only screen and (max-width: 1680px) {
+        margin-bottom: #{$minus}#{calculatorPixel($size, 1680)}px;
+    }
+    @media only screen and (max-width: 1368px) {
+        margin-bottom: #{$minus}#{calculatorPixel($size, 1368)}px;
+    }
+    @media (max-width: 992px) {
+        margin-bottom: #{$minus}#{calculatorPixel($size,992)}px;
+    }
+}
+
+@mixin marginX($size, $minus) {
+    margin-right: #{$minus}#{$size}px;
+    margin-left: #{$minus}#{$size}px;
+    @media only screen and (max-width: 1680px) {
+        margin-right: #{$minus}#{calculatorPixel($size, 1680)}px;
+        margin-left: #{$minus}#{calculatorPixel($size, 1680)}px;
+    }
+    @media only screen and (max-width: 1368px) {
+        margin-right: #{$minus}#{calculatorPixel($size, 1368)}px;
+        margin-left: #{$minus}#{calculatorPixel($size, 1368)}px;
+    }
+    @media (max-width: 992px) {
+        margin-right: #{$minus}#{calculatorPixel($size,992)}px;
+        margin-left: #{$minus}#{calculatorPixel($size,992)}px;
+    }
+}
+
+@mixin paddingLeft($size) {
+    padding-left: #{$size}px;
+    @media only screen and (max-width: 1680px) {
+        padding-left: #{calculatorPixel($size, 1680)}px;
+    }
+    @media only screen and (max-width: 1368px) {
+        padding-left: #{calculatorPixel($size, 1368)}px;
+    }
+    @media (max-width: 992px) {
+        padding-left: #{calculatorPixel($size,992)}px;
+    }
+}
+
+@mixin paddingRight($size) {
+    padding-right: #{$size}px;
+    @media only screen and (max-width: 1680px) {
+        padding-right: #{calculatorPixel($size, 1680)}px;
+    }
+    @media only screen and (max-width: 1368px) {
+        padding-right: #{calculatorPixel($size, 1368)}px;
+    }
+    @media (max-width: 992px) {
+        padding-right: #{calculatorPixel($size,992)}px;
+    }
+}
+
+@mixin paddingTop($size) {
+    padding-top: #{$size}px;
+    @media only screen and (max-width: 1680px) {
+        padding-top: #{calculatorPixel($size, 1680)}px;
+    }
+    @media only screen and (max-width: 1368px) {
+        padding-top: #{calculatorPixel($size, 1368)}px;
+    }
+    @media (max-width: 992px) {
+        padding-top: #{calculatorPixel($size,992)}px;
+    }
+}
+
+@mixin paddingBottom($size) {
+    padding-bottom: #{$size}px;
+    @media only screen and (max-width: 1680px) {
+        padding-bottom: #{calculatorPixel($size, 1680)}px;
+    }
+    @media only screen and (max-width: 1368px) {
+        padding-bottom: #{calculatorPixel($size, 1368)}px;
+    }
+    @media (max-width: 992px) {
+        padding-bottom: #{calculatorPixel($size,992)}px;
+    }
+}
+
+@mixin paddingX($size) {
+    padding-right: #{$size}px;
+    padding-left: #{$size}px;
+    @media only screen and (max-width: 1680px) {
+        padding-right: #{calculatorPixel($size, 1680)}px;
+        padding-left: #{calculatorPixel($size, 1680)}px;
+    }
+    @media only screen and (max-width: 1368px) {
+        padding-right: #{calculatorPixel($size, 1368)}px;
+        padding-left: #{calculatorPixel($size, 1368)}px;
+    }
+    @media (max-width: 992px) {
+        padding-right: #{calculatorPixel($size,992)}px;
+        padding-left: #{calculatorPixel($size,992)}px;
+    }
+}
+
+@mixin paddingY($size) {
+    padding-bottom: #{$size}px;
+    padding-top: #{$size}px;
+    @media only screen and (max-width: 1680px) {
+        padding-bottom: #{calculatorPixel($size, 1680)}px;
+        padding-top: #{calculatorPixel($size, 1680)}px;
+    }
+    @media only screen and (max-width: 1368px) {
+        padding-bottom: #{calculatorPixel($size, 1368)}px;
+        padding-top: #{calculatorPixel($size, 1368)}px;
+    }
+    @media (max-width: 992px) {
+       padding-bottom: #{calculatorPixel($size, 1368)}px;
+       padding-top: #{calculatorPixel($size, 1368)}px;
+    }
+}

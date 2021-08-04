@@ -26,7 +26,7 @@
     left: 1%;
     right: 1%;
     z-index: 88;
-    transition: all 0.7s ease-out;
+    transition: all 0.3s ease-out;
     @media(max-width : 1680px){
         height: 75px;
     }
@@ -259,5 +259,5 @@
     right: 0;
     background: $color-primary !important;
     z-index: 99;
-    transition: all 0.7s ease-out;
+    transition: all 0.3s ease-out;
 }

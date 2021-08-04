@@ -8,14 +8,14 @@
 
                 <div class="row">
                     <div class="section-intro__left col-lg-6">
-                        <h3 class="section-intro__left__title color-pri font30 font-pri-bold mb-40">
+                        <h3 class="section-intro__left__title color-pri font30 font-pri-bold">
                             Thaco Auto Quảng Ngãi
                         </h3>
-                        <p class="section-intro__left__des text-justify">
+                        <p class="section-intro__left__des text-justify font20">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem ac
                         </p>
 
-                        <ul class="list-contact mt-40">
+                        <ul class="list-contact font20">
                             <li class="item mb-20">
                                 <i class="fas fa-map-marker-alt"></i>
                                 <span class="text">
@@ -52,7 +52,7 @@
 
     <div class="section-business-wrapper">
         <div class="container-remake">
-            <h2 class="font-pri-bold font60 text-uppercase mb-60">
+            <h2 class="section-business__title font-pri-bold font60 text-uppercase">
                 Hoạt động kinh doanh
             </h2>
             <div class="section-business font-pri">
@@ -219,7 +219,7 @@
                        </div>
 
                        <div class="box--bottom">
-                           <a class="btn-appointment font20" href="#" title="" >
+                           <a class="btn-appointment font20 font-pri-bold" href="#" title="" >
                                 đặt hẹn dịch vụ online
                            </a>
                             <ul class="d-flex justify-content-end">
@@ -314,10 +314,10 @@
                             <div class="row tab-pane__row">
                                 <div class="col-lg-6 col-post">
                                     <div class="row">
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-6 col-post__left">
                                             <img src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
                                         </div>
-                                        <div class="col-lg-6 font20 font-pri">
+                                        <div class="col-lg-6 font20 font-pri col-post__right">
                                             <h3 class="title font-pri-bold font30">
                                                 MAZDA CX-30: TÂN BINH
                                             </h3>
@@ -334,10 +334,10 @@
                                 </div>
                                 <div class="col-lg-6 col-post">
                                     <div class="row">
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-6 col-post__left">
                                             <img src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
                                         </div>
-                                        <div class="col-lg-6 font20 font-pri">
+                                        <div class="col-lg-6 font20 font-pri col-post__right">
                                             <h3 class="title font-pri-bold font30">
                                                 MAZDA CX-30: TÂN BINH
                                             </h3>
@@ -348,17 +348,16 @@
                                                 Tiếp nối thành công của các mẫu xe SUV Mazda, THACO AUTO đưa về thị trường Việt Nam mẫu SUV đô thị thông minh, tiện nghi mang tên Mazda CX-30. Với những đột phá về thiết kế, trang bị tiện nghi hiện đại vượt trội trong phân khúc cùng khả năng vận hành linh hoạt, tiết kiệm và an toàn, CX-30 được đánh giá là lựa chọn mới đầy hấp dẫn cho khách hàng trẻ.
                                             </p>
 
-                                            <a href="#" title="" class="btn-read-more font15"> {!!__('Read more')!!} </a>
+                                            <a href="#" title="" class="btn-read-more"> {!!__('Read more')!!} </a>
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="col-lg-6 col-post">
                                     <div class="row">
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-6 col-post__left">
                                             <img src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
                                         </div>
-                                        <div class="col-lg-6 font20 font-pri">
+                                        <div class="col-lg-6 font20 font-pri col-post__right">
                                             <h3 class="title font-pri-bold font30">
                                                 MAZDA CX-30: TÂN BINH
                                             </h3>
@@ -369,17 +368,16 @@
                                                 Tiếp nối thành công của các mẫu xe SUV Mazda, THACO AUTO đưa về thị trường Việt Nam mẫu SUV đô thị thông minh, tiện nghi mang tên Mazda CX-30. Với những đột phá về thiết kế, trang bị tiện nghi hiện đại vượt trội trong phân khúc cùng khả năng vận hành linh hoạt, tiết kiệm và an toàn, CX-30 được đánh giá là lựa chọn mới đầy hấp dẫn cho khách hàng trẻ.
                                             </p>
 
-                                            <a href="#" title="" class="btn-read-more font15"> {!!__('Read more')!!} </a>
+                                            <a href="#" title="" class="btn-read-more"> {!!__('Read more')!!} </a>
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="col-lg-6 col-post">
                                     <div class="row">
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-6 col-post__left">
                                             <img src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
                                         </div>
-                                        <div class="col-lg-6 font20 font-pri">
+                                        <div class="col-lg-6 font20 font-pri col-post__right">
                                             <h3 class="title font-pri-bold font30">
                                                 MAZDA CX-30: TÂN BINH
                                             </h3>
@@ -390,17 +388,16 @@
                                                 Tiếp nối thành công của các mẫu xe SUV Mazda, THACO AUTO đưa về thị trường Việt Nam mẫu SUV đô thị thông minh, tiện nghi mang tên Mazda CX-30. Với những đột phá về thiết kế, trang bị tiện nghi hiện đại vượt trội trong phân khúc cùng khả năng vận hành linh hoạt, tiết kiệm và an toàn, CX-30 được đánh giá là lựa chọn mới đầy hấp dẫn cho khách hàng trẻ.
                                             </p>
 
-                                            <a href="#" title="" class="btn-read-more font15"> {!!__('Read more')!!} </a>
+                                            <a href="#" title="" class="btn-read-more"> {!!__('Read more')!!} </a>
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="col-lg-6 col-post">
                                     <div class="row">
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-6 col-post__left">
                                             <img src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
                                         </div>
-                                        <div class="col-lg-6 font20 font-pri">
+                                        <div class="col-lg-6 font20 font-pri col-post__right">
                                             <h3 class="title font-pri-bold font30">
                                                 MAZDA CX-30: TÂN BINH
                                             </h3>
@@ -411,17 +408,16 @@
                                                 Tiếp nối thành công của các mẫu xe SUV Mazda, THACO AUTO đưa về thị trường Việt Nam mẫu SUV đô thị thông minh, tiện nghi mang tên Mazda CX-30. Với những đột phá về thiết kế, trang bị tiện nghi hiện đại vượt trội trong phân khúc cùng khả năng vận hành linh hoạt, tiết kiệm và an toàn, CX-30 được đánh giá là lựa chọn mới đầy hấp dẫn cho khách hàng trẻ.
                                             </p>
 
-                                            <a href="#" title="" class="btn-read-more font15"> {!!__('Read more')!!} </a>
+                                            <a href="#" title="" class="btn-read-more"> {!!__('Read more')!!} </a>
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="col-lg-6 col-post">
                                     <div class="row">
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-6 col-post__left">
                                             <img src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
                                         </div>
-                                        <div class="col-lg-6 font20 font-pri">
+                                        <div class="col-lg-6 font20 font-pri col-post__right">
                                             <h3 class="title font-pri-bold font30">
                                                 MAZDA CX-30: TÂN BINH
                                             </h3>
@@ -432,7 +428,7 @@
                                                 Tiếp nối thành công của các mẫu xe SUV Mazda, THACO AUTO đưa về thị trường Việt Nam mẫu SUV đô thị thông minh, tiện nghi mang tên Mazda CX-30. Với những đột phá về thiết kế, trang bị tiện nghi hiện đại vượt trội trong phân khúc cùng khả năng vận hành linh hoạt, tiết kiệm và an toàn, CX-30 được đánh giá là lựa chọn mới đầy hấp dẫn cho khách hàng trẻ.
                                             </p>
 
-                                            <a href="#" title="" class="btn-read-more font15"> {!!__('Read more')!!} </a>
+                                            <a href="#" title="" class="btn-read-more"> {!!__('Read more')!!} </a>
                                         </div>
                                     </div>
                                 </div>
@@ -443,10 +439,10 @@
                             <div class="row tab-pane__row">
                                 <div class="col-lg-6 col-post">
                                     <div class="row">
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-6 col-post__left">
                                             <img src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
                                         </div>
-                                        <div class="col-lg-6 font20 font-pri">
+                                        <div class="col-lg-6 font20 font-pri col-post__right">
                                             <h3 class="title font-pri-bold font30">
                                                 MAZDA CX-30: TÂN BINH
                                             </h3>
@@ -463,10 +459,10 @@
                                 </div>
                                 <div class="col-lg-6 col-post">
                                     <div class="row">
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-6 col-post__left">
                                             <img src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
                                         </div>
-                                        <div class="col-lg-6 font20 font-pri">
+                                        <div class="col-lg-6 font20 font-pri col-post__right">
                                             <h3 class="title font-pri-bold font30">
                                                 MAZDA CX-30: TÂN BINH
                                             </h3>
@@ -477,17 +473,16 @@
                                                 Tiếp nối thành công của các mẫu xe SUV Mazda, THACO AUTO đưa về thị trường Việt Nam mẫu SUV đô thị thông minh, tiện nghi mang tên Mazda CX-30. Với những đột phá về thiết kế, trang bị tiện nghi hiện đại vượt trội trong phân khúc cùng khả năng vận hành linh hoạt, tiết kiệm và an toàn, CX-30 được đánh giá là lựa chọn mới đầy hấp dẫn cho khách hàng trẻ.
                                             </p>
 
-                                            <a href="#" title="" class="btn-read-more font15"> {!!__('Read more')!!} </a>
+                                            <a href="#" title="" class="btn-read-more"> {!!__('Read more')!!} </a>
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="col-lg-6 col-post">
                                     <div class="row">
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-6 col-post__left">
                                             <img src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
                                         </div>
-                                        <div class="col-lg-6 font20 font-pri">
+                                        <div class="col-lg-6 font20 font-pri col-post__right">
                                             <h3 class="title font-pri-bold font30">
                                                 MAZDA CX-30: TÂN BINH
                                             </h3>
@@ -498,17 +493,16 @@
                                                 Tiếp nối thành công của các mẫu xe SUV Mazda, THACO AUTO đưa về thị trường Việt Nam mẫu SUV đô thị thông minh, tiện nghi mang tên Mazda CX-30. Với những đột phá về thiết kế, trang bị tiện nghi hiện đại vượt trội trong phân khúc cùng khả năng vận hành linh hoạt, tiết kiệm và an toàn, CX-30 được đánh giá là lựa chọn mới đầy hấp dẫn cho khách hàng trẻ.
                                             </p>
 
-                                            <a href="#" title="" class="btn-read-more font15"> {!!__('Read more')!!} </a>
+                                            <a href="#" title="" class="btn-read-more"> {!!__('Read more')!!} </a>
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="col-lg-6 col-post">
                                     <div class="row">
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-6 col-post__left">
                                             <img src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
                                         </div>
-                                        <div class="col-lg-6 font20 font-pri">
+                                        <div class="col-lg-6 font20 font-pri col-post__right">
                                             <h3 class="title font-pri-bold font30">
                                                 MAZDA CX-30: TÂN BINH
                                             </h3>
@@ -519,17 +513,16 @@
                                                 Tiếp nối thành công của các mẫu xe SUV Mazda, THACO AUTO đưa về thị trường Việt Nam mẫu SUV đô thị thông minh, tiện nghi mang tên Mazda CX-30. Với những đột phá về thiết kế, trang bị tiện nghi hiện đại vượt trội trong phân khúc cùng khả năng vận hành linh hoạt, tiết kiệm và an toàn, CX-30 được đánh giá là lựa chọn mới đầy hấp dẫn cho khách hàng trẻ.
                                             </p>
 
-                                            <a href="#" title="" class="btn-read-more font15"> {!!__('Read more')!!} </a>
+                                            <a href="#" title="" class="btn-read-more"> {!!__('Read more')!!} </a>
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="col-lg-6 col-post">
                                     <div class="row">
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-6 col-post__left">
                                             <img src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
                                         </div>
-                                        <div class="col-lg-6 font20 font-pri">
+                                        <div class="col-lg-6 font20 font-pri col-post__right">
                                             <h3 class="title font-pri-bold font30">
                                                 MAZDA CX-30: TÂN BINH
                                             </h3>
@@ -540,17 +533,16 @@
                                                 Tiếp nối thành công của các mẫu xe SUV Mazda, THACO AUTO đưa về thị trường Việt Nam mẫu SUV đô thị thông minh, tiện nghi mang tên Mazda CX-30. Với những đột phá về thiết kế, trang bị tiện nghi hiện đại vượt trội trong phân khúc cùng khả năng vận hành linh hoạt, tiết kiệm và an toàn, CX-30 được đánh giá là lựa chọn mới đầy hấp dẫn cho khách hàng trẻ.
                                             </p>
 
-                                            <a href="#" title="" class="btn-read-more font15"> {!!__('Read more')!!} </a>
+                                            <a href="#" title="" class="btn-read-more"> {!!__('Read more')!!} </a>
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="col-lg-6 col-post">
                                     <div class="row">
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-6 col-post__left">
                                             <img src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
                                         </div>
-                                        <div class="col-lg-6 font20 font-pri">
+                                        <div class="col-lg-6 font20 font-pri col-post__right">
                                             <h3 class="title font-pri-bold font30">
                                                 MAZDA CX-30: TÂN BINH
                                             </h3>
@@ -561,7 +553,7 @@
                                                 Tiếp nối thành công của các mẫu xe SUV Mazda, THACO AUTO đưa về thị trường Việt Nam mẫu SUV đô thị thông minh, tiện nghi mang tên Mazda CX-30. Với những đột phá về thiết kế, trang bị tiện nghi hiện đại vượt trội trong phân khúc cùng khả năng vận hành linh hoạt, tiết kiệm và an toàn, CX-30 được đánh giá là lựa chọn mới đầy hấp dẫn cho khách hàng trẻ.
                                             </p>
 
-                                            <a href="#" title="" class="btn-read-more font15"> {!!__('Read more')!!} </a>
+                                            <a href="#" title="" class="btn-read-more"> {!!__('Read more')!!} </a>
                                         </div>
                                     </div>
                                 </div>

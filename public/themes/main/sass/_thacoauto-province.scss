@@ -3,6 +3,7 @@
         .section-intro {
             @include marginX(30, "-");
             .list-contact {
+                @include marginTop(35,"+");
                 .item {
                     display: grid;
                     grid-template-columns: 40px auto;
@@ -14,12 +15,16 @@
             }
 
             &__title {
-                @include marginTop(100, "+");
-                @include marginBottom(100, "+");
+                @include marginTop(84, "+");
+                @include marginBottom(90, "+");
             }
 
             &__left {
                 @include paddingX(30);
+
+                &__title {
+                    @include marginBottom(26,"+");
+                }
             }
 
             &__right {
@@ -31,16 +36,20 @@
     .section-business-wrapper {
         .section-business {
 
+            &__title {
+                @include marginBottom(38, "+");
+            }
+
             &__top {
                 @include marginBottom(60, "+");
             }
             
             &__row {
-                @include paddingBottom(20);
+                @include paddingBottom(24);
                 @include marginTop(40, "+");
                 border-bottom: 1px solid #9a9a9a;
                 .title {
-                    @include marginBottom(30, "+");
+                    @include marginBottom(22, "+");
                 }
 
                 .list-symbol {
@@ -72,10 +81,10 @@
 
             &__rowpost {
                 display: flex;
-                @include paddingX(25);
-                @include paddingY(25);
+                @include paddingX(24);
+                @include paddingY(24);
                 border: 1px solid #c6d6f1;
-                @include marginBottom(30, "+");
+                @include marginBottom(33, "+");
 
                 .__rowpost {
                    &:first-child {
@@ -101,8 +110,8 @@
                         }
                     }
                     &--content {
-                        @include paddingLeft(35);
-                        @include paddingTop(35);
+                        @include paddingLeft(43);
+                        @include paddingTop(30);
                        flex-grow: 1;
                        display: flex;
                        flex-wrap: wrap;
@@ -124,7 +133,7 @@
                                padding-left: 1rem;
 
                                .item {
-                                    @include marginBottom(15,"+");
+                                    @include marginBottom(18,"+");
                                     strong {
                                         font-weight: bold;
                                     }
@@ -135,7 +144,7 @@
                                flex: 0 0 50%;
                                max-width: 50%;
                                text-align: right;
-                               @include paddingRight(25);
+                               @include paddingRight(50);
                            }
                        }
 
@@ -149,8 +158,7 @@
                                 background-color: $color-primary;
                                 color: white;
                                 text-transform: uppercase;
-                                @include paddingTop(15);
-                                @include paddingBottom(11);
+                                @include paddingY(13);
                                 @include paddingX(60);
                                 border-radius: 30px;
                                 display: inline-block;
@@ -159,6 +167,7 @@
 
                             ul {
                                 margin-left: auto;
+                                @include marginRight(20, "+");
                                 li {
                                     @include marginLeft(50, "+");
 
@@ -178,18 +187,18 @@
     .section-posts-wrapper {
         @include marginBottom(150, "+");
         .section-posts__title {
-            @include marginBottom(50, "+");
-            @include marginTop(60, "+");
+            @include marginBottom(55, "+");
+            @include marginTop(55, "+");
         }
         .section-posts {
             background-color: #f3f3f3;
-            @include paddingTop(70);
-            @include paddingBottom(70);
+            @include paddingTop(65);
+            @include paddingBottom(65);
 
             &__box-tabs {
                 .nav {
                     justify-content: center;
-                    margin-bottom: 50px;
+                    @include marginBottom(50, "+");
                     border-bottom: 1px solid #b7b7b7;
 
                     .nav-item {
@@ -199,8 +208,8 @@
                             border: none;
                             outline: none;
                             text-transform: uppercase;
-                            @include paddingLeft(75);
-                            @include paddingRight(75);
+                            @include paddingX(80);
+                            @include paddingBottom(10);
                         }
 
                         .nav-link.active {
@@ -212,40 +221,49 @@
 
                 .tab-pane {
                    &__row {
-                       @include marginLeft(40,"-");
-                       @include marginRight(40,"-");
+                        @include marginX(44,"-");
                         .col-post {
-                            @include paddingLeft(40);
-                            @include paddingRight(40);
+                            @include paddingLeft(44);
+                            @include paddingRight(44);
                             @include marginBottom(30, "+");
 
-                            .title {
-                                @include marginBottom(20, "+");
-                                @include split_str(1);
+                            >.row {
+                                 @include marginX(26,"-");
                             }
 
-                            .date {
-                                @include marginBottom(20, "+");
-                                color: #BBBBBB;
+                            &__left {
+                                @include paddingX(26);
                             }
 
-                            .description {
-                                @include split_str(2);
-                                @include marginBottom(15, "+");
-                            }
+                            &__right {
+                                .title {
+                                    @include marginBottom(20, "+");
+                                    @include split_str(1);
+                                }
 
-                            .btn-read-more {
-                                font-size: 15px;
-                                @media(max-width : 1680px){
-                                    font-size: 14px;
+                                .date {
+                                    @include marginBottom(20, "+");
+                                    color: #BBBBBB;
                                 }
-                                @media(max-width : 1400px){
-                                    font-size: 13px;
+
+                                .description {
+                                    @include split_str(2);
+                                    @include marginBottom(15, "+");
                                 }
-                                @media(max-width : 1264px){
-                                    font-size: 12px;
+
+                                .btn-read-more {
+                                    font-size: 15px;
+                                    @media(max-width : 1680px){
+                                        font-size: 14px;
+                                    }
+                                    @media(max-width : 1400px){
+                                        font-size: 13px;
+                                    }
+                                    @media(max-width : 1264px){
+                                        font-size: 12px;
+                                    }
                                 }
-                            }
+                           }
                         }
                    }
                 }

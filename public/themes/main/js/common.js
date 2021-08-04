@@ -75,6 +75,16 @@ var galleryThumbs = new Swiper('.distribution-slide-right', {
 galleryTop.controller.control = galleryThumbs;
 galleryThumbs.controller.control = galleryTop;
 
+var swiper = new Swiper(".product-intro__swiper", {
+    navigation: {
+        nextEl: ".product-intro__swiper--next",
+        prevEl: ".product-intro__swiper--prev",
+    },
+    pagination: {
+      el: ".product-intro__swiper--pagination",
+    },
+});
+
 var swiper = new Swiper(".detail-slide", {
     pagination: {
         el: ".swiper-pagination",

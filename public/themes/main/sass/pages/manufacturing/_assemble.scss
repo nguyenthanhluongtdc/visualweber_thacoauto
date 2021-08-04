@@ -95,13 +95,26 @@
           }
 
           .box {
-            width: 50px;
-            height: 50px;
             background-color: $color-primary;
             color: $color-white;
             text-align: center;
-            line-height: 55px;
+            line-height: 3.8vw;
             margin-right: auto;
+            height: 3.4vw;
+            max-height: 70px;
+            width: 3.4vw;
+            max-height: 70px;
+
+            @media(max-width : 1440px){
+                height: 3.1vw;
+                width: 3.1vw;
+                line-height: 3.5vw;
+            }
+            @media(max-width : 1199px){
+                height: 2.8vw;
+                width: 2.8vw;
+                line-height: 3.2vw;
+            }
 
             @media (max-width: 991px) {
               margin-left: auto;
@@ -131,6 +144,11 @@
       }
 
       &__footer {
+        .btn-read-more {
+          @include paddingX(15);
+          @include paddingTop(10);
+          @include paddingBottom(7);
+        }
       }
     }
 
@@ -202,24 +220,55 @@
     left: 0;
 
     .item {
+      margin-left: 0;
         .box-symbol,
         .box-text {
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 68px;
+            height: 3.4vw;
+            border: 1px solid white;
+            max-height: 70px;
+  
+            @media(max-width : 1440px){
+                height: 3.1vw;
+            }
+            @media(max-width : 1199px){
+                height: 2.8vw;
+            }
         }
 
         .box-symbol {
             background-color: $color-primary;
-            width: 72px;
-            border: 1px solid white;
-            padding-left: 10px;
             border-bottom: none;
+            width: 3.4vw;
+            max-width: 70px;
+            
+            @media(max-width : 1440px){
+                width: 3.1vw;
+            }
+            @media(max-width : 1199px){
+                width: 2.8vw;
+            }
+            img {
+              width: 43px;
+              height: 43px;
+              @media (max-width: 1680px) {
+                width: #{calculatorPixel(38,1680)}px;
+                height: #{calculatorPixel(38,1680)}px;
+              }
+              @media (max-width: 1360px) {
+                  width: #{calculatorPixel(38,1360)}px;
+                  height: #{calculatorPixel(38,1360)}px;
+              }
+              @media (max-width: 992px) {
+                  width: #{calculatorPixel(38,992)}px;
+                  height: #{calculatorPixel(38,992)}px;
+              }
+            }
         }
 
         .box-text {
-            font-size: 27px;
             color: white;
             background-color: $color-primary;
             padding-left: 20px;
@@ -259,14 +308,23 @@
       .pagi-item {
         font-family: $font-primary-bold;
         text-align: right;
+        display: flex;
         justify-content: flex-end;
 
         .number,
         .text {
-          height: 50px;
-          display: inline-block;
-          line-height: 53px;
-          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 3.4vw;
+          max-height: 70px;
+
+          @media(max-width : 1440px){
+              height: 3.1vw;
+          }
+          @media(max-width : 1199px){
+              height: 2.8vw;
+          }
         }
 
         .text {
@@ -281,10 +339,20 @@
         }
 
         .number {
-          width: 50px;
+         
           border-bottom: 1px solid $color-primary;
           border-left: 1px solid $color-primary;
           font-size: 25px;
+
+          width: 3.4vw;
+          max-width: 70px;
+          
+          @media(max-width : 1440px){
+              width: 3.1vw;
+          }
+          @media(max-width : 1199px){
+              width: 2.8vw;
+          }
         }
 
         &:hover {

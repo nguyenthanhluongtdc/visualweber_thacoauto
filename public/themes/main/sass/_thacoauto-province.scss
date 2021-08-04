@@ -1,0 +1,255 @@
+#thacoauto-province-page {
+    .section-intro-wrapper {
+        .section-intro {
+            @include marginX(30, "-");
+            .list-contact {
+                .item {
+                    display: grid;
+                    grid-template-columns: 40px auto;
+
+                    i {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            &__title {
+                @include marginTop(100, "+");
+                @include marginBottom(100, "+");
+            }
+
+            &__left {
+                @include paddingX(30);
+            }
+
+            &__right {
+                @include paddingX(30);
+            }
+        }
+    }
+
+    .section-business-wrapper {
+        .section-business {
+
+            &__top {
+                @include marginBottom(60, "+");
+            }
+            
+            &__row {
+                @include paddingBottom(20);
+                @include marginTop(40, "+");
+                border-bottom: 1px solid #9a9a9a;
+                .title {
+                    @include marginBottom(30, "+");
+                }
+
+                .list-symbol {
+                    display: flex;
+
+                    .item {
+                        display: flex;
+                        align-items: center;
+                        @include paddingY(22);
+                        @include paddingX(18);
+                        border: 1px solid transparent;
+                        @include marginX(18, "+");
+                        
+                        &:hover {
+                            cursor: pointer;
+                            border: 1px solid $color-primary;
+                        }
+                    }
+                }
+
+                &:first-child {
+                    margin-top: 0;
+                }
+
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+
+            &__rowpost {
+                display: flex;
+                @include paddingX(25);
+                @include paddingY(25);
+                border: 1px solid #c6d6f1;
+                @include marginBottom(30, "+");
+
+                .__rowpost {
+                   &:first-child {
+                       margin-top: 60px;
+                   }
+                    &--picture {
+                        img {
+                            width: 530px;
+                            height: 353px;
+                            
+                            @media (max-width: 1680px) {
+                                width: #{calculatorPixel(530,1680)}px;
+                                height: #{calculatorPixel(353,1680)}px;
+                            }
+                            @media (max-width: 1360px) {
+                                width: #{calculatorPixel(530,1360)}px;
+                                height: #{calculatorPixel(353,1360)}px;;
+                            }
+                            @media (max-width: 992px) {
+                                width: #{calculatorPixel(530,992)}px;
+                                height: #{calculatorPixel(353,992)}px;
+                            }
+                        }
+                    }
+                    &--content {
+                        @include paddingLeft(35);
+                        @include paddingTop(35);
+                       flex-grow: 1;
+                       display: flex;
+                       flex-wrap: wrap;
+                       align-content: space-between;
+
+                        .title {
+                            @include marginBottom(50,"+");
+                        }
+
+                       .box--top {
+                           display: flex;
+                           justify-content: space-between;
+                           max-width: 100%;
+                           flex: 0 0 100%;
+
+                           .list-contact {
+                               flex-grow: 1;
+                               list-style: initial;
+                               padding-left: 1rem;
+
+                               .item {
+                                    @include marginBottom(15,"+");
+                                    strong {
+                                        font-weight: bold;
+                                    }
+                               }
+                           }
+
+                           .avatar {
+                               flex: 0 0 50%;
+                               max-width: 50%;
+                               text-align: right;
+                               @include paddingRight(25);
+                           }
+                       }
+
+                       .box--bottom {
+                            max-width: 100%;
+                            flex: 0 0 100%;
+                            display: flex;
+                            justify-content: space-between;
+
+                            .btn-appointment {
+                                background-color: $color-primary;
+                                color: white;
+                                text-transform: uppercase;
+                                @include paddingTop(15);
+                                @include paddingBottom(11);
+                                @include paddingX(60);
+                                border-radius: 30px;
+                                display: inline-block;
+                                height: max-content;
+                            }
+
+                            ul {
+                                margin-left: auto;
+                                li {
+                                    @include marginLeft(50, "+");
+
+                                    .symbol {
+                                        @include marginBottom(15, "+");
+                                        text-align: center;
+                                    }
+                                }
+                            }
+                       }
+                    }
+                }
+            }
+        }
+    }
+
+    .section-posts-wrapper {
+        @include marginBottom(150, "+");
+        .section-posts__title {
+            @include marginBottom(50, "+");
+            @include marginTop(60, "+");
+        }
+        .section-posts {
+            background-color: #f3f3f3;
+            @include paddingTop(70);
+            @include paddingBottom(70);
+
+            &__box-tabs {
+                .nav {
+                    justify-content: center;
+                    margin-bottom: 50px;
+                    border-bottom: 1px solid #b7b7b7;
+
+                    .nav-item {
+                       
+                        .nav-link {
+                            background-color: transparent;
+                            border: none;
+                            outline: none;
+                            text-transform: uppercase;
+                            @include paddingLeft(75);
+                            @include paddingRight(75);
+                        }
+
+                        .nav-link.active {
+                            color: $color-primary;
+                            border-bottom: 4px solid $color-primary;
+                        }
+                    }
+                }
+
+                .tab-pane {
+                   &__row {
+                       @include marginLeft(40,"-");
+                       @include marginRight(40,"-");
+                        .col-post {
+                            @include paddingLeft(40);
+                            @include paddingRight(40);
+                            @include marginBottom(30, "+");
+
+                            .title {
+                                @include marginBottom(20, "+");
+                                @include split_str(1);
+                            }
+
+                            .date {
+                                @include marginBottom(20, "+");
+                                color: #BBBBBB;
+                            }
+
+                            .description {
+                                @include split_str(2);
+                                @include marginBottom(15, "+");
+                            }
+
+                            .btn-read-more {
+                                font-size: 15px;
+                                @media(max-width : 1680px){
+                                    font-size: 14px;
+                                }
+                                @media(max-width : 1400px){
+                                    font-size: 13px;
+                                }
+                                @media(max-width : 1264px){
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                   }
+                }
+            }
+        }
+    }
+}

@@ -10,7 +10,9 @@
                 <div class="section-card__body font-pri mb-90" id="section_one">
                     <div class="section-card__row row">
                         <div class="section-card__row__picture col-lg-8">
-                            <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/assemble/assemble1.jpg')}}" alt="" />
+                            <a href="#" title="">
+                                <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/assemble/assemble1.jpg')}}" alt="" />
+                            </a>
                         </div>
 
                         <div class="section-card__row__content col-lg-4 d-flex flex-wrap align-content-between">
@@ -34,7 +36,7 @@
                             </div>
 
                             <div class="section-card__row__footer">
-                                <a href="#" title="{!! __('See detail') !!}" class="btn-read-more">
+                                <a href="#" title="{!! __('See detail') !!}" class="btn-read-more font23">
                                     {!! __('See detail') !!}
                                 </a>
                             </div>
@@ -45,7 +47,9 @@
                 <div class="section-card__body font-pri mb-90" id="section_two">
                     <div class="section-card__row row">
                         <div class="section-card__row__picture col-lg-8">
-                            <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/assemble/assemble2.jpg')}}" alt="" />
+                            <a href="#" title="">
+                                <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/assemble/assemble2.jpg')}}" alt="" />
+                            </a>
                         </div>
 
                         <div class="section-card__row__content col-lg-4 d-flex flex-wrap align-content-between">
@@ -68,7 +72,7 @@
                             </div>
 
                             <div class="section-card__row__footer">
-                                <a href="#" title="{!! __('See detail') !!}" class="btn-read-more">
+                                <a href="#" title="{!! __('See detail') !!}" class="btn-read-more font23">
                                     {!! __('See detail') !!}
                                 </a>
                             </div>
@@ -79,7 +83,9 @@
                 <div class="section-card__body font-pri mb-90" id="section_three">
                     <div class="section-card__row row">
                         <div class="section-card__row__picture col-lg-8">
-                            <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/assemble/assemble3.jpg')}}" alt="" />
+                            <a href="#" title="">
+                                <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/assemble/assemble3.jpg')}}" alt="" />
+                            </a>
                         </div>
 
                         <div class="section-card__row__content col-lg-4 d-flex flex-wrap align-content-between">
@@ -102,7 +108,7 @@
                             </div>
 
                             <div class="section-card__row__footer">
-                                <a href="#" title="{!! __('See detail') !!}" class="btn-read-more">
+                                <a href="#" title="{!! __('See detail') !!}" class="btn-read-more font23">
                                     {!! __('See detail') !!}
                                 </a>
                             </div>
@@ -113,7 +119,9 @@
                 <div class="section-card__body font-pri mb-90" id="section_four">
                     <div class="section-card__row row">
                         <div class="section-card__row__picture col-lg-8">
-                            <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/assemble/assemble4.jpg')}}" alt="" />
+                            <a href="#" title="">
+                                <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/assemble/assemble4.jpg')}}" alt="" />
+                            </a>
                         </div>
 
                         <div class="section-card__row__content col-lg-4 d-flex flex-wrap align-content-between">
@@ -136,7 +144,7 @@
                             </div>
 
                             <div class="section-card__row__footer">
-                                <a href="#" title="{!! __('See detail') !!}" class="btn-read-more">
+                                <a href="#" title="{!! __('See detail') !!}" class="btn-read-more font23">
                                     {!! __('See detail') !!}
                                 </a>
                             </div>
@@ -147,7 +155,9 @@
                 <div class="section-card__body font-pri mb-90" id="section_five">
                     <div class="section-card__row row">
                         <div class="section-card__row__picture col-lg-8">
-                            <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/assemble/assemble5.jpg')}}" alt="" />
+                            <a href="#" title="">
+                                <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/assemble/assemble5.jpg')}}" alt="" />
+                            </a>
                         </div>
 
                         <div class="section-card__row__content col-lg-4 d-flex flex-wrap align-content-between">
@@ -170,7 +180,7 @@
                             </div>
 
                             <div class="section-card__row__footer">
-                                <a href="#" title="{!! __('See detail') !!}" class="btn-read-more">
+                                <a href="#" title="{!! __('See detail') !!}" class="btn-read-more font23">
                                     {!! __('See detail') !!}
                                 </a>
                             </div>
@@ -181,7 +191,9 @@
                 <div class="section-card__body font-pri mb-90" id="section_six">
                     <div class="section-card__row row">
                         <div class="section-card__row__picture col-lg-8">
-                            <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/assemble/assemble4.jpg')}}" alt="" />
+                            <a href="#" title="">
+                                <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/assemble/assemble4.jpg')}}" alt="" />
+                            </a>
                         </div>
 
                         <div class="section-card__row__content col-lg-4 d-flex flex-wrap align-content-between">
@@ -205,7 +217,7 @@
                             </div>
 
                             <div class="section-card__row__footer">
-                                <a href="#" title="{!! __('See detail') !!}" class="btn-read-more">
+                                <a href="#" title="{!! __('See detail') !!}" class="btn-read-more font23">
                                     {!! __('See detail') !!}
                                 </a>
                             </div>
@@ -222,7 +234,7 @@
                 <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/nodelefttwo.png')}}" alt="" />
             </div>
 
-            <div class="box-text font-pri-bold">
+            <div class="box-text font25 font-pri-bold">
                 Sản xuất
             </div>
         </div>
@@ -231,7 +243,7 @@
                 <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/nodeleftone.png')}}" alt="" />
             </div>
 
-            <div class="box-text font-pri-bold ">
+            <div class="box-text font25 font-pri-bold ">
                LẮP RÁP
             </div>
         </div>
@@ -254,24 +266,29 @@
             </li>
 
             <li class="pagi-item">
+                <span class="text"> NHÀ MÁY TẢI THACO </span>
                 <a href="#section_three" title="" class="number click_scroll">
                     3
                 </a>
             </li>
 
             <li class="pagi-item">
+                <span class="text"> NHÀ MÁY THACO KIA </span>
                 <a href="#section_four" title="" class="number click_scroll">
                     4
                 </a>
             </li>
 
             <li class="pagi-item">
+                <span class="text"> NHÀ MÁY THACO MAZDA </span>
                 <a href="#section_five" title="" class="number click_scroll">
                     5
                 </a>
             </li>
 
             <li class="pagi-item">
+                <span class="text"> nHÀ MÁY SƠMI RƠMOOC VÀ THIẾT BỊ
+                    CHUYÊN DỤNG HẠNG NẶNG </span>
                 <a href="#section_six" title="" class="number click_scroll">
                     6
                 </a>

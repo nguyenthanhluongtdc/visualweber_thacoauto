@@ -13,11 +13,12 @@
 .btn-read-more {
     background-color: $color-primary;
     color: $color-white !important;
-    padding: .3rem 1.5rem 0 1.5rem;
     display: inline-block;
-    line-height: 35px;
     text-align: center;
-    font-size: 19px;
+    @include paddingTop(7);
+    @include paddingBottom(4);
+    @include paddingLeft(30);
+    @include paddingRight(30);
 
     @media(max-width: 1200px) {
         font-size: 16px;

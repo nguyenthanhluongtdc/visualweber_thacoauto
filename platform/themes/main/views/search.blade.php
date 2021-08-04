@@ -178,7 +178,7 @@
                 </div>
             </div>
             
-        <div class="container d-flex justify-content-center mb-5">         
+        <div class="container d-flex justify-content-center mb-5 font-pri">         
                             <ul class="pagination justify-content-center pagination-success">
                                 <li class="page-item active"><a class="page-link" href="#" data-abc="true">1</a></li>
                                 <li class="page-item"><a class="page-link" href="#" data-abc="true">2</a></li>

@@ -179,11 +179,24 @@ $('.slider-nav').slick({
 });
 
 var swiper = new Swiper(".researchDevSwiper", {
-    slidesPerView: 3,
+    slidesPerView: 2,
     spaceBetween: 40,
     scrollbar: {
         el: ".swiper-scrollbar"
-    }
+    },
+    breakpoints: {
+        "@0.00": {
+          spaceBetween: 10,
+        },
+        "@0.75": {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        "@1.00": {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      },
 });
 
 var Helper = {

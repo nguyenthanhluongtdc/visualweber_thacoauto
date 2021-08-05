@@ -27,7 +27,7 @@ $max) {
 }
 
 @function calculatorPixel($size, $screen) {
-    @return ($size * $screen) / 1920;
+    @return ($size * $screen) / 2020;
 }
 
 @mixin marginLeft($size, $minus) {

@@ -87,7 +87,7 @@
                     <h3 class="cate font-mi-bold font30 mt-5">
                         HATCHBACK
                     </h3>
-                    <div class="item mt-4">
+                    <div class="item mt-2">
                         <div class="car-frame">
                             <div class="car-img">
                                 <img src="{{Theme::asset()->url('images/services/kia-morning.png')}}" alt="">
@@ -130,7 +130,7 @@
                     <h3 class="cate font-mi-bold font30 mt-5">
                         SEDAN
                     </h3>
-                    <div class="item mt-4">
+                    <div class="item mt-2">
                         <div class="car-frame">
                             <div class="car-img">
                                 <img src="{{Theme::asset()->url('images/services/kia-soluto.png')}}" alt="">
@@ -207,7 +207,7 @@
                     <h3 class="cate font-mi-bold font30 mt-5">
                         SUV
                     </h3>
-                    <div class="item mt-4">
+                    <div class="item mt-2">
                         <div class="car-frame">
                             <div class="car-img">
                                 <img src="{{Theme::asset()->url('images/services/kia-seltos.png')}}" alt="">
@@ -267,7 +267,7 @@
                     <h3 class="cate font-mi-bold font30 mt-5">
                         MPV
                     </h3>
-                    <div class="item mt-4">
+                    <div class="item mt-2">
                         <div class="car-frame">
                             <div class="car-img">
                                 <img src="{{Theme::asset()->url('images/services/kia-optima.png')}}" alt="">

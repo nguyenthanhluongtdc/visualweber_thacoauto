@@ -79,13 +79,13 @@
                 </div>
             </div>
 
-            <div class="relate-product mb-2">
+            <div class="relate-product">
                 <h2 class="title font-mi-bold font60">
                     SẢN PHẨM PEUGEOT
                 </h2>
                 
                 <div class="car car4">
-                    <div class="item mt-4">
+                    <div class="item mt-2">
                         <div class="car-frame">
                             <div class="car-img">
                                 <img src="{{Theme::asset()->url('images/services/django.png')}}" alt="">

@@ -179,11 +179,24 @@ $('.slider-nav').slick({
 });
 
 var swiper = new Swiper(".researchDevSwiper", {
-    slidesPerView: 3,
+    slidesPerView: 2,
     spaceBetween: 40,
     scrollbar: {
         el: ".swiper-scrollbar"
-    }
+    },
+    breakpoints: {
+        "@0.00": {
+          spaceBetween: 10,
+        },
+        "@0.75": {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        "@1.00": {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      },
 });
 
 var Helper = {
@@ -226,4 +239,20 @@ $(document).ready(function () {
     Helper.addSelect2toNewsFilter();
     Helper.transitionHeaderFixed();
     Helper.changeColorHeader();
+});
+
+$(document).ready(function(){
+    var docEl = $(document),
+        headerEl = $('header'),
+        headerWrapEl = $('.wrapHead'),
+        navEl = $('nav'),
+        linkScroll = $('.click_scroll');
+    
+    linkScroll.click(function(e){
+        $top = $(this.hash).offset().top - 100;
+        e.preventDefault(); 
+        $('body, html').animate({
+            scrollTop: $top
+        }, 500);
+    });
 });

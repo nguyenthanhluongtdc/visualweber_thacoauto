@@ -21,6 +21,7 @@ register_page_template([
     'production-assemble' => 'Production assemble',
     'thacoauto-province'    => 'Thaco auto province',
     'business-overview' => 'Business overview',
+    'general-manufacturing' => 'General Manufacturing',
 ]);
 
 register_sidebar([

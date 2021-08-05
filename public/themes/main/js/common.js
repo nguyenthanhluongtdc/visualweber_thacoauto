@@ -240,3 +240,19 @@ $(document).ready(function () {
     Helper.transitionHeaderFixed();
     Helper.changeColorHeader();
 });
+
+$(document).ready(function(){
+    var docEl = $(document),
+        headerEl = $('header'),
+        headerWrapEl = $('.wrapHead'),
+        navEl = $('nav'),
+        linkScroll = $('.click_scroll');
+    
+    linkScroll.click(function(e){
+        $top = $(this.hash).offset().top - 100;
+        e.preventDefault(); 
+        $('body, html').animate({
+            scrollTop: $top
+        }, 500);
+    });
+});

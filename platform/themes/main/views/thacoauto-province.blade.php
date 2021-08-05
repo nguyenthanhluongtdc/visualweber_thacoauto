@@ -1,5 +1,5 @@
 <div id="thacoauto-province-page">
-    <div class="section-intro-wrapper mb-90">
+    <section class="section-intro-wrapper mb-90" id="section_one">
         <div class="container-remake">
             <div class="section-intro font-pri">
                 <h2 class="section-intro__title font-pri-bold font60 text-uppercase"> 
@@ -48,9 +48,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="section-business-wrapper">
+    <section class="section-business-wrapper" id="section_two">
         <div class="container-remake">
             <h2 class="section-business__title font-pri-bold font60 text-uppercase">
                 Hoạt động kinh doanh
@@ -289,9 +289,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="section-posts-wrapper">
+    <section class="section-posts-wrapper" id="section_three">
         <div class="container-remake">
             <h2 class="section-posts__title font-pri-bold font60 text-uppercase mb-60">
                 Tin tức & Sự kiện
@@ -563,9 +563,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="box-node-right">
+    <div class="box-node-right nav">
         <ul class="pagination-customize">
             <li class="pagi-item active">
                 <span class="text">Thaco auto tỉnh thành </span>
@@ -575,14 +575,14 @@
             </li>
 
             <li class="pagi-item">
-                <span class="text"> nhà máy thaco bus </span>
+                <span class="text"> Hoạt động kinh doanh </span>
                 <a href="#section_two" title="" class="icon click_scroll">
                     <img src="{{Theme::asset()->url('images/province/node2.png')}}" alt="">
                 </a>
             </li>
 
             <li class="pagi-item">
-                <span class="text"> NHÀ MÁY TẢI THACO </span>
+                <span class="text"> Tin tức & Sự kiện </span>
                 <a href="#section_three" title="" class="icon click_scroll">
                     <img src="{{Theme::asset()->url('images/province/node3.png')}}" alt="">
                 </a>
@@ -590,3 +590,27 @@
         </ul>
     </div>
 </div>
+
+<script>
+    $(document).ready(function() {
+        $(window).on('scroll', function () {
+        var sections = $('section')
+         , nav = $('.nav')
+         , nav_height = nav.outerHeight()
+         , cur_pos = $(this).scrollTop();
+
+            sections.each(function() {
+                var top = $(this).offset().top - nav_height - 200,
+                    bottom = top + $(this).outerHeight();
+            
+                if (cur_pos >= top && cur_pos <= bottom) {
+                    nav.find('li').removeClass('active');
+                    sections.removeClass('active');
+                
+                    $(this).addClass('active');
+                    nav.find('a[href="#'+$(this).attr('id')+'"]').parent().addClass('active');
+                }
+            });
+        });
+    })
+</script>

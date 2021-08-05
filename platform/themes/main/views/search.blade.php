@@ -94,7 +94,7 @@
                 </div>
                 <div class="col-md-2 search-time">
                     <div class="time-picker">
-                        <ion-icon name="calendar-outline" class="mt-3 pl-3 font15 calendar" style="margin-top: 4px"></ion-icon>
+                        <ion-icon name="calendar-outline" class="mt-4 pl-3 font15 calendar" style="margin-top: 4px"></ion-icon>
                         <div class="date-frame">
                             <input type="date" id="birthday" name="birthday" class="font15"> 
                           </div>
@@ -106,7 +106,7 @@
                 
             </div>
             
-            <div class="search-result row pb-5"  data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
+            <div class="search-result row pb-4"  data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <div class="col-md-3 result-img pl-0">
                     <div class="image">
                         <div class="post-thumbnail">
@@ -115,13 +115,13 @@
                     </div>
                 </div>
                 <div class="col-md-9 result-content" >
-                    <h3 class="font-pri-bold font30 mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, perspiciatis? Cupiditate eligen dol optio placeat.</h3>
+                    <a href="#"><h3 class="font-pri-bold font30 mb-3  color-gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, perspiciatis? Cupiditate eligen dol optio placeat.</h3></a>
                     <p class="font-pri mt-3 font15">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda laborum officiis nisi omnis! Illum, quibusdam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eligendi deleniti quam amet earum laudantium.
                     </p>
                     <p class="font-pri date font15">20-12-20201</p>
                 </div>
             </div>
-            <div class="search-result row pb-5" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
+            <div class="search-result row pb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <div class="col-md-3 result-img pl-0">
                     <div class="image">
                         <div class="post-thumbnail">
@@ -130,13 +130,13 @@
                     </div>
                 </div>
                 <div class="col-md-9 result-content">
-                    <h3 class="font-pri-bold font30 mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, perspiciatis? Cupiditate eligen dol optio placeat.</h3>
+                    <a href="#"><h3 class="font-pri-bold font30 mb-3  color-gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, perspiciatis? Cupiditate eligen dol optio placeat.</h3></a>
                     <p class="font-pri mt-3 font15">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda laborum officiis nisi omnis! Illum, quibusdam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eligendi deleniti quam amet earum laudantium.
                     </p>
                     <p class="font-pri date font15">20-12-20201</p>
                 </div>
             </div>
-            <div class="search-result row pb-5" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
+            <div class="search-result row pb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <div class="col-md-3 result-img pl-0">
                     <div class="image">
                         <div class="post-thumbnail">
@@ -145,13 +145,13 @@
                     </div>
                 </div>
                 <div class="col-md-9 result-content">
-                    <h3 class="font-pri-bold font30 mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, perspiciatis? Cupiditate eligen dol optio placeat.</h3>
+                    <a href="#"><h3 class="font-pri-bold font30 mb-3  color-gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, perspiciatis? Cupiditate eligen dol optio placeat.</h3></a>
                     <p class="font-pri mt-3 font15">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda laborum officiis nisi omnis! Illum, quibusdam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eligendi deleniti quam amet earum laudantium.
                     </p>
                     <p class="font-pri date font15">20-12-20201</p>
                 </div>
             </div>
-            <div class="search-result row pb-5" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
+            <div class="search-result row pb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <div class="col-md-3 result-img pl-0">
                     <div class="image">
                         <div class="post-thumbnail">
@@ -160,13 +160,13 @@
                     </div>
                 </div>
                 <div class="col-md-9 result-content">
-                    <h3 class="font-pri-bold font30 mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, perspiciatis? Cupiditate eligen dol optio placeat.</h3>
+                    <a href="#"><h3 class="font-pri-bold font30 mb-3  color-gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, perspiciatis? Cupiditate eligen dol optio placeat.</h3></a>
                     <p class="font-pri mt-3 font15">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda laborum officiis nisi omnis! Illum, quibusdam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eligendi deleniti quam amet earum laudantium.
                     </p>
                     <p class="font-pri date font15">20-12-20201</p>
                 </div>
             </div>
-            <div class="search-result row pb-5" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
+            <div class="search-result row pb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <div class="col-md-3 result-img pl-0">
                     <div class="image">
                         <div class="post-thumbnail">
@@ -175,7 +175,7 @@
                     </div>
                 </div>
                 <div class="col-md-9 result-content">
-                    <h3 class="font-pri-bold font30 mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, perspiciatis? Cupiditate eligen dol optio placeat.</h3>
+                    <a href="#"><h3 class="font-pri-bold font30 mb-3 color-gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, perspiciatis? Cupiditate eligen dol optio placeat.</h3></a>
                     <p class="font-pri mt-3 font15">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda laborum officiis nisi omnis! Illum, quibusdam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eligendi deleniti quam amet earum laudantium.
                     </p>
                     <p class="font-pri date font15">20-12-20201</p>

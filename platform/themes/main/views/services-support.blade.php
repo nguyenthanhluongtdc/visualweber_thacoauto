@@ -1,7 +1,7 @@
 <div class="services">
     <div class="container-remake">
         <div class="services-block">
-            <img class="services-block__image" src="{{Theme::asset()->url('images\services\dich-vu-tin-dung.png')}}" alt="">
+            <img class="services-block__image" src="{{Theme::asset()->url('images\services\dich-vu-ho-tro-1.jpg')}}" alt="">
             <div class="services-block__content">
                 <div class="services-block__title">
                     <h2 class=" font-mi-bold font40 color-white">
@@ -15,7 +15,7 @@
             </div>
         </div>
         <div class="services-block">
-            <img class="services-block__image" src="{{Theme::asset()->url('images\services\dich-vu-dang-kiem.jpg')}}" alt="">
+            <img class="services-block__image" src="{{Theme::asset()->url('images\services\dich-vu-ho-tro-2.jpg')}}" alt="">
             <div class="services-block__content">
                 <div class="services-block__title">
                     <h2 class=" font-mi-bold font40 color-white">
@@ -29,7 +29,7 @@
             </div>
         </div>
         <div class="services-block">
-            <img class="services-block__image" src="{{Theme::asset()->url('images\services\dich-vu-bao-hiem.jpg')}}" alt="">
+            <img class="services-block__image" src="{{Theme::asset()->url('images\services\dich-vu-ho-tro-3.jpg')}}" alt="">
             <div class="services-block__content">
                 <div class="services-block__title">
                     <h2 class=" font-mi-bold font40 color-white">

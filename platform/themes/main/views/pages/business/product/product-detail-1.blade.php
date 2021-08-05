@@ -87,13 +87,13 @@
                 <div class="car car4">
                     <div class="item mt-2">
                         <div class="car-frame">
-                            <div class="car-img">
+                            <div class="car-img mb-2">
                                 <img src="{{Theme::asset()->url('images/services/django.png')}}" alt="">
                             </div>
-                           
-                            <h3 class="car-name font-mi-bold font25 mb-2">
-                                DJANGO 125 ABS
-                            </h3>
+                           <a href="#"><h3 class="car-name font-mi-bold font25 mb-2">
+                            DJANGO 125 ABS
+                        </h3></a>
+                            
                             <p class="car-decs font-mi-bold font18">
                                 THIẾT KẾ LAY ĐỘNG CẢM XÚC
                             </p>

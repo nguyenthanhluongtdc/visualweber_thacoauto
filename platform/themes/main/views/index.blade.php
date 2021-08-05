@@ -279,7 +279,7 @@
                     <div class="top-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
                         <img src="{{ Theme::asset()->url('images/main/lv3.png') }}" alt="">
                         <p class="top-right-item-title font-pri-bold font30"><a href="" class="link-item-home">công
-                                nghiệp hỗ trợ & cơ khí</a></p>
+                                nghiệp hỗ trợ <br> & cơ khí</a></p>
                     </div>
                     
                     <div class="top-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">

@@ -69,7 +69,7 @@
                 </div>
                 <div class="item-content">
                     <h3 class="title font-pri-bold font30">
-                        <a href="">CÔNG TY TNHH MTV ĐỒNG PHƯỚC ĐẦU TƯ 5 XE MINI BUS IVECO DAILY</a>
+                        <a href="">BÀN GIAO LÔ 30 XE IVECO DAILY PLUS – PREMIUM</a>
                     </h3>
                     <p class="desc font-pri font20">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -90,7 +90,7 @@
                 </div>
                 <div class="item-content">
                     <h3 class="title font-pri-bold font20">
-                        CÔNG TY TNHH MTV ĐỒNG PHƯỚC ĐẦU TƯ 5 XE MINI BUS IVECO DAILY
+                        THACO AUTO ỦNG HỘ 1,5 TỶ ĐỒNG CHO 3 ĐỊA PHƯƠNG CHỐNG DỊCH
                     </h3>
                     <p class="desc font-pri font18">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -109,7 +109,7 @@
                 </div>
                 <div class="item-content">
                     <h3 class="title font-pri-bold font20">
-                        CÔNG TY TNHH MTV ĐỒNG PHƯỚC ĐẦU TƯ 5 XE MINI BUS IVECO DAILY
+                        THADICO ỦNG HỘ 3 TỶ ĐỒNG CHO QUỸ PHÒNG, CHỐNG COVID-19 TỈNH BẾN TRE
                     </h3>
                     <p class="desc font-pri font18">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -151,12 +151,11 @@
             <div class="top" data-aos="fade-left" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="250">
                 <div class="img-item">
                     <a href="">
-                        <img src="{{ Theme::asset()->url('images/main/news2.jpg') }}" alt="">
+                        <img src="{{ Theme::asset()->url('images/main/car-vacxin.jpg') }}" alt="">
                     </a>
                 </div>
                 <h3 class="title font30">
-                    <a href="" class="font-pri-bold color-gray font30">BÀN GIAO LÔ XE BUS THACO GARDEN 79CT PHỤC VỤ VẬN
-                        TẢI</a>
+                    <a href="" class="font-pri-bold color-gray font30">XE CHUYÊN DỤNG PHỤC VỤ TIÊM CHỦNG LƯU ĐỘNG DO THACO SẢN XUẤT</a>
                 </h3>
             </div>
             <div class="bottom" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="50">
@@ -268,15 +267,21 @@
                 </div>
                 <div class="top-right">
                     <div class="top-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
-                        <img src="{{ Theme::asset()->url('images/main/lv3.png') }}" alt="">
-                        <p class="top-right-item-title font-pri-bold font30"><a href="" class="link-item-home">công
-                                nghiệp hỗ trợ & cơ khí</a></p>
+                        <img src="{{ Theme::asset()->url('images/main/R&D.png') }}" alt="R&D">
+                        <p class="top-right-item-title font-pri-bold font30"><a href="" class="link-item-home">
+                            R&D</a></p>
                     </div>
                     <div class="top-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
                         <img src="{{ Theme::asset()->url('images/main/lv1.png') }}" alt="">
                         <p class="top-right-item-title font-pri-bold font30"><a href="" class="link-item-home">sản xuất
                                 lắp ráp</a></p>
                     </div>
+                    <div class="top-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
+                        <img src="{{ Theme::asset()->url('images/main/lv3.png') }}" alt="">
+                        <p class="top-right-item-title font-pri-bold font30"><a href="" class="link-item-home">công
+                                nghiệp hỗ trợ & cơ khí</a></p>
+                    </div>
+                    
                     <div class="top-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
                         <img src="{{ Theme::asset()->url('images/main/lv4.png') }}" alt="">
                         <p class="top-right-item-title font-pri-bold font30"><a href="" class="link-item-home">xuất
@@ -305,10 +310,16 @@
                             </a></p>
                     </div>
                     <div class="bottom-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
+                        <img src="{{ Theme::asset()->url('images/main/xe-tai.png') }}" alt="">
+                        <p class="bottom-right-item-title font-pri-bold font30"><a href="" class="link-item-home">XE
+                                TẢI</a></p>
+                    </div>
+                    <div class="bottom-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
                         <img src="{{ Theme::asset()->url('images/main/lv8.png') }}" alt="">
                         <p class="bottom-right-item-title font-pri-bold font30"><a href="" class="link-item-home">XE
-                                TẢI, BUS</a></p>
+                                BUS</a></p>
                     </div>
+                    
                     <div class="bottom-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
                         <img src="{{ Theme::asset()->url('images/main/lv9.png') }}" alt="">
                         <p class="bottom-right-item-title font-pri-bold font30"><a href="" class="link-item-home">DỊCH

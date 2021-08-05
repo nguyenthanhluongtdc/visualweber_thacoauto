@@ -35,11 +35,21 @@
                         <div class="swiper-slide">
                             <div class="image-frame">
                                 <img src="{{Theme::asset()->url('images/business/product-intro-slide-1.jpg')}}" alt="">
+                                <div class="image-frame__overlay">
+                                    <h3 class="image-frame__title font40 font-mi-bold">
+                                        DỊCH VỤ
+                                    </h3>
+                                </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="image-frame">
                                 <img src="{{Theme::asset()->url('images/business/product-intro-slide-1.jpg')}}" alt="">
+                                <div class="image-frame__overlay">
+                                    <h3 class="image-frame__title font40 font-mi-bold">
+                                        DỊCH VỤ
+                                    </h3>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -67,7 +77,7 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="image-frame">
-                                <img src="{{Theme::asset()->url('images/business/product-intro-slide-1.jpg')}}" alt="">
+                                <img src="{{Theme::asset()->url('images/business/product-intro-slide-3.jpg')}}" alt="">
                                 <div class="image-frame__overlay">
                                     <h3 class="image-frame__title font40 font-mi-bold">
                                         DỊCH VỤ
@@ -87,12 +97,22 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="image-frame">
-                                <img src="{{Theme::asset()->url('images/business/product-intro-slide-1.jpg')}}" alt="">
+                                <img src="{{Theme::asset()->url('images/business/product-intro-slide-3.jpg')}}" alt="">
+                                <div class="image-frame__overlay">
+                                    <h3 class="image-frame__title font40 font-mi-bold">
+                                        DỊCH VỤ
+                                    </h3>
+                                </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="image-frame">
                                 <img src="{{Theme::asset()->url('images/business/product-intro-slide-1.jpg')}}" alt="">
+                                <div class="image-frame__overlay">
+                                    <h3 class="image-frame__title font40 font-mi-bold">
+                                        DỊCH VỤ
+                                    </h3>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -116,7 +136,7 @@
             </div>
             <div class="product-intro--right">
                 <div class="product-intro__image">
-                    <img src="{{Theme::asset()->url('images/business/product-intro-slide-1.jpg')}}" alt="">
+                    <img src="{{Theme::asset()->url('images/business/product-intro-slide-4.jpg')}}" alt="">
                 </div>
             </div>
         </div>

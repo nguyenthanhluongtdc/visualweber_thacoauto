@@ -79,7 +79,7 @@
                 </div>
             </div>
 
-            <div class="relate-product">
+            <div class="relate-product mb-2">
                 <h2 class="title font-mi-bold font60">
                     SẢN PHẨM PEUGEOT
                 </h2>

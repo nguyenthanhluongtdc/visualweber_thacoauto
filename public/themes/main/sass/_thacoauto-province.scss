@@ -12,6 +12,12 @@
                         font-size: 20px;
                     }
                 }
+
+                .item.gmail {
+                    i {
+                        transform: translateX(-3px)
+                    }
+                }
             }
 
             &__title {
@@ -145,6 +151,10 @@
                                max-width: 50%;
                                text-align: right;
                                @include paddingRight(50);
+                                img {
+                                    @include width(106);
+                                    @include height(98);
+                                }
                            }
                        }
 
@@ -174,6 +184,11 @@
                                     .symbol {
                                         @include marginBottom(15, "+");
                                         text-align: center;
+
+                                        img {
+                                            @include width(45);
+                                            @include height(45);
+                                        }
                                     }
                                 }
                             }
@@ -228,14 +243,55 @@
                             @include marginBottom(30, "+");
 
                             >.row {
+                                flex-wrap: nowrap;
                                  @include marginX(26,"-");
+                                 @media (max-width: 576px) {
+                                     flex-wrap: wrap;
+                                     margin-bottom: 30px;
+                                }
+                            }
+
+                            img {
+                                height: 100%;
+                                width: 100%;
                             }
 
                             &__left {
                                 @include paddingX(26);
+                                max-width: 374px;
+                                flex: 0 0 374px;
+                                height: 243px;
+                                @media (max-width: 1680px) {
+                                    max-width: #{calculatorPixel(374, 1680)}px;
+                                    flex: 0 0 #{calculatorPixel(374, 1680)}px;
+                                    height: #{calculatorPixel(243, 1680)}px;
+                                }
+                                @media (max-width: 1368px) {
+                                    max-width: #{calculatorPixel(374, 1368)}px;
+                                    flex: 0 0 #{calculatorPixel(374, 1368)}px;
+                                    height: #{calculatorPixel(243, 1368)}px;
+                                }
+                                @media (max-width: 992px) {
+                                    max-width: 50%;
+                                    flex: 0 0 50%;
+                                    height: max-content;
+
+                                    img {
+                                        width: auto;
+                                        height: auto;
+                                    }
+                                }
+
+                                @media (max-width: 576px) {
+                                    max-width: 100%;
+                                    flex: 0 0 100%;
+                                }
+
+                               
                             }
 
                             &__right {
+                                flex-grow: 1;
                                 .title {
                                     @include marginBottom(20, "+");
                                     @include split_str(1);
@@ -262,6 +318,11 @@
                                     @media(max-width : 1264px){
                                         font-size: 12px;
                                     }
+                                }
+
+                                @media (max-width: 576px) {
+                                    @include paddingX(26);
+                                    margin-top: 15px;
                                 }
                            }
                         }

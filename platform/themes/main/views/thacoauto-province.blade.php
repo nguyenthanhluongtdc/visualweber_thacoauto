@@ -22,7 +22,7 @@
                                     Ngã 3 Mũi Tàu, Đường tránh Đông, TT. Sơn Tịnh, Sơn Tịnh, Quảng Ngãi
                                 </span>
                             </li>
-                            <li class="item mt-20">
+                            <li class="item mt-20 gmail">
                                 <i class="fas fa-envelope"></i>
                                 <span class="text">
                                     hongson.kdtm@gmail.com
@@ -314,10 +314,10 @@
                             <div class="row tab-pane__row">
                                 <div class="col-lg-6 col-post">
                                     <div class="row">
-                                        <div class="col-lg-6 col-post__left">
+                                        <div class=" col-post__left">
                                             <img src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
                                         </div>
-                                        <div class="col-lg-6 font20 font-pri col-post__right">
+                                        <div class="font20 font-pri col-post__right">
                                             <h3 class="title font-pri-bold font30">
                                                 MAZDA CX-30: TÂN BINH
                                             </h3>
@@ -334,10 +334,10 @@
                                 </div>
                                 <div class="col-lg-6 col-post">
                                     <div class="row">
-                                        <div class="col-lg-6 col-post__left">
+                                        <div class=" col-post__left">
                                             <img src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
                                         </div>
-                                        <div class="col-lg-6 font20 font-pri col-post__right">
+                                        <div class="font20 font-pri col-post__right">
                                             <h3 class="title font-pri-bold font30">
                                                 MAZDA CX-30: TÂN BINH
                                             </h3>
@@ -354,10 +354,10 @@
                                 </div>
                                 <div class="col-lg-6 col-post">
                                     <div class="row">
-                                        <div class="col-lg-6 col-post__left">
+                                        <div class=" col-post__left">
                                             <img src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
                                         </div>
-                                        <div class="col-lg-6 font20 font-pri col-post__right">
+                                        <div class="font20 font-pri col-post__right">
                                             <h3 class="title font-pri-bold font30">
                                                 MAZDA CX-30: TÂN BINH
                                             </h3>
@@ -374,10 +374,10 @@
                                 </div>
                                 <div class="col-lg-6 col-post">
                                     <div class="row">
-                                        <div class="col-lg-6 col-post__left">
+                                        <div class=" col-post__left">
                                             <img src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
                                         </div>
-                                        <div class="col-lg-6 font20 font-pri col-post__right">
+                                        <div class="font20 font-pri col-post__right">
                                             <h3 class="title font-pri-bold font30">
                                                 MAZDA CX-30: TÂN BINH
                                             </h3>
@@ -394,10 +394,10 @@
                                 </div>
                                 <div class="col-lg-6 col-post">
                                     <div class="row">
-                                        <div class="col-lg-6 col-post__left">
+                                        <div class=" col-post__left">
                                             <img src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
                                         </div>
-                                        <div class="col-lg-6 font20 font-pri col-post__right">
+                                        <div class="font20 font-pri col-post__right">
                                             <h3 class="title font-pri-bold font30">
                                                 MAZDA CX-30: TÂN BINH
                                             </h3>
@@ -414,10 +414,10 @@
                                 </div>
                                 <div class="col-lg-6 col-post">
                                     <div class="row">
-                                        <div class="col-lg-6 col-post__left">
+                                        <div class=" col-post__left">
                                             <img src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
                                         </div>
-                                        <div class="col-lg-6 font20 font-pri col-post__right">
+                                        <div class="font20 font-pri col-post__right">
                                             <h3 class="title font-pri-bold font30">
                                                 MAZDA CX-30: TÂN BINH
                                             </h3>
@@ -439,10 +439,10 @@
                             <div class="row tab-pane__row">
                                 <div class="col-lg-6 col-post">
                                     <div class="row">
-                                        <div class="col-lg-6 col-post__left">
+                                        <div class=" col-post__left">
                                             <img src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
                                         </div>
-                                        <div class="col-lg-6 font20 font-pri col-post__right">
+                                        <div class="font20 font-pri col-post__right">
                                             <h3 class="title font-pri-bold font30">
                                                 MAZDA CX-30: TÂN BINH
                                             </h3>
@@ -459,10 +459,10 @@
                                 </div>
                                 <div class="col-lg-6 col-post">
                                     <div class="row">
-                                        <div class="col-lg-6 col-post__left">
+                                        <div class=" col-post__left">
                                             <img src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
                                         </div>
-                                        <div class="col-lg-6 font20 font-pri col-post__right">
+                                        <div class="font20 font-pri col-post__right">
                                             <h3 class="title font-pri-bold font30">
                                                 MAZDA CX-30: TÂN BINH
                                             </h3>
@@ -479,10 +479,10 @@
                                 </div>
                                 <div class="col-lg-6 col-post">
                                     <div class="row">
-                                        <div class="col-lg-6 col-post__left">
+                                        <div class=" col-post__left">
                                             <img src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
                                         </div>
-                                        <div class="col-lg-6 font20 font-pri col-post__right">
+                                        <div class="font20 font-pri col-post__right">
                                             <h3 class="title font-pri-bold font30">
                                                 MAZDA CX-30: TÂN BINH
                                             </h3>
@@ -499,10 +499,10 @@
                                 </div>
                                 <div class="col-lg-6 col-post">
                                     <div class="row">
-                                        <div class="col-lg-6 col-post__left">
+                                        <div class=" col-post__left">
                                             <img src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
                                         </div>
-                                        <div class="col-lg-6 font20 font-pri col-post__right">
+                                        <div class="font20 font-pri col-post__right">
                                             <h3 class="title font-pri-bold font30">
                                                 MAZDA CX-30: TÂN BINH
                                             </h3>
@@ -519,10 +519,10 @@
                                 </div>
                                 <div class="col-lg-6 col-post">
                                     <div class="row">
-                                        <div class="col-lg-6 col-post__left">
+                                        <div class=" col-post__left">
                                             <img src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
                                         </div>
-                                        <div class="col-lg-6 font20 font-pri col-post__right">
+                                        <div class="font20 font-pri col-post__right">
                                             <h3 class="title font-pri-bold font30">
                                                 MAZDA CX-30: TÂN BINH
                                             </h3>
@@ -539,10 +539,10 @@
                                 </div>
                                 <div class="col-lg-6 col-post">
                                     <div class="row">
-                                        <div class="col-lg-6 col-post__left">
+                                        <div class=" col-post__left">
                                             <img src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
                                         </div>
-                                        <div class="col-lg-6 font20 font-pri col-post__right">
+                                        <div class="font20 font-pri col-post__right">
                                             <h3 class="title font-pri-bold font30">
                                                 MAZDA CX-30: TÂN BINH
                                             </h3>

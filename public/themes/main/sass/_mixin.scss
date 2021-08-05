@@ -184,3 +184,30 @@ $max) {
        padding-top: #{calculatorPixel($size, 1368)}px;
     }
 }
+
+@mixin width($size) {
+    width: #{$size}px;
+    @media only screen and (max-width: 1680px) {
+        width: #{calculatorPixel($size, 1680)}px;
+    }
+    @media only screen and (max-width: 1368px) {
+        width: #{calculatorPixel($size, 1368)}px;
+    }
+    @media (max-width: 992px) {
+        width: #{calculatorPixel($size, 1368)}px;
+    }
+}
+
+@mixin height($size) {
+    height: #{$size}px;
+    @media only screen and (max-width: 1680px) {
+        height: #{calculatorPixel($size, 1680)}px;
+    }
+    @media only screen and (max-width: 1368px) {
+        height: #{calculatorPixel($size, 1368)}px;
+    }
+    @media (max-width: 992px) {
+        height: #{calculatorPixel($size, 1368)}px;
+    }
+}
+

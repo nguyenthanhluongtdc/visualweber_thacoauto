@@ -98,21 +98,8 @@
                    }
                     &--picture {
                         img {
-                            width: 530px;
-                            height: 353px;
-                            
-                            @media (max-width: 1680px) {
-                                width: #{calculatorPixel(530,1680)}px;
-                                height: #{calculatorPixel(353,1680)}px;
-                            }
-                            @media (max-width: 1360px) {
-                                width: #{calculatorPixel(530,1360)}px;
-                                height: #{calculatorPixel(353,1360)}px;;
-                            }
-                            @media (max-width: 992px) {
-                                width: #{calculatorPixel(530,992)}px;
-                                height: #{calculatorPixel(353,992)}px;
-                            }
+                            @include width(530);
+                            @include height(353);
                         }
                     }
                     &--content {

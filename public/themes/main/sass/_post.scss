@@ -9,6 +9,18 @@
             margin-top: 35px;
             width: 100%;
             position: relative;
+            @media(max-width : 1680px){
+                margin-top: 30px;
+            }
+            @media(max-width : 1440px){
+                margin-top: 25px;
+            }
+            @media(max-width : 1366px){
+                margin-top: 20px;
+            }
+            @media(max-width : 1199px){
+                margin-top: 15px;
+            }
             .like-share{
                 position: absolute;
                 right: 0;
@@ -34,6 +46,18 @@
         }
         p.desc{
             margin: 95px auto;
+            @media(max-width : 1680px){
+                margin: 75px auto;
+            }
+            @media(max-width : 1440px){
+                margin: 65px auto;
+            }
+            @media(max-width : 1366px){
+                margin: 35px auto;
+            }
+            @media(max-width : 1199px){
+                margin: 25px auto;
+            }
             width: 90%;
             text-align: center;
         }
@@ -43,17 +67,16 @@
                 list-style: disc;
             }
             p{
-                font-size: 25px;
                 color: #000000;
-                margin-bottom: 70px;
+                margin-bottom: 60px;
                 @media(max-width : 1680px){
-                    margin-bottom: 50px;
-                }
-                @media(max-width : 1440px){
                     margin-bottom: 40px;
                 }
-                @media(max-width : 995px){
+                @media(max-width : 1440px){
                     margin-bottom: 30px;
+                }
+                @media(max-width : 995px){
+                    margin-bottom: 20px;
                 }
             }
         }
@@ -61,6 +84,15 @@
             display: flex;
             align-items: center;
             margin-top: 20px;
+            @media(max-width : 1680px){
+                margin-top: 17px;
+            }
+            @media(max-width : 1440px){
+                margin-top: 15px;
+            }
+            @media(max-width : 995px){
+                margin-top: 13px;
+            }
             .post__tags {
                 margin-left: 20px;
                 a{
@@ -114,6 +146,18 @@
                 width: 93%;
                 background: #ebedf2;
                 padding: 20px 30px;
+                @media(max-width : 1680px){
+                    padding: 15px 25px;
+                }
+                @media(max-width : 1440px){
+                    padding: 13px 22px;
+                }
+                @media(max-width : 1366px){
+                    padding: 10px 15px;
+                }
+                @media(max-width : 1199px){
+                    padding: 8px 14px;
+                }
                 .name-wrap{
                     display: flex;
                     justify-content: space-between;
@@ -146,12 +190,52 @@
     margin-top: 40px;
     padding-top: 40px;
     border-top: 1px solid #b7b7b7;
+    @media(max-width : 1680px){
+        margin-top: 35px;
+        padding-top: 35px;
+    }
+    @media(max-width : 1440px){
+        margin-top: 30px;
+        padding-top: 30px;
+    }
+    @media(max-width : 1366px){
+        margin-top: 25px;
+        padding-top: 25px;
+    }
+    @media(max-width : 1199px){
+        margin-top: 20px;
+        padding-top: 20px;
+    }
    h2{
     margin-bottom: 45px;
     text-transform: uppercase;
+    @media(max-width : 1680px){
+        margin-bottom: 35px;
+    }
+    @media(max-width : 1440px){
+        margin-bottom: 30px;
+    }
+    @media(max-width : 1366px){
+        margin-bottom: 25px;
+    }
+    @media(max-width : 1199px){
+        margin-bottom: 20px;
+    }
    }
    .city-day{
-       margin: 20px 0;
+        margin: 20px 0;
+        @media(max-width : 1680px){
+            margin: 17px 0;
+        }
+        @media(max-width : 1440px){
+            margin: 15px 0;
+        }
+        @media(max-width : 1366px){
+            margin: 12px 0;
+        }
+        @media(max-width : 1199px){
+            margin: 10px 0;
+        }
    }
    .post__header{
        h5{
@@ -161,6 +245,18 @@
        }
        .post__desc{
            margin-top: 20px;
+           @media(max-width : 1680px){
+                margin-top: 17px;
+            }
+            @media(max-width : 1440px){
+                margin-top: 15px;
+            }
+            @media(max-width : 1366px){
+                margin-top: 12px;
+            }
+            @media(max-width : 1199px){
+                margin-top: 10px;
+            }
            text-align: justify;
        }
    }

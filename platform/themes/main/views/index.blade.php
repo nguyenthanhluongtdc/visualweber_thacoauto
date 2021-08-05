@@ -273,8 +273,8 @@
                     </div>
                     <div class="top-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
                         <img src="{{ Theme::asset()->url('images/main/lv1.png') }}" alt="">
-                        <p class="top-right-item-title font-pri-bold font30"><a href="" class="link-item-home">sản xuất
-                                lắp ráp</a></p>
+                        <p class="top-right-item-title font-pri-bold font30"><a href="" class="link-item-home">
+                            sản xuất - lắp ráp <br> ô tô & xe máy</a></p>
                     </div>
                     <div class="top-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
                         <img src="{{ Theme::asset()->url('images/main/lv3.png') }}" alt="">

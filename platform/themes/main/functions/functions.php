@@ -15,6 +15,7 @@ register_page_template([
     'research-development' => 'Research & Development',
     'cultural' => 'Cultural',
     'services' => 'Services',
+    'services-support' => 'Services Support',
     'contact' => 'Contact',
     'business-system' => 'Business system',
     'production-assemble' => 'Production assemble',

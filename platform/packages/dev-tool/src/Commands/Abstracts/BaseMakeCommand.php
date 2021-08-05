@@ -74,17 +74,28 @@ abstract class BaseMakeCommand extends Command
     public function baseReplacements(string $replaceText): array
     {
         return [
+            '{-prefix}'      => strtolower(env('DB_PREFIX', 'app_')),
+            '{prefix}'       => Str::snake(str_replace('-', '_', env('DB_PREFIX', 'app_'))),
+            '{+prefix}'      => Str::camel(env('DB_PREFIX', 'app_')),
+            '{++prefix}'     => str_replace('_', ' ', Str::snake(str_replace('-', '_', env('DB_PREFIX', 'app_')))),
+            '{prefixes}'        => Str::plural(Str::snake(str_replace('-', '_', env('DB_PREFIX', 'app_')))),
+            '{Prefixes}'        => ucfirst(Str::plural(Str::snake(str_replace('-', '_', env('DB_PREFIX', 'app_'))))),
+            '{++Prefixes}'      => str_replace('_', ' ', ucfirst(Str::plural(Str::snake(str_replace('-', '_', env('DB_PREFIX', 'app_')))))),
+            '{-prefixes}'       => Str::plural(env('DB_PREFIX', 'app_')),
+            '{PREFIX}'         => strtoupper(Str::snake(str_replace('-', '_', env('DB_PREFIX', 'app_')))),
+            '{Prefix}'       => ucfirst(Str::camel(env('DB_PREFIX', 'app_'))),
+
             '{-name}'        => strtolower($replaceText),
             '{name}'         => Str::snake(str_replace('-', '_', $replaceText)),
             '{+name}'        => Str::camel($replaceText),
             '{++name}'       => str_replace('_', ' ', Str::snake(str_replace('-', '_', $replaceText))),
             '{names}'        => Str::plural(Str::snake(str_replace('-', '_', $replaceText))),
             '{Names}'        => ucfirst(Str::plural(Str::snake(str_replace('-', '_', $replaceText)))),
-            '{++Names}'      => str_replace('_', ' ',
-                ucfirst(Str::plural(Str::snake(str_replace('-', '_', $replaceText))))),
+            '{++Names}'      => str_replace('_', ' ', ucfirst(Str::plural(Str::snake(str_replace('-', '_', $replaceText))))),
             '{-names}'       => Str::plural($replaceText),
             '{NAME}'         => strtoupper(Str::snake(str_replace('-', '_', $replaceText))),
             '{Name}'         => ucfirst(Str::camel($replaceText)),
+
             '.stub'          => '.php',
             '{migrate_date}' => now()->format('Y_m_d_His'),
             '{type}'         => 'package',

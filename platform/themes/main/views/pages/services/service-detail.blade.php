@@ -1,6 +1,6 @@
 <section class="section-services-detail">
     <div class="container-remake">
-        <div class="services-detail">
+        <div class="services-detail"> 
             <h2 class="services-detail__title font-mi-bold font60">
                 CHĂM SÓC XE
             </h2>

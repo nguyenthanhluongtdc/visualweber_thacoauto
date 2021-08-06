@@ -24,6 +24,7 @@ register_page_template([
     'business-overview' => 'Business overview',
     'general-manufacturing' => 'General Manufacturing',
     'mechanical' => 'Mechanical',
+    'brand' => 'Brand',
 ]);
 
 register_sidebar([

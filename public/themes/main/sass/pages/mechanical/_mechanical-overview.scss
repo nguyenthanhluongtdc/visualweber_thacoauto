@@ -1,0 +1,28 @@
+.section-mechanical-overview {
+    .mechandical-overview {
+        &__boxfield {
+            display: flex;
+            flex-wrap: wrap;
+            // height: 215px;
+            .boxfield-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 15%;
+                text-align: center;
+                margin-right: 2%;
+                padding: 1%;
+                max-width: 215px;
+                background-color: #f1f1f1;
+                .name {
+                    margin-top: 25px;
+                    line-height: 1.2;
+                }
+            }
+            .boxfield-item:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}

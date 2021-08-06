@@ -36,6 +36,9 @@ Route::group(['namespace' => 'Theme\Thaco\Http\Controllers', 'middleware' => ['w
         Route::get('/product-detail', function () {
             return Theme::scope('pages/business/product/product-detail')->render();
         });
+        Route::get('/brand', function () {
+            return Theme::scope('pages/business/brand/brand')->render();
+        });
 
         Route::get('ajax/search', 'ThacoController@getSearch')->name('public.ajax.search');
 

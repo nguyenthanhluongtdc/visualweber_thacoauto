@@ -15,7 +15,7 @@
                                     <div class="sub--left font-pri-bold">
                                         <div class="day"> 29 </div>
                                         <div class="month"> May </div>
-                                        <div class="year"> 2021 </div>
+                                        <div class="year"> 2021 </div> 
                                     </div>
     
                                     <div class="sub--right">

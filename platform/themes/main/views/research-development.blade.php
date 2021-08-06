@@ -170,7 +170,7 @@
         <div class="section-list-news-wrapper">
             <div class="container-remake">
                 <div class="section-list-news">
-                        <div class="section-list-news-header d-flex justify-content-between align-items-center">
+                        <div class="section-list-news-header  d-flex justify-content-between align-items-center">
                             <h2 class="title font-pri-bold font40 text-uppercase">
                                 Tin tức
                             </h2>
@@ -201,7 +201,7 @@
                                         </p>
                                     </div>
     
-                                    <a href="#" title="{!!__('Read more')!!}" class="read-more text-dark font20"> {!!__('Read more')!!} >> </a>
+                                    <a href="#" title="{!!__('Read more')!!}" class="read-more text-dark font20 font-pri"> {!!__('Read more')!!} >> </a>
                                 </div>
                             </div>
     
@@ -227,7 +227,7 @@
                                         </p>
                                     </div>
     
-                                    <a href="#" title="{!!__('Read more')!!}" class="read-more text-dark font20"> {!!__('Read more')!!} >> </a>
+                                    <a href="#" title="{!!__('Read more')!!}" class="read-more text-dark font20 font-pri"> {!!__('Read more')!!} >> </a>
                                 </div>
                             </div>
     
@@ -253,7 +253,7 @@
                                         </p>
                                     </div>
     
-                                    <a href="#" title="{!!__('Read more')!!}" class="read-more text-dark font20"> {!!__('Read more')!!} >> </a>
+                                    <a href="#" title="{!!__('Read more')!!}" class="read-more text-dark font20 font-pri"> {!!__('Read more')!!} >> </a>
                                 </div>
                             </div>
                         </div>

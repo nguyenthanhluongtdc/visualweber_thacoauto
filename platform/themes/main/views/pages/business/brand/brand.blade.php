@@ -82,16 +82,16 @@
                     <p  class="font-pri font18">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident vel a error. Nemo inventore reprehenderit doloremque quo, quia culpa impedit, expedita harum, quas quaerat magni! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias, velit.</p>
                     <div class="brand-logo">
                         <div class="logo-img">
-                            <a href="#"><img src="{{Theme::asset()->url('images/business/fuso-logo.jfif')}}" alt="" ></a>
+                            <a href="#"><img src="{{Theme::asset()->url('images/business/fuso-logo.jpg')}}" alt="" ></a>
                         </div>
                         <div class="logo-img">
                             <a href="#"><img src="{{Theme::asset()->url('images/business/kia-logo.png')}}" alt="" ></a>
                         </div>
-                        <div class="logo-img mt-5">
-                            <a href="#"><img src="{{Theme::asset()->url('images/business/thaco-logo.png')}}" alt=""></a>
+                        <div class="logo-img">
+                            <a href="#"><img src="{{Theme::asset()->url('images/business/thaco-logo.jpg')}}" alt=""></a>
                         </div>
                         <div class="logo-img">
-                            <a href="#"><img src="{{Theme::asset()->url('images/business/foton-logo.png')}}" alt=""></a>
+                            <a href="#"><img src="{{Theme::asset()->url('images/business/foton-logo.jpg')}}" alt=""></a>
                         </div>
                         
                     </div>
@@ -119,10 +119,10 @@
                             <a href="#"><img src="{{Theme::asset()->url('images/business/iveco.jpg')}}" alt="" ></a>
                         </div>
                         <div class="logo-img">
-                            <a href="#"><img src="{{Theme::asset()->url('images/business/logo-mits.png')}}" alt=""></a>
+                            <a href="#"><img src="{{Theme::asset()->url('images/business/mits-logo.png')}}" alt=""></a>
                         </div>
                         <div class="logo-img">
-                            <a href="#"><img src="{{Theme::asset()->url('images/business/foton-logo.png')}}" alt=""></a>
+                            <a href="#"><img src="{{Theme::asset()->url('images/business/foton-logo.jpg')}}" alt=""></a>
                         </div>
                     </div>
                     

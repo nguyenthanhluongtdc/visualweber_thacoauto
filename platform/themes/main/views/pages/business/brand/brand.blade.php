@@ -109,7 +109,7 @@
                   <input type="radio" name="tabs4" id="tabsix" checked="checked">
                   <label for="tabsix" class="font-pri font18">Xe ghế ngồi</label>
                 <div class="tab">
-                    <h1  class="font-pri-bold font20 mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, vitae.</h1>
+                    <h1  class="font-pri-bold font20 mb-3">Lorem ipsum sit amet consectetur adipisicing elit. Officiis, vitae.</h1>
                     <p  class="font-pri font18">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident vel a error. Nemo inventore reprehenderit doloremque quo, quia culpa impedit, expedita harum, quas quaerat magni! Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, iure.</p>
                     <div class="brand-logo">
                         <div class="logo-img">

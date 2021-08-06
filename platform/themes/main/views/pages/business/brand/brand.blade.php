@@ -138,7 +138,7 @@
                   <input type="radio" name="tabs4" id="tabeight">
                   <label for="tabeight" class="font-pri font18">Xe City Bus</label>
                   <div class="tab">
-                    <h1  class="font-pri-bold font20 mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, vitae.</h1>
+                    <h1  class="font-pri-bold font20 mb-3">Lorem ipsum dolor sit amet adipisicing elit. Officiis, vitae.</h1>
                     <p  class="font-pri font18">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident vel a error. Nemo inventore reprehenderit doloremque quo, quia culpa impedit, expedita harum, quas quaerat magni! Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, necessitatibus?</p>
                     <div class="brand-logo">
                         <div class="logo-img">

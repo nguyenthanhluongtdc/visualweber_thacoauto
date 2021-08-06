@@ -15,16 +15,16 @@
                     </p>
                     <div class="brand-logo">
                         <div class="logo-img">
-                            <a href="#"><img src="{{Theme::asset()->url('images/business/logo-kia.jpg')}}" alt="" ></a>
+                            <a href="#"><img src="{{Theme::asset()->url('images/business/kia-logo.png')}}" alt="" ></a>
                         </div>
                         <div class="logo-img">
                             <a href="#"><img src="{{Theme::asset()->url('images/business/logo-mazda.jpg')}}" alt=""></a>
                         </div>
                         <div class="logo-img">
-                            <a href="#"><img src="{{Theme::asset()->url('images/business/logo-peugeot.png')}}" alt=""></a>
+                            <a href="#"><img src="{{Theme::asset()->url('images/business/logo-peugeot.jpg')}}" alt=""></a>
                         </div>
                         <div class="logo-img">
-                            <a href="#"><img src="{{Theme::asset()->url('images/business/logo-bmw.png')}}" alt=""></a>
+                            <a href="#"><img src="{{Theme::asset()->url('images/business/log-bmw.jpg')}}" alt=""></a>
                         </div>
                         
                     </div>
@@ -47,7 +47,7 @@
                     <p  class="font-pri font18">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident vel a error. Nemo inventore reprehenderit doloremque quo, quia culpa impedit, expedita harum, quas quaerat magni! Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, soluta.</p>
                     <div class="brand-logo">
                         <div class="logo-img">
-                            <a href="#"><img src="{{Theme::asset()->url('images/business/logo-peugeot.png')}}" alt=""></a>
+                            <a href="#"><img src="{{Theme::asset()->url('images/business/logo-peugeot.jpg')}}" alt=""></a>
                         </div>
                     </div>
                     
@@ -60,7 +60,7 @@
                     <p  class="font-pri font18">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident vel a error. Nemo inventore reprehenderit doloremque quo, quia culpa impedit, expedita harum, quas quaerat magni! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, incidunt!</p>
                     <div class="brand-logo">
                         <div class="logo-img">
-                            <a href="#"><img src="{{Theme::asset()->url('images/business/logo-bmw.png')}}" alt=""></a>
+                            <a href="#"><img src="{{Theme::asset()->url('images/business/log-bmw.jpg')}}" alt=""></a>
                         </div>
                     </div>
                   </div>
@@ -82,16 +82,16 @@
                     <p  class="font-pri font18">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident vel a error. Nemo inventore reprehenderit doloremque quo, quia culpa impedit, expedita harum, quas quaerat magni! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias, velit.</p>
                     <div class="brand-logo">
                         <div class="logo-img">
-                            <a href="#"><img src="{{Theme::asset()->url('images/business/fuso.png')}}" alt="" ></a>
+                            <a href="#"><img src="{{Theme::asset()->url('images/business/fuso-logo.jfif')}}" alt="" ></a>
                         </div>
                         <div class="logo-img">
-                            <a href="#"><img src="{{Theme::asset()->url('images/business/logo-kia.jpg')}}" alt="" ></a>
+                            <a href="#"><img src="{{Theme::asset()->url('images/business/kia-logo.png')}}" alt="" ></a>
+                        </div>
+                        <div class="logo-img mt-5">
+                            <a href="#"><img src="{{Theme::asset()->url('images/business/thaco-logo.png')}}" alt=""></a>
                         </div>
                         <div class="logo-img">
-                            <a href="#"><img src="{{Theme::asset()->url('images/business/thaco.png')}}" alt=""></a>
-                        </div>
-                        <div class="logo-img">
-                            <a href="#"><img src="{{Theme::asset()->url('images/business/foton.png')}}" alt=""></a>
+                            <a href="#"><img src="{{Theme::asset()->url('images/business/foton-logo.png')}}" alt=""></a>
                         </div>
                         
                     </div>
@@ -116,13 +116,13 @@
                             <a href="#"><img src="{{Theme::asset()->url('images/business/thacobus.jpg')}}" alt="" ></a>
                         </div>
                         <div class="logo-img">
-                            <a href="#"><img src="{{Theme::asset()->url('images/business/iveco.png')}}" alt="" ></a>
+                            <a href="#"><img src="{{Theme::asset()->url('images/business/iveco.jpg')}}" alt="" ></a>
                         </div>
                         <div class="logo-img">
                             <a href="#"><img src="{{Theme::asset()->url('images/business/logo-mits.png')}}" alt=""></a>
                         </div>
                         <div class="logo-img">
-                            <a href="#"><img src="{{Theme::asset()->url('images/business/foton.png')}}" alt=""></a>
+                            <a href="#"><img src="{{Theme::asset()->url('images/business/foton-logo.png')}}" alt=""></a>
                         </div>
                     </div>
                     

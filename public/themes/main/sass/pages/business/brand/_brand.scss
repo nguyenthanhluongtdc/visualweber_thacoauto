@@ -3,12 +3,16 @@
     min-height: 47vh;
     box-sizing: border-box;
     padding-top: 5vh; 
+    max-height: 60rem;
     line-height: 1.5;
     margin: 0 auto;
     font-size: 110%;
     display: flex;
     @media(max-width : 1100px){
-        min-height: 50vh;
+        min-height: 40vh;
+    }
+    @media(max-width : 1300px){
+        min-height: 40vh;
     }
     .tabs {
         display: flex;
@@ -16,7 +20,7 @@
         height: 40px;
         width: 100%;
         margin-left: 8%;
-        margin-bottom: 5%;
+        
         .brand-name{
             border-right: 5px solid $color-primary;
             height: 86%;
@@ -103,8 +107,8 @@
                     position: relative;
                     img{
                         position: relative;
-                        width: 10vw;
-                        height: 10vh;
+                        width: 60%;
+                        height: auto;
 
                     }
                     &::before{

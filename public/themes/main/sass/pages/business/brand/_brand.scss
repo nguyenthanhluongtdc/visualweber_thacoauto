@@ -1,19 +1,10 @@
 .brand-block{
-   
-    min-height: 47vh;
+    height: 44vh;
     box-sizing: border-box;
     padding-top: 5vh; 
-    max-height: 60rem;
     line-height: 1.5;
     margin: 0 auto;
-    font-size: 110%;
     display: flex;
-    @media(max-width : 1100px){
-        min-height: 40vh;
-    }
-    @media(max-width : 1300px){
-        min-height: 40vh;
-    }
     .tabs {
         display: flex;
         flex-wrap: wrap;

@@ -159,7 +159,7 @@
                   <label for="tabnice" class="font-pri font18">Fuso Rosa</label>
                   <div class="tab">
                     <h1  class="font-pri-bold font20 mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, vitae.</h1>
-                    <p  class="font-pri font18">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident vel a error. Nemo inventore reprehenderit doloremque quo, quia culpa impedit, expedita harum, quas quaerat magni!</p>
+                    <p  class="font-pri font18">Lor ipsum dolor sit amet, consectetur adipisicing elit. Provident vel a error. Nemo inventore reprehenderit doloremque quo, quia culpa impedit, expedita harum, quas quaerat magni!</p>
                   </div>
             </div>  
         </div>

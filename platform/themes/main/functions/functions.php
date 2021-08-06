@@ -20,6 +20,7 @@ register_page_template([
     'production-assemble' => 'Production assemble',
     'thacoauto-province'    => 'Thaco auto province',
     'business-overview' => 'Business overview',
+    'introduce' => 'Introduce',
 ]);
 
 register_sidebar([

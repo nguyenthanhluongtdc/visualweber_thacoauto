@@ -255,4 +255,11 @@ $(document).ready(function(){
             scrollTop: $top
         }, 500);
     });
+
+    var swiper = new Swiper(".video-introduce", {
+        pagination: {
+          el: ".swiper-pagination",
+          dynamicBullets: true,
+        },
+    });
 });

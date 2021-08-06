@@ -211,3 +211,28 @@ $max) {
     }
 }
 
+@mixin lineHeight($size) {
+    line-height: #{$size}px;
+    @media only screen and (max-width: 1680px) {
+        line-height: #{calculatorPixel($size, 1680)}px;
+    }
+    @media only screen and (max-width: 1368px) {
+        line-height: #{calculatorPixel($size, 1368)}px;
+    }
+    @media (max-width: 992px) {
+        line-height: #{calculatorPixel($size, 1368)}px;
+    }
+}
+
+@mixin flex($size) {
+    flex: 0 0 #{$size}px;
+    @media only screen and (max-width: 1680px) {
+        flex: 0 0 #{calculatorPixel($size, 1680)}px;
+    }
+    @media only screen and (max-width: 1368px) {
+        flex: 0 0 #{calculatorPixel($size, 1368)}px;
+    }
+    @media (max-width: 992px) {
+        flex: 0 0 #{calculatorPixel($size, 1368)}px;
+    }
+}

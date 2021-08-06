@@ -145,13 +145,13 @@
                             <a href="#"><img src="{{Theme::asset()->url('images/business/thacobus.jpg')}}" alt="" ></a>
                         </div>
                         <div class="logo-img">
-                            <a href="#"><img src="{{Theme::asset()->url('images/business/iveco.png')}}" alt=""></a>
+                            <a href="#"><img src="{{Theme::asset()->url('images/business/iveco.jpg')}}" alt="" ></a>
                         </div>
                         <div class="logo-img">
                             <a href="#"><img src="{{Theme::asset()->url('images/business/logo-mits.png')}}" alt=""></a>
                         </div>
                         <div class="logo-img">
-                            <a href="#"><img src="{{Theme::asset()->url('images/business/foton.png')}}" alt=""></a>
+                            <a href="#"><img src="{{Theme::asset()->url('images/business/foton-logo.png')}}" alt=""></a>
                         </div>
                     </div>
                   </div>

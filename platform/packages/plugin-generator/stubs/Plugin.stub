@@ -9,6 +9,6 @@ class Plugin extends PluginOperationAbstract
 {
     public static function remove()
     {
-        Schema::dropIfExists('{names}');
+        Schema::dropIfExists('{prefix}{names}');
     }
 }

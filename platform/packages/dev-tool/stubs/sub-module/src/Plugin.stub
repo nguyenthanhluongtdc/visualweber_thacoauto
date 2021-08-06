@@ -1,2 +1,2 @@
 // Add into function remove()
-Schema::dropIfExists('{names}');
+Schema::dropIfExists('{prefix}{names}');

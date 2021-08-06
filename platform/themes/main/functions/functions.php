@@ -3,6 +3,7 @@
 register_page_template([
     'no-sidebar' => __('No sidebar'),
     'default' => 'Default',
+    'custom-page' => 'Custom page',
     'posts' => 'Posts',
     'media-event' => 'Media Event',
     'media-newspapers' => 'Media newspapers',
@@ -15,12 +16,16 @@ register_page_template([
     'research-development' => 'Research & Development',
     'cultural' => 'Cultural',
     'services' => 'Services',
+    'services-support' => 'Services Support',
     'contact' => 'Contact',
     'business-system' => 'Business system',
     'production-assemble' => 'Production assemble',
     'thacoauto-province'    => 'Thaco auto province',
     'business-overview' => 'Business overview',
     'introduce' => 'Introduce',
+    'general-manufacturing' => 'General Manufacturing',
+    'mechanical' => 'Mechanical',
+    'brand' => 'Brand',
 ]);
 
 register_sidebar([

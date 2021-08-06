@@ -1,0 +1,162 @@
+.brand-block{
+    padding-bottom: 21%;
+    box-sizing: border-box;
+    padding-top: 5vh; 
+    line-height: 1.5;
+    margin: 0 auto;
+    display: flex;
+    margin-bottom: 10%;
+    .tabs {
+        display: flex;
+        flex-wrap: wrap;
+        height: 40px;
+        width: 100%;
+        margin-left: 8%;
+        
+        .brand-name{
+            border-right: 5px solid $color-primary;
+            height: 86%;
+            margin-top: .5%;
+            margin-left: 0.66%;
+            margin-right: 2%;
+            @media(max-width : 1710px){
+                height: 82%;
+                transform: translateY(1.5px);
+                margin-left: 8px;
+            }
+            @media(max-width : 1600px){
+                height: 75%;
+                transform: translateY(2.5px);
+                margin-left: 8px;
+            }
+            @media(max-width : 1400px){
+                height: 67%;
+                transform: translateY(4px);
+                margin-left: 8px;
+            }
+            @media(max-width : 1300px){
+                height: 62%;
+                transform: translateY(7px);
+                margin-left: 8.5px;
+            }
+            @media(max-width : 1100px){
+                height: 50%;
+                transform: translateY(11.8px);
+                margin-left: 9px;
+            }
+            h3{
+                margin-right: 50px;
+                transform: translateY(-8px);
+                @media(max-width : 1710px){
+                    transform: translateY(-8.5px);
+                }
+                @media(max-width : 1600px){
+                    transform: translateY(-7.5px);
+                }
+                @media(max-width : 1400px){
+                    transform: translateY(-4.7px);
+                }
+                @media(max-width : 1300px){
+                    transform: translateY(-5px);
+                }
+                @media(max-width : 1100px){
+                    transform: translateY(-6.2px);
+                }
+            }
+            
+        }
+        label {
+            order: 1;
+            display: flex;
+            padding: 1.4rem 1rem 0 1rem;
+            margin-right: .5rem;
+            cursor: pointer;
+            color: $color-primary;
+            transition: background ease 0.3s;
+          }
+          .tab {
+            order: 9;
+            flex-grow: 1;
+            width: 100%;
+            height: 100%;
+            display: none;
+            padding: 1rem;
+            background: #fff;
+            padding: 10px;
+            h1{
+                text-transform: uppercase;
+            }
+
+            .brand-logo{
+                display: flex;
+                margin-top: 2%;
+                .logo-img{
+                    max-width: 18%;
+                    flex: 1 18%;
+                    margin-right: 8%;
+                    position: relative;
+                    img{
+                        position: relative;
+                        width: 60%;
+                        height: auto;
+
+                    }
+                    &::before{
+                        position: absolute;
+                        top: 0;
+                        left: -75%;
+                        z-index: 2;
+                        display: block;
+                        content: '';
+                        width: 50%;
+                        height: 100%;
+                        background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.5) 100%);
+                        background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.5) 100%);
+                        -webkit-transform: skewX(-25deg);
+                        transform: skewX(-25deg);
+                    }
+                    &:hover::before {
+                        -webkit-animation: shine 2s;
+                        animation: shine 2s;
+                    }
+                    @-webkit-keyframes shine {
+                        100% {
+                            left: 125%;
+                        }
+                    }
+                    @keyframes shine {
+                        100% {
+                            left: 125%;
+                        }
+                    }
+                }
+               
+                
+            }
+          
+          }
+          input[type="radio"] {
+            display: none;
+          }
+          input[type="radio"]:checked + label {
+            background: #fff;
+          }
+          input[type="radio"]:checked + label + .tab {
+            display: block;
+          }
+          @media (max-width: 465px) {
+            .tabs .tab,
+            .tabs label {
+             order: initial;
+            }
+           
+            .tabs label {
+              width: 100%;
+              margin-left: 50px;
+            }
+      }
+       
+          
+      }
+
+}

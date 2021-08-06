@@ -1,10 +1,11 @@
 .brand-block{
-    padding-bottom: 20%;
+    padding-bottom: 21%;
     box-sizing: border-box;
     padding-top: 5vh; 
     line-height: 1.5;
     margin: 0 auto;
     display: flex;
+    margin-bottom: 10%;
     .tabs {
         display: flex;
         flex-wrap: wrap;
@@ -87,10 +88,8 @@
             }
 
             .brand-logo{
-                margin-top: 5%;
-                
                 display: flex;
-                margin-bottom: 6%;
+                margin-top: 2%;
                 .logo-img{
                     max-width: 18%;
                     flex: 1 18%;

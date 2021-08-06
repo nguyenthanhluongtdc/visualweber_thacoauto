@@ -6,7 +6,7 @@
                 <div class="mechanical-contact__content__top row">
                     <div class="left col-md-4">
                         <div class="address font20">
-                            <span class="text">KHU CÔNG NGHIỆP TAM HIỆP, HUYỆN NÚI THÀNH, QUẢNG NAM</span>
+                            <span class="text">KHU CÔNG NGHIỆP TAM HIỆP, HUYỆN NÚI THÀNH, QUẢNG NAM.</span>
                         </div>
                         <div class="phone font20">
                             <span class="text">0235.3567.16 - 0235.3567.162<br>

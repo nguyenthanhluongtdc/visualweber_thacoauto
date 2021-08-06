@@ -125,6 +125,18 @@
             padding: 20px 30px;
             color: #878c94;
             min-height: 220px;
+            @media(max-width : 1680px){
+                min-height: 180px;
+            }
+            @media(max-width : 1440px){
+                min-height: 150px;
+            }
+            @media(max-width : 1366px){
+                min-height: 130px;
+            }
+            @media(max-width : 1199px){
+                min-height: 120px;
+            }
             span{
                 color: #1777f2;
             }

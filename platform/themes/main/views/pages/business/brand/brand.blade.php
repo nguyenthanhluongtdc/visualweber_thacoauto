@@ -110,7 +110,7 @@
                   <label for="tabsix" class="font-pri font18">Xe ghế ngồi</label>
                 <div class="tab">
                     <h1  class="font-pri-bold font20 mb-3">Lorem ipsum sit amet consectetur adipisicing elit. Officiis, vitae.</h1>
-                    <p  class="font-pri font18">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident vel a error. Nemo inventore reprehenderit doloremque quo, quia culpa impedit, expedita harum, quas quaerat magni! Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, iure.</p>
+                    <p  class="font-pri font18">Lorem ipsum dolor sit amet, consectaccwdcetur adipisicing elit. Provident vel a error. Nemo inventore reprehenderit doloremque quo, quia culpa impedit, expedita harum, quas quaerat magni! Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, iure.</p>
                     <div class="brand-logo">
                         <div class="logo-img">
                             <a href="#"><img src="{{Theme::asset()->url('images/business/thacobus.jpg')}}" alt="" ></a>

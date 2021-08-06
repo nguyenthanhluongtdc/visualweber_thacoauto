@@ -3,6 +3,7 @@
 register_page_template([
     'no-sidebar' => __('No sidebar'),
     'default' => 'Default',
+    'custom-page' => 'Custom page',
     'posts' => 'Posts',
     'media-event' => 'Media Event',
     'media-newspapers' => 'Media newspapers',

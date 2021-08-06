@@ -26,6 +26,7 @@ register_page_template([
     'general-manufacturing' => 'General Manufacturing',
     'mechanical' => 'Mechanical',
     'brand' => 'Brand',
+    'support-industry' => 'Support-industry',
 ]);
 
 register_sidebar([

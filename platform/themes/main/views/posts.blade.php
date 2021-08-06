@@ -5,12 +5,12 @@
         <div class="media-top-item">
             <div class="item-img">
                 <div class="post-thumbnail">
-                    <a href=""><img src="{{ Theme::asset()->url('images/media/post1.jpg') }}" alt=""></a>
+                    <a href="/cong-ty-tnhh-mtv-dong-phuoc-dau-tu-5-xe-mini-bus-iveco-daily-1"><img src="{{ Theme::asset()->url('images/media/post1.jpg') }}" alt=""></a>
                 </div>
             </div>
             <div class="item-content">
                 <h4 class="title font-pri-bold font30">
-                    <a href="#">CÔNG TY TNHH MTV ĐỒNG PHƯỚC ĐẦU TƯ 5 XE MINI BUS IVECO DAILY</a>
+                    <a href="/cong-ty-tnhh-mtv-dong-phuoc-dau-tu-5-xe-mini-bus-iveco-daily-1">CÔNG TY TNHH MTV ĐỒNG PHƯỚC ĐẦU TƯ 5 XE MINI BUS IVECO DAILY</a>
                 </h4>
                 <p class="desc font-pri font20">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
@@ -29,12 +29,12 @@
         <div class="media-top-item">
             <div class="item-img">
                 <div class="post-thumbnail">
-                <a href=""><img src="{{ Theme::asset()->url('images/media/post2.jpg') }}" alt=""></a>
+                <a href="/cong-ty-tnhh-mtv-dong-phuoc-dau-tu-5-xe-mini-bus-iveco-daily-1"><img src="{{ Theme::asset()->url('images/media/post2.jpg') }}" alt=""></a>
                 </div>
             </div>
             <div class="item-content">
                 <h4 class="title font-pri-bold font30">
-                    <a href="#">CÔNG TY TNHH MTV ĐỒNG PHƯỚC ĐẦU TƯ 5 XE MINI BUS IVECO DAILY</a>
+                    <a href="/cong-ty-tnhh-mtv-dong-phuoc-dau-tu-5-xe-mini-bus-iveco-daily-1">CÔNG TY TNHH MTV ĐỒNG PHƯỚC ĐẦU TƯ 5 XE MINI BUS IVECO DAILY</a>
                 </h4>
                 <p class="desc font-pri font20">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
@@ -53,12 +53,12 @@
         <div class="media-top-item">
             <div class="item-img">
                 <div class="post-thumbnail">
-                <a href=""><img src="{{ Theme::asset()->url('images/media/post3.jpg') }}" alt=""></a>
+                <a href="/cong-ty-tnhh-mtv-dong-phuoc-dau-tu-5-xe-mini-bus-iveco-daily-1"><img src="{{ Theme::asset()->url('images/media/post3.jpg') }}" alt=""></a>
                 </div>
             </div>
             <div class="item-content">
                 <h4 class="title font-pri-bold font30">
-                    <a href="#">CÔNG TY TNHH MTV ĐỒNG PHƯỚC ĐẦU TƯ 5 XE MINI BUS IVECO DAILY</a>
+                    <a href="/cong-ty-tnhh-mtv-dong-phuoc-dau-tu-5-xe-mini-bus-iveco-daily-1">CÔNG TY TNHH MTV ĐỒNG PHƯỚC ĐẦU TƯ 5 XE MINI BUS IVECO DAILY</a>
                 </h4>
                 <p class="desc font-pri font20">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore

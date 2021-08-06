@@ -59,7 +59,8 @@
 
             <div class="search-language">
                 <div class="search">
-                    <img src="{{ Theme::asset()->url('images/main/search.png') }}" alt="">
+                    <a href="/search"><img src="{{ Theme::asset()->url('images/main/search.png') }}" alt=""></a>
+                    
                 </div>
                 <div class="language">
                     <ul class="nav-lang">

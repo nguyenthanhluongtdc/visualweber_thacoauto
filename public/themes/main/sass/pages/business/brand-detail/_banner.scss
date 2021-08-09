@@ -1,6 +1,22 @@
 .section-brand-list{
     .brand-list__banner{
-        height: 80vh;
+        margin-top: -110px;
+        @media(max-width: 1680px) {
+            margin-top: -100px;
+        }
+        @media(max-width: 1620px) {
+            margin-top: -95px;
+        }
+        @media(max-width: 1520px) {
+            margin-top: -90px;
+        }
+        @media(max-width: 1440px) {
+            margin-top: -80px;
+        }
+        @media(max-width: 1199px) {
+            margin-top: -70px;
+        }
+        height: 100vh;
         position: relative;
         &__img{
             width: 100%;

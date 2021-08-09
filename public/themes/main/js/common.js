@@ -217,6 +217,16 @@ var Helper = {
           $('.provinces-select2').select2({minimumResultsForSearch: Infinity});
         }
     },
+    RangeFilterBranddetail: function(){
+        var range = $("#myRange").attr("value");
+        $(".filter-value").html(range);
+        $(document).on('input change', '#myRange', function() {
+            $('.filter-value').html( $(this).val() );
+            var slideWidth = $(this).val() * 100 / 20000000000;
+            $(".slider-range__line").css("width", "calc(" + slideWidth + "% - " + slideWidth/7.5 + "px)");
+            $(".slider-range__button").css("left", slideWidth + "%");
+        });
+    },
     changeColorHeader: function () {
         var url = window.location.href;
         var originUrl = window.location.origin;
@@ -250,8 +260,9 @@ $(document).ready(function () {
     AOS.init();
     Helper.addSelect2toNewsFilter();
     Helper.transitionHeaderFixed();
-    Helper.changeColorHeader();
+    //Helper.changeColorHeader();
     Helper.addSelect2toCarFilterProvinces();
+    Helper.RangeFilterBranddetail();
 });
 
 $(document).ready(function(){

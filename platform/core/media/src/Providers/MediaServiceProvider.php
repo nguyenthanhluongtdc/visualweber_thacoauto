@@ -31,6 +31,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\ServiceProvider;
 use League\Flysystem\AwsS3v3\AwsS3Adapter;
 use League\Flysystem\Filesystem;
+use RvMedia;
 
 /**
  * @since 02/07/2016 09:50 AM
@@ -157,11 +158,10 @@ class MediaServiceProvider extends ServiceProvider
         ]);
 
         $this->app->booted(function () {
-            if ($this->app->make('config')->get('core.media.media.chunk.clear.schedule.enabled')) {
+            if (RvMedia::getConfig('chunk.clear.schedule.enabled')) {
                 $schedule = $this->app->make(Schedule::class);
 
-                $schedule->command('cms:media:chunks:clear')
-                    ->cron($this->app->make('config')->get('core.media.media.chunk.clear.schedule.cron'));
+                $schedule->command('cms:media:chunks:clear')->cron(RvMedia::getConfig('chunk.clear.schedule.cron'));
             }
         });
 

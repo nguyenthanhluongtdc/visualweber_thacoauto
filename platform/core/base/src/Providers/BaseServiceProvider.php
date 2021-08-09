@@ -2,6 +2,7 @@
 
 namespace Platform\Base\Providers;
 
+use App\Http\Middleware\VerifyCsrfToken;
 use Platform\Base\Exceptions\Handler;
 use Platform\Base\Facades\MacroableModelsFacade;
 use Platform\Base\Http\Middleware\CoreMiddleware;
@@ -18,6 +19,7 @@ use Platform\Base\Supports\Helper;
 use Platform\Base\Traits\LoadAndPublishDataTrait;
 use Platform\Setting\Providers\SettingServiceProvider;
 use Platform\Setting\Supports\SettingStore;
+use Platform\Support\Http\Middleware\BaseMiddleware;
 use DateTimeZone;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Contracts\Container\BindingResolutionException;
@@ -124,6 +126,10 @@ class BaseServiceProvider extends ServiceProvider
         $router->aliasMiddleware('preventDemo', DisableInDemoModeMiddleware::class);
         $router->middlewareGroup('core', [CoreMiddleware::class]);
 
+        if ($this->app->environment('demo')) {
+            $this->app->instance(VerifyCsrfToken::class, new BaseMiddleware);
+        }
+
         $this->app->booted(function () {
             do_action(BASE_ACTION_INIT);
             add_action(BASE_ACTION_META_BOXES, [MetaBox::class, 'doMetaBoxes'], 8, 2);
@@ -216,7 +222,7 @@ class BaseServiceProvider extends ServiceProvider
             if (false === Helper::isIniValueChangeable('memory_limit')) {
                 $memoryLimit = $currentLimit;
             } else {
-                $memoryLimit = '32M';
+                $memoryLimit = '64M';
             }
         }
 

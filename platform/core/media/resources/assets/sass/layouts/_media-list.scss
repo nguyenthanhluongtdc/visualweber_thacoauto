@@ -1,4 +1,6 @@
 /*Table*/
+@use "sass:math";
+
 .rv-media-list {
     border-bottom: 1px solid $color-lighter-black;
 
@@ -69,7 +71,7 @@
 
     li {
         display: block;
-        width: percentage(1px/8px);
+        width: percentage(math.div(1px, 8px));
         margin-bottom: 15px;
         float: left;
         padding: 0 5px;
@@ -159,7 +161,7 @@
 
 .rv-media-grid-small-thumbnail {
     li {
-        width: percentage(1px/3px);
+        width: percentage(math.div(1px, 3px));
 
         .rv-media-item {
             display: flex;
@@ -247,13 +249,13 @@
 
 @media (max-width: $screen-md-max) {
     .rv-media-grid li {
-        width: percentage(1px/6px);
+        width: percentage(math.div(1px, 6px));
     }
 }
 
 @media (max-width: $screen-sm-max) {
     .rv-media-grid li {
-        width: percentage(1px/5px);
+        width: percentage(math.div(1px, 5px));
     }
 }
 

@@ -1,5 +1,5 @@
 {
-    "name": "botble/comment",
+    "name": "platform/comment",
     "description": "Comment plugin",
     "type": "package",
     "require": {

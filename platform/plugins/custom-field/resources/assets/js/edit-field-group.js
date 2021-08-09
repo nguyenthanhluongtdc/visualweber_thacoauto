@@ -167,7 +167,6 @@ class ManageCustomFields {
             defaultValue: $('#_options-defaultvalue_template').html(),
             defaultValueTextarea: $('#_options-defaultvaluetextarea_template').html(),
             placeholderText: $('#_options-placeholdertext_template').html(),
-            wysiwygToolbar: $('#_options-wysiwygtoolbar_template').html(),
             selectChoices: $('#_options-selectchoices_template').html(),
             buttonLabel: $('#_options-buttonlabel_template').html(),
             rows: $('#_options-rows_template').html()
@@ -195,7 +194,7 @@ class ManageCustomFields {
                     htmlSrc += FIELD_OPTIONS.defaultValueTextarea + FIELD_OPTIONS.placeholderText + FIELD_OPTIONS.rows;
                     break;
                 case 'wysiwyg':
-                    htmlSrc += FIELD_OPTIONS.defaultValueTextarea + FIELD_OPTIONS.wysiwygToolbar;
+                    htmlSrc += FIELD_OPTIONS.defaultValueTextarea;
                     break;
                 case 'select':
                     htmlSrc += FIELD_OPTIONS.selectChoices + FIELD_OPTIONS.defaultValue;
@@ -428,7 +427,6 @@ class ManageCustomFields {
                     defaultValue: $current.find('> .item-details > .options > .line[data-option=defaultvalue] input[type=text]').val() || null,
                     defaultValueTextarea: $current.find('> .item-details > .options > .line[data-option=defaultvaluetextarea] textarea').val() || null,
                     placeholderText: $current.find('> .item-details > .options > .line[data-option=placeholdertext] input[type=text]').val() || null,
-                    wysiwygToolbar: $current.find('> .item-details > .options > .line[data-option=wysiwygtoolbar] select').val() || null,
                     selectChoices: $current.find('> .item-details > .options > .line[data-option=selectchoices] textarea').val() || null,
                     buttonLabel: $current.find('> .item-details > .options > .line[data-option=buttonlabel] input[type=text]').val() || null,
                     rows: $current.find('> .item-details > .options > .line[data-option=rows] input[type=number]').val() || null

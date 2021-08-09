@@ -41,6 +41,11 @@ class PageForm extends FormAbstract
                     'data-counter' => 400,
                 ],
             ])
+            ->add('is_featured', 'onOff', [
+                'label'         => trans('core/base::forms.is_featured'),
+                'label_attr'    => ['class' => 'control-label'],
+                'default_value' => false,
+            ])
             ->add('content', 'editor', [
                 'label'      => trans('core/base::forms.content'),
                 'label_attr' => ['class' => 'control-label required'],
@@ -48,11 +53,6 @@ class PageForm extends FormAbstract
                     'placeholder'     => trans('core/base::forms.description_placeholder'),
                     'with-short-code' => true,
                 ],
-            ])
-            ->add('is_featured', 'onOff', [
-                'label'         => trans('core/base::forms.is_featured'),
-                'label_attr'    => ['class' => 'control-label'],
-                'default_value' => false,
             ])
             ->add('status', 'customSelect', [
                 'label'      => trans('core/base::tables.status'),

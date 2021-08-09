@@ -1,6 +1,6 @@
 <?php
 
-Route::group(['namespace' => 'Botble\Comment\Http\Controllers', 'middleware' => ['web', 'core']], function () {
+Route::group(['namespace' => 'Platform\Comment\Http\Controllers', 'middleware' => ['web', 'core']], function () {
 
     Route::group(['prefix' => BaseHelper::getAdminPrefix(), 'middleware' => 'auth'], function () {
 

@@ -1,23 +1,23 @@
 <?php
 
 
-namespace Botble\Comment\Http\Controllers\API;
+namespace Platform\Comment\Http\Controllers\API;
 
 
-use Botble\Base\Http\Controllers\BaseController;
-use Botble\Base\Http\Responses\BaseHttpResponse;
-use Botble\Comment\Models\Comment;
-use Botble\Comment\Repositories\Interfaces\CommentInterface;
-use Botble\Comment\Repositories\Interfaces\CommentLikeInterface;
-use Botble\Comment\Repositories\Interfaces\CommentRatingInterface;
-use Botble\Comment\Repositories\Interfaces\CommentRecommendInterface;
-use Botble\Comment\Repositories\Interfaces\CommentUserInterface;
-use Botble\Comment\Events\NewCommentEvent;
+use Platform\Base\Http\Controllers\BaseController;
+use Platform\Base\Http\Responses\BaseHttpResponse;
+use Platform\Comment\Models\Comment;
+use Platform\Comment\Repositories\Interfaces\CommentInterface;
+use Platform\Comment\Repositories\Interfaces\CommentLikeInterface;
+use Platform\Comment\Repositories\Interfaces\CommentRatingInterface;
+use Platform\Comment\Repositories\Interfaces\CommentRecommendInterface;
+use Platform\Comment\Repositories\Interfaces\CommentUserInterface;
+use Platform\Comment\Events\NewCommentEvent;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Validator;
-use Botble\Comment\Supports\CheckMemberCredentials;
+use Platform\Comment\Supports\CheckMemberCredentials;
 use RvMedia;
 
 class CommentFrontController extends BaseController

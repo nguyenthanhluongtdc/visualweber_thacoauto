@@ -1,9 +1,9 @@
 <?php
 
-namespace Botble\Comment\Listeners;
+namespace Platform\Comment\Listeners;
 
-use Botble\Comment\Events\NewCommentEvent;
-use Botble\Comment\Repositories\Interfaces\CommentInterface;
+use Platform\Comment\Events\NewCommentEvent;
+use Platform\Comment\Repositories\Interfaces\CommentInterface;
 use EmailHandler;
 use Illuminate\Contracts\Queue\ShouldQueue;
 

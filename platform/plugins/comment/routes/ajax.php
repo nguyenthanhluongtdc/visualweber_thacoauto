@@ -8,7 +8,7 @@ if (defined('THEME_MODULE_SCREEN_NAME')) {
     ], function () {
 
         Route::group([
-            'namespace' => 'Botble\Comment\Http\Controllers\AJAX',
+            'namespace' => 'Platform\Comment\Http\Controllers\AJAX',
         ], function () {
 
             Route::group([
@@ -28,7 +28,7 @@ if (defined('THEME_MODULE_SCREEN_NAME')) {
 
         Route::group([
             'as'        => 'comment.',
-            'namespace' => 'Botble\Comment\Http\Controllers\API',
+            'namespace' => 'Platform\Comment\Http\Controllers\API',
         ], function () {
 
             Route::group([

@@ -8,6 +8,12 @@ export class Helpers {
 
         window.initializedEditor = window.initializedEditor || 0;
 
+        let editor = 'ckeditor';
+
+        if (typeof tinymce != 'undefined') {
+            editor = 'tinymce';
+        }
+
         $elements.each((index, el) => {
             let $_self = $(el);
 
@@ -16,36 +22,21 @@ export class Helpers {
             window.initializedEditor++;
 
             setTimeout(() => {
-                config = $.extend(true, {
-                    forcePasteAsPlainText: true,
-                    allowedContent: true,
-                    htmlEncodeOutput: false,
-                    protectedSource: [
-                        /<\?[\s\S]*?\?>/g,
-                        /<%[\s\S]*?%>/g,
-                        /(<asp:[^\>]+>[\s|\S]*?<\/asp:[^\>]+>)|(<asp:[^\>]+\/>)/gi,
-                    ],
-                    filebrowserImageBrowseUrl: RV_MEDIA_URL.base + '?media-action=select-files&method=ckeditor&type=image',
-                    filebrowserImageUploadUrl: RV_MEDIA_URL.media_upload_from_editor + '?method=ckeditor&type=image&_token=' + $('meta[name="csrf-token"]').attr('content'),
-                    filebrowserWindowWidth: '768',
-                    filebrowserWindowHeight: '500',
-                    height: $_self.data('height') || '400px',
-                    toolbar: $_self.data('toolbar') || 'full',
-                }, config);
-
-                config = $.extend(true, config, $_self.data());
-
-                if (config.toolbar === 'basic') {
-                    config.toolbar = [['mode', 'Source', 'Image', 'TextColor', 'BGColor', 'Styles', 'Format', 'Font', 'FontSize', 'CreateDiv', 'PageBreak', 'Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', 'RemoveFormat']];
-                }
-
-                CKEDITOR.replace($_self.attr('id'), config);
+                (new EditorManagement).initEditor($_self, {}, editor);
             }, 100);
         });
     }
 
     static wysiwygGetContent($element) {
-        return CKEDITOR.instances[$element.attr('id')].getData();
+        if (typeof CKEDITOR != 'undefined') {
+            return CKEDITOR[$element.attr('id')].getData();
+        }
+
+        if (typeof tinymce != 'undefined') {
+            return tinymce.editors[$element.attr('id')].getContent();
+        }
+
+        return $element.val();
     }
 
     static arrayGet(array, key, defaultValue = null) {
@@ -240,10 +231,9 @@ class UseCustomFields {
             repeaterFieldLine: $('#_render_custom_field_repeater_line_template').html()
         };
 
-        let initWYSIWYG = ($element, type) => {
-            Helpers.wysiwyg($element, {
-                toolbar: type
-            });
+        let initWYSIWYG = ($element) => {
+            Helpers.wysiwyg($element);
+
             return $element;
         };
 
@@ -264,7 +254,7 @@ class UseCustomFields {
                 $appendTo.append($skeleton);
 
                 if (box.type === 'wysiwyg') {
-                    initWYSIWYG($skeleton.find('.meta-box-wrap .wysiwyg-editor'), box.options.wysiwygToolbar || 'basic');
+                    initWYSIWYG($skeleton.find('.meta-box-wrap .wysiwyg-editor'));
                 }
             });
         };
@@ -350,7 +340,7 @@ class UseCustomFields {
                 case 'wysiwyg':
                     result = result.replace(/__value__/gi, box.value || '');
 
-                    $(result).attr('data-toolbar', box.options.wysiwygToolbar || 'basic');
+                    $(result).attr('data-toolbar');
                     break;
             }
 
@@ -391,7 +381,7 @@ class UseCustomFields {
                 $appendTo.append($result);
 
                 if (item.type === 'wysiwyg') {
-                    initWYSIWYG($result.find('> .repeater-item-input .wysiwyg-editor'), item.options.wysiwygToolbar || 'basic');
+                    initWYSIWYG($result.find('> .repeater-item-input .wysiwyg-editor'));
                 }
             });
             return $appendTo;

@@ -76,7 +76,7 @@ Page Header
             margin: $header-sidebar-toggler-margin;
 
             .page-sidebar-closed.page-sidebar-closed-hide-logo & {
-                margin-right: ($sidebar-collapsed-width - $menu-toggler-size ) / 2;
+                margin-right: ($sidebar-collapsed-width - $menu-toggler-size ) * 0.5;
             }
         }
 

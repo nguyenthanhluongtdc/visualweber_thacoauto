@@ -219,7 +219,7 @@ class MediaFileRepository extends RepositoriesAbstract implements MediaFileInter
                  * @var Eloquent $query
                  */
                 $allMimes = [];
-                foreach (config('core.media.media.mime_types') as $key => $value) {
+                foreach (RvMedia::getConfig('mime_types') as $key => $value) {
                     if ($key == $params['filter']) {
                         return $query->whereIn('media_files.mime_type', $value);
                     }

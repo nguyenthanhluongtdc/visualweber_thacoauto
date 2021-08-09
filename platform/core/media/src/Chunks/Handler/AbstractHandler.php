@@ -6,6 +6,7 @@ use Platform\Media\Chunks\Save\AbstractSave;
 use Platform\Media\Chunks\Storage\ChunkStorage;
 use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
+use RvMedia;
 use Session;
 
 abstract class AbstractHandler
@@ -35,7 +36,7 @@ abstract class AbstractHandler
     {
         $this->request = $request;
         $this->file = $file;
-        $this->config = config('core.media.media.chunk');
+        $this->config = RvMedia::getConfig('chunk');
     }
 
     /**

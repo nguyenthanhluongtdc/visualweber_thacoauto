@@ -117,6 +117,23 @@ class DashboardMenu
     }
 
     /**
+     * @param string $id
+     * @param null|string $parentId
+     * @return bool
+     */
+    public function hasItem($id, $parentId = null): bool
+    {
+        if ($parentId) {
+            if (!isset($this->links[$parentId])) {
+                return false;
+            }
+            $id = $parentId . '.children.' . $id;
+        }
+        return Arr::has($this->links, $id . '.name');
+    }
+
+
+    /**
      * Rearrange links
      * @return Collection
      * @throws Exception

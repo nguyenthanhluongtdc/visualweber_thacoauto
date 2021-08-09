@@ -1,9 +1,9 @@
 <?php
 
-namespace Botble\Comment;
+namespace Platform\Comment;
 
 use Schema;
-use Botble\PluginManagement\Abstracts\PluginOperationAbstract;
+use Platform\PluginManagement\Abstracts\PluginOperationAbstract;
 
 class Plugin extends PluginOperationAbstract
 {

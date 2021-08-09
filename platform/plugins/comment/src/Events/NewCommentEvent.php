@@ -1,9 +1,9 @@
 <?php
 
-namespace Botble\Comment\Events;
+namespace Platform\Comment\Events;
 
-use Botble\Comment\Models\Comment;
-use Botble\Comment\Models\CommentUser;
+use Platform\Comment\Models\Comment;
+use Platform\Comment\Models\CommentUser;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;

@@ -1,15 +1,15 @@
 <?php
 
-namespace Botble\Comment\Tables;
+namespace Platform\Comment\Tables;
 
 use Auth;
 use BaseHelper;
-use Botble\Base\Enums\BaseStatusEnum;
-use Botble\Comment\Repositories\Interfaces\CommentUserInterface;
-use Botble\Table\Abstracts\TableAbstract;
+use Platform\Base\Enums\BaseStatusEnum;
+use Platform\Comment\Repositories\Interfaces\CommentUserInterface;
+use Platform\Table\Abstracts\TableAbstract;
 use Illuminate\Contracts\Routing\UrlGenerator;
 use Yajra\DataTables\DataTables;
-use Botble\Comment\Models\Comment;
+use Platform\Comment\Models\Comment;
 
 class CommentUserTable extends TableAbstract
 {

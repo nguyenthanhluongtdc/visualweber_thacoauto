@@ -16,7 +16,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Schema;
 use RvMedia;
 use Theme;
 use ZipArchive;
@@ -66,7 +65,7 @@ class TranslationController extends BaseController
         $groups = ['' => trans('plugins/translation::translation.choose_a_group')] + $groups;
         $numChanged = Translation::where('group', $group)->where('status', Translation::STATUS_CHANGED)->count();
 
-        $allTranslations = Translation::where('group', $group)->orderBy('key', 'asc')->get();
+        $allTranslations = Translation::where('group', $group)->orderBy('key')->get();
         $numTranslations = count($allTranslations);
         $translations = [];
         foreach ($allTranslations as $translation) {
@@ -84,7 +83,7 @@ class TranslationController extends BaseController
     }
 
     /**
-     * @return Collection
+     * @return array|Collection
      */
     protected function loadLocales()
     {
@@ -265,9 +264,7 @@ class TranslationController extends BaseController
             $this->removeLocaleInPath(resource_path('lang/vendor/packages'), $locale);
             $this->removeLocaleInPath(resource_path('lang/vendor/plugins'), $locale);
 
-            if (is_plugin_active('translation') && Schema::hasTable('translations')) {
-                DB::table('translations')->where('locale', $locale)->delete();
-            }
+            DB::table('translations')->where('locale', $locale)->delete();
         }
 
         return $response->setMessage(trans('core/base::notices.delete_success_message'));

@@ -1,9 +1,9 @@
 <?php
 
-namespace Botble\Comment\Repositories\Caches;
+namespace Platform\Comment\Repositories\Caches;
 
-use Botble\Comment\Repositories\Interfaces\CommentRecommendInterface;
-use Botble\Support\Repositories\Caches\CacheAbstractDecorator;
+use Platform\Comment\Repositories\Interfaces\CommentRecommendInterface;
+use Platform\Support\Repositories\Caches\CacheAbstractDecorator;
 
 class CommentRecommendCacheDecorator extends CacheAbstractDecorator implements CommentRecommendInterface
 {

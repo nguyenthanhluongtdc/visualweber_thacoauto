@@ -1,8 +1,8 @@
 <?php
 
-namespace Botble\Comment\Http\Requests;
+namespace Platform\Comment\Http\Requests;
 
-use Botble\Support\Http\Requests\Request;
+use Platform\Support\Http\Requests\Request;
 
 class LoginRequest extends Request
 {

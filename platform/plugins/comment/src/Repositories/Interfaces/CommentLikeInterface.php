@@ -1,10 +1,10 @@
 <?php
 
-namespace Botble\Comment\Repositories\Interfaces;
+namespace Platform\Comment\Repositories\Interfaces;
 
-use Botble\Comment\Models\Comment;
-use Botble\Comment\Models\CommentUser;
-use Botble\Support\Repositories\Interfaces\RepositoryInterface;
+use Platform\Comment\Models\Comment;
+use Platform\Comment\Models\CommentUser;
+use Platform\Support\Repositories\Interfaces\RepositoryInterface;
 
 interface CommentLikeInterface extends RepositoryInterface
 {

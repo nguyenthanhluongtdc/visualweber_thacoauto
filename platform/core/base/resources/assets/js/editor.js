@@ -1,9 +1,15 @@
 import CKEditorUploadAdapter from './ckeditor-upload-adapter';
 
 class EditorManagement {
+    constructor() {
+        this.CKEDITOR = {};
+        this.shortcodes = [];
+    }
+
     initCkEditor(element, extraConfig) {
+        const editor = document.querySelector('#' + element);
         ClassicEditor
-            .create(document.querySelector('#' + element), {
+            .create(editor, {
                 fontSize: {
                     options: [
                         9,
@@ -20,6 +26,38 @@ class EditorManagement {
                         24
                     ]
                 },
+                alignment: {
+                    options: [ 'left', 'right', 'center', 'justify' ]
+                },
+                shortcode: {
+                    onEdit: (shortcode, name = () => {}) => {
+                        let description = null;
+                        this.shortcodes.forEach(function (item) {
+                            if (item.key === name) {
+                                description = item.description;
+                                return true;
+                            }
+                        });
+
+                        this.shortcodeCallback({
+                            key: name,
+                            href: route('short-codes.ajax-get-admin-config', name),
+                            data: {
+                                code: shortcode,
+                            },
+                            description: description,
+                            update: true
+                        })
+                    },
+                    shortcodes: this.getShortcodesAvailable(editor),
+                    onCallback: (shortcode, options) => {
+                        this.shortcodeCallback({
+                            key: shortcode,
+                            href: options.url
+                        });
+                    }
+                },
+
                 heading: {
                     options: [
                         {model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph'},
@@ -46,7 +84,8 @@ class EditorManagement {
                         'bulletedList',
                         'numberedList',
                         '|',
-                        'codeBlock',
+                        'alignment',
+                        'shortcode',
                         'outdent',
                         'indent',
                         '|',
@@ -59,7 +98,8 @@ class EditorManagement {
                         'redo',
                         'findAndReplace',
                         'removeFormat',
-                        'sourceEditing'
+                        'sourceEditing',
+                        'codeBlock',
                     ]
                 },
                 language: 'en',
@@ -88,12 +128,14 @@ class EditorManagement {
                 };
 
                 // create function insert html
-                editor.insertHtml = (html) => {
+                editor.insertHtml = html => {
                     const viewFragment = editor.data.processor.toView(html);
                     const modelFragment = editor.data.toModel(viewFragment);
                     editor.model.insertContent(modelFragment);
                 }
+
                 window.editor = editor;
+
                 this.CKEDITOR[element] = editor;
 
                 const minHeight = $('#' + element).prop('rows') * 90;
@@ -119,13 +161,35 @@ class EditorManagement {
                 });
 
                 // insert media embed
-                editor.commands._commands.get("mediaEmbed").execute = function (url) {
+                editor.commands._commands.get('mediaEmbed').execute = url => {
                     editor.insertHtml(`[media url="${url}"][/media]`);
                 }
             })
             .catch(error => {
                 console.error(error);
             });
+    }
+
+    getShortcodesAvailable(editor) {
+        const $dropdown = $(editor).parents('.form-group').find('.add_shortcode_btn_trigger')?.next('.dropdown-menu');
+        const lists = [];
+
+        if ($dropdown) {
+            $dropdown.find('> li').each(function() {
+                let item = $(this).find('> a');
+                lists.push({
+                    key: item.data('key'),
+                    hasConfig: item.data('has-admin-config'),
+                    name: item.text(),
+                    url: item.attr('href'),
+                    description: item.data('description'),
+                });
+            });
+        }
+
+        this.shortcodes = lists;
+
+        return lists;
     }
 
     uploadImageFromEditor(blobInfo, callback) {
@@ -177,7 +241,7 @@ class EditorManagement {
                 $input.on('change', e => {
                     this.uploadImageFromEditor(e.target.files[0], callback);
 
-                })
+                });
             }
         });
     }
@@ -209,27 +273,29 @@ class EditorManagement {
         if ($ckEditor.length > 0) {
             current.initEditor($ckEditor, {}, 'ckeditor');
         }
+
         if ($tinyMce.length > 0) {
             current.initEditor($tinyMce, {}, 'tinymce');
         }
 
-        this.CKEDITOR = {};
-
         $(document).on('click', '.show-hide-editor-btn', event => {
             event.preventDefault();
             let _self = $(event.currentTarget);
-            let $result = $('#' + _self.data('result'));
+            const editorInstance = _self.data('result');
+
+            let $result = $('#' + editorInstance);
+
             if ($result.hasClass('editor-ckeditor')) {
-                if (this.CKEDITOR[_self.data('result')] && typeof this.CKEDITOR[_self.data('result')] !== 'undefined') {
-                    this.CKEDITOR[_self.data('result')].destroy();
-                    this.CKEDITOR[_self.data('result')] = null;
+                if (this.CKEDITOR[editorInstance] && typeof this.CKEDITOR[editorInstance] !== 'undefined') {
+                    this.CKEDITOR[editorInstance].destroy();
+                    this.CKEDITOR[editorInstance] = null;
                     $('.editor-action-item').not('.action-show-hide-editor').hide();
                 } else {
-                    current.initCkEditor(_self.data('result'), {}, 'ckeditor');
+                    current.initCkEditor(editorInstance, {}, 'ckeditor');
                     $('.editor-action-item').not('.action-show-hide-editor').show();
                 }
             } else if ($result.hasClass('editor-tinymce')) {
-                tinymce.execCommand('mceToggleEditor', false, _self.data('result'));
+                tinymce.execCommand('mceToggleEditor', false, editorInstance);
             }
         });
 
@@ -238,49 +304,76 @@ class EditorManagement {
         return this;
     }
 
+    shortcodeCallback(params = {}) {
+        const {
+            href,
+            key,
+            description = null,
+            data = {},
+            update = false,
+        } = params;
+        $('.short-code-admin-config').html('');
+
+        let $addShortcodeButton = $('.short_code_modal .add_short_code_btn');
+
+        if (update) {
+            $addShortcodeButton.text($addShortcodeButton.data('update-text'));
+        } else {
+            $addShortcodeButton.text($addShortcodeButton.data('add-text'));
+        }
+
+        if (description !== '' && description != null) {
+            $('.short_code_modal .modal-title strong').text(description);
+        }
+
+        $('.short_code_modal').modal('show');
+        $('.half-circle-spinner').show();
+
+        $.ajax({
+            type: 'GET',
+            data: data,
+            url: href,
+            success: res => {
+                if (res.error) {
+                    Botble.showError(res.message);
+                    return false;
+                }
+
+                $('.short-code-data-form').trigger('reset');
+                $('.short_code_input_key').val(key);
+                $('.half-circle-spinner').hide();
+                $('.short-code-admin-config').html(res.data);
+                Botble.initResources();
+                Botble.initMediaIntegrate();
+            },
+            error: data => {
+                Botble.handleError(data);
+            }
+        });
+    }
+
     manageShortCode() {
         const self = this;
         $('.list-shortcode-items li a').on('click', function (event) {
             event.preventDefault();
 
             if ($(this).data('has-admin-config') == '1') {
-                $('.short-code-admin-config').html('');
-                $('.short_code_modal').modal('show');
-                $('.half-circle-spinner').show();
 
-                $.ajax({
-                    type: 'GET',
-                    url: $(this).prop('href'),
-                    success: res => {
-                        if (res.error) {
-                            Botble.showError(res.message);
-                            return false;
-                        }
-
-                        $('.short-code-data-form').trigger('reset');
-                        $('.short_code_input_key').val($(this).data('key'));
-                        $('.half-circle-spinner').hide();
-                        $('.short-code-admin-config').html(res.data);
-                        Botble.initResources();
-                        Botble.initMediaIntegrate();
-                        if ($(this).data('description') !== '' && $(this).data('description') != null) {
-                            $('.short_code_modal .modal-title strong').text($(this).data('description'));
-                        }
-                    },
-                    error: data => {
-                        Botble.handleError(data);
-                    }
+                self.shortcodeCallback({
+                    href: $(this).prop('href'),
+                    key: $(this).data('key'),
+                    description: $(this).data('description'),
                 });
 
             } else {
+                const editorInstance = $('.add_shortcode_btn_trigger').data('result');
+
+                const shortcode = '[' + $(this).data('key') + '][/' + $(this).data('key') + ']';
+
                 if ($('.editor-ckeditor').length > 0) {
-                    self.CKEDITOR[$('.add_shortcode_btn_trigger').data('result')].insertHtml('[' + $(this).data('key') + '][/' + $(this).data('key') + ']');
+                    self.CKEDITOR[editorInstance].commands.execute('shortcode', shortcode);
                 } else {
-                    tinymce.get($('.add_shortcode_btn_trigger').data('result')).execCommand(
-                        'mceInsertContent',
-                        false,
-                        '[' + $(this).data('key') + '][/' + $(this).data('key') + ']'
-                    );
+                    tinymce.get(editorInstance).execCommand('mceInsertContent', false, shortcode);
                 }
             }
         });
@@ -331,14 +424,14 @@ class EditorManagement {
 
             const $shortCodeKey = $(this).closest('.short_code_modal').find('.short_code_input_key').val();
 
+            const editorInstance = $('.add_shortcode_btn_trigger').data('result');
+
+            const shortcode = '[' + $shortCodeKey + attributes + ']' + content + '[/' + $shortCodeKey + ']';
+
             if ($('.editor-ckeditor').length > 0) {
-                self.CKEDITOR[$('.add_shortcode_btn_trigger').data('result')].insertHtml('<div>[' + $shortCodeKey + attributes + ']' + content + '[/' + $shortCodeKey + ']</div>');
+                self.CKEDITOR[editorInstance].commands.execute('shortcode', shortcode);
             } else {
-                tinymce.get($('.add_shortcode_btn_trigger').data('result')).execCommand(
-                    'mceInsertContent',
-                    false,
-                    '<div>[' + $shortCodeKey + attributes + ']' + content + '[/' + $shortCodeKey + ']</div>'
-                );
+                tinymce.get(editorInstance).execCommand('mceInsertContent', false, shortcode);
             }
 
             $(this).closest('.modal').modal('hide');

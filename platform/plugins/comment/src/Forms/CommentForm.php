@@ -1,11 +1,11 @@
 <?php
 
-namespace Botble\Comment\Forms;
+namespace Platform\Comment\Forms;
 
-use Botble\Base\Forms\FormAbstract;
-use Botble\Base\Enums\BaseStatusEnum;
-use Botble\Comment\Http\Requests\CommentRequest;
-use Botble\Comment\Models\Comment;
+use Platform\Base\Forms\FormAbstract;
+use Platform\Base\Enums\BaseStatusEnum;
+use Platform\Comment\Http\Requests\CommentRequest;
+use Platform\Comment\Models\Comment;
 
 class CommentForm extends FormAbstract
 {

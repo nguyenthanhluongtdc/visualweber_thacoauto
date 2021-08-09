@@ -17,22 +17,22 @@ class LogViewerServiceProvider extends ServiceProvider
 
     public function register()
     {
-        $this->app->bind('botble::log-viewer', LogViewer::class);
+        $this->app->bind('platform::log-viewer', LogViewer::class);
 
         Helper::autoload(__DIR__ . '/../../helpers');
 
-        $this->app->singleton('botble::log-viewer.levels', function ($app) {
+        $this->app->singleton('platform::log-viewer.levels', function ($app) {
             return new Utilities\LogLevels($app['translator'], config('plugins.log-viewer.general.locale'));
         });
-        $this->app->bind(Contracts\Utilities\LogLevels::class, 'botble::log-viewer.levels');
+        $this->app->bind(Contracts\Utilities\LogLevels::class, 'platform::log-viewer.levels');
 
-        $this->app->singleton('botble::log-viewer.styler', Utilities\LogStyler::class);
-        $this->app->bind(Contracts\Utilities\LogStyler::class, 'botble::log-viewer.styler');
+        $this->app->singleton('platform::log-viewer.styler', Utilities\LogStyler::class);
+        $this->app->bind(Contracts\Utilities\LogStyler::class, 'platform::log-viewer.styler');
 
-        $this->app->singleton('botble::log-viewer.menu', Utilities\LogMenu::class);
-        $this->app->bind(Contracts\Utilities\LogMenu::class, 'botble::log-viewer.menu');
+        $this->app->singleton('platform::log-viewer.menu', Utilities\LogMenu::class);
+        $this->app->bind(Contracts\Utilities\LogMenu::class, 'platform::log-viewer.menu');
 
-        $this->app->singleton('botble::log-viewer.filesystem', function ($app) {
+        $this->app->singleton('platform::log-viewer.filesystem', function ($app) {
             $filesystem = new Utilities\Filesystem($app['files'], config('plugins.log-viewer.general.storage-path'));
 
             $filesystem->setPattern(
@@ -43,13 +43,13 @@ class LogViewerServiceProvider extends ServiceProvider
 
             return $filesystem;
         });
-        $this->app->bind(Contracts\Utilities\Filesystem::class, 'botble::log-viewer.filesystem');
+        $this->app->bind(Contracts\Utilities\Filesystem::class, 'platform::log-viewer.filesystem');
 
-        $this->app->singleton('botble::log-viewer.factory', Utilities\Factory::class);
-        $this->app->bind(Contracts\Utilities\Factory::class, 'botble::log-viewer.factory');
+        $this->app->singleton('platform::log-viewer.factory', Utilities\Factory::class);
+        $this->app->bind(Contracts\Utilities\Factory::class, 'platform::log-viewer.factory');
 
-        $this->app->singleton('botble::log-viewer.checker', Utilities\LogChecker::class);
-        $this->app->bind(Contracts\Utilities\LogChecker::class, 'botble::log-viewer.checker');
+        $this->app->singleton('platform::log-viewer.checker', Utilities\LogChecker::class);
+        $this->app->bind(Contracts\Utilities\LogChecker::class, 'platform::log-viewer.checker');
     }
 
     public function boot()

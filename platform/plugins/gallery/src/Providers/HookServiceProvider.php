@@ -23,7 +23,10 @@ class HookServiceProvider extends ServiceProvider
         if (function_exists('shortcode')) {
             add_shortcode('gallery', trans('plugins/gallery::gallery.gallery_images'),
                 trans('plugins/gallery::gallery.add_gallery_short_code'), [$this, 'render']);
-            shortcode()->setAdminConfig('gallery', view('plugins/gallery::partials.short-code-admin-config')->render());
+            shortcode()->setAdminConfig('gallery', function ($attributes, $content) {
+                return view('plugins/gallery::partials.short-code-admin-config', compact('attributes', 'content'))
+                    ->render();
+            });
         }
 
         add_filter(BASE_FILTER_PUBLIC_SINGLE_DATA, [$this, 'handleSingleView'], 11);

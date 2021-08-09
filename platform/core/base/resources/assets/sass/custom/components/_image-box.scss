@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 .custom-image-box {
     position: relative;
     height: 0;
@@ -39,7 +41,7 @@
 .list-gallery-media-images {
     > li {
         float: left;
-        width: percentage(1px/8px);
+        width: percentage(math.div(1px, 8px));
         position: relative;
     }
 }

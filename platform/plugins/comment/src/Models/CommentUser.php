@@ -1,10 +1,10 @@
 <?php
 
-namespace Botble\Comment\Models;
+namespace Platform\Comment\Models;
 
-use Botble\Base\Supports\Avatar;
-use Botble\Base\Traits\EnumCastable;
-use Botble\Media\Models\MediaFile;
+use Platform\Base\Supports\Avatar;
+use Platform\Base\Traits\EnumCastable;
+use Platform\Media\Models\MediaFile;
 use Illuminate\Container\Container;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Laravel\Passport\PersonalAccessTokenFactory;

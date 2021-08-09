@@ -41,7 +41,16 @@ class RequestLogController extends BaseController
     public function getWidgetRequestErrors(Request $request, BaseHttpResponse $response)
     {
         $limit = (int)$request->input('paginate', 10);
-        $requests = $this->requestLogRepository->getModel()->paginate($limit);
+        $limit = $limit > 0 ? $limit : 10;
+
+        $requests = $this->requestLogRepository
+            ->advancedGet([
+                'order_by' => ['created_at' => 'DESC'],
+                'paginate' => [
+                    'per_page'      => $limit,
+                    'current_paged' => (int)$request->input('page', 1),
+                ],
+            ]);
 
         return $response
             ->setData(view('plugins/request-log::widgets.request-errors', compact('requests', 'limit'))->render());

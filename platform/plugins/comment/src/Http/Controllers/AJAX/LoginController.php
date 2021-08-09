@@ -1,11 +1,11 @@
 <?php
 
-namespace Botble\Comment\Http\Controllers\AJAX;
+namespace Platform\Comment\Http\Controllers\AJAX;
 
 use App\Http\Controllers\Controller;
-use Botble\ACL\Traits\AuthenticatesUsers;
-use Botble\ACL\Traits\LogoutGuardTrait;
-use Botble\Base\Http\Responses\BaseHttpResponse;
+use Platform\ACL\Traits\AuthenticatesUsers;
+use Platform\ACL\Traits\LogoutGuardTrait;
+use Platform\Base\Http\Responses\BaseHttpResponse;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 

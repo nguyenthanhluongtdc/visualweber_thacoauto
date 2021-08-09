@@ -1,14 +1,14 @@
 <?php
 
 
-namespace Botble\Comment\Providers;
+namespace Platform\Comment\Providers;
 
-use Botble\ACL\Models\User;
-use Botble\Blog\Models\Post;
-use Botble\Comment\Repositories\Interfaces\CommentInterface;
-use Botble\Comment\Repositories\Interfaces\CommentRatingInterface;
+use Platform\ACL\Models\User;
+use Platform\Blog\Models\Post;
+use Platform\Comment\Repositories\Interfaces\CommentInterface;
+use Platform\Comment\Repositories\Interfaces\CommentRatingInterface;
 use RvMedia;
-use Botble\Member\Models\Member;
+use Platform\Member\Models\Member;
 use Illuminate\Support\ServiceProvider;
 use MacroableModels;
 use Theme;
@@ -143,6 +143,9 @@ class HookServiceProvider extends ServiceProvider
 
     protected function addSchemas(&$html)
     {
+
+        if (!setting('plugin_comment_rating', true)) return;
+
         $schemaJson = array (
             '@context' => 'http://schema.org',
             '@type' => 'NewsArticle',
@@ -163,13 +166,15 @@ class HookServiceProvider extends ServiceProvider
                 'description' => $post->description,
                 'name' => $post->name,
                 'image' => RvMedia::getImageUrl($post->image),
-                'aggregateRating' =>
-                    array (
-                        '@type' => 'AggregateRating',
-                        'ratingValue' => $ratingData['rating'],
-                        'reviewCount' => $ratingData['count'],
-                    ),
             ]);
+
+            if ($ratingData['count'] > 0) {
+                $schemaJson['aggregateRating'] = array (
+                    '@type' => 'AggregateRating',
+                    'ratingValue' => $ratingData['rating'],
+                    'reviewCount' => $ratingData['count'],
+                );
+            }
 
             $html .= '<script type="application/ld+json">'. json_encode($schemaJson) .'</script>';
 

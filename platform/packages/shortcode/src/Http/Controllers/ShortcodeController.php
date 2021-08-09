@@ -5,6 +5,7 @@ namespace Platform\Shortcode\Http\Controllers;
 use Platform\Base\Http\Controllers\BaseController;
 use Platform\Base\Http\Responses\BaseHttpResponse;
 use Closure;
+use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 
 class ShortcodeController extends BaseController
@@ -14,14 +15,27 @@ class ShortcodeController extends BaseController
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
      */
-    public function ajaxGetAdminConfig($key, BaseHttpResponse $response)
+    public function ajaxGetAdminConfig($key, Request $request, BaseHttpResponse $response)
     {
         $registered = shortcode()->getAll();
 
         $data = Arr::get($registered, $key . '.admin_config');
-        if ($data instanceof Closure) {
-            $data = call_user_func($data);
+
+        $code = $request->input('code');
+
+        $attributes = [];
+        $content = null;
+
+        if ($code) {
+            $compiler = shortcode()->getCompiler();
+            $attributes = $compiler->getAttributes(html_entity_decode($code));
+            $content = $compiler->getContent();
         }
+
+        if ($data instanceof Closure) {
+            $data = call_user_func($data, $attributes, $content);
+        }
+
         $data = apply_filters(SHORTCODE_REGISTER_CONTENT_IN_ADMIN, $data, $key);
 
         return $response->setData($data);

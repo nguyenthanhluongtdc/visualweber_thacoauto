@@ -1,6 +1,6 @@
 <?php
 
-namespace Botble\Comment\Supports;
+namespace Platform\Comment\Supports;
 
 use Illuminate\Foundation\Application;
 use Illuminate\Http\Request;

@@ -4,7 +4,7 @@ if (defined('THEME_MODULE_SCREEN_NAME')) {
 
     Route::group([
         'prefix'     => 'api/v1/comments',
-        'namespace'  => 'Botble\Comment\Http\Controllers\API',
+        'namespace'  => 'Platform\Comment\Http\Controllers\API',
         'middleware' => ['api'],
     ], function () {
 

@@ -3,6 +3,7 @@
 namespace Platform\Base\Helpers;
 
 use Carbon\Carbon;
+use Illuminate\Database\Query\Builder;
 
 class BaseHelper
 {
@@ -123,5 +124,27 @@ class BaseHelper
         $homepageId = $this->getHomepageId();
 
         return $pageId && $homepageId && $pageId == $homepageId;
+    }
+
+    /**
+     * @param Builder $query
+     * @param string $table
+     * @return bool
+     */
+    public function isJoined($query, $table): bool
+    {
+        $joins = $query->getQuery()->joins;
+
+        if ($joins == null) {
+            return false;
+        }
+
+        foreach ($joins as $join) {
+            if ($join->table == $table) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }

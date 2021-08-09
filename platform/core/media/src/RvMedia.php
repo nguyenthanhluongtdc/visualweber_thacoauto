@@ -72,7 +72,7 @@ class RvMedia
         $this->uploadManager = $uploadManager;
         $this->thumbnailService = $thumbnailService;
 
-        $this->permissions = config('core.media.media.permissions', []);
+        $this->permissions = $this->getConfig('permissions', []);
     }
 
     /**
@@ -176,7 +176,7 @@ class RvMedia
      */
     public function getSizes(): array
     {
-        return config('core.media.media.sizes', []);
+        return $this->getConfig('sizes', []);
     }
 
     /**
@@ -255,7 +255,7 @@ class RvMedia
      */
     public function getDefaultImage(bool $relative = false): string
     {
-        $default = config('core.media.media.default_image');
+        $default = $this->getConfig('default_image');
 
         if (setting('media_default_placeholder_image')) {
             $default = $this->url(setting('media_default_placeholder_image'));
@@ -274,7 +274,7 @@ class RvMedia
      */
     public function getSize(string $name): ?string
     {
-        return config('core.media.media.sizes.' . $name);
+        return $this->getConfig('sizes.' . $name);
     }
 
     /**
@@ -443,8 +443,10 @@ class RvMedia
      */
     public function handleUpload($fileUpload, $folderId = 0, $folderSlug = null, $skipValidation = false): array
     {
-        if (request()->input('path')) {
-            $folderId = $this->handleTargetFolder($folderId, request()->input('path'));
+        $request = request();
+
+        if ($request->input('path')) {
+            $folderId = $this->handleTargetFolder($folderId, $request->input('path'));
         }
 
         if (!$fileUpload) {
@@ -454,11 +456,9 @@ class RvMedia
             ];
         }
 
-        $allowedMimeTypes = config('core.media.media.allowed_mime_types');
+        $allowedMimeTypes = $this->getConfig('allowed_mime_types');
 
-        $request = request();
-
-        if (!config('core.media.media.chunk.enabled')) {
+        if (!$this->isChunkUploadEnabled()) {
             $request->merge(['uploaded_file' => $fileUpload]);
 
             if (!$skipValidation) {
@@ -620,27 +620,27 @@ class RvMedia
                 ->save();
         }
 
-        if (setting('media_watermark_enabled', config('core.media.media.watermark.enabled'))) {
+        if (setting('media_watermark_enabled', $this->getConfig('watermark.enabled'))) {
             $image = Image::make($this->getRealPath($file->url));
             $watermark = Image::make($this->getRealPath(setting('media_watermark_source',
-                config('core.media.media.watermark.source'))));
+                $this->getConfig('watermark.source'))));
 
             // 10% less then an actual image (play with this value)
             // Watermark will be 10 less then the actual width of the image
             $watermarkSize = round($image->width() * (setting('media_watermark_size',
-                        config('core.media.media.watermark.size')) / 100), 2);
+                        $this->getConfig('watermark.size')) / 100), 2);
 
             // Resize watermark width keep height auto
             $watermark
                 ->resize($watermarkSize, null, function ($constraint) {
                     $constraint->aspectRatio();
                 })
-                ->opacity(setting('media_watermark_opacity', config('core.media.media.watermark.opacity')));
+                ->opacity(setting('media_watermark_opacity', $this->getConfig('watermark.opacity')));
 
             $image->insert($watermark,
-                setting('media_watermark_position', config('core.media.media.watermark.position')),
-                setting('watermark_position_x', config('core.media.media.watermark.x')),
-                setting('watermark_position_y', config('core.media.media.watermark.y'))
+                setting('media_watermark_position', $this->getConfig('watermark.position')),
+                setting('watermark_position_x', $this->getConfig('watermark.x')),
+                setting('watermark_position_y', $this->getConfig('watermark.y'))
             );
 
             $destinationPath = sprintf('%s/%s', trim(File::dirname($file->url), '/'),
@@ -664,6 +664,7 @@ class RvMedia
                 return Storage::path($url);
             case 's3':
             case 'do_spaces':
+            case 'wasabi':
                 return Storage::url($url);
         }
 
@@ -879,5 +880,29 @@ class RvMedia
         }
 
         return $folderId;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isChunkUploadEnabled()
+    {
+        return $this->getConfig('chunk.enabled') == '1';
+    }
+
+    /**
+     * @param null $key
+     * @param null $default
+     * @return array|\ArrayAccess|\Illuminate\Config\Repository|\Illuminate\Contracts\Foundation\Application|mixed
+     */
+    public function getConfig($key = null, $default = null)
+    {
+        $configs = config('core.media.media');
+
+        if (!$key) {
+            return $configs;
+        }
+
+        return Arr::get($configs, $key, $default);
     }
 }

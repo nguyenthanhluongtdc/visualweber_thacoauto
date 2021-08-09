@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Botble\Comment\Providers;
+namespace Platform\Comment\Providers;
 
-use Botble\Comment\Events\NewCommentEvent;
-use Botble\Comment\Listeners\NewCommentListener;
+use Platform\Comment\Events\NewCommentEvent;
+use Platform\Comment\Listeners\NewCommentListener;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 
 class EventServiceProvider extends ServiceProvider

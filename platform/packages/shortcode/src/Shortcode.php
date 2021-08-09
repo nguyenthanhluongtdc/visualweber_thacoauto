@@ -124,4 +124,12 @@ class Shortcode
 
         return '[' . $name . $parsedAttributes . '][/' . $name . ']';
     }
+
+    /**
+     * @return ShortcodeCompiler
+     */
+    public function getCompiler()
+    {
+        return $this->compiler;
+    }
 }

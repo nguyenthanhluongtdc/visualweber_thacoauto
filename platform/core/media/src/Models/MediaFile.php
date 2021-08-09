@@ -75,7 +75,7 @@ class MediaFile extends BaseModel
     {
         $type = 'document';
 
-        foreach (config('core.media.media.mime_types', []) as $key => $value) {
+        foreach (RvMedia::getConfig('mime_types', []) as $key => $value) {
             if (in_array($this->attributes['mime_type'], $value)) {
                 $type = $key;
                 break;

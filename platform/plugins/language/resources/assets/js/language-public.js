@@ -1,19 +1,24 @@
 class LanguagePublicManagement {
     init() {
-        $('.language-wrapper .dropdown .dropdown-toggle').on('click', event => {
+        $('.language-wrapper .dropdown .dropdown-toggle').off('click').on('click', event => {
             event.preventDefault();
-            if ($(event.currentTarget).hasClass('active')) {
-                $('.language-wrapper .dropdown .dropdown-menu').hide();
-                $(event.currentTarget).removeClass('active');
+            let _self = $(event.currentTarget);
+
+            if (_self.hasClass('active')) {
+                _self.closest('.language-wrapper').find('.dropdown .dropdown-menu').hide();
+                _self.removeClass('active');
             } else {
-                $('.language-wrapper .dropdown .dropdown-menu').show();
-                $(event.currentTarget).addClass('active');
+                _self.closest('.language-wrapper').find('.dropdown .dropdown-menu').show();
+                _self.addClass('active');
             }
         });
+
         $(document).on('click', event => {
-            if ($(event.currentTarget).closest('.language-wrapper').length === 0) {
-                $('.language-wrapper .dropdown .dropdown-menu').hide();
-                $('.language-wrapper .dropdown .dropdown-toggle').removeClass('active');
+            let _self = $(event.currentTarget);
+
+            if (_self.closest('.language-wrapper').length === 0) {
+                _self.closest('.language-wrapper').find('.dropdown .dropdown-menu').hide();
+                _self.closest('.language-wrapper').find('.dropdown .dropdown-toggle').removeClass('active');
             }
         });
     }

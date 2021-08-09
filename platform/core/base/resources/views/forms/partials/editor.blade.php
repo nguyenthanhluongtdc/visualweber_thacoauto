@@ -53,7 +53,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button class="float-left btn btn-secondary" data-dismiss="modal">{{ trans('core/base::tables.cancel') }}</button>
-                                    <button class="float-right btn btn-primary add_short_code_btn">{{ trans('core/base::forms.add') }}</button>
+                                    <button class="float-right btn btn-primary add_short_code_btn" data-add-text="{{ trans('core/base::forms.add') }}" data-update-text="{{ trans('core/base::forms.update') }}">{{ trans('core/base::forms.add') }}</button>
                                 </div>
                             </div>
                         </div>

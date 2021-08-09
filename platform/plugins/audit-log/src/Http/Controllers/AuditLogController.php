@@ -41,6 +41,7 @@ class AuditLogController extends BaseController
     public function getWidgetActivities(BaseHttpResponse $response, Request $request)
     {
         $limit = (int)$request->input('paginate', 10);
+        $limit = $limit > 0 ? $limit : 10;
 
         $histories = $this->auditLogRepository
             ->advancedGet([
@@ -48,7 +49,7 @@ class AuditLogController extends BaseController
                 'order_by' => ['created_at' => 'DESC'],
                 'paginate' => [
                     'per_page'      => $limit,
-                    'current_paged' => 1,
+                    'current_paged' => (int)$request->input('page', 1),
                 ],
             ]);
 

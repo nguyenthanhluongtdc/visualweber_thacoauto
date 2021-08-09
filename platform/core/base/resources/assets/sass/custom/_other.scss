@@ -599,9 +599,8 @@ h4.modal-title {
 
 .repeater-group {
     .repeater-item-group {
-        padding: 10px;
         border: 1px solid #aaaaaa;
-        padding-right: 45px;
+        padding: 10px 45px 10px 10px;
     }
 
     .remove-item-button {
@@ -627,5 +626,19 @@ h4.modal-title {
                 font-weight: 500;
             }
         }
+    }
+}
+
+.short_code_modal {
+    .modal-body {
+        max-height: calc(100vh - 300px);
+        overflow-y: scroll;
+    }
+}
+
+.list-shortcode-items {
+    .dropdown-menu {
+        max-height: calc(100vh - 300px);
+        overflow-y: scroll;
     }
 }

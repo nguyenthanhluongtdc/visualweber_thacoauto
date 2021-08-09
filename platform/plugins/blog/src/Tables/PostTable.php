@@ -11,7 +11,6 @@ use Platform\Table\Abstracts\TableAbstract;
 use Carbon\Carbon;
 use Html;
 use Illuminate\Contracts\Routing\UrlGenerator;
-use Illuminate\Database\Query\Builder;
 use Illuminate\Support\Facades\Auth;
 use Yajra\DataTables\DataTables;
 
@@ -235,7 +234,7 @@ class PostTable extends TableAbstract
      */
     public function getCategories(): array
     {
-        return $this->categoryRepository->pluck('categories.name', 'categories.id');
+        return $this->categoryRepository->pluck('name', 'id');
     }
 
     /**
@@ -257,7 +256,7 @@ class PostTable extends TableAbstract
                     break;
                 }
 
-                if (!$this->isJoined($query, 'post_categories')) {
+                if (!BaseHelper::isJoined($query, 'post_categories')) {
                     $query = $query
                         ->join('post_categories', 'post_categories.post_id', '=', 'posts.id')
                         ->join('categories', 'post_categories.category_id', '=', 'categories.id')
@@ -268,28 +267,6 @@ class PostTable extends TableAbstract
         }
 
         return parent::applyFilterCondition($query, $key, $operator, $value);
-    }
-
-    /**
-     * @param Builder $query
-     * @param string $table
-     * @return bool
-     */
-    protected function isJoined($query, $table)
-    {
-        $joins = $query->getQuery()->joins;
-
-        if ($joins == null) {
-            return false;
-        }
-
-        foreach ($joins as $join) {
-            if ($join->table == $table) {
-                return true;
-            }
-        }
-
-        return false;
     }
 
     /**

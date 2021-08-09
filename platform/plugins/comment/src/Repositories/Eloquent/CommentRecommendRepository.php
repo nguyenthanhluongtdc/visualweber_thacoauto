@@ -1,9 +1,9 @@
 <?php
 
-namespace Botble\Comment\Repositories\Eloquent;
+namespace Platform\Comment\Repositories\Eloquent;
 
-use Botble\Comment\Repositories\Interfaces\CommentRecommendInterface;
-use Botble\Support\Repositories\Eloquent\RepositoriesAbstract;
+use Platform\Comment\Repositories\Interfaces\CommentRecommendInterface;
+use Platform\Support\Repositories\Eloquent\RepositoriesAbstract;
 use Arr;
 
 class CommentRecommendRepository extends RepositoriesAbstract implements CommentRecommendInterface

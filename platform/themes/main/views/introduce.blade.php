@@ -212,7 +212,7 @@
                 <div class="section-system-value__content">
                     <div class="section-system-value__content__left">
                         <div class="__left__row" data-aos="fade-up" data-aos-delay="300">
-                            <h3 class="title font30">
+                            <h3 class="title font30 font-mi-bold">
                                 Tầm nhìn
                             </h3>
                             <p class="description">
@@ -220,7 +220,7 @@
                             </p>
                         </div>
                         <div class="__left__row" data-aos="fade-up" data-aos-delay="600">
-                            <h3 class="title font30">
+                            <h3 class="title font30 font-mi-bold">
                                 sứ mệnh
                             </h3>
                             <p class="description">
@@ -228,7 +228,7 @@
                             </p>
                         </div>
                         <div class="__left__row" data-aos="fade-up" data-aos-delay="900">
-                            <h3 class="title font30">
+                            <h3 class="title font30 font-mi-bold">
                                 định hướng chiến lược
                             </h3>
                             <p class="description">
@@ -406,8 +406,8 @@
 
             <div class="section-leader-room__row">
                 <div class="section-leader-room__row__header" data-aos="zoom-in">
-                    <span class="box">
-                        Hội đồng quản trị thaco auto
+                    <span class="box font25">
+                        Ban kiểm soát
                     </span>
                 </div>
                 <div class="section-leader-room__row__content row">
@@ -455,8 +455,8 @@
 
             <div class="section-leader-room__row">
                 <div class="section-leader-room__row__header" data-aos="zoom-in">
-                    <span class="box">
-                        Hội đồng quản trị thaco auto
+                    <span class="box font25">
+                        Ban tổng giám đốc
                     </span>
                 </div>
                 <div class="section-leader-room__row__content row">

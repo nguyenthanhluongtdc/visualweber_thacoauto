@@ -7,7 +7,7 @@ $('.partner-home-carousel').owlCarousel({
     stagePadding: 150,
     Horizontal: true,
     nav: true,
-
+    center: true,
     navText: [
         // "<div class='nav-btn prev-slide'><i class='fal fa-chevron-left'></i></div>",
         "<div class='nav-btn prev-slide'><img src='themes/main/images/main/left.png'></" +
@@ -75,7 +75,7 @@ var galleryThumbs = new Swiper('.distribution-slide-right', {
 galleryTop.controller.control = galleryThumbs;
 galleryThumbs.controller.control = galleryTop;
 
-var swiper = new Swiper(".product-intro__swiper", {
+var swiperProductIntro = new Swiper(".product-intro__swiper", {
     navigation: {
         nextEl: ".product-intro__swiper--next",
         prevEl: ".product-intro__swiper--prev",
@@ -85,10 +85,17 @@ var swiper = new Swiper(".product-intro__swiper", {
     },
 });
 
-var swiper = new Swiper(".detail-slide", {
+var swiperDetailSlide = new Swiper(".detail-slide", {
     pagination: {
         el: ".swiper-pagination",
         clickable: true
+    }
+});
+
+var swiperVideo = new Swiper(".video-introduce", {
+    pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: true
     }
 });
 
@@ -205,6 +212,11 @@ var Helper = {
         $('.js-example-disabled-results').select2({minimumResultsForSearch: Infinity});
       }
     },
+    addSelect2toCarFilterProvinces: function(){
+        if($('.provinces-select2').length > 0){
+          $('.provinces-select2').select2({minimumResultsForSearch: Infinity});
+        }
+    },
     changeColorHeader: function () {
         var url = window.location.href;
         var originUrl = window.location.origin;
@@ -239,6 +251,7 @@ $(document).ready(function () {
     Helper.addSelect2toNewsFilter();
     Helper.transitionHeaderFixed();
     Helper.changeColorHeader();
+    Helper.addSelect2toCarFilterProvinces();
 });
 
 $(document).ready(function(){
@@ -254,12 +267,5 @@ $(document).ready(function(){
         $('body, html').animate({
             scrollTop: $top
         }, 500);
-    });
-
-    var swiper = new Swiper(".video-introduce", {
-        pagination: {
-          el: ".swiper-pagination",
-          dynamicBullets: true,
-        },
     });
 });

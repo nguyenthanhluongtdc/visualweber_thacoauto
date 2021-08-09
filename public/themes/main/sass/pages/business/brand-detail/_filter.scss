@@ -1,0 +1,106 @@
+.section-car-filter{
+    .car-filter{
+        &--top{
+            display: flex;
+            justify-content: space-between;
+            .car-model{
+                display: flex;
+                &__item{
+                    width: 10.9vw;
+                    height: 2.7vw;
+                    margin-right: 0.15vw;
+                    background-color: #f6f6f6;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+            .pre-order{
+                width: 10.9vw;
+                height: 2.7vw;
+                margin-right: 0.15vw;
+                background-color: $color-primary;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color:white;
+            }
+        }
+        &--center{
+            display: flex;
+            justify-content: start;
+            .provinces-select2{
+                width: 10.9vw;
+                height: 2.7vw;
+            }
+            .select2-container{
+                font-size: 18px;
+                font-family: $font-primary;
+                line-height: 20px;
+                @media(max-width : 1680px){
+                    font-size: 16px;
+                }
+                @media(max-width : 1440px){
+                    font-size: 15px;
+                }
+                @media(max-width : 1366px){
+                    font-size: 14px;
+                }
+                @media(max-width : 1270px){
+                    font-size: 13px;
+                }
+            }
+            .select2-container--default{
+                .select2-selection--single .select2-selection__arrow{
+                    top: unset;
+                    right: 2%;
+                }
+                .select2-selection--single{
+                    background-color: #f6f6f6;
+                    width: 10.9vw;
+                    height: 2.7vw;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: none;
+                }
+                .select2-results__option {
+                    width: 10.9vw;
+                    height: 2.7vw;
+                }
+            }
+            .slider-range{
+                height: 2.7vw;
+                width: 41.1vw;
+                margin-left: 3vw;
+                display: flex;
+                align-items: center;
+                input[type=range] {
+                    position: relative;
+                    -webkit-appearance: none;
+                    width: 100%;
+                    height: 5px;
+                    background: #ddd;
+                    outline: none;
+                    -webkit-transition: .2s;
+                    transition: opacity .2s;
+                  }
+                  
+                  input[type="range"]::-webkit-slider-thumb {
+                    -webkit-appearance: none;
+                    appearance: none;
+                    width: 15px;
+                    height: 15px;
+                    background: red;
+                    cursor: pointer;
+                  }
+                  input[type="range"]::-moz-range-thumb {
+                    width: 15px;
+                    height: 15px;
+                    background: red;
+                    cursor: pointer;
+                  }
+            }
+        }
+    }
+}

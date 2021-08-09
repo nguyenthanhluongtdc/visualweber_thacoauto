@@ -15,16 +15,16 @@
                     </p>
                     <div class="brand-logo">
                         <div class="logo-img">
-                            <a href="#"><img src="{{Theme::asset()->url('images/business/kia-logo.png')}}" alt="" ></a>
+                            <a href="/brand-detail"><img src="{{Theme::asset()->url('images/business/kia-logo.png')}}" alt="" ></a>
                         </div>
                         <div class="logo-img">
-                            <a href="#"><img src="{{Theme::asset()->url('images/business/logo-mazda.jpg')}}" alt=""></a>
+                            <a href="/brand-detail"><img src="{{Theme::asset()->url('images/business/logo-mazda.jpg')}}" alt=""></a>
                         </div>
                         <div class="logo-img">
-                            <a href="#"><img src="{{Theme::asset()->url('images/business/logo-peugeot.jpg')}}" alt=""></a>
+                            <a href="/brand-detail"><img src="{{Theme::asset()->url('images/business/logo-peugeot.jpg')}}" alt=""></a>
                         </div>
                         <div class="logo-img">
-                            <a href="#"><img src="{{Theme::asset()->url('images/business/log-bmw.jpg')}}" alt=""></a>
+                            <a href="/brand-detail"><img src="{{Theme::asset()->url('images/business/log-bmw.jpg')}}" alt=""></a>
                         </div>
                         
                     </div>

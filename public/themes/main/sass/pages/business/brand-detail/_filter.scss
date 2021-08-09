@@ -1,19 +1,19 @@
 .section-car-filter{
-    padding: 60px 0 95px 0;
+    padding-top: 60px;
     @media(max-width: 1680px) {
-        padding: 55px 0 85px 0;
+        padding-top: 55px;
     }
     @media(max-width: 1520px) {
-        padding: 50px 0 75px 0;
+        padding-top: 50px;
     }
     @media(max-width: 1366px) {
-        padding: 45px 0 65px 0;
+        padding-top: 45px;
     }
     @media(max-width: 1199px) {
-        padding: 40px 0 55px 0;
+        padding-top: 40px;
     }
     @media(max-width: 995px) {
-        padding: 30px 0;
+        padding-top: 30px;
     }
     .car-filter{
         &__title{
@@ -27,12 +27,41 @@
                 display: flex;
                 &__item{
                     width: 10.9vw;
+                    cursor: pointer;
                     height: 2.7vw;
                     margin-right: 0.15vw;
                     background-color: #f6f6f6;
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    span{
+                        transition: 0.2s;
+                        position: relative;
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            width: 0%;
+                            height: 2px;
+                            bottom: -5%;
+                            left: 0;
+                            background-color: $color-primary;
+                            transition: all 1000ms cubic-bezier(0.19, 1, 0.22, 1);
+                        }
+                    }
+                    &:hover{
+                        span{
+                            &::after{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+                .active{
+                    span{
+                        &::after{
+                            width: 100%;
+                        }
+                    }
                 }
             }
             .pre-order{
@@ -44,6 +73,12 @@
                 justify-content: center;
                 align-items: center;
                 color:white;
+                transition: all 1000ms cubic-bezier(0.19, 1, 0.22, 1);
+                &:hover{
+                    border: 2px solid $color-primary;
+                    color: $color-primary;
+                    background-color: #f6f6f6;
+                }
             }
         }
         &--center{
@@ -135,7 +170,6 @@
                         -webkit-transition: .2s;
                         transition: opacity .2s;
                       }
-                      
                       input[type="range"]::-webkit-slider-thumb {
                         -webkit-appearance: none;
                         appearance: none;
@@ -171,6 +205,30 @@
                 margin-right: 0.15vw;
                 background-color: #f6f6f6;
                 border: none;
+                .frame{
+                    img{
+                        padding-right: 1%;
+                    }
+                    transition: 0.2s;
+                    position: relative;
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        width: 0%;
+                        height: 2px;
+                        bottom: -25%;
+                        left: 0;
+                        background-color: $color-primary;
+                        transition: all 1000ms cubic-bezier(0.19, 1, 0.22, 1);
+                    }
+                }
+                &:hover{
+                    .frame{
+                        &::after{
+                            width: 100%;
+                        }
+                    }
+                }
             }
         }
     }

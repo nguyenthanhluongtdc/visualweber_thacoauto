@@ -15,9 +15,9 @@
                    <p class="font24 font-pri-bold name">LINH KIỆN Ô TÔ</p>
                </div>
                <div class="boxfield-item">
-                    <img src="{{ Theme::asset()->url('images/support-industry/phukien-oto.png') }}" alt="">
+                    <img src="{{ Theme::asset()->url('images/support-industry/phukienoto.png') }}" alt="">
                     
-                    <p class="font24 font-pri-bold name">PHỤ KIỆN Ô TÔ</p>
+                    <p class="font24 font-pri-bold name item">PHỤ KIỆN Ô TÔ</p>
                 </div>
                 <div class="boxfield-item">
                     <img src="{{ Theme::asset()->url('images/support-industry/linhkien-xemay.png') }}" alt="">

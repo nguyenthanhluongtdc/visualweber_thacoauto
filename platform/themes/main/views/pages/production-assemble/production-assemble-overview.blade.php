@@ -13,28 +13,45 @@
             <div class="mechandical-overview__boxfield">
                <div class="boxfield-item item">
                 <img src="{{ Theme::asset()->url('images/manufacturing/assemble/kia.png') }}" alt="">
-                   <p class="font24 font-pri-bold name">XE KIA</p>
+                    <div class="text">
+                        <p class="font24 font-pri-bold name">XE KIA</p>
+                    </div>
+                  
                </div>
                <div class="boxfield-item item">
                 <img src="{{ Theme::asset()->url('images/manufacturing/assemble/logo-mazda2.png') }}" alt="">
-                    
+                <div class="text">
                     <p class="font24 font-pri-bold name">XE MAZDA</p>
+                </div>
+                    {{-- <p class="font24 font-pri-bold name">XE MAZDA</p> --}}
                 </div>
                 <div class="boxfield-item item">
                     <img src="{{ Theme::asset()->url('images/manufacturing/assemble/peugeot2.png') }}" alt="">
-                    <p class="font24 font-pri-bold name">XE PEUGEOT</p>
+                    {{-- <p class="font24 font-pri-bold name">XE PEUGEOT</p> --}}
+                    <div class="text">
+                        <p class="font24 font-pri-bold name">XE PEUGEOT</p>
+                    </div>
                 </div>
                 <div class="boxfield-item item">
                     <img src="{{ Theme::asset()->url('images/manufacturing/assemble/xebus.png') }}" alt="">
-                    <p class="font24 font-pri-bold name">XE BUS</p>
+                    {{-- <p class="font24 font-pri-bold name">XE BUS</p> --}}
+                    <div class="text">
+                        <p class="font24 font-pri-bold name">XE BUS</p>
+                    </div>
                 </div>
                 <div class="boxfield-item item">
                     <img src="{{ Theme::asset()->url('images/manufacturing/assemble/xetai.png') }}" alt="">
-                    <p class="font24 font-pri-bold name">XE TẢI</p>
+                    {{-- <p class="font24 font-pri-bold name">XE TẢI</p> --}}
+                    <div class="text">
+                        <p class="font24 font-pri-bold name">XE TẢI</p>
+                    </div>
                 </div>
                 <div class="boxfield-item item">
                     <img src="{{ Theme::asset()->url('images/manufacturing/assemble/chuyendung.png') }}" alt="">
-                    <p class="font24 font-pri-bold name">XE CHUYÊN DỤNG</p>
+                    {{-- <p class="font24 font-pri-bold name">XE CHUYÊN DỤNG</p> --}}
+                    <div class="text">
+                        <p class="font24 font-pri-bold name">XE CHUYÊN DỤNG</p>
+                    </div>
                 </div>
                 
                

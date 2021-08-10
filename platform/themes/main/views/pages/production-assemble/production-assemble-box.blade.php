@@ -1,7 +1,7 @@
 <div class="section-support-industry-overview">
     <div class="box-node-right">
-        <ul class="pagination-customize">
-            <li class="pagi-item">
+        <ul class="pagination-customize" >
+            <li class="pagi-item" >
                 <span class="text"> NHÀ MÁY SẢN XUẤT XE DU LỊCH CAO CẤP THACO </span>
                 <a href="#section_one" title="" class="number click_scroll">
                     <img src="{{ Theme::asset()->url('images/manufacturing/blue/1.png') }}" alt="">
@@ -13,12 +13,12 @@
                 
             </li>
 
-            <li class="pagi-item">
+            <li class="pagi-item" >
                 <span class="text"> nhà máy thaco bus </span>
                 <a href="#section_two" title="" class="number click_scroll">
                     <img src="{{ Theme::asset()->url('images/manufacturing/blue/2.png') }}" alt="">
                 </a>
-                <a href="#section_one" title="" class="number2 click_scroll">
+                <a href="#section_two" title="" class="number2 click_scroll">
                     <img src="{{ Theme::asset()->url('images/manufacturing/white/2.png') }}" alt="">
                 </a>
             </li>
@@ -65,3 +65,4 @@
         </ul>
     </div>
 </div>
+

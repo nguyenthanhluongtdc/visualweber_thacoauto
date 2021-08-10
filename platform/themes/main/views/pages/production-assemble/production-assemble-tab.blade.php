@@ -8,7 +8,7 @@
                     <a class="list-group-item font25 " id="field_name_3" data-toggle="list" href="#field_tab_content_3" role="tab" aria-controls="home" aria-selected="false">NHÀ MÁY TẢI THACO</a>
                     <a class="list-group-item font25 " id="field_name_4" data-toggle="list" href="#field_tab_content_4" role="tab" aria-controls="profile" aria-selected="true">NHÀ MÁY THACO KIA</a>
                     <a class="list-group-item font25 " id="field_name_5" data-toggle="list" href="#field_tab_content_5" role="tab" aria-controls="home" aria-selected="false">NHÀ MÁY THACO</a>
-                    <a class="list-group-item font25 " id="field_name_5" data-toggle="list" href="#field_tab_content_5" role="tab" aria-controls="home" aria-selected="false">NHÀ MÁY XE CHUYÊN DỤNG</a>
+                    <a class="list-group-item font25 " id="field_name_5" data-toggle="list" href="#field_tab_content_6" role="tab" aria-controls="home" aria-selected="true">NHÀ MÁY XE CHUYÊN DỤNG</a>
                 </div>
                 <div class="tab-content" id="nav-tabContent tab-content2">
                     <div class="tab-pane fade active show " id="field_tab_content_1" role="tabpanel" aria-labelledby="list-home-list">
@@ -91,7 +91,7 @@
                             
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="field_tab_content_5" role="tabpanel" aria-labelledby="list-home-list">
+                    <div class="tab-pane fade" id="field_tab_content_6" role="tabpanel" aria-labelledby="list-home-list">
                         <div class="content-right">
                             <div class="content-right__top">
                                 <img src="{{ Theme::asset()->url('images/manufacturing/assemble1.jpg') }}" alt="">

@@ -142,7 +142,7 @@
     
 </div>
 
-<script>
+{{-- <script>
     function openTabs(evt, tabsName) {
       var i, tabcontent, tablinks;
       tabcontent = document.getElementsByClassName("tabcontent");
@@ -157,6 +157,5 @@
       evt.currentTarget.className += " active";
     }
     
-    // Get the element with id="defaultOpen" and click on it
     document.getElementById("defaultOpen").click();
-    </script>
+</script> --}}

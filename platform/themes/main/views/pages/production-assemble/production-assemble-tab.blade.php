@@ -1,7 +1,7 @@
 <div class="section-mechanical-tab">
     <div class="mechanical-tab-wrapper" style="background-image:url('{{ Theme::asset()->url('images/mechandical/bg-tab2.png') }}')">
         <div class="container-remake ">
-            <div class="mechanical-tab__content product-assemble pt-60 pb-60">
+            <div class="mechanical-tab__content product-assemble pt-60 pb-60" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease-in-out" data-aos-delay="50">
                 <div class="list-group tab-field" id="list-tab" role="tablist">
                     <a class="list-group-item active show font25" id="field_name_1" data-toggle="list" href="#field_tab_content_1" role="tab" aria-controls="home" aria-selected="false">NHÀ MÁY SẢN XUẤT <br> XE DU LỊCH CAO CẤP THACO</a>
                     <a class="list-group-item font25 " id="field_name_2" data-toggle="list" href="#field_tab_content_2" role="tab" aria-controls="profile" aria-selected="true">NHÀ MÁY THACO BUS</a>

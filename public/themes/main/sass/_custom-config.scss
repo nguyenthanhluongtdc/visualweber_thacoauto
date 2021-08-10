@@ -307,6 +307,15 @@ a:hover {
         font-size: 12px;
     }
 }
+.font12 {
+    font-size: 12px;
+    @media(max-width: 1680px) {
+        font-size: 11px;
+    }
+    @media(max-width: 1400px) {
+        font-size: 10px;
+    }
+}
 
 .mt-100 {
     margin-top: 100px;

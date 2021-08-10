@@ -40,15 +40,15 @@
                 <ul class="info-equip">
                     <li class="info-equip__item font18 font-pri">
                         <img src="{{Theme::asset()->url('images/business/brand-detail/chon-xe-1.png')}}" alt="filter icon">
-                        270 kW (367 HP)
+                        <span>270 kW (367 HP)</span>    
                     </li>
                     <li class="info-equip__item font18 font-pri">
                         <img src="{{Theme::asset()->url('images/business/brand-detail/chon-xe-2.png')}}" alt="filter icon">
-                        Xăng
+                        <span>Xăng</span>
                     </li>
                     <li class="info-equip__item font18 font-pri">
                         <img src="{{Theme::asset()->url('images/business/brand-detail/chon-xe-3.png')}}" alt="filter icon">
-                        Tự động
+                        <span>Tự động</span>  
                     </li>
                 </ul>
                 <ul class="info-color">

@@ -55,21 +55,25 @@
                         <div class="select-equip__item active">
                             <img src="{{Theme::asset()->url('images/business/brand-detail/phu-kien-1.jpg')}}" alt="">
                             <input type="checkbox">
+                            <label class="font-pri font12" for="">Lorem ipsum 2.000.000đ</label>
                             <span class="checkmark"></span>
                         </div>
                         <div class="select-equip__item">
                             <img src="{{Theme::asset()->url('images/business/brand-detail/phu-kien-2.jpg')}}" alt="">
                             <input type="checkbox">
+                            <label class="font-pri font12" for="">Lorem ipsum 2.000.000đ</label>
                             <span class="checkmark"></span>
                         </div>
                         <div class="select-equip__item">
                             <img src="{{Theme::asset()->url('images/business/brand-detail/phu-kien-3.jpg')}}" alt="">
                             <input type="checkbox">
+                            <label class="font-pri font12" for="">Lorem ipsum 2.000.000đ</label>
                             <span class="checkmark"></span>
                         </div>
                         <div class="select-equip__item">
                             <img src="{{Theme::asset()->url('images/business/brand-detail/phu-kien-4.jpg')}}" alt="">
                             <input type="checkbox">
+                            <label class="font-pri font12" for="">Lorem ipsum 2.000.000đ</label>
                             <span class="checkmark"></span>
                         </div>
                     </div>

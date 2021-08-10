@@ -1,6 +1,6 @@
 <section class="general-manufacturing">
     <div class="container-remake">
-        <div class="production mt-100 ">
+        <div class="production mt-5 ">
             <h2 class="production__title font60 font-pri-bold">
                 R&D
             </h2>
@@ -15,7 +15,7 @@
                 <img  src="{{ Theme::asset()->url('images/manufacturing/R&D.jpg') }}" alt="">
             </div>
         </div>
-        <div class="production mt-100">
+        <div class="production mt-5">
             <h2 class="production__title font60 font-pri-bold">
                 SẢN XUẤT - LẮP RÁP Ô TÔ & XE MÁY
             </h2>
@@ -30,7 +30,7 @@
                 <img  src="{{ Theme::asset()->url('images/manufacturing/san-xuat-laprap.jpg') }}" alt="">
             </div>
         </div>
-        <div class="production mt-100">
+        <div class="production mt-5">
             <h2 class="production__title font60 font-pri-bold">
                 CÔNG NGHIỆP HỖ TRỢ & CƠ KHÍ
             </h2>
@@ -45,7 +45,7 @@
                 <img  src="{{ Theme::asset()->url('images/manufacturing/congnghiep-cokhi.jpg') }}" alt="">
             </div>
         </div>
-        <div class="production mt-100">
+        <div class="production mt-5">
             <h2 class="production__title font60 font-pri-bold">
                 XUẤT KHẨU
             </h2>

@@ -1,5 +1,5 @@
-<div class="section-mechanical-tab">
-    <div class="mechanical-tab-wrapper" style="background-image:url('{{ Theme::asset()->url('images/mechandical/bg-tab.jpg') }}')">
+<div class="section-mechanical-tab ">
+    <div class="mechanical-tab-wrapper" style="background-image:url('{{ Theme::asset()->url('images/mechandical/bg-tab2.png') }}')">
         <div class="container-remake ">
             <div class="mechanical-tab__content pt-60 pb-60">
                 <div class="list-group tab-field" id="list-tab" role="tablist">

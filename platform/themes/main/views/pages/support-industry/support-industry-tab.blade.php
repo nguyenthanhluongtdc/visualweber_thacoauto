@@ -1,5 +1,5 @@
 <div class="section-mechanical-tab">
-    <div class="mechanical-tab-wrapper" style="background-image:url('{{ Theme::asset()->url('images/mechandical/bg-tab.jpg') }}')">
+    <div class="mechanical-tab-wrapper" style="background-image:url('{{ Theme::asset()->url('images/mechandical/bg-tab2.png') }}')">
         <div class="container-remake mechanical-tab__content">
             <div class="container py-5">
                 <div class="row">

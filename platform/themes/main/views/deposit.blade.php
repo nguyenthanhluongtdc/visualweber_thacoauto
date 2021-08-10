@@ -1,5 +1,6 @@
 {{-- thêm sidebar here --}}
 <div class="my-5 container-remake MyriadPro-Regular font15">
+
     <form action="" method="POST" class="row">
         <div class="col-sm-12 col-md-8 col-8">
             <h2 class="font18 MyriadPro-BoldCond text-uppercase mb-3">thông tin khách hàng</h2>

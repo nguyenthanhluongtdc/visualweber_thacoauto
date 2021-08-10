@@ -1,3 +1,4 @@
+{{-- thêm sidebar here --}}
 <div class="my-5 container-remake MyriadPro-Regular font15">
     <form action="" method="POST" class="row">
         <div class="col-sm-12 col-md-8 col-8">

@@ -29,6 +29,7 @@ register_page_template([
     'mechanical' => 'Mechanical',
     'brand' => 'Brand',
     'support-industry' => 'Support-industry',
+    'test-drive'=>'Test drive'
 ]);
 
 register_sidebar([

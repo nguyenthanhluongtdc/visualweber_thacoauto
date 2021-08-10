@@ -23,6 +23,11 @@
         .section-aboutus {
             @include paddingY(65);
 
+            &__picture {
+                @include height(990);
+                overflow-y: hidden;
+            }
+
             &__content {
                 &__title {
                     @include marginBottom(37, "+");

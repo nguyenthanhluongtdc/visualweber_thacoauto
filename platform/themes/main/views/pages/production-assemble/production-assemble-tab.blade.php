@@ -22,7 +22,7 @@
                                     NHÀ SẢN GIA CÔNG THÉP
                                 </h3>
                                 <p class="desc font18 ">Nhà máy Gia công và cung ứng phôi thép được thành lập vào năm 2009 với chức năng sản xuất các sản phẩm vật tư thép, kim loại màu nhằm cung cấp cho thị trường nội địa và xuất khẩu. Nhà máy có diện tích 5ha, tổng vốn đầu tư 201 tỷ đồng, công suất 255.000 tấn thép/năm.</p>
-                               <div class="read-more"><a href="">Xem chi tiết</a></div>
+                               <div class="read-more font18"><a href="">Xem chi tiết</a></div>
                             </div>
                             
                         </div>
@@ -38,7 +38,7 @@
                                     NHÀ MÁY THACOBUS
                                 </h3>
                                 <p class="desc font18 ">Nhà máy Gia công và cung ứng phôi thép được thành lập vào năm 2009 với chức năng sản xuất các sản phẩm vật tư thép, kim loại màu nhằm cung cấp cho thị trường nội địa và xuất khẩu. Nhà máy có diện tích 5ha, tổng vốn đầu tư 201 tỷ đồng, công suất 255.000 tấn thép/năm.</p>
-                               <div class="read-more"><a href="">Xem chi tiết</a></div>
+                               <div class="read-more font18"><a href="">Xem chi tiết</a></div>
                             </div>
                             
                         </div>
@@ -54,7 +54,7 @@
                                     NHÀ MÁY TẢI THACO
                                 </h3>
                                 <p class="desc font18 ">Nhà máy Gia công và cung ứng phôi thép được thành lập vào năm 2009 với chức năng sản xuất các sản phẩm vật tư thép, kim loại màu nhằm cung cấp cho thị trường nội địa và xuất khẩu. Nhà máy có diện tích 5ha, tổng vốn đầu tư 201 tỷ đồng, công suất 255.000 tấn thép/năm.</p>
-                               <div class="read-more"><a href="">Xem chi tiết</a></div>
+                               <div class="read-more font18"><a href="">Xem chi tiết</a></div>
                             </div>
                             
                         </div>
@@ -70,7 +70,7 @@
                                     NHÀ MÁY THACO KIA
                                 </h3>
                                 <p class="desc font18 ">Nhà máy Gia công và cung ứng phôi thép được thành lập vào năm 2009 với chức năng sản xuất các sản phẩm vật tư thép, kim loại màu nhằm cung cấp cho thị trường nội địa và xuất khẩu. Nhà máy có diện tích 5ha, tổng vốn đầu tư 201 tỷ đồng, công suất 255.000 tấn thép/năm.</p>
-                               <div class="read-more"><a href="">Xem chi tiết</a></div>
+                               <div class="read-more font18"><a href="">Xem chi tiết</a></div>
                             </div>
                             
                         </div>
@@ -86,7 +86,7 @@
                                     NHÀ MÁY THACO MAZDA
                                 </h3>
                                 <p class="desc font18 ">Nhà máy Gia công và cung ứng phôi thép được thành lập vào năm 2009 với chức năng sản xuất các sản phẩm vật tư thép, kim loại màu nhằm cung cấp cho thị trường nội địa và xuất khẩu. Nhà máy có diện tích 5ha, tổng vốn đầu tư 201 tỷ đồng, công suất 255.000 tấn thép/năm.</p>
-                               <div class="read-more"><a href="">Xem chi tiết</a></div>
+                               <div class="read-more font18"><a href="">Xem chi tiết</a></div>
                             </div>
                             
                         </div>
@@ -102,7 +102,7 @@
                                     NHÀ MÁY XE CHUYÊN DỤNG
                                 </h3>
                                 <p class="desc font18 ">Nhà máy Gia công và cung ứng phôi thép được thành lập vào năm 2009 với chức năng sản xuất các sản phẩm vật tư thép, kim loại màu nhằm cung cấp cho thị trường nội địa và xuất khẩu. Nhà máy có diện tích 5ha, tổng vốn đầu tư 201 tỷ đồng, công suất 255.000 tấn thép/năm.</p>
-                               <div class="read-more"><a href="">Xem chi tiết</a></div>
+                               <div class="read-more font18"><a href="">Xem chi tiết</a></div>
                             </div>
                             
                         </div>

@@ -9,7 +9,7 @@
     .mechanical-contact {
         &__content {
             
-            padding: 5% 10% 1.5% 13%;
+            padding: 2% 10% 1.5% 13%;
             background: #f1f1f1;
             &__top {
                 
@@ -23,7 +23,6 @@
                         margin-top: 30px;
                         position: relative;
                         font-family: $font-primary-bold;
-                      
                         &::before {
                             position: absolute;
                             content: "\f3c5";
@@ -31,6 +30,7 @@
                             font-family: "Font Awesome 5 Free";
                             left: 0;
                             right: 0;
+                            top: 12px;
                             font-weight: bold;
                             font-size: 40px;
                             @media screen and (max-width: 1680px) {
@@ -52,6 +52,7 @@
                             font-family: "Font Awesome 5 Free";
                             left: 0;
                             right: 0;
+                            top: 12px;
                             font-weight: bold;
                             font-size: 40px;
                             @media screen and (max-width: 1680px) {
@@ -72,6 +73,7 @@
                             font-family: "Font Awesome 5 Free";
                             left: 0;
                             right: 0;
+                            bottom: 6.5px;
                             font-weight: bold;
                             font-size: 40px;
                             @media screen and (max-width: 1680px) {

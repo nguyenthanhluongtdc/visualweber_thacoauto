@@ -18,6 +18,12 @@
                 }
                 .read-more {
                     margin-top: 1.5rem;
+                    
+                    img{
+                        width: 3.2%;
+                        margin-left: 1.7%;
+                        transform: translateY(2px);
+                    }
                 }
                 &__left {
                     display: flex;

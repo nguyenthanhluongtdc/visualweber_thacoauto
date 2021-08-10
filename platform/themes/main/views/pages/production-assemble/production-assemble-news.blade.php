@@ -15,7 +15,7 @@
                             <div class="sub--left font-pri-bold">
                                 <div class="day"> 29 </div>
                                 <div class="month"> May </div>
-                                <div class="year"> 2021 </div>
+                                <div class="year"> 2021 </div> 
                             </div>
 
                             <div class="sub--right">
@@ -32,7 +32,7 @@
                                 </p>
                             </div>
 
-                            <a href="#" title="{!!__('Read more')!!}" class="read-more text-dark font20 font-pri"> {!!__('Read more')!!} >> </a>
+                            <a href="#" title="{!!__('Read more')!!}" class="read-more text-dark font20 font-pri"> {!!__('Xem thêm')!!} <img width="" height="" src="{{Theme::asset()->url('images/mechandical/chevron-double-right.svg')}}" alt="" /></a>
                         </div>
                     </div>
 
@@ -58,7 +58,7 @@
                                 </p>
                             </div>
 
-                            <a href="#" title="{!!__('Read more')!!}" class="read-more text-dark font20 font-pri"> {!!__('Read more')!!} >> </a>
+                            <a href="#" title="{!!__('Read more')!!}" class="read-more text-dark font20 font-pri"> {!!__('Xem thêm')!!} <img width="" height="" src="{{Theme::asset()->url('images/mechandical/chevron-double-right.svg')}}" alt="" /></a>
                         </div>
                     </div>
 
@@ -84,7 +84,7 @@
                                 </p>
                             </div>
 
-                            <a href="#" title="{!!__('Read more')!!}" class="read-more text-dark font20 font-pri"> {!!__('Read more')!!} >> </a>
+                            <a href="#" title="{!!__('Read more')!!}" class="read-more text-dark font20 font-pri"> {!!__('Xem thêm')!!} <img width="" height="" src="{{Theme::asset()->url('images/mechandical/chevron-double-right.svg')}}" alt="" /></a>
                         </div>
                     </div>
                 </div>

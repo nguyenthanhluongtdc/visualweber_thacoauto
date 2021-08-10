@@ -338,22 +338,22 @@
         }
 
         .number {
-         
+          
           border-bottom: 1px solid $color-primary;
           border-left: 1px solid $color-primary;
-          font-size: 25px;
-
           width: 3.4vw;
-          max-width: 70px;
+          max-width: 40px;
           
           @media(max-width : 1440px){
-              width: 3.1vw;
+              width: 2vw;
           }
           @media(max-width : 1199px){
-              width: 2.8vw;
+              width: 2vw;
           }
-        }
 
+          
+        }
+       
         &:hover {
           .text {
             background-color: $color-primary;
@@ -362,10 +362,8 @@
             pointer-events: all;
             transform: translateX(0);
           }
-          .number {
-            background-color: $color-primary;
-            color: $color-white;
-          }
+         
+
         }
       }
 
@@ -388,4 +386,18 @@
       }
     }
   }
+}
+// .iconwhite{
+//   display: none;
+//   &:hover{
+//     display: block;
+//   }
+// }
+// .iconblue{
+//   &:hover{
+//     display: none;
+//   }
+// }
+.number2{
+  display: none;
 }

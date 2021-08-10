@@ -56,10 +56,11 @@ return [
             $theme->asset()->add('alert', '//cdn.jsdelivr.net/alertifyjs/1.10.0/css/alertify.min.css');
             $theme->asset()->add('alert_bootstrap', '//cdn.jsdelivr.net/alertifyjs/1.10.0/css/themes/default.min.css');
             $theme->asset()->add('alert_bootstrap', '//unpkg.com/swiper/swiper-bundle.min.css');
-            
+            $theme->asset()->usePath()->add('semantic_ui_style', 'semantic-ui/semantic.min.css');
+
             $theme->asset()->usePath()->add('style', 'css/common.css', [], [], time());
 
-            $theme->asset()->container('footer')->add('bootstrapjsdelivr', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js');
+            // $theme->asset()->container('footer')->add('bootstrapjsdelivr', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js');
             $theme->asset()->container('footer')->add('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js');
             $theme->asset()->container('header')->add('jquery', '//code.jquery.com/jquery-3.5.1.min.js');
             $theme->asset()->container('footer')->add('semantic', '//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js');
@@ -78,6 +79,7 @@ return [
             $theme->asset()->container('footer')->add('validate-method', '//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/additional-methods.min.js');
             $theme->asset()->container('footer')->add('script_alert', '//cdn.jsdelivr.net/alertifyjs/1.10.0/alertify.min.js');
             $theme->asset()->container('footer')->add('script_alert', '//unpkg.com/swiper/swiper-bundle.min.js');
+            $theme->asset()->container('footer')->usePath()->add('semantic_ui_js', 'semantic-ui/semantic.min.js');
 
             $theme->asset()->container('footer')->usePath()->add('script', 'js/common.js', [], [], time());
         },

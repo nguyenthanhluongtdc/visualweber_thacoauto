@@ -10,8 +10,29 @@ $color-primary-button: #01498b;
     grid-column-gap: 1.5rem;
     .form-group {
       input {
-        height: 43px;
+        height: 41px;
         outline: none;
+      }
+      .dropdown {
+        height: 41px;
+        outline: none;
+        background-color: #f6f6f6;
+        border: unset;
+        border-radius: unset;
+        resize: none;
+        .text {
+          line-height: 1.5;
+        }
+        div.default.text {
+          color: $color-placeholder-gray;
+        }
+        i.dropdown.icon {
+          height: 100%;
+          position: relative;
+          top: 1px;
+          left: 18px;
+          color: $color-placeholder-gray;
+        }
       }
     }
     .span-2 {

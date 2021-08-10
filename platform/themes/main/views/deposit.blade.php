@@ -11,7 +11,19 @@
                     <input type="text" class="form-control MyriadPro-Regular font15" name="phone" placeholder="Nhập số điện thoại" />
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control MyriadPro-Regular font15" name="showroom" placeholder="Chọn showroom" />
+                    <div class="ui fluid selection dropdown">
+                        <input type="hidden" name="country">
+                        <i class="dropdown icon"></i>
+                        <div class="default text MyriadPro-Regular font15">Chọn showroom</div>
+                        <div class="menu">
+                            <div class="item" data-value="af"></i>Afghanistan</div>
+                            <div class="item" data-value="ax"></i>Aland Islands</div>
+                            <div class="item" data-value="al"></i>Albania</div>
+                            <div class="item" data-value="dz"></i>Algeria</div>
+                            <div class="item" data-value="as"></i>American Samoa</div>
+                        </div>
+                    </div>
+                    {{-- <input type="text" class="form-control MyriadPro-Regular font15" name="showroom" placeholder="Chọn showroom" /> --}}
                 </div>
                 <div class="form-group">
                     <input type="text" class="form-control MyriadPro-Regular font15" name="email" placeholder="Nhập email" />
@@ -141,3 +153,9 @@
         </div>
     </form>
 </div>
+
+<script>
+    $(document).ready(function() {
+        $('.dropdown').dropdown()
+    })
+</script>

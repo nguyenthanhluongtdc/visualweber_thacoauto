@@ -1,8 +1,7 @@
 {{-- thêm sidebar here --}}
 <div class="my-5 container-remake MyriadPro-Regular font15">
-
     <form action="" method="POST" class="row">
-        <div class="col-sm-12 col-md-8 col-8">
+        <div class="col-sm-12 col-md-8 mb-4">
             <h2 class="font18 MyriadPro-BoldCond text-uppercase mb-3">thông tin khách hàng</h2>
             <p class="mb-4">Thông tin khách hàng sẽ được đưa vào thoả thuận hợp đồng. Quý khách vui lòng nhập chính xác các nội dung dưới đây</p>
             <div class="deposit__form">
@@ -48,7 +47,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-12 col-md-4 col-4">
+        <div class="col-sm-12 col-md-4 mb-4">
             <div class="deposit__info">
                 <div class="deposit__info-imagereview">
                     <img src="{{ Theme::asset()->url('images/car.png') }}" width="376" height="280" class="img-fluid" />

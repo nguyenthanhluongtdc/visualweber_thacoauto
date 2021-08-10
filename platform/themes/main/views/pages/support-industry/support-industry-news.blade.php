@@ -1,16 +1,16 @@
 <div class="section-list-news-wrapper mechandical">
     <div class="container-remake">
         <div class="section-list-news">
-                <div class="section-list-news-header  d-flex justify-content-between align-items-center">
+                <div class="section-list-news-header  d-flex  align-items-center">
                     <h2 class="title font-pri-bold font40 text-uppercase">
                         Tin tức
                     </h2>
 
-                    <a href="#" title="{!!__('Read more')!!}" class="font20 text-uppercase read-more text-dark"> {!!__('Xem thêm')!!} >> </a>
+                    <a href="#" title="{!!__('Read more')!!}" class="read-moree text-dark font20 font-pri"> {!!__('Xem thêm')!!} <img width="" height="" src="{{Theme::asset()->url('images/mechandical/chevron-double-right.svg')}}" alt="" /></a>
                 </div>
 
                 <div class="content">
-                    <div class="item mx-0">
+                    <div class="item mx-0"  data-aos="fade-left" data-aos-duration="1500" data-aos-easing="ease-in-out">
                         <div class="item__left">
                             <div class="sub--left font-pri-bold">
                                 <div class="day"> 29 </div>
@@ -36,7 +36,7 @@
                         </div>
                     </div>
 
-                    <div class="item mx-0">
+                    <div class="item mx-0" data-aos="fade-left" data-aos-duration="1600" data-aos-easing="ease-in-out" >
                         <div class="item__left">
                             <div class="sub--left font-pri-bold">
                                 <div class="day"> 26 </div>
@@ -49,7 +49,7 @@
                             </div>
                         </div>
 
-                        <div class="item__right">
+                        <div class="item__right" data-aos="fade-left" data-aos-duration="1700" data-aos-easing="ease-in-out">
                             <div class="item__right__top">
                                 <h3 class="font30 title"> Xe tự hành AGV giải pháp vận chuyển hiệu quả</h3>
                                 <p class="description text-dark font20">
@@ -62,7 +62,7 @@
                         </div>
                     </div>
 
-                    <div class="item mx-0">
+                    <div class="item mx-0" data-aos="fade-left" data-aos-duration="1800" data-aos-easing="ease-in-out">
                         <div class="item__left">
                             <div class="sub--left font-pri-bold">
                                 <div class="day"> 22 </div>

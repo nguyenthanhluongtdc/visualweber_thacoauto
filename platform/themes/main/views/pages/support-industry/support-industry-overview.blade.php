@@ -11,7 +11,7 @@
                  
             </div>
             <div class="mechandical-overview__boxfield">
-               <div class="boxfield-item">
+               <div class="boxfield-item" >
                 <img src="{{ Theme::asset()->url('images/support-industry/linhkien-oto.png') }}" alt="">
                    <p class="font24 font-pri-bold name">LINH KIỆN Ô TÔ</p>
                </div>

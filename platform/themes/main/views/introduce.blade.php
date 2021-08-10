@@ -87,7 +87,7 @@
                                         <img src="{{Theme::asset()->url('images/introduce/symbol11.png')}}" alt="">
                                     </div>
                                     <div class="name">
-                                        R&d
+                                        R&d 
                                     </div>
                                 </div>
                             </div>

@@ -293,7 +293,7 @@ fi
 (cd $SCRIPT_PATH/../ && $FIND $SCRIPT_PATH/../public/ -type f -name 'robots.txt' -exec sed -i "s/Disallow\: \//Disallow\:/g" {} \;)
 
 ################ without symlink
-(cd $SCRIPT_PATH/../ && $ZIP -r4uy $BACKUP_SOURCENAME . -x \*.buildpath/\* \*.idea/\* \*.project/\* \*nbproject/\* \*.git/\* \*.svn/\* \*.gitignore\* \*.gitattributes\* \*.md \*.MD \*.log \*.zip \*.tar.gz \*.gz \*.tar \*.rar \*.DS_Store \*.lock \*desktop.ini vhost-nginx.conf \*.tmp \*.bat bin/delivery.sh bin/remove-botble.sh readme.html composer.lock wp-config.secure.php)
+(cd $SCRIPT_PATH/../ && $ZIP -r4uy $BACKUP_SOURCENAME . -x \*.buildpath/\* \*.idea/\* \*.project/\* \*nbproject/\* \*.git/\* \*.svn/\* \*.gitignore\* \*.gitattributes\* \*.md \*.MD \*.log \*.zip \*.tar.gz \*.gz \*.tar \*.rar \*.DS_Store \*.lock \*desktop.ini vhost-nginx.conf \*.tmp \*.bat bin/delivery.sh bin/remove-botble.sh readme.html composer.lock wp-config.secure.php \*.travis.yml\* \*.rnd\* \*.editorconfig\* \*.env\* \*editorconfig\* \*.gitlab-ci.yml\* __MACOSX/\*))
 
 (cd $SCRIPT_PATH/../ && $MYSQLDUMP -uuserdb.dev.thacoauto -pQA2n14vHG8I3Spwz --default-character-set utf8 dev_thacoauto > $BACKUP_SQLNAME)
 

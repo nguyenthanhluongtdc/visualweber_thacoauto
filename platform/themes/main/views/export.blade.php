@@ -200,14 +200,14 @@
         <div class="section-list-news-wrapper mechandical">
             <div class="container-remake">
                 <div class="section-list-news">
-                        <div class="section-list-news-header  d-flex justify-content-between align-items-center">
+                        <div class="section-list-news-header  d-flex  align-items-center">
                             <h2 class="title font-pri-bold font40 text-uppercase">
                                 Tin tức
                             </h2>
-        
-                            <a href="#" title="{!!__('Read more')!!}" class="font20 text-uppercase read-more text-dark"> {!!__('Xem thêm')!!} >> </a>
+    
+                            <a href="#" title="{!!__('Read more')!!}" class="read-moree text-dark font20 font-pri"> {!!__('Xem thêm')!!} <img width="" height="" src="{{Theme::asset()->url('images/mechandical/chevron-double-right.svg')}}" alt="" /></a>
                         </div>
-        
+    
                         <div class="content">
                             <div class="item mx-0">
                                 <div class="item__left">
@@ -216,12 +216,12 @@
                                         <div class="month"> May </div>
                                         <div class="year"> 2021 </div> 
                                     </div>
-        
+    
                                     <div class="sub--right">
                                         <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu8.jpg')}}" alt="" />
                                     </div>
                                 </div>
-        
+    
                                 <div class="item__right">
                                     <div class="item__right__top">
                                         <h3 class="font30 title"> Lợi ích của công nghệ cắt Laser thép ống, thép hộp </h3>
@@ -230,11 +230,11 @@
                                             đặc biệt đối với ngành [...]
                                         </p>
                                     </div>
-        
+    
                                     <a href="#" title="{!!__('Read more')!!}" class="read-more text-dark font20 font-pri"> {!!__('Xem thêm')!!} <img width="" height="" src="{{Theme::asset()->url('images/mechandical/chevron-double-right.svg')}}" alt="" /></a>
                                 </div>
                             </div>
-        
+    
                             <div class="item mx-0">
                                 <div class="item__left">
                                     <div class="sub--left font-pri-bold">
@@ -242,12 +242,12 @@
                                         <div class="month"> May </div>
                                         <div class="year"> 2021 </div>
                                     </div>
-        
+    
                                     <div class="sub--right">
                                         <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu9.jpg')}}" alt="" />
                                     </div>
                                 </div>
-        
+    
                                 <div class="item__right">
                                     <div class="item__right__top">
                                         <h3 class="font30 title"> Xe tự hành AGV giải pháp vận chuyển hiệu quả</h3>
@@ -256,11 +256,11 @@
                                             trong nhà máy, khu công [...]
                                         </p>
                                     </div>
-        
+    
                                     <a href="#" title="{!!__('Read more')!!}" class="read-more text-dark font20 font-pri"> {!!__('Xem thêm')!!} <img width="" height="" src="{{Theme::asset()->url('images/mechandical/chevron-double-right.svg')}}" alt="" /></a>
                                 </div>
                             </div>
-        
+    
                             <div class="item mx-0">
                                 <div class="item__left">
                                     <div class="sub--left font-pri-bold">
@@ -268,12 +268,12 @@
                                         <div class="month"> May </div>
                                         <div class="year"> 2021 </div>
                                     </div>
-        
+    
                                     <div class="sub--right">
                                         <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu10.jpg')}}" alt="" />
                                     </div>
                                 </div>
-        
+    
                                 <div class="item__right">
                                     <div class="item__right__top">
                                         <h3 class="font30 title"> Nhà chế tạo Khuôn mẫu hàng đầu miền Trung </h3>
@@ -282,7 +282,7 @@
                                             “Nền tảng của nền công [...]
                                         </p>
                                     </div>
-        
+    
                                     <a href="#" title="{!!__('Read more')!!}" class="read-more text-dark font20 font-pri"> {!!__('Xem thêm')!!} <img width="" height="" src="{{Theme::asset()->url('images/mechandical/chevron-double-right.svg')}}" alt="" /></a>
                                 </div>
                             </div>

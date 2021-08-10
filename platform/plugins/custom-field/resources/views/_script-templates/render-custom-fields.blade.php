@@ -125,7 +125,7 @@
 </script>
 
 <script id="_render_custom_field_wysiswg_template" type="text/x-custom-template">
-    <textarea class="form-control wysiwyg-editor" data-height="250px">__value__</textarea>
+    <textarea class="form-control wysiwyg-editor" rows="3">__value__</textarea>
 </script>
 
 <script id="_render_custom_field_repeater_template" type="text/x-custom-template">

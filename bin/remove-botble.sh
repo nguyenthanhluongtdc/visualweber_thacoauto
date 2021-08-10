@@ -222,6 +222,11 @@ PHPCOPTS="-d memory_limit=-1"
 ($CD $SCRIPT_PATH/../ && LC_ALL=C $FIND $SCRIPT_PATH/../platform/ -type f -name '*.php'  -print0 | xargs -0 $PERL -i -pe 's/botble_cookie_consent/cms_cookie_consent/g')
 
 ($CD $SCRIPT_PATH/../ && LC_ALL=C $FIND $SCRIPT_PATH/../platform/ -type f -name '*.json'  -print0 | xargs -0 $PERL -i -pe 's/dev-botble/dev-laravel/g')
+($CD $SCRIPT_PATH/../ && LC_ALL=C $FIND $SCRIPT_PATH/../platform/ -type f -name '*.json'  -print0 | xargs -0 $PERL -i -pe 's/baoboine\/botble-comment/vswb\/comment/g')
+
+($CD $SCRIPT_PATH/../ && LC_ALL=C $FIND $SCRIPT_PATH/../ -type f -name '*.md'  -print0 | xargs -0 $PERL -i -pe 's/baoboine\/botble-comment/vswb\/comment/g')
+($CD $SCRIPT_PATH/../ && LC_ALL=C $FIND $SCRIPT_PATH/../ -type f -name '*.vue'  -print0 | xargs -0 $PERL -i -pe 's/baoboine\/botble-comment/vswb\/comment/g')
+($CD $SCRIPT_PATH/../ && LC_ALL=C $FIND $SCRIPT_PATH/../platform/ -type f -name '*.js'  -print0 | xargs -0 $PERL -i -pe 's/baoboine\/botble-comment/vswb\/comment/g')
 
 ($CD $SCRIPT_PATH/../ && LC_ALL=C $FIND $SCRIPT_PATH/../ -type f -name '*.md' -print0 | xargs -0 $PERL -i -pe 's/https\:\/\/botble\.com\/storage\/uploads\/1/https\:\/\/laravel-cms\.demo\.gistensal\.com\/docs-cms\/images\/analytics/g')
 ($CD $SCRIPT_PATH/../ && LC_ALL=C $FIND $SCRIPT_PATH/../ -type f -name '*.md' -print0 | xargs -0 $PERL -i -pe 's/contact\@botble\.com/get-quote\@visualweber\.com/g')
@@ -240,12 +245,14 @@ PHPCOPTS="-d memory_limit=-1"
 ($CD $SCRIPT_PATH/../ && LC_ALL=C $FIND $SCRIPT_PATH/../ -type f -name '*.md' -print0 | xargs -0 $PERL -i -pe 's/https\:\/\/codecanyon\.net\/item\/botble-cms-php-platform-based-on-laravel-framework\/16928182/laravel-cms\.demo\.gistensal.com/g')
 ($CD $SCRIPT_PATH/../ && LC_ALL=C $FIND $SCRIPT_PATH/../ -type f -name '*.md' -print0 | xargs -0 $PERL -i -pe 's/\/botble\//\/vswb\//g')
 ($CD $SCRIPT_PATH/../ && LC_ALL=C $FIND $SCRIPT_PATH/../ -type f -name '*.md' -print0 | xargs -0 $PERL -i -pe 's/Botble\\/Platform\\/g')
+($CD $SCRIPT_PATH/../ && LC_ALL=C $FIND $SCRIPT_PATH/../ -type f -name '*.md' -print0 | xargs -0 $PERL -i -pe 's/Botble plugin/Platform\\/g')
 ($CD $SCRIPT_PATH/../ && LC_ALL=C $FIND $SCRIPT_PATH/../ -type f -name '*.md' -print0 | xargs -0 $PERL -i -pe 's/composer require botble/composer require platform/g')
 
 ($CD $SCRIPT_PATH/../ && LC_ALL=C $FIND $SCRIPT_PATH/../ -type f -name '.env.example'  -print0 | xargs -0 $PERL -i -pe 's/Botble CMS/Laravel CMS/g')
 
 ($CD $SCRIPT_PATH/../ && LC_ALL=C $FIND $SCRIPT_PATH/../resources/ -type f -name '*.php'  -print0 | xargs -0 $PERL -i -pe 's/Botble CMS/Laravel CMS/g')
 
+($CD $SCRIPT_PATH/../ && LC_ALL=C $FIND $SCRIPT_PATH/../platform/ -type f -name '*.php'  -print0 | xargs -0 $PERL -i -pe 's/botble\:\:log\-viewer/platform\:\:log\-viewer/g')
 ($CD $SCRIPT_PATH/../ && LC_ALL=C $FIND $SCRIPT_PATH/../platform/ -type f -name '*.php'  -print0 | xargs -0 $PERL -i -pe 's/Botble CMS/Laravel CMS/g')
 ($CD $SCRIPT_PATH/../ && LC_ALL=C $FIND $SCRIPT_PATH/../platform/ -type f -name '*.json' -print0 | xargs -0 $PERL -i -pe 's/Botble CMS/Laravel CMS/g')
 
@@ -426,6 +433,7 @@ PHPCOPTS="-d memory_limit=-1"
 ($CD $SCRIPT_PATH/../ && LC_ALL=C $FIND $SCRIPT_PATH/../platform/ -type f -name '*.json' -print0 | xargs -0 $PERL -i -pe 's/\"botble\/git-commit-checker/\"platform\/git-commit-checker/g')
 ## END: Assets & Git Commit Checker Package Processing
 
+($CD $SCRIPT_PATH/../ && LC_ALL=C $PERL -i -pe 's/\"botble\/comment/\"platform\/comment/g' $SCRIPT_PATH/../composer.json)
 ($CD $SCRIPT_PATH/../ && LC_ALL=C $PERL -i -pe 's/\"botble\/api/\"platform\/api/g' $SCRIPT_PATH/../composer.json)
 ($CD $SCRIPT_PATH/../ && LC_ALL=C $PERL -i -pe 's/\"botble\/menu/\"platform\/menu/g' $SCRIPT_PATH/../composer.json)
 ($CD $SCRIPT_PATH/../ && LC_ALL=C $PERL -i -pe 's/\"botble\/optimize/\"platform\/optimize/g' $SCRIPT_PATH/../composer.json)
@@ -440,6 +448,7 @@ PHPCOPTS="-d memory_limit=-1"
 ($CD $SCRIPT_PATH/../ && LC_ALL=C $PERL -i -pe 's/\"botble\/widget-generator/\"platform\/widget-generator/g' $SCRIPT_PATH/../composer.json)
 
 ## ($CD $SCRIPT_PATH/../ && LC_ALL=C $FIND $SCRIPT_PATH/../platform/ -type f -name '*.json' -print0 | xargs -0 $PERL -i -pe 's/\"botble\//\"platform\//g')
+($CD $SCRIPT_PATH/../ && LC_ALL=C $FIND $SCRIPT_PATH/../platform/ -type f -name '*.json' -print0 | xargs -0 $PERL -i -pe 's/\"botble\/comment/\"platform\/comment/g')
 ($CD $SCRIPT_PATH/../ && LC_ALL=C $FIND $SCRIPT_PATH/../platform/ -type f -name '*.json' -print0 | xargs -0 $PERL -i -pe 's/\"botble\/dev-tool/\"platform\/dev-tool/g')
 ($CD $SCRIPT_PATH/../ && LC_ALL=C $FIND $SCRIPT_PATH/../platform/ -type f -name '*.json' -print0 | xargs -0 $PERL -i -pe 's/\"botble\/api\"/\"platform\/api\"/g')
 ($CD $SCRIPT_PATH/../ && LC_ALL=C $FIND $SCRIPT_PATH/../platform/ -type f -name '*.json' -print0 | xargs -0 $PERL -i -pe 's/\"botble\/menu\"/\"platform\/menu\"/g')

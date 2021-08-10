@@ -22,7 +22,9 @@ class AnalyticsServiceProvider extends ServiceProvider
         });
 
         $this->app->bind(Analytics::class, function () {
-            if (empty(setting('analytics_view_id', config('plugins.analytics.general.view_id')))) {
+            $viewId = setting('analytics_view_id', config('plugins.analytics.general.view_id'));
+
+            if (empty($viewId)) {
                 throw InvalidConfiguration::viewIdNotSpecified();
             }
 
@@ -30,10 +32,7 @@ class AnalyticsServiceProvider extends ServiceProvider
                 throw InvalidConfiguration::credentialsIsNotValid();
             }
 
-            return new Analytics(
-                $this->app->make(AnalyticsClient::class),
-                setting('analytics_view_id', config('plugins.analytics.general.view_id'))
-            );
+            return new Analytics($this->app->make(AnalyticsClient::class), $viewId);
         });
 
         AliasLoader::getInstance()->alias('Analytics', AnalyticsFacade::class);

@@ -3,4 +3,5 @@
     @includeIf("theme.main::views.pages.support-industry.support-industry-tab")
     @includeIf("theme.main::views.pages.support-industry.support-industry-news")
     @includeIf("theme.main::views.pages.support-industry.support-industry-contact")
+    @includeIf("theme.main::views.pages.support-industry.test")
 </div>

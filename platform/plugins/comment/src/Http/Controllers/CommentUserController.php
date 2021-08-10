@@ -1,20 +1,20 @@
 <?php
 
-namespace Botble\Comment\Http\Controllers;
+namespace Platform\Comment\Http\Controllers;
 
-use Botble\Base\Events\BeforeEditContentEvent;
-use Botble\Comment\Http\Requests\CommentUserRequest;
-use Botble\Comment\Repositories\Interfaces\CommentUserInterface;
-use Botble\Base\Http\Controllers\BaseController;
+use Platform\Base\Events\BeforeEditContentEvent;
+use Platform\Comment\Http\Requests\CommentUserRequest;
+use Platform\Comment\Repositories\Interfaces\CommentUserInterface;
+use Platform\Base\Http\Controllers\BaseController;
 use Illuminate\Http\Request;
 use Exception;
-use Botble\Comment\Tables\CommentUserTable;
-use Botble\Base\Events\CreatedContentEvent;
-use Botble\Base\Events\DeletedContentEvent;
-use Botble\Base\Events\UpdatedContentEvent;
-use Botble\Base\Http\Responses\BaseHttpResponse;
-use Botble\Comment\Forms\CommentUserForm;
-use Botble\Base\Forms\FormBuilder;
+use Platform\Comment\Tables\CommentUserTable;
+use Platform\Base\Events\CreatedContentEvent;
+use Platform\Base\Events\DeletedContentEvent;
+use Platform\Base\Events\UpdatedContentEvent;
+use Platform\Base\Http\Responses\BaseHttpResponse;
+use Platform\Comment\Forms\CommentUserForm;
+use Platform\Base\Forms\FormBuilder;
 
 class CommentUserController extends BaseController
 {

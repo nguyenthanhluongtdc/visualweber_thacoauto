@@ -3,21 +3,23 @@
 //
 
 // Generate the extra small columns
+@use "sass:math";
+
 @mixin make-xs-column($columns) {
-    width: percentage(($columns / $m-grid-columns));
+    width: percentage(math.div($columns, $m-grid-columns));
 }
 
 // Generate the small columns
 @mixin make-sm-column($columns) {
     @media (min-width: map-get($m-layout-breakpoints, md) - 1) {
-        width: percentage(($columns / $m-grid-columns));
+        width: percentage(math.div($columns, $m-grid-columns));
     }
 }
 
 // Generate the medium columns
 @mixin make-md-column($columns) {
     @media (min-width: map-get($m-layout-breakpoints, lg) - 1) {
-        width: percentage(($columns / $m-grid-columns));
+        width: percentage(math.div($columns, $m-grid-columns));
     }
 }
 
@@ -38,7 +40,7 @@
 @mixin calc-grid-column($index, $class, $type) {
     @if ($type == width) and ($index > 0) {
         .m-grid-col-#{$class}-#{$index} {
-            width: percentage(($index / $m-grid-columns));
+            width: percentage(math.div($index, $m-grid-columns));
         }
     }
 }

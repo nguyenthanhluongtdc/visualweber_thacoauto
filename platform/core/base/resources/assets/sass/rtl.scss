@@ -387,17 +387,11 @@ div.dataTables_wrapper {
 }
 
 .btn-group > .btn:not(:first-child), .btn-group > .btn-group:not(:first-child) > .btn {
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+    border-radius: 3px 0 0 3px;
 }
 
 .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .btn-group:not(:last-child) > .btn {
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+    border-radius: 0 3px 3px 0;
 }
 
 .page-content {

@@ -9,6 +9,7 @@ use Illuminate\Support\Collection;
 use League\Flysystem\Adapter\Local;
 use League\Flysystem\FilesystemInterface;
 use RuntimeException;
+use RvMedia;
 use Storage;
 
 class ChunkStorage
@@ -44,7 +45,7 @@ class ChunkStorage
      */
     public function __construct()
     {
-        $this->config = config('core.media.media.chunk');
+        $this->config = RvMedia::getConfig('chunk');
 
         // Cache the storage path
         $this->disk = Storage::disk($this->config['storage']['disk']);

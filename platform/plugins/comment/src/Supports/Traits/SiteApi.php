@@ -1,6 +1,6 @@
 <?php
 
-namespace Botble\Comment\Supports\Traits;
+namespace Platform\Comment\Supports\Traits;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;

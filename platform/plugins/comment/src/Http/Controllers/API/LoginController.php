@@ -1,11 +1,11 @@
 <?php
 
-namespace Botble\Comment\Http\Controllers\API;
+namespace Platform\Comment\Http\Controllers\API;
 
-use Botble\ACL\Traits\AuthenticatesUsers;
-use Botble\ACL\Traits\LogoutGuardTrait;
-use Botble\Base\Http\Controllers\BaseController;
-use Botble\Base\Http\Responses\BaseHttpResponse;
+use Platform\ACL\Traits\AuthenticatesUsers;
+use Platform\ACL\Traits\LogoutGuardTrait;
+use Platform\Base\Http\Controllers\BaseController;
+use Platform\Base\Http\Responses\BaseHttpResponse;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 

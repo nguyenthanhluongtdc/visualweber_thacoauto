@@ -80,23 +80,6 @@
     </div>
 </script>
 
-<script id="_options-wysiwygtoolbar_template" type="text/x-custom-template">
-    <div class="line" data-option="wysiwygtoolbar">
-        <div class="col-3">
-            <h5>{!! trans('plugins/custom-field::base.form.toolbar') !!}</h5>
-            <p>{!! trans('plugins/custom-field::base.form.toolbar_helper') !!}</p>
-        </div>
-        <div class="col-9">
-            <h5>{!! trans('plugins/custom-field::base.form.toolbar') !!}</h5>
-            <select class="form-control">
-                <option value="basic">{!! trans('plugins/custom-field::base.form.toolbar_basic') !!}</option>
-                <option value="full">{!! trans('plugins/custom-field::base.form.toolbar_full') !!}</option>
-            </select>
-        </div>
-        <div class="clearfix"></div>
-    </div>
-</script>
-
 <script id="_options-selectchoices_template" type="text/x-custom-template">
     <div class="line" data-option="selectchoices">
         <div class="col-3">

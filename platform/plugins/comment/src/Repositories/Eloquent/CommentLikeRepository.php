@@ -1,10 +1,10 @@
 <?php
 
-namespace Botble\Comment\Repositories\Eloquent;
+namespace Platform\Comment\Repositories\Eloquent;
 
-use Botble\Comment\Models\Comment;
-use Botble\Comment\Repositories\Interfaces\CommentLikeInterface;
-use Botble\Support\Repositories\Eloquent\RepositoriesAbstract;
+use Platform\Comment\Models\Comment;
+use Platform\Comment\Repositories\Interfaces\CommentLikeInterface;
+use Platform\Support\Repositories\Eloquent\RepositoriesAbstract;
 
 class CommentLikeRepository extends RepositoriesAbstract implements CommentLikeInterface
 {

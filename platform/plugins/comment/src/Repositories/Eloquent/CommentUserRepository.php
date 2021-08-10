@@ -1,9 +1,9 @@
 <?php
 
-namespace Botble\Comment\Repositories\Eloquent;
+namespace Platform\Comment\Repositories\Eloquent;
 
-use Botble\Support\Repositories\Eloquent\RepositoriesAbstract;
-use Botble\Comment\Repositories\Interfaces\CommentUserInterface;
+use Platform\Support\Repositories\Eloquent\RepositoriesAbstract;
+use Platform\Comment\Repositories\Interfaces\CommentUserInterface;
 
 class CommentUserRepository extends RepositoriesAbstract implements CommentUserInterface
 {

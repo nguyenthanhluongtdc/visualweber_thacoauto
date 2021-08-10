@@ -5,11 +5,21 @@
         </div>
         <div class="car-filter--top">
             <ul class="car-model font18 font-pri car-model">
-                <li class="car-model__item">TẤT CẢ</li>
-                <li class="car-model__item">HATCHBACK</li>
-                <li class="car-model__item">SEDAN</li>
-                <li class="car-model__item">SUV</li>
-                <li class="car-model__item">MPV</li>
+                <li class="car-model__item">
+                    <span>TẤT CẢ</span>
+                </li>
+                <li class="car-model__item">
+                    <span>HATCHBACK</span>
+                </li>
+                <li class="car-model__item active">
+                    <span>SEDAN</span>
+                </li>
+                <li class="car-model__item">
+                    <span>SUV</span>
+                </li>
+                <li class="car-model__item">
+                    <span>MPV</span>
+                </li>
             </ul>
             <a href="#" class="font18 font-pri pre-order">PRE-ORDER</a>
         </div>
@@ -32,8 +42,10 @@
         </div>
         <div class="car-filter--bottom">
             <button type="button" class="modal-button" data-toggle="modal" data-target="#exampleModalCenter">
-                <img src="{{Theme::asset()->url('images/business/brand-detail/filter.png')}}" alt="filter icon">
-                BỘ LỌC NÂNG CAO
+                <span class="frame">
+                    <img src="{{Theme::asset()->url('images/business/brand-detail/filter.png')}}" alt="filter icon">
+                    BỘ LỌC NÂNG CAO
+                </span>
             </button>
         </div>
     </div>

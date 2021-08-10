@@ -268,7 +268,7 @@
                     </div>
                 </ul>
                 <div class="view-all-news font15 font-mi-bold">
-                    <a href="#"><span>Xem thêm</span><span><i class="fas fa-arrow-right"></i></span></a>
+                    <a href="#"><span>Xem thêm</span><span><i class="fas fa-arrow-right font15"></i></span></a>
                 </div>
             </div>
         </div>

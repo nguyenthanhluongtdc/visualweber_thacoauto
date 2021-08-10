@@ -407,7 +407,7 @@
             <div class="section-leader-room__row font20">
                 <div class="section-leader-room__row__header" data-aos="zoom-in">
                     <span class="box font25">
-                        Hội đồng quản trị thaco auto
+                        ban kiểm soát
                     </span>
                 </div>
                 <div class="section-leader-room__row__content row">
@@ -465,7 +465,7 @@
             <div class="section-leader-room__row font20">
                 <div class="section-leader-room__row__header" data-aos="zoom-in">
                     <span class="box font25">
-                        Hội đồng quản trị thaco auto
+                        Ban tổng giám đốc
                     </span>
                 </div>
                 <div class="section-leader-room__row__content row">

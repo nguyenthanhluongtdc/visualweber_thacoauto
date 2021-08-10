@@ -1,13 +1,13 @@
 <?php
 
-namespace Botble\Comment\Http\Controllers\AJAX;
+namespace Platform\Comment\Http\Controllers\AJAX;
 
 use App\Http\Controllers\Controller;
-use Botble\ACL\Traits\RegistersUsers;
-use Botble\Base\Http\Responses\BaseHttpResponse;
-use Botble\Comment\Repositories\Interfaces\CommentUserInterface;
-use Botble\Member\Models\Member;
-use Botble\Member\Repositories\Interfaces\MemberInterface;
+use Platform\ACL\Traits\RegistersUsers;
+use Platform\Base\Http\Responses\BaseHttpResponse;
+use Platform\Comment\Repositories\Interfaces\CommentUserInterface;
+use Platform\Member\Models\Member;
+use Platform\Member\Repositories\Interfaces\MemberInterface;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;

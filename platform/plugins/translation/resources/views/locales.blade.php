@@ -12,13 +12,18 @@
                             <form class="add-locale-form" action="{{ route('translations.locales') }}" method="POST">
                                 @csrf
                                 <div class="form-group">
-                                    <label for="locale_id" class="control-label">{{ trans('plugins/translation::translation.choose_language') }}</label>
-                                    <select id="locale_id" name="locale" class="form-control select-search-full">
-                                        <option>{{ trans('plugins/translation::translation.select_language') }}</option>
-                                        @foreach ($locales as $key => $name)
-                                            <option value="{{ $key }}"> {{ $name }} - {{ $key }}</option>
-                                        @endforeach
-                                    </select>
+                                    <label for="locale_id" class="control-label">{{ trans('plugins/translation::translation.locale') }}</label>
+                                    <div class="ui-select-wrapper form-group">
+                                        <select id="locale_id" name="locale" class="form-control select-search-full">
+                                            <option>{{ trans('plugins/translation::translation.select_language') }}</option>
+                                            @foreach ($locales as $key => $name)
+                                                <option value="{{ $key }}"> {{ $name }} - {{ $key }}</option>
+                                            @endforeach
+                                        </select>
+                                        <svg class="svg-next-icon svg-next-icon-size-16">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#select-chevron"></use>
+                                        </svg>
+                                    </div>
                                 </div>
                                 <p class="submit">
                                     <button class="btn btn-primary" type="submit">{{ trans('plugins/translation::translation.add_new_language') }}</button>
@@ -34,7 +39,6 @@
                             <tr>
                                 <th class="text-left"><span>{{ trans('plugins/translation::translation.name') }}</span></th>
                                 <th class="text-center"><span>{{ trans('plugins/translation::translation.locale') }}</span></th>
-                                <th class="text-center"><span>{{ trans('plugins/translation::translation.flag') }}</span></th>
                                 <th class="text-center"><span>{{ trans('plugins/translation::translation.actions') }}</span></th>
                             </tr>
                             </thead>

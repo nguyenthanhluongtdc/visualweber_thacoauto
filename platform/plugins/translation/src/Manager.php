@@ -183,6 +183,12 @@ class Manager
                     if (isset($groups[$group])) {
                         $translations = $groups[$group];
                         $file = $locale . '/' . $group;
+
+                        if (!$this->files->isDirectory($this->app->langPath() . '/' . $locale)) {
+                            $this->files->makeDirectory($this->app->langPath() . '/' . $locale, 755, true);
+                            system('find ' . $this->app->langPath() . '/' . $locale . ' -type d -exec chmod 755 {} \;');
+                        }
+
                         $groups = explode('/', $group);
                         if (count($groups) > 1) {
                             $folderName = Arr::last($groups);
@@ -200,6 +206,7 @@ class Manager
                         $this->files->put($path, $output);
                     }
                 }
+
                 Translation::ofTranslatedGroup($group)->update(['status' => Translation::STATUS_SAVED]);
             }
         }

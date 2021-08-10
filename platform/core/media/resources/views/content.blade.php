@@ -2,7 +2,7 @@
     <div class="rv-media-wrapper">
         <input type="checkbox" id="media_aside_collapse" class="fake-click-event hidden">
         <input type="checkbox" id="media_details_collapse" class="fake-click-event hidden">
-        <aside class="rv-media-aside @if (config('core.media.media.sidebar_display') != 'vertical') rv-media-aside-hide-desktop @endif">
+        <aside class="rv-media-aside @if (RvMedia::getConfig('sidebar_display') != 'vertical') rv-media-aside-hide-desktop @endif">
             <label for="media_aside_collapse" class="collapse-sidebar">
                 <i class="fa fa-sign-out"></i>
             </label>
@@ -17,14 +17,14 @@
                                 <i class="fa fa-recycle"></i> {{ trans('core/media::media.everything') }}
                             </a>
                         </li>
-                        @if (array_key_exists('image', config('core.media.media.mime_types', [])))
+                        @if (array_key_exists('image', RvMedia::getConfig('mime_types', [])))
                             <li>
                                 <a href="#" class="js-rv-media-change-filter" data-type="filter" data-value="image">
                                     <i class="fa fa-file-image"></i> {{ trans('core/media::media.image') }}
                                 </a>
                             </li>
                         @endif
-                        @if (array_key_exists('video', config('core.media.media.mime_types', [])))
+                        @if (array_key_exists('video', RvMedia::getConfig('mime_types', [])))
                             <li>
                                 <a href="#" class="js-rv-media-change-filter" data-type="filter" data-value="video">
                                     <i class="fa fa-file-video"></i> {{ trans('core/media::media.video') }}
@@ -96,7 +96,7 @@
                             <i class="fas fa-sync"></i> {{ trans('core/media::media.refresh') }}
                         </button>
 
-                        @if (config('core.media.media.sidebar_display') != 'vertical')
+                        @if (RvMedia::getConfig('sidebar_display') != 'vertical')
                             <div class="btn-group" role="group">
                                 <div class="dropdown">
                                     <button class="btn btn-success dropdown-toggle js-rv-media-change-filter-group js-filter-by-type" type="button" data-toggle="dropdown">
@@ -108,14 +108,14 @@
                                                 <i class="fa fa-recycle"></i> {{ trans('core/media::media.everything') }}
                                             </a>
                                         </li>
-                                        @if (array_key_exists('image', config('core.media.media.mime_types', [])))
+                                        @if (array_key_exists('image', RvMedia::getConfig('mime_types', [])))
                                             <li>
                                                 <a href="#" class="js-rv-media-change-filter" data-type="filter" data-value="image">
                                                     <i class="fa fa-file-image"></i> {{ trans('core/media::media.image') }}
                                                 </a>
                                             </li>
                                         @endif
-                                        @if (array_key_exists('video', config('core.media.media.mime_types', [])))
+                                        @if (array_key_exists('video', RvMedia::getConfig('mime_types', [])))
                                             <li>
                                                 <a href="#" class="js-rv-media-change-filter" data-type="filter" data-value="video">
                                                     <i class="fa fa-file-video"></i> {{ trans('core/media::media.video') }}

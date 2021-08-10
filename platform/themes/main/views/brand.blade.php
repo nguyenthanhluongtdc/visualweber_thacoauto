@@ -15,16 +15,16 @@
                     </p>
                     <div class="brand-logo">
                         <div class="logo-img">
-                            <a href="#"><img src="{{Theme::asset()->url('images/business/kia-logo.png')}}" alt="" ></a>
+                            <a href="/brand-detail"><img src="{{Theme::asset()->url('images/business/kia-logo.png')}}" alt="" ></a>
                         </div>
                         <div class="logo-img">
-                            <a href="#"><img src="{{Theme::asset()->url('images/business/logo-mazda.jpg')}}" alt=""></a>
+                            <a href="/brand-detail"><img src="{{Theme::asset()->url('images/business/logo-mazda.jpg')}}" alt=""></a>
                         </div>
                         <div class="logo-img">
-                            <a href="#"><img src="{{Theme::asset()->url('images/business/logo-peugeot.jpg')}}" alt=""></a>
+                            <a href="/brand-detail"><img src="{{Theme::asset()->url('images/business/logo-peugeot.jpg')}}" alt=""></a>
                         </div>
                         <div class="logo-img">
-                            <a href="#"><img src="{{Theme::asset()->url('images/business/log-bmw.jpg')}}" alt=""></a>
+                            <a href="/brand-detail"><img src="{{Theme::asset()->url('images/business/log-bmw.jpg')}}" alt=""></a>
                         </div>
                         
                     </div>
@@ -47,7 +47,7 @@
                     <p  class="font-pri font18">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident vel a error. Nemo inventore reprehenderit doloremque quo, quia culpa impedit, expedita harum, quas quaerat magni! Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, soluta.</p>
                     <div class="brand-logo">
                         <div class="logo-img">
-                            <a href="#"><img src="{{Theme::asset()->url('images/business/logo-peugeot.jpg')}}" alt=""></a>
+                            <a href="/brand-detail"><img src="{{Theme::asset()->url('images/business/logo-peugeot.jpg')}}" alt=""></a>
                         </div>
                     </div>
                     

@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Botble\Comment\Models;
+namespace Platform\Comment\Models;
 
 
-use Botble\Base\Models\BaseModel;
+use Platform\Base\Models\BaseModel;
 
 class CommentRecommend extends BaseModel
 {

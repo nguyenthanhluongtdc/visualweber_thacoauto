@@ -1,8 +1,8 @@
 <?php
 
-namespace Botble\Comment\Repositories\Interfaces;
+namespace Platform\Comment\Repositories\Interfaces;
 
-use Botble\Support\Repositories\Interfaces\RepositoryInterface;
+use Platform\Support\Repositories\Interfaces\RepositoryInterface;
 
 interface CommentRatingInterface extends RepositoryInterface
 {

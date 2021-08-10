@@ -24,7 +24,7 @@ $(document).ready(() => {
             if (typeof tinymce != 'undefined') {
                 for (var instance in tinymce.editors) {
                     if (tinymce.editors[instance].getContent) {
-                        $('#' + instance).html( tinymce.editors[instance].getContent());
+                        $('#' + instance).html(tinymce.editors[instance].getContent());
                     }
                 }
             }

@@ -1,10 +1,10 @@
 <?php
 
-namespace Botble\Comment\Repositories\Eloquent;
+namespace Platform\Comment\Repositories\Eloquent;
 
-use Botble\Base\Enums\BaseStatusEnum;
-use Botble\Support\Repositories\Eloquent\RepositoriesAbstract;
-use Botble\Comment\Repositories\Interfaces\CommentInterface;
+use Platform\Base\Enums\BaseStatusEnum;
+use Platform\Support\Repositories\Eloquent\RepositoriesAbstract;
+use Platform\Comment\Repositories\Interfaces\CommentInterface;
 
 class CommentRepository extends RepositoriesAbstract implements CommentInterface
 {

@@ -22,7 +22,7 @@ class LogCollection extends Collection
      */
     public function __construct($items = [])
     {
-        $this->setFilesystem(app('botble::log-viewer.filesystem'));
+        $this->setFilesystem(app('platform::log-viewer.filesystem'));
         parent::__construct($items);
 
         if (empty($items)) {

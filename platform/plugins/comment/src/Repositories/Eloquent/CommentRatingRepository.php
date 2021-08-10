@@ -1,9 +1,9 @@
 <?php
 
-namespace Botble\Comment\Repositories\Eloquent;
+namespace Platform\Comment\Repositories\Eloquent;
 
-use Botble\Comment\Repositories\Interfaces\CommentRatingInterface;
-use Botble\Support\Repositories\Eloquent\RepositoriesAbstract;
+use Platform\Comment\Repositories\Interfaces\CommentRatingInterface;
+use Platform\Support\Repositories\Eloquent\RepositoriesAbstract;
 use Arr;
 
 class CommentRatingRepository extends RepositoriesAbstract implements CommentRatingInterface

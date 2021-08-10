@@ -215,7 +215,7 @@ class PublicController extends Controller
      */
     public function postUpload(Request $request, BaseHttpResponse $response)
     {
-        if (setting('media_chunk_enabled') != '1') {
+        if (!RvMedia::isChunkUploadEnabled()) {
             $validator = Validator::make($request->all(), [
                 'file.0' => 'required|image|mimes:jpg,jpeg,png,webp',
             ]);
@@ -227,7 +227,7 @@ class PublicController extends Controller
             $result = RvMedia::handleUpload(Arr::first($request->file('file')), 0, 'accounts');
 
             if ($result['error']) {
-                return $response->setError(true)->setMessage($result['message']);
+                return $response->setError()->setMessage($result['message']);
             }
 
             return $response->setData($result['data']);
@@ -250,7 +250,7 @@ class PublicController extends Controller
                     return $response->setData($result['data']);
                 }
 
-                return $response->setError(true)->setMessage($result['message']);
+                return $response->setError()->setMessage($result['message']);
             }
             // We are in chunk mode, lets send the current progress
             $handler = $save->handler();
@@ -259,7 +259,7 @@ class PublicController extends Controller
                 'status' => true,
             ]);
         } catch (Exception $exception) {
-            return $response->setError(true)->setMessage($exception->getMessage());
+            return $response->setError()->setMessage($exception->getMessage());
         }
     }
 

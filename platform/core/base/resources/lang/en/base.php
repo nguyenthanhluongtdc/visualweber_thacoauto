@@ -24,4 +24,5 @@ return [
     'select_image'              => 'Select image',
     'to_add_more_image'         => 'to add more images',
     'add_image'                 => 'Add image',
+    'tools'                     => 'Tools'
 ];

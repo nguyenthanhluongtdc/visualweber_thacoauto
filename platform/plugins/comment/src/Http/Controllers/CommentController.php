@@ -1,23 +1,23 @@
 <?php
 
-namespace Botble\Comment\Http\Controllers;
+namespace Platform\Comment\Http\Controllers;
 
-use Botble\Base\Events\BeforeEditContentEvent;
-use Botble\Comment\Http\Requests\CommentRequest;
-use Botble\Comment\Repositories\Interfaces\CommentInterface;
-use Botble\Base\Http\Controllers\BaseController;
-use Botble\Comment\Supports\CloneUserToCommentUser;
-use Botble\Comment\Supports\Updater;
-use Botble\Setting\Supports\SettingStore;
+use Platform\Base\Events\BeforeEditContentEvent;
+use Platform\Comment\Http\Requests\CommentRequest;
+use Platform\Comment\Repositories\Interfaces\CommentInterface;
+use Platform\Base\Http\Controllers\BaseController;
+use Platform\Comment\Supports\CloneUserToCommentUser;
+use Platform\Comment\Supports\Updater;
+use Platform\Setting\Supports\SettingStore;
 use Illuminate\Http\Request;
 use Exception;
-use Botble\Comment\Tables\CommentTable;
-use Botble\Base\Events\CreatedContentEvent;
-use Botble\Base\Events\DeletedContentEvent;
-use Botble\Base\Events\UpdatedContentEvent;
-use Botble\Base\Http\Responses\BaseHttpResponse;
-use Botble\Comment\Forms\CommentForm;
-use Botble\Base\Forms\FormBuilder;
+use Platform\Comment\Tables\CommentTable;
+use Platform\Base\Events\CreatedContentEvent;
+use Platform\Base\Events\DeletedContentEvent;
+use Platform\Base\Events\UpdatedContentEvent;
+use Platform\Base\Http\Responses\BaseHttpResponse;
+use Platform\Comment\Forms\CommentForm;
+use Platform\Base\Forms\FormBuilder;
 use Assets;
 use File;
 

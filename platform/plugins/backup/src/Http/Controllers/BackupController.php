@@ -113,6 +113,8 @@ class BackupController extends BaseController
                 }
             }
 
+            setting()->set('media_random_hash', md5(time()))->save();
+
             Helper::clearCache();
 
             do_action(BACKUP_ACTION_AFTER_RESTORE, BACKUP_MODULE_SCREEN_NAME, $request);

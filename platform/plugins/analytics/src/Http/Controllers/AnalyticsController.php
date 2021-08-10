@@ -76,7 +76,7 @@ class AnalyticsController extends BaseController
             return $response
                 ->setError()
                 ->setMessage(trans('plugins/analytics::analytics.wrong_configuration',
-                    ['version' => get_cms_version()]));
+                    ['version' => number_format((float) get_cms_version(), 2)]));
         } catch (Exception $exception) {
             return $response
                 ->setError()
@@ -103,7 +103,7 @@ class AnalyticsController extends BaseController
             return $response
                 ->setError()
                 ->setMessage(trans('plugins/analytics::analytics.wrong_configuration',
-                    ['version' => get_cms_version()]));
+                    ['version' => number_format((float) get_cms_version(), 2)]));
         } catch (Exception $exception) {
             return $response
                 ->setError()
@@ -130,7 +130,7 @@ class AnalyticsController extends BaseController
             return $response
                 ->setError()
                 ->setMessage(trans('plugins/analytics::analytics.wrong_configuration',
-                    ['version' => get_cms_version()]));
+                    ['version' => number_format((float) get_cms_version(), 2)]));
         } catch (Exception $exception) {
             return $response
                 ->setError()
@@ -157,7 +157,7 @@ class AnalyticsController extends BaseController
             return $response
                 ->setError()
                 ->setMessage(trans('plugins/analytics::analytics.wrong_configuration',
-                    ['version' => get_cms_version()]));
+                    ['version' => number_format((float) get_cms_version(), 2)]));
         } catch (Exception $exception) {
             return $response
                 ->setError()

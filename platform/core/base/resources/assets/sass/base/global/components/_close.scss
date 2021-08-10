@@ -15,3 +15,8 @@ $general-img-path: '/vendor/core/core/base/images/' !default;
     outline: none;
     background-image: url("#{$general-img-path}remove-icon-small.png") !important;
 }
+
+.alert-dismissible .close {
+    height: 100%;
+    background-position: center;
+}

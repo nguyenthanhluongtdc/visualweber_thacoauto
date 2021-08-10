@@ -36,4 +36,5 @@ return [
     'delete'                   => 'Delete',
     'confirm_delete_message'   => 'Do you really want to delete this locale? It will delete all files/folders for this local in /resources/lang!',
     'download'                 => 'Download',
+    'select_locale'            => 'Select locale',
 ];

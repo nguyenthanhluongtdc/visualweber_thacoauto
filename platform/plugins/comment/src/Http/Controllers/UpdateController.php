@@ -1,13 +1,13 @@
 <?php
 
 
-namespace Botble\Comment\Http\Controllers;
+namespace Platform\Comment\Http\Controllers;
 
 
-use Botble\Base\Http\Controllers\BaseController;
-use Botble\Base\Http\Responses\BaseHttpResponse;
-use Botble\Comment\Supports\Updater;
-use Botble\Setting\Supports\SettingStore;
+use Platform\Base\Http\Controllers\BaseController;
+use Platform\Base\Http\Responses\BaseHttpResponse;
+use Platform\Comment\Supports\Updater;
+use Platform\Setting\Supports\SettingStore;
 use Illuminate\Http\Request;
 
 class UpdateController extends BaseController

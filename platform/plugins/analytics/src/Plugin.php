@@ -2,9 +2,9 @@
 
 namespace Platform\Analytics;
 
-use Platform\PluginManagement\Abstracts\PluginOperationAbstract;
 use Platform\Dashboard\Models\DashboardWidget;
 use Platform\Dashboard\Repositories\Interfaces\DashboardWidgetInterface;
+use Platform\PluginManagement\Abstracts\PluginOperationAbstract;
 use Exception;
 
 class Plugin extends PluginOperationAbstract
@@ -15,14 +15,20 @@ class Plugin extends PluginOperationAbstract
     public static function remove()
     {
         $widgets = app(DashboardWidgetInterface::class)
-            ->getModel()
-            ->whereIn('name', [
-                'widget_analytics_general',
-                'widget_analytics_page',
-                'widget_analytics_browser',
-                'widget_analytics_referrer',
-            ])
-            ->get();
+            ->advancedGet([
+                'condition' => [
+                    [
+                        'name',
+                        'IN',
+                        [
+                            'widget_analytics_general',
+                            'widget_analytics_page',
+                            'widget_analytics_browser',
+                            'widget_analytics_referrer',
+                        ],
+                    ],
+                ],
+            ]);
 
         foreach ($widgets as $widget) {
             /**

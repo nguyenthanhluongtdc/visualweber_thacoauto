@@ -8,7 +8,7 @@ if (!function_exists('log_viewer')) {
      */
     function log_viewer()
     {
-        return app('botble::log-viewer');
+        return app('platform::log-viewer');
     }
 }
 
@@ -20,7 +20,7 @@ if (!function_exists('log_levels')) {
      */
     function log_levels()
     {
-        return app('botble::log-viewer.levels');
+        return app('platform::log-viewer.levels');
     }
 }
 
@@ -32,7 +32,7 @@ if (!function_exists('log_menu')) {
      */
     function log_menu()
     {
-        return app('botble::log-viewer.menu');
+        return app('platform::log-viewer.menu');
     }
 }
 
@@ -44,7 +44,7 @@ if (!function_exists('log_styler')) {
      */
     function log_styler()
     {
-        return app('botble::log-viewer.styler');
+        return app('platform::log-viewer.styler');
     }
 }
 

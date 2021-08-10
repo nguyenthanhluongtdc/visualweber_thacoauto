@@ -8,6 +8,7 @@ use File;
 use Illuminate\Contracts\Filesystem\FileExistsException;
 use Illuminate\Contracts\Translation\Translator;
 use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Arr;
 use League\Flysystem\FileNotFoundException;
 use Mimey\MimeTypes;
 use RvMedia;
@@ -143,12 +144,12 @@ class UploadsManager
      */
     public function saveFile($path, $content, UploadedFile $file = null)
     {
-        if (!config('core.media.media.chunk.enabled') || !$file) {
+        if (!RvMedia::isChunkUploadEnabled() || !$file) {
             return Storage::put($this->cleanFolder($path), $content);
         }
 
-        $currentChunksPath = config('core.media.media.chunk.storage.chunks') . '/' . $file->getFilename();
-        $disk = Storage::disk(config('core.media.media.chunk.storage.disk'));
+        $currentChunksPath = RvMedia::getConfig('chunk.storage.chunks') . '/' . $file->getFilename();
+        $disk = Storage::disk(RvMedia::getConfig('chunk.storage.disk'));
 
         try {
             $stream = $disk->getDriver()->readStream($currentChunksPath);

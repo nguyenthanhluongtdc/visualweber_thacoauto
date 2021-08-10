@@ -53,8 +53,9 @@ class HookServiceProvider extends ServiceProvider
         if (function_exists('add_shortcode')) {
             add_shortcode('blog-posts', trans('plugins/blog::base.short_code_name'),
                 trans('plugins/blog::base.short_code_description'), [$this, 'renderBlogPosts']);
-            shortcode()->setAdminConfig('blog-posts',
-                view('plugins/blog::partials.posts-short-code-admin-config')->render());
+            shortcode()->setAdminConfig('blog-posts', function ($attributes, $content) {
+                return view('plugins/blog::partials.posts-short-code-admin-config', compact('attributes', 'content'))->render();
+            });
         }
 
         if (function_exists('theme_option')) {

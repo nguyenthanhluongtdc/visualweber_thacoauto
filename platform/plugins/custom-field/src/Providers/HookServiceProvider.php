@@ -94,7 +94,6 @@ class HookServiceProvider extends ServiceProvider
         Assets::addStylesDirectly([
             'vendor/core/plugins/custom-field/css/custom-field.css',
         ])
-            ->addScriptsDirectly(config('core.base.general.editor.ckeditor.js'))
             ->addScriptsDirectly([
                 'vendor/core/plugins/custom-field/js/use-custom-fields.js',
             ])

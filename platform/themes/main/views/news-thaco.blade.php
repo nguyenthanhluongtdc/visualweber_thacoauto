@@ -19,7 +19,7 @@
                     Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
                 </p>
                 <a href="" class="view-detail font-pri font15">
-                    Xem chi tiết <span><i class="fas fa-arrow-right"></i></span>
+                    Xem chi tiết <span><i class="fas fa-arrow-right font15"></i></span>
                 </a>
             </div>
         </div>
@@ -42,7 +42,7 @@
                     Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
                 </p>
                 <a href="" class="view-detail font-pri font15">
-                    Xem chi tiết <span><i class="fas fa-arrow-right"></i></span>
+                    Xem chi tiết <span><i class="fas fa-arrow-right font15"></i></span>
                 </a>
             </div>
         </div>
@@ -423,5 +423,5 @@
             </div>
         </li>
     </ul>
-    <div id="loadMore" class="font20"><span>Xem thêm</span><span><i class="fas fa-arrow-right"></i></div>
+    <div id="loadMore" class="font20"><span>Xem thêm</span><span><i class="fas fa-arrow-right font15"></i></div>
 </div>

@@ -1,6 +1,6 @@
 <?php
 
-use Botble\Comment\Models\CommentUser;
+use Platform\Comment\Models\CommentUser;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 

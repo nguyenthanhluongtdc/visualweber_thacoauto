@@ -1,12 +1,12 @@
 <?php
 
-namespace Botble\Comment\Http\Controllers\API;
+namespace Platform\Comment\Http\Controllers\API;
 
-use Botble\ACL\Traits\RegistersUsers;
-use Botble\Base\Http\Controllers\BaseController;
-use Botble\Base\Http\Responses\BaseHttpResponse;
-use Botble\Comment\Repositories\Interfaces\CommentUserInterface;
-use Botble\Member\Models\Member;
+use Platform\ACL\Traits\RegistersUsers;
+use Platform\Base\Http\Controllers\BaseController;
+use Platform\Base\Http\Responses\BaseHttpResponse;
+use Platform\Comment\Repositories\Interfaces\CommentUserInterface;
+use Platform\Member\Models\Member;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;

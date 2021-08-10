@@ -1,9 +1,9 @@
 <?php
 
 
-namespace Botble\Comment\Supports;
+namespace Platform\Comment\Supports;
 
-use Botble\Comment\Repositories\Interfaces\CommentUserInterface;
+use Platform\Comment\Repositories\Interfaces\CommentUserInterface;
 use Illuminate\Http\Request;
 
 

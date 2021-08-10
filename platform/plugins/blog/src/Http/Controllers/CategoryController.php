@@ -57,6 +57,7 @@ class CategoryController extends BaseController
 
         if ($request->ajax()) {
             $data = view('core/base::forms.partials.tree-categories', $this->getOptions(compact('categories')))->render();
+
             return $response->setData($data);
         }
 
@@ -110,6 +111,7 @@ class CategoryController extends BaseController
             } else {
                 $form = $this->getForm($category);
             }
+
             $response->setData([
                 'model' => $category,
                 'form'  => $form

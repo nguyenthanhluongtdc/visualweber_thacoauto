@@ -209,13 +209,14 @@ class PostController extends BaseController
     public function getWidgetRecentPosts(Request $request, BaseHttpResponse $response)
     {
         $limit = (int)$request->input('paginate', 10);
+        $limit = $limit > 0 ? $limit : 10;
 
         $posts = $this->postRepository->advancedGet([
             'with'     => ['slugable'],
             'order_by' => ['created_at' => 'desc'],
             'paginate' => [
                 'per_page'      => $limit,
-                'current_paged' => (int)$request->input('page'),
+                'current_paged' => (int)$request->input('page', 1),
             ],
         ]);
 

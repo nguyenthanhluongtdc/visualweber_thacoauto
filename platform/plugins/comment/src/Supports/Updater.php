@@ -1,10 +1,10 @@
 <?php
 
-namespace Botble\Comment\Supports;
+namespace Platform\Comment\Supports;
 
 use Artisan;
-use Botble\Comment\Supports\Traits\SiteApi;
-use Botble\PluginManagement\Services\PluginService;
+use Platform\Comment\Supports\Traits\SiteApi;
+use Platform\PluginManagement\Services\PluginService;
 use File;
 use Http;
 use Arr;

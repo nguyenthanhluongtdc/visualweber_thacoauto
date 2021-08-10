@@ -313,7 +313,10 @@
     }
     .detail-contact{
         background-color: #f3f3f3;
-        margin-top: 15px;
+        margin-top: 2%;
+        &:first-child{
+            margin-top: 4.5%;
+        }
         .content-contact{
             padding: 20px;
             .img-detail{

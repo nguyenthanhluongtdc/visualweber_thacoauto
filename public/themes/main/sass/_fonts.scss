@@ -1,5 +1,22 @@
-@include font-face('MyriadPro-Cond' , 'fonts/MyriadPro-Cond');
-@include font-face('MyriadPro-BoldCond' , 'fonts/MyriadPro-BoldCond');
-@include font-face('MyriadPro-Regular' , 'fonts/MyriadPro-Regular');
-@include font-face('MyriadPro-Bold' , 'fonts/MyriadPro-Bold');
-@include font-face('MyriadPro-SemiboldCond' , 'fonts/MyriadPro-SemiboldCond');
+@include font-face("MyriadPro-Cond", "fonts/MyriadPro-Cond");
+@include font-face("MyriadPro-BoldCond", "fonts/MyriadPro-BoldCond");
+@include font-face("MyriadPro-Regular", "fonts/MyriadPro-Regular");
+@include font-face("MyriadPro-Bold", "fonts/MyriadPro-Bold");
+@include font-face("MyriadPro-SemiboldCond", "fonts/MyriadPro-SemiboldCond");
+
+.MyriadPro-Regular {
+  font-family: "MyriadPro-Regular";
+}
+
+.MyriadPro-BoldCond {
+  font-family: "MyriadPro-BoldCond";
+}
+.MyriadPro-Regular {
+  font-family: "MyriadPro-Regular";
+}
+.MyriadPro-Bold {
+  font-family: "MyriadPro-Bold";
+}
+.MyriadPro-SemiboldCond {
+  font-family: "MyriadPro-SemiboldCond";
+}

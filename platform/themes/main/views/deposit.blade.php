@@ -5,32 +5,32 @@
             <p class="mb-4">Thông tin khách hàng sẽ được đưa vào thoả thuận hợp đồng. Quý khách vui lòng nhập chính xác các nội dung dưới đây</p>
             <div class="desposit__form">
                 <div class="form-group">
-                    <input type="text" class="form-control" name="username" placeholder="Nhập họ và tên" />
+                    <input type="text" class="form-control MyriadPro-Regular font15" name="username" placeholder="Nhập họ và tên" />
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" name="phone" placeholder="Nhập số điện thoại" />
+                    <input type="text" class="form-control MyriadPro-Regular font15" name="phone" placeholder="Nhập số điện thoại" />
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" name="showroom" placeholder="Chọn showroom" />
+                    <input type="text" class="form-control MyriadPro-Regular font15" name="showroom" placeholder="Chọn showroom" />
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" name="email" placeholder="Nhập email" />
+                    <input type="text" class="form-control MyriadPro-Regular font15" name="email" placeholder="Nhập email" />
                 </div>
-                <div class="form-group">
-                    <textarea rows="5" class="form-control" name="email" placeholder="Nhập nội dung"></textarea>
+                <div class="form-group span-2">
+                    <textarea rows="7" class="form-control MyriadPro-Regular font15" name="email" placeholder="Nhập nội dung"></textarea>
                 </div>
-                <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                <div class="custom-control span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
                     <input type="checkbox" class="custom-control-input" id="customControlInline">
                     <label class="custom-control-label" for="customControlInline">Tôi cam kết các thông tin khách hàng cung cấp tại đây hoàn toàn chính xác</label>
                 </div>
-                <div class="custom-control custom-checkbox my-1 mr-sm-2">
-                    <input type="checkbox" class="custom-control-input" id="customControlInline">
-                    <label class="custom-control-label" for="customControlInline">Tôi đã đọc, hiểu rõ và xác nhận đồng ý với toàn bộ nội dung <a href="#">Điều khoản</a> trong Thoả Thuận Đặt Cọc trên cũng như Chính Sách Ưu Đãi
+                <div class="custom-control span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
+                    <input type="checkbox" class="custom-control-input" id="customControlInline2">
+                    <label class="custom-control-label" for="customControlInline2">Tôi đã đọc, hiểu rõ và xác nhận đồng ý với toàn bộ nội dung <a href="#">Điều khoản</a> trong Thoả Thuận Đặt Cọc trên cũng như Chính Sách Ưu Đãi
 áp dụng tại thời điểm đặt mua xe ô tô này trên KIA Online</label>
                 </div>
-                <div class="custom-control custom-checkbox my-1 mr-sm-2">
-                    <input type="checkbox" class="custom-control-input" id="customControlInline">
-                    <label class="custom-control-label" for="customControlInline">Tôi đồng ý với các <a href="#">Điều kiện & Điều khoản</a> của KIA Online</label>
+                <div class="custom-control span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
+                    <input type="checkbox" class="custom-control-input" id="customControlInline3">
+                    <label class="custom-control-label" for="customControlInline3">Tôi đồng ý với các <a href="#">Điều kiện & Điều khoản</a> của KIA Online</label>
                 </div>
             </div>
         </div>

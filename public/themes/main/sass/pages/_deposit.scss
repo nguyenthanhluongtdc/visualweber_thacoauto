@@ -1,0 +1,66 @@
+$color-gray: #f6f6f6;
+$color-placeholder-gray: #a6a6a6;
+$color-primary-link: #1c76c3;
+
+.desposit {
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1.5rem;
+    .form-group {
+      input {
+        height: 43px;
+        outline: none;
+      }
+    }
+    .span-2 {
+      grid-column: span 2;
+    }
+    .form-control {
+      background-color: $color-gray;
+      border: unset;
+      border-radius: unset;
+      resize: none;
+      &::placeholder {
+        color: $color-placeholder-gray;
+      }
+    }
+
+    .custom-control {
+      .custom-control-label {
+        margin-left: 0.5rem;
+        line-height: 1.5;
+        &::before {
+          width: 18px;
+          height: 18px;
+          border: $color-placeholder-gray solid 1px;
+          border-radius: unset !important;
+          top: 0;
+          left: -2rem;
+        }
+        &::after {
+          top: 0;
+          left: -2rem;
+          background: no-repeat 80%/70% 90%;
+        }
+        a {
+          color: $color-primary-link;
+        }
+      }
+    }
+
+    .custom-control-input {
+      &:focus {
+        outline: none;
+      }
+      &:checked ~ .custom-control-label {
+        &::after {
+          background-image: url("../images/checked.png");
+        }
+        &::before {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}

@@ -46,16 +46,17 @@
                         }
                     }
                     .swiper-pagination-bullets{
-                        bottom: 35px;
+                        bottom: 2vw;
                         .swiper-pagination-bullet{
-                            width: 20px;
-                            height: 20px;
+                            width: 0.8vw;
+                            height: 0.8vw;
                             background-color: #e9eceb;
                             opacity: 1;
+                            margin: 0 0.3vw;
                         }
                         .swiper-pagination-bullet-active{
-                            width: 20px;
-                            height: 20px;
+                            width: 0.8vw;
+                            height: 0.8vw;
                             background-color: $color-primary;
                         }
                     }

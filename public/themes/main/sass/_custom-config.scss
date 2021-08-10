@@ -491,3 +491,28 @@ a:hover {
         margin-top: #{calculatorPixel(20,992)}px;
     }
 }
+
+.mt-10 {
+    margin-top: 10px;
+    @media (max-width: 1680px) {
+        margin-top: #{calculatorPixel(10,1680)}px;
+    }
+    @media (max-width: 1360px) {
+        margin-top: #{calculatorPixel(10,1360)}px;
+    }
+    @media (max-width: 992px) {
+        margin-top: #{calculatorPixel(10,992)}px;
+    }
+}
+.mb-10 {
+    margin-bottom: 10px;
+    @media (max-width: 1680px) {
+        margin-bottom: #{calculatorPixel(10,1680)}px;
+    }
+    @media (max-width: 1360px) {
+        margin-bottom: #{calculatorPixel(10,1360)}px;
+    }
+    @media (max-width: 992px) {
+        margin-bottom: #{calculatorPixel(10,992)}px;
+    }
+}

@@ -4,7 +4,7 @@
             <h2 class="production__title font60 font-pri-bold">
                 R&D
             </h2>
-            <div class="production__content font20 font-pri mt-40 mb-40">
+            <div class="production__content font20 font-pri mt-10 mb-40">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
                 <div class="read-more">
                     <a href="" class="read-more__link font20">Xem thêm <i class="fas fa-angle-double-right"></i></a>
@@ -19,7 +19,7 @@
             <h2 class="production__title font60 font-pri-bold">
                 SẢN XUẤT - LẮP RÁP Ô TÔ & XE MÁY
             </h2>
-            <div class="production__content font20 font-pri mt-40 mb-40">
+            <div class="production__content font20 font-pri mt-10 mb-40">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
                 <div class="read-more">
                     <a href="" class="read-more__link font20">Xem thêm <i class="fas fa-angle-double-right"></i></a>
@@ -34,7 +34,7 @@
             <h2 class="production__title font60 font-pri-bold">
                 CÔNG NGHIỆP HỖ TRỢ & CƠ KHÍ
             </h2>
-            <div class="production__content font20 font-pri mt-40 mb-40">
+            <div class="production__content font20 font-pri mt-10 mb-40">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
                 <div class="read-more">
                     <a href="" class="read-more__link font20">Xem thêm <i class="fas fa-angle-double-right"></i></a>
@@ -49,7 +49,7 @@
             <h2 class="production__title font60 font-pri-bold">
                 XUẤT KHẨU
             </h2>
-            <div class="production__content font20 font-pri mt-40 mb-40">
+            <div class="production__content font20 font-pri mt-10 mb-40">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
                 <div class="read-more">
                     <a href="" class="read-more__link font20">Xem thêm <i class="fas fa-angle-double-right"></i></a>

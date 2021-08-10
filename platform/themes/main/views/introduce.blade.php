@@ -1,7 +1,7 @@
 <div id="introduce-page" class="font-pri">
     <div class="navbar-menu">
         <div class="container-remake">
-            <ul class="nav">
+            <ul class="nav font-pri-bold">
                 <li class="nav-item" data-aos="fade-down">
                     <a href="#section_one" title="Về THACO AUTO" class="click_scroll">
                         Về THACO AUTO
@@ -69,10 +69,10 @@
                                 <div class="symbol">
                                     <img src="{{Theme::asset()->url('images/introduce/symbol6.png')}}" alt="">
                                 </div>
-                                <div class="company-name font17">
+                                <div class="company-name font17 font-pri-bold">
                                     THACO AUTO
                                 </div>
-                                <div class="name font37">
+                                <div class="name font37 font-pri-bold">
                                     sản xuất
                                 </div>
                                 <p class="description">
@@ -80,7 +80,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col-right col-top">
+                        <div class="col-right col-top font-pri-bold">
                             <div class="col-right__item" data-aos="zoom-in" data-aos-delay="400">
                                 <div class="box-center">
                                     <div class="symbol">
@@ -129,10 +129,10 @@
                                 <div class="symbol">
                                     <img src="{{Theme::asset()->url('images/introduce/symbol5.png')}}" alt="">
                                 </div>
-                                <div class="company-name font17">
+                                <div class="company-name font17 font-pri-bold">
                                     THACO AUTO
                                 </div>
-                                <div class="name font37">
+                                <div class="name font37 font-pri-bold">
                                     kinh doanh
                                 </div>
                                 <p class="description">
@@ -140,7 +140,7 @@
                                 </p>
                            </div>
                         </div>
-                        <div class="col-right col-bottom">
+                        <div class="col-right col-bottom font-pri-bold ">
                             <div class="col-right__item" data-aos="zoom-in" data-aos-delay="400">
                                 <div class="box-center">
                                     <div class="symbol">
@@ -212,7 +212,7 @@
                 <div class="section-system-value__content">
                     <div class="section-system-value__content__left">
                         <div class="__left__row" data-aos="fade-up" data-aos-delay="300">
-                            <h3 class="title font30">
+                            <h3 class="title font30 font-pri-bold">
                                 Tầm nhìn
                             </h3>
                             <p class="description">
@@ -220,7 +220,7 @@
                             </p>
                         </div>
                         <div class="__left__row" data-aos="fade-up" data-aos-delay="600">
-                            <h3 class="title font30">
+                            <h3 class="title font30 font-pri-bold">
                                 sứ mệnh
                             </h3>
                             <p class="description">
@@ -228,7 +228,7 @@
                             </p>
                         </div>
                         <div class="__left__row" data-aos="fade-up" data-aos-delay="900">
-                            <h3 class="title font30">
+                            <h3 class="title font30 font-pri-bold">
                                 định hướng chiến lược
                             </h3>
                             <p class="description">
@@ -250,7 +250,7 @@
             <h2 class="section-leader-room__title font-pri-bold font60" data-aos="fade-right">
                 ban lãnh đạo
             </h2>
-            <div class="section-leader-room__row">
+            <div class="section-leader-room__row font20">
                 <div class="section-leader-room__row__header" data-aos="zoom-in">
                     <span class="box font25">
                         Hội đồng quản trị thaco auto
@@ -263,18 +263,18 @@
                         </div>
                         <div class="header-profile">
                             <strong class="name font25">
-                                NGUYỄN THÀNH LƯƠNG
+                                họ tên
                             </strong>
                             <p class="rote">
                                 <span>
                                     Chức danh
                                 </span>
-                                <span>
+                                {{-- <span>
                                     :
                                 </span>
                                 <span>
                                     GIÁM ĐỐC
-                                </span>
+                                </span> --}}
                             </p>
                         </div>
                         <div class="more-info">
@@ -311,18 +311,18 @@
                         </div>
                         <div class="header-profile">
                             <strong class="name font25">
-                                NGUYỄN THÀNH LƯƠNG
+                                họ tên
                             </strong>
                             <p class="rote">
                                 <span>
                                     Chức danh
                                 </span>
-                                <span>
+                                {{-- <span>
                                     :
                                 </span>
                                 <span>
                                     GIÁM ĐỐC
-                                </span>
+                                </span> --}}
                             </p>
                         </div>
                         <div class="more-info">
@@ -359,18 +359,18 @@
                         </div>
                         <div class="header-profile">
                             <strong class="name font25">
-                                NGUYỄN THÀNH LƯƠNG
+                                họ tên
                             </strong>
                             <p class="rote">
                                 <span>
                                     Chức danh
                                 </span>
-                                <span>
+                                {{-- <span>
                                     :
                                 </span>
                                 <span>
                                     GIÁM ĐỐC
-                                </span>
+                                </span> --}}
                             </p>
                         </div>
                         <div class="more-info">
@@ -404,48 +404,57 @@
                 </div>
             </div>
 
-            <div class="section-leader-room__row">
+            <div class="section-leader-room__row font20">
                 <div class="section-leader-room__row__header" data-aos="zoom-in">
-                    <span class="box">
+                    <span class="box font25">
                         Hội đồng quản trị thaco auto
                     </span>
                 </div>
                 <div class="section-leader-room__row__content row">
-                    <div class="__content__col col-lg-3" data-aos="fade-down" data-aos-delay="300">
+                    <div class="__content__col col-lg-3" data-aos="fade-down" data-aos-delay="900">
                         <div class="avatar">
                             <img src="{{Theme::asset()->url('images/introduce/symbol-person.png')}}" alt="">
                         </div>
                         <div class="header-profile">
-                            <strong class="name">
-                                NGUYỄN THÀNH LƯƠNG
+                            <strong class="name font25">
+                                họ tên
                             </strong>
                             <p class="rote">
                                 <span>
                                     Chức danh
                                 </span>
-                                <span>
+                                {{-- <span>
                                     :
                                 </span>
                                 <span>
                                     GIÁM ĐỐC
-                                </span>
+                                </span> --}}
                             </p>
                         </div>
                         <div class="more-info">
                             <p>
                                 <span>
-                                    Sinh năm : 
+                                    Sinh năm
+                                </span>
+                                <span>
+                                    :
                                 </span>
                                 <span>
                                     **/**/****
                                 </span>
                             </p>
                             <p>
-                                <span>Nơi sinh  : </span>
+                                <span>Nơi sinh </span>
+                                <span>
+                                    :
+                                </span>
                             </p>
                             <p>
                                 <span>
-                                    Trình độ  :
+                                    Trình độ
+                                </span>
+                                <span>
+                                    :
                                 </span>
                             </p>
                         </div>
@@ -453,126 +462,155 @@
                 </div>
             </div>
 
-            <div class="section-leader-room__row">
+            <div class="section-leader-room__row font20">
                 <div class="section-leader-room__row__header" data-aos="zoom-in">
-                    <span class="box">
+                    <span class="box font25">
                         Hội đồng quản trị thaco auto
                     </span>
                 </div>
                 <div class="section-leader-room__row__content row">
-                    <div class="__content__col col-lg-3" data-aos="fade-down" data-aos-delay="300">
-                        <div class="avatar">
-                            <img src="{{Theme::asset()->url('images/introduce/symbol-person.png')}}" alt="">
-                        </div>
-                        <div class="header-profile">
-                            <strong class="name">
-                                NGUYỄN THÀNH LƯƠNG
-                            </strong>
-                            <p class="rote">
-                                <span>
-                                    Chức danh
-                                </span>
-                                <span>
-                                    :
-                                </span>
-                                <span>
-                                    GIÁM ĐỐC
-                                </span>
-                            </p>
-                        </div>
-                        <div class="more-info">
-                            <p>
-                                <span>
-                                    Sinh năm : 
-                                </span>
-                                <span>
-                                    **/**/****
-                                </span>
-                            </p>
-                            <p>
-                                <span>Nơi sinh  : </span>
-                            </p>
-                            <p>
-                                <span>
-                                    Trình độ  :
-                                </span>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="__content__col col-lg-3" data-aos="fade-down" data-aos-delay="600">
-                        <div class="avatar">
-                            <img src="{{Theme::asset()->url('images/introduce/symbol-person.png')}}" alt="">
-                        </div>
-                        <div class="header-profile">
-                            <strong class="name">
-                                NGUYỄN THÀNH LƯƠNG
-                            </strong>
-                            <p class="rote">
-                                <span>
-                                    Chức danh
-                                </span>
-                                <span>
-                                    :
-                                </span>
-                                <span>
-                                    GIÁM ĐỐC
-                                </span>
-                            </p>
-                        </div>
-                        <div class="more-info">
-                            <p>
-                                <span>
-                                    Sinh năm : 
-                                </span>
-                                <span>
-                                    **/**/****
-                                </span>
-                            </p>
-                            <p>
-                                <span>Nơi sinh  : </span>
-                            </p>
-                            <p>
-                                <span>
-                                    Trình độ  :
-                                </span>
-                            </p>
-                        </div>
-                    </div>
                     <div class="__content__col col-lg-3" data-aos="fade-down" data-aos-delay="900">
                         <div class="avatar">
                             <img src="{{Theme::asset()->url('images/introduce/symbol-person.png')}}" alt="">
                         </div>
                         <div class="header-profile">
-                            <strong class="name">
-                                NGUYỄN THÀNH LƯƠNG
+                            <strong class="name font25">
+                                họ tên
                             </strong>
                             <p class="rote">
                                 <span>
                                     Chức danh
                                 </span>
-                                <span>
+                                {{-- <span>
                                     :
                                 </span>
                                 <span>
                                     GIÁM ĐỐC
-                                </span>
+                                </span> --}}
                             </p>
                         </div>
                         <div class="more-info">
                             <p>
                                 <span>
-                                    Sinh năm : 
+                                    Sinh năm
+                                </span>
+                                <span>
+                                    :
                                 </span>
                                 <span>
                                     **/**/****
                                 </span>
                             </p>
                             <p>
-                                <span>Nơi sinh  : </span>
+                                <span>Nơi sinh </span>
+                                <span>
+                                    :
+                                </span>
                             </p>
                             <p>
                                 <span>
-                                    Trình độ  :
+                                    Trình độ
+                                </span>
+                                <span>
+                                    :
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="__content__col col-lg-3" data-aos="fade-down" data-aos-delay="900">
+                        <div class="avatar">
+                            <img src="{{Theme::asset()->url('images/introduce/symbol-person.png')}}" alt="">
+                        </div>
+                        <div class="header-profile">
+                            <strong class="name font25">
+                                họ tên
+                            </strong>
+                            <p class="rote">
+                                <span>
+                                    Chức danh
+                                </span>
+                                {{-- <span>
+                                    :
+                                </span>
+                                <span>
+                                    GIÁM ĐỐC
+                                </span> --}}
+                            </p>
+                        </div>
+                        <div class="more-info">
+                            <p>
+                                <span>
+                                    Sinh năm
+                                </span>
+                                <span>
+                                    :
+                                </span>
+                                <span>
+                                    **/**/****
+                                </span>
+                            </p>
+                            <p>
+                                <span>Nơi sinh </span>
+                                <span>
+                                    :
+                                </span>
+                            </p>
+                            <p>
+                                <span>
+                                    Trình độ
+                                </span>
+                                <span>
+                                    :
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="__content__col col-lg-3" data-aos="fade-down" data-aos-delay="900">
+                        <div class="avatar">
+                            <img src="{{Theme::asset()->url('images/introduce/symbol-person.png')}}" alt="">
+                        </div>
+                        <div class="header-profile">
+                            <strong class="name font25">
+                                họ tên
+                            </strong>
+                            <p class="rote">
+                                <span>
+                                    Chức danh
+                                </span>
+                                {{-- <span>
+                                    :
+                                </span>
+                                <span>
+                                    GIÁM ĐỐC
+                                </span> --}}
+                            </p>
+                        </div>
+                        <div class="more-info">
+                            <p>
+                                <span>
+                                    Sinh năm
+                                </span>
+                                <span>
+                                    :
+                                </span>
+                                <span>
+                                    **/**/****
+                                </span>
+                            </p>
+                            <p>
+                                <span>Nơi sinh </span>
+                                <span>
+                                    :
+                                </span>
+                            </p>
+                            <p>
+                                <span>
+                                    Trình độ
+                                </span>
+                                <span>
+                                    :
                                 </span>
                             </p>
                         </div>
@@ -625,12 +663,12 @@
                     </div>
                     <div class="section-criteria__content__box" data-aos="fade-up" data-aos-delay="300">
                         <div class="box-center-bark">
-                            <img src="{{Theme::asset()->url('images/introduce/shape2.png')}}" alt="">
+                            <img src="{{Theme::asset()->url('images/introduce/sh2.png')}}" alt="">
                         </div>
                     </div>
                     <div class="section-criteria__content__box" data-aos="fade-up" data-aos-delay="600">
                         <div class="box-center-bark">
-                            <img src="{{Theme::asset()->url('images/introduce/shape3.png')}}" alt="">
+                            <img src="{{Theme::asset()->url('images/introduce/sh3.png')}}" alt="">
                         </div>
                     </div>
                     <div class="section-criteria__content__box" data-aos="fade-up" data-aos-delay="900">
@@ -833,7 +871,7 @@
         </div>
     </div>
 
-    <div class="slider-video" data-aos="fade-left" data-aos-delay="300">
+    {{-- <div class="slider-video" data-aos="fade-left" data-aos-delay="300">
         <div class="swiper-container video-introduce">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -851,5 +889,80 @@
             </div>
             <div class="swiper-pagination"></div>
         </div>
+    </div> --}}
+
+    <div class="splide splide_video">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=cdz__ojQOuU">
+                    <img src="{{Theme::asset()->url('images/introduce/video.jpg')}}" alt="">
+                    <div class="btn-play">
+                        <img src="{{Theme::asset()->url('images/introduce/btn-play.png')}}" alt="">
+                    </div>
+                    <div class="header_video">
+                        <div class="name font30 font-pri-bold">
+                            Bài hát Chu Lai - Trường Hải ca
+                        </div>
+                        <div class="conposed font25 font-pri">
+                            Sáng tác Trần Quế Sơn
+                        </div>
+                    </div>
+                </li>
+                <li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=cdz__ojQOuU">
+                    <img src="{{Theme::asset()->url('images/introduce/video.jpg')}}" alt="">
+                    <div class="btn-play">
+                        <img src="{{Theme::asset()->url('images/introduce/btn-play.png')}}" alt="">
+                    </div>
+                    <div class="header_video ">
+                        <div class="name font30 font-pri-bold">
+                            Bài hát Chu Lai - Trường Hải ca
+                        </div>
+                        <div class="conposed font25 font-pri">
+                            Sáng tác Trần Quế Sơn
+                        </div>
+                    </div>
+                </li>
+                <li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=cdz__ojQOuU">
+                    <img src="{{Theme::asset()->url('images/introduce/video.jpg')}}" alt="">
+                    <div class="btn-play">
+                        <img src="{{Theme::asset()->url('images/introduce/btn-play.png')}}" alt="">
+                    </div>
+                    <div class="header_video">
+                        <div class="name font30 font-pri-bold">
+                            Bài hát Chu Lai - Trường Hải ca
+                        </div>
+                        <div class="conposed font-pri font25">
+                            Sáng tác Trần Quế Sơn
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        new Splide( '.splide_video', {
+            type  : 'fade',
+            rewind: true,
+            height: '58.125rem',
+            breakpoints: {
+                1680: {
+                    height : '50rem',
+                },
+                1360: {
+                    height : '40rem',
+                },
+                992: {
+                    height : '30rem',
+                }, 576: {
+                    height : '18rem',
+                }
+            }
+        } ).mount();
+    })
+</script>

@@ -753,11 +753,11 @@
     #myList li{ display:none;
     }
     #loadMore {
-        color: #2e3a41;
+        color: $color-primary;
         cursor:pointer;
         font-family: $font-my-bold;
         span:last-child{
-            margin-left: 10px;
+            margin-left: 0.3%;
         }
     }
     #loadMore:hover {

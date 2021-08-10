@@ -27,6 +27,7 @@ Route::domain('binhduong.thacoauto.dev.gistensal.com')->group(function () {
 Route::group(['namespace' => 'Theme\Thaco\Http\Controllers', 'middleware' => ['web', 'core']], function () {
     Route::group(apply_filters(BASE_FILTER_GROUP_PUBLIC_ROUTE, []), function () {
 
+        //demo web. sẽ xóa khi đổ dữ liệu
         Route::get('/dich-vu-detail-1', function () {
             return Theme::scope('pages/services/service-detail')->render();
         });
@@ -40,6 +41,12 @@ Route::group(['namespace' => 'Theme\Thaco\Http\Controllers', 'middleware' => ['w
         Route::get('/brand-detail', function () {
             return Theme::scope('pages/business/brand-detail/index')->render();
         });
+
+        Route::get('/car-selection', function () {
+            return Theme::scope('pages/business/car-selection/index')->render();
+        });
+
+        //end demo
 
         Route::get('ajax/search', 'ThacoController@getSearch')->name('public.ajax.search');
 

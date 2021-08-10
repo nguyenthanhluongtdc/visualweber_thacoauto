@@ -6,7 +6,7 @@
                                 Tin tức
                             </h2>
     
-                            <a href="#" title="{!!__('Read more')!!}" class="font20 text-uppercase read-more text-dark"> {!!__('Read more')!!} >> </a>
+                            <a href="#" title="{!!__('Read more')!!}" class="font20 text-uppercase read-more text-dark"> {!!__('Xem thêm')!!} >> </a>
                         </div>
     
                         <div class="content">

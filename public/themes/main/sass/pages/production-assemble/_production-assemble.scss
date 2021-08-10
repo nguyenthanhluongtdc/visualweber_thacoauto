@@ -8,7 +8,7 @@
             width: 100%;
             height: auto;
             img {
-                height: 100%;
+                height: 50%;
                 max-width: 100%;
             }
         }
@@ -42,7 +42,7 @@
 .product-assemble{
     .tab-field{
         .list-group-item{
-            
+            transition: .3s ease-in-out;
             margin-bottom: 8%;   
             @media(max-width : 1600px){
                 padding-bottom: 12%;

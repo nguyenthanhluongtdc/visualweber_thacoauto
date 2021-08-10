@@ -25,14 +25,14 @@
             </div>
             <div class="car-selection-content__right">
                 <div class="car-version">
-                    <div class="car-version__select font15 font-pri">
+                    <div id="car-version-select" class="car-version__select font15 font-pri">
                         <h3 >Chọn phiên bản xe</h3>
                         <i class="fas fa-chevron-down font12"></i>
                     </div>
                     
                     <a href="" class="car-version__viewdetail font15 font-pri">Xem chi tiết phiên bản</a>
                 </div>
-                <ul class="car-version__list">
+                <ul id="car-version-list" class="car-version__list active">
                     <li class="car-version__item">
                         <a href="">
                             <div class="car-version__title font15 font-pri">KIA OPTIMA 2.0 GAT LUXURY</div>

@@ -70,7 +70,7 @@
                 display: flex;
                 justify-content: space-between;
                 cursor: pointer;
-                transition: width 600ms ease-out, height 600ms ease-out;
+                transition: all 1000ms cubic-bezier(0.19, 1, 0.22, 1);
                 &__select{
                     display: flex;
                     align-items: center;
@@ -87,7 +87,7 @@
             .car-version__list{
                 height: 0;
                 overflow: hidden;
-                transition: width 600ms ease-out, height 600ms ease-out;
+                transition: all 1000ms cubic-bezier(0.19, 1, 0.22, 1);
                 .car-version__item{
                     padding: 2% 4%;
                     background-color: white;

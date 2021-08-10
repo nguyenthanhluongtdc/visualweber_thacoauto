@@ -6,7 +6,7 @@
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-                 nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+                 nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore illum nemo eaque, ut consequuntur dignissimos quae beatae porro voluptates quos nostrum voluptatem commodi veritatis ex!
                  
             </div>
             <div class="support-industry-overview__boxfield">

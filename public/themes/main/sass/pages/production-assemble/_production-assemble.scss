@@ -1,0 +1,54 @@
+.tab-content {
+    flex: 0 0 53%;
+    margin-right: 10.5%;
+    background-color: $color-primary;
+    .content-right {
+       
+        .img {
+            width: 100%;
+            height: auto;
+            img {
+                height: 100%;
+                max-width: 100%;
+            }
+        }
+        .content {
+            padding: 3% 3%;
+            @media(max-width : 1600px){
+                padding-bottom: 2%;
+            }  
+            .title {
+                color: $color-white;
+                font-family: $font-primary-bold;
+            }
+            .desc {
+                color: $color-white;
+                margin: 3% 0;
+            }
+            .read-more {
+                padding: 0.4% 1.3%;
+                color: $color-primary;
+                border: 1px solid #fff;
+                text-decoration: none;
+                font-size: 18px;
+                font-family: $font-primary-bold;
+                background-color: #fff;
+                width: max-content;
+            }
+        }
+    }
+}
+
+.product-assemble{
+    .tab-field{
+        .list-group-item{
+            
+            margin-bottom: 8%;   
+            @media(max-width : 1600px){
+                padding-bottom: 12%;
+               
+            }      
+        }
+    }
+    
+}

@@ -10,8 +10,29 @@ $color-primary-button: #01498b;
     grid-column-gap: 1.5rem;
     .form-group {
       input {
-        height: 43px;
+        height: 41px;
         outline: none;
+      }
+      .dropdown {
+        height: 41px;
+        outline: none;
+        background-color: #f6f6f6;
+        border: unset;
+        border-radius: unset;
+        resize: none;
+        .text {
+          line-height: 1.5;
+        }
+        div.default.text {
+          color: $color-placeholder-gray;
+        }
+        i.dropdown.icon {
+          height: 100%;
+          position: relative;
+          top: 1px;
+          left: 18px;
+          color: $color-placeholder-gray;
+        }
       }
     }
     .span-2 {
@@ -95,6 +116,45 @@ $color-primary-button: #01498b;
         outline: none;
         box-shadow: unset !important;
       }
+    }
+  }
+
+  &__detail {
+    padding: 0 5px;
+    .card {
+      border-radius: unset;
+      border: unset;
+      &:first-child {
+        .card-header {
+          & > div {
+            border-top: unset;
+          }
+        }
+      }
+      &-header {
+        border: unset;
+        padding: 0 1.6rem;
+        & > div {
+          cursor: pointer;
+          padding: 0.85rem 0.2rem 0.75rem;
+          border-top: 1px solid $color-placeholder-gray;
+        }
+      }
+      &-body {
+        padding: 1rem 1.8rem;
+        display: grid;
+        grid-gap: 0.5rem;
+        grid-row-gap: 0.75rem;
+        grid-template-columns: repeat(2, 1fr);
+        p {
+          &:nth-child(even) {
+            text-align: end;
+          }
+        }
+      }
+    }
+    .collapse {
+      border-radius: 0.25rem;
     }
   }
 }

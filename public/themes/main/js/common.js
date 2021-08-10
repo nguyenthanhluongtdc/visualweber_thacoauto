@@ -253,6 +253,25 @@ var Helper = {
                 $(".header").removeClass("header-fixed");
             }
         }); //missing );
+    },
+    dropdownCarVersions: function () {
+        if($('#car-version-select').length>0){
+            $('#car-version-select').on('click',function(){
+                $(this).toggleClass('active')
+                if($(this).hasClass('active')) {
+                    $(this).parent().parent().find('#car-version-list').css({
+                        'height': 'auto',
+                        'transition': "0.2s",
+                    })
+                }
+                else {
+                    $(this).parent().parent().find('#car-version-list').css({
+                        'height': '0',
+                        'transition': "0.2s",
+                        })
+                    }
+            });
+        }
     }
 };
 
@@ -263,6 +282,7 @@ $(document).ready(function () {
     //Helper.changeColorHeader();
     Helper.addSelect2toCarFilterProvinces();
     Helper.RangeFilterBranddetail();
+    Helper.dropdownCarVersions();
 });
 
 $(document).ready(function(){
@@ -314,6 +334,5 @@ if($('.counter-value').length > 0){
     
     });
 }
-
 
 

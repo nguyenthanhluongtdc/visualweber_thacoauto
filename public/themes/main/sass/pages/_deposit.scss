@@ -132,6 +132,14 @@ $color-primary-button: #01498b;
         }
       }
       &-header {
+        .plus {
+          &::after {
+            content: "+";
+            margin-left: 0.25rem;
+            position: relative;
+            top: -1px;
+          }
+        }
         border: unset;
         padding: 0 1.6rem;
         & > div {

@@ -72,7 +72,7 @@
                     <div class="card">
                         <div class="card-header" id="heading_accessory">
                             <div class="d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#collapse_accessory" aria-expanded="true" aria-controls="collapse_accessory">
-                                <h5 class="mb-0">Phụ kiện</h5>
+                                <h5 class="mb-0 plus">Phụ kiện</h5>
                                 <p class="">
                                     5,000,000đ
                                 </p>
@@ -92,7 +92,7 @@
                     <div class="card">
                         <div class="card-header" id="heading_retrofit">
                             <div class="d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#collapse_retrofit" aria-expanded="true" aria-controls="collapse_retrofit">
-                                <h5 class="mb-0">Trang bị thêm</h5>
+                                <h5 class="mb-0 plus">Trang bị thêm</h5>
                                 <p class="">
                                     5,000,000đ
                                 </p>
@@ -112,7 +112,7 @@
                     <div class="card">
                         <div class="card-header" id="heading_expense">
                             <div class="d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#collapse_expense" aria-expanded="true" aria-controls="collapse_expense">
-                                <h5 class="mb-0">Chi phí</h5>
+                                <h5 class="mb-0 plus">Chi phí</h5>
                                 <p class="text-danger">
                                     819,000,000đ
                                 </p>

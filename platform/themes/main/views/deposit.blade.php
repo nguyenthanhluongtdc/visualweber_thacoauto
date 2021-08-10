@@ -39,19 +39,33 @@
                 <div class="deposit__info-imagereview">
                     <img src="{{ Theme::asset()->url('images/car.png') }}" width="376" height="280" class="img-fluid" />
                 </div>
-                <div id="accordion">
+                <div class="deposit__detail MyriadPro-Regular font15" id="accordion">
                     <div class="card">
-                        <div class="card-header" id="headingOne">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Phụ kiện
-                                </button>
+                        <div class="card-header">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0 text-uppercase">KIA OPTIMA 2.0 GAT LUXURY</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0">
+                                    <span class="text-uppercase">MÀU:</span> Kia Optima Trắng
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="heading_accessory">
+                            <div class="d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#collapse_accessory" aria-expanded="true" aria-controls="collapse_accessory">
+                                <h5 class="mb-0">Phụ kiện</h5>
                                 <p class="">
                                     5,000,000đ
                                 </p>
-                            </h5>
+                            </div>
                         </div>
-                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div id="collapse_accessory" class="collapse" aria-labelledby="heading_accessory" data-parent="#accordion">
                             <div class="card-body">
                                 <p class="">Phí xe</p>
                                 <p class="">759,000,000đ</p>
@@ -60,6 +74,61 @@
                                 <p class="">Phí đăng kiểm biển số</p>
                                 <p class="">1,000,000đ</p>
                             </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="heading_retrofit">
+                            <div class="d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#collapse_retrofit" aria-expanded="true" aria-controls="collapse_retrofit">
+                                <h5 class="mb-0">Trang bị thêm</h5>
+                                <p class="">
+                                    5,000,000đ
+                                </p>
+                            </div>
+                        </div>
+                        <div id="collapse_retrofit" class="collapse" aria-labelledby="heading_retrofit" data-parent="#accordion">
+                            <div class="card-body">
+                                <p class="">Phí xe</p>
+                                <p class="">759,000,000đ</p>
+                                <p class="">Phí trước bạ(10%)</p>
+                                <p class="">59,000,000đ</p>
+                                <p class="">Phí đăng kiểm biển số</p>
+                                <p class="">1,000,000đ</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="heading_expense">
+                            <div class="d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#collapse_expense" aria-expanded="true" aria-controls="collapse_expense">
+                                <h5 class="mb-0">Chi phí</h5>
+                                <p class="text-danger">
+                                    819,000,000đ
+                                </p>
+                            </div>
+                        </div>
+                        <div id="collapse_expense" class="collapse show" aria-labelledby="heading_expense" data-parent="#accordion">
+                            <div class="card-body">
+                                <p class="">Phí xe</p>
+                                <p class="">759,000,000đ</p>
+                                <p class="">Phí trước bạ(10%)</p>
+                                <p class="">59,000,000đ</p>
+                                <p class="">Phí đăng kiểm biển số</p>
+                                <p class="">1,000,000đ</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0">Ưu đãi</h5>
+                                <p class="">
+                                    -40,000,000đ
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <div class="pt-0 py-0"></div>
                         </div>
                     </div>
                 </div>

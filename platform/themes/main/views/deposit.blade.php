@@ -19,7 +19,7 @@
                 <div class="form-group span-2">
                     <textarea rows="7" class="form-control MyriadPro-Regular font15" name="email" placeholder="Nhập nội dung"></textarea>
                 </div>
-                <div class="custom-control span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
+                <div class="custom-control mt-2 span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
                     <input type="checkbox" class="custom-control-input" id="customControlInline">
                     <label class="custom-control-label" for="customControlInline">Tôi cam kết các thông tin khách hàng cung cấp tại đây hoàn toàn chính xác</label>
                 </div>

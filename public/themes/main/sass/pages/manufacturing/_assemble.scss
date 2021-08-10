@@ -362,7 +362,10 @@
             pointer-events: all;
             transform: translateX(0);
           }
-         
+          .number {
+            background-color: $color-primary;
+            color: $color-white;
+          }
 
         }
       }
@@ -387,17 +390,6 @@
     }
   }
 }
-// .iconwhite{
-//   display: none;
-//   &:hover{
-//     display: block;
-//   }
-// }
-// .iconblue{
-//   &:hover{
-//     display: none;
-//   }
-// }
-.number2{
-  display: none;
-}
+
+
+

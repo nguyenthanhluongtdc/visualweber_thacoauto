@@ -398,82 +398,126 @@
                             max-width: 100%;
                         }
 
-                        .word-art {
-                            position: relative;
-                            right: -50px;
-                            z-index: 90;
-                            top: 0;
-                            height: 100%;
-                            @media only screen and (max-width: 1680px) {
-                                right: -#{calculatorPixel(50, 1680)}px;
-                            }
-                            @media only screen and (max-width: 1368px) {
-                                right: -#{calculatorPixel(50, 1368)}px;
-                            }
-                            @media (max-width: 992px) {
-                                right: -#{calculatorPixel(50, 1368)}px;
-                            }
-
-                            span {
-                                display: inline-block;
-                                // transform: scale(1.05, 1.25);
-                                @media (min-width: 1369px) {
-                                    transform: translate(10px, 35px);
-                                }
-                                transform: translate(5px, 25px);
-                                font-weight: 900;
-                                color: #fff;
-                                -webkit-text-fill-color: #f3f3f3;
-                                -webkit-text-stroke: 4px #0c55a2;
-                                font-size: 200px;
-                                @media only screen and (max-width: 1680px) {
-                                    font-size: #{calculatorPixel(200, 1680)}px;
-                                }
-                                @media only screen and (max-width: 1368px) {
-                                    -webkit-text-stroke: 3px #0c55a2;
-                                    font-size: #{calculatorPixel(200, 1368)}px;
-                                }
-                                @media (max-width: 992px) {
-                                    font-size: #{calculatorPixel(200, 1368)}px;
-                                }
-                            }
-                        }
-    
                         .defect-shape {
-                            position: relative;
-                            @include width(236);
-                            @include height(236);
-                            @include paddingLeft(63);
-                            display: flex;
-                            align-items: center;
-                            border-radius: 50%;
-                            background-color: #0c55a2;
-                            color: white;
-                            .box-center {
-                                text-align: left;
-                            }
-    
+                            position: absolute;
+                            text-align: left;
+                            width: 63%;
+                            right: 0;
+                            max-height: 87%;
+                            overflow-y: hidden;
+
                             img {
-                               max-width: 30%;
-                            }
-    
-                            .name {
-                                text-transform: uppercase;
-                                @include marginBottom(8, "+");
-                                @include marginTop(13, "+");
+                                max-width: 35%;
                             }
 
-                            &::after {
-                                position: absolute;
-                                content: "";
-                                left: 0;
-                                top: 0;
-                                bottom: 0;
-                                @include width(50);
-                                z-index: 1;
-                                background-color: #f3f3f3;
+                            .name {
+                                font-family: $font-primary-bold;
+                                color: white;
+                                font-size: 20px;
+                                line-height: 26px;
+                                @include marginTop(10, "+");
+                                @include marginBottom(8, "+");
+                                @media(max-width: 1680px) {
+                                    font-size: 18px;
+                                }
+                                @media(max-width: 1440px) {
+                                    font-size: 16px;
+                                    line-height: 20px;
+                                }
+                                @media(max-width: 1400px) {
+                                    font-size: 15px;
+                                    line-height: 19px;
+                                }
+                                @media(max-width: 1366px) {
+                                    font-size: 14px;
+                                }
+                                @media(max-width: 1270px) {
+                                    font-size: 13px;
+                                }
+                            }
+
+                            .des {
+                                color: white;
+                                width: 75%;
                             }
                         }
+
+                        // .word-art {
+                        //     position: relative;
+                        //     right: -50px;
+                        //     z-index: 90;
+                        //     top: 0;
+                        //     height: 100%;
+                        //     @media only screen and (max-width: 1680px) {
+                        //         right: -#{calculatorPixel(50, 1680)}px;
+                        //     }
+                        //     @media only screen and (max-width: 1368px) {
+                        //         right: -#{calculatorPixel(50, 1368)}px;
+                        //     }
+                        //     @media (max-width: 992px) {
+                        //         right: -#{calculatorPixel(50, 1368)}px;
+                        //     }
+
+                        //     span {
+                        //         display: inline-block;
+                        //         // transform: scale(1.05, 1.25);
+                        //         @media (min-width: 1369px) {
+                        //             transform: translate(10px, 35px);
+                        //         }
+                        //         transform: translate(5px, 25px);
+                        //         font-weight: 900;
+                        //         color: #fff;
+                        //         -webkit-text-fill-color: #f3f3f3;
+                        //         -webkit-text-stroke: 4px #0c55a2;
+                        //         font-size: 200px;
+                        //         @media only screen and (max-width: 1680px) {
+                        //             font-size: #{calculatorPixel(200, 1680)}px;
+                        //         }
+                        //         @media only screen and (max-width: 1368px) {
+                        //             -webkit-text-stroke: 3px #0c55a2;
+                        //             font-size: #{calculatorPixel(200, 1368)}px;
+                        //         }
+                        //         @media (max-width: 992px) {
+                        //             font-size: #{calculatorPixel(200, 1368)}px;
+                        //         }
+                        //     }
+                        // }
+    
+                        // .defect-shape {
+                        //     position: relative;
+                        //     @include width(236);
+                        //     @include height(236);
+                        //     @include paddingLeft(63);
+                        //     display: flex;
+                        //     align-items: center;
+                        //     border-radius: 50%;
+                        //     background-color: #0c55a2;
+                        //     color: white;
+                        //     .box-center {
+                        //         text-align: left;
+                        //     }
+    
+                        //     img {
+                        //        max-width: 30%;
+                        //     }
+    
+                        //     .name {
+                        //         text-transform: uppercase;
+                        //         @include marginBottom(8, "+");
+                        //         @include marginTop(13, "+");
+                        //     }
+
+                        //     &::after {
+                        //         position: absolute;
+                        //         content: "";
+                        //         left: 0;
+                        //         top: 0;
+                        //         bottom: 0;
+                        //         @include width(50);
+                        //         z-index: 1;
+                        //         background-color: #f3f3f3;
+                        //     }
+                        // }
                     }
                 }
             }

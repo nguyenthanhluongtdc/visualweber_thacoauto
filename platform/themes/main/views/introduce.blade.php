@@ -656,28 +656,72 @@
                 </div>
 
                 <div class="section-criteria__content justify-content-end row-first">
-                    {{-- <div class="section-criteria__content__box" data-aos="fade-up" >
+                    <div class="section-criteria__content__box" data-aos="fade-up" >
                         <div class="box-center-bark">
-                            <img src="{{Theme::asset()->url('images/introduce/shape1.png')}}" alt="">
+                            <img src="{{Theme::asset()->url('images/introduce/shap1.png')}}" alt="">
+                            <div class="defect-shape">
+                                <div class="box-center">
+                                    <img src="{{Theme::asset()->url('images/introduce/love1.png')}}" alt="">
+                                    <div class="name">
+                                        TẬN TÂM 
+                                    </div>
+                                    <div class="des">
+                                        Lorem ipsum dolor sit amet, consectetur.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="section-criteria__content__box" data-aos="fade-up" data-aos-delay="300">
                         <div class="box-center-bark">
-                            <img src="{{Theme::asset()->url('images/introduce/sh2.png')}}" alt="">
+                            <img src="{{Theme::asset()->url('images/introduce/shape2.png')}}" alt="">
+                            <div class="defect-shape">
+                                <div class="box-center">
+                                    <img src="{{Theme::asset()->url('images/introduce/icon2.png')}}" alt="">
+                                    <div class="name">
+                                        TRUNG THỰC
+                                    </div>
+                                    <div class="des">
+                                        Lorem ipsum dolor sit amet, consectetur.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="section-criteria__content__box" data-aos="fade-up" data-aos-delay="600">
                         <div class="box-center-bark">
-                            <img src="{{Theme::asset()->url('images/introduce/sh3.png')}}" alt="">
+                            <img src="{{Theme::asset()->url('images/introduce/shape3.png')}}" alt="">
+                            <div class="defect-shape">
+                                <div class="box-center">
+                                    <img src="{{Theme::asset()->url('images/introduce/icon6.png')}}" alt="">
+                                    <div class="name">
+                                        TRÍ TUỆ
+                                    </div>
+                                    <div class="des">
+                                        Lorem ipsum dolor sit amet, consectetur.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="section-criteria__content__box" data-aos="fade-up" data-aos-delay="900">
                         <div class="box-center-bark">
                             <img src="{{Theme::asset()->url('images/introduce/shape4.png')}}" alt="">
+                            <div class="defect-shape">
+                                <div class="box-center">
+                                    <img src="{{Theme::asset()->url('images/introduce/icon8.png')}}" alt="">
+                                    <div class="name">
+                                        TỰ TIN
+                                    </div>
+                                    <div class="des">
+                                        Lorem ipsum dolor sit amet, consectetur.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div> --}}
+                    </div>
 
-                    <div class="section-criteria__content__box">
+                    {{-- <div class="section-criteria__content__box">
                         <div class="box-center-bark">
                             <div class="word-art">
                                 <span>
@@ -756,34 +800,78 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
 
                 <div class="section-criteria__content justify-content-start">
-                    {{-- <div class="section-criteria__content__box" data-aos="fade-up" data-aos-delay="1200">
+                    <div class="section-criteria__content__box" data-aos="fade-up" data-aos-delay="1200">
                         <div class="box-center-bark">
                             <img src="{{Theme::asset()->url('images/introduce/shape5.png')}}" alt="">
+                            <div class="defect-shape">
+                                <div class="box-center">
+                                    <img src="{{Theme::asset()->url('images/introduce/icon4.png')}}" alt="">
+                                    <div class="name">
+                                        TÔN TRỌNG  
+                                    </div>
+                                    <div class="des">
+                                        Lorem ipsum dolor sit amet, consectetur.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <div class="section-criteria__content__box" data-aos="fade-up" data-aos-delay="1500">
                         <div class="box-center-bark">
                             <img src="{{Theme::asset()->url('images/introduce/shape6.png')}}" alt="">
+                            <div class="defect-shape">
+                                <div class="box-center">
+                                    <img src="{{Theme::asset()->url('images/introduce/icon7.png')}}" alt="">
+                                    <div class="name">
+                                        TRUNG TÍN
+                                    </div>
+                                    <div class="des">
+                                        Lorem ipsum dolor sit amet, consectetur.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <div class="section-criteria__content__box" data-aos="fade-up" data-aos-delay="1800">
                         <div class="box-center-bark">
                             <img src="{{Theme::asset()->url('images/introduce/shape7.png')}}" alt="">
+                            <div class="defect-shape">
+                                <div class="box-center">
+                                    <img src="{{Theme::asset()->url('images/introduce/icon3.png')}}" alt="">
+                                    <div class="name">
+                                        TẬN TÌNH
+                                    </div>
+                                    <div class="des">
+                                        Lorem ipsum dolor sit amet, consectetur.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="section-criteria__content__box" data-aos="fade-up" data-aos-delay="2100">
                         <div class="box-center-bark">
                             <img src="{{Theme::asset()->url('images/introduce/shape8.png')}}" alt="">
+                            <div class="defect-shape">
+                                <div class="box-center">
+                                    <img src="{{Theme::asset()->url('images/introduce/icon5.png')}}" alt="">
+                                    <div class="name">
+                                        THUẬN TIỆN
+                                    </div>
+                                    <div class="des">
+                                        Lorem ipsum dolor sit amet, consectetur.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div> --}}
+                    </div>
 
-                    <div class="section-criteria__content__box">
+                    {{-- <div class="section-criteria__content__box">
                         <div class="box-center-bark">
                             <div class="word-art">
                                 <span>
@@ -865,7 +953,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>

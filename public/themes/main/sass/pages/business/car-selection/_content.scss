@@ -1,0 +1,78 @@
+.section-car-selection-content{
+    .car-selection-content{
+        display: flex;
+        justify-content: space-between;
+        &__left{
+            max-width: 63%;
+            flex: 1 63%;
+        }
+        &__right{
+            max-width: 36.5%;
+            flex: 1 36.5%;
+            background-color: #f6f6f6;
+            padding: 1.3% 2%;
+            .car-version{
+                margin-bottom: 2.5%;
+                display: flex;
+                justify-content: space-between;
+                cursor: pointer;
+                transition: width 600ms ease-out, height 600ms ease-out;
+                &:hover ~ .car-version__list{
+                    height: fit-content;
+                }
+                &__select{
+                    
+                }
+                &__viewdetail{
+                    text-decoration: underline;
+                }
+            }
+            .car-version__list{
+                height: fit-content;
+                overflow: hidden;
+                transition: width 600ms ease-out, height 600ms ease-out;
+                .car-version__item{
+                    padding: 2% 4%;
+                    background-color: white;
+                    margin-bottom: 2%;
+                    a{
+                        display: flex;
+                        justify-content: space-between;
+                        .car-version__title{
+                            color: black;
+                        }
+                        .car-version__price{
+                            color: black;
+                        }
+                    }
+                    
+                }
+            }
+            .gray-line{
+                margin-top: 2.5%;
+            }
+            .select-color{
+                &__title{
+                    margin: 2.5% 0 3.5%;
+                }
+                .info-color{
+                    display: flex;
+                    margin-bottom: 3.5%;
+                    &__item{
+                        width: 1.5vw;
+                        height: 1.5vw;
+                        border-radius: 50%;
+                        margin-right: 8%;
+                        border: 0.2vw solid #e1e1e1;
+                        &:hover{
+                            border: 0.2vw solid #bdbdbd;
+                        }
+                    }
+                    .active{
+                        border: 0.2vw solid #bdbdbd;
+                    }
+                }
+            }
+        }
+    }
+}

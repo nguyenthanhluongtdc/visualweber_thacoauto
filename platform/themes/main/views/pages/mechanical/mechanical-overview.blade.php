@@ -10,7 +10,7 @@
                  
             </div>
             <div class="mechandical-overview__boxfield">
-               <div class="boxfield-item">
+               <div class="boxfield-item ">
                    <img src="{{ Theme::asset()->url('images/mechandical/thep-giacong.png') }}" alt="">
                    <p class="font24 font-pri-bold name">THÉP VÀ DỊCH VỤ
                     GIA CÔNG THÉP</p>

@@ -26,7 +26,8 @@
       outline: none;
       text-align: center;
       cursor: pointer;
-        transition: .3s ease-in-out;
+      box-shadow: rgba(0, 0, 0, 0.04) 0px 1px 3px;
+    transition: .3s ease-in-out;
     @media(max-width : 1720px){
         margin-bottom: 4.85%;
     }   
@@ -82,10 +83,9 @@
             color: $color-primary;
             border: 1px solid #fff;
             text-decoration: none;
-            font-size: 18px;
             font-family: $font-primary-bold;
             background-color: #fff;
-            width: max-content;
+            width: max-content; 
        }
       }
     

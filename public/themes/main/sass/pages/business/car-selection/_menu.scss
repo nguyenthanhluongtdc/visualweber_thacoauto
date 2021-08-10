@@ -1,0 +1,37 @@
+.section-step-menu{
+    margin: 1.8% 0 2%;
+    .step-menu{
+        display: flex;
+        background-color: #f6f6f6;
+        justify-content: space-between;
+        align-items: center;
+        &__item{
+            max-width: 33.33%;
+            flex: 1 33.33%;
+            text-align: center;
+            padding: 0.8% 0;
+            cursor: pointer;
+            span{
+                position: relative;
+                width: fit-content;
+                &::after{
+                    content: "";
+                    height: 2px;
+                    width: 0%;
+                    bottom: -70%;
+                    left: 0;
+                    background-color: $color-primary;
+                    position: absolute;
+                    transition: all 1000ms cubic-bezier(0.19, 1, 0.22, 1);
+                }
+            }
+        }
+        .active, .step-menu__item:hover{
+            span{
+                &::after{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

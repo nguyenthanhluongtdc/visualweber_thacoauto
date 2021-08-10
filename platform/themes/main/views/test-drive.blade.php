@@ -33,8 +33,8 @@
                                             </div>
                                             <input type="hidden" name="vocative">
                                             <ul class="dropdown-menu">
-                                                <li id="male">Male</li>
-                                                <li id="female">Female</li>
+                                                <li id="male">Anh</li>
+                                                <li id="female">Chị</li>
                                             </ul>
                                         </div>
                                     </div>

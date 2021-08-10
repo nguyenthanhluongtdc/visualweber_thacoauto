@@ -15,14 +15,19 @@
                 padding: 1.6%;
                 max-width: 215px;
                 background-color: #f1f1f1;
+                img{
+                    width: 50%;
+    
+                }
                 .name {
                     margin-top: 25px;
                     line-height: 1.2;
                 }
             }
-            .boxfield-item:nth-child(2) {
+            .boxfield-item:nth-child(1) {
                 .name {
                     margin-top: 48px;
+                    
                 }
             }
             .boxfield-item:last-child {

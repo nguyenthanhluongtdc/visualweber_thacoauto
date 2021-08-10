@@ -40,6 +40,12 @@ a:hover {
     font-family: $font-semi;
 }
 
+.gray-line{
+    height: 1px;
+    background-color: rgb(128, 128, 128);
+    width: 100%;
+}
+
 .font80 {
     font-size: 80px;
     @media(max-width: 1680px) {

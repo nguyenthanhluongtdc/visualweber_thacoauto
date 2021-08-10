@@ -39,15 +39,15 @@
                 <h3 class="info-title font30 font-mi-bold">KIA Optima</h3>
                 <ul class="info-equip">
                     <li class="info-equip__item font18 font-pri">
-                        <img src="{{Theme::asset()->url('images/business/brand-detail/filter.png')}}" alt="filter icon">
+                        <img src="{{Theme::asset()->url('images/business/brand-detail/chon-xe-1.png')}}" alt="filter icon">
                         270 kW (367 HP)
                     </li>
                     <li class="info-equip__item font18 font-pri">
-                        <img src="{{Theme::asset()->url('images/business/brand-detail/filter.png')}}" alt="filter icon">
+                        <img src="{{Theme::asset()->url('images/business/brand-detail/chon-xe-2.png')}}" alt="filter icon">
                         Xăng
                     </li>
                     <li class="info-equip__item font18 font-pri">
-                        <img src="{{Theme::asset()->url('images/business/brand-detail/filter.png')}}" alt="filter icon">
+                        <img src="{{Theme::asset()->url('images/business/brand-detail/chon-xe-3.png')}}" alt="filter icon">
                         Tự động
                     </li>
                 </ul>
@@ -89,7 +89,10 @@
                         <a class="font18 font-pri" href="">Xem brochure</a>
                     </li>
                 </ul>
-                <button class="info-button font18 font-pri" type="button">Tiếp theo</button>
+                <button class="info-button font18 font-pri" type="button">
+                    <a href="car-selection">Tiếp theo</a>
+                </button>
+                
                 <div class="info-hotline font18 font-pri">HOTLINE - 1900 54 55 91</div>
             </div>
         </div>

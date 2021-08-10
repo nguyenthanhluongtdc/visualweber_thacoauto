@@ -3,7 +3,7 @@
         <div class="col-sm-12 col-md-8 col-8">
             <h2 class="font18 MyriadPro-BoldCond text-uppercase mb-3">thông tin khách hàng</h2>
             <p class="mb-4">Thông tin khách hàng sẽ được đưa vào thoả thuận hợp đồng. Quý khách vui lòng nhập chính xác các nội dung dưới đây</p>
-            <div class="desposit__form">
+            <div class="deposit__form">
                 <div class="form-group">
                     <input type="text" class="form-control MyriadPro-Regular font15" name="username" placeholder="Nhập họ và tên" />
                 </div>
@@ -36,7 +36,9 @@
         </div>
         <div class="col-sm-12 col-md-4 col-4">
             <div class="deposit__info">
-                <img src="" class="img-fluid" />
+                <div class="deposit__info-imagereview">
+                    <img src="{{ Theme::asset()->url('images/car.png') }}" width="376" height="280" class="img-fluid" />
+                </div>
                 <div id="accordion">
                     <div class="card">
                         <div class="card-header" id="headingOne">
@@ -61,10 +63,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="">
-                    <h4 class="font18 MyriadPro-BoldCond text-uppercase mb-3">tổng chi phí dự tính</h4>
-                    <p class="font18 MyriadPro-BoldCond text-uppercase mb-3">831,000,000đ</p>
-                    <button type="submit">Gửi yêu cầu báo giá</button>
+                <div class="deposit__info-total">
+                    <h4 class="font18 MyriadPro-BoldCond text-uppercase mb-1">tổng chi phí dự tính</h4>
+                    <p class="font18 MyriadPro-BoldCond text-uppercase d-block mb-5 text-danger mb-sm-4 mb-md-5">831,000,000đ</p>
+                    <button class="deposit__info-button btn-block btn btn-primary MyriadPro-Regular font18" type="submit">Gửi yêu cầu báo giá</button>
                 </div>
             </div>
         </div>

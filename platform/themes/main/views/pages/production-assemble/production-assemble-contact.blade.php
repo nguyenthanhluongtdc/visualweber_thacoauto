@@ -1,4 +1,4 @@
-<div class="section-mechanical-contact">
+<div class="section-mechanical-contact" data-aos="zoom-in" data-aos-duration="1500" data-aos-easing="ease-in-out" data-aos-delay="50" >
     <div class="container-remake">
         <div class="mechanical-contact mt-60 mb-60">
             <h2 class="mechanical-contact__title font60 font-pri-bold mb-4">LIÊN HỆ</h2>

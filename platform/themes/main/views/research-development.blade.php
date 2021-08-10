@@ -179,7 +179,7 @@
                         </div>
     
                         <div class="content">
-                            <div class="item mx-0">
+                            <div class="item mx-0"  data-aos="fade-left" data-aos-duration="1500" data-aos-easing="ease-in-out" data-aos-delay="50" >
                                 <div class="item__left">
                                     <div class="sub--left font-pri-bold">
                                         <div class="day"> 29 </div>
@@ -205,7 +205,7 @@
                                 </div>
                             </div>
     
-                            <div class="item mx-0">
+                            <div class="item mx-0" data-aos="fade-left" data-aos-duration="1600" data-aos-easing="ease-in-out" data-aos-delay="50" >
                                 <div class="item__left">
                                     <div class="sub--left font-pri-bold">
                                         <div class="day"> 26 </div>
@@ -218,7 +218,7 @@
                                     </div>
                                 </div>
     
-                                <div class="item__right">
+                                <div class="item__right" data-aos="fade-left" data-aos-duration="1700" data-aos-easing="ease-in-out" data-aos-delay="50" >
                                     <div class="item__right__top">
                                         <h3 class="font30 title"> Xe tự hành AGV giải pháp vận chuyển hiệu quả</h3>
                                         <p class="description text-dark font20">
@@ -231,7 +231,7 @@
                                 </div>
                             </div>
     
-                            <div class="item mx-0">
+                            <div class="item mx-0" data-aos="fade-left" data-aos-duration="1800" data-aos-easing="ease-in-out" data-aos-delay="50" >
                                 <div class="item__left">
                                     <div class="sub--left font-pri-bold">
                                         <div class="day"> 22 </div>

@@ -29,7 +29,8 @@ register_page_template([
     'mechanical' => 'Mechanical',
     'brand' => 'Brand',
     'support-industry' => 'Support-industry',
-    'test-drive'=>'Test drive'
+    'test-drive' => 'Test drive',
+    'deposit' => 'Deposit'
 ]);
 
 register_sidebar([

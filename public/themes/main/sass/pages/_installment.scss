@@ -7,6 +7,12 @@
   opacity: 0;
   transform: translateY(-50px);
   transition: all 0.3s;
+  .required {
+    &::after {
+      content: "*";
+      color: #f52538;
+    }
+  }
 }
 
 .fancybox-slide--complete #installment-modal {

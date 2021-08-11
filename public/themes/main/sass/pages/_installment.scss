@@ -21,6 +21,19 @@
         background-color: white;
       }
     }
+    .installment-estimate {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      background-color: white;
+      padding: 1.3rem 0.2rem;
+      &__item {
+        border-right: 1px solid $color-placeholder-gray;
+        padding: 0 2rem;
+        &:last-child {
+          border: unset;
+        }
+      }
+    }
   }
 }
 

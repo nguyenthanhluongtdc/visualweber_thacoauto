@@ -19,9 +19,5 @@
     }
   },
   "repositories": [
-    {
-      "type": "path",
-      "url": "../addons/packages/*"
-    }
   ]
 }

@@ -112,6 +112,10 @@
         {
             "type": "path",
             "url": "./addons/kernel"
+        },
+        {
+            "type": "path",
+            "url": "./addons/packages/*"
         }
     ]
 }

@@ -31,7 +31,9 @@ a:hover {
 .font-cond {
     font-family: $font-cond;
 }
-
+.font-cond-bold {
+    font-family: "MyriadPro-BoldCond";
+}
 .font-mi-bold {
     font-family: $font-my-bold;
 }
@@ -41,8 +43,8 @@ a:hover {
 }
 
 .gray-line{
-    height: 1px;
-    background-color: rgb(128, 128, 128);
+    height: 0.5px;
+    background-color: #a6a6a6;
     width: 100%;
 }
 

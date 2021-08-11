@@ -15,6 +15,20 @@ $color-primary-button: #01498b;
       max-width: 400px;
       width: 100%;
     }
+    .promotion {
+      &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        grid-gap: 1rem;
+      }
+      &__item {
+        display: flex;
+        flex-direction: column;
+        img {
+          margin-bottom: 0.2rem;
+        }
+      }
+    }
     .form-group {
       input {
         height: 41px;

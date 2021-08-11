@@ -41,27 +41,50 @@
                     </div>
                 </div>
                 <h2 class="font18 MyriadPro-BoldCond text-uppercase mb-3 mt-4">Chương trình khuyến mãi</h2>
+                <div class="promotion__list">
+                    <div class="promotion__item">
+                        <img src="{{ Theme::asset()->url('images/promotion/1.png') }}" width="160" height="117" class="img-fluid" />
+                        <div class="custom-control mt-2 span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
+                            <input type="checkbox" class="custom-control-input" id="customControlInline1">
+                            <label class="custom-control-label" for="customControlInline1">Lorem ipsum</label>
+                        </div>
+                    </div>
+                    <div class="promotion__item">
+                        <img src="{{ Theme::asset()->url('images/promotion/2.png') }}" width="160" height="117" class="img-fluid" />
+                        <div class="custom-control mt-2 span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
+                            <input type="checkbox" class="custom-control-input" id="customControlInline2">
+                            <label class="custom-control-label" for="customControlInline2">Lorem ipsum</label>
+                        </div>
+                    </div>
+                    <div class="promotion__item">
+                        <img src="{{ Theme::asset()->url('images/promotion/3.png') }}" width="160" height="117" class="img-fluid" />
+                        <div class="custom-control mt-2 span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
+                            <input type="checkbox" class="custom-control-input" id="customControlInline3">
+                            <label class="custom-control-label" for="customControlInline3">Lorem ipsum</label>
+                        </div>
+                    </div>
+                </div>
                 <h2 class="font18 MyriadPro-BoldCond text-uppercase mb-3 mt-4">Yêu cầu tư vấn Thêm</h2>
                 <div class="custom-control mt-2 span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
-                    <input type="checkbox" class="custom-control-input" id="customControlInline">
-                    <label class="custom-control-label" for="customControlInline">Gói gian hạn bảo hành</label>
+                    <input type="checkbox" class="custom-control-input" id="customControlInline4">
+                    <label class="custom-control-label" for="customControlInline4">Gói gian hạn bảo hành</label>
                 </div>
                 <div class="custom-control mt-2 span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
-                    <input type="checkbox" class="custom-control-input" id="customControlInline">
-                    <label class="custom-control-label" for="customControlInline">Gói bảo hiểm ô tô</label>
+                    <input type="checkbox" class="custom-control-input" id="customControlInline5">
+                    <label class="custom-control-label" for="customControlInline5">Gói bảo hiểm ô tô</label>
                 </div>
                 <div class="custom-control mt-2 span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
-                    <input type="checkbox" class="custom-control-input" id="customControlInline">
-                    <label class="custom-control-label" for="customControlInline">Gói bảo dưỡng</label>
+                    <input type="checkbox" class="custom-control-input" id="customControlInline6">
+                    <label class="custom-control-label" for="customControlInline6">Gói bảo dưỡng</label>
                 </div>
                 <h2 class="font18 MyriadPro-BoldCond text-uppercase mb-3 mt-4">Phương thức thanh toán</h2>
                 <div class="custom-control mt-2 span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
-                    <input type="checkbox" class="custom-control-input" id="customControlInline">
-                    <label class="custom-control-label" for="customControlInline">Thanh toán tại đại lý</label>
+                    <input type="checkbox" class="custom-control-input" id="customControlInline7">
+                    <label class="custom-control-label" for="customControlInline7">Thanh toán tại đại lý</label>
                 </div>
                 <div class="custom-control span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
-                    <input type="checkbox" class="custom-control-input" id="customControlInline3">
-                    <label class="custom-control-label" for="customControlInline3">Vai trả góp ngân hàng <a href="#">Chi tiết chi phí</a></label>
+                    <input type="checkbox" class="custom-control-input" id="customControlInline8">
+                    <label class="custom-control-label" for="customControlInline8">Vai trả góp ngân hàng <a href="#" class="d-inline-block ml-2"><u>Chi tiết chi phí</u></a></label>
                 </div>
             </div>
         </div>

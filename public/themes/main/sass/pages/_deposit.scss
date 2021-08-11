@@ -8,6 +8,13 @@ $color-primary-button: #01498b;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 1.5rem;
+    &.no-grid {
+      display: block;
+    }
+    .max-w-4 {
+      max-width: 400px;
+      width: 100%;
+    }
     .form-group {
       input {
         height: 41px;

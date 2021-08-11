@@ -88,14 +88,36 @@
                 </div>
             </div>
             <div style="display: none;" class="MyriadPro-Regular font15" id="installment-modal">
-                <div class="deposit__form">
+                <div class="deposit__form deposit__form-gray">
                     <div class="form-group">
                         <label class="required MyriadPro-Regular font17 mb-2 d-inline-block">Số tiền muốn vay</label>
-                        <input type="text" class="form-control MyriadPro-Regular font15" name="username" placeholder="Nhập họ và tên" />
+                        <div class="ui fluid selection dropdown">
+                            <input type="hidden" name="country">
+                            <i class="dropdown icon"></i>
+                            <div class="default text MyriadPro-Regular font15">Chọn số tiền vay</div>
+                            <div class="menu">
+                                <div class="item" data-value="af"></i>Afghanistan</div>
+                                <div class="item" data-value="ax"></i>Aland Islands</div>
+                                <div class="item" data-value="al"></i>Albania</div>
+                                <div class="item" data-value="dz"></i>Algeria</div>
+                                <div class="item" data-value="as"></i>American Samoa</div>
+                            </div>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label class="required MyriadPro-Regular font17 mb-2 d-inline-block">Chỗ ở hiện nay</label>
-                        <input type="text" class="form-control MyriadPro-Regular font15" name="phone" placeholder="Nhập số điện thoại" />
+                        <div class="ui fluid selection dropdown">
+                            <input type="hidden" name="country">
+                            <i class="dropdown icon"></i>
+                            <div class="default text MyriadPro-Regular font15">Chọn chỗ ở hiện tại</div>
+                            <div class="menu">
+                                <div class="item" data-value="af"></i>Afghanistan</div>
+                                <div class="item" data-value="ax"></i>Aland Islands</div>
+                                <div class="item" data-value="al"></i>Albania</div>
+                                <div class="item" data-value="dz"></i>Algeria</div>
+                                <div class="item" data-value="as"></i>American Samoa</div>
+                            </div>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label class="required MyriadPro-Regular font17 mb-2 d-inline-block">Thời gian vay</label>
@@ -114,11 +136,33 @@
                     </div>
                     <div class="form-group">
                         <label class="required MyriadPro-Regular font17 mb-2 d-inline-block">Thời gian cố định lãi xuất</label>
-                        <input type="text" class="form-control MyriadPro-Regular font15" name="email" placeholder="Nhập email" />
+                        <div class="ui fluid selection dropdown">
+                            <input type="hidden" name="country">
+                            <i class="dropdown icon"></i>
+                            <div class="default text MyriadPro-Regular font15">Chọn thời gian</div>
+                            <div class="menu">
+                                <div class="item" data-value="af"></i>Afghanistan</div>
+                                <div class="item" data-value="ax"></i>Aland Islands</div>
+                                <div class="item" data-value="al"></i>Albania</div>
+                                <div class="item" data-value="dz"></i>Algeria</div>
+                                <div class="item" data-value="as"></i>American Samoa</div>
+                            </div>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label class="required MyriadPro-Regular font17 mb-2 d-inline-block">Ngân hàng</label>
-                        <input type="text" class="form-control MyriadPro-Regular font15" name="email" placeholder="Nhập email" />
+                        <div class="ui fluid selection dropdown">
+                            <input type="hidden" name="country">
+                            <i class="dropdown icon"></i>
+                            <div class="default text MyriadPro-Regular font15">Chọn ngân hàng</div>
+                            <div class="menu">
+                                <div class="item" data-value="af"></i>Afghanistan</div>
+                                <div class="item" data-value="ax"></i>Aland Islands</div>
+                                <div class="item" data-value="al"></i>Albania</div>
+                                <div class="item" data-value="dz"></i>Algeria</div>
+                                <div class="item" data-value="as"></i>American Samoa</div>
+                            </div>
+                        </div>
                     </div>
                     <div class="form-group span-2">
                         <label class="required MyriadPro-Regular font17 mb-2 d-inline-block">Ước tính</label>

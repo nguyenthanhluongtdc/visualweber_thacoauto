@@ -84,8 +84,12 @@
                 </div>
                 <div class="custom-control span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
                     <input type="checkbox" class="custom-control-input" id="customControlInline8">
-                    <label class="custom-control-label" for="customControlInline8">Vai trả góp ngân hàng <a href="#" class="d-inline-block ml-2"><u>Chi tiết chi phí</u></a></label>
+                    <label class="custom-control-label" for="customControlInline8">Vai trả góp ngân hàng <a data-fancybox data-src="#installment-modal" href="javascript:;" class="d-inline-block ml-2"><u>Chi tiết chi phí</u></a></label>
                 </div>
+            </div>
+            <div style="display: none;" class="MyriadPro-Regular font15" id="installment-modal">
+                <h2>Hello!</h2>
+                <p>You are awesome!</p>
             </div>
         </div>
         <div class="col-sm-12 col-md-4 mb-4">

@@ -7,6 +7,21 @@
   opacity: 0;
   transform: translateY(-50px);
   transition: all 0.3s;
+  background-color: $color-gray;
+  .required {
+    &::after {
+      content: "*";
+      color: #f52538;
+    }
+  }
+  .deposit__form-gray {
+    background-color: $color-gray;
+    .form-group {
+      .dropdown {
+        background-color: white;
+      }
+    }
+  }
 }
 
 .fancybox-slide--complete #installment-modal {

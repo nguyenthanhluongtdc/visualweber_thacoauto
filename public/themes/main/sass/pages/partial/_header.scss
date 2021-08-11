@@ -5,8 +5,8 @@
 .header{
     
     background: $color-primary;
-    height: 4.2vw;
     position: fixed;
+    height: 4.2vw;
     z-index: 99;
     width: 100%;
     transition: all 0.3s ease-out;
@@ -204,8 +204,10 @@
     
 }
 
-.header-fixed{
-    // position: fixed;
-    // z-index: 99;
-    // transition: all 0.3s ease-out;
-}
+// .header-fixed{
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     z-index: 99;
+//     transition: all 0.3s ease-out;
+// }

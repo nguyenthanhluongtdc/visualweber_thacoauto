@@ -1,0 +1,20 @@
+{
+  "name": "platform/kernel",
+  "description": "addons kernel",
+  "autoload": {
+    "psr-4": {
+      "Platform\\Kernel\\": "src/"
+    }
+  },
+  "require": {
+    "stancl/tenancy": "*@dev"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Platform\\Kernel\\Providers\\KernelServiceProvider"
+      ],
+      "aliases": {}
+    }
+  }
+}

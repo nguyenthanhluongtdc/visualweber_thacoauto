@@ -26,7 +26,6 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.12",
         "league/flysystem-aws-s3-v3": "^1.0",
-        "stancl/tenancy": "*@dev",
         "wikimedia/composer-merge-plugin": "^2.0"
     },
     "require-dev": {
@@ -111,8 +110,11 @@
         },
         {
             "type": "path",
-            "url": "./platform/addons/*"
-
+            "url": "./addons/kernel"
+        },
+        {
+            "type": "path",
+            "url": "./addons/packages/*"
         }
     ]
 }

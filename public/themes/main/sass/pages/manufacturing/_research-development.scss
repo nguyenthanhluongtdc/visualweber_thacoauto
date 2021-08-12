@@ -15,6 +15,9 @@
     }
 
     .section-intro-bannerFull {
+        @media only screen and (max-width: 1080px){
+            display: none;       
+        }
         background-size: cover;
         background-repeat: no-repeat;
         position: relative;
@@ -46,12 +49,17 @@
                     font-family: $font-primary;
                 }
             }
-
+            
             .column-right {
+                // @media only screen and (max-width: 992px){
+                //     display: none;    
+                       
+                // }
+               
                 @include paddingY(90);
                 position: relative;
                 @include paddingLeft(100);
-
+                
                 &::before {
                     content: "";
                     position: absolute;
@@ -90,6 +98,108 @@
         }
     }
 
+
+    .section-intro-bannerFull-mobile {
+        display: none;
+    
+        @media only screen and (max-width: 1080px){
+            display: block;       
+        
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        font-family: $font-my-bold;
+
+        .bg-opacity {
+            background-color: rgba($color: #000000, $alpha: 0.6);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include paddingY(50);
+            position: relative;
+
+            .column-left {
+                padding-right: 50px;
+                .title {
+                    @include marginBottom(15,"+");
+                    .text1{
+                        font-size: 25px;
+                       
+                    }
+                    .text2{
+                        font-size: 50px;
+                        
+                    }
+                }
+
+                .sub-title {
+                    font-family: $font-primary;
+                }
+            }
+
+            .column-right {
+                // @include paddingY(90);
+                // position: relative;
+                // @include paddingLeft(100);
+                padding-top: 5%;
+                padding-bottom: 5%;
+                padding-left: 7%;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    width: 4px;
+                    background-color: $color-white;
+                }
+
+                .item {
+                    display: grid;
+                    grid-template-columns: 35% 100%;
+                    color: $color-white;
+                    align-items: flex-end;
+                    @include marginBottom(30,"+");
+
+                    .description {
+
+                        .number {
+                            font-size: 25px;
+                            font-weight: bold;
+                        }
+    
+                        .text {
+                            font-size: 18px;
+                            font-family: $font-cond;
+                        }
+                    }
+                }
+                >.item:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    }
+
+
+
+
+
+
+
+
+
+
     .section-info-more-wrapper {
         @include marginTop(80, "+");
         .content {
@@ -97,6 +207,10 @@
 
             .title {
                 @include marginBottom(25, "+");
+                @media only screen and (max-width: 992px){
+                   font-size: 40px;
+                           
+                }
             }
 
             ul {
@@ -105,17 +219,71 @@
                 li {
                     list-style: initial;
                 }
+                @media only screen and (max-width: 992px){
+                    display: none;
+                }
             }
 
             p {
                 @include marginBottom(38, "+");
+                @media only screen and (max-width: 992px){
+                    margin-top: 5%;
+                    font-size: 18px;
+                    line-height: 1.2;
+                }
             }
             p:last-child {
                 margin-bottom: 0;
             }
         }
+        .list-image-mobile{
+            display: none;
+            @media only screen and (max-width: 992px){
+                display: block;       
+                .swiper-slide{
+                    width: 100%;
+                    img{
+                        width: 100%;
+                    }
+                } 
+                .news{
+                    display: flex;
+                    flex-wrap: wrap;
+                    padding: 5% 0;
+                    border-bottom: 1px solid #d0d0d0;
+                    
+                    .left{
+                        width: 50%;
 
+                        img{
+                            
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    .right{
+                        width: 50%;
+                        padding-left: 5%;
+                        h3{
+
+                        text-align: left;
+                        justify-content: center;  
+                        }
+                        
+                    }
+                } 
+                .news:last-child {
+                    border-bottom: none;
+                 }
+                 
+            }
+        }
         .list-image {
+            @media only screen and (max-width: 992px){
+                display: none;      
+                       
+            }
             margin-left: -15px;
             margin-right: -15px;
 
@@ -141,6 +309,26 @@
 
                 .swiper-scrollbar-drag {
                     background-color: #2e3a41;
+                }
+            }
+        }
+        .rnd-news-mobile{
+            display: none;
+            @media only screen and (max-width: 1080px){
+                display: block;      
+                       
+                &__wrapper{
+                    margin-bottom: 5%;
+                    .top{
+                        width: 100%;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    .bottom{
+                        margin-top: 3%;
+                        font-size: 18px
+                    }
                 }
             }
         }

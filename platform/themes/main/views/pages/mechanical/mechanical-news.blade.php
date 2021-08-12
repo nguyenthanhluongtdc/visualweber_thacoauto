@@ -22,7 +22,7 @@
                                         <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu8.jpg')}}" alt="" />
                                     </div>
                                 </div>
-    
+                                
                                 <div class="item__right">
                                     <div class="item__right__top">
                                         <h3 class="font30 title"> Lợi ích của công nghệ cắt Laser thép ống, thép hộp </h3>
@@ -31,9 +31,10 @@
                                             đặc biệt đối với ngành [...]
                                         </p>
                                     </div>
-    
+                                    
                                     <a href="#" title="{!!__('Read more')!!}" class="read-more text-dark font20 font-pri"> {!!__('Xem thêm')!!} <img width="" height="" src="{{Theme::asset()->url('images/mechandical/chevron-double-right.svg')}}" alt="" /></a>
                                 </div>
+                            
                             </div>
     
                             <div class="item mx-0" data-aos="fade-left" data-aos-duration="1600" data-aos-easing="ease-in-out" data-aos-delay="50" >
@@ -60,6 +61,7 @@
     
                                     <a href="#" title="{!!__('Read more')!!}" class="read-more text-dark font20 font-pri"> {!!__('Xem thêm')!!} <img width="" height="" src="{{Theme::asset()->url('images/mechandical/chevron-double-right.svg')}}" alt="" /></a>
                                 </div>
+                                
                             </div>
     
                             <div class="item mx-0" data-aos="fade-left" data-aos-duration="1800" data-aos-easing="ease-in-out" data-aos-delay="50" >
@@ -86,8 +88,10 @@
     
                                     <a href="#" title="{!!__('Read more')!!}" class="read-more text-dark font20 font-pri"> {!!__('Xem thêm')!!} <img width="" height="" src="{{Theme::asset()->url('images/mechandical/chevron-double-right.svg')}}" alt="" /></a>
                                 </div>
+                                
                             </div>
                         </div>
                 </div>
             </div>
-        </div>
+          
+</div>

@@ -1,8 +1,11 @@
 .section-mechanical-tab {
-    background-color: rgba(238, 238, 238, 0.5);
-    z-index: 55;
+     @media only screen and (max-width: 1080px){
+         display: none;       
+                
+    }
+    
     .mechanical-tab-wrapper {
-        
+       
         .mechanical-tab__content {
             display: flex;
             
@@ -87,4 +90,72 @@
             }
         }
     }
+}
+.section-mechanical-tab-mobile {
+    display: none;
+    @media only screen and (max-width: 1080px){
+        display: block;       
+        .mechanical-tab-wrapper {
+        
+            .mechanical-tab__content {
+
+                .tab-field {
+                   
+                    margin-top: 5%;
+                    .list-group-item {
+                        text-align: center;
+                        display: block;
+                        text-transform: uppercase;
+                        font-family: $font-primary-bold;
+                        color: $color787878;
+                        margin-bottom: 2.4%;
+                        border: none;
+                        box-shadow: rgba(0, 0, 0, 0.04) 0px 2px 3px;
+                        transition: .3s ease-in-out;
+                        
+                         
+                        &:hover{
+                            background-color: $color-primary;
+                            color: #fff;
+                        }
+                    }
+                    .list-group-item:last-child {
+                        margin-bottom: 0;
+                    }
+                    .list-group-item.active {
+                        background-color: $color-primary;
+                        color: $color-white;
+                        border-radius: unset;
+                    }
+                }
+                .tab-content {
+                   
+                    .content-right {
+                        &__top {
+                            width: 100%;
+                            img {
+                                width: 100%;
+                            }
+                        }
+                        &__bottom {
+                            padding: 3% 5%;
+                            background-color: $color-primary;
+                            .title {
+                                color: $color-white;
+                                font-family: $font-primary-bold;
+                            }
+                            .desc {
+                                color: $color-white;
+                                margin: 3% 0;
+                            }
+                            .read-more {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+       }
+    
 }

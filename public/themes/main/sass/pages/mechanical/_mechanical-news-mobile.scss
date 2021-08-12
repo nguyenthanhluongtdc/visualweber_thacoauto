@@ -1,0 +1,90 @@
+.section-list-news-wrapper-mobile.mechandical {
+    display: none;
+    @media only screen and (max-width: 1080px){
+        display: block;
+    .page-pagination{
+       
+                display: block;
+                display: flex;
+                margin:  0 auto;
+                .news{
+                    font-size: 28px;
+                    display: flex;
+                    margin:  0 auto;
+                  li{
+                      margin-left: 12px
+                  }
+                }    
+        
+    }
+    @include marginBottom(80, "+");
+    .section-list-news {
+        .title{
+            font-size: 45px
+        }
+        @include paddingTop(60);
+        .title {
+            font-family: $font-my-bold;
+            
+        }
+        .content { 
+            margin-top: 3%;
+            img {
+                max-width: 100%;
+            }
+            .item {
+                .item-mobile{
+                    padding-bottom: 5%;
+                    
+                        .img{
+                            .sub-left{
+                                background-color: $color-primary;
+                                text-align: center;
+                                color: $color-white;
+                                display: flex;
+                                flex-wrap: wrap;
+                                align-content: center;
+                                width: 20%;
+                                height: 20%;
+                                position: absolute;
+                                // @include width(200);
+                                // @include height(196);
+                                >div {
+                                    flex: 0 0 100%;
+                                    max-width: 100%;
+                                }
+                                .day,
+                                .month {
+                                    font-size: 30px;
+                                    text-transform: uppercase;
+                                    font-weight: bold;
+                                    @media(max-width : 700px){
+                                        font-size: 25px;
+                                    }
+                                }
+                                .year {
+                                    font-size: 20px;
+                                    @media(max-width : 700px){
+                                        font-size: 15px;
+                                    }
+                                }
+                            }
+                            .sub-right{
+                                width: 100%;
+                                padding-right: 0;
+                                img{
+                                    width: 100%;
+                                }
+                            }
+                        }
+                        
+                    
+                }
+               
+            }
+        }
+    }
+}
+    
+}
+

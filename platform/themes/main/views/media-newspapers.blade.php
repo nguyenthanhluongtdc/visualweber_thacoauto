@@ -226,5 +226,5 @@
             <li class="color">></li>
             <li class="color">>></li>
         </ul>
-     </div>
+    </div>
 </div>

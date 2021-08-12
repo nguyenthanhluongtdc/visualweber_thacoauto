@@ -11,22 +11,7 @@
 }
 
 .slider-main-carousel {
-    margin-top: -110px;
-    @media(max-width: 1680px) {
-        margin-top: -100px;
-    }
-    @media(max-width: 1620px) {
-        margin-top: -95px;
-    }
-    @media(max-width: 1520px) {
-        margin-top: -90px;
-    }
-    @media(max-width: 1440px) {
-        margin-top: -80px;
-    }
-    @media(max-width: 1199px) {
-        margin-top: -70px;
-    }
+    margin-top: -4.2vw;
     .slider-main-item {
         position: relative;
         overflow: hidden;
@@ -921,7 +906,7 @@
         }
         .owl-nav {
             position: absolute;
-            top: 50%;
+            top: 38%;
             width: 100%;
             button {
                 color: #979797;

@@ -30,7 +30,9 @@ register_page_template([
     'brand' => 'Brand',
     'support-industry' => 'Support-industry',
     'test-drive' => 'Test drive',
-    'deposit' => 'Deposit'
+    'deposit' => 'Deposit',
+    'cost-estimates' => "Cost Estimates",
+    'pre-order' => "Pre-order"
 ]);
 
 register_sidebar([

@@ -1,0 +1,43 @@
+#installment-modal {
+  /* Custom styling */
+  max-width: 100%;
+  width: 1025px;
+
+  /* Custom transition - fade from top*/
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: all 0.3s;
+  background-color: $color-gray;
+  .required {
+    &::after {
+      content: "*";
+      color: #f52538;
+    }
+  }
+  .deposit__form-gray {
+    background-color: $color-gray;
+    .form-group {
+      .dropdown {
+        background-color: white;
+      }
+    }
+    .installment-estimate {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      background-color: white;
+      padding: 1.3rem 0.2rem;
+      &__item {
+        border-right: 1px solid $color-placeholder-gray;
+        padding: 0 2rem;
+        &:last-child {
+          border: unset;
+        }
+      }
+    }
+  }
+}
+
+.fancybox-slide--complete #installment-modal {
+  opacity: 1;
+  transform: translateY(0);
+}

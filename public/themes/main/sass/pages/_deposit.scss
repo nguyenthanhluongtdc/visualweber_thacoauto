@@ -1,13 +1,29 @@
-$color-gray: #f6f6f6;
-$color-placeholder-gray: #a6a6a6;
-$color-primary-link: #1c76c3;
-$color-primary-button: #01498b;
-
 .deposit {
   &__form {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 1.5rem;
+    &.no-grid {
+      display: block;
+    }
+    .max-w-4 {
+      max-width: 400px;
+      width: 100%;
+    }
+    .promotion {
+      &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        grid-gap: 1rem;
+      }
+      &__item {
+        display: flex;
+        flex-direction: column;
+        img {
+          margin-bottom: 0.2rem;
+        }
+      }
+    }
     .form-group {
       input {
         height: 41px;
@@ -166,3 +182,5 @@ $color-primary-button: #01498b;
     }
   }
 }
+
+@import "./installment";

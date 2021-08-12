@@ -81,6 +81,8 @@
                         @media (max-width: 1080px) {
                             width: 100%;
                             flex: 0 0 100%;
+                            height: auto;
+                            @include mobilePaddingY(37);
 
                             .box-main {
                                 width: 80%;
@@ -91,8 +93,11 @@
 
                         .box-main {
                             text-align: center;
-                            @include paddingLeft(100);
-                            @include paddingRight(100);
+                            @include paddingX(100);
+
+                            @media (max-width: 1080px) {
+                                @include mobilePaddingX(80);
+                            }
 
                             .symbol {
                                 @include marginBottom(20, "+");
@@ -102,7 +107,7 @@
                                     @include height(76);
 
                                     @media (max-width: 1080px) {
-                                        width: auto;
+                                        @include mobileWidth(70);
                                         height: auto;
                                     }
                                 }
@@ -142,11 +147,19 @@
                                 .symbol {
                                     text-align: center;
                                     @include marginBottom(30, "+");
+
+                                    @media (max-width: 1080px) {
+                                        @include mobileMarginBottom(15, "+");
+                                    }
                                 }
 
                                 .name {
                                     text-align: center;
                                     text-transform: uppercase;
+                                }
+
+                                @media (max-width: 1080px) {
+
                                 }
                             }
                         }
@@ -183,19 +196,27 @@
 
                             //mobile 
                             @media (max-width: 1080px) {
-                                flex: 0 0 33.3333333%;
-                                max-width: 33.3333333%;
                                 @include mobileHeight(260);
                                 border: 2px solid #e6eef5;
 
-                                &:first-child {
-                                    display: none;
-                                }
                                 .symbol {
+                                    width: 90px;
+                                    margin-left: auto;
+                                    margin-right: auto;
+                                    @include mobileMarginBottom(20, "+");
                                     img {
                                         width: auto;
                                         height: auto;
-                                        transform: scale(0.9);
+
+                                        @media (max-width: 1080px) {
+                                            max-width: 80%;
+                                        }
+                                        @media (max-width: 768px) {
+                                            max-width: 70%;
+                                        }
+                                        @media (max-width: 576px) {
+                                            max-width: 40%;
+                                        }
                                     }
                                 }
                             }
@@ -213,7 +234,6 @@
                             flex: 0 0 50%;
                             max-width: 50%;
                             
-                            @media (min-width: 1081px) {
                                 &:nth-child(1),&:nth-child(2),&:nth-child(3) {
                                     flex: 0 0 33.333333%;
                                     max-width: 33.333333%;
@@ -221,6 +241,17 @@
                                     .box-center {
                                         @include paddingLeft(90);
                                         @include paddingRight(90);
+
+                                        //mobile
+                                        @media (max-width: 1080px) {
+                                            @include mobilePaddingX(40);
+
+                                            .symbol {
+                                                width: 70%;
+                                                margin-left: auto;
+                                                margin-right: auto;
+                                            }
+                                        } 
                                     }
                                 }
                                 &:nth-child(1), &:nth-child(4) {
@@ -232,14 +263,24 @@
                                 &:nth-child(4), &:nth-child(5) {
                                     border-bottom: none;
                                 }
-                            }
+
+                                &:nth-child(1n+4) {
+                                    .box-center {
+                                        //mobile
+                                        @media (max-width: 1080px) {
+                                            @include mobilePaddingX(40);
+
+                                            .symbol {
+                                                width: 50%;
+                                                margin-left: auto;
+                                                margin-right: auto;
+                                            }
+                                        } 
+                                    }
+                                }
 
                             //mobile 
                             @media (max-width: 1080px) {
-                                &:first-child {
-                                    display: none;
-                                }
-
                                 @include mobileHeight(191);
                             }
 
@@ -248,12 +289,7 @@
                                 img {
                                    max-width: 100%;
 
-                                   @media only screen and (max-width: 1680px) {
-                                    transform: scale(.8);
-                                    }
-                                    @media only screen and (max-width: 1368px) {
-                                        transform: scale(.7);
-                                    }
+                                   
                                 }
                             }
                         }
@@ -497,6 +533,12 @@
                 img {
                     @include width(757);
                     @include height(471);
+
+                    @media (max-width: 1080px) {
+                        width: 100%;
+                        height: auto;
+                        object-fit: cover;
+                    }
                 }
             }
 

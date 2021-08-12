@@ -336,6 +336,10 @@
         box-sizing: border-box;
         position:relative;
         text-transform: uppercase;
+
+         a {
+             color: #454343;
+         }
     }
     div[id^="menu-cont-"] li.nav-item:last-child {
         border: 0;

@@ -1,13 +1,7 @@
 $('.partner-home-carousel').owlCarousel({
-    smartSpeed: 1000,
     loop: true,
     autoplay: false,
-    dots: false,
-    margin: 20,
-    stagePadding: 150,
-    Horizontal: true,
     nav: true,
-    center: true,
     navText: [
         // "<div class='nav-btn prev-slide'><i class='fal fa-chevron-left'></i></div>",
         "<div class='nav-btn prev-slide'><img src='themes/main/images/main/left.png'></" +
@@ -16,14 +10,17 @@ $('.partner-home-carousel').owlCarousel({
                 "/div>"
     ],
     responsive: {
-        0: {
-            items: 1
+        576: {
+            items: 2
         },
-        600: {
+        768: {
             items: 3
         },
-        1000: {
+        1081: {
             items: 4
+        },
+        1680: {
+            items: 5
         }
     }
 });

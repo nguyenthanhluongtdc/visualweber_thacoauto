@@ -12,6 +12,10 @@
         position: relative;
         margin-bottom: 65px;
         overflow: hidden;
+
+        @media (max-width: 1080px) {
+            @include mobileHeight(460);
+        }
         
         &:hover .services-block__image {
             transform: scale(1.1);
@@ -36,15 +40,25 @@
             height: 100%;
             position: absolute;
             transition: all 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            
+            object-fit: cover;
         }
         &__content{
             width: 35.5%;
             position: absolute;
             z-index: 2;
-            top: 32%;
+            top: 50%;
+            transform: translateY(-50%);
             left: 12%;
             transition: all 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+            @media (max-width: 768px) {
+                width: 50%;
+            }
+
+            @media (max-width: 576px) {
+                width: 70%;
+            }
+
             .services-block__title{
                 h2{
                     padding-bottom: 25px;

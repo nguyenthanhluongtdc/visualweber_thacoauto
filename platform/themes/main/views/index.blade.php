@@ -63,10 +63,11 @@
     <h2 class="font-pri-bold font60 color-gray">TIN TỨC VÀ SỰ KIỆN</h2>
     <div class="content">
         <div class="left" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
-            <div class="item" >
-                <div class="item-img">
-                    <a href=""><img src="{{ Theme::asset()->url('images/main/new1.jpg') }}" alt=""></a>
-                </div>
+            <div class="item-img-main">
+                <a href=""><img src="{{ Theme::asset()->url('images/main/new1.jpg') }}" alt=""></a>
+            </div>
+
+            <div class="item">
                 <div class="item-content">
                     <h3 class="title font-pri-bold font30">
                         <a href="">BÀN GIAO LÔ 30 XE IVECO DAILY PLUS – PREMIUM</a>
@@ -82,12 +83,11 @@
                         <span class="day">20-12-2021</span>
                     </div>
                 </div>
-
             </div>
             <div class="item">
-                <div class="item-img">
+                {{-- <div class="item-img">
                     <img src="{{ Theme::asset()->url('images/main/new1.jpg') }}" alt="">
-                </div>
+                </div> --}}
                 <div class="item-content">
                     <h3 class="title font-pri-bold font20">
                         THACO AUTO ỦNG HỘ 1,5 TỶ ĐỒNG CHO 3 ĐỊA PHƯƠNG CHỐNG DỊCH
@@ -104,9 +104,9 @@
 
             </div>
             <div class="item">
-                <div class="item-img">
+                {{-- <div class="item-img">
                     <img src="{{ Theme::asset()->url('images/main/new1.jpg') }}" alt="">
-                </div>
+                </div> --}}
                 <div class="item-content">
                     <h3 class="title font-pri-bold font20">
                         THADICO ỦNG HỘ 3 TỶ ĐỒNG CHO QUỸ PHÒNG, CHỐNG COVID-19 TỈNH BẾN TRE
@@ -123,9 +123,9 @@
 
             </div>
             <div class="item">
-                <div class="item-img">
+                {{-- <div class="item-img">
                     <img src="{{ Theme::asset()->url('images/main/new1.jpg') }}" alt="">
-                </div>
+                </div> --}}
                 <div class="item-content">
                     <h3 class="title font-pri-bold font20">
                         CÔNG TY TNHH MTV ĐỒNG PHƯỚC ĐẦU TƯ 5 XE MINI BUS IVECO DAILY

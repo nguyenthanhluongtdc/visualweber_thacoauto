@@ -19,10 +19,16 @@
 
     <style>
         :root {
-            --color-1st: {{ theme_option('primary_color', '#bead8e') }};
-            --primary-font: '{{ theme_option('primary_font', 'Roboto') }}', sans-serif;
-        }
+            --color-1st: {
+                    {
+                    theme_option('primary_color', '#bead8e')
+                }
+            }
 
+            ;
+            --primary-font: '{{ theme_option('primary_font', 'Roboto') }}',
+            sans-serif;
+        }
     </style>
 
     {!! Theme::header() !!}
@@ -36,15 +42,15 @@
 <!--[if IE 8]><body class="ie8 lt-ie9 lt-ie10"><![endif]-->
 <!--[if IE 9]><body class="ie9 lt-ie10"><![endif]-->
 
-<body @if (BaseHelper::siteLanguageDirection() == 'rtl') dir="rtl" @endif>
+<body @if (BaseHelper::siteLanguageDirection()=='rtl' ) dir="rtl" @endif>
     {!! apply_filters(THEME_FRONT_BODY, null) !!}
-    <header class="header" id="header">
+    <header class="header header-desktop" id="header">
         <div class="header-wrap container-remake">
             <div class="logo">
                 <a href="{{ route('public.single') }}" class="page-logo">
                     @if (theme_option('logo'))
-                        <img src="{{ RvMedia::getImageUrl(theme_option('logo')) }}"
-                            alt="{{ theme_option('site_title') }}" height="17">
+                    <img src="{{ RvMedia::getImageUrl(theme_option('logo')) }}" alt="{{ theme_option('site_title') }}"
+                        height="17">
                     @endif
                 </a>
             </div>
@@ -60,20 +66,49 @@
             <div class="search-language">
                 <div class="search">
                     <a href="/search"><img src="{{ Theme::asset()->url('images/main/search.png') }}" alt=""></a>
-                    
+
                 </div>
                 <div class="language">
                     <ul class="nav-lang">
                         <li class="nav-item lang-vi" style="pointer-events: none;opacity:0.6;">
-                            <a class="nav-link font-pri-bold font18" rel="alternate" hreflang="vi" href="{{ Language::getLocalizedURL('vi') }}">VI</a>
+                            <a class="nav-link font-pri-bold font18" rel="alternate" hreflang="vi"
+                                href="{{ Language::getLocalizedURL('vi') }}">VI</a>
                         </li>
                         <li class="nav-item lang-en">
-                            <a class="nav-link font-pri-bold font18" rel="alternate" hreflang="en" href="{{ Language::getLocalizedURL('en') }}">EN</a>
+                            <a class="nav-link font-pri-bold font18" rel="alternate" hreflang="en"
+                                href="{{ Language::getLocalizedURL('en') }}">EN</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
     </header>
+
+    <div id="mobileNav">
+        <div class="container-remake h-100">
+            <div class="menu-main">
+                <div class="logo">
+                    <a href="{{ route('public.single') }}" class="page-logo">
+                        @if (theme_option('logo'))
+                        <img src="{{ RvMedia::getImageUrl(theme_option('logo')) }}"
+                            alt="{{ theme_option('site_title') }}" height="17">
+                        @endif
+                    </a>
+                </div>
+
+
+                <input type="checkbox" id="top-nav" />
+                <div class="icon-menu">
+                    <span class="hamburgerspan"></span>
+                    <span class="hamburgerspan"></span>
+                    <span class="hamburgerspan"></span>
+                </div>
+                {!! Menu::renderMenuLocation('main-menu', [
+                'view' => 'menu-mobile',
+                ])
+                !!}
+            </div>
+        </div>
+    </div>
 
     <div id="page-wrap">

@@ -241,6 +241,59 @@
                         <img src="{{Theme::asset()->url('images/introduce/layer1.jpg')}}" alt="">
                     </div>
                 </div>
+
+                <div class="services-mobile font-pri-bold">
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="d-flex justify-content-center align-items-center h-100">
+                                <div class="box">
+                                    <div class="symbol">
+                                        <img src="{{Theme::asset()->url('images/introduce/symbol12.png')}}" alt="">
+                                    </div>
+                                    <div class="name">
+                                        xe du lịch
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="d-flex justify-content-center align-items-center h-100">
+                                <div class="box">
+                                    <div class="symbol">
+                                        <img src="{{Theme::asset()->url('images/introduce/symbol8.png')}}" alt="">
+                                    </div>
+                                    <div class="name">
+                                        xe bus
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="d-flex justify-content-center align-items-center h-100">
+                                <div class="box">
+                                    <div class="symbol">
+                                        <img src="{{Theme::asset()->url('images/introduce/symbol9.png')}}" alt="">
+                                    </div>
+                                    <div class="name">
+                                        xe tải
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="d-flex justify-content-center align-items-center h-100">
+                                <div class="box">
+                                    <div class="symbol">
+                                        <img src="{{Theme::asset()->url('images/introduce/symbol10.png')}}" alt="">
+                                    </div>
+                                    <div class="name">
+                                        xe chuyên dụng
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -257,7 +310,7 @@
                     </span>
                 </div>
                 <div class="section-leader-room__row__content row">
-                    <div class="__content__col col-lg-3" data-aos="fade-down" data-aos-delay="300">
+                    <div class="__content__col col-xl-3 col-md-4 col-sm-6 col-12" data-aos="fade-down" data-aos-delay="300">
                         <div class="avatar">
                             <img src="{{Theme::asset()->url('images/introduce/symbol-person.png')}}" alt="">
                         </div>
@@ -305,7 +358,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="__content__col col-lg-3" data-aos="fade-down" data-aos-delay="600">
+                    <div class="__content__col col-xl-3 col-md-4 col-sm-6 col-12" data-aos="fade-down" data-aos-delay="600">
                         <div class="avatar">
                             <img src="{{Theme::asset()->url('images/introduce/symbol-person.png')}}" alt="">
                         </div>
@@ -353,7 +406,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="__content__col col-lg-3" data-aos="fade-down" data-aos-delay="900">
+                    <div class="__content__col col-xl-3 col-md-4 col-sm-6 col-12" data-aos="fade-down" data-aos-delay="900">
                         <div class="avatar">
                             <img src="{{Theme::asset()->url('images/introduce/symbol-person.png')}}" alt="">
                         </div>
@@ -411,7 +464,7 @@
                     </span>
                 </div>
                 <div class="section-leader-room__row__content row">
-                    <div class="__content__col col-lg-3" data-aos="fade-down" data-aos-delay="900">
+                    <div class="__content__col col-xl-3 col-md-4 col-sm-6 col-12" data-aos="fade-down" data-aos-delay="900">
                         <div class="avatar">
                             <img src="{{Theme::asset()->url('images/introduce/symbol-person.png')}}" alt="">
                         </div>
@@ -469,7 +522,7 @@
                     </span>
                 </div>
                 <div class="section-leader-room__row__content row">
-                    <div class="__content__col col-lg-3" data-aos="fade-down" data-aos-delay="900">
+                    <div class="__content__col col-xl-3 col-md-4 col-sm-6 col-12" data-aos="fade-down" data-aos-delay="900">
                         <div class="avatar">
                             <img src="{{Theme::asset()->url('images/introduce/symbol-person.png')}}" alt="">
                         </div>
@@ -518,7 +571,7 @@
                         </div>
                     </div>
 
-                    <div class="__content__col col-lg-3" data-aos="fade-down" data-aos-delay="900">
+                    <div class="__content__col col-xl-3 col-md-4 col-sm-6 col-12" data-aos="fade-down" data-aos-delay="900">
                         <div class="avatar">
                             <img src="{{Theme::asset()->url('images/introduce/symbol-person.png')}}" alt="">
                         </div>
@@ -567,7 +620,7 @@
                         </div>
                     </div>
 
-                    <div class="__content__col col-lg-3" data-aos="fade-down" data-aos-delay="900">
+                    <div class="__content__col col-xl-3 col-md-4 col-sm-6 col-12" data-aos="fade-down" data-aos-delay="900">
                         <div class="avatar">
                             <img src="{{Theme::asset()->url('images/introduce/symbol-person.png')}}" alt="">
                         </div>

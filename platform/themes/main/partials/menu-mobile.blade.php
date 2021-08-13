@@ -1,7 +1,7 @@
 <div id="menu-cont-1">
     <ul class="menu-ul">
         @foreach ($menu_nodes as $key => $row)
-            <li class="nav-item {!!($row->has_child)?'sub-menu':''!!} font18"> 
+            <li class="nav-item {!!($row->has_child)?'sub-menu':''!!}"> 
                 <a href="{!!$row->url!!}" title="{{!!$row->title!!}}">
                     {!! $row->title !!}
                 </a>

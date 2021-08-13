@@ -238,19 +238,22 @@
     }
     .icon-menu {
         margin-left: auto;
+        transition: margin 400ms;
+        @include mobileWidth(63);
+        @include mobileHeight(64);
     }
 
     #top-nav {
         display: block;
-        @include mobileWidth(63);
-        height: 32px;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
         right: 0px;
         cursor: pointer;
         opacity: 0;
-        z-index: 2;
+        transition: margin 400ms;
+        @include mobileWidth(63);
+        @include mobileHeight(64);
     }
 
         /*hamburger*/
@@ -260,7 +263,7 @@
         @include mobileWidth(63);
         @include mobileMarginBottom(10, "+");
         @include mobileMarginTop(10, "+");
-        height: 8px;
+        @include mobileHeight(8);
         margin-bottom: 5px;
         position: relative;
         background: white;
@@ -307,22 +310,40 @@
     }
     div[id^="menu-cont-"] {
         border-right: 1px solid #ccc;
-        width: 100%;
-        max-width: 440px;
         background-color: #fff;
         padding: 5px;
         box-sizing: border-box;
         margin: 0;
-        height: 100vw;
+        height: 100vh;
         position: fixed;
         margin: 0;
-        overflow: hidden;
+        overflow-y: auto;
         top: 0;
         left: 0;
         transform: translate3d(-100%, 0, 0);
         transition: transform 0.35s;
         padding-right:0;
     }
+
+    #top-nav:checked , #top-nav:checked ~ .icon-menu{
+        position: fixed;
+        right: 0;
+        top: 5%;
+        margin-right: 20%;
+        z-index: 1100;
+        transform: translateY(0);
+
+        @media (max-width: 768px) {
+            top: 3%;
+            margin-right: 23%;
+        }
+    }
+
+    #top-nav:checked ~ .icon-menu .hamburgerspan{
+        z-index: 1100;
+        background-color: $color-primary;
+    }
+
     #top-nav:checked ~ div[id^="menu-cont-"],
     input[id^="menu-"]:checked ~ div[id^="menu-cont-"] {
         transform: translate3d(0, 0, 0);
@@ -331,22 +352,26 @@
         width: 100%;
         list-style: none;
         font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-        padding: 15px 10px 15px 20px;
+        padding: 20px;
         border-bottom: 1px solid #ccc;
         box-sizing: border-box;
         position:relative;
         text-transform: uppercase;
+        font-size: 20px;
 
          a {
              color: #454343;
          }
+    }
+    #menu-cont-1 ul > li.nav-item:first-child {
+        padding-top: 0;
     }
     div[id^="menu-cont-"] li.nav-item:last-child {
         border: 0;
     }
     .menu-ul {
         padding: 0;
-        margin: 25px 0 0 0;
+        @include mobileMarginTop(95, "+");
     }
     .nav-item.sub-menu:after, label.menu-label:before {
         content: "";
@@ -360,8 +385,8 @@
         border-left-style: solid;
         border-left-width: 2px;
         display: block;
-        width: 7px;
-        height: 7px;
+        width: 15px;
+        height: 15px;
         margin-bottom: -5px;
         float: right;
         -webkit-transform: rotate(-45deg);
@@ -374,12 +399,12 @@
         border-top-color: currentcolor;
         border-left: none;
         border-left-color: currentcolor;
-        margin-top: 10px;
+        margin-top: 2px;
     }
     label.menu-label {
         width: 100%;
         display: block;
-        padding: 15px 10px 15px 20px;
+        padding: 20px;
         border-bottom: 1px solid #ccc;
         color: white;
         font-weight: bold;
@@ -388,7 +413,8 @@
     }
     label.menu-label:before {
         float:left;
-        margin:5px;
+        margin-top: 2px;
+        margin-right: 10px;
         margin-left:0px;
         -webkit-transform: rotate(135deg);
         -moz-transform: rotate(135deg);
@@ -397,11 +423,11 @@
         transform: rotate(135deg);
         border-color: white;
     }
-    #menu-cont-1{z-index:1001;}
-    #menu-cont-2{z-index:1002;}
-    #menu-cont-3{z-index:1003;}
+    #menu-cont-1{z-index:1001; width: 80%;}
+    #menu-cont-2{z-index:1002; width: 100%;}
+    #menu-cont-3{z-index:1003; width: 100%;}
     .hamburgerspan{z-index:9998;}
-    #top-nav{z-index:9999;}
+    #top-nav{z-index:9999 !important;}
   }
 // .header-fixed{
 //     position: fixed;

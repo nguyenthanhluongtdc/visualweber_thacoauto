@@ -57,6 +57,9 @@ return [
             $theme->asset()->add('alert_bootstrap', '//cdn.jsdelivr.net/alertifyjs/1.10.0/css/themes/default.min.css');
             $theme->asset()->add('alert_bootstrap', '//unpkg.com/swiper/swiper-bundle.min.css');
             $theme->asset()->usePath()->add('semantic_ui_style', 'semantic-ui/semantic.min.css');
+            $theme->asset()->add('transition', 'https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/transition.min.css');
+            $theme->asset()->add('dropdown', 'https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/dropdown.min.css');
+            $theme->asset()->add('accordion', 'https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/accordion.min.css');
 
             $theme->asset()->usePath()->add('style', 'css/common.css', [], [], time());
 
@@ -68,7 +71,7 @@ return [
             $theme->asset()->container('footer')->add('bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js');
             $theme->asset()->container('footer')->add('fancybox', '//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js');
             $theme->asset()->container('footer')->add('aos_js', '//unpkg.com/aos@2.3.1/dist/aos.js');
-            $theme->asset()->container('footer')->add('carousel', '//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js');
+            $theme->asset()->container('header')->add('carousel', '//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js');
             $theme->asset()->container('footer')->add('carousel_thumb', '//cdn.jsdelivr.net/npm/owl.carousel2.thumbs@0.1.8/dist/owl.carousel2.thumbs.min.js');
             $theme->asset()->container('footer')->add('select2', '//cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js');
             $theme->asset()->container('footer')->add('slick', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js');
@@ -80,6 +83,7 @@ return [
             $theme->asset()->container('footer')->add('script_alert', '//cdn.jsdelivr.net/alertifyjs/1.10.0/alertify.min.js');
             $theme->asset()->container('footer')->add('script_alert', '//unpkg.com/swiper/swiper-bundle.min.js');
             $theme->asset()->container('footer')->usePath()->add('semantic_ui_js', 'semantic-ui/semantic.min.js');
+            $theme->asset()->container('header')->usePath()->add('semantic', 'js/semantic/semantic.min.js');
 
             $theme->asset()->container('footer')->usePath()->add('script', 'js/common.js', [], [], time());
         },

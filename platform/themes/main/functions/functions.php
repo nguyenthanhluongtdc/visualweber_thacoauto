@@ -32,7 +32,8 @@ register_page_template([
     'test-drive' => 'Test drive',
     'deposit' => 'Deposit',
     'cost-estimates' => "Cost Estimates",
-    'pre-order' => "Pre-order"
+    'pre-order' => "Pre-order",
+    'distribution-system' => 'Distribution system'
 ]);
 
 register_sidebar([

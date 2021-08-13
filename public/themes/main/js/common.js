@@ -347,4 +347,4 @@ function openTabs(evt, tabsName) {
     evt.currentTarget.className += " active";
   }
   
-  document.getElementById("defaultOpen").click();
+

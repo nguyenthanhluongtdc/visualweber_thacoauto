@@ -134,7 +134,9 @@
     
     .product-assemble{
         .tab-field{
+               
             .list-group-item{
+                
                 transition: .3s ease-in-out;
                 margin-bottom: 8%;   
                 @media(max-width : 1600px){
@@ -166,7 +168,9 @@
                     display: block;
                     text-transform: uppercase;
                     font-family: $font-primary-bold;
-                    color: $color787878;
+                    color: #000;
+                font-size: 25px;
+                padding: 3% 0;
                     margin-bottom: 2.4%;
                     border: none;
                     box-shadow: rgba(0, 0, 0, 0.04) 0px 2px 3px;

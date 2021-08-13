@@ -101,18 +101,19 @@
 
                 .tab-field {
                    
-                    margin-top: 5%;
+                    margin-top: 3%;
                     .list-group-item {
+                        padding: 3% 0;
                         text-align: center;
                         display: block;
                         text-transform: uppercase;
                         font-family: $font-primary-bold;
-                        color: $color787878;
+                        color: #000;
                         margin-bottom: 2.4%;
                         border: none;
                         box-shadow: rgba(0, 0, 0, 0.04) 0px 2px 3px;
                         transition: .3s ease-in-out;
-                        
+                        font-size: 25px;
                          
                         &:hover{
                             background-color: $color-primary;

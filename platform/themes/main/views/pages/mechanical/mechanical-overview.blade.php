@@ -9,7 +9,7 @@
                  nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
                  
             </div>
-            <div class="mechandical-overview__boxfield row row-cols-6 pl-3">
+            <div class="mechandical-overview__boxfield pl-3">
                <div class="boxfield-item">
                    <img src="{{ Theme::asset()->url('images/mechandical/thep-giacong.png') }}" alt="">
                    <p class="font24 font-pri-bold name">THÉP VÀ DỊCH VỤ

@@ -1,6 +1,6 @@
 <div class="fitter-media">
     <div class="fitter-media-wrap container-remake">
-        <form action="">
+        <form action="#" method="GET" class="form-filter">
             <select name="seleccity" id="seleccity" name="seleccity"
                 class="font20 font-mi-cond js-example-disabled-results">
                 <option selected disabled>Công ty tỉnh thành</option>
@@ -40,7 +40,7 @@
                 <option>11</option>
                 <option>12</option>
             </select>
-            <button>Xác nhận</button>
+            <button class="btn-submit">Xác nhận</button>
         </form>
     </div>
 </div>

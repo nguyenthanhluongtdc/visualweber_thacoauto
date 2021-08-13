@@ -78,7 +78,7 @@
                         maecenas accumsan lacus vel facilisis.
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                     </p>
-                    <div class="city-day font-pri font20">
+                    <div class="city-day font-pri font15">
                         <span class="city">Hà Nội</span>
                         <span class="day">20-12-2021</span>
                     </div>
@@ -89,14 +89,14 @@
                     <img src="{{ Theme::asset()->url('images/main/new1.jpg') }}" alt="">
                 </div> --}}
                 <div class="item-content">
-                    <h3 class="title font-pri-bold font20">
+                    <h3 class="title font-pri-bold font18">
                         THACO AUTO ỦNG HỘ 1,5 TỶ ĐỒNG CHO 3 ĐỊA PHƯƠNG CHỐNG DỊCH
                     </h3>
                     <p class="desc font-pri font18">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore...
                     </p>
-                    <div class="city-day font-pri font20">
+                    <div class="city-day font-pri font15">
                         <span class="city">Hà Nội</span>
                         <span class="day">20-12-2021</span>
                     </div>
@@ -108,14 +108,14 @@
                     <img src="{{ Theme::asset()->url('images/main/new1.jpg') }}" alt="">
                 </div> --}}
                 <div class="item-content">
-                    <h3 class="title font-pri-bold font20">
+                    <h3 class="title font-pri-bold font18">
                         THADICO ỦNG HỘ 3 TỶ ĐỒNG CHO QUỸ PHÒNG, CHỐNG COVID-19 TỈNH BẾN TRE
                     </h3>
                     <p class="desc font-pri font18">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore...
                     </p>
-                    <div class="city-day font-pri font20">
+                    <div class="city-day font-pri font15">
                         <span class="city">Hà Nội</span>
                         <span class="day">20-12-2021</span>
                     </div>
@@ -127,14 +127,14 @@
                     <img src="{{ Theme::asset()->url('images/main/new1.jpg') }}" alt="">
                 </div> --}}
                 <div class="item-content">
-                    <h3 class="title font-pri-bold font20">
+                    <h3 class="title font-pri-bold font18">
                         CÔNG TY TNHH MTV ĐỒNG PHƯỚC ĐẦU TƯ 5 XE MINI BUS IVECO DAILY
                     </h3>
                     <p class="desc font-pri font18">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore...
                     </p>
-                    <div class="city-day font-pri font20">
+                    <div class="city-day font-pri font15">
                         <span class="city">Hà Nội</span>
                         <span class="day">20-12-2021</span>
                     </div>
@@ -159,7 +159,7 @@
                 </h3>
             </div>
             <div class="bottom" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="50">
-                <p class="title font-pri-bold -font16">
+                <p class="title font-pri-bold font20">
                     điểm tin
                 </p>
                 {{-- <div class="scollbar-wrap">
@@ -204,7 +204,7 @@
                         </div>
                     </div>
                 </div> --}}
-                <div class="scollbar-wrap-home">
+                <div class="scollbar-wrap-home font18">
                     <div id="hours">
                         <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin3.png') }}" alt=""></a>
                         <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt=""></a>
@@ -346,7 +346,7 @@
     <div class="shareholder-home-top" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out">
         <h2 class="font-pri-bold font60 color-gray">Quan hệ cổ đông</h2>
         <div class="menu-tab-right">
-            <ul class="nav nav-pills font-pri-bold color-gray" role="tablist">
+            <ul class="nav nav-pills font-pri-bold color-gray font27" role="tablist">
                 <li class="nav-item">
                     <a class="nav-link active" data-toggle="pill" href="#shareholder1">Công bố thông tin</a>
                 </li>
@@ -362,7 +362,7 @@
             </ul>
             <div class="link-views-all font-pri-bold font18 color-gray">
                 <a href="" class="color-gray">
-                    Xem tất cả <span><i class="fas fa-arrow-right font15"></i></span>
+                    Xem tất cả <span><i class="fas fa-arrow-right font17"></i></span>
                 </a>
             </div>
         </div>

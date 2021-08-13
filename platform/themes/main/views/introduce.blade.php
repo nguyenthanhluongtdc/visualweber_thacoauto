@@ -72,7 +72,7 @@
                                 <div class="company-name font17 font-pri-bold">
                                     THACO AUTO
                                 </div>
-                                <div class="name font37 font-pri-bold">
+                                <div class="name font40 font-pri-bold">
                                     sản xuất
                                 </div>
                                 <p class="description">
@@ -132,7 +132,7 @@
                                 <div class="company-name font17 font-pri-bold">
                                     THACO AUTO
                                 </div>
-                                <div class="name font37 font-pri-bold">
+                                <div class="name font40 font-pri-bold">
                                     kinh doanh
                                 </div>
                                 <p class="description">

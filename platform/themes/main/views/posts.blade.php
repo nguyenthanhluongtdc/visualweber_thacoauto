@@ -210,7 +210,6 @@
                    <li class="color">>></li>
                </ul>
             </div>
-
         </div>
         <div class="list-post-new">
             <div class="wrap">

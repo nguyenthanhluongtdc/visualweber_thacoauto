@@ -4,16 +4,26 @@
         overflow: hidden;
         &__title{
             margin-bottom: 45px;
+            text-transform: uppercase;
+
+            @media (max-width: 1080px) {
+                @include mobileMarginBottom(25, "+");
+            }
         }
         &__banner{
             width: 100%;
             height: auto;
             margin-bottom: 50px;
+            @media (max-width: 1080px) {
+                @include mobileMarginBottom(40, "+");
+            }
         }
         &__desc{
             text-align: justify;
             line-height: 2;
-            margin-bottom: 50px;
+            margin-bottom: 50px; @media (max-width: 1080px) {
+                @include mobileMarginBottom(40, "+");
+            }
         }
         &__slide{
             width: 100%;
@@ -70,15 +80,17 @@
             .detail-info{
                 position: absolute;
                 width: 34%;
-                padding-bottom: 32%;
                 right: 0;
-                top: 18.5%;
+                height: 60%;
+                top: 50%;
+                transform: translateY(-50%);
                 z-index: 1;
                 transition: all 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
                 @media (max-width: 1080px) {
                     right: inherit;
                     left: 0;
+                    width: 40%;
                     &--frame {
                         .text {
                             p {
@@ -86,11 +98,9 @@
                             }
                         }
                     }
-
                 }
 
                 @media (max-width: 768px) {
-                    width: 50%;
                     &--frame {
                         .text {
                             p {
@@ -104,17 +114,18 @@
                     right: -17%;
                 }
                 &--frame{
-                    background-color: #f7f7f7;
-                    position: absolute;
-                    width: 100%;
                     height: 100%;
+                    background-color: #f7f7f7;
+                    width: 100%;
                     display: flex;
                     align-items: center;
                     .text{
                         max-width: 100%;
                         flex: 1 100%;
                         text-align: justify;
-                        padding: 6.5% 6.5%;
+                        padding: 6.5%;
+                        @include mobilePaddingY(30);
+                        @include mobilePaddingX(30);
                         line-height: 1.2;
                         background-color: #f7f7f7;
 
@@ -150,6 +161,7 @@
                         position: relative;
                         width: 100%;
                         padding-bottom: 0;
+                        transform: translateY(0);
 
                         &--frame {
                             position: relative;

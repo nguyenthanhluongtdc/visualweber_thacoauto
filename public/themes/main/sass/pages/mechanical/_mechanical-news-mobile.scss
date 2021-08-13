@@ -17,6 +17,10 @@
                         font-size: 15px;
                        
                     }
+                    @media only screen and (max-width: 400px){
+                        font-size: 9px;
+                       
+                    }
                     display: flex;
                     margin:  0 auto;
                   li{
@@ -25,6 +29,7 @@
                        margin-left: 0;
                        
                     }
+                  
                     @media only screen and (max-width: 992px){
                         margin-left: 3px;
                         

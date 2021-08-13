@@ -604,20 +604,20 @@
                         height: 50px;
                         display: flex;
                         @media only screen and (max-width: 767px){height: 42px;}
-                        @media only screen and (max-width: 400px){height: 30px;}
+                        @media only screen and (max-width: 400px){height: 30px; margin-left: 5px;}
                         
                         ion-icon{
                             width: 30%;
                             font-size: 25px;
                             color: #0054a0;
-                            @media only screen and (max-width: 400px){font-size: 15px;}
+                            @media only screen and (max-width: 400px){font-size: 12px;}
                         }
                         p{
                             font-size: 25px;
                             margin-left: 5%;
                             
                             @media only screen and (max-width: 767px){font-size: 20px;}
-                            @media only screen and (max-width: 400px){font-size: 15px;}
+                            @media only screen and (max-width: 400px){font-size: 12px;}
                         }
                     }
                     .location{
@@ -637,7 +637,7 @@
                             font-size: 20px;
                             margin-top: 2px;
                             @media only screen and (max-width: 767px){font-size: 17px;}
-                            @media only screen and (max-width: 400px){font-size: 12px;}
+                            @media only screen and (max-width: 400px){font-size: 11px;}
                             
                         }
                     }

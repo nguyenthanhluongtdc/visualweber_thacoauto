@@ -18,21 +18,21 @@
                         .tabcontent{
                             .content-bottom{
                                 p{
-                                    font-size: 15px;
+                                    font-size: 20px;
                                     margin-top: 2%;
                                 }
                                 h4{
-                                    font-size: 30px;
+                                    font-size: 28px;
                                 }
                             }
                         }
                     }
                     .item-left{
-                        padding-top: 70%;
+                        padding-top: 75%;
                         padding-right: 0;
                         padding-bottom: 0;
                         button{
-                            font-size: 25px;
+                            font-size: 28px;
                            
                         }
                         .tablinks{
@@ -40,11 +40,11 @@
                         }
                     }
                     .item-right{
-                        padding-top: 70%;
+                        padding-top: 75%;
                         padding-left: 0;
                         padding-bottom: 0;
                         button{
-                            font-size: 25px;
+                            font-size: 28px;
                         }
                         .tablinks{
                             margin-bottom: 5%;
@@ -99,7 +99,7 @@
                                 margin-top: 2%;
                             }
                             h4{
-                                font-size: 20px;
+                                font-size: 25px;
                             }
                         }
                     }
@@ -110,7 +110,7 @@
                         margin-bottom: 5%;
                     }
                     button{
-                        font-size: 18px;
+                        font-size: 20px;
                        
                     }
                 }
@@ -120,20 +120,32 @@
                         margin-bottom: 5%;
                     }
                     button{
-                        font-size: 18px;
+                        font-size: 20px;
                        
                     }
                 }
             }
             @media only screen and (max-width: 600px){
-            
+                .item-top{
+                    .tabcontent{
+                        .content-bottom{
+                            p{
+                                font-size: 15px;
+                                margin-top: 2%;
+                            }
+                            h4{
+                                font-size: 23px;
+                            }
+                        }
+                    }
+                }
                 .item-left{
                     padding-top: 83%;
                     .tablinks{
                         margin-bottom: 5%;
                     }
                     button{
-                        font-size: 18px;
+                        font-size: 20px;
                        
                     }
                 }
@@ -143,16 +155,28 @@
                         margin-bottom: 5%;
                     }
                     button{
-                        font-size: 18px;
+                        font-size: 20px;
                        
                     }
                 }
              }
              @media only screen and (max-width: 500px){
                 margin-bottom: 5%;
-               
+                .item-top{
+                    .tabcontent{
+                        .content-bottom{
+                            p{
+                                font-size: 12px;
+                                margin-top: 2%;
+                            }
+                            h4{
+                                font-size: 23px;
+                            }
+                        }
+                    }
+                }
                 .item-left{
-                    padding-top: 90%;
+                    padding-top: 93%;
                     .tablinks{
                         margin-bottom: 5%;
                     }
@@ -162,7 +186,7 @@
                     }
                 }
                 .item-right{
-                    padding-top: 90%;
+                    padding-top: 93%;
                     .tablinks{
                         margin-bottom: 5%;
                     }
@@ -176,7 +200,7 @@
                 margin-bottom: 5%;
                
                 .item-left{
-                    padding-top: 108%;
+                    padding-top: 103%;
                     .tablinks{
                         margin-bottom: 5%;
                     }
@@ -186,7 +210,7 @@
                     }
                 }
                 .item-right{
-                    padding-top: 108%;
+                    padding-top: 103%;
                     .tablinks{
                         margin-bottom: 5%;
                     }
@@ -294,90 +318,4 @@
     
         
    
-        
-// .section-support-industry-mobile-tab {
-//     display: none;
-//     @media only screen and (max-width: 1080px){
-//         display: block;       
-               
-   
-//     .mechanical-tab-wrapper {
-//         .mechanical-tab__content{
-
-// .tab {
-//     float: left;
-//     width: 100%;
-//     height: auto;
-//     padding-bottom: 10%;
-//       .tablinks{
-//           font-family: $font-primary-bold;
-//       }
-//     button {
-//       display: block;
-//       margin-bottom: 4.68%;
-//       background-color: inherit;
-//       color: #000;
-//       background-color: #fff;
-//       padding: 7.7% 0;
-//       width: 100%;
-//       border: none;
-//       outline: none;
-//       text-align: center;
-//       font-size: 18px;
-//       cursor: pointer;
-//       box-shadow: rgba(0, 0, 0, 0.04) 0px 1px 3px;
-//     transition: .3s ease-in-out;
-    
-//     }
-//     button:hover {
-//       background-color: $color-primary;
-//       color: #fff;
-     
-//     }
-//     button.active {
-//         background-color: $color-primary;
-//         color: #fff;
-//       }
-    
-//   }
-    
-  
-  
-//   .tabcontent{
-//       width: 100%;
-//       color: #fff;
-//       background-color: $color-primary;
-//       padding: 0;
-//       border-left: none;
-//       height: auto;
-//       img{
-//           width: 100%;
-//       }
-//       .content-bottom{
-//         h4{
-//             font-size: 30px;
-//             padding: 2%;
-//             font-family: $font-primary-bold;
-//         }
-//         p{
-//             padding: 0 2%;
-//             font-size: 18px;
-//         }
-//         .read-more {
-//             display: none;
-           
-//        }
-//       }
-    
-//     }
-
-// }
-
-// }
-
-// }
-// }
-    
-        
-   
-        
+ 

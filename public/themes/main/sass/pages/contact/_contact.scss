@@ -317,6 +317,9 @@
                
     .contact__title{
         font-size: 45px;
+        @media only screen and (max-width: 400px){
+            font-size: 35px;
+        }
     }
     .info-contact{
        
@@ -436,7 +439,7 @@
             font-family: $font-primary-bold;
             cursor: pointer;
             text-align: center;
-            
+            @media only screen and (max-width: 400px){font-size: 25px;}
         }
         
         .submit-btn:hover {
@@ -588,6 +591,7 @@
                 font-size: 45px;
                 padding-left: 3%;
                 @media only screen and (max-width: 767px){font-size: 35px;}
+                @media only screen and (max-width: 400px){font-size: 23px;}
             }
            
             .detail-content-wrap{
@@ -600,21 +604,26 @@
                         height: 50px;
                         display: flex;
                         @media only screen and (max-width: 767px){height: 42px;}
+                        @media only screen and (max-width: 400px){height: 30px;}
+                        
                         ion-icon{
                             width: 30%;
                             font-size: 25px;
                             color: #0054a0;
+                            @media only screen and (max-width: 400px){font-size: 15px;}
                         }
                         p{
                             font-size: 25px;
                             margin-left: 5%;
                             
                             @media only screen and (max-width: 767px){font-size: 20px;}
+                            @media only screen and (max-width: 400px){font-size: 15px;}
                         }
                     }
                     .location{
                         height: 90px;
                         @media only screen and (max-width: 767px){height: 70px;}
+                        @media only screen and (max-width: 400px){height: 50px;}
                     }
                 }
                 .right{
@@ -623,16 +632,19 @@
                         height: 50px;
                        
                         @media only screen and (max-width: 767px){height: 40px;}
+                        @media only screen and (max-width: 400px){height: 28px;}
                         p{
                             font-size: 20px;
                             margin-top: 2px;
                             @media only screen and (max-width: 767px){font-size: 17px;}
+                            @media only screen and (max-width: 400px){font-size: 12px;}
                             
                         }
                     }
                     .location{
                         height: 90px;
                         @media only screen and (max-width: 767px){height: 70px;}
+                        @media only screen and (max-width: 400px){height: 50px;}
                     }
                 }
 

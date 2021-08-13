@@ -9,10 +9,18 @@
                 margin:  0 auto;
                 .news{
                     font-size: 28px;
+                    @media only screen and (max-width: 600px){
+                        font-size: 15px;
+                       
+                    }
                     display: flex;
                     margin:  0 auto;
                   li{
-                      margin-left: 12px
+                      margin-left: 12px;
+                      @media only screen and (max-width: 600px){
+                       margin-left: 3px;
+                       
+                        }
                   }
                 }    
         
@@ -20,7 +28,14 @@
     @include marginBottom(80, "+");
     .section-list-news {
         .title{
-            font-size: 45px
+            font-size: 45px;
+            @media only screen and (max-width: 600px){
+                font-size: 35px;
+             }
+             @media only screen and (max-width: 600px){
+                font-size: 25px;
+               
+            }
         }
         @include paddingTop(60);
         .title {
@@ -29,6 +44,11 @@
         }
         .content { 
             margin-top: 3%;
+            @media only screen and (max-width: 600px){
+                font-size: 12px;
+               
+            }
+           
             img {
                 max-width: 100%;
             }

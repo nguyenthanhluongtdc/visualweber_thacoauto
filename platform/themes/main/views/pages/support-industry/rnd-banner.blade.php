@@ -91,8 +91,8 @@
     <div class="content row">
         <div class="column-left text-center col-4">
             <h2 class="title font-pri-bold text-white text-uppercase">
-                <span class="font30 text1"> những con số </span> <br>
-                <span class="font60 text2"> NỔI BẬT </span>
+                <span class="text1"> những con số </span> <br>
+                <span class="text2"> NỔI BẬT </span>
             </h2>
 
             <div class="sub-title text-white font15">

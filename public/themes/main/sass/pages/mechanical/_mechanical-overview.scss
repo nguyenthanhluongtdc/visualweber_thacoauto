@@ -116,6 +116,7 @@
                     height: auto;
                     margin-bottom: 5%;
                     background-color: #f1f1f1;
+                    
                     img{
                         margin-top: 10%;
                         margin-bottom: 5%;
@@ -125,6 +126,14 @@
                         margin-top: 6%;
                         line-height: 1.2;
                         margin-bottom: 5%;
+                        @media only screen and (max-width: 600px){
+                            font-size: 18px;
+                           
+                        }
+                        @media only screen and (max-width: 600px){
+                            font-size: 15px;
+                           
+                        }
                     }
                 }
             

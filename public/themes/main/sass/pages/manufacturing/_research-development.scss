@@ -132,16 +132,26 @@
                     @include marginBottom(15,"+");
                     .text1{
                         font-size: 25px;
-                       
+                        @media only screen and (max-width: 600px){
+                            font-size: 15px;
+                           
+                        }
                     }
                     .text2{
                         font-size: 50px;
-                        
+                        @media only screen and (max-width: 600px){
+                            font-size: 25px;
+                           
+                        }
                     }
                 }
 
                 .sub-title {
                     font-family: $font-primary;
+                    @media only screen and (max-width: 600px){
+                        font-size: 12px;
+                       
+                    }
                 }
             }
 
@@ -169,17 +179,34 @@
                     color: $color-white;
                     align-items: flex-end;
                     @include marginBottom(30,"+");
-
+                    .symbol{
+                        @media only screen and (max-width: 600px){
+                            margin-top: -10px;
+                           
+                        }
+                    }
                     .description {
-
+                        @media only screen and (max-width: 600px){
+                            padding-left: 20px;
+                            margin-top: 20px;
+                           
+                        }
                         .number {
                             font-size: 25px;
                             font-weight: bold;
+                            @media only screen and (max-width: 600px){
+                                font-size: 20px;
+                               
+                            }
                         }
     
                         .text {
                             font-size: 18px;
                             font-family: $font-cond;
+                            @media only screen and (max-width: 600px){
+                                font-size: 12px;
+                               
+                            }
                         }
                     }
                 }
@@ -211,6 +238,10 @@
                    font-size: 40px;
                            
                 }
+                @media only screen and (max-width: 600px){
+                    font-size: 25px;
+                   
+                }
             }
 
             ul {
@@ -230,6 +261,10 @@
                     margin-top: 5%;
                     font-size: 18px;
                     line-height: 1.2;
+                }
+                @media only screen and (max-width: 600px){
+                    font-size: 15px;
+                   
                 }
             }
             p:last-child {
@@ -269,6 +304,14 @@
 
                         text-align: left;
                         justify-content: center;  
+                        @media only screen and (max-width: 600px){
+                            font-size: 15px;
+                           
+                        }
+                        @media only screen and (max-width: 600px){
+                            font-size: 12px;
+                           
+                        }
                         }
                         
                     }

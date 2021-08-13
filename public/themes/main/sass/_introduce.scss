@@ -361,6 +361,10 @@
             }
 
             .services-mobile {
+                display: none;
+                @media (max-width: 1080px) {
+                    display: block;
+                }
                 .row {
                     margin-left: -9px;
                     margin-right: -9px;
@@ -398,9 +402,15 @@
                     text-align: center;
                     
                     .symbol {
-                        padding-bottom: 7px;
+                        padding-bottom: 10px;
+                        width: 80%;
+                        @media (max-width: 768px) {
+                            width: 50%;
+                        } 
+                        margin-left: auto;
+                        margin-right: auto;
                         img {
-                            max-width: 70%;
+                            max-width: 100%;
                         }
                     }
 

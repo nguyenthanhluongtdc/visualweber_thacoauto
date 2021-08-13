@@ -1,12 +1,11 @@
-// position: absolute;
-//     content: "\f3c5"; f879 f0e0
-//     color: #fff;
-//     font-family: "Font Awesome 5 Pro";
-//     left: 0;
-//     right: 0;
-//     font-weight: bold;
+
 .section-mechanical-contact {
+    
     .mechanical-contact {
+        @media only screen and (max-width: 1080px){
+            display: none;       
+                       
+    }
         &__content {
             
             padding: 2% 10% 1.5% 13%;
@@ -128,7 +127,7 @@
                 
                 .styled-input {
                     float: left;
-                    width: 100%;
+                    width: 102%;
                     margin: .5rem 0;
                     position: relative;
                     
@@ -150,7 +149,7 @@
                 }
                 
                 .styled-input.wide { 
-                    width: 100%;
+                    width: 101%;
                 }
                 
                 input,
@@ -208,4 +207,191 @@
        
     }
 }
+
+.section-mechanical-contact-mobile {
+    display: none;
+    @media only screen and (max-width: 992px){
+        display: block;       
+    
+    .mechanical-contact {
+        &__title{
+            font-size: 45px;
+        }
+        background: #f1f1f1;        
+        &__content {
+           
+            &__top {
+            
+                .left {
+               
+                .text{
+                    opacity: 70%;
+                    }
+                    .address {
+                        padding-left: 40px;
+                        margin-top: 30px;
+                        position: relative;
+                        font-family: $font-primary-bold;
+                        &::before {
+                            position: absolute;
+                            content: "\f3c5";
+                            // color: #fff;
+                            font-family: "Font Awesome 5 Free";
+                            left: 0;
+                            right: 0;
+                            top: -13px;
+                            font-weight: bold;
+                            font-size: 40px;
+                            @media screen and (max-width: 1680px) {
+                                font-size: 30px;
+                            }
+                        }
+                    }
+                    .phone {
+                        padding-left: 40px;
+                        // line-height: 40px;
+                        margin-top: 30px;
+                        font-family: $font-primary-bold;
+                        position: relative;
+                        
+                        &::before {
+                            position: absolute;
+                            content: "\f879";
+                            // color: #fff;
+                            font-family: "Font Awesome 5 Free";
+                            left: 0;
+                            right: 0;
+                            top: -13px;
+                            font-weight: bold;
+                            font-size: 40px;
+                            @media screen and (max-width: 1680px) {
+                                font-size: 30px;
+                            }
+                        }
+                    }
+                    .email {
+                        padding-left: 40px;
+                        margin-top: 30px;
+                        font-family: $font-primary-bold;
+                        position: relative;
+                        
+                        &::before {
+                            position: absolute;
+                            content: "\f0e0";
+                            // color: #fff;
+                            font-family: "Font Awesome 5 Free";
+                            left: 0;
+                            right: 0;
+                            bottom: -3px;
+                            font-weight: bold;
+                            font-size: 40px;
+                            @media screen and (max-width: 1680px) {
+                                font-size: 30px;
+                            }
+                        }
+                    }
+                }
+                .right {
+                    width: 100%;
+                    img {
+                     width: 100%;
+                        
+                    }
+                }
+            }
+            .mechanical-contact__info{
+                
+                
+                input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
+                    font-size: 0;
+                    top: 4px;
+                    -webkit-transition: all 0.225s ease;
+                    transition: all 0.225s ease;
+                }
+                
+                .styled-input {
+                   
+                    width: 104%;
+                    margin: .5rem 0;
+                    position: relative;
+                    
+                }
+                
+                
+                
+                .styled-input label {
+                    padding: 0 10px 1rem 10px;
+                    position: absolute;
+                    top: 10px;
+                    left: 0;
+                    -webkit-transition: all 0.25s ease;
+                    transition: all 0.25s ease;
+                    pointer-events: none;
+                    font-family: $font-primary-bold;
+                    color: rgb(134, 134, 134);
+                    text-transform: uppercase;
+                }
+                
+                .styled-input.wide { 
+                    width: 104%;
+                }
+                
+                input,
+                textarea {
+                    padding: 12px;
+                    border: 0;
+                    width: 100%;
+                    background-color: #fff;
+                    color: rgb(148, 148, 148)
+                   
+                }
+                
+                input:focus,
+                textarea:focus { outline: 0; }
+                
+                input:focus ~ span,
+                textarea:focus ~ span {
+                   
+                    -webkit-transition: all 0.075s ease;
+                    transition: all 0.075s ease;
+                }
+                
+                textarea {
+                    
+                    min-height: 6em;
+                }
+                
+                .input-container {
+                  
+                    max-width: 100%;
+                }
+                
+                .submit-btn {
+                    padding: 7px 95px;
+                    display: inline-block;
+                    background-color:#fff;
+                    color: rgb(134, 134, 134);
+                    font-family: $font-primary-bold;
+                    cursor: pointer;
+                    display: table;
+                    margin: 0 auto
+                    
+                }
+                
+                .submit-btn:hover {
+                    
+                    background-color: $color-primary;
+                    color: #FFF;
+                }
+                
+                
+            }
+            
+        }
+       
+    }
+}
+}
+
+
 

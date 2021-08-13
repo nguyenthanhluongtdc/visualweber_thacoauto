@@ -68,7 +68,7 @@
         </div>
     </div>
     <div class="page-pagination">
-        <ul class="pagination news font25 font-pri-bold">
+        <ul class="pagination news font-pri-bold">
             <li>1</li>
             <li>2</li>
             <li>3</li>

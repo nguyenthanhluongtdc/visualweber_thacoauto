@@ -64,7 +64,7 @@
                 </div>
             </div>
         </div>
-        <div class="product-intro flex-row-reverse">
+        <div class="product-intro">
             <div class="product-intro--left">
                 <h2 class="product-intro--left__title font-mi-bold font40">DỊCH VỤ PHỤ TÙNG</h2>
                 <p class="product-intro--left__content font-pri font20">

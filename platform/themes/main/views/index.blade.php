@@ -300,28 +300,38 @@
                 </div>
                 <div class="bottom-right">
                     <div class="bottom-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
-                        <img src="{{ Theme::asset()->url('images/main/lv6.png') }}" alt="">
+                        <div class="symbol">
+                            <img src="{{ Theme::asset()->url('images/main/lv6.png') }}" alt="">
+                        </div>
                         <p class="bottom-right-item-title font-pri-bold font30"><a href="" class="link-item-home">xe du
                                 lịch</a></p>
                     </div>
                     <div class="bottom-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
-                        <img src="{{ Theme::asset()->url('images/main/lv7.png') }}" alt="">
+                        <div class="symbol">
+                            <img src="{{ Theme::asset()->url('images/main/lv7.png') }}" alt="">
+                        </div>
                         <p class="bottom-right-item-title font-pri-bold font30"><a href="" class="link-item-home">MÔ TÔ & XE MÁY 
                             </a></p>
                     </div>
                     <div class="bottom-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
-                        <img src="{{ Theme::asset()->url('images/main/xe-tai.png') }}" alt="">
+                        <div class="symbol">
+                            <img src="{{ Theme::asset()->url('images/main/xe-tai.png') }}" alt="">
+                        </div>
                         <p class="bottom-right-item-title font-pri-bold font30"><a href="" class="link-item-home">XE
-                                TẢI</a></p>
+                                    TẢI</a></p>
                     </div>
                     <div class="bottom-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
-                        <img src="{{ Theme::asset()->url('images/main/lv8.png') }}" alt="">
+                        <div class="symbol">
+                            <img src="{{ Theme::asset()->url('images/main/lv8.png') }}" alt="">
+                        </div>
                         <p class="bottom-right-item-title font-pri-bold font30"><a href="" class="link-item-home">XE
                                 BUS</a></p>
                     </div>
                     
                     <div class="bottom-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
-                        <img src="{{ Theme::asset()->url('images/main/lv9.png') }}" alt="">
+                        <div class="symbol">
+                            <img src="{{ Theme::asset()->url('images/main/lv9.png') }}" alt="">
+                        </div>
                         <p class="bottom-right-item-title font-pri-bold font30"><a href="" class="link-item-home">DỊCH
                                 VỤ PHỤ TÙNG</a></p>
                     </div>

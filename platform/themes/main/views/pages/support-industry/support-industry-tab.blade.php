@@ -3,8 +3,8 @@
         <div class="container-remake mechanical-tab__content" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease-in-out" data-aos-delay="50">
             <div class="container py-5">
                 <div class="row">
-                  <div class="col-md-3">
-                      <div class="tab">
+           
+                      <div class="tab col-xl-3 col-lg-6 col-md-6 col-6 item-right">
                         <button class="tablinks font25 text-uppercase" onclick="openTabs(event, 'kinhoto')" id="defaultOpen">kính ô tô</button>
                         <button class="tablinks font25 text-uppercase" onclick="openTabs(event, 'nhipoto')">nhíp ô tô</button>
                         <button class="tablinks font25 text-uppercase" onclick="openTabs(event, 'linhkienoto')">linh kiện ô tô</button>
@@ -12,10 +12,10 @@
                         <button class="tablinks font25 text-uppercase" onclick="openTabs(event, 'phutungdien')">phụ tùng điện</button>
                         <button class="tablinks font25 text-uppercase" onclick="openTabs(event, 'linhkiennoithat')">linh kiện nội thất</button>
                     </div>      
-                </div>
+    
             
             
-                  <div class="col-md-6">
+                  <div class="col-xl-6 col-lg-12 col-md-12 col-12 item-top p-0">
                     
                         <div id="kinhoto" class="tabcontent">
                             <img src="{{ Theme::asset()->url('images/support-industry/kinhoto.jpg') }}" alt="" class="mb-2">
@@ -122,15 +122,15 @@
             
             
             
-                  <div class="col-md-3">
-                      <div class="tab">
+                  
+                      <div class="tab col-xl-3 col-lg-6 col-md-6 col-6 item-left">
                         <button class="font25 text-uppercase tablinks" onclick="openTabs(event, 'maylanh')" id="defaultOpen">máy lạnh xe tải, bus</button>
                         <button class="font25 text-uppercase tablinks" onclick="openTabs(event, 'dungdich')">keo & dung dịch</button>
                         <button class="font25 text-uppercase tablinks" onclick="openTabs(event, 'composite')">linh kiện composite</button>
                         <button class="font25 text-uppercase tablinks" onclick="openTabs(event, 'xedulich')">máy lạnh xe du lịch</button>
                         <button class="font25 text-uppercase tablinks" onclick="openTabs(event, 'vooto')">thân vỏ ô tô</button>
                         <button class="font25 text-uppercase tablinks" onclick="openTabs(event, 'gangtay')">găng tay</button>
-            </div></div>
+                </div>
                   
                 </div>  
               </div>
@@ -144,7 +144,7 @@
 
 
 
-<div class="section-support-industry-mobile-tab">
+{{-- <div class="section-support-industry-mobile-tab">
     <div class="mechanical-tab-wrapper" style="background-image:url('{{ Theme::asset()->url('images/mechandical/bg-tab2.png') }}')">
         <div class="container-remake mechanical-tab__content" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease-in-out" data-aos-delay="50">
             <div class="container py-5">
@@ -287,4 +287,4 @@
         </div>
     </div>
     
-</div>
+</div> --}}

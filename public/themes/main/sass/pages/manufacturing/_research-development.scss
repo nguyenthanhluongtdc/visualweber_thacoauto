@@ -207,7 +207,7 @@
 
             .title {
                 @include marginBottom(25, "+");
-                @media only screen and (max-width: 992px){
+                @media only screen and (max-width: 1080px){
                    font-size: 40px;
                            
                 }
@@ -238,7 +238,7 @@
         }
         .list-image-mobile{
             display: none;
-            @media only screen and (max-width: 992px){
+            @media only screen and (max-width: 1080px){
                 display: block;       
                 .swiper-slide{
                     width: 100%;
@@ -280,7 +280,7 @@
             }
         }
         .list-image {
-            @media only screen and (max-width: 992px){
+            @media only screen and (max-width: 1080px){
                 display: none;      
                        
             }

@@ -1,3 +1,13 @@
+.section-brand{
+    @media only screen and (max-width: 1080px){
+        padding-bottom: 5%;
+        
+    }
+    @media only screen and (max-width: 767px){
+        padding-bottom: 8%;
+        padding-top: -5%;
+        
+    }
 .brand-block{
     padding-bottom: 21%;
     box-sizing: border-box;
@@ -6,7 +16,20 @@
     margin: 0 auto;
     display: flex;
     margin-bottom: 10%;
+    @media only screen and (max-width: 1080px){
+        padding-bottom: 25%;
+        
+    }
+    @media only screen and (max-width: 767px){
+          padding-bottom: 35%;
+            
+    }
     .tabs {
+        @media only screen and (max-width: 1080px){
+            margin: 0;
+            
+        }
+       
         display: flex;
         flex-wrap: wrap;
         height: 40px;
@@ -47,6 +70,9 @@
             h3{
                 margin-right: 50px;
                 transform: translateY(-8px);
+                @media only screen and (max-width: 767px){
+                   margin-right: 30px;       
+                }
                 @media(max-width : 1710px){
                     transform: translateY(-8.5px);
                 }
@@ -73,6 +99,10 @@
             cursor: pointer;
             color: $color-primary;
             transition: background ease 0.3s;
+            @media only screen and (max-width: 767px){
+                padding-right: .2rem;
+                padding-bottom: .25rem;            
+            }
           }
           .tab {
             order: 9;
@@ -159,4 +189,5 @@
           
       }
 
+}
 }

@@ -21,7 +21,7 @@
             <div class="list-image-mobile container-remake">
                 <div class="swiper-slide">
                     <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu4.jpg')}}" alt="" class="image"/>
-                        <div class="text text-uppercase font50 font-pri-bold mt-4">công ty cổ phần ô tô trường hải(thaco) xuất khẩu ô tô và linh kiện phụ tùng lớn nhất từ trước đến nay</div>
+                        <div class="text text-uppercase font40 font-pri-bold mt-4">công ty cổ phần ô tô trường hải(thaco) xuất khẩu ô tô và linh kiện phụ tùng lớn nhất từ trước đến nay</div>
                 </div> 
                 <div class="news">
                         <div class="left p-0">

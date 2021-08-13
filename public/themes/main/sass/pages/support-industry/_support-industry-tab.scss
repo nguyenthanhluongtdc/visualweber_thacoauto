@@ -125,7 +125,77 @@
                     }
                 }
             }
+            @media only screen and (max-width: 600px){
             
+                .item-left{
+                    padding-top: 83%;
+                    .tablinks{
+                        margin-bottom: 5%;
+                    }
+                    button{
+                        font-size: 18px;
+                       
+                    }
+                }
+                .item-right{
+                    padding-top: 83%;
+                    .tablinks{
+                        margin-bottom: 5%;
+                    }
+                    button{
+                        font-size: 18px;
+                       
+                    }
+                }
+             }
+             @media only screen and (max-width: 500px){
+                margin-bottom: 5%;
+               
+                .item-left{
+                    padding-top: 90%;
+                    .tablinks{
+                        margin-bottom: 5%;
+                    }
+                    button{
+                        font-size: 18px;
+                       
+                    }
+                }
+                .item-right{
+                    padding-top: 90%;
+                    .tablinks{
+                        margin-bottom: 5%;
+                    }
+                    button{
+                        font-size: 18px;
+                       
+                    }
+                }
+             }
+             @media only screen and (max-width: 400px){
+                margin-bottom: 5%;
+               
+                .item-left{
+                    padding-top: 108%;
+                    .tablinks{
+                        margin-bottom: 5%;
+                    }
+                    button{
+                        font-size: 18px;
+                       
+                    }
+                }
+                .item-right{
+                    padding-top: 108%;
+                    .tablinks{
+                        margin-bottom: 5%;
+                    }
+                    button{
+                        font-size: 18px;
+                       
+                    }
+                }
+             }
             // .item-left{
             //     position: absolute;
             //     bottom: 0;

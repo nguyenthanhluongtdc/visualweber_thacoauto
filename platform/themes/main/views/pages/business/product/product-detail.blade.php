@@ -95,38 +95,44 @@
                                 <img src="{{Theme::asset()->url('images/services/kia-morning.png')}}" alt="">
                             </div>
                            
-                            <h3 class="car-name font-mi-bold font25 mb-2">
-                                KIA MORNING
-                            </h3>
-                            <p class="car-decs font-mi-bold font18">
-                                PHONG CÁCH RIÊNG CỦA BẠN
-                            </p>
-                            <a href="#">
-                                <p class="readmore font-mi-bold font18 mt-5">
-                                    XEM CHI TIẾT ->
-                                </p>
-                            </a>
+                            <div class="d-flex align-content-between flex-wrap car-content">
+                                <div class="info">
+                                    <h3 class="car-name font-mi-bold font25 mb-2">
+                                        KIA MORNING
+                                    </h3>
+                                    <p class="car-decs font-mi-bold font18">
+                                        PHONG CÁCH RIÊNG CỦA BẠN
+                                    </p>
+                                </div>
+                                <a href="#">
+                                    <p class="readmore font-mi-bold font18 mt-5">
+                                        XEM CHI TIẾT ->
+                                    </p>
+                                </a>
+                            </div>
                         </div>
                         <div class="car-frame">
                             <div class="car-img">
                                 <img src="{{Theme::asset()->url('images/services/new-morning.png')}}" alt="">
                             </div>
                             
-                            <h3 class="car-name font-mi-bold font25 mb-2">
-                                NEW MORNING
-                            </h3>
-                            <p class="car-decs font-mi-bold font18">
-                                SẮC MÀU THỜI TRANG KHẲNG ĐỊNH PHONG CÁCH
-                            </p>
-                            <a href="#">
-                                <p class="readmore font-mi-bold font18 mt-5">
-                                    XEM CHI TIẾT ->
-                                </p>
-                            </a>
+                            <div class="d-flex align-content-between flex-wrap car-content">
+                                <div class="info">
+                                    <h3 class="car-name font-mi-bold font25 mb-2">
+                                        NEW MORNING
+                                    </h3>
+                                    <p class="car-decs font-mi-bold font18">
+                                        SẮC MÀU THỜI TRANG KHẲNG ĐỊNH PHONG CÁCH
+                                    </p>
+                                </div>
+                                <a href="#">
+                                    <p class="readmore font-mi-bold font18 mt-5">
+                                        XEM CHI TIẾT ->
+                                    </p>
+                                </a>
+                            </div>
                         </div>
-                        
                     </div>
-                        
                 </div>
                 <div class="car">
                     <h3 class="cate font-mi-bold font30 mt-5">
@@ -138,72 +144,86 @@
                                 <img src="{{Theme::asset()->url('images/services/kia-soluto.png')}}" alt="">
                             </div>
                            
-                            <h3 class="car-name font-mi-bold font25 mb-2">
-                                KIA SOLUTO
-                            </h3>
-                            <p class="car-decs font-mi-bold font18">
-                                KẾT NỐI GIÁ TRỊ THẬT
-                            </p>
-                            <a href="#">
-                                <p class="readmore font-mi-bold font18 mt-5">
-                                    XEM CHI TIẾT ->
-                                </p>
-                            </a>
+                            <div class="d-flex align-content-between flex-wrap car-content">
+                                <div class="info">
+                                    <h3 class="car-name font-mi-bold font25 mb-2">
+                                        KIA SOLUTO
+                                    </h3>
+                                    <p class="car-decs font-mi-bold font18">
+                                        KẾT NỐI GIÁ TRỊ THẬT
+                                    </p>
+                                </div>
+                                <a href="#">
+                                    <p class="readmore font-mi-bold font18 mt-5">
+                                        XEM CHI TIẾT ->
+                                    </p>
+                                </a>
+                            </div>
                         </div>
                         <div class="car-frame">
                             <div class="car-img">
                                 <img src="{{Theme::asset()->url('images/services/kia-all.png')}}" alt="">
                             </div>
                             
-                            <h3 class="car-name font-mi-bold font25 mb-2">
-                                KIA ALL-NEW CERATO
-                            </h3>
-                            <p class="car-decs font-mi-bold font18">
-                                KHẲNG ĐỊNH PHONG CÁCH MỚI 
-                            </p>
-                            <a href="#">
-                                <p class="readmore font-mi-bold font18 mt-5">
-                                    XEM CHI TIẾT ->
-                                </p>
-                            </a>
+                            <div class="d-flex align-content-between flex-wrap car-content">
+                                <div class="info">
+                                    <h3 class="car-name font-mi-bold font25 mb-2">
+                                        KIA ALL-NEW CERATO
+                                    </h3>
+                                    <p class="car-decs font-mi-bold font18">
+                                        KHẲNG ĐỊNH PHONG CÁCH MỚI 
+                                    </p>
+                                </div>
+                                <a href="#">
+                                    <p class="readmore font-mi-bold font18 mt-5">
+                                        XEM CHI TIẾT ->
+                                    </p>
+                                </a>
+                            </div>
                         </div>
                         <div class="car-frame">
                             <div class="car-img">
                                 <img src="{{Theme::asset()->url('images/services/kia-optima.png')}}" alt="">
                             </div>
                            
-                            <h3 class="car-name font-mi-bold font25 mb-2">
-                                KIA OTIMA
-                            </h3>
-                            <p class="car-decs font-mi-bold font18">
-                                TỤ TIN VÀ PHONG CÁCH
-                            </p>
-                            <a href="#">
-                                <p class="readmore font-mi-bold font18 mt-5">
-                                    XEM CHI TIẾT ->
-                                </p>
-                            </a>
+                            <div class="d-flex align-content-between flex-wrap car-content">
+                                <div class="info">
+                                    <h3 class="car-name font-mi-bold font25 mb-2">
+                                        KIA OTIMA
+                                    </h3>
+                                    <p class="car-decs font-mi-bold font18">
+                                        TỤ TIN VÀ PHONG CÁCH
+                                    </p>
+                                </div>
+                                <a href="#">
+                                    <p class="readmore font-mi-bold font18 mt-5">
+                                        XEM CHI TIẾT ->
+                                    </p>
+                                </a>
+                            </div>
                         </div>
                         <div class="car-frame">
                             <div class="car-img">
                                 <img src="{{Theme::asset()->url('images/services/kia-optima-black.png')}}" alt="">
                             </div>
                             
-                            <h3 class="car-name font-mi-bold font25 mb-2">
-                                KIA OPTIMA
-                            </h3>
-                            <p class="car-decs font-mi-bold font18">
-                                SANG TRỌNG VÀ ĐẲNG CẤP
-                            </p>
-                            <a href="#">
-                                <p class="readmore font-mi-bold font18 mt-5">
-                                    XEM CHI TIẾT ->
-                                </p>
-                            </a>
+                            <div class="d-flex align-content-between flex-wrap car-content">
+                                <div class="info">
+                                    <h3 class="car-name font-mi-bold font25 mb-2">
+                                        KIA OPTIMA
+                                    </h3>
+                                    <p class="car-decs font-mi-bold font18">
+                                        SANG TRỌNG VÀ ĐẲNG CẤP
+                                    </p>
+                                </div>
+                                <a href="#">
+                                    <p class="readmore font-mi-bold font18 mt-5">
+                                        XEM CHI TIẾT ->
+                                    </p>
+                                </a>
+                            </div>
                         </div>
-                        
                     </div>
-                        
                 </div>
                 <div class="car">
                     <h3 class="cate font-mi-bold font30 mt-5">
@@ -215,55 +235,68 @@
                                 <img src="{{Theme::asset()->url('images/services/kia-seltos.png')}}" alt="">
                             </div>
                            
-                            <h3 class="car-name font-mi-bold font25 mb-2">
-                                KIA SELTOS
-                            </h3>
-                            <p class="car-decs font-mi-bold font18">
-                                ĐẲNG CẤP TỪ GIÁ TRỊ
-                            </p>
-                            <a href="#">
-                                <p class="readmore font-mi-bold font18 mt-5">
-                                    XEM CHI TIẾT ->
-                                </p>
-                            </a>
+                            <div class="d-flex align-content-between flex-wrap car-content">
+                                <div class="info">
+                                    <h3 class="car-name font-mi-bold font25 mb-2">
+                                        KIA SELTOS
+                                    </h3>
+                                    <p class="car-decs font-mi-bold font18">
+                                        ĐẲNG CẤP TỪ GIÁ TRỊ
+                                    </p>
+                                </div>
+
+                                <a href="#">
+                                    <p class="readmore font-mi-bold font18 mt-5">
+                                        XEM CHI TIẾT ->
+                                    </p>
+                                </a>
+                            </div>
                         </div>
                         <div class="car-frame">
                             <div class="car-img">
                                 <img src="{{Theme::asset()->url('images/services/kia-optima.png')}}" alt="">
                             </div>
                             
-                            <h3 class="car-name font-mi-bold font25 mb-2">
-                                KIA SORENTO
-                            </h3>
-                            <p class="car-decs font-mi-bold font18">
-                                KHỞI ĐẦU XU HƯỚNG MỚI
-                            </p>
-                            <a href="#">
-                                <p class="readmore font-mi-bold font18 mt-5">
-                                    XEM CHI TIẾT ->
-                                </p>
-                            </a>
+                            <div class="d-flex align-content-between flex-wrap car-content">
+                                <div class="info">
+                                    <h3 class="car-name font-mi-bold font25 mb-2">
+                                        KIA SORENTO
+                                    </h3>
+                                    <p class="car-decs font-mi-bold font18">
+                                        KHỞI ĐẦU XU HƯỚNG MỚI
+                                    </p>
+                                </div>
+
+                                <a href="#">
+                                    <p class="readmore font-mi-bold font18 mt-5">
+                                        XEM CHI TIẾT ->
+                                    </p>
+                                </a>
+                            </div>
                         </div>
                         <div class="car-frame">
                             <div class="car-img">
                                 <img src="{{Theme::asset()->url('images/services/kia-optima.png')}}" alt="">
                             </div>
                             
-                            <h3 class="car-name font-mi-bold font25 mb-2">
-                                KIA SORENTO (ALL NEW)
-                            </h3>
-                            <p class="car-decs font-mi-bold font18">
-                                HOÀN TOÀN MỚI - ĐẲNG CẤP 4.0
-                            </p>
-                            <a href="#">
-                                <p class="readmore font-mi-bold font18 mt-5">
-                                    XEM CHI TIẾT ->
-                                </p>
-                            </a>
+                            <div class="d-flex align-content-between flex-wrap car-content">
+                                <div class="info">
+                                    <h3 class="car-name font-mi-bold font25 mb-2">
+                                        KIA SORENTO (ALL NEW)
+                                    </h3>
+                                    <p class="car-decs font-mi-bold font18">
+                                        HOÀN TOÀN MỚI - ĐẲNG CẤP 4.0
+                                    </p>
+                                </div>
+
+                                <a href="#">
+                                    <p class="readmore font-mi-bold font18 mt-5">
+                                        XEM CHI TIẾT ->
+                                    </p>
+                                </a>
+                            </div>
                         </div>
-                        
                     </div>
-                        
                 </div>
                 <div class="car car4">
                     <h3 class="cate font-mi-bold font30 mt-5">
@@ -275,38 +308,46 @@
                                 <img src="{{Theme::asset()->url('images/services/kia-optima.png')}}" alt="">
                             </div>
                            
-                            <h3 class="car-name font-mi-bold font25 mb-2">
-                                KIA RONDO
-                            </h3>
-                            <p class="car-decs font-mi-bold font18">
-                                GIÁ TRỊ VƯỢT TRỘI
-                            </p>
-                            <a href="#">
-                                <p class="readmore font-mi-bold font18 mt-5">
-                                    XEM CHI TIẾT ->
-                                </p>
-                            </a>
+                            <div class="d-flex align-content-between flex-wrap car-content">
+                                <div class="info">
+                                    <h3 class="car-name font-mi-bold font25 mb-2">
+                                        KIA RONDO
+                                    </h3>
+                                    <p class="car-decs font-mi-bold font18">
+                                        GIÁ TRỊ VƯỢT TRỘI
+                                    </p>
+                                </div>
+
+                                <a href="#">
+                                    <p class="readmore font-mi-bold font18 mt-5">
+                                        XEM CHI TIẾT ->
+                                    </p>
+                                </a>
+                            </div>
                         </div>
                         <div class="car-frame">
                             <div class="car-img">
                                 <img src="{{Theme::asset()->url('images/services/kia-optima-black.png')}}" alt="">
                             </div>
                             
-                            <h3 class="car-name font-mi-bold font25 mb-2">
-                                NEW SEDONA
-                            </h3>
-                            <p class="car-decs font-mi-bold font18">
-                                SANG TRỌNG VÀ TIỆN NGHI
-                            </p>
-                            <a href="#">
-                                <p class="readmore font-mi-bold font18 mt-5">
-                                    XEM CHI TIẾT ->
-                                </p>
-                            </a>
+                            <div class="d-flex align-content-between flex-wrap car-content">
+                                <div class="info">
+                                    <h3 class="car-name font-mi-bold font25 mb-2">
+                                        NEW SEDONA
+                                    </h3>
+                                    <p class="car-decs font-mi-bold font18">
+                                        SANG TRỌNG VÀ TIỆN NGHI
+                                    </p>
+                                </div>
+
+                                <a href="#">
+                                    <p class="readmore font-mi-bold font18 mt-5">
+                                        XEM CHI TIẾT ->
+                                    </p>
+                                </a>
+                            </div>
                         </div>
-                        
                     </div>
-                        
                 </div>
             </div>
         </div>

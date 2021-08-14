@@ -422,6 +422,337 @@
                  </div>
             </div>
         </li>
+        <li class="news-thaco-item">
+            <div class="item-shareholder">
+                <div class="item-wrap">
+                    <div class="left">
+                        <img src="{{ Theme::asset()->url('images/main/up.png') }}" alt=""
+                            class="up-show">
+                        <img src="{{ Theme::asset()->url('images/main/down.png') }}" alt=""
+                            class="down-hide">
+                    </div>
+                    <div class="mid">
+                        <h5 class="title font-pri-bold font25 color-gray">
+                            Tạp chí THACO số 43
+                        </h5>
+                       
+                    </div>
+                    <div class="right font-pri color-gray">
+                        10/07/2020
+                    </div>
+                </div>
+                <div class="desc-none">
+                    <div class="wrap">
+                     <div class="desc-left font-cond font20">TAP CHI THACO SO 54.pdf</div>
+                     <div class="desc-right">
+                         <span class="font-cond font20">804,24KB</span>
+                         <a href="#" class="font-pri">DOWNLOAD</a>
+                     </div>
+                    </div>
+                 </div>
+            </div>
+        </li>
+        <li class="news-thaco-item">
+            <div class="item-shareholder">
+                <div class="item-wrap">
+                    <div class="left">
+                        <img src="{{ Theme::asset()->url('images/main/up.png') }}" alt=""
+                            class="up-show">
+                        <img src="{{ Theme::asset()->url('images/main/down.png') }}" alt=""
+                            class="down-hide">
+                    </div>
+                    <div class="mid">
+                        <h5 class="title font-pri-bold font25 color-gray">
+                            Tạp chí THACO số 43
+                        </h5>
+                       
+                    </div>
+                    <div class="right font-pri color-gray">
+                        10/07/2020
+                    </div>
+                </div>
+                <div class="desc-none">
+                    <div class="wrap">
+                     <div class="desc-left font-cond font20">TAP CHI THACO SO 54.pdf</div>
+                     <div class="desc-right">
+                         <span class="font-cond font20">804,24KB</span>
+                         <a href="#" class="font-pri">DOWNLOAD</a>
+                     </div>
+                    </div>
+                 </div>
+            </div>
+        </li>
+        <li class="news-thaco-item">
+            <div class="item-shareholder">
+                <div class="item-wrap">
+                    <div class="left">
+                        <img src="{{ Theme::asset()->url('images/main/up.png') }}" alt=""
+                            class="up-show">
+                        <img src="{{ Theme::asset()->url('images/main/down.png') }}" alt=""
+                            class="down-hide">
+                    </div>
+                    <div class="mid">
+                        <h5 class="title font-pri-bold font25 color-gray">
+                            Tạp chí THACO số 43
+                        </h5>
+                       
+                    </div>
+                    <div class="right font-pri color-gray">
+                        10/07/2020
+                    </div>
+                </div>
+                <div class="desc-none">
+                    <div class="wrap">
+                     <div class="desc-left font-cond font20">TAP CHI THACO SO 54.pdf</div>
+                     <div class="desc-right">
+                         <span class="font-cond font20">804,24KB</span>
+                         <a href="#" class="font-pri">DOWNLOAD</a>
+                     </div>
+                    </div>
+                 </div>
+            </div>
+        </li>
+        <li class="news-thaco-item">
+            <div class="item-shareholder">
+                <div class="item-wrap">
+                    <div class="left">
+                        <img src="{{ Theme::asset()->url('images/main/up.png') }}" alt=""
+                            class="up-show">
+                        <img src="{{ Theme::asset()->url('images/main/down.png') }}" alt=""
+                            class="down-hide">
+                    </div>
+                    <div class="mid">
+                        <h5 class="title font-pri-bold font25 color-gray">
+                            Tạp chí THACO số 43
+                        </h5>
+                       
+                    </div>
+                    <div class="right font-pri color-gray">
+                        10/07/2020
+                    </div>
+                </div>
+                <div class="desc-none">
+                    <div class="wrap">
+                     <div class="desc-left font-cond font20">TAP CHI THACO SO 54.pdf</div>
+                     <div class="desc-right">
+                         <span class="font-cond font20">804,24KB</span>
+                         <a href="#" class="font-pri">DOWNLOAD</a>
+                     </div>
+                    </div>
+                 </div>
+            </div>
+        </li>
+        <li class="news-thaco-item">
+            <div class="item-shareholder">
+                <div class="item-wrap">
+                    <div class="left">
+                        <img src="{{ Theme::asset()->url('images/main/up.png') }}" alt=""
+                            class="up-show">
+                        <img src="{{ Theme::asset()->url('images/main/down.png') }}" alt=""
+                            class="down-hide">
+                    </div>
+                    <div class="mid">
+                        <h5 class="title font-pri-bold font25 color-gray">
+                            Tạp chí THACO số 43
+                        </h5>
+                       
+                    </div>
+                    <div class="right font-pri color-gray">
+                        10/07/2020
+                    </div>
+                </div>
+                <div class="desc-none">
+                    <div class="wrap">
+                     <div class="desc-left font-cond font20">TAP CHI THACO SO 54.pdf</div>
+                     <div class="desc-right">
+                         <span class="font-cond font20">804,24KB</span>
+                         <a href="#" class="font-pri">DOWNLOAD</a>
+                     </div>
+                    </div>
+                 </div>
+            </div>
+        </li>
+        <li class="news-thaco-item">
+            <div class="item-shareholder">
+                <div class="item-wrap">
+                    <div class="left">
+                        <img src="{{ Theme::asset()->url('images/main/up.png') }}" alt=""
+                            class="up-show">
+                        <img src="{{ Theme::asset()->url('images/main/down.png') }}" alt=""
+                            class="down-hide">
+                    </div>
+                    <div class="mid">
+                        <h5 class="title font-pri-bold font25 color-gray">
+                            Tạp chí THACO số 43
+                        </h5>
+                       
+                    </div>
+                    <div class="right font-pri color-gray">
+                        10/07/2020
+                    </div>
+                </div>
+                <div class="desc-none">
+                    <div class="wrap">
+                     <div class="desc-left font-cond font20">TAP CHI THACO SO 54.pdf</div>
+                     <div class="desc-right">
+                         <span class="font-cond font20">804,24KB</span>
+                         <a href="#" class="font-pri">DOWNLOAD</a>
+                     </div>
+                    </div>
+                 </div>
+            </div>
+        </li>
+        <li class="news-thaco-item">
+            <div class="item-shareholder">
+                <div class="item-wrap">
+                    <div class="left">
+                        <img src="{{ Theme::asset()->url('images/main/up.png') }}" alt=""
+                            class="up-show">
+                        <img src="{{ Theme::asset()->url('images/main/down.png') }}" alt=""
+                            class="down-hide">
+                    </div>
+                    <div class="mid">
+                        <h5 class="title font-pri-bold font25 color-gray">
+                            Tạp chí THACO số 43
+                        </h5>
+                       
+                    </div>
+                    <div class="right font-pri color-gray">
+                        10/07/2020
+                    </div>
+                </div>
+                <div class="desc-none">
+                    <div class="wrap">
+                     <div class="desc-left font-cond font20">TAP CHI THACO SO 54.pdf</div>
+                     <div class="desc-right">
+                         <span class="font-cond font20">804,24KB</span>
+                         <a href="#" class="font-pri">DOWNLOAD</a>
+                     </div>
+                    </div>
+                 </div>
+            </div>
+        </li>
+        <li class="news-thaco-item">
+            <div class="item-shareholder">
+                <div class="item-wrap">
+                    <div class="left">
+                        <img src="{{ Theme::asset()->url('images/main/up.png') }}" alt=""
+                            class="up-show">
+                        <img src="{{ Theme::asset()->url('images/main/down.png') }}" alt=""
+                            class="down-hide">
+                    </div>
+                    <div class="mid">
+                        <h5 class="title font-pri-bold font25 color-gray">
+                            Tạp chí THACO số 43
+                        </h5>
+                       
+                    </div>
+                    <div class="right font-pri color-gray">
+                        10/07/2020
+                    </div>
+                </div>
+                <div class="desc-none">
+                    <div class="wrap">
+                     <div class="desc-left font-cond font20">TAP CHI THACO SO 54.pdf</div>
+                     <div class="desc-right">
+                         <span class="font-cond font20">804,24KB</span>
+                         <a href="#" class="font-pri">DOWNLOAD</a>
+                     </div>
+                    </div>
+                 </div>
+            </div>
+        </li>
+        <li class="news-thaco-item">
+            <div class="item-shareholder">
+                <div class="item-wrap">
+                    <div class="left">
+                        <img src="{{ Theme::asset()->url('images/main/up.png') }}" alt=""
+                            class="up-show">
+                        <img src="{{ Theme::asset()->url('images/main/down.png') }}" alt=""
+                            class="down-hide">
+                    </div>
+                    <div class="mid">
+                        <h5 class="title font-pri-bold font25 color-gray">
+                            Tạp chí THACO số 43
+                        </h5>
+                       
+                    </div>
+                    <div class="right font-pri color-gray">
+                        10/07/2020
+                    </div>
+                </div>
+                <div class="desc-none">
+                    <div class="wrap">
+                     <div class="desc-left font-cond font20">TAP CHI THACO SO 54.pdf</div>
+                     <div class="desc-right">
+                         <span class="font-cond font20">804,24KB</span>
+                         <a href="#" class="font-pri">DOWNLOAD</a>
+                     </div>
+                    </div>
+                 </div>
+            </div>
+        </li>
+        <li class="news-thaco-item">
+            <div class="item-shareholder">
+                <div class="item-wrap">
+                    <div class="left">
+                        <img src="{{ Theme::asset()->url('images/main/up.png') }}" alt=""
+                            class="up-show">
+                        <img src="{{ Theme::asset()->url('images/main/down.png') }}" alt=""
+                            class="down-hide">
+                    </div>
+                    <div class="mid">
+                        <h5 class="title font-pri-bold font25 color-gray">
+                            Tạp chí THACO số 43
+                        </h5>
+                       
+                    </div>
+                    <div class="right font-pri color-gray">
+                        10/07/2020
+                    </div>
+                </div>
+                <div class="desc-none">
+                    <div class="wrap">
+                     <div class="desc-left font-cond font20">TAP CHI THACO SO 54.pdf</div>
+                     <div class="desc-right">
+                         <span class="font-cond font20">804,24KB</span>
+                         <a href="#" class="font-pri">DOWNLOAD</a>
+                     </div>
+                    </div>
+                 </div>
+            </div>
+        </li>
+        <li class="news-thaco-item">
+            <div class="item-shareholder">
+                <div class="item-wrap">
+                    <div class="left">
+                        <img src="{{ Theme::asset()->url('images/main/up.png') }}" alt=""
+                            class="up-show">
+                        <img src="{{ Theme::asset()->url('images/main/down.png') }}" alt=""
+                            class="down-hide">
+                    </div>
+                    <div class="mid">
+                        <h5 class="title font-pri-bold font25 color-gray">
+                            Tạp chí THACO số 43
+                        </h5>
+                       
+                    </div>
+                    <div class="right font-pri color-gray">
+                        10/07/2020
+                    </div>
+                </div>
+                <div class="desc-none">
+                    <div class="wrap">
+                     <div class="desc-left font-cond font20">TAP CHI THACO SO 54.pdf</div>
+                     <div class="desc-right">
+                         <span class="font-cond font20">804,24KB</span>
+                         <a href="#" class="font-pri">DOWNLOAD</a>
+                     </div>
+                    </div>
+                 </div>
+            </div>
+        </li>
+        
     </ul>
     <div id="loadMore" class="font20"><span>Xem thêm</span><span><i class="fas fa-arrow-right font15"></i></div>
 </div>

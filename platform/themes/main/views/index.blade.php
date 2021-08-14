@@ -63,84 +63,51 @@
     <h2 class="font-pri-bold font60 color-gray">TIN TỨC VÀ SỰ KIỆN</h2>
     <div class="content">
         <div class="left" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
-            <div class="item-img-main">
-                <a href=""><img src="{{ Theme::asset()->url('images/main/new1.jpg') }}" alt=""></a>
-            </div>
-
-            <div class="item">
-                <div class="item-content">
-                    <h3 class="title font-pri-bold font30">
-                        <a href="">BÀN GIAO LÔ 30 XE IVECO DAILY PLUS – PREMIUM</a>
-                    </h3>
-                    <p class="desc font-pri font20">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
-                        maecenas accumsan lacus vel facilisis.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    </p>
-                    <div class="city-day font-pri font15">
-                        <span class="city">Hà Nội</span>
-                        <span class="day">20-12-2021</span>
+            @if (!empty(get_featured_posts_by_category(15, 4)))
+                @foreach (get_featured_posts_by_category(15, 4) as $post)
+                    @if($loop->first)
+                    <div class="left-top">
+                        <div class="frame">
+                            <div class="item-img-main">
+                                <a href="{{$post->url}}"><img src="{{ get_object_image($post->image) }}" alt=""></a>
+                            </div>
+                
+                            <div class="item-main">
+                                <div class="item-content">
+                                    <h3 class="title font-pri-bold font30 text-uppercase">
+                                        <a href="{{$post->url}}">{{$post->name}}</a>
+                                    </h3>
+                                    <p class="desc font-pri font20">
+                                        {{Str::words($post->description,30)}}
+                                    </p>
+                                    <div class="city-day font-pri font20">
+                                        <span class="city">Hà Nội</span>
+                                        <span class="day">{{date_format($post->created_at,"d-m-Y")}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="item">
-                {{-- <div class="item-img">
-                    <img src="{{ Theme::asset()->url('images/main/new1.jpg') }}" alt="">
-                </div> --}}
-                <div class="item-content">
-                    <h3 class="title font-pri-bold font18">
-                        THACO AUTO ỦNG HỘ 1,5 TỶ ĐỒNG CHO 3 ĐỊA PHƯƠNG CHỐNG DỊCH
-                    </h3>
-                    <p class="desc font-pri font18">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore...
-                    </p>
-                    <div class="city-day font-pri font15">
-                        <span class="city">Hà Nội</span>
-                        <span class="day">20-12-2021</span>
+                    @else
+                    <div class="item">
+                        <div class="item-content">
+                            <h3 class="title font-pri-bold font20 text-uppercase">
+                                <a href="{{$post->url}}">{{$post->name}}</a>
+                                
+                            </h3>
+                            <p class="desc font-pri font18">
+                                {{Str::words($post->description,25)}}
+                            </p>
+                            <div class="city-day font-pri font20">
+                                <span class="city">Hà Nội</span>
+                                <span class="day">{{date_format($post->created_at,"d-m-Y")}}</span>
+                            </div>
+                        </div>
+        
                     </div>
-                </div>
-
-            </div>
-            <div class="item">
-                {{-- <div class="item-img">
-                    <img src="{{ Theme::asset()->url('images/main/new1.jpg') }}" alt="">
-                </div> --}}
-                <div class="item-content">
-                    <h3 class="title font-pri-bold font18">
-                        THADICO ỦNG HỘ 3 TỶ ĐỒNG CHO QUỸ PHÒNG, CHỐNG COVID-19 TỈNH BẾN TRE
-                    </h3>
-                    <p class="desc font-pri font18">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore...
-                    </p>
-                    <div class="city-day font-pri font15">
-                        <span class="city">Hà Nội</span>
-                        <span class="day">20-12-2021</span>
-                    </div>
-                </div>
-
-            </div>
-            <div class="item">
-                {{-- <div class="item-img">
-                    <img src="{{ Theme::asset()->url('images/main/new1.jpg') }}" alt="">
-                </div> --}}
-                <div class="item-content">
-                    <h3 class="title font-pri-bold font18">
-                        CÔNG TY TNHH MTV ĐỒNG PHƯỚC ĐẦU TƯ 5 XE MINI BUS IVECO DAILY
-                    </h3>
-                    <p class="desc font-pri font18">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore...
-                    </p>
-                    <div class="city-day font-pri font15">
-                        <span class="city">Hà Nội</span>
-                        <span class="day">20-12-2021</span>
-                    </div>
-                </div>
-
-            </div>
+                    @endif
+                @endforeach
+            @endif
 
             <div class="avatar-news">
                 <img src="{{ Theme::asset()->url('images/main/avt.png') }}" alt="avatar">
@@ -148,63 +115,32 @@
 
         </div>
         <div class="right">
-            <div class="top" data-aos="fade-left" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="250">
-                <div class="img-item">
-                    <a href="">
-                        <img src="{{ Theme::asset()->url('images/main/car-vacxin.jpg') }}" alt="">
-                    </a>
-                </div>
-                <h3 class="title font30">
-                    <a href="" class="font-pri-bold color-gray font30">XE CHUYÊN DỤNG PHỤC VỤ TIÊM CHỦNG LƯU ĐỘNG DO THACO SẢN XUẤT</a>
-                </h3>
-            </div>
+            @if (!empty(get_featured_posts_by_category(22, 1)))
+                @foreach (get_featured_posts_by_category(22, 1) as $post)
+                    @if($loop->first)
+                    <div class="top" data-aos="fade-left" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="250">
+                        @if(!empty(get_field($post, 'video_gallery')[0]))
+                        <div class="img-item">
+                            <a data-fancybox href="https://www.youtube.com/watch?v={{get_sub_field(get_field($post, 'video_gallery')[0], 'youtube_code')}}">
+                                <div class="play"></div>
+                                <img src="{{ get_object_image($post->image) }}" alt="">
+                            </a>
+                        </div>
+                        <h3 class="title font30 text-uppercase">
+                            <a data-fancybox href="https://www.youtube.com/watch?v={{get_sub_field(get_field($post, 'video_gallery')[0], 'youtube_code')}}" class="font-pri-bold color-gray font30">{{$post->name}}</a>
+                        </h3>
+                        @endif
+                    </div>
+                    @endif
+                @endforeach
+            @endif
+            
             <div class="bottom" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="50">
-                <p class="title font-pri-bold font20">
+                <p class="title font-pri-bold -font16">
                     điểm tin
                 </p>
-                {{-- <div class="scollbar-wrap">
-                    <div class="viewContainer">
-                        <div class="left-logo">
-                            <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin1.jpg') }}" alt=""></a>
-                           
-                        </div>
-                        <div class="right-title font-pri-bold font16" >
-                            <h5><a href="#">New Morning - lựa chọn cho dòng xe đô thị 2021</a></h5>
-                           
-                        </div>
-                    </div>
-                    <div class="viewContainer">
-                        <div class="left-logo">
-                            <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt=""></a>
-                           
-                        </div>
-                        <div class="right-title font-pri-bold font16" >
-                            <h5><a href="#">MAZDA CX-8: ĐA DẠNG PHIÊN BẢN PHÙ HỢP VỚI MỌI NHU CẦU</a></h5>
-                           
-                        </div>
-                    </div>
-                    <div class="viewContainer">
-                        <div class="left-logo">
-                            <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin3.png') }}" alt=""></a>
-                           
-                        </div>
-                        <div class="right-title font-pri-bold font16" >
-                            <h5><a href="#">New Morning - lựa chọn cho dòng xe đô thị 2021</a></h5>
-                           
-                        </div>
-                    </div>
-                    <div class="viewContainer">
-                        <div class="left-logo">
-                            <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt=""></a>
-                           
-                        </div>
-                        <div class="right-title font-pri-bold font16" >
-                            <h5><a href="#">New Morning - lựa chọn cho dòng xe đô thị 2021</a></h5>
-                           
-                        </div>
-                    </div>
-                </div> --}}
-                <div class="scollbar-wrap-home font18">
+
+                <div class="scollbar-wrap-home">
                     <div id="hours">
                         <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin3.png') }}" alt=""></a>
                         <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt=""></a>
@@ -346,7 +282,7 @@
     <div class="shareholder-home-top" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out">
         <h2 class="font-pri-bold font60 color-gray">Quan hệ cổ đông</h2>
         <div class="menu-tab-right">
-            <ul class="nav nav-pills font-pri-bold color-gray font27" role="tablist">
+            <ul class="nav nav-pills font-pri-bold color-gray" role="tablist">
                 <li class="nav-item">
                     <a class="nav-link active" data-toggle="pill" href="#shareholder1">Công bố thông tin</a>
                 </li>
@@ -362,7 +298,7 @@
             </ul>
             <div class="link-views-all font-pri-bold font18 color-gray">
                 <a href="" class="color-gray">
-                    Xem tất cả <span><i class="fas fa-arrow-right font17"></i></span>
+                    Xem tất cả <span><i class="fas fa-arrow-right font15"></i></span>
                 </a>
             </div>
         </div>

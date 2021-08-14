@@ -85,6 +85,10 @@
     .mechandical-overview {
             &__title{
                 font-size: 45px;
+               
+                @media only screen and (max-width: 400px){
+                    font-size: 35px;
+                }
             }
             &__boxfield {
                 
@@ -126,11 +130,16 @@
                         margin-top: 6%;
                         line-height: 1.2;
                         margin-bottom: 5%;
+                        font-size: 28px;
+                        @media only screen and (max-width: 992px){
+                            font-size: 25px;
+                           
+                        }
                         @media only screen and (max-width: 600px){
                             font-size: 18px;
                            
                         }
-                        @media only screen and (max-width: 600px){
+                        @media only screen and (max-width: 400px){
                             font-size: 15px;
                            
                         }

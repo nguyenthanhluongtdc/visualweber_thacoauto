@@ -8,19 +8,32 @@
                 display: flex;
                 margin:  0 auto;
                 .news{
-                    font-size: 28px;
+                    font-size: 40px;
+                    @media only screen and (max-width: 992px){
+                        font-size: 25px;
+                       
+                    }
                     @media only screen and (max-width: 600px){
                         font-size: 15px;
+                       
+                    }
+                    @media only screen and (max-width: 400px){
+                        font-size: 9px;
                        
                     }
                     display: flex;
                     margin:  0 auto;
                   li{
-                      margin-left: 12px;
-                      @media only screen and (max-width: 600px){
-                       margin-left: 3px;
+                      margin-left: 20px;
+                    @media only screen and (max-width: 600px){
+                       margin-left: 0;
                        
-                        }
+                    }
+                  
+                    @media only screen and (max-width: 992px){
+                        margin-left: 3px;
+                        
+                     }
                   }
                 }    
         
@@ -30,10 +43,10 @@
         .title{
             font-size: 45px;
             @media only screen and (max-width: 600px){
-                font-size: 35px;
+                font-size: 40px;
              }
-             @media only screen and (max-width: 600px){
-                font-size: 25px;
+             @media only screen and (max-width: 400px){
+                font-size: 35px;
                
             }
         }
@@ -44,11 +57,15 @@
         }
         .content { 
             margin-top: 3%;
-            @media only screen and (max-width: 600px){
-                font-size: 12px;
-               
+            h3{
+                font-size: 35px;
+                @media only screen and (max-width: 992px){
+                    font-size: 30px;
+                }
+                @media only screen and (max-width: 600px){
+                    font-size: 15px;
+                }
             }
-           
             img {
                 max-width: 100%;
             }
@@ -67,6 +84,15 @@
                                 width: 20%;
                                 height: 20%;
                                 position: absolute;
+                                @media only screen and (max-width: 992px){
+                                    width: 20%;
+                                    height: 20%;
+                                }
+                                
+                                @media only screen and (max-width: 600px){
+                                    width: 25%;
+                                    height: 25%;
+                                }
                                 // @include width(200);
                                 // @include height(196);
                                 >div {
@@ -75,17 +101,33 @@
                                 }
                                 .day,
                                 .month {
-                                    font-size: 30px;
+                                    font-size: 40px;
                                     text-transform: uppercase;
                                     font-weight: bold;
+                                   line-height: 32px;
                                     @media(max-width : 700px){
                                         font-size: 25px;
+                                    }
+                                    @media only screen and (max-width: 992px){
+                                        font-size: 35px;
+                                        line-height: 27px;
+                                    }
+                                    
+                                    @media only screen and (max-width: 600px){
+                                        font-size: 18px;
+                                        line-height: 18px;
                                     }
                                 }
                                 .year {
                                     font-size: 20px;
                                     @media(max-width : 700px){
                                         font-size: 15px;
+                                    }
+                                    @media only screen and (max-width: 992px){
+                                        font-size: 18px;
+                                    }
+                                    @media only screen and (max-width: 600px){
+                                        font-size: 10px;
                                     }
                                 }
                             }

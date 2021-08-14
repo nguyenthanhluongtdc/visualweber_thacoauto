@@ -70,22 +70,22 @@
                <div class="boxfield-item col-md-5 col-sm-5 col-5">
                     <img src="{{ Theme::asset()->url('images/mechandical/giacong-khuonmau.png') }}" alt="">
                     
-                    <p class="font40 font-pri-bold name">GIA CÔNG CƠ KHÍ
+                    <p class="font40 font-pri-bold name">GIA CÔNG CƠ KHÍ <br>
                         KHUÔN MẪU</p>
                 </div>
                 <div class="boxfield-item col-md-5 col-sm-5 col-5">
                     <img src="{{ Theme::asset()->url('images/mechandical/cokhi-oto.png') }}" alt="">
-                    <p class="font40 font-pri-bold name">CƠ KHÍ<br>
+                    <p class="font40 font-pri-bold name">CƠ KHÍ
                         Ô TÔ</p>
                 </div>
                 <div class="boxfield-item col-md-5 col-sm-5 col-5">
                     <img src="{{ Theme::asset()->url('images/mechandical/cokhi-xaydung.png') }}" alt="">
-                    <p class="font40 font-pri-bold name">CƠ KHÍ <br>
+                    <p class="font40 font-pri-bold name">CƠ KHÍ
                         XÂY DỰNG</p>
                 </div>
                 <div class="boxfield-item col-md-5 col-sm-5 col-5">
                     <img src="{{ Theme::asset()->url('images/mechandical/thietbi-congnghiep.png') }}" alt="">
-                    <p class="font40 font-pri-bold name">THIẾT BỊ<br>
+                    <p class="font40 font-pri-bold name">THIẾT BỊ
                         CÔNG NGHIỆP</p>
                 </div>
                 <div class="boxfield-item col-md-5 col-sm-5 col-5">

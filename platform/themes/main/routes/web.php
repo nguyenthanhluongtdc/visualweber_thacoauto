@@ -46,6 +46,10 @@ Route::group(['namespace' => 'Theme\Thaco\Http\Controllers', 'middleware' => ['w
             return Theme::scope('pages/business/car-selection/index')->render();
         });
 
+        Route::get('/he-thong-phan-phoi-chi-tiet', function () {
+            return Theme::scope('pages/distribution-system/detail')->render();
+        });
+
         //end demo
 
         Route::get('ajax/search', 'ThacoController@getSearch')->name('public.ajax.search');

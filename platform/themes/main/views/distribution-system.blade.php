@@ -1,7 +1,7 @@
 <div class="distribution">
     <div class="provincial-company">
         <div class="container-remake">
-            <h2 class="title font60">công ty tỉnh thành</h2>
+            <h1 class="title font60">công ty tỉnh thành</h1>
             <p class="description font20 mt-20">THACO là doanh nghiệp hàng đầu và có quy mô lớn nhất tại Việt Nam về lĩnh vực sản xuất lắp ráp ô tô, với chuỗi giá trị từ nghiên cứu phát triển sản phẩm (R&D), sản xuất linh kiện phụ tùng, lắp ráp ô tô, đến giao nhận vận chuyển và phân phối, bán lẻ. Sản phẩm có đầy đủ các chủng loại: xe tải, xe bus, xe du lịch, xe chuyên dụng và đầy đủ phân khúc từ trung cấp đến cao cấp với doanh số và thị phần luôn dẫn đầu thị trường Việt Nam trong nhiều năm qua.</p>
             <div class="select-list mt-40 mb-40">
                 <form action="">
@@ -39,7 +39,7 @@
                                     </div>
                                 </div>
                                 <div class="logo-wrap__right">
-                                    <a href="">Xem chi tiết <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                    <a href="/he-thong-phan-phoi-chi-tiet">Xem chi tiết <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -62,7 +62,7 @@
                                     </div>
                                 </div>
                                 <div class="logo-wrap__right">
-                                    <a href="">Xem chi tiết <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                    <a href="/he-thong-phan-phoi-chi-tiet">Xem chi tiết <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -85,7 +85,7 @@
                                     </div>
                                 </div>
                                 <div class="logo-wrap__right">
-                                    <a href="">Xem chi tiết <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                    <a href="/he-thong-phan-phoi-chi-tiet">Xem chi tiết <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -108,7 +108,7 @@
                                     </div>
                                 </div>
                                 <div class="logo-wrap__right">
-                                    <a href="">Xem chi tiết <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                    <a href="/he-thong-phan-phoi-chi-tiet">Xem chi tiết <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -122,7 +122,7 @@
     </div>
     <div class="activity-news">
         <div class="container-remake">
-            <h2 class="title font60 mb-20">tin tức hoạt động</h2>
+            <h1 class="title font60 mb-20">tin tức hoạt động</h1>
             <div class="activity-news__wrap">
                 <div class="activity-news__item">
                     <div class="img-container">
@@ -206,7 +206,7 @@
     <div class="library mb-60">
         <div class="container-remake">
             <div class="library-header">
-                <h2 class="title font60">thư viện</h2>
+                <h1 class="title font60">thư viện</h1>
                 <div class="library-button">
                     <img class="customPrevBtn" src="{{Theme::asset()->url('images/distribution/icon_left.png')}}" alt="">
                     <img class="customNextBtn" src="{{Theme::asset()->url('images/distribution/icon_right.png')}}" alt="">

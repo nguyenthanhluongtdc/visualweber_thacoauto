@@ -1,0 +1,180 @@
+.distribution-detail {
+    margin-top: 55px;
+    @media(max-width : 1440px){
+        margin-top: 50px;
+    }
+    @media(max-width : 1199px){
+        margin-top: 50px;
+    }
+    h1.title {
+        font-family: $font-my-bold;
+        text-transform: uppercase;
+        margin-bottom: 75px;
+    }
+    h2.showroom-name {
+        font-family: $font-primary-bold;
+        text-transform: uppercase;
+        color: #1e5499;
+    }
+    h3.title {
+        font-family: $font-primary-bold;
+        color: #1e5499;
+    }
+    .thacoauto-provincial {
+        &__wrap {
+            display: flex;
+            justify-content: space-between;
+            .left {
+                width: 50%;
+                h3.title {
+                    text-transform: capitalize;
+                }
+                .description {
+                    margin-top: 20px;
+                    font-family: $font-primary;
+                    color: #2f2f2f;
+                }
+                ul {
+                    margin-top: 20px;
+                    li {
+                        display: flex;
+                        align-items: center;
+                        img {
+                            width: 22px;
+                            margin-right: 30px;
+                        }
+                        p {
+                            font-family: $font-primary;
+                            color: #2f2f2f;
+                        }
+                    }
+                }
+            }
+            .right {
+                width: 46%;
+                img {
+                    margin-top: 20px;
+                    width: 100%;
+                    height: 365px;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+    .business-activities {
+        h1.title {
+            margin-bottom: unset;
+        }
+        .vehicle-category__item {
+            margin-top: 30px;
+            border-bottom: 1px solid #9a9a9a;
+            &:last-child {
+                border-bottom: unset;
+            }
+            ul {
+                display: flex;
+                padding: 25px 0px;
+                li {
+                    display: flex; 
+                    align-items: center;
+                    margin-right: 85px;
+                    &:last-child {
+                        margin-right: unset;
+                    }
+                }
+            }
+        }
+        .showroom-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 25px;
+            height: 405px;
+            border: 1px solid #c6d6f1;
+            margin-bottom: 25px;
+            &:last-child {
+                margin-bottom: unset;
+            }
+            .left {
+                width: 42%;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .right {
+                width: 55%;
+                position: relative;
+                .showroom-name {
+                    margin: 20px 0px 30px 0px;
+                }
+                ul.showroom-info {
+                    margin-left: 1em;
+                    width: 45%;
+                    li {
+                        display: inline-flex;
+                        margin-bottom: 10px;
+                        &::before {
+                            content: "\2022";
+                            color: #1e5499;
+                            display: inline-block; 
+                            width: 1.5rem;
+                            margin-left: -1rem;
+                            margin-top: 0.3rem;
+                        }
+                        p {
+                            font-family: $font-primary;
+                            color: #1e5499;
+                            span {
+                                font-family: $font-my-bold;
+                            }
+                        }
+                    }
+                }
+                .online-service-booking {
+                    background-color: #1e5499;
+                    color: #ffffff;
+                    text-transform: uppercase;
+                    font-family: $font-primary-bold;
+                    border: unset;
+                    padding: 10px 0px;
+                    width: 290px;
+                    text-align: center;
+                    outline: none;
+                    border-top-left-radius: 23px;
+                    border-bottom-left-radius: 23px;
+                    border-top-right-radius: 23px;
+                    border-bottom-right-radius: 23px;
+                    position: absolute;
+                    bottom: 0%;
+                    left: 0%;
+                }
+                .logo-container {
+                    position: absolute;
+                    top: 2%;
+                    right: 5%;
+                }
+                .category-container {
+                    position: absolute;
+                    bottom: 0%;
+                    right: 5%;
+                    ul {
+                        display: flex;
+                        align-items: flex-end;
+                        li {
+                            margin-right: 50px;
+                            &:last-child {
+                                margin-right: unset;
+                            }
+                            p {
+                                margin-top: 5px;
+                                font-family: $font-primary-bold;
+                                color: #3c3c3c;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

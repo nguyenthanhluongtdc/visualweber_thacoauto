@@ -457,6 +457,19 @@ a:hover {
     }
 }
 
+.mt-55 {
+    margin-top: 55px;
+    @media (max-width: 1680px) {
+        margin-top: #{calculatorPixel(55,1680)}px;
+    }
+    @media (max-width: 1360px) {
+        margin-top: #{calculatorPixel(55,1360)}px;
+    }
+    @media (max-width: 992px) {
+        margin-top: #{calculatorPixel(55,992)}px;
+    }
+}
+
 .mt-40 {
     margin-top: 40px;
     @media (max-width: 1680px) {

@@ -19,7 +19,6 @@ class PostRepository extends BlogPostRepository
         $data = $this->model
             ->where([
                 'posts.status'      => BaseStatusEnum::PUBLISHED,
-                'posts.is_featured' => 1,
             ])
             ->join('post_categories', 'post_categories.post_id', '=', 'posts.id')
             ->join('categories', 'post_categories.category_id', '=', 'categories.id')
@@ -28,6 +27,7 @@ class PostRepository extends BlogPostRepository
             ->limit($limit)
             ->distinct()
             ->with(array_merge(['slugable'], $with))
+            ->orderBy('posts.is_featured', 'desc')
             ->orderBy('posts.created_at', 'desc');
 
         return $this->applyBeforeExecuteQuery($data)->get();

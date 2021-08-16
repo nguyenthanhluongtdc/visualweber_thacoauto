@@ -62,9 +62,13 @@
 <div class="section-news-home container-remake">
     <h2 class="font-pri-bold font60 color-gray">TIN TỨC VÀ SỰ KIỆN</h2>
     <div class="content">
-        <div class="left" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
-            @if (!empty(get_featured_posts_by_category(15, 4)))
-                @foreach (get_featured_posts_by_category(15, 4) as $post)
+        <div class="left left-desktop" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
+            @php
+                $postDesktop = get_featured_posts_by_category(15, 4);
+                $postMobile = get_featured_posts_by_category(15, 2);
+            @endphp
+            @if (!empty($postDesktop))
+                @foreach ($postDesktop as $post)
                     @if($loop->first)
                     <div class="left-top">
                         <div class="frame">
@@ -112,7 +116,30 @@
             <div class="avatar-news">
                 <img src="{{ Theme::asset()->url('images/main/avt.png') }}" alt="avatar">
             </div>
-
+        </div>
+        <div class="left left-mobile">
+            @if (!empty($postMobile))
+            <div class="item-img-main">
+                <a href="{{$postMobile[0]->url}}"><img src="{{ get_object_image($postMobile[0]->image) }}" alt=""></a>
+            </div>
+                @foreach ($postMobile as $post)
+                    <div class="item">
+                        <div class="item-content">
+                            <h3 class="title font-pri-bold font-mb-25 text-uppercase">
+                                <a href="{{$post->url}}">{{$post->name}}</a>
+                                
+                            </h3>
+                            <p class="desc font-pri font-mb-25">
+                                {{Str::words($post->description,20)}}
+                            </p>
+                            <div class="city-day font-pri font-mb-25">
+                                <span class="city">Hà Nội</span>
+                                <span class="day">{{date_format($post->created_at,"d-m-Y")}}</span>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            @endif
         </div>
         <div class="right">
             @if (!empty(get_featured_posts_by_category(22, 1)))

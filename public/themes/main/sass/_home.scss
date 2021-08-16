@@ -154,6 +154,7 @@
     .content {
         display: flex;
         justify-content: space-between;
+        
         .left {
             width: 70%;
             display: flex;
@@ -386,6 +387,9 @@
                                 transform: translate(-50%, -50%);
                                 position: absolute;
                                 width: 0;
+                                @media (max-width: 576px){
+                                    border-width: 4.1vw 0 4.1vw 7.2vw;
+                                }
                             }
 
                             &:hover {
@@ -414,48 +418,75 @@
                 }
             }
         }
-
+        .left-mobile{
+            display: none;
+        }
          //mobile 
         @media (max-width: 1080px) {
             flex-wrap: wrap;
-
-            .left {
+            .left-desktop{
+                display: none;
+                
+            }
+            .left-mobile{
+                display: flex;
                 width: 100%;
-                .item-img-main {
+                .item-img-main{
                     width: 100%;
-                }
-                .avatar-news {
-                    display: none;
-                }
-                .item:nth-child(2) {
-                    @include marginTop(40, "+");
-                    .title {
-                        font-size: 16px;
+                    a{
+                        img{
+                            width: 100%;
+                        }
                     }
                 }
-                .item {
-                    flex-wrap: wrap;
-                    
-                    .item-content {
-                        width: 100%;
+                .item{
+                    margin-top: 2%;
+                    width: 40%;
+                    @media (max-width: 768px){
+                        width: 42%;
                     }
-
-                    @media (max-width: 768px) {
-                        width: 50% !important;
-                        padding-left: 15px;
-                        padding-right: 15px;
+                    @media (max-width: 480px){
+                        width: 45%;
                     }
-                }
-
-                @media (max-width: 768px) {
-                    // margin-left: -15px;
-                    // margin-right: -15px;
+                    @media (max-width: 420px){
+                        width: 47%;
+                    }
+                    .item-content{
+                        h3{
+                            overflow: unset;
+                            height: fit-content;
+                            display: block;
+                        }
+                        .desc{
+                            margin-bottom: 10%;
+                            @media (max-width: 768px){
+                                margin-bottom: 13%;
+                            }
+                            @media (max-width: 480px){
+                                margin-bottom: 16%;
+                            }
+                        }
+                        .city-day{
+                            .city{
+                                padding-right: 15px;
+                                margin-right: 8px;
+                                @media (max-width: 480px){
+                                    padding-right: 15px;
+                                    margin-right: 8px;
+                                }
+                                @media (max-width: 420px){
+                                    padding-right: 10px;
+                                    margin-right: 5px;
+                                }
+                            }
+                        }
+                    }
                 }
             }
             .right {
                 width: 100%;
                 flex-direction: inherit;
-                
+                flex: 1 100%;
                 @include mobileMarginTop(75, "+");
                 @include mobileMarginX(20, "-");
                 @include mobileHeight(500);

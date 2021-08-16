@@ -5,19 +5,19 @@
                 <div class="row">
            
                       <div class="tab col-xl-3 col-lg-6 col-md-6 col-6 item-right">
-                        <button class="tablinks font25 text-uppercase" onclick="openTabs(event, 'kinhoto')" id="defaultOpen">kính ô tô</button>
-                        <button class="tablinks font25 text-uppercase" onclick="openTabs(event, 'nhipoto')">nhíp ô tô</button>
-                        <button class="tablinks font25 text-uppercase" onclick="openTabs(event, 'linhkienoto')">linh kiện ô tô</button>
-                        <button class="tablinks font25 text-uppercase" onclick="openTabs(event, 'phutungoto')">phụ tùng ô tô</button>
-                        <button class="tablinks font25 text-uppercase" onclick="openTabs(event, 'phutungdien')">phụ tùng điện</button>
-                        <button class="tablinks font25 text-uppercase" onclick="openTabs(event, 'linhkiennoithat')">linh kiện nội thất</button>
+                        <button class="tablink font25 text-uppercase" onclick="openTabs(event, 'kinhoto')" id="defaultOpen">kính ô tô</button>
+                        <button class="tablink font25 text-uppercase" onclick="openTabs(event, 'nhipoto')">nhíp ô tô</button>
+                        <button class="tablink font25 text-uppercase" onclick="openTabs(event, 'linhkienoto')">linh kiện ô tô</button>
+                        <button class="tablink font25 text-uppercase" onclick="openTabs(event, 'phutungoto')">phụ tùng ô tô</button>
+                        <button class="tablink font25 text-uppercase" onclick="openTabs(event, 'phutungdien')">phụ tùng điện</button>
+                        <button class="tablink font25 text-uppercase" onclick="openTabs(event, 'linhkiennoithat')">linh kiện nội thất</button>
                     </div>      
     
             
             
                   <div class="col-xl-6 col-lg-12 col-md-12 col-12 item-top p-0">
                     
-                        <div id="kinhoto" class="tabcontent">
+                        <div id="kinhoto" class="tabcontents">
                             <img src="{{ Theme::asset()->url('images/support-industry/kinhoto.jpg') }}" alt="" class="mb-2">
                             <div class="content-bottom p-2">
                                 <h4 class="font20 mb-2 text-uppercase"> NHÀ MÁY SẢN XUẤT KÍNH Ô TÔ</h4>
@@ -26,7 +26,7 @@
                             </div>
                         </div>
             
-                        <div id="nhipoto" class="tabcontent">
+                        <div id="nhipoto" class="tabcontents">
                             <img src="{{ Theme::asset()->url('images/support-industry/kinhoto.jpg') }}" alt="" class="mb-2">
                                             <div class="content-bottom p-2">
                                                 <h4 class="font20 mb-2 text-uppercase"> NHÀ MÁY SẢN XUẤT NHÍP Ô TÔ</h4>
@@ -35,7 +35,7 @@
                                             </div>
                         </div>
             
-                        <div id="linhkienoto" class="tabcontent">
+                        <div id="linhkienoto" class="tabcontents">
                             <img src="{{ Theme::asset()->url('images/support-industry/kinhoto.jpg') }}" alt="" class="mb-2">
                                             <div class="content-bottom p-2">
                                                 <h4 class="font20 mb-2 text-uppercase"> NHÀ MÁY SẢN XUẤT LINH KIỆN Ô TÔ</h4>
@@ -43,7 +43,7 @@
                                                 <div class="read-more font18"><a href="">Xem chi tiết</a></div>
                                             </div>
                         </div>
-                        <div id="phutungoto" class="tabcontent">
+                        <div id="phutungoto" class="tabcontents">
                             <img src="{{ Theme::asset()->url('images/support-industry/kinhoto.jpg') }}" alt="" class="mb-2">
                             <div class="content-bottom p-2">
                                 <h4 class="font20 mb-2 text-uppercase"> NHÀ MÁY SẢN XUẤT PHỤ TÙNG Ô TÔ</h4>
@@ -52,7 +52,7 @@
                             </div>
                         </div>
             
-                        <div id="phutungdien" class="tabcontent">
+                        <div id="phutungdien" class="tabcontents">
                             <img src="{{ Theme::asset()->url('images/support-industry/kinhoto.jpg') }}" alt="" class="mb-2">
                             <div class="content-bottom p-2">
                                 <h4 class="font20 mb-2 text-uppercase"> NHÀ MÁY SẢN XUẤT PHỤ TÙNG ĐIỆN</h4>
@@ -61,7 +61,7 @@
                             </div>
                         </div>
             
-                        <div id="linhkiennoithat" class="tabcontent">
+                        <div id="linhkiennoithat" class="tabcontents">
                             <img src="{{ Theme::asset()->url('images/support-industry/kinhoto.jpg') }}" alt="" class="mb-2">
                             <div class="content-bottom p-2">
                                 <h4 class="font20 mb-2 text-uppercase"> NHÀ MÁY SẢN XUẤT LINH KIỆN NỘI THẤT</h4>
@@ -69,7 +69,7 @@
                                 <div class="read-more font18"><a href="">Xem chi tiết</a></div>
                             </div>
                         </div>
-                        <div id="maylanh" class="tabcontent">
+                        <div id="maylanh" class="tabcontents">
                             <img src="{{ Theme::asset()->url('images/support-industry/kinhoto.jpg') }}" alt="" class="mb-2">
                             <div class="content-bottom p-2">
                                 <h4 class="font20 mb-2 text-uppercase"> NHÀ MÁY SẢN XUẤT MÁY LẠNH XE TẢI, BUS</h4>
@@ -77,7 +77,7 @@
                                 <div class="read-more font18"><a href="">Xem chi tiết</a></div>
                             </div>
                         </div>
-                        <div id="dungdich" class="tabcontent">
+                        <div id="dungdich" class="tabcontents">
                             <img src="{{ Theme::asset()->url('images/support-industry/kinhoto.jpg') }}" alt="" class="mb-2">
                             <div class="content-bottom p-2">
                                 <h4 class="font20 mb-2 text-uppercase"> NHÀ MÁY SẢN XUẤT KEO & DUNG DỊCH</h4>
@@ -85,7 +85,7 @@
                                 <div class="read-more font18"><a href="">Xem chi tiết</a></div>
                             </div>
                         </div>
-                        <div id="composite" class="tabcontent">
+                        <div id="composite" class="tabcontents">
                             <img src="{{ Theme::asset()->url('images/support-industry/kinhoto.jpg') }}" alt="" class="mb-2">
                             <div class="content-bottom p-2">
                                 <h4 class="font20 mb-2 text-uppercase"> NHÀ MÁY SẢN XUẤT LINH KIỆN COMPOSITE</h4>
@@ -93,7 +93,7 @@
                                 <div class="read-more font18"><a href="">Xem chi tiết</a></div>
                             </div>
                         </div>
-                        <div id="xedulich" class="tabcontent">
+                        <div id="xedulich" class="tabcontents">
                             <img src="{{ Theme::asset()->url('images/support-industry/kinhoto.jpg') }}" alt="" class="mb-2">
                             <div class="content-bottom p-2">
                                 <h4 class="font20 mb-2 text-uppercase"> NHÀ MÁY SẢN XUẤT MÁY LẠNH XE DU LỊCH</h4>
@@ -101,7 +101,7 @@
                                 <div class="read-more font18"><a href="">Xem chi tiết</a></div>
                             </div>
                         </div>
-                        <div id="vooto" class="tabcontent">
+                        <div id="vooto" class="tabcontents">
                             <img src="{{ Theme::asset()->url('images/support-industry/kinhoto.jpg') }}" alt="" class="mb-2">
                             <div class="content-bottom p-2">
                                 <h4 class="font20 mb-2 text-uppercase"> NHÀ MÁY SẢN XUẤT THÂN VỎ Ô TÔ</h4>
@@ -109,7 +109,7 @@
                                 <div class="read-more font18"><a href="">Xem chi tiết</a></div>
                             </div>
                         </div>
-                        <div id="gangtay" class="tabcontent">
+                        <div id="gangtay" class="tabcontents">
                             <img src="{{ Theme::asset()->url('images/support-industry/kinhoto.jpg') }}" alt="" class="mb-2">
                                 <div class="content-bottom p-2">
                                     <h4 class="font20 mb-2 text-uppercase"> NHÀ MÁY SẢN XUẤT GĂNG TAY</h4>
@@ -124,12 +124,12 @@
             
                   
                       <div class="tab col-xl-3 col-lg-6 col-md-6 col-6 item-left">
-                        <button class="font25 text-uppercase tablinks" onclick="openTabs(event, 'maylanh')" id="defaultOpen">máy lạnh xe tải, bus</button>
-                        <button class="font25 text-uppercase tablinks" onclick="openTabs(event, 'dungdich')">keo & dung dịch</button>
-                        <button class="font25 text-uppercase tablinks" onclick="openTabs(event, 'composite')">linh kiện composite</button>
-                        <button class="font25 text-uppercase tablinks" onclick="openTabs(event, 'xedulich')">máy lạnh xe du lịch</button>
-                        <button class="font25 text-uppercase tablinks" onclick="openTabs(event, 'vooto')">thân vỏ ô tô</button>
-                        <button class="font25 text-uppercase tablinks" onclick="openTabs(event, 'gangtay')">găng tay</button>
+                        <button class="font25 text-uppercase tablink" onclick="openTabs(event, 'maylanh')" id="defaultOpen">máy lạnh xe tải, bus</button>
+                        <button class="font25 text-uppercase tablink" onclick="openTabs(event, 'dungdich')">keo & dung dịch</button>
+                        <button class="font25 text-uppercase tablink" onclick="openTabs(event, 'composite')">linh kiện composite</button>
+                        <button class="font25 text-uppercase tablink" onclick="openTabs(event, 'xedulich')">máy lạnh xe du lịch</button>
+                        <button class="font25 text-uppercase tablink" onclick="openTabs(event, 'vooto')">thân vỏ ô tô</button>
+                        <button class="font25 text-uppercase tablink" onclick="openTabs(event, 'gangtay')">găng tay</button>
                 </div>
                   
                 </div>  
@@ -288,3 +288,24 @@
     </div>
     
 </div> --}}
+
+<script>
+    function openTabs(evt, tabsName) {
+    var i, tabcontent, tablinks;
+    
+    tabcontent = document.getElementsByClassName("tabcontents");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabsName).style.display = "block";
+    evt.currentTarget.className += " active";
+    
+  }
+  document.getElementById("defaultOpen").click();
+
+
+</script>

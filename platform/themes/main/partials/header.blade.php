@@ -85,7 +85,7 @@
     </header>
 
     <div id="mobileNav">
-        <div class="container-remake h-100">
+        <div class="container-remake h-100 font-18">
             <div class="menu-main">
                 <div class="logo">
                     <a href="{{ route('public.single') }}" class="page-logo">

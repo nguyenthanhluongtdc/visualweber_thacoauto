@@ -66,25 +66,20 @@
             @if (!empty(get_featured_posts_by_category(15, 4)))
                 @foreach (get_featured_posts_by_category(15, 4) as $post)
                     @if($loop->first)
-                    <div class="left-top">
-                        <div class="frame">
-                            <div class="item-img-main">
-                                <a href="{{$post->url}}"><img src="{{ get_object_image($post->image) }}" alt=""></a>
-                            </div>
-                
-                            <div class="item-main">
-                                <div class="item-content">
-                                    <h3 class="title font-pri-bold font30 text-uppercase">
-                                        <a href="{{$post->url}}">{{$post->name}}</a>
-                                    </h3>
-                                    <p class="desc font-pri font20">
-                                        {{Str::words($post->description,30)}}
-                                    </p>
-                                    <div class="city-day font-pri font20">
-                                        <span class="city">Hà Nội</span>
-                                        <span class="day">{{date_format($post->created_at,"d-m-Y")}}</span>
-                                    </div>
-                                </div>
+                    <div class="item-img-main">
+                        <a href="{{$post->url}}"><img src="{{ get_object_image($post->image) }}" alt=""></a>
+                    </div>
+                    <div class="item">
+                        <div class="item-content">
+                            <h3 class="title font-pri-bold font30 text-uppercase">
+                                <a href="{{$post->url}}">{{$post->name}}</a>
+                            </h3>
+                            <p class="desc font-pri font20">
+                                {{Str::words($post->description,30)}}
+                            </p>
+                            <div class="city-day font-pri font20">
+                                <span class="city">Hà Nội</span>
+                                <span class="day">{{date_format($post->created_at,"d-m-Y")}}</span>
                             </div>
                         </div>
                     </div>

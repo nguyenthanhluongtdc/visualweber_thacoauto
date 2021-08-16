@@ -371,6 +371,25 @@
             }
         }
 
+        @media (max-width: 1080px) {
+
+            .all-post-item{
+                flex-wrap: wrap;
+                .post-thumbnail-wrap{ 
+                    width: 100%;
+                } 
+                .post-content {
+                    width: 100%;
+                    background-color: #F3F3F3;
+                    @include mobilePaddingX(20);
+                    @include mobilePaddingY(20);
+                    h4 {
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+
         .page-pagination{
             ul{
                 li{
@@ -386,6 +405,7 @@
             }
         }
     }
+
     .list-post-new{
         width: 33%;
        .wrap{

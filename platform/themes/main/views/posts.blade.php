@@ -25,6 +25,7 @@
                     </div>
                 @endforeach
             @endif
+        </div>
         <div class="media-bottom">
             <div class="list-all-post">
                 <div class="list-all-post-wrap">
@@ -135,7 +136,6 @@
                        <li class="color">>></li>
                    </ul>
                 </div>
-    
             </div>
             <div class="list-post-new">
                 <div class="wrap">

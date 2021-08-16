@@ -387,6 +387,9 @@
                                 transform: translate(-50%, -50%);
                                 position: absolute;
                                 width: 0;
+                                @media (max-width: 576px){
+                                    border-width: 4.1vw 0 4.1vw 7.2vw;
+                                }
                             }
 
                             &:hover {

@@ -144,13 +144,13 @@
                         </div>
                         <div class="tab-pane fade" id="field_tab_content_8" role="tabpanel" aria-labelledby="list-home-list">
                             <div class="content-right">
-                                <div class="content-right__top">
+                                <div class="img">
                                     <img src="{{ Theme::asset()->url('images/manufacturing/assemble1.jpg') }}" alt="">
                                 </div>
                                
                                 <div class="content">
                                     <h3 class="title font50">
-                                        NHÀ MÁY THACOBUS
+                                        NHÀ MÁY THACO BUS
                                     </h3>
                                     <p class="desc font22 font-pri">Nhà máy Gia công và cung ứng phôi thép được thành lập vào năm 2009 với chức năng sản xuất các sản phẩm vật tư thép, kim loại màu nhằm cung cấp cho thị trường nội địa và xuất khẩu. Nhà máy có diện tích 5ha, tổng vốn đầu tư 201 tỷ đồng, công suất 255.000 tấn thép/năm.</p>
                                    <div class="read-more font18"><a href="">Xem chi tiết</a></div>
@@ -160,7 +160,7 @@
                         </div>
                         <div class="tab-pane fade" id="field_tab_content_9" role="tabpanel" aria-labelledby="list-home-list">
                             <div class="content-right">
-                                <div class="content-right__top">
+                                <div class="img">
                                     <img src="{{ Theme::asset()->url('images/manufacturing/assemble1.jpg') }}" alt="">
                                 </div>
                                
@@ -176,7 +176,7 @@
                         </div>
                         <div class="tab-pane fade" id="field_tab_content_10" role="tabpanel" aria-labelledby="list-home-list">
                             <div class="content-right">
-                                <div class="content-right__top">
+                                <div class="img">
                                     <img src="{{ Theme::asset()->url('images/manufacturing/assemble1.jpg') }}" alt="">
                                 </div>
                                
@@ -192,13 +192,13 @@
                         </div>
                         <div class="tab-pane fade" id="field_tab_content_11" role="tabpanel" aria-labelledby="list-home-list">
                             <div class="content-right">
-                                <div class="content-right__top">
+                                <div class="img">
                                     <img src="{{ Theme::asset()->url('images/manufacturing/assemble1.jpg') }}" alt="">
                                 </div>
                                
                                 <div class="content">
                                     <h3 class="title font50">
-                                        NHÀ MÁY THACO MAZDA
+                                        NHÀ MÁY THACO
                                     </h3>
                                     <p class="desc font22 font-pri">Nhà máy Gia công và cung ứng phôi thép được thành lập vào năm 2009 với chức năng sản xuất các sản phẩm vật tư thép, kim loại màu nhằm cung cấp cho thị trường nội địa và xuất khẩu. Nhà máy có diện tích 5ha, tổng vốn đầu tư 201 tỷ đồng, công suất 255.000 tấn thép/năm.</p>
                                    <div class="read-more font18"><a href="">Xem chi tiết</a></div>
@@ -208,7 +208,7 @@
                         </div>
                         <div class="tab-pane fade" id="field_tab_content_12" role="tabpanel" aria-labelledby="list-home-list">
                             <div class="content-right">
-                                <div class="content-right__top">
+                                <div class="img">
                                     <img src="{{ Theme::asset()->url('images/manufacturing/assemble1.jpg') }}" alt="">
                                 </div>
                                

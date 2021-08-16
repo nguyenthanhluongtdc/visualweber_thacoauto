@@ -663,6 +663,14 @@
             color: $color-primary;
         }
     }
+
+    &.hidden-desktop {
+        display: none;
+        @media(max-width: 1080px) {
+            display: block;
+            padding-bottom: 0;
+        }
+    }
 }
 // thông cáo báo chí 
 .list-newspapers{
@@ -742,7 +750,7 @@
             }
             .tags{
                 display: flex;
-               
+                align-items: flex-end;
                 .name-tag{
                     font-size: 18px;
                     margin-right: 10px;
@@ -758,7 +766,7 @@
                         text-align: center;
                         padding: 2%;
                         margin-right: 3%;
-                        margin-bottom: 3%;
+                        margin-top: 3%;
                         a{
                             color: #2e3a41;
                             font-size: 13px;
@@ -785,7 +793,6 @@
 
                 .tags {
                     @include mobileMarginTop(15, "+");
-                    align-items: flex-end;
 
                     .name-tag {
                         margin-right: 25px;
@@ -877,24 +884,8 @@
                 p.desc{
                     text-align: justify;
                     flex: 1;
-                    @media(max-width : 1640px){
-                        height: 75px;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        -webkit-line-clamp: 4;
-                        display: -webkit-box;
-                        -webkit-box-orient: vertical;
-                        margin-bottom: 70px;
-                    }
-                    @media(max-width : 1366px){
-                        height: 75px;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        -webkit-line-clamp: 3;
-                        display: -webkit-box;
-                        -webkit-box-orient: vertical;
-                        margin-bottom: 66px;
-                    }
+                    @include split_str(3);
+                    @include marginBottom(70, "+");
                 }
                 .view-detail{
                     color: #2e3a41;
@@ -902,8 +893,63 @@
                         margin-left: 10px;
                     }
                 }
+
+                .size-dowload{
+                    margin: 15px 0;
+                    display: flex;
+                    align-items: center;
+                    display: none;
+                    span.left{
+                        margin-right: 25px;
+                    }
+                    span a{
+                        background: $color-primary;
+                        color: #fff;
+                        padding: 7px 10px 5px;
+                        font-size: 13px;
+                        border-radius: 3px;
+                    }
+                }
+
+                @media (max-width: 1080px) {
+                    .view-detail {
+                        display: none;
+                    }
+                    .size-dowload {
+                        display: block;
+                    }
+                }
             }
 
+        }
+
+        @media (max-width: 1080px) {
+            flex-wrap: wrap;
+            @include mobileMarginTop(35, "-");
+            @include mobileMarginBottom(35, "-");
+
+            .item {
+                width: 100%;
+                @include mobilePaddingY(35);
+
+                &:first-child {
+                    @include mobileMarginTop(35, "+");
+                }
+
+                .item-content {
+                    @include mobilePaddingY(35);
+                    @include mobilePaddingX(47);
+
+                    p.desc {
+                        @include mobileMarginBottom(32, "+");
+                    }
+
+                    p.day {
+                        margin-top: 15px;
+                        margin-bottom: 15px;
+                    }
+                }
+            }
         }
     }
 
@@ -913,6 +959,11 @@
         margin-top: 50px;
         justify-content: space-between;
         flex-wrap: wrap;
+
+        @media (max-width: 1080px) {
+            display: none;
+        }
+
         .news-thaco-item{
             width: 40%;
             .mid{
@@ -957,6 +1008,12 @@
         font-family: $font-my-bold;
         span:last-child{
             margin-left: 0.3%;
+        }
+
+        &.hidden {
+            @media(max-width: 1080px) {
+                display: none;
+            }
         }
     }
     #loadMore:hover {

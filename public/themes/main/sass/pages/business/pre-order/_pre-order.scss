@@ -113,6 +113,7 @@
                     }
                     
                 }
+                
                 .provinces-select2{
                     width: 48%;
                     height: 2.2vw;
@@ -389,6 +390,7 @@
             }
             .select-deposit{
                 margin: 3% 0;
+               
                 &__title{
                     margin-bottom: 3%;
                     @media only screen and (max-width: 1080px){
@@ -540,6 +542,24 @@
                         }
                     }
                 }
+                .text{
+                  @media only screen and (max-width: 1080px){
+               
+                    font-family: $font-cond;
+                    font-weight: bold;
+                    font-size: 28px;
+                  }
+                  @media only screen and (max-width: 767px){
+               
+                   
+                    font-size: 20px;
+                  }
+                  @media only screen and (max-width: 600px){
+               
+                    
+                    font-size: 15px;
+                  }
+                }
                 &__title{
                     margin: 3.5% 0;
                     color: #2d2d2d;
@@ -588,10 +608,40 @@
             .deposit-price{
                 margin: 3.5% 0 4.5%;
                 &__title{
-
+                  @media only screen and (max-width: 1080px){
+               
+                    font-family: $font-cond;
+                    font-weight: bold;
+                    font-size: 28px;
+                  }
+                  @media only screen and (max-width: 767px){
+               
+                   
+                    font-size: 20px;
+                  }
+                  @media only screen and (max-width: 600px){
+               
+                    
+                    font-size: 15px;
+                  }
                 }
                 &__price{
                     color: #fe2121;
+                    @media only screen and (max-width: 1080px){
+               
+                     
+                      font-size: 28px;
+                    }
+                    @media only screen and (max-width: 767px){
+                 
+                     
+                      font-size: 20px;
+                    }
+                    @media only screen and (max-width: 600px){
+                 
+                      
+                      font-size: 15px;
+                    }
                 }
             }
             
@@ -617,7 +667,7 @@
                 }
                 @media only screen and (max-width: 767px){
                  
-                  font-size: 12px;
+                  font-size: 15px;
                 }
                 a{
                     color: white;

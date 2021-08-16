@@ -148,11 +148,11 @@
                             <img src="{{Theme::asset()->url('images/business/brand-detail/car-detail.png')}}" alt="">
                         </div>
                     </div>
-                    <h3 class="car-selected__title font15 font-pri">KIA OPTIMA 2.0 GAT LUXURY</h3>
+                    <h3 class="car-selected__title font15 font-pri text">KIA OPTIMA 2.0 GAT LUXURY</h3>
                     <div class="gray-line"></div>
                     <h3 class="car-selected__title font15 font-pri">MÀU: Kia Optima Trắng</h3>
                     <div class="gray-line"></div>
-                    <h3 class="car-selected__title font15 font-pri">Thông số kỹ thuật</h3>
+                    <h3 class="car-selected__title font15 font-pri text">Thông số kỹ thuật</h3>
                     <ul class="specifications__list">
                         <li class="specifications__item">
                             <span class="specifications__name font15 font-pri">Kích thước tổng thể (DxRxC)</span>

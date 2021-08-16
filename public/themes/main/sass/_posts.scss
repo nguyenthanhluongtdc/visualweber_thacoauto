@@ -666,6 +666,7 @@
 
     &.hidden-desktop {
         display: none;
+        @include mobilePaddingTop(60);
         @media(max-width: 1080px) {
             display: block;
             padding-bottom: 0;
@@ -827,24 +828,12 @@
 
 // bản tin thaco auto 
 .news-thaco-content{
-    padding-top: 60px;
-    padding-bottom: 100px;
-    @media(max-width : 1680px){
-        padding-top: 50px;
-        padding-bottom: 80px;
-    }
-    @media(max-width : 1440px){
-        padding-top: 40px;
-        padding-bottom: 60px;
-    }
-    @media(max-width : 1366px){
-        padding-top: 30px;
-        padding-bottom: 50px;
-    }
-    @media(max-width : 1199px){
-        padding-top: 20px;
-        padding-bottom: 50px;
-    }
+    @include paddingTop(60);
+    @include paddingBottom(100);
+
+    @include mobilePaddingTop(70);
+    @include mobilePaddingBottom(80);
+    
     .news-thaco-top{
         display: flex;
         align-items: center;
@@ -925,7 +914,6 @@
 
         @media (max-width: 1080px) {
             flex-wrap: wrap;
-            @include mobileMarginTop(35, "-");
             @include mobileMarginBottom(35, "-");
 
             .item {
@@ -933,7 +921,7 @@
                 @include mobilePaddingY(35);
 
                 &:first-child {
-                    @include mobileMarginTop(35, "+");
+                    padding-top: 0;
                 }
 
                 .item-content {
@@ -945,8 +933,8 @@
                     }
 
                     p.day {
-                        margin-top: 15px;
-                        margin-bottom: 15px;
+                        @include mobileMarginTop(15, "+");
+                        @include mobileMarginBottom(15, "+");
                     }
                 }
             }

@@ -1,9 +1,9 @@
 <div class="distribution">
     <div class="provincial-company">
         <div class="container-remake">
-            <h1 class="title font60">công ty tỉnh thành</h1>
-            <p class="description font20 mt-20">THACO là doanh nghiệp hàng đầu và có quy mô lớn nhất tại Việt Nam về lĩnh vực sản xuất lắp ráp ô tô, với chuỗi giá trị từ nghiên cứu phát triển sản phẩm (R&D), sản xuất linh kiện phụ tùng, lắp ráp ô tô, đến giao nhận vận chuyển và phân phối, bán lẻ. Sản phẩm có đầy đủ các chủng loại: xe tải, xe bus, xe du lịch, xe chuyên dụng và đầy đủ phân khúc từ trung cấp đến cao cấp với doanh số và thị phần luôn dẫn đầu thị trường Việt Nam trong nhiều năm qua.</p>
-            <div class="select-list mt-40 mb-40">
+            <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60">công ty tỉnh thành</h1>
+            <p data-aos="fade-left" data-aos-duration="1500" class="description font20 mt-20">THACO là doanh nghiệp hàng đầu và có quy mô lớn nhất tại Việt Nam về lĩnh vực sản xuất lắp ráp ô tô, với chuỗi giá trị từ nghiên cứu phát triển sản phẩm (R&D), sản xuất linh kiện phụ tùng, lắp ráp ô tô, đến giao nhận vận chuyển và phân phối, bán lẻ. Sản phẩm có đầy đủ các chủng loại: xe tải, xe bus, xe du lịch, xe chuyên dụng và đầy đủ phân khúc từ trung cấp đến cao cấp với doanh số và thị phần luôn dẫn đầu thị trường Việt Nam trong nhiều năm qua.</p>
+            <div data-aos="zoom-in-up" data-aos-duration="2000" class="select-list mt-40 mb-40">
                 <form action="">
                     <select class="ui search selection dropdown city w-100" name="" id="">
                         <option value="">Tỉnh/Thành phố</option>
@@ -15,7 +15,7 @@
                     <button type="submit" class="font20">xác nhận</button>
                 </form>
             </div>
-            <div class="branch-wrap">
+            <div data-aos="zoom-in" data-aos-duration="2500" class="branch-wrap">
                 <img class="branch-background-image" src="{{Theme::asset()->url('images/distribution/background.jpg')}}" alt="">
                 <div class="branch-background-blur"></div>
                 <div class="left">
@@ -122,9 +122,9 @@
     </div>
     <div class="activity-news">
         <div class="container-remake">
-            <h1 class="title font60 mb-20">tin tức hoạt động</h1>
+            <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 mb-20">tin tức hoạt động</h1>
             <div class="activity-news__wrap">
-                <div class="activity-news__item">
+                <div data-aos="fade-right" data-aos-duration="1500" class="activity-news__item">
                     <div class="img-container">
                         <div class="skewed">
                             <a href="#">
@@ -146,7 +146,7 @@
                     </div>
                 </div>
                 <div class="activity-news__item">
-                    <div class="item-top news-body">
+                    <div data-aos="flip-up" data-aos-duration="1500" class="item-top news-body">
                         <a class="news-title font25" href="#">THADICO ủng hộ 3 tỷ đồng cho Quỹ phòng, chống Covid-19 tỉnh Bến Tre</a>
                         <p class="news-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
                         <div class="news-info">
@@ -158,7 +158,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item-bottom">
+                    <div data-aos="flip-down" data-aos-duration="1500" class="item-bottom">
                         <div class="img-container">
                             <div class="skewed">
                                 <a href="#">
@@ -179,7 +179,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="activity-news__item">
+                <div data-aos="fade-left" data-aos-duration="1500" class="activity-news__item">
                     <div class="img-container">
                         <div class="skewed">
                             <a href="#">
@@ -206,14 +206,14 @@
     <div class="library mb-60">
         <div class="container-remake">
             <div class="library-header">
-                <h1 class="title font60">thư viện</h1>
+                <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60">thư viện</h1>
                 <div class="library-button">
                     <img class="customPrevBtn" src="{{Theme::asset()->url('images/distribution/icon_left.png')}}" alt="">
                     <img class="customNextBtn" src="{{Theme::asset()->url('images/distribution/icon_right.png')}}" alt="">
                 </div>
             </div>
         </div>
-        <div class="container-library">
+        <div class="container-library" data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
             <div class="owl-carousel owl-theme">
                 <div class="library-item">
                     <div class="img-container">

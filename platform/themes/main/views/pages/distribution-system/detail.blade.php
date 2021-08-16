@@ -1,9 +1,9 @@
 <div class="distribution-detail">
     <div class="thacoauto-provincial">
         <div class="container-remake">
-            <h1 class="title font60">thaco auto tỉnh thành</h1>
+            <h1 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000" class="title font60">thaco auto tỉnh thành</h1>
             <div class="thacoauto-provincial__wrap">
-                <div class="left">
+                <div data-aos="fade-right" data-aos-duration="1500" class="left">
                     <h3 class="title font25">thaco auto quảng ngãi</h3>
                     <p class="description font20">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem ac</p>
                     <ul>
@@ -21,7 +21,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="right">
+                <div data-aos="fade-left" data-aos-duration="1500" class="right">
                     <h3 class="title font25">Trụ sở chính</h3>
                     <div class="img-container">
                         <div class="skewed">
@@ -34,8 +34,8 @@
     </div>
     <div class="business-activities mt-85">
         <div class="container-remake">
-            <h1 class="title font60">hoạt động kinh doanh</h1>
-            <div class="vehicle-category__wrap">
+            <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60">hoạt động kinh doanh</h1>
+            <div class="vehicle-category__wrap" data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-duration="1000">
                 <div class="vehicle-category__item">
                     <h3 class="title font25">Xe du lịch</h3>
                     <ul>

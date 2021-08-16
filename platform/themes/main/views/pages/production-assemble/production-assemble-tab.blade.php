@@ -10,10 +10,10 @@
                     <a class="list-group-item font25 " id="field_name_5" data-toggle="list" href="#field_tab_content_5" role="tab" aria-controls="home" aria-selected="false">NHÀ MÁY THACO</a>
                     <a class="list-group-item font25 " id="field_name_5" data-toggle="list" href="#field_tab_content_6" role="tab" aria-controls="home" aria-selected="true">NHÀ MÁY XE CHUYÊN DỤNG</a>
                 </div>
-                <div class="tabs">
+                <div class="tabs ">
                     <div class="tab-content" id="nav-tabContent tab-content2">
-                        <div class="tab-pane fade active show " id="field_tab_content_1" role="tabpanel" aria-labelledby="list-home-list">
-                            <div class="content-right">
+                        <div class="tab-pane fade active show" id="field_tab_content_1" role="tabpanel" aria-labelledby="list-home-list">
+                            <div class="content-righ ">
                                 <div class="img">
                                     <img src="{{ Theme::asset()->url('images/manufacturing/assemble1.jpg') }}" alt="">
                                 </div>

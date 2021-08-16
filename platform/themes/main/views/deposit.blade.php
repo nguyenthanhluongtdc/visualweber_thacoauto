@@ -1,18 +1,18 @@
 {{-- thêm sidebar here --}}
-<section class="section-step-menu">
+<section class="section-step-menu-deposit">
     <div class="container-remake">
         <ul class="step-menu">
-            <li class="step-menu__item font18 font-pri ">
+            <li class="step-menu__item item-1 font18 font-pri ">
                 <span>
                     1. LỰA CHỌN XE
                 </span>
             </li>
-            <li class="step-menu__item font18 font-pri">
+            <li class="step-menu__item item-2 font18 font-pri">
                 <span>
                     2. DỰ TOÁN CHI PHÍ
                 </span>
             </li>
-            <li class="step-menu__item font18 font-pri active">
+            <li class="step-menu__item item-3 font18 font-pri active">
                 <span>
                     3. ĐẶT CỌC ĐĂNG KÝ
                 </span>
@@ -21,23 +21,24 @@
     </div>
 </section>
 
-<div class="my-5 container-remake MyriadPro-Regular font15">
+
+<div class="my-3 container-remake MyriadPro-Regular font15 deposit-wrapper">
     <form action="" method="POST" class="row">
-        <div class="col-sm-12 col-md-8 mb-4">
-            <h2 class="font18 MyriadPro-BoldCond text-uppercase mb-3">thông tin khách hàng</h2>
+        <div class="col-sm-12 col-md-12 col-xl-8 mb-4">
+            <h2 class="font20 MyriadPro-BoldCond text-uppercase mb-3">thông tin khách hàng</h2>
             <p class="mb-4">Thông tin khách hàng sẽ được đưa vào thoả thuận hợp đồng. Quý khách vui lòng nhập chính xác các nội dung dưới đây</p>
             <div class="deposit__form">
-                <div class="form-group">
+                <div class="form-group span-3 ">
                     <input type="text" class="form-control MyriadPro-Regular font15" name="username" placeholder="Nhập họ và tên" />
                 </div>
-                <div class="form-group">
+                <div class="form-group span-3 ">
                     <input type="text" class="form-control MyriadPro-Regular font15" name="phone" placeholder="Nhập số điện thoại" />
                 </div>
-                <div class="form-group">
+                <div class="form-group span-3">
                     <div class="ui fluid selection dropdown">
                         <input type="hidden" name="country">
                         <i class="dropdown icon"></i>
-                        <div class="default text MyriadPro-Regular font15">Chọn showroom</div>
+                        <div class="default text MyriadPro-Regular font15">Chọn showroom gần bạn</div>
                         <div class="menu">
                             <div class="item" data-value="af"></i>Afghanistan</div>
                             <div class="item" data-value="ax"></i>Aland Islands</div>
@@ -48,7 +49,7 @@
                     </div>
                     {{-- <input type="text" class="form-control MyriadPro-Regular font15" name="showroom" placeholder="Chọn showroom" /> --}}
                 </div>
-                <div class="form-group">
+                <div class="form-group span-3 ">
                     <input type="text" class="form-control MyriadPro-Regular font15" name="email" placeholder="Nhập email" />
                 </div>
                 <div class="form-group span-2">
@@ -61,7 +62,7 @@
                 <div class="custom-control span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
                     <input type="checkbox" class="custom-control-input" id="customControlInline2">
                     <label class="custom-control-label" for="customControlInline2">Tôi đã đọc, hiểu rõ và xác nhận đồng ý với toàn bộ nội dung <a href="#">Điều khoản</a> trong Thoả Thuận Đặt Cọc trên cũng như Chính Sách Ưu Đãi
-áp dụng tại thời điểm đặt mua xe ô tô này trên KIA Online</label>
+                        áp dụng tại thời điểm đặt mua xe ô tô này trên KIA Online</label>
                 </div>
                 <div class="custom-control span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
                     <input type="checkbox" class="custom-control-input" id="customControlInline3">
@@ -69,7 +70,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-12 col-md-4 mb-4">
+        <div class="col-sm-12 col-md-12 col-xl-4 mb-4">
             <div class="deposit__info">
                 <div class="deposit__info-imagereview">
                     <img src="{{ Theme::asset()->url('images/car.png') }}" width="376" height="280" class="img-fluid" />
@@ -85,7 +86,7 @@
                     <div class="card">
                         <div class="card-header">
                             <div class="d-flex justify-content-between align-items-center">
-                                <h5 class="mb-0">
+                                <h5 class="mb-0 text">
                                     <span class="text-uppercase">MÀU:</span> Kia Optima Trắng
                                 </h5>
                             </div>
@@ -94,7 +95,7 @@
                     <div class="card">
                         <div class="card-header" id="heading_accessory">
                             <div class="d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#collapse_accessory" aria-expanded="true" aria-controls="collapse_accessory">
-                                <h5 class="mb-0 plus">Phụ kiện</h5>
+                                <h5 class="mb-0 plus text">Phụ kiện</h5>
                                 <p class="">
                                     5,000,000đ
                                 </p>
@@ -114,7 +115,7 @@
                     <div class="card">
                         <div class="card-header" id="heading_retrofit">
                             <div class="d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#collapse_retrofit" aria-expanded="true" aria-controls="collapse_retrofit">
-                                <h5 class="mb-0 plus">Trang bị thêm</h5>
+                                <h5 class="mb-0 plus text">Trang bị thêm</h5>
                                 <p class="">
                                     5,000,000đ
                                 </p>
@@ -134,7 +135,7 @@
                     <div class="card">
                         <div class="card-header" id="heading_expense">
                             <div class="d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#collapse_expense" aria-expanded="true" aria-controls="collapse_expense">
-                                <h5 class="mb-0 plus">Chi phí</h5>
+                                <h5 class="mb-0 plus text">Chi phí</h5>
                                 <p class="text-danger">
                                     819,000,000đ
                                 </p>
@@ -154,7 +155,7 @@
                     <div class="card">
                         <div class="card-header">
                             <div class="d-flex justify-content-between align-items-center">
-                                <h5 class="mb-0">Ưu đãi</h5>
+                                <h5 class="mb-0 text">Ưu đãi</h5>
                                 <p class="">
                                     -40,000,000đ
                                 </p>
@@ -175,6 +176,9 @@
             </div>
         </div>
     </form>
+    <button class="btn-back">
+        Quay lại
+    </button>
 </div>
 
 <script>

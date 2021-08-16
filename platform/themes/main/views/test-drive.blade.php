@@ -1,31 +1,40 @@
 <div id="test-drive-page">
     <div class="section-main-wrapper">
-        <div class="container-remake">
+        <div class="container-remake d-md-block">
             <div class="section-main">
                 <form action="#" class="form">
                     <div class="row row__main">
+                        <div class="top-menu-mobile mb-5">
+                            <div class="box-picture-mobile mb-3">
+                                <img src="{{Theme::asset()->url('images/cars/car1.png')}}" alt="">
+                            </div>
+                            <p class="font-pri text-uppercase font30">kia optima 2.0 gat luxury</p>
+                        </div>
+                       
                         <div class="form-register">
                             <ul class="nav nav-tabs font20" id="myTab" role="tablist">
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link active" id="at_showroom-tab" data-bs-toggle="tab"
+                                    {{-- <button class="nav-link active" id="at_showroom-tab" data-bs-toggle="tab"
                                         data-bs-target="#at_showroom" type="button" role="tab" aria-controls="at_showroom"
                                         aria-selected="true">
                                         Đăng ký lái thử tại Showroom
-                                    </button>
+                                    </button> --}}
+                                    <button class="nav-link active" data-toggle="tab" href="#at_showroom">
+                                        Đăng ký lái thử tại Showroom
+                                    <div class="bottom-line mt-1"></div>
+                                </button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="at_home-tab" data-bs-toggle="tab"
-                                        data-bs-target="#at_home" type="button" role="tab" aria-controls="at_home"
-                                        aria-selected="false">
+                                    <button class="nav-link" data-toggle="tab" href="#at_home">
                                         Đăng ký lái thử tại nhà
+                                        <div class="bottom-line mt-1"></div>
                                     </button>
                                 </li>
                             </ul>
-                            <div class="tab-content font-pri" id="myTabContent">
-                                <div class="tab-pane fade show active" id="at_showroom" role="tabpanel"
-                                    aria-labelledby="at_showroom-tab">
+                            <div class="tab-content font-pri content" id="myTabContent">
+                                <div id="at_showroom" class="container tab-pane active">
                                     <div class="form__select">
-                                        <span class="title">Xưng hô</span>
+                                        <span class="title">Xưng hô </span>
                                         <div class="dropdown">
                                             <div class="select">
                                                 <span>Vui lòng chọn</span>
@@ -160,7 +169,7 @@
                                     </div>
                                 </div>
 
-                                <div class="tab-pane fade" id="at_home" role="tabpanel" aria-labelledby="at_home-tab">
+                                <div  id="at_home" class="container tab-pane fade">
                                     <div class="form__select">
                                         <span class="title">Xưng hô</span>
                                         <div class="dropdown">
@@ -303,7 +312,7 @@
                         </div>
                     </div>
 
-                    <div class="form-group form-check font15 font-pri">
+                    <div class="form-group form-check font15 font-pri reminder">
                         <input type="checkbox" id="html">
                         <label for="html">
                             Tôi trên 18 tuổi và tôi có bằng lái xe B2 hợp lệ. *
@@ -326,7 +335,11 @@
                         <button class="btn-submit">
                             Gửi đi
                         </button>
+                        <button class="btn-back">
+                            Quay lại
+                        </button>
                     </div>
+                    
                 </form>
             </div>
         </div>

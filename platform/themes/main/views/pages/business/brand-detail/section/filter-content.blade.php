@@ -96,7 +96,7 @@
                 <div class="info-hotline font18 font-pri">HOTLINE - 1900 54 55 91</div>
             </div>
         </div>
-        <div class="related-cars">
+        <div class="related-cars pb-5">
             <h2 class="related-cars__title font30 font-mi-bold">SẢN PHẨM ĐỀ XUẤT</h2>
             <ul class="list-related-cars">
                 <li class="list-related-cars__item">

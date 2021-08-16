@@ -1,7 +1,7 @@
 <section class="section-car-selection-content">
     <div class="container-remake">
-        <div class="car-selection-content">
-            <div class="car-selection-content__left">
+        <div class="car-selection-content row">
+            <div class="car-selection-content__left col-sm-12 col-md-12">
                 <div class="frame">
                     <img src="{{Theme::asset()->url('images/business/brand-detail/car-detail.png')}}" alt="">
                 </div>
@@ -23,7 +23,7 @@
                     <img src="{{Theme::asset()->url('images/business/brand-detail/360.png')}}" alt="">
                 </div>
             </div>
-            <div class="car-selection-content__right">
+            <div class="car-selection-content__right  col-sm-12 col-md-12">
                 <div class="car-version">
                     <div id="car-version-select" class="car-version__select font15 font-pri">
                         <h3 >Chọn phiên bản xe</h3>
@@ -82,7 +82,7 @@
                                     <input class="checkbox" type="checkbox">
                                     <span class="checkmark"></span>
                                 </div>
-                                <label class="font-pri font12" for="">Lorem ipsum 2.000.000đ</label>
+                                <label class="font-pri font12" for="">Lorem ipsum <span>2.000.000đ</span> </label>
                             </div>
                         </div>
                         <div class="select-equip__item">
@@ -94,7 +94,7 @@
                                     <input class="checkbox" type="checkbox">
                                     <span class="checkmark"></span>
                                 </div>
-                                <label class="font-pri font12" for="">Lorem ipsum 2.000.000đ</label>
+                                <label class="font-pri font12" for="">Lorem ipsum <span>2.000.000đ</span> </label>
                             </div>
                         </div>
                         <div class="select-equip__item">
@@ -106,7 +106,7 @@
                                     <input class="checkbox" type="checkbox">
                                     <span class="checkmark"></span>
                                 </div>
-                                <label class="font-pri font12" for="">Lorem ipsum 2.000.000đ</label>
+                                <label class="font-pri font12" for="">Lorem ipsum <span>2.000.000đ</span> </label>
                             </div>
                         </div>
                         <div class="select-equip__item">
@@ -118,7 +118,7 @@
                                     <input class="checkbox" type="checkbox">
                                     <span class="checkmark"></span>
                                 </div>
-                                <label class="font-pri font12" for="">Lorem ipsum 2.000.000đ</label>
+                                <label class="font-pri font12" for="">Lorem ipsum <span>2.000.000đ</span> </label>
                             </div>
                         </div>
                     </div>
@@ -135,7 +135,7 @@
                                     <input class="checkbox" type="checkbox">
                                     <span class="checkmark"></span>
                                 </div>
-                                <label class="font-pri font12" for="">Lorem ipsum 2.000.000đ</label>
+                                <label class="font-pri font12" for="">Lorem ipsum <span>2.000.000đ</span> </label>
                             </div>
                         </div>
                         <div class="select-equip__item">
@@ -147,7 +147,7 @@
                                     <input class="checkbox" type="checkbox">
                                     <span class="checkmark"></span>
                                 </div>
-                                <label class="font-pri font12" for="">Lorem ipsum 2.000.000đ</label>
+                                <label class="font-pri font12" for="">Lorem ipsum <span>2.000.000đ</span> </label>
                             </div>
                         </div>
                         <div class="select-equip__item">
@@ -159,7 +159,7 @@
                                     <input class="checkbox" type="checkbox">
                                     <span class="checkmark"></span>
                                 </div>
-                                <label class="font-pri font12" for="">Lorem ipsum 2.000.000đ</label>
+                                <label class="font-pri font12" for="">Lorem ipsum <span>2.000.000đ</span> </label>
                             </div>
                         </div>
                         <div class="select-equip__item">
@@ -171,13 +171,17 @@
                                     <input class="checkbox" type="checkbox">
                                     <span class="checkmark"></span>
                                 </div>
-                                <label class="font-pri font12" for="">Lorem ipsum 2.000.000đ</label>
+                                <label class="font-pri font12" for="">Lorem ipsum <span>2.000.000đ</span> </label>
                             </div>
                         </div>
                     </div>
                 </div>
                 <a class="select-button font18 font-pri" type="button" href="">Tiếp theo</a>
             </div>
+            <button class="btn-back mt-4">
+                Quay lại
+            </button>
         </div>
+       
     </div>
 </section>

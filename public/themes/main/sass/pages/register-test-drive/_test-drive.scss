@@ -1,4 +1,10 @@
 #test-drive-page {
+    @media only screen and (max-width: 1080px){
+        .container-remake{
+            min-width:100% !important;
+            max-width:100% !important;
+        }
+    }
     .section-main {
         @include paddingBottom(190);
         .row__main {
@@ -7,12 +13,12 @@
             margin-left: 0;
             margin-right: 0;
 
-            @media (min-width: 992px) {
+            @media (min-width: 1080px) {
                 flex-wrap: nowrap;
             }
         }
         .form-register {
-            @media (min-width: 992px) {
+            @media (min-width: 1080px) {
                 @include flex(560);
                 @include width(560);
             }
@@ -21,13 +27,14 @@
 
             @include paddingBottom(25);
             background-color: #F6F6F6;
-
+           
             .nav {
                 border: none;
                 margin-bottom: 15px;
-
+                
                 &-item {
                     width: 50%;
+                   
                 }
                 &-link {
                     width: 100%;
@@ -36,20 +43,54 @@
                     outline: none;
                     text-transform: uppercase;
                     font-family: $font-primary-bold;
-                    background-color: white;
+                    background-color: #F6F6F6;
                     color: #292929;
                     height: 100%;
+                    @media only screen and (max-width: 1080px){
+                        font-size: 35px;
+                    }
+                    @media only screen and (max-width: 992px){
+                        font-size: 28px;
+                    }
+                    @media only screen and (max-width: 767px){
+                        font-size: 23px;
+                    }
+                    @media only screen and (max-width: 600px){
+                        font-size: 13px;
+                    }
+                    
                 }
                 &-link.active {
-                    background-color: #F6F6F6;
+                    background-color: white;
+                    @media only screen and (max-width: 1080px){
+                        background-color: #F6F6F6;
+                        
+                    } 
+                    .bottom-line{
+                        display: none;
+                        @media only screen and (max-width: 1080px){
+                            display: block;
+                           
+                            border-bottom: 2px solid $color-primary;
+                            width: 70%;
+                            display: table;
+                            margin: 0 auto;
+                            
+                        }
+                        @media only screen and (max-width: 992px){
+                           width: 60%;
+                        }
+                       
+                       
+                    }
                 }
             }
-
+            
             .tab-content {
                 margin-right: 0;
                 background-color: transparent;
                 @include paddingX(50);
-
+               
                 .form {
 
                     &__text, &__select {
@@ -71,6 +112,20 @@
                             @media(max-width: 1264px) {
                                 font-size: 12px;
                             }
+                            @media only screen and (max-width: 1080px){
+                    
+                                font-size: 20px;
+                  
+                              }
+                              @media only screen and (max-width: 992px){
+                              
+                                font-size: 18px;
+                  
+                              }
+                              @media only screen and (max-width: 767px){
+                               
+                                font-size: 12px;
+                              }
                         }
 
                         input[type=text]::placeholder { 
@@ -96,12 +151,18 @@
                             outline: none;
                             @include paddingY(15);
                             @include paddingX(20);
+                            @media only screen and (max-width: 600px){
+                                @include paddingY(12);
+                                @include paddingX(20);
+                            }
                         }
+                        
                     }
 
                     &__select {
-
+                        
                         .dropdown {
+                           
                             display: inline-block;
                             background-color: #fff;
                             // border-radius: 2px;
@@ -112,17 +173,22 @@
                             color: #474747;
                             height: 100%;
                             text-align: left;
-    
+                            @media only screen and (max-width: 600px){
+                              font-size: 8px;
+                            }
                             &:focus {
                                 border: none;
                                 outline: none;
                             }
                         }
+                        
                         .dropdown .select {
                             cursor: pointer;
                             display: block;
                             @include paddingY(15);
                             @include paddingX(20);
+                           
+                            
                         }
                         .dropdown .select > i {
                             font-size: 13px;
@@ -130,7 +196,8 @@
                             cursor: pointer;
                             transition: all .3s ease-in-out;
                             float: right;
-                            line-height: 20px
+                            line-height: 20px;
+                            
                         }
                         .dropdown:hover {
                             box-shadow: 0 0 4px rgb(204, 204, 204)
@@ -159,12 +226,15 @@
                             display: none;
                             max-height: 144px;
                             overflow-y: auto;
-                            z-index: 9
+                            z-index: 9;
+                           
                         }
                         .dropdown .dropdown-menu li {
                             padding: 10px;
                             transition: all .2s ease-in-out;
-                            cursor: pointer
+                            cursor: pointer;
+                            
+                            
                         } 
                         .dropdown .dropdown-menu {
                             padding: 0;
@@ -182,6 +252,10 @@
         }
 
         .box-picture {
+            @media only screen and (max-width: 1080px){
+                display: none;       
+                       
+           }
             @media (min-width: 992px) {
                 @include paddingLeft(120);
             }
@@ -206,12 +280,59 @@
                 max-width: 100%;
             }
         }
+        .top-menu-mobile{
+            display: none;
+                @media only screen and (max-width: 1080px){
+                    display: block;       
+                           
+              
+            .box-picture-mobile {
+                
+                @media (min-width: 992px) {
+                    @include paddingLeft(120);
+                }
+                flex-grow: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+                @media (max-width: 991px) {
+                    padding-left: 120px;
+                    padding-right: 120px;
+                    margin-top: 50px;
+                } 
+    
+                @media (max-width: 576px) {
+                    padding-left: 40px;
+                    padding-right: 40px;
+                    margin-top: 25px;
+                } 
+    
+                img {
+                    max-width: 100%;
+                }
+            }
+            p{
+                opacity: 80%;
+                text-align: center;
+                justify-content: center;
+            }
+        }
+
+        }
+        
 
         .new {
             padding: 50px;
         }
         
         .form-check {
+            @media only screen and (max-width: 1080px){
+                padding: 0 7%;
+            }
+            @media only screen and (max-width: 600px){
+                padding: 0 10%;
+            }
             display: block;
             @include marginBottom(33, "+");
             padding-left: 0;
@@ -242,7 +363,20 @@
                 position: relative;
                 cursor: pointer;
                 padding-left: 37px;
-    
+                @media only screen and (max-width: 1080px){
+                    
+                    font-size: 20px;
+      
+                  }
+                  @media only screen and (max-width: 992px){
+                  
+                    font-size: 18px;
+      
+                  }
+                  @media only screen and (max-width: 767px){
+                   
+                    font-size: 12px;
+                  }
                 &:before {
                     content:'';
                     -webkit-appearance: none;
@@ -268,6 +402,55 @@
                 color: white;
                 border: none;
                 outline: none;
+             
+                  @media only screen and (max-width: 992px){
+                  
+                    font-size: 18px;
+      
+                  }
+                  @media only screen and (max-width: 767px){
+                   
+                    font-size: 12px;
+                  }
+                @media only screen and (max-width: 1080px){
+                    font-size: 20px;
+                    display: table;
+                    margin: 0 auto;
+                    width: 70%;
+                    height: 40px;
+                }
+                @media only screen and (max-width: 600px){
+                    width: 300px;
+                }
+            }
+            .btn-back{
+                display: none;
+               
+                  @media only screen and (max-width: 992px){
+                  
+                    font-size: 18px;
+      
+                  }
+                  @media only screen and (max-width: 767px){
+                   
+                    font-size: 12px;
+                  }
+                @media only screen and (max-width: 1080px){
+                    font-size: 20px;
+                    display: block;
+                    display: table;
+                    margin: 0 auto;
+                    margin-top: 5%;
+                width: 50%;
+                height: 40px;
+                background-color: #01498B;
+                color: white;
+                border: none;
+                outline: none;
+                }
+                @media only screen and (max-width: 600px){
+                    width: 200px;
+                }
             }
         }
     }

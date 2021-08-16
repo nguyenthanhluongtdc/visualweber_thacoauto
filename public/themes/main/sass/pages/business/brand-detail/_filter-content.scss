@@ -181,10 +181,14 @@
         }
     }
     .related-cars{
+        @media only screen and (max-width: 1080px){
+           
+        }
         .list-related-cars{
             display: flex;
             justify-content: start;
             margin: 2.5% 0 5.5%;
+           
             &__item{
                 max-width: 22%;
                 flex: 1 22%;

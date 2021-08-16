@@ -1,17 +1,18 @@
-<section class="section-step-menu">
+{{-- thêm sidebar here --}}
+<section class="section-step-menu-pre-order">
     <div class="container-remake">
         <ul class="step-menu">
-            <li class="step-menu__item font18 font-pri">
+            <li class="step-menu__item item-1 font18 font-pri ">
                 <span>
                     1. LỰA CHỌN XE
                 </span>
             </li>
-            <li class="step-menu__item font18 font-pri active">
+            <li class="step-menu__item item-2 font18 font-pri">
                 <span>
                     2. DỰ TOÁN CHI PHÍ
                 </span>
             </li>
-            <li class="step-menu__item font18 font-pri">
+            <li class="step-menu__item item-3 font18 font-pri active">
                 <span>
                     3. ĐẶT CỌC ĐĂNG KÝ
                 </span>
@@ -21,10 +22,10 @@
 </section>
 <section class="section-pre-order-content">
     <div class="container-remake">
-        <div class="pre-order-content">
-            <div class="pre-order-content__left">
+        <div class="pre-order-content row">
+            <div class="pre-order-content__left col-sm-12 col-md-12">
                 <div class="select-provinces">
-                    <h3 class="select-provinces__title font18 font-cond-bold">CHỌN TỈNH THÀNH ĐĂNG KÝ XE</h3>
+                    <h3 class="select-provinces__title font18 font-cond-bold ">CHỌN TỈNH THÀNH ĐĂNG KÝ XE</h3>
                     <select class="provinces-select2 font15 font-pri" name="" id="">
                         <option value="">TP. HỒ CHÍ MINH</option>
                         <option value="">HÀ NỘI</option>
@@ -61,13 +62,63 @@
                             </div>
                         </div>
                     </div>
+                    <div class="select-promotions__list-mobile">
+                        <div class="select-promotions__item-mobile my-3">
+                            <div class="frame">
+                                <img src="{{Theme::asset()->url('images/business/brand-detail/khuyenmai1.png')}}" alt="">
+                            </div>
+                            <div class="content mt-2">
+                                <div class="left span-2 d-flex align-center custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customControlInline6">
+                                    <label class="custom-control-label font40 font-cond-bold" for="customControlInline6"></label>
+                                   
+                                </div>
+                                <div class="right mt-2">
+                                    <h3 class="select-deposit__title font40 font-cond-bold text-uppercase">mua xe kia trong tháng 7 nhận ưu đãi lên đến 100 triệu đồng</h3>
+                                    <p class="font-pri">Với chương trình ưu đãi lên đến 100 triệu đồng, khách hàng yêu mến thương hiệu Kia có thể dễ dàng sở hữu..</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="select-promotions__item-mobile my-3">
+                            <div class="frame">
+                                <img src="{{Theme::asset()->url('images/business/brand-detail/khuyenmai2.png')}}" alt="">
+                            </div>
+                            <div class="content mt-2">
+                                <div class="left span-2 d-flex align-center custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customControlInline7">
+                                    <label class="custom-control-label font40 font-cond-bold" for="customControlInline7"></label>
+                                   
+                                </div>
+                                <div class="right mt-2">
+                                    <h3 class="select-deposit__title font40 font-cond-bold text-uppercase">kia việt nam đồng hành cùng khách hàng, hỗ trợ lên đến 65 triệu đồng trong tháng 6/2021</h3>
+                                    <p class="font-pri">Trước những diễn biến đang còn phức tạp của dịch Covid 19 với mong muốn đồng hành và hỗ trợ tốt nhất cho..</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="select-promotions__item-mobile my-3">
+                            <div class="frame">
+                                <img src="{{Theme::asset()->url('images/business/brand-detail/khuyenmai3.png')}}" alt="">
+                            </div>
+                            <div class="content mt-2">
+                                <div class="left span-2 d-flex align-center custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customControlInline8">
+                                    <label class="custom-control-label font40 font-cond-bold" for="customControlInline8"></label>
+                                   
+                                </div>
+                                <div class="right mt-2">
+                                    <h3 class="select-deposit__title font40 font-cond-bold text-uppercase">ưu đãi lớn lên đến 77 triệu đồng trong tháng 5</h3>
+                                    <p class="font-pri">Tăng trưởng mạnh mẽ về doanh số trong thánh 4, KIA tiếp tục khuấy động thị trường với ưu đãi lên đến..</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="select-deposit">
                     <h3 class="select-deposit__title font18 font-cond-bold">LỰA CHỌN CHÍNH SÁCH ĐẶT CỌC</h3>
                     <div class="select-deposit__list">
                         <div class="select-deposit__item">
                             <div class="custom-control mt-1 span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
-                                <input type="checkbox" class="custom-control-input" id="customControlInline4">
+                                <input type="checkbox" class="custom-control-input mr-5" id="customControlInline4">
                                 <label class="custom-control-label font15 font-pri" for="customControlInline4">Đặt cọc giá bán lẻ 10tr</label>
                             </div>
                             <div class="select-deposit_desc font-pri font15">
@@ -90,7 +141,7 @@
                     </div>
                 </div>
             </div>
-            <div class="pre-order-content__right">
+            <div class="pre-order-content__right col-sm-12 col-md-12">
                 <div class="car-selected">
                     <div class="car-selected__image">
                         <div class="frame">
@@ -145,6 +196,9 @@
                 
                 <a class="select-button font18 font-pri" type="button" href="">Tiếp theo</a>
             </div>
+            <button class="btn-back">
+                Quay lại
+            </button>
         </div>
     </div>
 </section>

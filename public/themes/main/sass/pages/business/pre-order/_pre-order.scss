@@ -88,6 +88,8 @@
         &__left{
             max-width: 60%;
             flex: 1 60%;
+            padding-left: 0;
+            padding-right: 0;
             @media only screen and (max-width: 1080px){
                 max-width: 100%;
                 flex: 1 100%;
@@ -409,6 +411,7 @@
                     .select-deposit__item{
                         margin-top: 3%;
                         .custom-control {
+                    
                             .custom-control-label {
                               margin-left: 0.2rem;
                               @media only screen and (max-width: 1080px){
@@ -421,13 +424,14 @@
                   
                               }
                               @media only screen and (max-width: 992px){
-                              
+                                line-height: 2;
                                 font-size: 20px;
                   
                               }
                               @media only screen and (max-width: 767px){
                                
-                                font-size: 12px;
+                                font-size: 18px;
+                                
                               }
                               &::before {
                                 width: 14px;
@@ -437,14 +441,16 @@
                                 top: 4%;
                                 left: -1.5rem;
                                 @media only screen and (max-width: 1080px){
-                    
+
                                   width: 24px;
                                   height: 24px;
                     
                                 }
+                                @media only screen and (max-width: 992px){
+                                  margin-left: -4px;
+                                 }
                                 @media only screen and (max-width: 767px){
-                                  width: 15px;
-                                  height: 15px;
+                                 margin-left: -4px;
                                 }
                               }
                               &::after {
@@ -457,6 +463,12 @@
                                     left: -1.1rem;
                                     background: no-repeat 110%/110% 115%;
                                 }
+                                @media only screen and (max-width: 992px){
+                                  margin-left: -4px;
+                                 }
+                                @media only screen and (max-width: 767px){
+                                  margin-left: -4px;
+                                 }
                               }
                               a {
                                 color: $color-primary-link;
@@ -485,14 +497,14 @@
                             @media only screen and (max-width: 1080px){
                     
                               font-size: 20px;
-                
+                             
                             }
                             @media only screen and (max-width: 992px){
                             
                               font-size: 18px;
                 
                             }
-                            @media only screen and (max-width: 767px){
+                            @media only screen and (max-width: 768px){
                              
                               font-size: 12px;
                             }

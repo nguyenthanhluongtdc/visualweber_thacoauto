@@ -1010,7 +1010,54 @@
   
 }
 
+.tabs-mobile {
+    display: none;
+}
 
+@media (max-width: 1080px) {
+    .section-desktop {
+        display: none;
+    }
+    .tabs-mobile {
+        display: block;
+
+        .nav-link {
+            font-weight: bold;
+            color: #5C5C5C !important; 
+            background-color: transparent !important;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .gallery-item {
+            @include mobilePaddingY(73);
+
+            .thumbnail {
+                img {
+                    width: 100%;
+                    height: auto;
+                    object-fit: contain;
+                }
+            }
+            .content {
+                background-color: #F3F3F3;
+                @include mobilePaddingY(20);
+                @include mobilePaddingX(20);
+
+                .day {
+                    color: #8b8b8b;
+                }
+
+                .title {
+                    @include mobileMarginBottom(30, "+");
+                }
+            }
+            
+        }
+    }
+}
 // hình ảnh video 
 .image-gallery{
     padding-top: 60px ;

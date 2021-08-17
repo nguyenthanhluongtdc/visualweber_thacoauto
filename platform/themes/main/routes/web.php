@@ -52,6 +52,13 @@ Route::group(['namespace' => 'Theme\Thaco\Http\Controllers', 'middleware' => ['w
 
         //end demo
 
+        /* ===================== */
+        Route::prefix('ajax')->group(function () {
+            Route::post('get-new-posts', 'ThacoController@getNewPosts');
+            
+        });
+        /* ===================== */
+
         Route::get('ajax/search', 'ThacoController@getSearch')->name('public.ajax.search');
 
     });

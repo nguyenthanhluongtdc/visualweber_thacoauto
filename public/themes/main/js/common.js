@@ -1,3 +1,5 @@
+// const { error } = require("jquery");
+
 $('.partner-home-carousel').owlCarousel({
     loop: true,
     autoplay: false,
@@ -272,7 +274,53 @@ var Helper = {
     }
 };
 
+var Ajax = {
+    postData: function(lastCreated){
+        $.ajax({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            url: "ajax/get-new-posts",
+            method:"POST",
+            data:{
+                datalastCreated: lastCreated,
+            },
+            success:function(data)
+            {
+                $('.loading').removeClass('d-flex').addClass('d-none')
+                $('#new-posts').append(data.output);
+                if(data.created_at != undefined){
+                    $('#posts-load-more').data('created', data.created_at)
+                }
+                else{
+                    $('#posts-load-more').remove()
+                }
+            },
+            error:function(xhr,thrownError)
+            {
+                console.log(xhr.responseText);
+                console.log(thrownError)
+                $('.loading').removeClass('d-flex').addClass('d-none')
+                $('#new-post').append('Không tìm thấy');
+            }
+        })
+    },
+    postLoadMore: function(){
+        if($('#posts-load-more').length>0){
+            $(document).on('click', '#posts-load-more', function(){
+                var lastCreated = $(this).data('created');
+                if($('.loading').length>0){
+                    $('.loading').removeClass('d-none').addClass('d-flex')
+                }
+                Ajax.postData(lastCreated);
+            })
+        }
+    }
+
+}
+
 $(document).ready(function () {
+    Ajax.postLoadMore();
     AOS.init();
     Helper.addSelect2toNewsFilter();
     Helper.transitionHeaderFixed();

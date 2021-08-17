@@ -11,7 +11,7 @@
                     <div class="media-top-item">
                         <div class="item-img">
                             <div class="post-thumbnail">
-                                <a href="{{$post->url}}"><img src="{{ get_object_image($post->image, 'post-related') }}" alt=""></a>
+                                <a href="{{$post->url}}"><img src="{{ get_object_image($post->image, 'post-large') }}" alt=""></a>
                             </div>
                         </div>
                         <div class="item-content flex-fill">

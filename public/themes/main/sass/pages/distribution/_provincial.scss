@@ -32,8 +32,26 @@
     .provincial-company {
         background-color: $color-white;
         padding-bottom: 65px;
+        @media (max-width: 1080px) {
+            padding-bottom: 0;
+        }
         .description {
             font-family: $font-primary;
+        }
+        .description {
+            &.mobile {
+                display: none;
+            }
+
+            @media (max-width: 1080px) {
+                &.desktop {
+                    display: none;
+                }
+                &.mobile {
+                    display: block;
+                    @include mobilePaddingY(40);
+                }
+            }
         }
         .select-list {
             width: 37.5%;
@@ -44,6 +62,10 @@
                     background-color: #e6e6e6;
                     border: unset;
                     border-radius: unset;
+
+                    @media(max-width: 576px) {
+                        min-width: 10rem;
+                    }
                 }
             }
             button {
@@ -80,11 +102,18 @@
             .left {
                 width: 56.25%;
                 height: 100%;
-                padding: 80px 0px 80px 80px;
+                @include paddingY(80);
+                @include paddingLeft(80);
                 position: absolute;
                 top: 0;
                 left: 0;
-                z-index: 1;
+                z-index: 100;
+
+                @media (max-width: 1080px) {
+                    @include mobilePaddingY(50);
+                    @include mobilePaddingLeft(50);
+                }
+
                 .branch-overflow {
                     overflow-y: auto;
                     height: 100%;
@@ -115,8 +144,27 @@
                             &__left {
                                 display: flex;
                                 align-items: baseline;
+                                flex-wrap: wrap;
+                                flex-grow: 1;
+                                @include marginX(30, "-");
+                                @include marginTop(15, "-");
+                                @include marginBottom(15, "-");
+
                                 .logo-item {
-                                    margin-right: 20%;
+                                    @include paddingX(30);
+                                    @include paddingY(15);
+                                }
+                                
+                                @media (max-width: 1368px) {
+                                    margin: 0;
+                                    .logo-item {
+
+                                        padding: 0;
+                                        
+                                        img {
+                                            transform: scale(0.6);
+                                        }
+                                    }
                                 }
                             }
                             &__right{
@@ -148,11 +196,25 @@
                     object-fit: cover;
                 }
             }
+
+            @media (max-width: 768px) {
+                .left {
+                    width: 100%;
+                }
+
+                .right {
+                    width: 100%;
+                    opacity: 0.3;
+                }
+            }
         }
     }
-    .activity-news {
+    .activity-news-desktop {
         background-color: #f0f0f0;
         padding-top: 50px;
+        @media (max-width: 1080px) {
+            display: none;
+        }
         &__wrap {
             display: flex;
             justify-content: space-between;
@@ -247,6 +309,93 @@
             }
         }
     }
+
+    .activity-news-mobile {
+        display: none;
+        background-color: #f3f3f3;
+        @include mobilePaddingTop(25);
+
+        @media (max-width: 1080px) {
+            display: block;
+        }
+
+        .news-item {
+            @include mobileMarginBottom(40, "+");
+            &:last-child {
+                margin-bottom: 0;
+            }
+            img {
+                vertical-align: middle;
+            }
+            .news-body {
+                background-color: white;
+                @include mobilePaddingX(30);
+                @include mobilePaddingY(30);
+            }
+            .news-description {
+                @include mobileMarginBottom(23, "+");
+                text-align: justify;
+            }
+
+            .news-title {
+                display: inline-block;
+                @include mobileMarginBottom(20, "+");
+                color: #444444;
+            }
+
+            .news-info {
+                display: flex;
+                color: #8B8B8B;
+
+                &__item {
+                    p {
+                        font-family: $font-primary;
+                    }
+                    &:first-child {
+                        padding: 0px 10px 0px 0px;
+                        border-right: 1px solid #b7b7b7;
+                    }
+                    &:last-child {
+                        padding: 0px 10px;
+                    }
+                }
+            }
+        }
+
+        .nav-pagination {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .page-item {
+                @include mobileWidth(40);
+                @include mobileHeight(40);
+                @include mobileLineHeight(40);
+                @include mobileMarginRight(4, "+");
+                text-align: center;
+
+                .page-link {
+                    display: inline-block;
+                    background-color: white;
+                    width: 100%;
+                    padding: 0;
+                    height: 100%;
+                    border-radius: .25rem;
+                    border: none;
+                    @include mobileLineHeight(43);
+                    color: #343434;
+                }
+
+                &.active {
+                    .page-link {
+                        background-color:  #0B5CA8;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+
     .library {
         background-color: #f0f0f0;
         padding-top: 45px;
@@ -258,18 +407,20 @@
             }
         }
         &-button {
-            width: 80px;
+            @include width(80);
+            display: flex;
+            justify-content: space-between;
             position: absolute;
-            right: -80px;
+            right: 0;
             top: 50%;
-            transform: translateY(-50%);
+            transform: translate(100%,-50%);
+
+            @media (max-width: 576px) {
+                transform: translate(50%,-50%);
+            } 
             img {
-                width: 30px;
-                height: 20px;
+                width: 40%;
                 cursor: pointer;
-                &:last-child {
-                    margin-left: 15px;
-                }
             }
         }
         &-item {
@@ -304,6 +455,18 @@
             }
             .img-container {
                 height: 160px;
+            }
+
+            @media (max-width: 1080px) {
+                .img-container {
+                    width: 40%;
+
+                    @include mobileHeight(222);
+                }
+                
+                &__content {
+                    width: 55%;
+                }
             }
         }
         .container-library {

@@ -19,7 +19,29 @@
         &__title{
             margin-bottom: 2.5%;
             @media only screen and (max-width: 1080px){
-                    
+                display: none;
+                font-size: 28px;
+  
+            }
+              @media only screen and (max-width: 992px){
+              
+                font-size: 25px;
+  
+              }
+              @media only screen and (max-width: 767px){
+               
+                font-size: 20px;
+              }
+              @media only screen and (max-width: 600px){
+               
+                font-size: 15px;
+              }
+        }
+        &__title-mobile{
+            display: none;
+            margin-bottom: 2.5%;
+            @media only screen and (max-width: 1080px){
+                display: block;
                 font-size: 28px;
   
               }

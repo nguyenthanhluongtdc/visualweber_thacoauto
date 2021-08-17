@@ -1,5 +1,5 @@
 <div class="car-filter container-remake">
-    <h2 class="car-filter__title font30 font-mi-bold">KIỂU DÁNG XE</h2>
+    <h2 class="car-filter__title-mobile font30 font-mi-bold">KIỂU DÁNG XE</h2>
 </div>
 <div class="car-filter--top-mobile">
     <ul class="car-model font18 font-pri ">

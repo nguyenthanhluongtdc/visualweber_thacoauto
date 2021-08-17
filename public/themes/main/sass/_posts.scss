@@ -1018,13 +1018,34 @@
     .tabs-mobile {
         display: block;
 
+        .nav-tabs {
+            border-bottom: none;
+            @include mobilePaddingTop(30);
+            @include mobilePaddingBottom(42);
+        }
+
         .nav-link {
             font-weight: bold;
             color: #5C5C5C !important; 
             background-color: transparent !important;
+            border: none;
 
             &:focus {
                 outline: none;
+            }
+            
+            &.active {
+                position: relative;
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    bottom: 0;
+                    left: 25%;
+                    right: 25%; 
+                    height: 2px;
+                    background-color: #01498B;
+                }
             }
         }
 
@@ -1032,10 +1053,59 @@
             @include mobilePaddingY(73);
 
             .thumbnail {
+                position: relative;
                 img {
                     width: 100%;
                     height: auto;
                     object-fit: contain;
+                    vertical-align: middle;
+                }
+                .play {
+                    background: red;
+                    border-radius: 50% / 10%;
+                    color: #FFFFFF;
+                    font-size: 2em;
+                    /* change this to change size */
+                    height: 40px;
+                    width: 70px;
+                    padding: 0;
+                    position: absolute;
+                    text-align: center;
+                    text-indent: 0.1em;
+                    transition: all 150ms ease-out;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 2;
+
+                    &::before {
+                        background: inherit;
+                        border-radius: 5% / 50%;
+                        bottom: 9%;
+                        content: "";
+                        left: -5%;
+                        position: absolute;
+                        right: -5%;
+                        top: 9%;
+                    }
+
+                    &::after {
+                        border-style: solid;
+                        border-width: 10px 0 10px 20px;
+                        border-color: transparent transparent transparent rgba(255, 255, 255, 0.75);
+                        content: ' ';
+                        font-size: 70%;
+                        height: 0;
+                        top: 50%;
+                        left: 56%;
+                        transform: translate(-50%, -50%);
+                        position: absolute;
+                        width: 0;
+                    }
+
+                    &:hover {
+                        background: rgb(71, 71, 71);
+                    }
                 }
             }
             .content {
@@ -1052,6 +1122,9 @@
                 }
             }
             
+            &:first-child {
+                padding-top: 0;
+            }
         }
     }
 }

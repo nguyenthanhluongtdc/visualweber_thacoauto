@@ -11,6 +11,7 @@ use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Platform\Theme\Events\RenderingSingleEvent;
 use Illuminate\Support\Arr;
 use Illuminate\Http\Request;
+use Platform\Kernel\Repositories\Interfaces\PostInterface as InterfacesPostInterface;
 use Platform\Partner\Models\Partner;
 use Platform\Services\Models\Services;
 use Theme;
@@ -120,5 +121,43 @@ class ThacoController extends PublicController
         return $response
             ->setError()
             ->setMessage(__('No results found, please try with different keywords.'));
+    }
+    public function getNewPosts(Request $request){
+        if($request->ajax()){
+            // if($request->id > 0){
+                $data = [];
+                $data['created_at'] = $request->datalastCreated;
+                $createdAt = $request->datalastCreated;
+                $data = get_only_featured_posts_by_category(19, 5);
+                $data['created'] = app(InterfacesPostInterface::class)
+                    
+                ->getOnlyFeaturedByCategoryCreated(19, 2, $createdAt);
+                
+                $data['output'] = '';
+                $data['button'] = '';
+                if(!empty($data)){
+                    foreach($data['created'] as $post){
+                        $postImage = get_object_image($post->image, 'post-related');
+                        $data['output'] .='
+                        <div class="post-new-item">
+                        <div class="post-thumbnail-wrap">
+                            <div class="post-thumbnail">
+                                <a href="'.$post->url.'"><img src="'.$postImage.'" alt="'.$post->name.'"></a>
+                            </div>
+                        </div>
+                            <h5 class="title font-mi-bold font20">
+                                <a href="'.$post->url.'">'.$post->name.'</a>
+                            </h5>
+                        </div>
+                        ';
+                        $data['created_at'] = $post->created_at;
+                        $data['button'] .= '
+                        <a id="posts-load-more" data-created="'.$post->created_at.'" href="javascript:;">Xem thêm<span><i class="fas fa-arrow-right font15"></i></span></a>
+                        ';
+                    }
+                }
+                return $data;
+            // }
+        }
     }
 }

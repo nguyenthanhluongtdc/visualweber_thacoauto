@@ -405,6 +405,7 @@
 
     .list-post-new{
         width: 33%;
+        margin-bottom: 7%;
        .wrap{
         @include paddingX(40);
         background: #f3f3f3;
@@ -428,6 +429,15 @@
                     color: #303030;
                 text-align: justify;
                 }
+            }
+        }
+        .loading{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 12%;
+                height: auto;
             }
         }
        }

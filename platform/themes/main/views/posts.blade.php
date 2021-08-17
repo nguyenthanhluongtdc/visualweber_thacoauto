@@ -63,60 +63,33 @@
             <div class="list-post-new">
                 <div class="wrap">
                     <h2 class="font-mi-bold font30">tin tức mới nhất</h2>
-                    <ul class="">
-                        <div class="post-new-item">
-                            <div class="post-thumbnail-wrap">
-                                <div class="post-thumbnail">
-                                    <a href=""><img src="{{ Theme::asset()->url('images/media/post5.jpg') }}" alt=""></a>
+                    <ul id="new-posts" class="">
+                        @php
+                            $lastCreated = "";
+                        @endphp
+                        @if (!empty($postsFeatures))
+                            @foreach ($postsFeatures as $post)
+                            <div class="post-new-item">
+                                <div class="post-thumbnail-wrap">
+                                    <div class="post-thumbnail">
+                                        <a href="{{$post->url}}"><img src="{{ get_object_image($post->image, 'post-related') }}" alt="{{$post->name}}"></a>
+                                    </div>
                                 </div>
+                                <h5 class="title font-mi-bold font20">
+                                    <a href="{{$post->url}}">{{$post->name}}</a>
+                                </h5>
                             </div>
-                            <h5 class="title font-mi-bold font20">
-                                <a href="">Nâng cao năng suất làm việc với 5S, Kaizen và quản trị tinh gọn</a>
-                            </h5>
-                        </div>
-                        <div class="post-new-item">
-                            <div class="post-thumbnail-wrap">
-                                <div class="post-thumbnail">
-                                    <a href=""><img src="{{ Theme::asset()->url('images/media/post6.jpg') }}" alt=""></a>
-                                </div>
-                            </div>
-                            <h5 class="title font-mi-bold font20">
-                                <a href="">Nâng cao năng suất làm việc với 5S, Kaizen và quản trị tinh gọn</a>
-                            </h5>
-                        </div>
-                        <div class="post-new-item">
-                            <div class="post-thumbnail-wrap">
-                                <div class="post-thumbnail">
-                                    <a href=""><img src="{{ Theme::asset()->url('images/media/post7.jpg') }}" alt=""></a>
-                                </div>
-                            </div>
-                            <h5 class="title font-mi-bold font20">
-                                <a href="">Nâng cao năng suất làm việc với 5S, Kaizen và quản trị tinh gọn</a>
-                            </h5>
-                        </div>
-                        <div class="post-new-item">
-                            <div class="post-thumbnail-wrap">
-                                <div class="post-thumbnail">
-                                    <a href=""><img src="{{ Theme::asset()->url('images/media/post8.jpg') }}" alt=""></a>
-                                </div>
-                            </div>
-                            <h5 class="title font-mi-bold font20">
-                                <a href="">Nâng cao năng suất làm việc với 5S, Kaizen và quản trị tinh gọn</a>
-                            </h5>
-                        </div>
-                        <div class="post-new-item">
-                            <div class="post-thumbnail-wrap">
-                                <div class="post-thumbnail">
-                                    <a href=""><img src="{{ Theme::asset()->url('images/media/post9.jpg') }}" alt=""></a>
-                                </div>
-                            </div>
-                            <h5 class="title font-mi-bold font20">
-                                <a href="">Nâng cao năng suất làm việc với 5S, Kaizen và quản trị tinh gọn</a>
-                            </h5>
-                        </div>
+                            @php
+                                $lastCreated = $post->created_at;
+                            @endphp
+                            @endforeach
+                        @endif
                     </ul>
+                    <div class="loading d-none">
+                        <img src="{{Theme::asset()->url('images/media/loading.gif')}}" alt="">
+                    </div>
                     <div class="view-all-news font15 font-mi-bold">
-                        <a href="#"><span>Xem thêm</span><span><i class="fas fa-arrow-right font15"></i></span></a>
+                        <a id="posts-load-more" data-created="{{$lastCreated}}" href="javascript:;">Xem thêm<span><i class="fas fa-arrow-right font15"></i></span></a>
                     </div>
                 </div>
             </div>

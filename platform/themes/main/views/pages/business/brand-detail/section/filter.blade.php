@@ -38,6 +38,7 @@
                     <input type="range" min="100000000" max="20000000000" step="50000000" value="50000000" class="slider" id="myRange">
                 </div>
             </div>
+            
         </div>
         <div class="row_pre-order mobile">
             <a href="#" class="font18 font-pri pre-order ml-auto">PRE-ORDER</a>

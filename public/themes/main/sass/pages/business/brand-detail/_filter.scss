@@ -38,7 +38,9 @@
               }
         }
         &--top{
-            
+            @media only screen and (max-width: 1080px){
+                display: none ;
+            }
             display: flex;
             justify-content: space-between;
             margin-bottom: 2.5%;
@@ -113,6 +115,115 @@
             }
 
             @include mobileMarginBottom(40, "+");
+        }
+        &--top-mobile{
+            display: none;
+
+            @media only screen and (max-width: 1080px){
+                
+                display: block;
+                margin-bottom: 2.5%;
+            &__title{
+                margin-bottom: 2.5%;
+               
+                @media only screen and (max-width: 1080px){
+                        
+                    font-size: 28px;
+        
+                    }
+                    @media only screen and (max-width: 992px){
+                    
+                    font-size: 25px;
+        
+                    }
+                    @media only screen and (max-width: 767px){
+                    
+                    font-size: 20px;
+                    }
+                    @media only screen and (max-width: 600px){
+                    
+                    font-size: 15px;
+                }
+            }
+            .car-model{
+                display: flex;
+                background-color: #f6f6f6;
+                
+                &__item{
+                    margin-left: 4.5%;
+                    margin-right: -5%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    @media only screen and (max-width: 992px){
+                        margin-left: 3.5%;
+                        margin-right: -7.5%;
+                       
+                    }
+                    @media only screen and (max-width: 600px){
+                        margin-left: 2.5%;
+                        margin-right: -10.5%;
+                        
+                    }
+                    span{
+                       width: 60px;
+                        transition: 0.2s;
+                        position: relative;
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            width: 0%;
+                            height: 2px;
+                            bottom: -5%;
+                            left: 0;
+                            background-color: $color-primary;
+                            transition: all 1000ms cubic-bezier(0.19, 1, 0.22, 1);
+                        }
+                        @media only screen and (max-width: 1080px){
+                    
+                            font-size: 20px;
+              
+                          }
+                          @media only screen and (max-width: 992px){
+                          
+                            font-size: 18px;
+              
+                          }
+                          @media only screen and (max-width: 767px){
+                           
+                            font-size: 12px;
+                          }
+                          @media only screen and (max-width: 600px){
+                           width: 30px;
+                          }
+                    }
+                    &:hover{
+                        span{
+                            &::after{
+                                width: 70%;
+                            }
+                        }
+                    }
+
+                    @include mobileHeight(57);
+                    @media (max-width: 1080px) {
+                        width: max-content;
+                        @include mobilePaddingX(55);
+                    }
+                }
+                .active{
+                    span{
+                        &::after{
+                            width: 60%;
+                        }
+                    }
+                }
+                
+                
+            }
+
+            @include mobileMarginBottom(40, "+");
+        }
         }
         &--center{
             margin-bottom: 2.5%;
@@ -374,14 +485,22 @@
                         color: #333333;
                         font-family: $font-primary;
                         text-align: center;
+                        
                         @include marginTop(10, "+");
                     }
-
+                    .name2{
+                         color: #333333;
+                        font-family: $font-primary;
+                        text-align: center;
+                        width: 100px;
+                        @include marginTop(10, "+");
+                        margin-left: -30px;
+                    }
                     &.active {
                         &::before {
                             content: "\f00c";
                             position: absolute;
-                            top: 3px;
+                            top: -3px;
                             font-family: "Font Awesome 5 Free";
                             right: 0;
                             width: 18px;

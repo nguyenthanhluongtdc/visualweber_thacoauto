@@ -4,6 +4,9 @@
         margin-top: -4.2vw;
         height: 100vh;
         position: relative;
+        @media only screen and (max-width: 1080px){
+            height: 80vh;
+        }
         &__img{
             width: 100%;
             height: 100%;
@@ -12,6 +15,7 @@
             //     display: none;}
             position: absolute;
             z-index: 2;
+           
         }
         &__content{
             display: none;
@@ -36,6 +40,7 @@
             bottom: 0%;  /* position the top  edge of the element at the middle of the parent */
             left: 50%; /* position the left edge of the element at the middle of the parent */
             transform: translate(-50%, -00%);
+           
             .brand-list__item{
                 max-width: 20%;
                 flex: 1 20%;
@@ -44,7 +49,7 @@
                 position: relative;
                 background-color: transparent;
                 transition: 0.2s;
-               
+                
                 a{
                     position: absolute;
                    

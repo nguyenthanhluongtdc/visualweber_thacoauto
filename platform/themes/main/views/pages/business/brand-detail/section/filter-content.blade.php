@@ -154,7 +154,7 @@
         </div>
         <div class="related-cars pb-5">
             <h2 class="related-cars__title font30 font-mi-bold">SẢN PHẨM ĐỀ XUẤT</h2>
-            {{-- <ul class="list-related-cars">
+            <ul class="list-related-cars">
                 <li class="list-related-cars__item">
                     <a class="list-related-cars__link" href="#">
                         <img src="{{Theme::asset()->url('images/business/brand-detail/related-car-1.png')}}" alt="" class="list-related-cars__img">
@@ -183,7 +183,8 @@
                         <h4 class="list-related-cars__viewmore font-mi-bold font15">XEM CHI TIẾT <i class="fas fa-arrow-right font15"></i></h4>
                     </a>
                 </li>
-            </ul> --}}
+            </ul>
+
             <div class="list-car-relate-mobile row">
                 <div class="swiper-container researchDevSwiper">
                     <div class="swiper-wrapper">

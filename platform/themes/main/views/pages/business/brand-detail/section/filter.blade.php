@@ -1,4 +1,5 @@
 <section class="section-car-filter">
+    @includeIf("theme.main::views.pages.business.brand-detail.section.filter-top")
     <div class="container-remake">
         <div class="car-filter">
             <h2 class="car-filter__title font30 font-mi-bold">KIỂU DÁNG XE</h2>
@@ -23,6 +24,7 @@
             </ul>
             <a href="#" class="font18 font-pri pre-order desktop">PRE-ORDER</a>
         </div>
+       
         <div class="car-filter--center">
             <select class="provinces-select2 font18 font-pri" name="" id="">
                 <option value="">TP. HỒ CHÍ MINH</option>
@@ -73,7 +75,7 @@
                                     <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
                                 </div>
                                 <div class="name font25">
-                                    86Hp
+                                    90Hp
                                 </div>
                             </a>
                         </div>
@@ -83,7 +85,7 @@
                                     <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
                                 </div>
                                 <div class="name font25">
-                                    86Hp
+                                    100Hp
                                 </div>
                             </a>
                         </div>
@@ -93,7 +95,7 @@
                                     <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
                                 </div>
                                 <div class="name font25">
-                                    86Hp
+                                    110Hp
                                 </div>
                             </a>
                         </div>
@@ -103,7 +105,17 @@
                                     <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
                                 </div>
                                 <div class="name font25">
-                                    86Hp
+                                    120Hp
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-4 col-6 item">
+                            <a href="" class="col-filter">
+                                <div class="symbol">
+                                    <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
+                                </div>
+                                <div class="name font25">
+                                    130Hp
                                 </div>
                             </a>
                         </div>
@@ -112,7 +124,7 @@
 
                <div class="row-filter">
                     <div class="row-filter__title font25">
-                    Công suất
+                    Trang bị
                     </div>
                     <div class="row-filter__content row">
                         <div class="col-sm-4 col-6 item">
@@ -120,8 +132,8 @@
                                 <div class="symbol">
                                     <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
                                 </div>
-                                <div class="name font25">
-                                    86Hp
+                                <div class="name2 font25">
+                                    Đèn pha tự động
                                 </div>
                             </a>
                         </div>
@@ -130,8 +142,8 @@
                                 <div class="symbol">
                                     <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
                                 </div>
-                                <div class="name font25">
-                                    86Hp
+                                <div class="name2 font25">
+                                    Đèn cửa kính mạ Crom
                                 </div>
                             </a>
                         </div>
@@ -140,8 +152,8 @@
                                 <div class="symbol">
                                     <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
                                 </div>
-                                <div class="name font25">
-                                    86Hp
+                                <div class="name2 font25">
+                                    Gạt mưa tự động
                                 </div>
                             </a>
                         </div>
@@ -150,8 +162,8 @@
                                 <div class="symbol">
                                     <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
                                 </div>
-                                <div class="name font25">
-                                    86Hp
+                                <div class="name2 font25">
+                                    Đèn chào
                                 </div>
                             </a>
                         </div>
@@ -160,8 +172,18 @@
                                 <div class="symbol">
                                     <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
                                 </div>
-                                <div class="name font25">
-                                    86Hp
+                                <div class="name2 font25">
+                                    Hệ thống chống trộm
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-4 col-6 item">
+                            <a href="" class="col-filter">
+                                <div class="symbol">
+                                    <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
+                                </div>
+                                <div class="name2 font25">
+                                    Túi khí
                                 </div>
                             </a>
                         </div>
@@ -170,16 +192,17 @@
 
                 <div class="row-filter">
                     <div class="row-filter__title font25">
-                    Công suất
+                    Màu sơn
                     </div>
                     <div class="row-filter__content row">
+                      
                         <div class="col-sm-4 col-6 item">
-                            <a href="" class="col-filter active">
+                            <a href="" class="col-filter">
                                 <div class="symbol">
                                     <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
                                 </div>
                                 <div class="name font25">
-                                    86Hp
+                                    Đen 
                                 </div>
                             </a>
                         </div>
@@ -189,7 +212,7 @@
                                     <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
                                 </div>
                                 <div class="name font25">
-                                    86Hp
+                                    Trắng
                                 </div>
                             </a>
                         </div>
@@ -199,7 +222,25 @@
                                     <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
                                 </div>
                                 <div class="name font25">
-                                    86Hp
+                                    Xám
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-filter">
+                    <div class="row-filter__title font25">
+                    Động cơ
+                    </div>
+                    <div class="row-filter__content row">
+                       
+                        <div class="col-sm-4 col-6 item">
+                            <a href="" class="col-filter">
+                                <div class="symbol">
+                                    <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
+                                </div>
+                                <div class="name font25">
+                                    1.8
                                 </div>
                             </a>
                         </div>
@@ -209,7 +250,7 @@
                                     <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
                                 </div>
                                 <div class="name font25">
-                                    86Hp
+                                    2.4
                                 </div>
                             </a>
                         </div>
@@ -219,7 +260,63 @@
                                     <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
                                 </div>
                                 <div class="name font25">
-                                    86Hp
+                                    3.0
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-filter">
+                    <div class="row-filter__title font25">
+                    Nhiên liệu
+                    </div>
+                    <div class="row-filter__content row">
+                    
+                        <div class="col-sm-4 col-6 item">
+                            <a href="" class="col-filter active">
+                                <div class="symbol">
+                                    <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
+                                </div>
+                                <div class="name font25">
+                                    Xăng 
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-4 col-6 item">
+                            <a href="" class="col-filter">
+                                <div class="symbol">
+                                    <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
+                                </div>
+                                <div class="name font25">
+                                    Dầu
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-filter">
+                    <div class="row-filter__title font25">
+                    Hộp số
+                    </div>
+                    <div class="row-filter__content row">
+                       
+                        <div class="col-sm-4 col-6 item">
+                            <a href="" class="col-filter active">
+                                <div class="symbol">
+                                    <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
+                                </div>
+                                <div class="name font25">
+                                    Số sàn
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-4 col-6 item">
+                            <a href="" class="col-filter">
+                                <div class="symbol">
+                                    <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
+                                </div>
+                                <div class="name font25">
+                                    Tự động
                                 </div>
                             </a>
                         </div>

@@ -332,6 +332,18 @@ if($('.counter-value').length > 0){
     });
 }
 
+const button = document.querySelector(".btn-join");
+const modal = document.querySelector(".overlay");
+const close = document.querySelector(".btn-white");
+button.addEventListener("click",function(){
+  modal.classList.toggle("active");
+})
+close.addEventListener("click",function(){
+  modal.classList.toggle("active");
+})
 
-
-  
+document.body.addEventListener("click",function(e){
+  if(e.target.classList[0]=="overlay") {
+    modal.style.display="none" 
+  }
+})

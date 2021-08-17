@@ -179,10 +179,28 @@
                 color: #b2b2b2;
             }
         }
+
+        @media (max-width: 1080px) {
+            flex-wrap: wrap;
+            width: 90%;
+            margin: 0 auto;
+            @include mobileMarginTop(40, "+");
+
+            &__image {
+                flex: 0 0 100%;
+                max-width: 100%;
+                @include mobileMarginBottom(30, "+");
+            }
+
+            &__info {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
     }
     .related-cars{
         @media only screen and (max-width: 1080px){
-           
+           @include mobileMarginTop(70, "+");
         }
         .list-related-cars{
             display: flex;

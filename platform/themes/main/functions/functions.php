@@ -49,4 +49,8 @@ register_sidebar([
 ]);
 
 RvMedia::setUploadPathAndURLToPublic();
-RvMedia::addSize('featured', 565, 375)->addSize('medium', 540, 360);
+RvMedia::addSize('featured', 565, 375)
+    ->addSize('medium', 540, 360)        
+    ->addSize('post-related', 313, 171)
+    ->addSize('post-large', 742, 430);
+

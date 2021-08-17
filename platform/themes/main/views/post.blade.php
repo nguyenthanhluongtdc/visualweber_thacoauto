@@ -6,8 +6,10 @@
         </h2>
         <div class="post-author-wrap">
             <div class="left">
-                <p class="author font20 font-mi-bold">{{ $post->author->name }}</p>
                 <ul class="statistical font20 font-pri">
+                    @if(!empty(get_field($post, 'author')))
+                    <li><span class="author font20 font-mi-bold">{{ get_field($post, 'author') }}</span></li>
+                    @endif
                     <li><span class="icon"><i class="far fa-clock"></i></span>{{ $post->created_at->format('d/m/Y') }}</li>
                     <li><span>Bình luận: </span><span>23</span></li>
                     <li><span>Lượt xem: </span><span>999</span></li>
@@ -100,7 +102,7 @@
                                
                                 <div class="post-thumbnail">
                                     <a href="{{ $relatedItem->url }}" class="post__overlay">
-                                        <img src="{{ RvMedia::getImageUrl($relatedItem->image) }}" alt="{{ $relatedItem->name }}">
+                                        <img src="{{ RvMedia::getImageUrl($relatedItem->image, 'post-related') }}" alt="{{ $relatedItem->name }}">
                                     </a>
                                 </div>
                                 <p class="city-day font-pri font15">

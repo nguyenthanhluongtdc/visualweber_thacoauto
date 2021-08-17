@@ -215,6 +215,15 @@ class PostTable extends TableAbstract
                 'choices'  => BaseStatusEnum::labels(),
                 'validate' => 'required|in:' . implode(',', BaseStatusEnum::values()),
             ],
+            'is_featured'     => [
+                'title'    => trans('core/base::tables.is_featured'),
+                'type'     => 'select',
+                'choices'  => [
+                    '1' => 'Có',
+                    '0' => 'Không'
+            ],
+                'validate' => 'required|in:' . implode(',', BaseStatusEnum::values()),
+            ],
             'category'         => [
                 'title'    => trans('plugins/blog::posts.category'),
                 'type'     => 'select-search',

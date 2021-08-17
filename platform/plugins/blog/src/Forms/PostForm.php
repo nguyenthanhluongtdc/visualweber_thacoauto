@@ -96,7 +96,7 @@ class PostForm extends FormAbstract
                 'value'      => old('categories', $selectedCategories),
             ])
             ->add('image', 'mediaImage', [
-                'label'      => trans('core/base::forms.image'),
+                'label'      => trans('core/base::forms.image').' (810x445)',
                 'label_attr' => ['class' => 'control-label'],
             ])
             ->add('tag', 'tags', [

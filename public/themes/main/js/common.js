@@ -293,7 +293,9 @@ var Ajax = {
                     $('#posts-load-more').data('created', data.created_at)
                 }
                 else{
+                    $('#posts-load-more').parent().html('<span>Không còn tin nào!</span>')
                     $('#posts-load-more').remove()
+
                 }
             },
             error:function(xhr,thrownError)

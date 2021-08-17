@@ -21,6 +21,7 @@
                     <span>MPV</span>
                 </li>
             </ul>
+            
             <a href="#" class="font18 font-pri pre-order">PRE-ORDER</a>
         </div>
         <div class="car-filter--center">
@@ -39,7 +40,9 @@
                 </div>
 
             </div>
+            
         </div>
+      
         <div class="car-filter--bottom">
             <button type="button" class="modal-button" data-toggle="modal" data-target="#exampleModalCenter">
                 <span class="frame">

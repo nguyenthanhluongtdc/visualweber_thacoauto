@@ -228,7 +228,7 @@
                     <a href="#"><img src="{{ Theme::asset()->url('images/media/image1.jpg') }}" alt=""></a>
                 </div>
                 <h5 class="font-cond font20">
-                    <a href="#">CHI NHÁNH TẢI & BUS THACO ĐỒNG NAI BÀN GIAO 5 XE FUSO ROSA</a>
+                    <a data-fancybox data-type="ajax" data-src="chi-nhanh-tai-bus-thaco-dong-nai-ban-giao-5-xe-fuso-rosa" href="javascript:;">CHI NHÁNH TẢI & BUS THACO ĐỒNG NAI BÀN GIAO 5 XE FUSO ROSA</a>
                 </h5>
             </div>
             <div class="item-image">

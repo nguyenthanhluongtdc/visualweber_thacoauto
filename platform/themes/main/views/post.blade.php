@@ -1,3 +1,8 @@
+
+@if($post->categories->first()->id==22)
+@includeIf("theme.main.layouts.gallery-detail")
+{!!render_media_gallery($post)!!}
+@else
 {!! do_shortcode('[filter-media][/filter-media]') !!}
 <div class="post-container container-remake">
     <div class="post-primary">
@@ -120,5 +125,5 @@
             </div>
             @endif
 </div>
-
+@endif
 

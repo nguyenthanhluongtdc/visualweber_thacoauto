@@ -142,10 +142,10 @@
             @endif
         </div>
         <div class="right">
+            <div class="top" data-aos="fade-left" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="250">
             @if (!empty(get_featured_posts_by_category(22, 1)))
                 @foreach (get_featured_posts_by_category(22, 1) as $post)
                     @if($loop->first)
-                    <div class="top" data-aos="fade-left" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="250">
                         @if(!empty(get_field($post, 'video_gallery')[0]))
                         <div class="img-item">
                             <a data-fancybox href="https://www.youtube.com/watch?v={{get_sub_field(get_field($post, 'video_gallery')[0], 'youtube_code')}}">
@@ -157,10 +157,10 @@
                             <a data-fancybox href="https://www.youtube.com/watch?v={{get_sub_field(get_field($post, 'video_gallery')[0], 'youtube_code')}}" class="font-pri-bold color-gray font30">{{$post->name}}</a>
                         </h3>
                         @endif
+                        @endif
+                        @endforeach
+                        @endif
                     </div>
-                    @endif
-                @endforeach
-            @endif
             
             <div class="bottom" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="50">
                 <p class="title font-pri-bold -font16">

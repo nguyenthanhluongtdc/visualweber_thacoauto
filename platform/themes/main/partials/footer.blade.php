@@ -4,7 +4,7 @@
 <footer class="footer" id="footer">
     <div class="footer-wrap container-remake">
         <div class="footer-left">
-            <a class="img-bct" href="#" title="">
+            <a class="img-bct-mobile" href="#" title="">
                 <img src="{{ Theme::asset()->url('images/main/bct.png') }}" alt="Bộ công thương">
             </a>
             <a href="{{ route('public.single') }}" class="logo-bottom">

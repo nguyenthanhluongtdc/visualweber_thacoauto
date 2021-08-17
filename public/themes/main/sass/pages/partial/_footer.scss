@@ -18,6 +18,13 @@
                     height: auto;
                 }
             }
+
+            .img-bct-mobile {
+                display: none;
+                @media (max-width: 1080px) {
+                    display: block;
+                }
+            }
             .footer-left-bottom {
                 display: flex;
                 align-items: center;
@@ -56,6 +63,13 @@
                             }
                         }
                     }
+                }
+            }
+
+            .thaco-contact {
+                margin-top: 1rem;
+                .name-company {
+                    margin-bottom: 10px;
                 }
             }
         }

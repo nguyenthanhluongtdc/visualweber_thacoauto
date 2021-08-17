@@ -40,6 +40,10 @@
                         span.icon{
                             margin-right: 10px;
                         }
+                        &:first-child{
+                            list-style: none;
+                            margin-left: 0;
+                        }
                     }
                 }
             }

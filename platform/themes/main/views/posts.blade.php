@@ -3,7 +3,7 @@
     <div class="container-remake">
         @php
             $posts = get_posts_by_category(15, 5);
-            $postsFeatures = get_featured_posts_by_category(15, 4);
+            $postsFeatures = get_featured_posts_by_category(15, 5);
         @endphp
         <div class="meida-top">
             @if (!empty($postsFeatures))
@@ -11,7 +11,7 @@
                     <div class="media-top-item">
                         <div class="item-img">
                             <div class="post-thumbnail">
-                                <a href="{{$post->url}}"><img src="{{ get_object_image($post->image) }}" alt=""></a>
+                                <a href="{{$post->url}}"><img src="{{ get_object_image($post->image, 'post-related') }}" alt=""></a>
                             </div>
                         </div>
                         <div class="item-content flex-fill">
@@ -38,7 +38,7 @@
                         <div class="all-post-item">
                             <div class="post-thumbnail-wrap">
                                 <div class="post-thumbnail">
-                                    <a href="{{$post->url}}"><img src="{{ get_object_image($post->image) }}" alt="Tin tức"></a>
+                                    <a href="{{$post->url}}"><img src="{{ get_object_image($post->image, 'post-related') }}" alt="Tin tức"></a>
                                 </div>
                             </div>
                             <div class="post-content">

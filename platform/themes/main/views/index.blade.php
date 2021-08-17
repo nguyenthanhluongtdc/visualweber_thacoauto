@@ -73,7 +73,7 @@
                     <div class="left-top">
                         <div class="frame">
                             <div class="item-img-main">
-                                <a href="{{$post->url}}"><img src="{{ get_object_image($post->image) }}" alt=""></a>
+                                <a href="{{$post->url}}"><img src="{{ get_object_image($post->image, 'post-large') }}" alt=""></a>
                             </div>
                 
                             <div class="item-main">
@@ -120,7 +120,7 @@
         <div class="left left-mobile">
             @if (!empty($postMobile))
             <div class="item-img-main">
-                <a href="{{$postMobile[0]->url}}"><img src="{{ get_object_image($postMobile[0]->image) }}" alt=""></a>
+                <a href="{{$postMobile[0]->url}}"><img src="{{ get_object_image($postMobile[0]->image, 'post-large') }}" alt=""></a>
             </div>
                 @foreach ($postMobile as $post)
                     <div class="item">

@@ -1,14 +1,14 @@
 <section class="section-product-detail">
     <div class="container-remake">
         <div class="product-detail">
-            <h2 class="product-detail__title font-mi-bold font60">
+            <h2 class="product-detail__title font-mi-bold font60 fontmb-big">
                 Ô TÔ DU LỊCH
             </h2>
             <img src="{{Theme::asset()->url('images/services/otodulich.png')}}" alt="" class="product-detail__banner">
-            <h2 class="product-detail__title font-mi-bold font60">
+            <h2 class="product-detail__title font-mi-bold font60 fontmb-big">
                 THÔNG TIN CHI TIẾT
             </h2>
-            <div class="product-detail__desc font-pri font20">
+            <div class="product-detail__desc font-pri font20 fontmb-majority">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, quasi. Alias magni magnam nemo. Fugiat error ipsum corrupti nam! Veritatis itaque commodi aperiam voluptate odio maxime iusto unde eaque a recusandae quas ut debitis aliquam, tempora amet dolorum fugit et sequi laboriosam temporibus quisquam, nobis natus. Sequi hic suscipit quasi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, corporis.
             </div>
             <div class="product-detail__slide">
@@ -30,7 +30,7 @@
                     <div class="detail-info">
                         <div class="detail-info--frame">
                             
-                            <div class="text font15 font-pri">
+                            <div class="text font15 fontmb-majority font-pri">
                                 <div class="logo mb-4">
                                     <img src="{{Theme::asset()->url('images/services/kia-logo.png')}}" alt="">
                                 </div>
@@ -50,8 +50,8 @@
 
                         </div>
                     </div>
-                    <h3 class="product-detail__card-title font25 font-mi-bold mt-4">THƯƠNG HIỆU TOÀN CẦU TỐT NHẤT</h3>
-                    <div class="product-detail__card-desc font20 font-pri">
+                    <h3 class="product-detail__card-title font25 fontmb-rather font-mi-bold mt-4">THƯƠNG HIỆU TOÀN CẦU TỐT NHẤT</h3>
+                    <div class="product-detail__card-desc font20 fontmb-majority font-pri">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                     </div>
                 </div>
@@ -62,8 +62,8 @@
 
                         </div>
                     </div>
-                    <h3 class="product-detail__card-title font25 font-mi-bold mt-4">NHỊP ĐIỆU KHÁC BIỆT</h3>
-                    <div class="product-detail__card-desc font20 font-pri">
+                    <h3 class="product-detail__card-title font25 fontmb-rather font-mi-bold mt-4">NHỊP ĐIỆU KHÁC BIỆT</h3>
+                    <div class="product-detail__card-desc font20 font-pri fontmb-majority">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                     </div>
                 </div>
@@ -74,19 +74,19 @@
 
                         </div>
                     </div>
-                    <h3 class="product-detail__card-title font25 font-mi-bold mt-4">TRIẾT LÝ THIẾT KẾ</h3>
-                    <div class="product-detail__card-desc font20 font-pri">
+                    <h3 class="product-detail__card-title font25 fontmb-rather font-mi-bold mt-4">TRIẾT LÝ THIẾT KẾ</h3>
+                    <div class="product-detail__card-desc font20 font-pri fontmb-majority">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                     </div>
                 </div>
             </div>
 
             <div class="relate-product">
-                <h2 class="title font-mi-bold font60">
+                <h2 class="title font-mi-bold font60 fontmb-big">
                     SẢN PHẨM KIA
                 </h2>
                 <div class="car">
-                    <h3 class="cate font-mi-bold font30 mt-5">
+                    <h3 class="cate font-mi-bold font30 fontmb-rather mt-5">
                         HATCHBACK
                     </h3>
                     <div class="item mt-2">
@@ -97,10 +97,10 @@
                            
                             <div class="d-flex align-content-between flex-wrap car-content">
                                 <div class="info">
-                                    <h3 class="car-name font-mi-bold font25 mb-2">
+                                    <h3 class="car-name font-mi-bold fontmb-medium font25 mb-2">
                                         KIA MORNING
                                     </h3>
-                                    <p class="car-decs font-mi-bold font18">
+                                    <p class="car-decs font-mi-bold fontmb-majority font18">
                                         PHONG CÁCH RIÊNG CỦA BẠN
                                     </p>
                                 </div>
@@ -118,10 +118,10 @@
                             
                             <div class="d-flex align-content-between flex-wrap car-content">
                                 <div class="info">
-                                    <h3 class="car-name font-mi-bold font25 mb-2">
+                                    <h3 class="car-name font-mi-bold fontmb-medium font25 mb-2">
                                         NEW MORNING
                                     </h3>
-                                    <p class="car-decs font-mi-bold font18">
+                                    <p class="car-decs font-mi-bold fontmb-majority font18">
                                         SẮC MÀU THỜI TRANG KHẲNG ĐỊNH PHONG CÁCH
                                     </p>
                                 </div>
@@ -135,7 +135,7 @@
                     </div>
                 </div>
                 <div class="car">
-                    <h3 class="cate font-mi-bold font30 mt-5">
+                    <h3 class="cate font-mi-bold fontmb-rather font30 mt-5">
                         SEDAN
                     </h3>
                     <div class="item mt-2">
@@ -146,10 +146,10 @@
                            
                             <div class="d-flex align-content-between flex-wrap car-content">
                                 <div class="info">
-                                    <h3 class="car-name font-mi-bold font25 mb-2">
+                                    <h3 class="car-name font-mi-bold fontmb-medium font25 mb-2">
                                         KIA SOLUTO
                                     </h3>
-                                    <p class="car-decs font-mi-bold font18">
+                                    <p class="car-decs font-mi-bold fontmb-majority font18">
                                         KẾT NỐI GIÁ TRỊ THẬT
                                     </p>
                                 </div>
@@ -167,10 +167,10 @@
                             
                             <div class="d-flex align-content-between flex-wrap car-content">
                                 <div class="info">
-                                    <h3 class="car-name font-mi-bold font25 mb-2">
+                                    <h3 class="car-name font-mi-bold fontmb-medium font25 mb-2">
                                         KIA ALL-NEW CERATO
                                     </h3>
-                                    <p class="car-decs font-mi-bold font18">
+                                    <p class="car-decs font-mi-bold fontmb-majority font18">
                                         KHẲNG ĐỊNH PHONG CÁCH MỚI 
                                     </p>
                                 </div>
@@ -188,10 +188,10 @@
                            
                             <div class="d-flex align-content-between flex-wrap car-content">
                                 <div class="info">
-                                    <h3 class="car-name font-mi-bold font25 mb-2">
+                                    <h3 class="car-name font-mi-bold fontmb-medium font25 mb-2">
                                         KIA OTIMA
                                     </h3>
-                                    <p class="car-decs font-mi-bold font18">
+                                    <p class="car-decs font-mi-bold fontmb-majority font18">
                                         TỤ TIN VÀ PHONG CÁCH
                                     </p>
                                 </div>
@@ -209,10 +209,10 @@
                             
                             <div class="d-flex align-content-between flex-wrap car-content">
                                 <div class="info">
-                                    <h3 class="car-name font-mi-bold font25 mb-2">
+                                    <h3 class="car-name font-mi-bold fontmb-medium font25 mb-2">
                                         KIA OPTIMA
                                     </h3>
-                                    <p class="car-decs font-mi-bold font18">
+                                    <p class="car-decs font-mi-bold fontmb-majority font18">
                                         SANG TRỌNG VÀ ĐẲNG CẤP
                                     </p>
                                 </div>
@@ -226,7 +226,7 @@
                     </div>
                 </div>
                 <div class="car">
-                    <h3 class="cate font-mi-bold font30 mt-5">
+                    <h3 class="cate font-mi-bold fontmb-rather font30 mt-5">
                         SUV
                     </h3>
                     <div class="item mt-2">
@@ -237,10 +237,10 @@
                            
                             <div class="d-flex align-content-between flex-wrap car-content">
                                 <div class="info">
-                                    <h3 class="car-name font-mi-bold font25 mb-2">
+                                    <h3 class="car-name font-mi-bold fontmb-medium font25 mb-2">
                                         KIA SELTOS
                                     </h3>
-                                    <p class="car-decs font-mi-bold font18">
+                                    <p class="car-decs font-mi-bold fontmb-majority font18">
                                         ĐẲNG CẤP TỪ GIÁ TRỊ
                                     </p>
                                 </div>
@@ -259,10 +259,10 @@
                             
                             <div class="d-flex align-content-between flex-wrap car-content">
                                 <div class="info">
-                                    <h3 class="car-name font-mi-bold font25 mb-2">
+                                    <h3 class="car-name font-mi-bold fontmb-medium font25 mb-2">
                                         KIA SORENTO
                                     </h3>
-                                    <p class="car-decs font-mi-bold font18">
+                                    <p class="car-decs font-mi-bold fontmb-majority font18">
                                         KHỞI ĐẦU XU HƯỚNG MỚI
                                     </p>
                                 </div>
@@ -281,10 +281,10 @@
                             
                             <div class="d-flex align-content-between flex-wrap car-content">
                                 <div class="info">
-                                    <h3 class="car-name font-mi-bold font25 mb-2">
+                                    <h3 class="car-name font-mi-bold fontmb-medium font25 mb-2">
                                         KIA SORENTO (ALL NEW)
                                     </h3>
-                                    <p class="car-decs font-mi-bold font18">
+                                    <p class="car-decs font-mi-bold fontmb-majority font18">
                                         HOÀN TOÀN MỚI - ĐẲNG CẤP 4.0
                                     </p>
                                 </div>
@@ -299,7 +299,7 @@
                     </div>
                 </div>
                 <div class="car car4">
-                    <h3 class="cate font-mi-bold font30 mt-5">
+                    <h3 class="cate font-mi-bold fontmb-rather font30 mt-5">
                         MPV
                     </h3>
                     <div class="item mt-2">
@@ -310,10 +310,10 @@
                            
                             <div class="d-flex align-content-between flex-wrap car-content">
                                 <div class="info">
-                                    <h3 class="car-name font-mi-bold font25 mb-2">
+                                    <h3 class="car-name font-mi-bold fontmb-medium font25 mb-2">
                                         KIA RONDO
                                     </h3>
-                                    <p class="car-decs font-mi-bold font18">
+                                    <p class="car-decs font-mi-bold fontmb-majority font18">
                                         GIÁ TRỊ VƯỢT TRỘI
                                     </p>
                                 </div>
@@ -332,10 +332,10 @@
                             
                             <div class="d-flex align-content-between flex-wrap car-content">
                                 <div class="info">
-                                    <h3 class="car-name font-mi-bold font25 mb-2">
+                                    <h3 class="car-name font-mi-bold fontmb-medium font25 mb-2">
                                         NEW SEDONA
                                     </h3>
-                                    <p class="car-decs font-mi-bold font18">
+                                    <p class="car-decs font-mi-bold fontmb-majority font18">
                                         SANG TRỌNG VÀ TIỆN NGHI
                                     </p>
                                 </div>

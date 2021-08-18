@@ -268,6 +268,9 @@
                     @media(max-width : 1100px){
                         margin-bottom: 12%;
                     } 
+                    @media (max-width: 1080px) {
+                        flex-wrap: wrap;
+                    }
                     .car-frame{
                         margin-top: 5%;
                         max-width: 18%;

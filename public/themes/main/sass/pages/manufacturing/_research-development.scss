@@ -10,7 +10,19 @@
             @include paddingX(40);
             &__title {
                @include marginBottom(22,"+");
+               @media only screen and (max-width: 1080px){
+                font-size: 40px;        
+             }
+             @media only screen and (max-width: 600px){
+                 font-size: 35px;
+
+             }
             }
+            .rd-production__content{
+                @media only screen and (max-width: 992px){font-size: 18px;}
+                @media only screen and (max-width: 600px){font-size: 15px;}
+            }
+           
         }
     }
 

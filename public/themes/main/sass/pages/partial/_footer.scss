@@ -1,6 +1,7 @@
 #footer {
     background: #f3f3f3;
     @include paddingY(65);
+    vertical-align: middle;
    
     @media (max-width: 1080px) {
         @include mobilePaddingY(23);
@@ -300,8 +301,8 @@
         }
 
         @media(max-width: 1080px) {
-            width: 30px;
-            height: 30px;
+            width: 40px;
+            height: 40px;
         }
 
         a{

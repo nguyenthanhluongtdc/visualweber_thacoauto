@@ -1,14 +1,14 @@
 <section class="section-product-detail">
     <div class="container-remake">
         <div class="product-detail">
-            <h2 class="product-detail__title font-mi-bold font60">
+            <h2 class="product-detail__title font-mi-bold font60 fontmb-big">
                 XE MÁY
             </h2>
             <img src="{{Theme::asset()->url('images/services/xemay.png')}}" alt="" class="product-detail__banner">
-            <h2 class="product-detail__title font-mi-bold font60">
+            <h2 class="product-detail__title font-mi-bold font60 fontmb-big">
                 THÔNG TIN CHI TIẾT
             </h2>
-            <div class="product-detail__desc font-pri font20">
+            <div class="product-detail__desc font-pri font20 font-majority">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, quasi. Alias magni magnam nemo. Fugiat error ipsum corrupti nam! Veritatis itaque commodi aperiam voluptate odio maxime iusto unde eaque a recusandae quas ut debitis aliquam, tempora amet dolorum fugit et sequi laboriosam temporibus quisquam, nobis natus. Sequi hic suscipit quasi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, corporis.
             </div>
             <div class="product-detail__slide">
@@ -30,7 +30,7 @@
                     <div class="detail-info">
                         <div class="detail-info--frame">
                             
-                            <div class="text font15 font-pri">
+                            <div class="text font15 font-pri font-majority">
                                 <div class="logo mb-4 ml-4">
                                     <img src="{{Theme::asset()->url('images/services/logo-peugeot.png')}}" alt="">
                                 </div>
@@ -48,8 +48,8 @@
 
                         </div>
                     </div>
-                    <h3 class="product-detail__card-title font25 font-mi-bold mt-4">AN TOÀN</h3>
-                    <div class="product-detail__card-desc font20 font-pri">
+                    <h3 class="product-detail__card-title font25 font-mi-bold mt-4 fontmb-rather">AN TOÀN</h3>
+                    <div class="product-detail__card-desc font20 font-pri fontmb-majority">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                     </div>
                 </div>
@@ -60,8 +60,8 @@
 
                         </div>
                     </div>
-                    <h3 class="product-detail__card-title font25 font-mi-bold mt-4">THIẾT KẾ</h3>
-                    <div class="product-detail__card-desc font20 font-pri">
+                    <h3 class="product-detail__card-title font25 font-mi-bold mt-4 fontmb-rather">THIẾT KẾ</h3>
+                    <div class="product-detail__card-desc font20 font-pri fontmb-majority">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                     </div>
                 </div>
@@ -72,15 +72,15 @@
 
                         </div>
                     </div>
-                    <h3 class="product-detail__card-title font25 font-mi-bold mt-4">TIỆN NGHI</h3>
-                    <div class="product-detail__card-desc font20 font-pri">
+                    <h3 class="product-detail__card-title font25 font-mi-bold mt-4 fontmb-rather">TIỆN NGHI</h3>
+                    <div class="product-detail__card-desc font20 font-pri fontmb-majority">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo conse
                     </div>
                 </div>
             </div>
 
             <div class="relate-product">
-                <h2 class="title font-mi-bold font60">
+                <h2 class="title font-mi-bold font60 fontmb-big">
                     SẢN PHẨM PEUGEOT
                 </h2>
                 
@@ -90,11 +90,11 @@
                             <div class="car-img mb-2">
                                 <img src="{{Theme::asset()->url('images/services/django.png')}}" alt="">
                             </div>
-                           <a href="#"><h3 class="car-name font-mi-bold font25 mb-2">
+                           <a href="#"><h3 class="car-name font-mi-bold font25 fontmb-medium mb-2">
                             DJANGO 125 ABS
                         </h3></a>
                             
-                            <p class="car-decs font-mi-bold font18">
+                            <p class="car-decs font-mi-bold font18 fontmb-majority">
                                 THIẾT KẾ LAY ĐỘNG CẢM XÚC
                             </p>
                             <a href="#">

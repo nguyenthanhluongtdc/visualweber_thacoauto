@@ -8,6 +8,12 @@
                     text-transform: capitalize;
                     color: #01498B;
                 }
+
+                @media (max-width: 1080px) {
+                    &.desktop {
+                        display: none;
+                    }
+                }
             }
         }
         &__image {

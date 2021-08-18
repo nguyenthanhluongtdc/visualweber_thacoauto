@@ -6,7 +6,7 @@
             </h2>
             <div class="production__content font20 font-pri mt-10 mb-40">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
-                <div class="read-more">
+                <div class="read-more desktop">
                     <a href="" class="read-more__link font20">Xem thêm <i class="fas fa-angle-double-right"></i></a>
                 </div>
             </div>
@@ -21,7 +21,7 @@
             </h2>
             <div class="production__content font20 font-pri mt-10 mb-40">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
-                <div class="read-more">
+                <div class="read-more desktop">
                     <a href="" class="read-more__link font20">Xem thêm <i class="fas fa-angle-double-right"></i></a>
                 </div>
             </div>
@@ -36,7 +36,7 @@
             </h2>
             <div class="production__content font20 font-pri mt-10 mb-40">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
-                <div class="read-more">
+                <div class="read-more desktop">
                     <a href="" class="read-more__link font20">Xem thêm <i class="fas fa-angle-double-right"></i></a>
                 </div>
             </div>
@@ -51,7 +51,7 @@
             </h2>
             <div class="production__content font20 font-pri mt-10 mb-40">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
-                <div class="read-more">
+                <div class="read-more desktop">
                     <a href="" class="read-more__link font20">Xem thêm <i class="fas fa-angle-double-right"></i></a>
                 </div>
             </div>

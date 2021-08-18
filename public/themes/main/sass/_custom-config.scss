@@ -721,6 +721,29 @@ a:hover {
 // }
 
 
+@media (max-width: 768px) {
+    //font-size mobile
+    .fontmb-big {
+        font-size: 30px;
+    }
+
+    .fontmb-rather {
+        font-size: 25px;
+    }
+
+    .fontmb-medium {
+        font-size: 18px;
+    }
+
+    // .fontmb-weak {
+    //     font-size: 18px;
+    // }
+
+    .fontmb-majority {
+        font-size: 15px;
+    }
+}
+
 body {
     vertical-align: middle;
 }

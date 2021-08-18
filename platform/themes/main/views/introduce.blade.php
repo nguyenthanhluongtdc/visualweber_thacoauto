@@ -204,7 +204,7 @@
                 <h2 class="section-system-value__title text-uppercase font-pri-bold font60 fontmb-large" data-aos="fade-right">
                     Hệ giá trị
                 </h2>
-                <p class="section-system-value__des fontmb-little" data-aos="fade-left">
+                <p class="section-system-value__des" data-aos="fade-right">
                     Tập đoàn THACO tiền thân là Công ty CP ôtô Trường Hải, được thành lập vào ngày 29/04/1997. Người sáng lập là ông Trần Bá Dương, hiện là Chủ tịch Hội đồng Quản trị THACO. Tổng số nhân sự hiện nay khoảng 25.000 người.
                     Sau 24 năm hình thành và phát triển, THACO đã trở thành Tập đoàn công nghiệp đa ngành với các Tổng công ty thành viên là THACO AUTO (Ô tô và Cơ khí); THAGRICO (Nông lâm nghiệp); THADICO (Đầu tư xây dựng); THILOGI (Logistics) và THISO (Thương mại dịch vụ).
                 </p>
@@ -237,7 +237,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="section-system-value__content__right" data-aos="fade-left">
+                    <div class="section-system-value__content__right" data-aos="fade-right">
                         <img src="{{Theme::asset()->url('images/introduce/layer1.jpg')}}" alt="">
                     </div>
                 </div>
@@ -680,7 +680,11 @@
                     <h2 class="section-behave__title font60 font-pri-bold fontmb-middle" data-aos="fade-right">
                         văn hóa ứng xử
                     </h2>
+<<<<<<< HEAD
+                    <div class="section-behave__des" data-aos="fade-right">
+=======
                     <div class="section-behave__des fontmb-little" data-aos="fade-left">
+>>>>>>> 1bf4bc1a3e806834c84eac81b41433460e458bac
                         <p>
                             Quá trình phát triển của THACO AUTO là thành quả của nỗ lực vượt khó, tự tin, trí tuệ, kỷ luật và ý chí, nghị lực của người sáng lập cùng với đội ngũ nhân sự có thái độ làm việc tích cực, ý thức đóng góp cống hiến đã hình thành nên Văn hóa này.
                         </p>
@@ -706,7 +710,7 @@
                     <h2 class="section-criteria__header__title font60 font-pri-bold fontmb-middle" data-aos="fade-right">
                         Tiêu chí 8T
                     </h2>
-                    <p class="section-criteria__headers__des fontmb-little" data-aos="fade-left">
+                    <p class="section-criteria__headers__des" data-aos="fade-right">
                         “Tiêu chí 8 chữ T” là những tiêu chí vàng đóng vai trò cốt lõi trong Văn hóa Thaco, hỗ trợ cho quá trình rèn luyện, tự kỷ luật và hoàn thiện bản thân của mỗi con người Thaco. Đây được xem như là những tiêu chí mà mỗi CB.CNV phấn đấu đạt đến để góp phần tạo nên thương hiệu Thaco tiêu biểu cho nền công nghiệp ô tô của đất nước. 
                     </p>
                 </div>
@@ -1015,7 +1019,7 @@
         </div>
     </div>
 
-    {{-- <div class="slider-video" data-aos="fade-left" data-aos-delay="300">
+    {{-- <div class="slider-video" data-aos="fade-right" data-aos-delay="300">
         <div class="swiper-container video-introduce">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">

@@ -320,6 +320,8 @@
         @media only screen and (max-width: 400px){
             font-size: 35px;
         }
+
+        @include mobileMarginTop(50, "+");
     }
     .info-contact{
        
@@ -584,7 +586,7 @@
     padding-bottom: 3%;
     .detail-contact{
         background-color: #f3f3f3;
-        margin-top: 2%;
+        @include marginTop(50, "+");
        padding: 5%;
         .content-contact{
             .detail-title {

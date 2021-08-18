@@ -94,7 +94,7 @@
                 </div>
                 <div class="col-md-2 col-12 search-time">
                     <div class="time-picker">
-                        <ion-icon name="calendar-outline" class="mt-4 pl-3 font15 calendar" style="margin-top: 4px"></ion-icon>
+                        <ion-icon name="calendar-outline" class=" pl-3 font15 calendar"></ion-icon>
                         <div class="date-frame">
                             <input type="date" id="birthday" name="birthday" class="font15"> 
                           </div>

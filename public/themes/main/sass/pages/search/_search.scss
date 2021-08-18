@@ -197,30 +197,36 @@
             }  
         }
         .search-time{
-
+            @include mobileHeight(50);
+            
             @media (max-width: 1080px) {
                 //background-color: #f1f1f1;
-                max-width: 50%;
-                flex: 0 0 50%;
+                max-width: 200px;
+                flex: 0 0 200px;
             }
             @include mobileMarginTop(7, "+");
             
             .time-picker{
-                
                 background-color: #f1f1f1;
                 height: 100%;
+                @include mobileLineHeight(50);
                 .arrow{
                     position: absolute;
                     right: 0;
-                    top: 25px;
-                    transform: translateX(-30px);
+                    top: 50%;
+                    transform: translate(-30px, -50%);
                    
                 }
                 .calendar{
-                    margin-top: 5px;
+                    margin-top: 20px;
                     @media(max-width : 1100px){ 
                         margin-left: -10px;
                     }
+
+                    @media (max-width: 1080px) {
+                        margin-top: 0;
+                    }
+                    
                 }
                 .date-frame{
                     position: relative;
@@ -238,6 +244,10 @@
                     }
                     @media(max-width : 1100px){ 
                         margin-left: -4px;
+                    }
+
+                    @media (max-width: 1080px) {
+                        height: auto;
                     }
                   }
                   .date-frame input[type = 'date']{
@@ -266,6 +276,10 @@
                 }
                 @media(max-width : 1300px){ 
                     font-size: 11px;
+                }
+
+                @media (max-width: 1080px) {
+                    margin-left: 60px;
                 }
             }
             

@@ -452,7 +452,7 @@
 }
 
 .overlay {
-    display: none;
+    // display: none;
     position: absolute;
     background: #f8f8f8;
     top: 100%;
@@ -528,12 +528,24 @@
                             content: "\f00c";
                             position: absolute;
                             top: -3px;
-                            font-family: "Font Awesome 5 Free";
                             right: 0;
                             width: 18px;
                             height: 18px;
                             border-radius: 50%;
                             background-color: #01498b;
+                        }
+
+                        &:after {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            top: 0px;
+                            right: 6px;
+                            width: 5px;
+                            height: 9px;
+                            border: solid white;
+                            border-width: 0 2px 2px 0;
+                            transform: rotate(45deg);
                         }
                     }
                 }

@@ -299,8 +299,10 @@
             height: 2.7vw;
         }
 
-        @include mobileWidth(30);
-        @include mobileHeight(30);
+        @media(max-width: 1080px) {
+            width: 30px;
+            height: 30px;
+        }
 
         a{
             width: 100%;

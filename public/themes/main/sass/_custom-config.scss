@@ -599,3 +599,49 @@ a:hover {
         margin-bottom: #{calculatorPixel(10,992)}px;
     }
 }
+
+@media (max-width: 1080px) {
+        //font-size mobile
+    .fontmb-big {
+        font-size: 40px;
+    }
+
+    .fontmb-rather {
+        font-size: 30px;
+    }
+
+    .fontmb-medium {
+        font-size: 25px;
+    }
+
+    // .fontmb-weak {
+    //     font-size: 20px;
+    // }
+
+    .fontmb-majority {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 992px) {
+    //font-size mobile
+    .fontmb-big {
+        font-size: 35px;
+    }
+
+    .fontmb-rather {
+        font-size: 30px;
+    }
+
+    .fontmb-medium {
+        font-size: 22px;
+    }
+
+    // .fontmb-weak {
+    //     font-size: 18px;
+    // }
+
+    .fontmb-majority {
+        font-size: 16px;
+    }
+}

@@ -90,6 +90,14 @@
                     font-size: 35px;
                 }
             }
+            &__desc{
+                @media only screen and (max-width: 768px){
+                    font-size: 15px;
+                }
+                @media only screen and (max-width: 400px){
+                    font-size: 12px;
+                }
+            }
             &__boxfield {
                 
                 .item{

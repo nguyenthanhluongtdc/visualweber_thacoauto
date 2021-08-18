@@ -7,42 +7,42 @@
                     <div class="swiper-slide">
                         <a class="list-car__link" href="#">
                             <img src="{{Theme::asset()->url('images/business/brand-detail/car-item-1.png')}}" alt="" class="list-car__img">
-                            <h3 class="list-car__title font-pri font18">KIA Soluto</h3>
+                            <h3 class="list-car__title font-pri font18"><span>KIA Soluto</span></h3>
                             <div class="bottom-line"></div>
                         </a>
                     </div>
                     <div class="swiper-slide active">
                         <a class="list-car__link" href="#">
                             <img src="{{Theme::asset()->url('images/business/brand-detail/car-item-2.png')}}" alt="" class="list-car__img">
-                            <h3 class="list-car__title font-pri font18">KIA All-New Cerato</h3>
+                            <h3 class="list-car__title font-pri font18"><span>KIA All-New Cerato</span></h3>
                             <div class="bottom-line active"></div>
                         </a>
                     </div>
                     <div class="swiper-slide">
                         <a class="list-car__link" href="#">
                             <img src="{{Theme::asset()->url('images/business/brand-detail/car-item-3.png')}}" alt="" class="list-car__img">
-                            <h3 class="list-car__title font-pri font18">KIA Optima</h3>
+                            <h3 class="list-car__title font-pri font18 active"><span>KIA Optima</span></h3>
                             <div class="bottom-line"></div>
                         </a>
                     </div>
                      <div class="swiper-slide">
                         <a class="list-car__link" href="#">
                             <img src="{{Theme::asset()->url('images/business/brand-detail/car-item-4.png')}}" alt="" class="list-car__img">
-                            <h3 class="list-car__title font-pri font18">KIA Quoris</h3>
+                            <h3 class="list-car__title font-pri font18"><span>KIA Quoris</span></h3>
                             <div class="bottom-line"></div>
                         </a>
                     </div>
                     <div class="swiper-slide">
                         <a class="list-car__link" href="#">
                             <img src="{{Theme::asset()->url('images/business/brand-detail/car-item-1.png')}}" alt="" class="list-car__img">
-                            <h3 class="list-car__title font-pri font18">KIA Soluto</h3>
+                            <h3 class="list-car__title font-pri font18"><span>KIA Soluto</span></h3>
                             <div class="bottom-line"></div>
                         </a>
                     </div>
                     <div class="swiper-slide">
                         <a class="list-car__link" href="#">
                             <img src="{{Theme::asset()->url('images/business/brand-detail/car-item-2.png')}}" alt="" class="list-car__img">
-                            <h3 class="list-car__title font-pri font18">KIA All-New Cerato</h3>
+                            <h3 class="list-car__title font-pri font18"><span>KIA All-New Cerato</span></h3>
                             <div class="bottom-line"></div>
                         </a>
                     </div>

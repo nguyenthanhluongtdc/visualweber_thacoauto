@@ -13,7 +13,7 @@
                 <div class="tabs ">
                     <div class="tab-content" id="nav-tabContent tab-content2">
                         <div class="tab-pane fade active show" id="field_tab_content_1" role="tabpanel" aria-labelledby="list-home-list">
-                            <div class="content-righ ">
+                            <div class="content-right ">
                                 <div class="img">
                                     <img src="{{ Theme::asset()->url('images/manufacturing/assemble1.jpg') }}" alt="">
                                 </div>

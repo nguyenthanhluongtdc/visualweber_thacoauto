@@ -488,11 +488,11 @@
 
                 .col-filter {
                     display: inline-block;
-                    position: relative;
     
                     .symbol {
                         border: 1px solid #333333;
                         border-radius: 50%;
+                        position: relative;
                         @include width(70);
                         @include height(70);
                         @include lineHeight(68);
@@ -524,28 +524,30 @@
                         margin-left: -30px;
                     }
                     &.active {
-                        &::before {
-                            content: "\f00c";
-                            position: absolute;
-                            top: -3px;
-                            right: 0;
-                            width: 18px;
-                            height: 18px;
-                            border-radius: 50%;
-                            background-color: #01498b;
-                        }
-
-                        &:after {
-                            content: '';
-                            display: block;
-                            position: absolute;
-                            top: 0px;
-                            right: 6px;
-                            width: 5px;
-                            height: 9px;
-                            border: solid white;
-                            border-width: 0 2px 2px 0;
-                            transform: rotate(45deg);
+                        .symbol {
+                            &::before {
+                                content: "\f00c";
+                                position: absolute;
+                                top: -3px;
+                                right: 0;
+                                width: 18px;
+                                height: 18px;
+                                border-radius: 50%;
+                                background-color: #01498b;
+                            }
+    
+                            &:after {
+                                content: '';
+                                display: block;
+                                position: absolute;
+                                top: 0px;
+                                right: 6px;
+                                width: 5px;
+                                height: 9px;
+                                border: solid white;
+                                border-width: 0 2px 2px 0;
+                                transform: rotate(45deg);
+                            }
                         }
                     }
                 }

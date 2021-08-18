@@ -52,7 +52,7 @@
                     
                     }
             }
-            @media only screen and (max-width: 1080px){
+            @media only screen and (max-width: 1100px){
                 margin-bottom: 5%;
                 .item-top{
                     .tabcontents{
@@ -142,7 +142,7 @@
                     }
                 }
                 .item-left{
-                    padding-top: 77%;
+                    padding-top: 80%;
                     .tablink{
                         margin-bottom: 5%;
                     }
@@ -152,7 +152,7 @@
                     }
                 }
                 .item-right{
-                    padding-top: 77%;
+                    padding-top: 80%;
                     .tablink{
                         margin-bottom: 5%;
                     }
@@ -256,11 +256,32 @@
                        
                     }
                 }
-             }
-            // .item-left{
-            //     position: absolute;
-            //     bottom: 0;
-            // }
+            }
+            @media only screen and (max-width: 350px){
+                margin-bottom: 5%;
+               
+                .item-left{
+                    padding-top: 125%;
+                    .tablink{
+                        margin-bottom: 5%;
+                    }
+                    button{
+                        font-size: 12px;
+                       
+                    }
+                }
+                .item-right{
+                    padding-top: 125%;
+                    .tablink{
+                        margin-bottom: 5%;
+                    }
+                    button{
+                        font-size: 12px;
+                       
+                    }
+                }
+            }
+           
         .tab {
             float: left;
             width: 100%;

@@ -287,9 +287,6 @@
         margin-bottom: 2px;
         height: 3vw;
         width: 3vw;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         z-index: 88;
         max-width: 70px;
         max-height: 70px;
@@ -301,11 +298,18 @@
             width: 2.7vw;
             height: 2.7vw;
         }
+
+        @include mobileWidth(30);
+        @include mobileHeight(30);
+
         a{
-            width: 57%;
-            height: 57%;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             img{
-                width: 100%;
+                width: 70%;
                 height: auto;
             }
         }

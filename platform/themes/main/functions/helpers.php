@@ -58,8 +58,6 @@ if (!function_exists('get_file_size')) {
 if (!function_exists('render_media_gallery')) {
     function render_media_gallery($post)
     {
-        
-
-        return \Theme::layout('gallery-detail')->render();
+        return \Theme::scope('gallery-detail', ['post'=> $post])->render();
     }
 }

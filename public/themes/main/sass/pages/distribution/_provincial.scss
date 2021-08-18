@@ -31,10 +31,10 @@
     }
     .provincial-company {
         background-color: $color-white;
-        padding-bottom: 65px;
-        @media (max-width: 1080px) {
-            padding-bottom: 0;
-        }
+        @include paddingBottom(65);
+        // @media (max-width: 1080px) {
+        //     padding-bottom: 0;
+        // }
         .description {
             font-family: $font-primary;
         }

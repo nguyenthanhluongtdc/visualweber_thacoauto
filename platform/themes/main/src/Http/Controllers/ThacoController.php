@@ -129,7 +129,7 @@ class ThacoController extends PublicController
             ->setError()
             ->setMessage(__('No results found, please try with different keywords.'));
     }
-    public function getNewPosts(Request $request, BaseHttpResponse $response)
+    public function getNewPosts()
     {
         $data['posts'] = $this->postInterface->getOnlyFeaturedByCategoryCreated(15, request('limit', 5));
 

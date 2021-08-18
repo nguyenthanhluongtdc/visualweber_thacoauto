@@ -20,9 +20,8 @@
                     <li><span>Lượt xem: </span><span>999</span></li>
                 </ul>
             </div>
-            <div class="like-share">
+            <div class="like-share desktop">
                 <div class="fb-like" data-href="{{ Request::url() }}" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
-
             </div>
         </div>
         <p class="desc font20 font-mi-bold">

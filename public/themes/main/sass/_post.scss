@@ -25,6 +25,12 @@
                 position: absolute;
                 right: 0;
                 top: 0;
+
+                @media(max-width: 1080px) {
+                    &.desktop {
+                        display: none;
+                    }
+                }
             }
             .left{
                 display: flex;

@@ -221,8 +221,8 @@ class PostTable extends TableAbstract
                 'choices'  => [
                     '1' => 'Có',
                     '0' => 'Không'
-            ],
-                'validate' => 'required|in:' . implode(',', BaseStatusEnum::values()),
+                ],
+                // 'validate' => 'required|in:' . implode(',', BaseStatusEnum::values()),
             ],
             'category'         => [
                 'title'    => trans('plugins/blog::posts.category'),

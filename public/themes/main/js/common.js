@@ -271,28 +271,31 @@ var Helper = {
     }
 };
 
+let globalConfig = {
+    pageNews: 2,
+    disableLoadMoreNews: false
+}
+
 var Ajax = {
-    postData: function(lastCreated){
+    postData: () =>{
         $.ajax({
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
-            url: "ajax/get-new-posts",
-            method:"POST",
-            data:{
-                datalastCreated: lastCreated,
-            },
-            success:function(data)
+            url: `ajax/get-new-posts?page=${globalConfig.pageNews}`,
+            method:"GET",
+            success:function({data, disable})
             {
                 $('.loading').removeClass('d-flex').addClass('d-none')
-                $('#new-posts').append(data.output);
-                if(data.created_at != undefined){
-                    $('#posts-load-more').data('created', data.created_at)
+                $('#new-posts').append(data);
+                globalConfig = {
+                    ...globalConfig,
+                    pageNews: globalConfig.pageNews + 1,
+                    disableLoadMoreNews: disable
                 }
-                else{
-                    $('#posts-load-more').parent().html('<span>Không còn tin nào!</span>')
-                    $('#posts-load-more').remove()
 
+                if(disable) {
+                    $('#posts-load-more').addClass('d-none')
                 }
             },
             error:function(xhr,thrownError)
@@ -304,14 +307,18 @@ var Ajax = {
             }
         })
     },
-    postLoadMore: function(){
+    postLoadMore: () => {
         if($('#posts-load-more').length>0){
+            // if($('.loading').length>0){
+            //     $('.loading').removeClass('d-none').addClass('d-flex')
+            // }
+            // Ajax.postData();
             $(document).on('click', '#posts-load-more', function(){
-                var lastCreated = $(this).data('created');
+                if(globalConfig.disableLoadMoreNews) return
                 if($('.loading').length>0){
                     $('.loading').removeClass('d-none').addClass('d-flex')
                 }
-                Ajax.postData(lastCreated);
+                Ajax.postData();
             })
         }
     }

@@ -22,6 +22,13 @@ use RvMedia;
 
 class ThacoController extends PublicController
 {
+    protected $postInterface;
+
+    public function __construct()
+    {
+        $this->postInterface = app(InterfacesPostInterface::class);
+    }
+
     /**
      * {@inheritDoc}
      */
@@ -122,42 +129,13 @@ class ThacoController extends PublicController
             ->setError()
             ->setMessage(__('No results found, please try with different keywords.'));
     }
-    public function getNewPosts(Request $request){
-        if($request->ajax()){
-            // if($request->id > 0){
-                $data = [];
-                $data['created_at'] = $request->datalastCreated;
-                $createdAt = $request->datalastCreated;
-                $data = get_only_featured_posts_by_category(19, 5);
-                $data['created'] = app(InterfacesPostInterface::class)
-                    
-                ->getOnlyFeaturedByCategoryCreated(19, 2, $createdAt);
-                
-                $data['output'] = '';
-                $data['button'] = '';
-                if(!empty($data)){
-                    foreach($data['created'] as $post){
-                        $postImage = get_object_image($post->image, 'post-related');
-                        $data['output'] .='
-                        <div class="post-new-item">
-                        <div class="post-thumbnail-wrap">
-                            <div class="post-thumbnail">
-                                <a href="'.$post->url.'"><img src="'.$postImage.'" alt="'.$post->name.'"></a>
-                            </div>
-                        </div>
-                            <h5 class="title font-mi-bold font20">
-                                <a href="'.$post->url.'">'.$post->name.'</a>
-                            </h5>
-                        </div>
-                        ';
-                        $data['created_at'] = $post->created_at;
-                        $data['button'] .= '
-                        <a id="posts-load-more" data-created="'.$post->created_at.'" href="javascript:;">Xem thêm<span><i class="fas fa-arrow-right font15"></i></span></a>
-                        ';
-                    }
-                }
-                return $data;
-            // }
-        }
+    public function getNewPosts(Request $request, BaseHttpResponse $response)
+    {
+        $data['posts'] = $this->postInterface->getOnlyFeaturedByCategoryCreated(15, request('limit', 5));
+
+        return response([
+            "data" => Theme::partial('templates/post', $data),
+            "disable" => $data['posts']->count() == 0
+        ], 200);
     }
 }

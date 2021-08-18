@@ -64,9 +64,6 @@
                 <div class="wrap">
                     <h2 class="font-mi-bold font30">tin tức mới nhất</h2>
                     <ul id="new-posts" class="">
-                        @php
-                            $lastCreated = "";
-                        @endphp
                         @if (!empty($postsFeatures))
                             @foreach ($postsFeatures as $post)
                             <div class="post-new-item">
@@ -89,7 +86,7 @@
                         <img src="{{Theme::asset()->url('images/media/loading.gif')}}" alt="">
                     </div>
                     <div class="view-all-news font15 font-mi-bold">
-                        <a id="posts-load-more" data-created="{{$lastCreated}}" href="javascript:;">Xem thêm<span><i class="fas fa-arrow-right font15"></i></span></a>
+                        <a id="posts-load-more" href="javascript:;">Xem thêm<span><i class="fas fa-arrow-right font15"></i></span></a>
                     </div>
                 </div>
             </div>

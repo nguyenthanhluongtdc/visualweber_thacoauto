@@ -1,5 +1,9 @@
 {!! do_shortcode('[filter-media][/filter-media]') !!}
 
+@php
+    $imageFeatures = get_featured_posts_by_category(20, 5);
+    $videoFeatures = get_featured_posts_by_category(22, 5);
+@endphp
 <div class="tabs-mobile">
     <div class="container-remake">
         <nav>
@@ -143,78 +147,23 @@
             Hình ảnh
         </h3>
         <div class="image-gallery-list">
-            <div class="item-image">
-                <p class="day font20 font-pri">20-12-2021</p>
-                <div class="post-thumbnail">
-                    <a href="#"><img src="{{ Theme::asset()->url('images/media/image1.jpg') }}" alt=""></a>
+            @if (!empty($imageFeatures))
+                @foreach ($imageFeatures as $post)
+                <div class="item-image">
+                    <p class="day font20 font-pri">{{date_format($post->created_at,"d-m-Y")}}</p>
+                    <div class="post-thumbnail">
+                        <a data-fancybox data-type="ajax" data-src="{{$post->url}}" data-filter="#gallery" href="javascript:;">
+                            <img src="{{get_image_url($post->image)}}" alt="{{$post->name}}">
+                        </a>
+                    </div>
+                    <h5 class="font-cond font20">
+                        <a data-fancybox data-type="ajax" data-src="{{$post->url}}" data-filter="#gallery" href="javascript:;">
+                            {{$post->name}}
+                        </a>
+                    </h5>
                 </div>
-                <h5 class="font-cond font20">
-                    <a href="#">CHI NHÁNH TẢI & BUS THACO ĐỒNG NAI BÀN GIAO 5 XE FUSO ROSA</a>
-                </h5>
-            </div>
-            <div class="item-image">
-                <p class="day font20 font-pri">20-12-2021</p>
-                <div class="post-thumbnail">
-                    <a href="#"><img src="{{ Theme::asset()->url('images/media/image2.jpg') }}" alt=""></a>
-                </div>
-                <h5 class="font-cond font20">
-                    <a href="#">CHI NHÁNH TẢI & BUS THACO ĐỒNG NAI BÀN GIAO 5 XE FUSO ROSA</a>
-                </h5>
-            </div>
-            <div class="item-image">
-                <p class="day font20 font-pri">20-12-2021</p>
-                <div class="post-thumbnail">
-                    <a href="#"><img src="{{ Theme::asset()->url('images/media/image3.jpg') }}" alt=""></a>
-                </div>
-                <h5 class="font-cond font20">
-                    <a href="#">BÀN GIAO LÔ XE CITY BUS THACO GARDEN 79CT PHỤC VỤ VẬN TẢI HÀNH KHÁCH CÔNG CỘNG</a>
-                </h5>
-            </div>
-            <div class="item-image">
-                <p class="day font20 font-pri">20-12-2021</p>
-                <div class="post-thumbnail">
-                    <a href="#"><img src="{{ Theme::asset()->url('images/media/image4.jpg') }}" alt=""></a>
-                </div>
-                <h5 class="font-cond font20">
-                    <a href="#">BÀN GIAO LÔ 30 XE IVECO DAILY PLUS – PREMIUM</a>
-                </h5>
-            </div>
-            <div class="item-image">
-                <p class="day font20 font-pri">20-12-2021</p>
-                <div class="post-thumbnail">
-                    <a href="#"><img src="{{ Theme::asset()->url('images/media/image5.jpg') }}" alt=""></a>
-                </div>
-                <h5 class="font-cond font20">
-                    <a href="#">CHI NHÁNH TẢI & BUS THACO ĐỒNG NAI BÀN GIAO 5 XE FUSO ROSA</a>
-                </h5>
-            </div>
-            <div class="item-image">
-                <p class="day font20 font-pri">20-12-2021</p>
-                <div class="post-thumbnail">
-                    <a href="#"><img src="{{ Theme::asset()->url('images/media/image6.jpg') }}" alt=""></a>
-                </div>
-                <h5 class="font-cond font20">
-                    <a href="#">CHI NHÁNH TẢI & BUS THACO ĐỒNG NAI BÀN GIAO 5 XE FUSO ROSA</a>
-                </h5>
-            </div>
-            <div class="item-image">
-                <p class="day font20 font-pri">20-12-2021</p>
-                <div class="post-thumbnail">
-                    <a href="#"><img src="{{ Theme::asset()->url('images/media/image7.jpg') }}" alt=""></a>
-                </div>
-                <h5 class="font-cond font20">
-                    <a href="#">BÀN GIAO LÔ XE CITY BUS THACO GARDEN 79CT PHỤC VỤ VẬN TẢI HÀNH KHÁCH CÔNG CỘNG</a>
-                </h5>
-            </div>
-            <div class="item-image">
-                <p class="day font20 font-pri">20-12-2021</p>
-                <div class="post-thumbnail">
-                    <a href="#"><img src="{{ Theme::asset()->url('images/media/image8.jpg') }}" alt=""></a>
-                </div>
-                <h5 class="font-cond font20">
-                    <a href="#">BÀN GIAO LÔ 30 XE IVECO DAILY PLUS – PREMIUM</a>
-                </h5>
-            </div>
+                @endforeach
+            @endif
         </div>
     </div>
     <div class="image-gallery video container-remake">
@@ -222,78 +171,23 @@
             VIDEO
         </h3>
         <div class="image-gallery-list">
-            <div class="item-image">
-                <p class="day font20 font-pri">20-12-2021</p>
-                <div class="post-thumbnail">
-                    <a href="#"><img src="{{ Theme::asset()->url('images/media/image1.jpg') }}" alt=""></a>
+            @if (!empty($videoFeatures))
+                @foreach ($videoFeatures as $post)
+                <div class="item-image">
+                    <p class="day font20 font-pri">{{date_format($post->created_at,"d-m-Y")}}</p>
+                    <div class="post-thumbnail">
+                        <a data-fancybox data-type="ajax" data-src="{{$post->url}}" data-filter="#gallery" href="javascript:;">
+                            <img src="{{get_image_url($post->image)}}" alt="{{$post->name}}">
+                        </a>
+                    </div>
+                    <h5 class="font-cond font20">
+                        <a data-fancybox data-type="ajax" data-src="{{$post->url}}" data-filter="#gallery" href="javascript:;">
+                            {{$post->name}}
+                        </a>
+                    </h5>
                 </div>
-                <h5 class="font-cond font20">
-                    <a data-fancybox data-type="ajax" data-src="chi-nhanh-tai-bus-thaco-dong-nai-ban-giao-5-xe-fuso-rosa" href="javascript:;">CHI NHÁNH TẢI & BUS THACO ĐỒNG NAI BÀN GIAO 5 XE FUSO ROSA</a>
-                </h5>
-            </div>
-            <div class="item-image">
-                <p class="day font20 font-pri">20-12-2021</p>
-                <div class="post-thumbnail">
-                    <a href="#"><img src="{{ Theme::asset()->url('images/media/image2.jpg') }}" alt=""></a>
-                </div>
-                <h5 class="font-cond font20">
-                    <a href="#">CHI NHÁNH TẢI & BUS THACO ĐỒNG NAI BÀN GIAO 5 XE FUSO ROSA</a>
-                </h5>
-            </div>
-            <div class="item-image">
-                <p class="day font20 font-pri">20-12-2021</p>
-                <div class="post-thumbnail">
-                    <a href="#"><img src="{{ Theme::asset()->url('images/media/image3.jpg') }}" alt=""></a>
-                </div>
-                <h5 class="font-cond font20">
-                    <a href="#">BÀN GIAO LÔ XE CITY BUS THACO GARDEN 79CT PHỤC VỤ VẬN TẢI HÀNH KHÁCH CÔNG CỘNG</a>
-                </h5>
-            </div>
-            <div class="item-image">
-                <p class="day font20 font-pri">20-12-2021</p>
-                <div class="post-thumbnail">
-                    <a href="#"><img src="{{ Theme::asset()->url('images/media/image4.jpg') }}" alt=""></a>
-                </div>
-                <h5 class="font-cond font20">
-                    <a href="#">BÀN GIAO LÔ 30 XE IVECO DAILY PLUS – PREMIUM</a>
-                </h5>
-            </div>
-            <div class="item-image">
-                <p class="day font20 font-pri">20-12-2021</p>
-                <div class="post-thumbnail">
-                    <a href="#"><img src="{{ Theme::asset()->url('images/media/image5.jpg') }}" alt=""></a>
-                </div>
-                <h5 class="font-cond font20">
-                    <a href="#">CHI NHÁNH TẢI & BUS THACO ĐỒNG NAI BÀN GIAO 5 XE FUSO ROSA</a>
-                </h5>
-            </div>
-            <div class="item-image">
-                <p class="day font20 font-pri">20-12-2021</p>
-                <div class="post-thumbnail">
-                    <a href="#"><img src="{{ Theme::asset()->url('images/media/image6.jpg') }}" alt=""></a>
-                </div>
-                <h5 class="font-cond font20">
-                    <a href="#">CHI NHÁNH TẢI & BUS THACO ĐỒNG NAI BÀN GIAO 5 XE FUSO ROSA</a>
-                </h5>
-            </div>
-            <div class="item-image">
-                <p class="day font20 font-pri">20-12-2021</p>
-                <div class="post-thumbnail">
-                    <a href="#"><img src="{{ Theme::asset()->url('images/media/image7.jpg') }}" alt=""></a>
-                </div>
-                <h5 class="font-cond font20">
-                    <a href="#">BÀN GIAO LÔ XE CITY BUS THACO GARDEN 79CT PHỤC VỤ VẬN TẢI HÀNH KHÁCH CÔNG CỘNG</a>
-                </h5>
-            </div>
-            <div class="item-image">
-                <p class="day font20 font-pri">20-12-2021</p>
-                <div class="post-thumbnail">
-                    <a href="#"><img src="{{ Theme::asset()->url('images/media/image8.jpg') }}" alt=""></a>
-                </div>
-                <h5 class="font-cond font20">
-                    <a href="#">BÀN GIAO LÔ 30 XE IVECO DAILY PLUS – PREMIUM</a>
-                </h5>
-            </div>
+                @endforeach
+            @endif
         </div>
     </div>
 </div>

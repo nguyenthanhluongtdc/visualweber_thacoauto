@@ -1,6 +1,5 @@
 
-@if($post->categories->first()->id==22)
-@includeIf("theme.main.layouts.gallery-detail")
+@if($post->categories->first()->id==20 || $post->categories->first()->id==22)
 {!!render_media_gallery($post)!!}
 @else
 {!! do_shortcode('[filter-media][/filter-media]') !!}

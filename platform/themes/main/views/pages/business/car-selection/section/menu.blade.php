@@ -1,4 +1,4 @@
-<section class="section-step-menu-pre-order">
+<section class="section-step-menu-car-selection">
     <div class="container-remake">
         <ul class="step-menu">
             <li class="step-menu__item item-1 font18 font-pri ">

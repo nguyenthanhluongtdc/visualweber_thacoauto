@@ -58,14 +58,14 @@
     <div class="section-production-business-wrapper" id="section_two">
         <div class="container-remake">
             <div class="section-production-business">
-                <h2 class="section-production-business__title font-pri-bold font60 fontmb-big" data-aos="fade-right">
+                <h2 class="section-production-business__title font-pri-bold font60 fontmb-lả" data-aos="fade-right">
                     SẢN XUẤT - KINH DOANH Ô TÔ & CƠ KHÍ
                 </h2>
 
                 <div class="section-production-business__content">
                     <div class="section-production-business__content__row __row-top">
                         <div class="col-left" data-aos="fade-down">
-                            <div class="box-main font20 fontmb-majority">
+                            <div class="box-main font20">
                                 <div class="symbol">
                                     <img src="{{Theme::asset()->url('images/introduce/symbol6.png')}}" alt="">
                                 </div>
@@ -125,7 +125,7 @@
                     </div>
                     <div class="section-production-business__content__row __row-bottom">
                         <div class="col-left" data-aos="fade-right">
-                           <div class="box-main font20 fontmb-majority">
+                           <div class="box-main font20">
                                 <div class="symbol">
                                     <img src="{{Theme::asset()->url('images/introduce/symbol5.png')}}" alt="">
                                 </div>
@@ -198,7 +198,7 @@
         </div>
     </div>
 
-    <div class="section-system-value-wrapper font20 fontmb-majority" id="section_three">
+    <div class="section-system-value-wrapper font20" id="section_three">
         <div class="container-remake">
             <div class="section-system-value">
                 <h2 class="section-system-value__title text-uppercase font-pri-bold font60 fontmb-large" data-aos="fade-right">
@@ -673,18 +673,14 @@
        </div>
     </div>
 
-    <div class="section-behave-wrapper font20 fontmb-majority" id="section_five">
+    <div class="section-behave-wrapper font20" id="section_five">
         <div class="container-remake">
             <div class="section-behave">
                 <div class="section-behave__left">
                     <h2 class="section-behave__title font60 font-pri-bold fontmb-middle" data-aos="fade-right">
                         văn hóa ứng xử
                     </h2>
-<<<<<<< HEAD
                     <div class="section-behave__des" data-aos="fade-right">
-=======
-                    <div class="section-behave__des fontmb-little" data-aos="fade-left">
->>>>>>> 1bf4bc1a3e806834c84eac81b41433460e458bac
                         <p>
                             Quá trình phát triển của THACO AUTO là thành quả của nỗ lực vượt khó, tự tin, trí tuệ, kỷ luật và ý chí, nghị lực của người sáng lập cùng với đội ngũ nhân sự có thái độ làm việc tích cực, ý thức đóng góp cống hiến đã hình thành nên Văn hóa này.
                         </p>
@@ -703,7 +699,7 @@
         </div>
     </div>
 
-    <div class="section-criteria-wrapper font20 fontmb-majority">
+    <div class="section-criteria-wrapper font20">
         <div class="container-remake">
             <div class="section-criteria">
                 <div class="section-criteria__header">

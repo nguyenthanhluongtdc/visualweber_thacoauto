@@ -132,6 +132,11 @@
                     box-shadow: 0px 0px 0px 0px #0054a0 inset;
                     transition: all 0.15s cubic-bezier(0, 1.05, 0.72, 1.07);
             
+                    @media (max-width: 1080px) {
+                        width: 10px;
+                        height: 10px;
+                    }
+
                     &::after {
                         content: '';
                         width: 100%;
@@ -168,11 +173,37 @@
             
             display: flex;
             
-            
-              
-              
+            @media (max-width: 1080px) {
+                flex-wrap: wrap;
+                background-color: transparent;
+                max-width: 100%;
+                flex: 0 0 100%;
+
+                .box {
+                    @include mobileHeight(50);
+                    width: fit-content;
+                    margin: 0;
+                    background-color: #f1f1f1;
+                    margin-right: 1rem;
+                    @include mobilePaddingX(15);
+                    @include mobileMarginTop(7, "+");
+                    @include mobileMarginBottom(7, "+");
+                    transform: none;
+
+                    label {
+                        position: relative;
+                    }
+                }
+            }  
         }
         .search-time{
+
+            @media (max-width: 1080px) {
+                //background-color: #f1f1f1;
+                max-width: 50%;
+                flex: 0 0 50%;
+            }
+            @include mobileMarginTop(7, "+");
             
             .time-picker{
                 
@@ -258,29 +289,40 @@
     .search-result{
         .result-content{
             top: 0;
-            margin-top: -3px;
-            line-height: 20px;
-            h3{
-                text-transform: uppercase;
+           
+            .content {
+                display: flex;
+                flex-wrap: wrap;
+    
+                h3{
+                    text-transform: uppercase;
+                }
+                .date{
+                    // position: absolute;
+                    // bottom: 0;
+                    opacity: 75%;
+                    align-self: flex-end;
+                }
+                p{
+                    
+                }
             }
-            .date{
-                position: absolute;
-                bottom: 0;
-                opacity: 75%;
-            }
-            p{
-                
+
+            @media (max-width: 767px) {
+                .content {
+                    background-color: #f1f1f1;
+                    padding: 15px;
+                }
             }
         }
     }
 
-   
-   
     .container {
         margin-top: 10px;
 
         .pagination {
             display: flex;
+            flex-wrap: wrap;
             padding-left: 0;
             list-style: none;
             border-radius: unset;
@@ -295,7 +337,8 @@
                 text-align: center;
                 width: 40px;
                 border-radius: unset;
-                margin: 0 .15rem
+                margin: 0 .15rem;
+                margin-bottom: .15rem;
             }
             .page-item.active .page-link,
             a {
@@ -322,4 +365,8 @@
        
     }
     
+}
+
+.object-fit-cover {
+    object-fit: cover;
 }

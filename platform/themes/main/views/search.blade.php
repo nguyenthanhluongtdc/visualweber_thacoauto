@@ -63,7 +63,7 @@
                 
             </div>
             <div class="search-range row pb-4 mt-5">
-                <div class="col-md-10 search-cate">
+                <div class="col-md-10 col-12 search-cate">
                     
                     <div class="box">
                         <input id="one" type="checkbox">
@@ -92,7 +92,7 @@
                     </div>
                     
                 </div>
-                <div class="col-md-2 search-time">
+                <div class="col-md-2 col-12 search-time">
                     <div class="time-picker">
                         <ion-icon name="calendar-outline" class="mt-4 pl-3 font15 calendar" style="margin-top: 4px"></ion-icon>
                         <div class="date-frame">
@@ -106,79 +106,79 @@
                 
             </div>
             
-            <div class="search-result row pb-4"  data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
-                <div class="col-md-3 result-img pl-0">
-                    <div class="image">
-                        <div class="post-thumbnail">
-                            <a href=""> <img src="{{ Theme::asset()->url('images/search/search-3.png') }}" alt="img-detail"></a>
-                        </div>
-                    </div>
+            <div class="search-result row mb-md-4 mb-5"  data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                <div class="col-lg-3 col-md-5 result-img">
+                    <a class="image h-100" href="#" title="">
+                        <img src="{{ Theme::asset()->url('images/search/search-3.png') }}" alt="img-detail" class="w-100 h-100 object-fit-cover">
+                    </a>
                 </div>
-                <div class="col-md-9 result-content" >
-                    <a href="#"><h3 class="font-pri-bold font30 mb-3  color-gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, perspiciatis? Cupiditate eligen dol optio placeat.</h3></a>
-                    <p class="font-pri mt-3 font15">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda laborum officiis nisi omnis! Illum, quibusdam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eligendi deleniti quam amet earum laudantium.
-                    </p>
-                    <p class="font-pri date font15">20-12-20201</p>
+                <div class="col-lg-9 col-md-7 result-content">
+                    <div class="content">
+                        <a href="#"><h3 class="font-pri-bold font30  color-gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, perspiciatis? Cupiditate eligen dol optio placeat.</h3></a>
+                        <p class="font-pri my-3 font15">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda laborum officiis nisi omnis! Illum, quibusdam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eligendi deleniti quam amet earum laudantium.
+                        </p>
+                        <p class="font-pri date font15">20-12-20201</p>
+                    </div>
                 </div>
             </div>
-            <div class="search-result row pb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
-                <div class="col-md-3 result-img pl-0">
-                    <div class="image">
-                        <div class="post-thumbnail">
-                            <a href=""> <img src="{{ Theme::asset()->url('images/search/search-4.png') }}" alt="img-detail"></a>
-                        </div>
-                    </div>
+            <div class="search-result row mb-md-4 mb-5" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                <div class="col-lg-3 col-md-5 result-img">
+                    <a class="image h-100" href="#" title="">
+                        <img src="{{ Theme::asset()->url('images/search/search-4.png') }}" alt="img-detail" class="w-100 h-100 object-fit-cover">
+                    </a>
                 </div>
-                <div class="col-md-9 result-content">
-                    <a href="#"><h3 class="font-pri-bold font30 mb-3  color-gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, perspiciatis? Cupiditate eligen dol optio placeat.</h3></a>
-                    <p class="font-pri mt-3 font15">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda laborum officiis nisi omnis! Illum, quibusdam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eligendi deleniti quam amet earum laudantium.
-                    </p>
-                    <p class="font-pri date font15">20-12-20201</p>
+                <div class="col-lg-9 col-md-7 result-content">
+                    <div class="content">
+                        <a href="#"><h3 class="font-pri-bold font30  color-gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, perspiciatis? Cupiditate eligen dol optio placeat.</h3></a>
+                        <p class="font-pri my-3 font15">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda laborum officiis nisi omnis! Illum, quibusdam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eligendi deleniti quam amet earum laudantium.
+                        </p>
+                        <p class="font-pri date font15">20-12-20201</p>
+                    </div>
                 </div>
             </div>
-            <div class="search-result row pb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
-                <div class="col-md-3 result-img pl-0">
-                    <div class="image">
-                        <div class="post-thumbnail">
-                            <a href=""> <img src="{{ Theme::asset()->url('images/search/search-5.png') }}" alt="img-detail"></a>
-                        </div>
-                    </div>
+            <div class="search-result row mb-md-4 mb-5" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                <div class="col-lg-3 col-md-5 result-img">
+                    <a class="image h-100" href="#" title="">
+                        <img src="{{ Theme::asset()->url('images/search/search-5.png') }}" alt="img-detail" class="w-100 h-100 object-fit-cover">
+                    </a>
                 </div>
-                <div class="col-md-9 result-content">
-                    <a href="#"><h3 class="font-pri-bold font30 mb-3  color-gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, perspiciatis? Cupiditate eligen dol optio placeat.</h3></a>
-                    <p class="font-pri mt-3 font15">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda laborum officiis nisi omnis! Illum, quibusdam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eligendi deleniti quam amet earum laudantium.
-                    </p>
-                    <p class="font-pri date font15">20-12-20201</p>
+                <div class="col-lg-9 col-md-7 result-content">
+                    <div class="content">
+                        <a href="#"><h3 class="font-pri-bold font30  color-gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, perspiciatis? Cupiditate eligen dol optio placeat.</h3></a>
+                        <p class="font-pri my-3 font15">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda laborum officiis nisi omnis! Illum, quibusdam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eligendi deleniti quam amet earum laudantium.
+                        </p>
+                        <p class="font-pri date font15">20-12-20201</p>
+                    </div>
                 </div>
             </div>
-            <div class="search-result row pb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
-                <div class="col-md-3 result-img pl-0">
-                    <div class="image">
-                        <div class="post-thumbnail">
-                            <a href=""> <img src="{{ Theme::asset()->url('images/search/search-6.png') }}" alt="img-detail"></a>
-                        </div>
-                    </div>
+            <div class="search-result row mb-md-4 mb-5" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                <div class="col-lg-3 col-md-5 result-img">
+                    <a class="image h-100" href="#" title="">
+                        <img src="{{ Theme::asset()->url('images/search/search-6.png') }}" alt="img-detail" class="w-100 h-100 object-fit-cover">
+                    </a>
                 </div>
-                <div class="col-md-9 result-content">
-                    <a href="#"><h3 class="font-pri-bold font30 mb-3  color-gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, perspiciatis? Cupiditate eligen dol optio placeat.</h3></a>
-                    <p class="font-pri mt-3 font15">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda laborum officiis nisi omnis! Illum, quibusdam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eligendi deleniti quam amet earum laudantium.
-                    </p>
-                    <p class="font-pri date font15">20-12-20201</p>
+                <div class="col-lg-9 col-md-7 result-content">
+                    <div class="content">
+                        <a href="#"><h3 class="font-pri-bold font30  color-gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, perspiciatis? Cupiditate eligen dol optio placeat.</h3></a>
+                        <p class="font-pri my-3 font15">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda laborum officiis nisi omnis! Illum, quibusdam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eligendi deleniti quam amet earum laudantium.
+                        </p>
+                        <p class="font-pri date font15">20-12-20201</p>
+                    </div>
                 </div>
             </div>
-            <div class="search-result row pb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
-                <div class="col-md-3 result-img pl-0">
-                    <div class="image">
-                        <div class="post-thumbnail">
-                            <a href=""> <img src="{{ Theme::asset()->url('images/search/search-7.png') }}" alt="img-detail"></a>
-                        </div>
-                    </div>
+            <div class="search-result row mb-md-4 mb-5" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                <div class="col-lg-3 col-md-5 result-img">
+                    <a class="image h-100" href="#" title="">
+                        <img src="{{ Theme::asset()->url('images/search/search-7.png') }}" alt="img-detail" class="w-100 h-100 object-fit-cover">
+                    </a>
                 </div>
-                <div class="col-md-9 result-content">
-                    <a href="#"><h3 class="font-pri-bold font30 mb-3 color-gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, perspiciatis? Cupiditate eligen dol optio placeat.</h3></a>
-                    <p class="font-pri mt-3 font15">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda laborum officiis nisi omnis! Illum, quibusdam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eligendi deleniti quam amet earum laudantium.
-                    </p>
-                    <p class="font-pri date font15">20-12-20201</p>
+                <div class="col-lg-9 col-md-7 result-content">
+                    <div class="content">
+                        <a href="#"><h3 class="font-pri-bold font30 color-gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, perspiciatis? Cupiditate eligen dol optio placeat.</h3></a>
+                        <p class="font-pri my-3 font15">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda laborum officiis nisi omnis! Illum, quibusdam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eligendi deleniti quam amet earum laudantium.
+                        </p>
+                        <p class="font-pri date font15">20-12-20201</p>
+                    </div>
                 </div>
             </div>
             

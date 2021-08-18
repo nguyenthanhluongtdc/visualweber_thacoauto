@@ -431,15 +431,12 @@
                         </div>
                     </div>
                     <div class="library-item__content">
-<<<<<<< HEAD
                         <a href="#" class="library-title font25  fontmb-medium">THADICO ủng hộ 3 tỷ đồng cho Quỹ phòng, chống Covid-19
                             tỉnh Bến Tre</a>
                         <p class="library-description font20 fontmb-little">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-=======
                         <a href="#" class="library-title font25 fontmb-medium">THADICO ủng hộ 3 tỷ đồng cho Quỹ phòng, chống Covid-19
                             tỉnh Bến Tre</a>
                         <p class="library-description font20 fontmb-majority">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
->>>>>>> d4bfa5fac4d90757731947509d257b81f1e4bb2e
                             sed do eiusmod</p>
                     </div>
                 </div>
@@ -452,15 +449,12 @@
                         </div>
                     </div>
                     <div class="library-item__content">
-<<<<<<< HEAD
                         <a href="#" class="library-title font25  fontmb-medium">THADICO ủng hộ 3 tỷ đồng cho Quỹ phòng, chống Covid-19
                             tỉnh Bến Tre</a>
                         <p class="library-description font20 fontmb-little">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-=======
                         <a href="#" class="library-title font25 fontmb-medium">THADICO ủng hộ 3 tỷ đồng cho Quỹ phòng, chống Covid-19
                             tỉnh Bến Tre</a>
                         <p class="library-description font20 fontmb-majority">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
->>>>>>> d4bfa5fac4d90757731947509d257b81f1e4bb2e
                             sed do eiusmod</p>
                     </div>
                 </div>
@@ -473,15 +467,12 @@
                         </div>
                     </div>
                     <div class="library-item__content">
-<<<<<<< HEAD
                         <a href="#" class="library-title font25  fontmb-medium">THADICO ủng hộ 3 tỷ đồng cho Quỹ phòng, chống Covid-19
                             tỉnh Bến Tre</a>
                         <p class="library-description font20 fontmb-little">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-=======
                         <a href="#" class="library-title font25 fontmb-medium">THADICO ủng hộ 3 tỷ đồng cho Quỹ phòng, chống Covid-19
                             tỉnh Bến Tre</a>
                         <p class="library-description font20 fontmb-majority">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
->>>>>>> d4bfa5fac4d90757731947509d257b81f1e4bb2e
                             sed do eiusmod</p>
                     </div>
                 </div>
@@ -494,15 +485,12 @@
                         </div>
                     </div>
                     <div class="library-item__content">
-<<<<<<< HEAD
                         <a href="#" class="library-title font25  fontmb-medium">THADICO ủng hộ 3 tỷ đồng cho Quỹ phòng, chống Covid-19
                             tỉnh Bến Tre</a>
                         <p class="library-description font20 fontmb-little">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-=======
                         <a href="#" class="library-title font25 fontmb-medium">THADICO ủng hộ 3 tỷ đồng cho Quỹ phòng, chống Covid-19
                             tỉnh Bến Tre</a>
                         <p class="library-description font20 fontmb-majority">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
->>>>>>> d4bfa5fac4d90757731947509d257b81f1e4bb2e
                             sed do eiusmod</p>
                     </div>
                 </div>
@@ -515,15 +503,12 @@
                         </div>
                     </div>
                     <div class="library-item__content">
-<<<<<<< HEAD
                         <a href="#" class="library-title font25  fontmb-medium">THADICO ủng hộ 3 tỷ đồng cho Quỹ phòng, chống Covid-19
                             tỉnh Bến Tre</a>
                         <p class="library-description font20 fontmb-little">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-=======
                         <a href="#" class="library-title font25 fontmb-medium">THADICO ủng hộ 3 tỷ đồng cho Quỹ phòng, chống Covid-19
                             tỉnh Bến Tre</a>
                         <p class="library-description font20 fontmb-majority">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
->>>>>>> d4bfa5fac4d90757731947509d257b81f1e4bb2e
                             sed do eiusmod</p>
                     </div>
                 </div>

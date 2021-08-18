@@ -3,6 +3,7 @@
     .rd-production{
         &__title{
             margin-bottom: 17px;
+           
         }
     }
     .car-production{
@@ -13,6 +14,7 @@
         }
         &__content{
             overflow: hidden;
+           
             ul{
                 display: grid;
                 margin-left: -1%;

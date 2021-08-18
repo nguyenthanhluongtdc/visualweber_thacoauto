@@ -52,6 +52,43 @@
                     
                     }
             }
+            @media only screen and (max-width: 1080px){
+                margin-bottom: 5%;
+                .item-top{
+                    .tabcontents{
+                        .content-bottom{
+                            p{
+                                font-size: 15px;
+                                margin-top: 2%;
+                            }
+                            h4{
+                                font-size: 25px;
+                            }
+                        }
+                    }
+                }
+                .item-left{
+                    padding-top: 76%;
+                    .tablink{
+                        margin-bottom: 5%;
+                    }
+                    button{
+                        font-size: 20px;
+                       
+                    }
+                }
+                .item-right{
+                    padding-top: 76%;
+                    .tablink{
+                        margin-bottom: 5%;
+                    }
+                    button{
+                        font-size: 20px;
+                       
+                    }
+                
+                }
+            }
             @media only screen and (max-width: 992px){
                 margin-bottom: 5%;
                 .item-top{
@@ -89,7 +126,7 @@
                 
                 }
             }
-            @media only screen and (max-width: 767px){
+            @media only screen and (max-width: 768px){
                margin-bottom: 5%;
                 .item-top{
                     .tabcontents{
@@ -105,7 +142,7 @@
                     }
                 }
                 .item-left{
-                    padding-top: 78%;
+                    padding-top: 77%;
                     .tablink{
                         margin-bottom: 5%;
                     }
@@ -115,7 +152,7 @@
                     }
                 }
                 .item-right{
-                    padding-top: 78%;
+                    padding-top: 77%;
                     .tablink{
                         margin-bottom: 5%;
                     }
@@ -176,22 +213,22 @@
                     }
                 }
                 .item-left{
-                    padding-top: 93%;
+                    padding-top: 98%;
                     .tablink{
                         margin-bottom: 5%;
                     }
                     button{
-                        font-size: 18px;
+                        font-size: 15px;
                        
                     }
                 }
                 .item-right{
-                    padding-top: 93%;
+                    padding-top: 98%;
                     .tablink{
                         margin-bottom: 5%;
                     }
                     button{
-                        font-size: 18px;
+                        font-size: 15px;
                        
                     }
                 }
@@ -205,7 +242,7 @@
                         margin-bottom: 5%;
                     }
                     button{
-                        font-size: 18px;
+                        font-size: 12px;
                        
                     }
                 }
@@ -215,7 +252,7 @@
                         margin-bottom: 5%;
                     }
                     button{
-                        font-size: 18px;
+                        font-size: 12px;
                        
                     }
                 }
@@ -231,47 +268,48 @@
             padding-bottom: 2%;
             .tablink{
                 font-family: $font-primary-bold;
+               
             }
-            button {
-            display: block;
-            margin-bottom: 5%;
-            background-color: inherit;
-            color: $color787878;
-            background-color: #fff;
-            padding: 7.7% 0;
-            width: 100%;
-            border: none;
-            outline: none;
-            text-align: center;
-            cursor: pointer;
-            box-shadow: rgba(0, 0, 0, 0.04) 0px 1px 3px;
-            transition: .3s ease-in-out;
-            @media(max-width : 1720px){
-                margin-bottom: 4.85%;
-            }   
-            @media(max-width : 1600px){
-                margin-bottom: 7.4%;
-            } 
-            @media(max-width : 1400px){
-                margin-bottom: 7.9%;
-            } 
-            @media(max-width : 1300px){
-                margin-bottom: 9%;
-            } 
-        
-            @media(max-width : 1100px){
-                margin-bottom: 12.1%;
-            }  
-            }
-            button:hover {
-            background-color: $color-primary;
-            color: #fff;
+                button {
+                display: block;
+                margin-bottom: 5%;
+                background-color: inherit;
+                color: $color787878;
+                background-color: #fff;
+                padding: 7.7% 0;
+                width: 100%;
+                border: none;
+                outline: none;
+                text-align: center;
+                cursor: pointer;
+                box-shadow: rgba(0, 0, 0, 0.04) 0px 1px 3px;
+                transition: .3s ease-in-out;
+                @media(max-width : 1720px){
+                    margin-bottom: 4.85%;
+                }   
+                @media(max-width : 1600px){
+                    margin-bottom: 7.4%;
+                } 
+                @media(max-width : 1400px){
+                    margin-bottom: 7.9%;
+                } 
+                @media(max-width : 1300px){
+                    margin-bottom: 9%;
+                } 
             
-            }
-            button.active {
+                @media(max-width : 1100px){
+                    margin-bottom: 12.1%;
+                }  
+                }
+                button:hover {
                 background-color: $color-primary;
                 color: #fff;
-            }
+                
+                }
+                button.active {
+                    background-color: $color-primary;
+                    color: #fff;
+                }
             
         }
             
@@ -294,6 +332,12 @@
                 }
                 p{
                     padding: 0 2%;
+                    @media only screen and (max-width: 400px){
+                        font-size: 12px;
+                    }
+                    @media only screen and (max-width: 600px){
+                        font-size: 15px;
+                    }
                 }
                 .read-more {
                     margin: 2%;

@@ -373,6 +373,9 @@
         padding: 0;
         @include mobileMarginTop(95, "+");
     }
+    .nav-item.sub-menu:after {
+        z-index: -1;
+    }
     .nav-item.sub-menu:after, label.menu-label:before {
         content: "";
         border: 2px solid transparent;

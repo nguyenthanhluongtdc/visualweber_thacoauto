@@ -12,6 +12,9 @@
 
 .slider-main-carousel {
     margin-top: -4.2vw;
+    @media (max-width: 1080px) {
+        margin-top: 0;
+    }
     .slider-main-item {
         position: relative;
         overflow: hidden;

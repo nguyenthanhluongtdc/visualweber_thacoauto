@@ -451,6 +451,8 @@
                     @include lineHeight(67);
                     @include paddingX(47);
                     font-family: $font-primary-bold;
+                    @include mobileHeight(64);
+                    @include mobileLineHeight(67);
                 }
             }
 
@@ -517,6 +519,7 @@
     }
 
     .section-behave-wrapper {
+        @include mobileMarginBottom(35, "+");
         .section-behave {
             display: flex;
             @include marginX(55, "-");
@@ -555,12 +558,13 @@
             @media (max-width: 1080px) {
                 flex-wrap: wrap;
                 &__left {
-                    order: 2;
+                    order: 1;
                     @include mobilePaddingTop(40);
                 }
 
                 &__right {
-                    order: 1;
+                    order: 2;
+                    @include mobileMarginTop(20, "+");
                 }
             }
         }

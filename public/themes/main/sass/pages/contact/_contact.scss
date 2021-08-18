@@ -582,12 +582,14 @@
 .contact-info-bottom-mobile{
    display: none;
    @media only screen and (max-width: 1080px){
-       display: block;
+    display: block;
     padding-bottom: 3%;
+    
     .detail-contact{
         background-color: #f3f3f3;
         @include marginTop(50, "+");
        padding: 5%;
+       
         .content-contact{
             .detail-title {
                 font-size: 45px;

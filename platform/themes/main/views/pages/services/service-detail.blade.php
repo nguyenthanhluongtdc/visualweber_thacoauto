@@ -1,11 +1,11 @@
 <section class="section-product-detail">
     <div class="container-remake">
         <div class="product-detail"> 
-            <h2 class="product-detail__title font-mi-bold font60 fontmb-big">
+            <h2 class="product-detail__title font-mi-bold font60 fontmb-large">
                 bảo hành bảo dưỡng
             </h2>
             <img src="{{Theme::asset()->url('images/services/banner-cham-soc-xe.jpg')}}" alt="" class="product-detail__banner">
-            <h2 class="product-detail__title font-mi-bold font60 fontmb-big">
+            <h2 class="product-detail__title font-mi-bold font60 fontmb-large">
                 THÔNG TIN CHI TIẾT
             </h2>
             <div class="product-detail__desc font-pri font20">

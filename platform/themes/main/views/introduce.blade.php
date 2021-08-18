@@ -36,13 +36,8 @@
         </div>
         <div class="container-remake">
             <div class="section-aboutus" id="section_one">
-<<<<<<< HEAD
                 <div class="section-aboutus__content font20" data-aos="fade-down-right">
                     <h2 class="section-aboutus__content__title font-pri-bold font60 fontmb-large" >
-=======
-                <div class="section-aboutus__content font20 fontmb-majority" data-aos="fade-down-right">
-                    <h2 class="section-aboutus__content__title font-pri-bold font60 fontmb-big">
->>>>>>> d4bfa5fac4d90757731947509d257b81f1e4bb2e
                         về chúng tôi
                     </h2>
                     <p>
@@ -74,17 +69,10 @@
                                 <div class="symbol">
                                     <img src="{{Theme::asset()->url('images/introduce/symbol6.png')}}" alt="">
                                 </div>
-<<<<<<< HEAD
                                 <div class="company-name font17 font-pri-bold fontmb-small">
                                     THACO AUTO
                                 </div>
                                 <div class="name font40 font-pri-bold fontmb-middle">
-=======
-                                <div class="company-name font17 fontmb-medium font-pri-bold">
-                                    THACO AUTO
-                                </div>
-                                <div class="name font40 fontmb-rather font-pri-bold">
->>>>>>> d4bfa5fac4d90757731947509d257b81f1e4bb2e
                                     sản xuất
                                 </div>
                                 <p class="description fontmb-little">
@@ -141,17 +129,10 @@
                                 <div class="symbol">
                                     <img src="{{Theme::asset()->url('images/introduce/symbol5.png')}}" alt="">
                                 </div>
-<<<<<<< HEAD
                                 <div class="company-name font17 font-pri-bold fontmb-small">
                                     THACO AUTO
                                 </div>
                                 <div class="name font40 font-pri-bold fontmb-middle">
-=======
-                                <div class="company-name font17 fontmb-medium font-pri-bold">
-                                    THACO AUTO
-                                </div>
-                                <div class="name font40 fontmb-rather font-pri-bold">
->>>>>>> d4bfa5fac4d90757731947509d257b81f1e4bb2e
                                     kinh doanh
                                 </div>
                                 <p class="description fontmb-little">
@@ -220,11 +201,7 @@
     <div class="section-system-value-wrapper font20 fontmb-majority" id="section_three">
         <div class="container-remake">
             <div class="section-system-value">
-<<<<<<< HEAD
                 <h2 class="section-system-value__title text-uppercase font-pri-bold font60 fontmb-large" data-aos="fade-right">
-=======
-                <h2 class="section-system-value__title text-uppercase font-pri-bold font60 fontmb-big" data-aos="fade-right">
->>>>>>> d4bfa5fac4d90757731947509d257b81f1e4bb2e
                     Hệ giá trị
                 </h2>
                 <p class="section-system-value__des fontmb-little" data-aos="fade-left">
@@ -235,11 +212,7 @@
                 <div class="section-system-value__content">
                     <div class="section-system-value__content__left">
                         <div class="__left__row" data-aos="fade-up" data-aos-delay="300">
-<<<<<<< HEAD
                             <h3 class="title font30 font-pri-bold fontmb-medium">
-=======
-                            <h3 class="title font30 fontmb-rather font-pri-bold">
->>>>>>> d4bfa5fac4d90757731947509d257b81f1e4bb2e
                                 Tầm nhìn
                             </h3>
                             <p class="description fontmb-little">
@@ -247,11 +220,7 @@
                             </p>
                         </div>
                         <div class="__left__row" data-aos="fade-up" data-aos-delay="600">
-<<<<<<< HEAD
                             <h3 class="title font30 font-pri-bold fontmb-medium">
-=======
-                            <h3 class="title font30 fontmb-rather font-pri-bold">
->>>>>>> d4bfa5fac4d90757731947509d257b81f1e4bb2e
                                 sứ mệnh
                             </h3>
                             <p class="description fontmb-little">
@@ -259,11 +228,7 @@
                             </p>
                         </div>
                         <div class="__left__row" data-aos="fade-up" data-aos-delay="900">
-<<<<<<< HEAD
                             <h3 class="title font30 font-pri-bold fontmb-medium">
-=======
-                            <h3 class="title font30 fontmb-rather font-pri-bold">
->>>>>>> d4bfa5fac4d90757731947509d257b81f1e4bb2e
                                 định hướng chiến lược
                             </h3>
                             <p class="description fontmb-little">
@@ -285,11 +250,7 @@
                                     <div class="symbol">
                                         <img src="{{Theme::asset()->url('images/introduce/symbol12.png')}}" alt="">
                                     </div>
-<<<<<<< HEAD
                                     <div class="name fontmb-small">
-=======
-                                    <div class="fontmb-medium name">
->>>>>>> d4bfa5fac4d90757731947509d257b81f1e4bb2e
                                         xe du lịch
                                     </div>
                                 </div>
@@ -301,11 +262,7 @@
                                     <div class="symbol">
                                         <img src="{{Theme::asset()->url('images/introduce/symbol8.png')}}" alt="">
                                     </div>
-<<<<<<< HEAD
                                     <div class="name fontmb-small">
-=======
-                                    <div class="fontmb-medium name">
->>>>>>> d4bfa5fac4d90757731947509d257b81f1e4bb2e
                                         xe bus
                                     </div>
                                 </div>
@@ -317,11 +274,7 @@
                                     <div class="symbol">
                                         <img src="{{Theme::asset()->url('images/introduce/symbol9.png')}}" alt="">
                                     </div>
-<<<<<<< HEAD
                                     <div class="name fontmb-small">
-=======
-                                    <div class="fontmb-medium name">
->>>>>>> d4bfa5fac4d90757731947509d257b81f1e4bb2e
                                         xe tải
                                     </div>
                                 </div>
@@ -333,11 +286,7 @@
                                     <div class="symbol">
                                         <img src="{{Theme::asset()->url('images/introduce/symbol10.png')}}" alt="">
                                     </div>
-<<<<<<< HEAD
                                     <div class="name fontmb-small">
-=======
-                                    <div class="fontmb-medium name">
->>>>>>> d4bfa5fac4d90757731947509d257b81f1e4bb2e
                                         xe chuyên dụng
                                     </div>
                                 </div>
@@ -351,20 +300,12 @@
 
     <div class="section-leader-room" id="section_four">
        <div class="container-remake">
-<<<<<<< HEAD
             <h2 class="section-leader-room__title font-pri-bold font60 fontmb-large" data-aos="fade-right">
-=======
-            <h2 class="section-leader-room__title font-pri-bold font60 fontmb-big" data-aos="fade-right">
->>>>>>> d4bfa5fac4d90757731947509d257b81f1e4bb2e
                 ban lãnh đạo
             </h2>
             <div class="section-leader-room__row font20">
                 <div class="section-leader-room__row__header" data-aos="zoom-in">
-<<<<<<< HEAD
                     <span class="box font25 fontmb-small">
-=======
-                    <span class="box font25 fontmb-rather">
->>>>>>> d4bfa5fac4d90757731947509d257b81f1e4bb2e
                         Hội đồng quản trị thaco auto
                     </span>
                 </div>
@@ -518,11 +459,7 @@
 
             <div class="section-leader-room__row font20">
                 <div class="section-leader-room__row__header" data-aos="zoom-in">
-<<<<<<< HEAD
                     <span class="box font25 fontmb-small">
-=======
-                    <span class="box font25 fontmb-rather">
->>>>>>> d4bfa5fac4d90757731947509d257b81f1e4bb2e
                         ban kiểm soát
                     </span>
                 </div>
@@ -580,11 +517,7 @@
 
             <div class="section-leader-room__row font20">
                 <div class="section-leader-room__row__header" data-aos="zoom-in">
-<<<<<<< HEAD
                     <span class="box font25 fontmb-small">
-=======
-                    <span class="box font25 fontmb-rather">
->>>>>>> d4bfa5fac4d90757731947509d257b81f1e4bb2e
                         Ban tổng giám đốc
                     </span>
                 </div>
@@ -744,11 +677,7 @@
         <div class="container-remake">
             <div class="section-behave">
                 <div class="section-behave__left">
-<<<<<<< HEAD
                     <h2 class="section-behave__title font60 font-pri-bold fontmb-middle" data-aos="fade-right">
-=======
-                    <h2 class="section-behave__title font60 fontmb-big font-pri-bold" data-aos="fade-right">
->>>>>>> d4bfa5fac4d90757731947509d257b81f1e4bb2e
                         văn hóa ứng xử
                     </h2>
                     <div class="section-behave__des fontmb-little" data-aos="fade-left">
@@ -774,11 +703,7 @@
         <div class="container-remake">
             <div class="section-criteria">
                 <div class="section-criteria__header">
-<<<<<<< HEAD
                     <h2 class="section-criteria__header__title font60 font-pri-bold fontmb-middle" data-aos="fade-right">
-=======
-                    <h2 class="section-criteria__header__title font60 fontmb-big font-pri-bold" data-aos="fade-right">
->>>>>>> d4bfa5fac4d90757731947509d257b81f1e4bb2e
                         Tiêu chí 8T
                     </h2>
                     <p class="section-criteria__headers__des fontmb-little" data-aos="fade-left">

@@ -28,7 +28,7 @@ interface PostInterface extends BlogPostInterface
      * @param array $with
      * @return mixed
      */
-    public function getOnlyFeaturedByCategoryCreated($categoryId, int $limit = 5, $createdAt, array $with = []);
+    public function getOnlyFeaturedByCategoryCreated($categoryId, int $limit = 5, $createdAt = null, array $with = []);
 
     
 }

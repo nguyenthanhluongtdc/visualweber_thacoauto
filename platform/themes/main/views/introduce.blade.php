@@ -37,7 +37,7 @@
         <div class="container-remake">
             <div class="section-aboutus" id="section_one">
                 <div class="section-aboutus__content font20" data-aos="fade-down-right">
-                    <h2 class="section-aboutus__content__title font-pri-bold font60" >
+                    <h2 class="section-aboutus__content__title font-pri-bold font60 fontmb-large" >
                         về chúng tôi
                     </h2>
                     <p>
@@ -69,13 +69,13 @@
                                 <div class="symbol">
                                     <img src="{{Theme::asset()->url('images/introduce/symbol6.png')}}" alt="">
                                 </div>
-                                <div class="company-name font17 font-pri-bold">
+                                <div class="company-name font17 font-pri-bold fontmb-small">
                                     THACO AUTO
                                 </div>
-                                <div class="name font40 font-pri-bold">
+                                <div class="name font40 font-pri-bold fontmb-middle">
                                     sản xuất
                                 </div>
-                                <p class="description">
+                                <p class="description fontmb-little">
                                     THACO là doanh nghiệp hàng đầu và có quy mô lớn nhất tại Việt Nam về lĩnh vực sản xuất lắp ráp ô tô, sản xuất linh kiện phụ tùng, lắp ráp ô tô, đến giao nhận vận chuyển và phân phối, bán lẻ.
                                 </p>
                             </div>
@@ -86,7 +86,7 @@
                                     <div class="symbol">
                                         <img src="{{Theme::asset()->url('images/introduce/symbol11.png')}}" alt="">
                                     </div>
-                                    <div class="name">
+                                    <div class="name  fontmb-small">
                                         R&d 
                                     </div>
                                 </div>
@@ -96,7 +96,7 @@
                                     <div class="symbol">
                                         <img src="{{Theme::asset()->url('images/introduce/symbol2.png')}}" alt="">
                                     </div>
-                                    <div class="name">
+                                    <div class="name  fontmb-small">
                                         Sản xuất - Lắp ráp Ô tô & xe máy
                                     </div>
                                 </div>
@@ -106,7 +106,7 @@
                                     <div class="symbol">
                                         <img src="{{Theme::asset()->url('images/introduce/symbol1.png')}}" alt="">
                                     </div>
-                                    <div class="name">
+                                    <div class="name  fontmb-small">
                                         công nghiệp hỗ trợ & cơ khí
                                     </div>
                                 </div>
@@ -116,7 +116,7 @@
                                     <div class="symbol">
                                         <img src="{{Theme::asset()->url('images/introduce/symbol3.png')}}" alt="">
                                     </div>
-                                    <div class="name">
+                                    <div class="name  fontmb-small">
                                         xuất khẩu
                                     </div>
                                 </div>
@@ -129,13 +129,13 @@
                                 <div class="symbol">
                                     <img src="{{Theme::asset()->url('images/introduce/symbol5.png')}}" alt="">
                                 </div>
-                                <div class="company-name font17 font-pri-bold">
+                                <div class="company-name font17 font-pri-bold fontmb-small">
                                     THACO AUTO
                                 </div>
-                                <div class="name font40 font-pri-bold">
+                                <div class="name font40 font-pri-bold fontmb-middle">
                                     kinh doanh
                                 </div>
-                                <p class="description">
+                                <p class="description fontmb-little">
                                     Kinh doanh ô tô với chuỗi giá trị xuyên suốt từ nghiên cứu và phát triển sản phẩm đến Sản xuất - Phân phối - Bán lẻ, đáp ứng nhu cầu thị trường trong nước và xuất khẩu.
                                 </p>
                            </div>
@@ -146,7 +146,7 @@
                                     <div class="symbol">
                                         <img src="{{Theme::asset()->url('images/introduce/symbol12.png')}}" alt="">
                                     </div>
-                                    <div class="name">
+                                    <div class="name fontmb-small">
                                         xe du lịch
                                     </div>
                                 </div>
@@ -156,7 +156,7 @@
                                     <div class="symbol">
                                         <img src="{{Theme::asset()->url('images/introduce/symbol10.png')}}" alt="">
                                     </div>
-                                    <div class="name">
+                                    <div class="name fontmb-small">
                                         Mô tô & Xe máy
                                     </div>
                                 </div>
@@ -166,7 +166,7 @@
                                     <div class="symbol">
                                         <img src="{{Theme::asset()->url('images/introduce/symbol9.png')}}" alt="">
                                     </div>
-                                    <div class="name">
+                                    <div class="name fontmb-small">
                                         xe tải
                                     </div>
                                 </div>
@@ -176,7 +176,7 @@
                                     <div class="symbol">
                                         <img src="{{Theme::asset()->url('images/introduce/symbol8.png')}}" alt="">
                                     </div>
-                                    <div class="name">
+                                    <div class="name fontmb-small">
                                         xe bus
                                     </div>
                                 </div>
@@ -186,7 +186,7 @@
                                     <div class="symbol">
                                         <img src="{{Theme::asset()->url('images/introduce/symbol7.png')}}" alt="">
                                     </div>
-                                    <div class="name">
+                                    <div class="name fontmb-small">
                                         dịch vụ - phụ tùng
                                     </div>
                                 </div>
@@ -201,10 +201,10 @@
     <div class="section-system-value-wrapper font20" id="section_three">
         <div class="container-remake">
             <div class="section-system-value">
-                <h2 class="section-system-value__title text-uppercase font-pri-bold font60" data-aos="fade-right">
+                <h2 class="section-system-value__title text-uppercase font-pri-bold font60 fontmb-large" data-aos="fade-right">
                     Hệ giá trị
                 </h2>
-                <p class="section-system-value__des" data-aos="fade-left">
+                <p class="section-system-value__des fontmb-little" data-aos="fade-left">
                     Tập đoàn THACO tiền thân là Công ty CP ôtô Trường Hải, được thành lập vào ngày 29/04/1997. Người sáng lập là ông Trần Bá Dương, hiện là Chủ tịch Hội đồng Quản trị THACO. Tổng số nhân sự hiện nay khoảng 25.000 người.
                     Sau 24 năm hình thành và phát triển, THACO đã trở thành Tập đoàn công nghiệp đa ngành với các Tổng công ty thành viên là THACO AUTO (Ô tô và Cơ khí); THAGRICO (Nông lâm nghiệp); THADICO (Đầu tư xây dựng); THILOGI (Logistics) và THISO (Thương mại dịch vụ).
                 </p>
@@ -212,26 +212,26 @@
                 <div class="section-system-value__content">
                     <div class="section-system-value__content__left">
                         <div class="__left__row" data-aos="fade-up" data-aos-delay="300">
-                            <h3 class="title font30 font-pri-bold">
+                            <h3 class="title font30 font-pri-bold fontmb-medium">
                                 Tầm nhìn
                             </h3>
-                            <p class="description">
+                            <p class="description fontmb-little">
                                 Doanh nghiệp sản xuất – kinh doanh – xuất khẩu ô tô & cơ khí của Việt Nam, phát triển bền vững trong bối cảnh hội nhập khu vực và thế giới.
                             </p>
                         </div>
                         <div class="__left__row" data-aos="fade-up" data-aos-delay="600">
-                            <h3 class="title font30 font-pri-bold">
+                            <h3 class="title font30 font-pri-bold fontmb-medium">
                                 sứ mệnh
                             </h3>
-                            <p class="description">
+                            <p class="description fontmb-little">
                                 Mang lại giá trị cao nhất cho khách hàng thông qua sản phẩm và dịch vụ với tinh thần tận tâm phục vụ.
                             </p>
                         </div>
                         <div class="__left__row" data-aos="fade-up" data-aos-delay="900">
-                            <h3 class="title font30 font-pri-bold">
+                            <h3 class="title font30 font-pri-bold fontmb-medium">
                                 định hướng chiến lược
                             </h3>
-                            <p class="description">
+                            <p class="description fontmb-little">
                                 Tham gia chuỗi giá trị toàn cầu sản xuất kinh doanh ô tô và linh kiện phụ tùng. <br>
                                 Sản xuất - kinh doanh đa dạng chủng loại SẢN PHẨM: xe du lịch, xe bus, xe tải và xe chuyên dụng thông qua liên kết với các thương hiệu Ô tô quốc tế & phát triển thương hiệu THACO AUTO. 
                             </p>
@@ -250,7 +250,7 @@
                                     <div class="symbol">
                                         <img src="{{Theme::asset()->url('images/introduce/symbol12.png')}}" alt="">
                                     </div>
-                                    <div class="name">
+                                    <div class="name fontmb-small">
                                         xe du lịch
                                     </div>
                                 </div>
@@ -262,7 +262,7 @@
                                     <div class="symbol">
                                         <img src="{{Theme::asset()->url('images/introduce/symbol8.png')}}" alt="">
                                     </div>
-                                    <div class="name">
+                                    <div class="name fontmb-small">
                                         xe bus
                                     </div>
                                 </div>
@@ -274,7 +274,7 @@
                                     <div class="symbol">
                                         <img src="{{Theme::asset()->url('images/introduce/symbol9.png')}}" alt="">
                                     </div>
-                                    <div class="name">
+                                    <div class="name fontmb-small">
                                         xe tải
                                     </div>
                                 </div>
@@ -286,7 +286,7 @@
                                     <div class="symbol">
                                         <img src="{{Theme::asset()->url('images/introduce/symbol10.png')}}" alt="">
                                     </div>
-                                    <div class="name">
+                                    <div class="name fontmb-small">
                                         xe chuyên dụng
                                     </div>
                                 </div>
@@ -300,12 +300,12 @@
 
     <div class="section-leader-room" id="section_four">
        <div class="container-remake">
-            <h2 class="section-leader-room__title font-pri-bold font60" data-aos="fade-right">
+            <h2 class="section-leader-room__title font-pri-bold font60 fontmb-large" data-aos="fade-right">
                 ban lãnh đạo
             </h2>
             <div class="section-leader-room__row font20">
                 <div class="section-leader-room__row__header" data-aos="zoom-in">
-                    <span class="box font25">
+                    <span class="box font25 fontmb-small">
                         Hội đồng quản trị thaco auto
                     </span>
                 </div>
@@ -459,7 +459,7 @@
 
             <div class="section-leader-room__row font20">
                 <div class="section-leader-room__row__header" data-aos="zoom-in">
-                    <span class="box font25">
+                    <span class="box font25 fontmb-small">
                         ban kiểm soát
                     </span>
                 </div>
@@ -517,7 +517,7 @@
 
             <div class="section-leader-room__row font20">
                 <div class="section-leader-room__row__header" data-aos="zoom-in">
-                    <span class="box font25">
+                    <span class="box font25 fontmb-small">
                         Ban tổng giám đốc
                     </span>
                 </div>
@@ -677,10 +677,10 @@
         <div class="container-remake">
             <div class="section-behave">
                 <div class="section-behave__left">
-                    <h2 class="section-behave__title font60 font-pri-bold" data-aos="fade-right">
+                    <h2 class="section-behave__title font60 font-pri-bold fontmb-middle" data-aos="fade-right">
                         văn hóa ứng xử
                     </h2>
-                    <div class="section-behave__des" data-aos="fade-left">
+                    <div class="section-behave__des fontmb-little" data-aos="fade-left">
                         <p>
                             Quá trình phát triển của THACO AUTO là thành quả của nỗ lực vượt khó, tự tin, trí tuệ, kỷ luật và ý chí, nghị lực của người sáng lập cùng với đội ngũ nhân sự có thái độ làm việc tích cực, ý thức đóng góp cống hiến đã hình thành nên Văn hóa này.
                         </p>
@@ -690,6 +690,9 @@
                     </div>
                 </div>
                 <div class="section-behave__right" data-aos="zoom-in">
+                    <h2 class="right-title font-pri-bold fontmb-large" data-aos="fade-right">
+                        văn hóa
+                    </h2>
                     <img src="{{Theme::asset()->url('images/introduce/layer1.jpg')}}" alt="">
                 </div>
             </div>
@@ -700,10 +703,10 @@
         <div class="container-remake">
             <div class="section-criteria">
                 <div class="section-criteria__header">
-                    <h2 class="section-criteria__header__title font60 font-pri-bold" data-aos="fade-right">
+                    <h2 class="section-criteria__header__title font60 font-pri-bold fontmb-middle" data-aos="fade-right">
                         Tiêu chí 8T
                     </h2>
-                    <p class="section-criteria__headers__des" data-aos="fade-left">
+                    <p class="section-criteria__headers__des fontmb-little" data-aos="fade-left">
                         “Tiêu chí 8 chữ T” là những tiêu chí vàng đóng vai trò cốt lõi trong Văn hóa Thaco, hỗ trợ cho quá trình rèn luyện, tự kỷ luật và hoàn thiện bản thân của mỗi con người Thaco. Đây được xem như là những tiêu chí mà mỗi CB.CNV phấn đấu đạt đến để góp phần tạo nên thương hiệu Thaco tiêu biểu cho nền công nghiệp ô tô của đất nước. 
                     </p>
                 </div>

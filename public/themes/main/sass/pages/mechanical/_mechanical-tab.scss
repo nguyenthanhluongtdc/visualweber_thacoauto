@@ -73,6 +73,7 @@
                         .desc {
                             color: $color-white;
                             margin: 3% 0;
+                           
                         }
                         .read-more {
                             padding: 0.4% 1.3%;
@@ -111,13 +112,7 @@
                         border: none;
                         box-shadow: rgba(0, 0, 0, 0.04) 0px 2px 3px;
                         transition: .3s ease-in-out;
-                        font-size: 28px;
-                        @media only screen and (max-width: 600px){
-                           font-size: 20px;
-                        }
-                        @media only screen and (max-width: 400px){
-                            font-size: 18px;
-                        }
+                        
                         &:hover{
                             background-color: $color-primary;
                             color: #fff;
@@ -147,20 +142,12 @@
                             .title {
                                 color: $color-white;
                                 font-family: $font-primary-bold;
-                                font-size: 40px;
-                                
-                                @media only screen and (max-width: 600px){
-                                    font-size: 23px;
-                                }
+                               
                             }
                             .desc {
                                 color: $color-white;
                                 margin: 3% 0;
-                                font-size: 20px;
-                                
-                                @media only screen and (max-width: 600px){
-                                    font-size: 12px;
-                                }
+                               
                             }
                             .read-more {
                                 display: none;

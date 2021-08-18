@@ -1,7 +1,7 @@
 <div class="distribution">
     <div class="provincial-company">
         <div class="container-remake">
-            <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60">công ty
+            <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 fontmb-large">công ty
                 tỉnh thành</h1>
             <p data-aos="fade-left" data-aos-duration="1500" class="description desktop font20 mt-20">THACO là doanh nghiệp hàng
                 đầu và có quy mô lớn nhất tại Việt Nam về lĩnh vực sản xuất lắp ráp ô tô, với chuỗi giá trị từ nghiên
@@ -18,7 +18,7 @@
                         <option value="3">TP.HỒ CHÍ MINH</option>
                         <option value="4">TP.HỒ CHÍ MINH</option>
                     </select>
-                    <button type="submit" class="font20">xác nhận</button>
+                    <button type="submit" class="font20 fontmb-medium">xác nhận</button>
                 </form>
             </div>
             <div data-aos="zoom-in" data-aos-duration="2500" class="branch-wrap">
@@ -143,7 +143,7 @@
     </div>
     <div class="activity-news-desktop">
         <div class="container-remake">
-            <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 mb-20">tin
+            <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 mb-20 fontmb-large">tin
                 tức hoạt động</h1>
             <div class="activity-news-desktop__wrap">
                 <div data-aos="fade-right" data-aos-duration="1500" class="activity-news-desktop__item">
@@ -217,7 +217,7 @@
                     <div class="news-body">
                         <a class="news-title font30" href="#">BÀN GIAO LÔ XE CITY BUS THACO GARDEN 79CT PHỤC VỤ VẬN TẢI
                             HÀNH KHÁCH CÔNG CỘNG</a>
-                        <p class="news-description font20">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        <p class="news-description fontmb-little">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         <div class="news-info">
                             <div class="news-info__item font15">
@@ -247,9 +247,9 @@
                     </div>
                 </div>
                 <div class="news-body">
-                    <a class="news-title font-pri-bold font30" href="#">CÔNG TY TNHH MTV ĐỒNG PHƯỚC ĐẦU TƯ 5 XE MINI BUS
+                    <a class="news-title font-pri-bold fontmb-medium" href="#">CÔNG TY TNHH MTV ĐỒNG PHƯỚC ĐẦU TƯ 5 XE MINI BUS
                         IVECO DAILY</a>
-                    <p class="news-description font20">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    <p class="news-description fontmb-little">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                         eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
                         gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
                     <div class="news-info">
@@ -272,9 +272,9 @@
                     </div>
                 </div>
                 <div class="news-body">
-                    <a class="news-title font-pri-bold font30" href="#">CÔNG TY TNHH MTV ĐỒNG PHƯỚC ĐẦU TƯ 5 XE MINI BUS
+                    <a class="news-title font-pri-bold fontmb-medium" href="#">CÔNG TY TNHH MTV ĐỒNG PHƯỚC ĐẦU TƯ 5 XE MINI BUS
                         IVECO DAILY</a>
-                    <p class="news-description font20">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    <p class="news-description fontmb-little">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                         eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
                         gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
                     <div class="news-info">
@@ -297,9 +297,9 @@
                     </div>
                 </div>
                 <div class="news-body">
-                    <a class="news-title font-pri-bold font30" href="#">CÔNG TY TNHH MTV ĐỒNG PHƯỚC ĐẦU TƯ 5 XE MINI BUS
+                    <a class="news-title font-pri-bold fontmb-medium" href="#">CÔNG TY TNHH MTV ĐỒNG PHƯỚC ĐẦU TƯ 5 XE MINI BUS
                         IVECO DAILY</a>
-                    <p class="news-description font20">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    <p class="news-description fontmb-little">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                         eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
                         gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
                     <div class="news-info">
@@ -356,7 +356,7 @@
     <div class="library mb-60">
         <div class="container-remake">
             <div class="library-header">
-                <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60">thư
+                <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 fontmb-middle">thư
                     viện</h1>
                 <div class="library-button">
                     <img class="customPrevBtn" src="{{Theme::asset()->url('images/distribution/icon_left.png')}}"
@@ -378,9 +378,9 @@
                         </div>
                     </div>
                     <div class="library-item__content">
-                        <a href="#" class="library-title font25">THADICO ủng hộ 3 tỷ đồng cho Quỹ phòng, chống Covid-19
+                        <a href="#" class="library-title font25 fontmb-medium">THADICO ủng hộ 3 tỷ đồng cho Quỹ phòng, chống Covid-19
                             tỉnh Bến Tre</a>
-                        <p class="library-description font20">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        <p class="library-description font20 fontmb-little">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                             sed do eiusmod</p>
                     </div>
                 </div>
@@ -393,9 +393,9 @@
                         </div>
                     </div>
                     <div class="library-item__content">
-                        <a href="#" class="library-title font25">THADICO ủng hộ 3 tỷ đồng cho Quỹ phòng, chống Covid-19
+                        <a href="#" class="library-title font25  fontmb-medium">THADICO ủng hộ 3 tỷ đồng cho Quỹ phòng, chống Covid-19
                             tỉnh Bến Tre</a>
-                        <p class="library-description font20">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        <p class="library-description font20 fontmb-little">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                             sed do eiusmod</p>
                     </div>
                 </div>
@@ -408,9 +408,9 @@
                         </div>
                     </div>
                     <div class="library-item__content">
-                        <a href="#" class="library-title font25">THADICO ủng hộ 3 tỷ đồng cho Quỹ phòng, chống Covid-19
+                        <a href="#" class="library-title font25  fontmb-medium">THADICO ủng hộ 3 tỷ đồng cho Quỹ phòng, chống Covid-19
                             tỉnh Bến Tre</a>
-                        <p class="library-description font20">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        <p class="library-description font20 fontmb-little">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                             sed do eiusmod</p>
                     </div>
                 </div>
@@ -423,9 +423,9 @@
                         </div>
                     </div>
                     <div class="library-item__content">
-                        <a href="#" class="library-title font25">THADICO ủng hộ 3 tỷ đồng cho Quỹ phòng, chống Covid-19
+                        <a href="#" class="library-title font25  fontmb-medium">THADICO ủng hộ 3 tỷ đồng cho Quỹ phòng, chống Covid-19
                             tỉnh Bến Tre</a>
-                        <p class="library-description font20">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        <p class="library-description font20 fontmb-little">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                             sed do eiusmod</p>
                     </div>
                 </div>
@@ -438,9 +438,9 @@
                         </div>
                     </div>
                     <div class="library-item__content">
-                        <a href="#" class="library-title font25">THADICO ủng hộ 3 tỷ đồng cho Quỹ phòng, chống Covid-19
+                        <a href="#" class="library-title font25  fontmb-medium">THADICO ủng hộ 3 tỷ đồng cho Quỹ phòng, chống Covid-19
                             tỉnh Bến Tre</a>
-                        <p class="library-description font20">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        <p class="library-description font20 fontmb-little">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                             sed do eiusmod</p>
                     </div>
                 </div>
@@ -453,9 +453,9 @@
                         </div>
                     </div>
                     <div class="library-item__content">
-                        <a href="#" class="library-title font25">THADICO ủng hộ 3 tỷ đồng cho Quỹ phòng, chống Covid-19
+                        <a href="#" class="library-title font25  fontmb-medium">THADICO ủng hộ 3 tỷ đồng cho Quỹ phòng, chống Covid-19
                             tỉnh Bến Tre</a>
-                        <p class="library-description font20">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        <p class="library-description font20 fontmb-little">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                             sed do eiusmod</p>
                     </div>
                 </div>

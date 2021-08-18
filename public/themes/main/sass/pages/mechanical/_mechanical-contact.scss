@@ -214,12 +214,7 @@
         display: block;       
     
     .mechanical-contact {
-        &__title{
-            font-size: 45px;
-            @media only screen and (max-width: 767px){
-                font-size: 35px;
-            }
-        }
+        
         background: #f1f1f1;        
         &__content {
            

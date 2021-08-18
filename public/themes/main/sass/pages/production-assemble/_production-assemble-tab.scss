@@ -35,7 +35,7 @@
                        margin-bottom: 10.2%;
                    } 
                    @media(max-width : 1300px){
-                       margin-bottom: 9.9%;
+                       margin-bottom: 10%;
                    } 
                  
                   
@@ -169,18 +169,13 @@
                     text-transform: uppercase;
                     font-family: $font-primary-bold;
                     color: #000;
-                    font-size: 28px;
+                    
                     padding: 3% 0;
                     margin-bottom: 2.4%;
                     border: none;
                     box-shadow: rgba(0, 0, 0, 0.04) 0px 2px 3px;
                     transition: .3s ease-in-out;
-                    @media only screen and (max-width: 600px){
-                        font-size: 20px;
-                     }
-                     @media only screen and (max-width: 400px){
-                         font-size: 18px;
-                     }
+                   
                      
                     &:hover{
                         background-color: $color-primary;
@@ -220,19 +215,12 @@
                  .title {
                      color: $color-white;
                      font-family: $font-primary-bold;
-                     font-size: 40px;
-                        @media only screen and (max-width: 600px){
-                            font-size: 23px;
-                        }
+                     
                  }
                  .desc {
                      color: $color-white;
                      margin: 3% 0;
-                     font-size: 20px;
                     
-                     @media only screen and (max-width: 600px){
-                         font-size: 12px;
-                     }
                  }
                  .read-more {
                     display: none;

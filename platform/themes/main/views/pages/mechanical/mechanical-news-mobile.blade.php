@@ -2,7 +2,7 @@
     <div class="container-remake">
         <div class="section-list-news">
                 <div class="section-list-news-header  d-flex  align-items-center mb-60">
-                    <h2 class="title font-pri-bold font60 text-uppercase">
+                    <h2 class="title font-pri-bold fontmb-large text-uppercase">
                         Tin tức
                     </h2>
                 </div>
@@ -22,7 +22,7 @@
                                 </div>
                             </div>
                             <div class="content">
-                                <h3 class="font40  font-pri-bold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa quas nisi totam tenetur eveniet neque dolore nulla a consectetur amet, aliquam at voluptates illo labore!</h3>
+                                <h3 class="fontmb-middle font-pri-bold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa quas nisi totam tenetur eveniet neque dolore nulla a consectetur amet, aliquam at voluptates illo labore!</h3>
                             </div>
                         </div>
                     </div>
@@ -41,7 +41,7 @@
                                 </div>
                             </div>
                             <div class="content">
-                                <h3 class="font40  font-pri-bold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa quas nisi totam tenetur eveniet neque dolore nulla a consectetur amet, aliquam at voluptates illo labore!</h3>
+                                <h3 class="fontmb-middle font-pri-bold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa quas nisi totam tenetur eveniet neque dolore nulla a consectetur amet, aliquam at voluptates illo labore!</h3>
                             </div>
                         </div>
                     </div>
@@ -60,7 +60,7 @@
                                 </div>
                             </div>
                             <div class="content">
-                                <h3 class="font40  font-pri-bold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa quas nisi totam tenetur eveniet neque dolore nulla a consectetur amet, aliquam at voluptates illo labore!</h3>
+                                <h3 class="fontmb-middle font-pri-bold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa quas nisi totam tenetur eveniet neque dolore nulla a consectetur amet, aliquam at voluptates illo labore!</h3>
                             </div>
                         </div>
                     </div>

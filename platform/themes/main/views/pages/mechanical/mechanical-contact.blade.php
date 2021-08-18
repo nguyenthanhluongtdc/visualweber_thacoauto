@@ -70,7 +70,7 @@
    
     {{-- data-aos="zoom-in" data-aos-duration="1500" data-aos-easing="ease-in-out" data-aos-delay="50" --}}
 
-        <h2 class="mechanical-contact__title font60 font-pri-bold mb-4 container-remake">LIÊN HỆ</h2>
+        <h2 class="mechanical-contact__title fontmb-large font-pri-bold mb-4 container-remake">LIÊN HỆ</h2>
         <div class="mechanical-contact mt-60 mb-60">
             <div class="container-remake"> 
             <div class="mechanical-contact__content">
@@ -79,7 +79,7 @@
                         <img src="{{Theme::asset()->url('images/mechandical/form-contact.jpg')}}" alt="">
                     </div>
                     <div class="left col-md-12">
-                        <div class="address font28">
+                        <div class="address">
                             <span class="text">KHU CÔNG NGHIỆP TAM HIỆP, HUYỆN NÚI THÀNH, QUẢNG NAM.</span>
                         </div>
                         <div class="phone font28">

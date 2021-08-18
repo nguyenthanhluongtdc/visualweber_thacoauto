@@ -114,10 +114,10 @@
                             </div>
                            
                             <div class="content-right__bottom">
-                                <h3 class="title font50">
+                                <h3 class="title fontmb-middle">
                                     NHÀ MÁY GIA CÔNG THÉP
                                 </h3>
-                                <p class="desc font22 font-pri">Nhà máy Gia công và cung ứng phôi thép được thành lập vào năm 2009 với chức năng sản xuất các sản phẩm vật tư thép, kim loại màu nhằm cung cấp cho...</p>
+                                <p class="desc font-pri fontmb-little">Nhà máy Gia công và cung ứng phôi thép được thành lập vào năm 2009 với chức năng sản xuất các sản phẩm vật tư thép, kim loại màu nhằm cung cấp cho...</p>
                                <div class="read-more font18"><a href="">Xem chi tiết</a></div>
                             </div>
                             
@@ -130,10 +130,10 @@
                             </div>
                            
                             <div class="content-right__bottom">
-                                <h3 class="title font50">
+                                <h3 class="title  fontmb-middle">
                                     NHÀ MÁY GIA CÔNG THÉP
                                 </h3>
-                                <p class="desc font22 font-pri">Nhà máy Gia công và cung ứng phôi thép được thành lập vào năm 2009 với chức năng sản xuất các sản phẩm vật tư thép, kim loại màu nhằm cung cấp cho ...</p>
+                                <p class="desc font-pri fontmb-little">Nhà máy Gia công và cung ứng phôi thép được thành lập vào năm 2009 với chức năng sản xuất các sản phẩm vật tư thép, kim loại màu nhằm cung cấp cho ...</p>
                                <div class="read-more font18"><a href="">Xem chi tiết</a></div>
                             </div>
                             
@@ -146,10 +146,10 @@
                             </div>
                            
                             <div class="content-right__bottom">
-                                <h3 class="title font50">
+                                <h3 class="title font50  fontmb-middle">
                                     NHÀ MÁY GIA CÔNG THÉP
                                 </h3>
-                                <p class="desc font22 font-pri">Nhà máy Gia công và cung ứng phôi thép được thành lập vào năm 2009 với chức năng sản xuất các sản phẩm vật tư thép, kim loại màu nhằm cung cấp cho ...</p>
+                                <p class="desc font22 font-pri fontmb-little">Nhà máy Gia công và cung ứng phôi thép được thành lập vào năm 2009 với chức năng sản xuất các sản phẩm vật tư thép, kim loại màu nhằm cung cấp cho ...</p>
                                <div class="read-more font18"><a href="">Xem chi tiết</a></div>
                             </div>
                             
@@ -162,10 +162,10 @@
                             </div>
                            
                             <div class="content-right__bottom">
-                                <h3 class="title font50">
+                                <h3 class="title font50  fontmb-middle">
                                     NHÀ MÁY GIA CÔNG THÉP
                                 </h3>
-                                <p class="desc font22 font-pri">Nhà máy Gia công và cung ứng phôi thép được thành lập vào năm 2009 với chức năng sản xuất các sản phẩm vật tư thép, kim loại màu nhằm cung cấp cho ...</p>
+                                <p class="desc font22 font-pri fontmb-little">Nhà máy Gia công và cung ứng phôi thép được thành lập vào năm 2009 với chức năng sản xuất các sản phẩm vật tư thép, kim loại màu nhằm cung cấp cho ...</p>
                                <div class="read-more font18"><a href="">Xem chi tiết</a></div>
                             </div>
                             
@@ -178,11 +178,11 @@
                             </div>
                            
                             <div class="content-right__bottom">
-                                <h3 class="title font50">
+                                <h3 class="title font50  fontmb-middle">
                                     NHÀ MÁY GIA CÔNG THÉP
                                 </h3>
-                                <p class="desc font22 font-pri">Nhà máy Gia công và cung ứng phôi thép được thành lập vào năm 2009 với chức năng sản xuất các sản phẩm vật tư thép, kim loại màu nhằm cung cấp cho ...</p>
-                               <div class="read-more font18"><a href="">Xem chi tiết</a></div>
+                                <p class="desc font22 font-pri fontmb-little">Nhà máy Gia công và cung ứng phôi thép được thành lập vào năm 2009 với chức năng sản xuất các sản phẩm vật tư thép, kim loại màu nhằm cung cấp cho ...</p>
+                               <div class="read-more font18 "><a href="">Xem chi tiết</a></div>
                             </div>
                             
                         </div>
@@ -190,11 +190,11 @@
                     
                 </div>
                 <div class="list-group tab-field col-md-12 p-0" id="list-tab" role="tablist" >
-                    <a class="list-group-item active show font30" id="field_name_6" data-toggle="list" href="#field_tab_content_6" role="tab" aria-controls="home" aria-selected="false">GIA CÔNG THÉP</a>
-                    <a class="list-group-item font30 " id="field_name_7" data-toggle="list" href="#field_tab_content_7" role="tab" aria-controls="profile" aria-selected="true">TỔ HỢP CƠ KHÍ</a>
-                    <a class="list-group-item font30 " id="field_name_8" data-toggle="list" href="#field_tab_content_8" role="tab" aria-controls="home" aria-selected="false">NHÀ MÁY THÉP</a>
-                    <a class="list-group-item font30 " id="field_name_9" data-toggle="list" href="#field_tab_content_9" role="tab" aria-controls="profile" aria-selected="true">NHÀ MÁY NHÍP Ô TÔ</a>
-                    <a class="list-group-item font30 " id="field_name_10" data-toggle="list" href="#field_tab_content_10" role="tab" aria-controls="home" aria-selected="false">SẢN XUẤT KHUÔN</a>
+                    <a class="list-group-item active show fontmb-medium" id="field_name_6" data-toggle="list" href="#field_tab_content_6" role="tab" aria-controls="home" aria-selected="false">GIA CÔNG THÉP</a>
+                    <a class="list-group-item fontmb-medium" id="field_name_7" data-toggle="list" href="#field_tab_content_7" role="tab" aria-controls="profile" aria-selected="true">TỔ HỢP CƠ KHÍ</a>
+                    <a class="list-group-item fontmb-medium" id="field_name_8" data-toggle="list" href="#field_tab_content_8" role="tab" aria-controls="home" aria-selected="false">NHÀ MÁY THÉP</a>
+                    <a class="list-group-item fontmb-medium" id="field_name_9" data-toggle="list" href="#field_tab_content_9" role="tab" aria-controls="profile" aria-selected="true">NHÀ MÁY NHÍP Ô TÔ</a>
+                    <a class="list-group-item fontmb-medium" id="field_name_10" data-toggle="list" href="#field_tab_content_10" role="tab" aria-controls="home" aria-selected="false">SẢN XUẤT KHUÔN</a>
                 </div>
             </div>
             

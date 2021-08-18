@@ -52,8 +52,8 @@
 <div class="section-mechanical-overview-mobile">
     <div class="container-remake">
         <div class="mechandical-overview mt-60 mb-60">
-            <h2 class="mechandical-overview__title font60 font-pri-bold">CƠ KHÍ</h2>
-            <div class="mechandical-overview__desc font28 font-pri mt-40 mb-40">
+            <h2 class="mechandical-overview__title font-pri-bold fontmb-large">CƠ KHÍ</h2>
+            <div class="mechandical-overview__desc font-pri mt-40 mb-40 fontmb-little">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
@@ -64,33 +64,33 @@
                 
                <div class="boxfield-item col-md-5 col-sm-5 col-5 p-0">
                    <img src="{{ Theme::asset()->url('images/mechandical/thep-giacong.png') }}" alt="">
-                   <p class="font40 font-pri-bold name">THÉP VÀ DỊCH VỤ
+                   <p class="font40 font-pri-bold name fontmb-medium">THÉP VÀ DỊCH VỤ
                     GIA CÔNG THÉP</p>
                </div>
                <div class="boxfield-item col-md-5 col-sm-5 col-5">
                     <img src="{{ Theme::asset()->url('images/mechandical/giacong-khuonmau.png') }}" alt="">
                     
-                    <p class="font40 font-pri-bold name">GIA CÔNG CƠ KHÍ <br>
+                    <p class="font40 font-pri-bold name fontmb-medium">GIA CÔNG CƠ KHÍ <br>
                         KHUÔN MẪU</p>
                 </div>
                 <div class="boxfield-item col-md-5 col-sm-5 col-5">
                     <img src="{{ Theme::asset()->url('images/mechandical/cokhi-oto.png') }}" alt="">
-                    <p class="font40 font-pri-bold name">CƠ KHÍ
+                    <p class="font40 font-pri-bold name fontmb-medium">CƠ KHÍ
                         Ô TÔ</p>
                 </div>
                 <div class="boxfield-item col-md-5 col-sm-5 col-5">
                     <img src="{{ Theme::asset()->url('images/mechandical/cokhi-xaydung.png') }}" alt="">
-                    <p class="font40 font-pri-bold name">CƠ KHÍ
+                    <p class="font40 font-pri-bold name fontmb-medium">CƠ KHÍ
                         XÂY DỰNG</p>
                 </div>
                 <div class="boxfield-item col-md-5 col-sm-5 col-5">
                     <img src="{{ Theme::asset()->url('images/mechandical/thietbi-congnghiep.png') }}" alt="">
-                    <p class="font40 font-pri-bold name">THIẾT BỊ
+                    <p class="font40 font-pri-bold name fontmb-medium">THIẾT BỊ
                         CÔNG NGHIỆP</p>
                 </div>
                 <div class="boxfield-item col-md-5 col-sm-5 col-5">
                     <img src="{{ Theme::asset()->url('images/mechandical/lamnghiep.png') }}" alt="">
-                    <p class="font40 font-pri-bold name">CƠ KHÍ NÔNG
+                    <p class="font40 font-pri-bold name fontmb-medium">CƠ KHÍ NÔNG
                         LÂM NGHIỆP</p>
                 </div>
                 

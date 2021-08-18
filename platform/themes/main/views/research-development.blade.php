@@ -2,8 +2,8 @@
     <div class="section-intro-wrapper">
         <div class="container-remake">
             <div class="section-intro">
-                <h1 class="section-intro__title font-pri-bold font40 text-uppercase"> Nghiên cứu & phát triển (R&D) </h1>
-                <p class="rd-production__content font20 font-pri"> Nghiên cứu, phát triển sản phẩm (R&D) là yêu cầu tất yếu nhằm tạo ra giá trị gia tăng cho sản phẩm, nâng cao năng lực cạnh tranh của doanh nghiệp, nhất là trong bối cảnh cuộc cách mạng công nghiệp lần thứ tư đặt ra yêu cầu ngày càng cao về ứng dụng công nghệ thế hệ mới vào hoạt động sản xuất kinh doanh.
+                <h1 class="section-intro__title font-pri-bold font40 fontmb-large text-uppercase"> Nghiên cứu & phát triển (R&D) </h1>
+                <p class="rd-production__content font20 font-pri fontmb-little"> Nghiên cứu, phát triển sản phẩm (R&D) là yêu cầu tất yếu nhằm tạo ra giá trị gia tăng cho sản phẩm, nâng cao năng lực cạnh tranh của doanh nghiệp, nhất là trong bối cảnh cuộc cách mạng công nghiệp lần thứ tư đặt ra yêu cầu ngày càng cao về ứng dụng công nghệ thế hệ mới vào hoạt động sản xuất kinh doanh.
                 </p>
             </div>
         </div>
@@ -13,7 +13,7 @@
         <div class="section-info-more-wrapper font-pri">
             <div class="content font20">
                 <div class="container-remake">
-                    <h2 class="title font-pri-bold font40 text-uppercase ">
+                    <h2 class="title font-pri-bold font40 fontmb-large text-uppercase ">
                         Hoạt động R&D tập trung:
                     </h2>
 
@@ -31,11 +31,11 @@
                         </li>
                     </ul>
 
-                    <p>
+                    <p class="fontmb-little">
                         Trung tâm R&D với đội ngũ hơn 350 kỹ sư và chuyên gia giàu kinh nghiệm cùng hệ thống trang thiết bị, công nghệ phù hợp và các phần mềm thiết kế, tính toán, mô phỏng (NX, HyperWorks, Catia, Moldflow), đáp ứng yêu cầu phát triển sản phẩm đúng tiêu chuẩn thiết kế theo nhu cầu của khách hàng với chất lượng cao và giá thành hợp lý.
                     </p>
 
-                    <p>
+                    <p class="fontmb-little">
                         Trong thời gian tới, Trung tâm R&D sẽ tập trung nâng cao năng lực nghiên cứu phát triển sản phẩm cho đội ngũ kỹ sư, tiếp nhận chuyển giao công nghệ từ các đối tác lớn, liên doanh với các nhà cung cấp trong và ngoài nước, đồng thời nỗ lực phát triển sản phẩm mới theo nhu cầu của khách hàng.
                     </p>
                 </div>
@@ -81,7 +81,7 @@
                         <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu7.jpg')}}" alt="" />
                     </div>
                     <div class="bottom">
-                        <p class="font-pri">Nghiên cứu sản phẩm: Nghiên cứu và phát triển các sản phẩm mới với mục tiêu đáp ứng nhu cầu của khách hàng và gia tăng tính cạnh tranh trên thị trường</p>
+                        <p class="font-pri fontmb-little">Nghiên cứu sản phẩm: Nghiên cứu và phát triển các sản phẩm mới với mục tiêu đáp ứng nhu cầu của khách hàng và gia tăng tính cạnh tranh trên thị trường</p>
                     </div>
                 </div>
                 <div class="rnd-news-mobile__wrapper " data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="50">
@@ -89,7 +89,7 @@
                         <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu5.jpg')}}" alt="" />
                     </div>
                     <div class="bottom">
-                        <p class="font-pri">Nâng cấp sản phẩm: Chuẩn hóa và nâng cấp sản phẩm để tăng công năng sử dụng và tối ưu giá thành sản phẩm</p>
+                        <p class="font-pri fontmb-little">Nâng cấp sản phẩm: Chuẩn hóa và nâng cấp sản phẩm để tăng công năng sử dụng và tối ưu giá thành sản phẩm</p>
                     </div>
                 </div>
                 <div class="rnd-news-mobile__wrapper" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="50">
@@ -97,7 +97,7 @@
                         <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu6.jpg')}}" alt="" />
                     </div>
                     <div class="bottom">
-                        <p class="font-pri">Phát triển công nghệ: Thay đổi công nghệ mang tính đột phá để nâng cấp chất lượng sản phẩm và tối ưu chi phí sản xuất</p>
+                        <p class="font-pri fontmb-little">Phát triển công nghệ: Thay đổi công nghệ mang tính đột phá để nâng cấp chất lượng sản phẩm và tối ưu chi phí sản xuất</p>
                     </div>
                 </div>
             </div>

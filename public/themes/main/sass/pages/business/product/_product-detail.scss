@@ -20,7 +20,7 @@
         }
         &__desc{
             text-align: justify;
-            line-height: 2;
+            line-height: 1.2;
             margin-bottom: 50px; @media (max-width: 1080px) {
                 @include mobileMarginBottom(40, "+");
             }
@@ -240,6 +240,7 @@
                     }
                     
                     &-title {
+                       
                         // font-size: 25px;
                         text-align: left;
                         margin-top: 0 !important;
@@ -247,6 +248,7 @@
                         @include mobileMarginBottom(30, "+");
                     }
                     &-desc {
+                       
                         // font-size: 16px;
                         @include mobileMarginBottom(40, "+");
                     }

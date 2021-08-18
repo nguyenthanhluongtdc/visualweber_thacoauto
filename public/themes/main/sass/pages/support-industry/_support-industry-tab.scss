@@ -18,12 +18,10 @@
                         .tabcontents{
                             .content-bottom{
                                 p{
-                                    font-size: 20px;
+                                  
                                     margin-top: 2%;
                                 }
-                                h4{
-                                    font-size: 28px;
-                                }
+                                
                             }
                         }
                     }
@@ -31,10 +29,7 @@
                         padding-top: 75%;
                         padding-right: 0;
                         padding-bottom: 0;
-                        button{
-                            font-size: 28px;
-                           
-                        }
+                        
                         .tablink{
                             margin-bottom: 5%;
                         }
@@ -43,9 +38,7 @@
                         padding-top: 75%;
                         padding-left: 0;
                         padding-bottom: 0;
-                        button{
-                            font-size: 28px;
-                        }
+                       
                         .tablink{
                             margin-bottom: 5%;
                         }
@@ -58,12 +51,10 @@
                     .tabcontents{
                         .content-bottom{
                             p{
-                                font-size: 15px;
+                                
                                 margin-top: 2%;
                             }
-                            h4{
-                                font-size: 25px;
-                            }
+                            
                         }
                     }
                 }
@@ -72,20 +63,14 @@
                     .tablink{
                         margin-bottom: 5%;
                     }
-                    button{
-                        font-size: 20px;
-                       
-                    }
+                   
                 }
                 .item-right{
                     padding-top: 76%;
                     .tablink{
                         margin-bottom: 5%;
                     }
-                    button{
-                        font-size: 20px;
-                       
-                    }
+                  
                 
                 }
             }
@@ -95,12 +80,10 @@
                     .tabcontents{
                         .content-bottom{
                             p{
-                                font-size: 15px;
+                               
                                 margin-top: 2%;
                             }
-                            h4{
-                                font-size: 25px;
-                            }
+                            
                         }
                     }
                 }
@@ -109,20 +92,14 @@
                     .tablink{
                         margin-bottom: 5%;
                     }
-                    button{
-                        font-size: 20px;
-                       
-                    }
+                   
                 }
                 .item-right{
                     padding-top: 79%;
                     .tablink{
                         margin-bottom: 5%;
                     }
-                    button{
-                        font-size: 20px;
-                       
-                    }
+                   
                 
                 }
             }
@@ -132,12 +109,10 @@
                     .tabcontents{
                         .content-bottom{
                             p{
-                                font-size: 12px;
+                              
                                 margin-top: 2%;
                             }
-                            h4{
-                                font-size: 25px;
-                            }
+                           
                         }
                     }
                 }
@@ -146,20 +121,14 @@
                     .tablink{
                         margin-bottom: 5%;
                     }
-                    button{
-                        font-size: 20px;
-                       
-                    }
+                   
                 }
                 .item-right{
                     padding-top: 80%;
                     .tablink{
                         margin-bottom: 5%;
                     }
-                    button{
-                        font-size: 20px;
-                       
-                    }
+                   
                 }
             }
             @media only screen and (max-width: 600px){
@@ -167,12 +136,10 @@
                     .tabcontents{
                         .content-bottom{
                             p{
-                                font-size: 15px;
+                               
                                 margin-top: 2%;
                             }
-                            h4{
-                                font-size: 23px;
-                            }
+                          
                         }
                     }
                 }
@@ -181,20 +148,14 @@
                     .tablink{
                         margin-bottom: 5%;
                     }
-                    button{
-                        font-size: 20px;
-                       
-                    }
+                   
                 }
                 .item-right{
                     padding-top: 83%;
                     .tablink{
                         margin-bottom: 5%;
                     }
-                    button{
-                        font-size: 20px;
-                       
-                    }
+                   
                 }
              }
              @media only screen and (max-width: 500px){
@@ -203,12 +164,10 @@
                     .tabcontents{
                         .content-bottom{
                             p{
-                                font-size: 12px;
+                               
                                 margin-top: 2%;
                             }
-                            h4{
-                                font-size: 23px;
-                            }
+                          
                         }
                     }
                 }
@@ -217,20 +176,14 @@
                     .tablink{
                         margin-bottom: 5%;
                     }
-                    button{
-                        font-size: 15px;
-                       
-                    }
+                   
                 }
                 .item-right{
                     padding-top: 98%;
                     .tablink{
                         margin-bottom: 5%;
                     }
-                    button{
-                        font-size: 15px;
-                       
-                    }
+                    
                 }
              }
              @media only screen and (max-width: 400px){
@@ -241,20 +194,14 @@
                     .tablink{
                         margin-bottom: 5%;
                     }
-                    button{
-                        font-size: 12px;
-                       
-                    }
+                   
                 }
                 .item-right{
                     padding-top: 103%;
                     .tablink{
                         margin-bottom: 5%;
                     }
-                    button{
-                        font-size: 12px;
-                       
-                    }
+                    
                 }
             }
             @media only screen and (max-width: 350px){
@@ -265,20 +212,14 @@
                     .tablink{
                         margin-bottom: 5%;
                     }
-                    button{
-                        font-size: 12px;
-                       
-                    }
+                   
                 }
                 .item-right{
                     padding-top: 125%;
                     .tablink{
                         margin-bottom: 5%;
                     }
-                    button{
-                        font-size: 12px;
-                       
-                    }
+                   
                 }
             }
            
@@ -356,12 +297,7 @@
                 }
                 p{
                     padding: 0 2%;
-                    @media only screen and (max-width: 400px){
-                        font-size: 12px;
-                    }
-                    @media only screen and (max-width: 600px){
-                        font-size: 15px;
-                    }
+                  
                 }
                 .read-more {
                     margin: 2%;

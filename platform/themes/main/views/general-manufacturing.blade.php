@@ -1,10 +1,10 @@
 <section class="general-manufacturing">
-    <div class="container-remake">
-        <div class="production mt-5 " data-aos="fade-right" data-aos-duration="1600"  data-aos-delay="100" >
-            <h2 class="production__title font60 font-pri-bold">
+    <div class="container-remake"> 
+        <div class="production mt-5 " data-aos="fade-left" data-aos-duration="1600"  data-aos-delay="100" >
+            <h2 class="production__title font60 font-pri-bold fontmb-middle">
                 R&D
             </h2>
-            <div class="production__content font20 font-pri mt-10 mb-40">
+            <div class="production__content font20 font-pri mt-10 mb-40 fontmb-little">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
                 <div class="read-more desktop">
                     <a href="" class="read-more__link font20">Xem thêm <i class="fas fa-angle-double-right"></i></a>
@@ -16,10 +16,10 @@
             </div>
         </div>
         <div class="production mt-5" data-aos="fade-right" data-aos-duration="1600"  data-aos-delay="100" >
-            <h2 class="production__title font60 font-pri-bold">
+            <h2 class="production__title font60 font-pri-bold fontmb-middle">
                 SẢN XUẤT - LẮP RÁP Ô TÔ & XE MÁY
             </h2>
-            <div class="production__content font20 font-pri mt-10 mb-40">
+            <div class="production__content font20 font-pri mt-10 mb-40 fontmb-little">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
                 <div class="read-more desktop">
                     <a href="" class="read-more__link font20">Xem thêm <i class="fas fa-angle-double-right"></i></a>
@@ -30,11 +30,11 @@
                 <img  src="{{ Theme::asset()->url('images/manufacturing/san-xuat-laprap.jpg') }}" alt="">
             </div>
         </div>
-        <div class="production mt-5" data-aos="fade-right" data-aos-duration="1600"  data-aos-delay="100" >
-            <h2 class="production__title font60 font-pri-bold">
+        <div class="production mt-5" data-aos="fade-left" data-aos-duration="1600"  data-aos-delay="100" >
+            <h2 class="production__title font60 font-pri-bold fontmb-middle">
                 CÔNG NGHIỆP HỖ TRỢ & CƠ KHÍ
             </h2>
-            <div class="production__content font20 font-pri mt-10 mb-40">
+            <div class="production__content font20 font-pri mt-10 mb-40 fontmb-little">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
                 <div class="read-more desktop">
                     <a href="" class="read-more__link font20">Xem thêm <i class="fas fa-angle-double-right"></i></a>
@@ -46,10 +46,10 @@
             </div>
         </div>
         <div class="production mt-5" data-aos="fade-right" data-aos-duration="1600"  data-aos-delay="100" >
-            <h2 class="production__title font60 font-pri-bold">
+            <h2 class="production__title font60 font-pri-bold fontmb-middle">
                 XUẤT KHẨU
             </h2>
-            <div class="production__content font20 font-pri mt-10 mb-40">
+            <div class="production__content font20 font-pri mt-10 mb-40 fontmb-little">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
                 <div class="read-more desktop">
                     <a href="" class="read-more__link font20">Xem thêm <i class="fas fa-angle-double-right"></i></a>

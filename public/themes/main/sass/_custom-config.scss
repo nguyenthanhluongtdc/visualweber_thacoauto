@@ -31,6 +31,7 @@ a:hover {
 .font-cond {
     font-family: $font-cond;
 }
+
 .font-cond-bold {
     font-family: "MyriadPro-BoldCond";
 }
@@ -600,51 +601,125 @@ a:hover {
     }
 }
 
-@media (max-width: 1080px) {
-        //font-size mobile
-    .fontmb-big {
+.fontmb-large{
+    @media (max-width: 1080px){
+        font-size: 45px;
+    }
+    @media (max-width: 992px){
         font-size: 40px;
     }
-
-    .fontmb-rather {
-        font-size: 30px;
+    @media (max-width: 768px){
+        font-size: 35px;
     }
-
-    .fontmb-medium {
+    @media (max-width: 600px){
         font-size: 25px;
     }
-
-    // .fontmb-weak {
-    //     font-size: 20px;
-    // }
-
-    .fontmb-majority {
+}
+.fontmb-medium{
+    @media (max-width: 1080px){
+        font-size: 28px;
+    }
+    @media (max-width: 992px){
+        font-size: 25px;
+    }
+    @media (max-width: 768px){
+        font-size: 20px;
+    }
+    @media (max-width: 600px){
         font-size: 18px;
     }
 }
-
-@media (max-width: 992px) {
-    //font-size mobile
-    .fontmb-big {
+.fontmb-middle{
+    @media (max-width: 1080px){
         font-size: 35px;
     }
-
-    .fontmb-rather {
+    @media (max-width: 992px){
         font-size: 30px;
     }
-
-    .fontmb-medium {
-        font-size: 22px;
+    @media (max-width: 768px){
+        font-size: 28px;
     }
-
-    // .fontmb-weak {
-    //     font-size: 18px;
-    // }
-
-    .fontmb-majority {
-        font-size: 16px;
+    @media (max-width: 600px){
+        font-size: 25px;
     }
 }
+
+.fontmb-small{
+    @media (max-width: 1080px){
+        font-size: 20px;
+    } 
+    @media (max-width: 992px){
+        font-size: 18px;
+    }
+   
+    @media (max-width: 600px){
+        font-size: 12px;
+    }
+}
+.fontmb-litte{
+    @media (max-width: 1080px){
+        font-size: 18px;
+    }
+    @media (max-width: 992px){
+        font-size: 15px;
+    }
+   
+    @media (max-width: 600px){
+        font-size: 10px;
+    }
+   
+}
+@media (max-width: 1080px) {
+    .fontmb-cond-bold{
+        font-family: "MyriadPro-BoldCond";
+    }
+}
+// @media (max-width: 1080px) {
+//         //font-size mobile
+//     .fontmb-big {
+//         font-size: 40px;
+//     }
+
+//     .fontmb-rather {
+//         font-size: 30px;
+//     }
+
+//     .fontmb-medium {
+//         font-size: 25px;
+//     }
+
+//     // .fontmb-weak {
+//     //     font-size: 20px;
+//     // }
+
+//     .fontmb-majority {
+//         font-size: 18px;
+//     }
+// }
+
+// @media (max-width: 992px) {
+//     //font-size mobile
+//     .fontmb-big {
+//         font-size: 35px;
+//     }
+
+//     .fontmb-rather {
+//         font-size: 30px;
+//     }
+
+//     .fontmb-medium {
+//         font-size: 22px;
+//     }
+
+//     // .fontmb-weak {
+//     //     font-size: 18px;
+//     // }
+
+//     .fontmb-majority {
+//         font-size: 16px;
+//     }
+// }
+
 
 @media (max-width: 768px) {
     //font-size mobile

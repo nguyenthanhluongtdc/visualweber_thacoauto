@@ -1,6 +1,6 @@
 <section class="general-manufacturing">
     <div class="container-remake">
-        <div class="production mt-5 " data-aos="fade-left" data-aos-duration="1600"  data-aos-delay="100" >
+        <div class="production mt-5 " data-aos="fade-right" data-aos-duration="1600"  data-aos-delay="100" >
             <h2 class="production__title font60 font-pri-bold">
                 R&D
             </h2>
@@ -30,7 +30,7 @@
                 <img  src="{{ Theme::asset()->url('images/manufacturing/san-xuat-laprap.jpg') }}" alt="">
             </div>
         </div>
-        <div class="production mt-5" data-aos="fade-left" data-aos-duration="1600"  data-aos-delay="100" >
+        <div class="production mt-5" data-aos="fade-right" data-aos-duration="1600"  data-aos-delay="100" >
             <h2 class="production__title font60 font-pri-bold">
                 CÔNG NGHIỆP HỖ TRỢ & CƠ KHÍ
             </h2>

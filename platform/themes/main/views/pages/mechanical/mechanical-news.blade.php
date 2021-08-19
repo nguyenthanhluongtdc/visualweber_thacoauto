@@ -16,7 +16,7 @@
                                         <div class="day"> 29 </div>
                                         <div class="month"> May </div>
                                         <div class="year"> 2021 </div> 
-                                    </div>
+                                    </div> 
     
                                     <div class="sub--right">
                                         <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu8.jpg')}}" alt="" />

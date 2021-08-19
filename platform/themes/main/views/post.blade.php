@@ -43,10 +43,9 @@
             </span>
         @endif
         </div>
-        @if (theme_option('facebook_comment_enabled_in_post', 'yes') == 'yes')
-        <br />
+        {{-- @if (theme_option('facebook_comment_enabled_in_post', 'yes') == 'yes') --}}
         {{-- {!! apply_filters(BASE_FILTER_PUBLIC_COMMENT_AREA, Theme::partial('comments')) !!} --}}
-        <div class="comment-post">
+        {{-- <div class="comment-post">
             <div class="top-comment">
                 <div class="left">
                     <img src="{{ Theme::asset()->url('images/media/avatar.png') }}" alt="">
@@ -89,8 +88,10 @@
                     </div>
                 </div>
             </div>
-        </div>
-    @endif
+        </div> --}}
+
+        {!! do_shortcode('[comment][/comment]') !!}
+        {{-- @endif --}}
     </div>
 
     @php $relatedPosts = get_related_posts($post->id, 12); @endphp

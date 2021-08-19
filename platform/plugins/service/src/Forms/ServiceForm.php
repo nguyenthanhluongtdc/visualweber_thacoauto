@@ -27,7 +27,7 @@ class ServiceForm extends FormAbstract
                     'data-counter' => 120,
                 ],
             ])
-            ->add('description', 'editor', [
+            ->add('description', 'textarea', [
                 'label'      => trans('core/base::forms.description'),
                 'label_attr' => ['class' => 'control-label'],
                 'attr'       => [

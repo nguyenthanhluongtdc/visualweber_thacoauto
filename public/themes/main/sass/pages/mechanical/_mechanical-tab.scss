@@ -21,22 +21,22 @@
                     text-transform: uppercase;
                     font-family: $font-primary-bold;
                     color: $color787878;
-                    margin-bottom: 6.4%;
+                    margin-bottom: 9%;
                     border: none;
                     box-shadow: rgba(0, 0, 0, 0.04) 0px 2px 3px;
                     transition: .3s ease-in-out;
                     
                     @media(max-width : 1720px){
-                        margin-bottom: 7.5%;
+                        margin-bottom: 9.2%;
                     }   
                     @media(max-width : 1600px){
-                        margin-bottom: 7.8%;
-                    } 
-                    @media(max-width : 1400px){
                         margin-bottom: 8.8%;
                     } 
+                    @media(max-width : 1400px){
+                        margin-bottom: 9.5%;
+                    } 
                     @media(max-width : 1300px){
-                        margin-bottom: 7%;
+                        margin-bottom: 9.6%;
                     } 
                   
                     
@@ -69,11 +69,12 @@
                         .title {
                             color: $color-white;
                             font-family: $font-primary-bold;
+                            margin-top: -2%;
                         }
                         .desc {
                             color: $color-white;
-                            margin: 3% 0;
-                           
+                            margin: 1% 0;
+                            margin-top: -2%;
                         }
                         .read-more {
                             padding: 0.4% 1.3%;

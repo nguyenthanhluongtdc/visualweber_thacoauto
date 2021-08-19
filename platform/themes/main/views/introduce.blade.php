@@ -14,11 +14,15 @@
                         Sản xuất - Kinh doanh ô tô & Cơ khí
                     </a>
                 </li>
+
+                @if(has_field($page, 'title_module_value_introduce'))
                 <li class="nav-item" data-aos="fade-down" data-aos-delay="600">
-                    <a href="#section_three" title=" Hệ giá trị" class="click_scroll">
-                        Hệ giá trị
+                    <a href="#{{Illuminate\Support\Str::slug(has_field($page, 'title_module_value_introduce'), '_')}}" title="{!! has_field($page, 'title_module_value_introduce') !!}" class="click_scroll">
+                        {!! has_field($page, 'title_module_value_introduce') !!}
                     </a>
                 </li>
+                @endif
+
                 <li class="nav-item" data-aos="fade-down" data-aos-delay="900">
                     <a href="#section_four" title="Tổ chức" class="click_scroll">
                         Tổ chức
@@ -197,48 +201,49 @@
         </div>
     </div>
 
-    <div class="section-system-value-wrapper font20" id="section_three">
+    <div class="section-system-value-wrapper font20" id="{{Illuminate\Support\Str::slug(has_field($page, 'title_module_value_introduce'), '_')}}">
         <div class="container-remake">
             <div class="section-system-value">
-                <h2 class="section-system-value__title text-uppercase font-pri-bold font60 fontmb-large" data-aos="fade-right">
-                    Hệ giá trị
-                </h2>
-                <p class="section-system-value__des" data-aos="fade-right">
-                    Tập đoàn THACO tiền thân là Công ty CP ôtô Trường Hải, được thành lập vào ngày 29/04/1997. Người sáng lập là ông Trần Bá Dương, hiện là Chủ tịch Hội đồng Quản trị THACO. Tổng số nhân sự hiện nay khoảng 25.000 người.
-                    Sau 24 năm hình thành và phát triển, THACO đã trở thành Tập đoàn công nghiệp đa ngành với các Tổng công ty thành viên là THACO AUTO (Ô tô và Cơ khí); THAGRICO (Nông lâm nghiệp); THADICO (Đầu tư xây dựng); THILOGI (Logistics) và THISO (Thương mại dịch vụ).
-                </p>
+                @if(has_field($page, 'title_module_value_introduce'))
+                    <h2 class="section-system-value__title text-uppercase font-pri-bold font60 fontmb-large" data-aos="fade-right">
+                        {!! has_field($page, 'title_module_value_introduce') !!}
+                    </h2>
+                @endif
+
+                @if(has_field($page, 'description_module_value_introduce'))
+                    <p class="section-system-value__des" data-aos="fade-right">
+                        {!! has_field($page, 'description_module_value_introduce') !!}
+                    </p>
+                @endif
 
                 <div class="section-system-value__content">
                     <div class="section-system-value__content__left">
-                        <div class="__left__row" data-aos="fade-up" data-aos-delay="300">
-                            <h3 class="title font30 font-pri-bold fontmb-medium">
-                                Tầm nhìn
-                            </h3>
-                            <p class="description fontmb-little">
-                                Doanh nghiệp sản xuất – kinh doanh – xuất khẩu ô tô & cơ khí của Việt Nam, phát triển bền vững trong bối cảnh hội nhập khu vực và thế giới.
-                            </p>
-                        </div>
-                        <div class="__left__row" data-aos="fade-up" data-aos-delay="600">
-                            <h3 class="title font30 font-pri-bold fontmb-medium">
-                                sứ mệnh
-                            </h3>
-                            <p class="description fontmb-little">
-                                Mang lại giá trị cao nhất cho khách hàng thông qua sản phẩm và dịch vụ với tinh thần tận tâm phục vụ.
-                            </p>
-                        </div>
-                        <div class="__left__row" data-aos="fade-up" data-aos-delay="900">
-                            <h3 class="title font30 font-pri-bold fontmb-medium">
-                                định hướng chiến lược
-                            </h3>
-                            <p class="description fontmb-little">
-                                Tham gia chuỗi giá trị toàn cầu sản xuất kinh doanh ô tô và linh kiện phụ tùng. <br>
-                                Sản xuất - kinh doanh đa dạng chủng loại SẢN PHẨM: xe du lịch, xe bus, xe tải và xe chuyên dụng thông qua liên kết với các thương hiệu Ô tô quốc tế & phát triển thương hiệu THACO AUTO. 
-                            </p>
-                        </div>
+                        @forelse(has_field($page, 'repeat_content_module_value_introduce') as $row)
+                            <div class="__left__row" data-aos="fade-up" data-aos-delay="300">
+                                <h3 class="title font30 font-pri-bold fontmb-medium">
+                                    {!! has_sub_field($row, 'title') !!}
+                                </h3>
+                                <p class="description fontmb-little">
+                                    {!! has_sub_field($row, 'description') !!}
+                                </p>
+                            </div>
+                        @empty
+                            <div class="__left__row" data-aos="fade-up" data-aos-delay="300">
+                                <h3 class="title font30 font-pri-bold fontmb-medium">
+                                    Tầm nhìn
+                                </h3>
+                                <p class="description fontmb-little">
+                                    Doanh nghiệp sản xuất – kinh doanh – xuất khẩu ô tô & cơ khí của Việt Nam, phát triển bền vững trong bối cảnh hội nhập khu vực và thế giới.
+                                </p>
+                            </div>
+                        @endforelse
                     </div>
-                    <div class="section-system-value__content__right" data-aos="fade-right">
-                        <img src="{{Theme::asset()->url('images/introduce/layer1.jpg')}}" alt="">
-                    </div>
+                    
+                    @if(has_field($page, 'image_module_value_introduce'))
+                        <div class="section-system-value__content__right" data-aos="fade-right">
+                            <img src="{{get_image_url(has_field($page, 'image_module_value_introduce'))}}" alt="">
+                        </div>
+                    @endif
                 </div>
 
                 <div class="services-mobile font-pri-bold">

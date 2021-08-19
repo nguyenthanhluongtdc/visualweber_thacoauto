@@ -31,8 +31,8 @@ class PublicController extends BaseController
         }
 
         $meta = \MetaBox::getMetaData($data, 'seo_meta', true);
-        \SeoHelper::setTitle($meta['seo_title'] ?: $data->name)
-            ->setDescription($meta['seo_description'] ?: $data->description ?: theme_option('site_description'))
+        \SeoHelper::setTitle(isset($meta['seo_title']) ? $meta['seo_title'] : $data->name)
+            ->setDescription((isset($meta['seo_description']) ? $meta['seo_description'] : $data->description) ?: theme_option('site_description'))
             ->openGraph()
             ->setImage(\RvMedia::getImageUrl(@$data->image, 'og', false, \RvMedia::getImageUrl(theme_option('seo_og_image'))))
             ->addProperties(

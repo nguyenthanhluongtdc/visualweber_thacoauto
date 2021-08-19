@@ -1,7 +1,13 @@
 <section class="section-brand">
     <div class="container-remake">
-        <div class="brand-block mb-3">
+        <div class="brand-block">
             <div class="tabs">
+                {{-- <div class="nav-brand d-flex font18 font-pri">
+                    <div class="name font-pri-bold font40">
+                        Ô TÔ
+                    </div>
+                    <span>4-9 chỗ</span>
+                </div> --}}
                 <div class="brand-name mb-3">
                     <h3 class="font-pri-bold font40 fontmb-middle">Ô TÔ</h3>
                 </div> 
@@ -34,7 +40,7 @@
             </div>  
         </div>
 
-        <div class="brand-block mb-3">
+        <div class="brand-block">
             <div class="tabs">
                 <div class="brand-name mb-3">
                     <h3 class="font-pri-bold font40 fontmb-middle">MÔ TÔ VÀ XE MÁY</h3>
@@ -69,7 +75,7 @@
                   
             </div>  
         </div>
-        <div class="brand-block mb-3">
+        <div class="brand-block">
             <div class="tabs">
                 <div class="brand-name mb-3">
                     <h3 class="font-pri-bold font40 fontmb-middle">XE TẢI</h3>
@@ -100,7 +106,7 @@
 
             </div>  
         </div>
-        <div class="brand-block mb-5">
+        <div class="brand-block">
             <div class="tabs">
                 <div class="brand-name mb-3">
                     <h3 class="font-pri-bold font40 fontmb-middle">XE BUS</h3>

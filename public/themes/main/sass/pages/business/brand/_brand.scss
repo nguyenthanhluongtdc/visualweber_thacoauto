@@ -24,6 +24,10 @@
         //   padding-bottom: 35%;
             
     }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
     .tabs {
         @media only screen and (max-width: 1080px){
             margin: 0;
@@ -37,9 +41,9 @@
         margin-left: 8%;
         
         .brand-name{
-            border-right: 5px solid $color-primary;
+            // border-right: 5px solid $color-primary;
             // height: 86%;
-            @include height(30);
+            // @include height(30);
             margin-top: .5%;
             margin-left: 0.66%;
             margin-right: 2%;
@@ -67,14 +71,14 @@
                 // height: 50%;
                 transform: translateY(11.8px);
                 margin-left: 9px;
-                border-right: 3px solid $color-primary;
+                // border-right: 3px solid $color-primary;
             }
             h3{
-                margin-right: 50px;
+                padding-right: 50px;
                 transform: translateY(-8px);
                 
                 @media only screen and (max-width: 767px){
-                   margin-right: 30px;       
+                   padding-right: 30px;       
                 }
                 @media(max-width : 1710px){
                     transform: translateY(-8.5px);
@@ -91,21 +95,56 @@
                 @media(max-width : 1100px){
                     transform: translateY(-6.2px);
                 }
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    right: 0;
+                    top: 20%;
+                    bottom: 30%;
+                    width: 5px;
+                    background-color: $color-primary;
+                }
             }
             
         }
+
+        // .nav-brand {
+
+        //     .name {
+        //         // 
+        //         @include paddingRight(100);
+        //         @include marginRight(100, "+");
+        //         position: relative;
+
+        //         &::after {
+        //             position: absolute;
+        //             top: 20%;
+        //             bottom: 30%;
+        //             right: 0;
+        //             content: "";
+        //             width: 5px;
+        //             background-color: $color-primary;
+        //         }
+        //     }
+        //     >span {
+        //         align-self: center;
+        //         color: $color-primary;
+        //         @include marginRight(40, "+");
+        //     }
+        // }
         label {
             order: 1;
             display: flex;
-            padding: 1.4rem 1rem 0 1rem;
+            padding: 1rem;
             margin-right: .5rem;
             cursor: pointer;
             color: $color-primary;
             transition: background ease 0.3s;
-            @media only screen and (max-width: 767px){
-                padding-right: .2rem;
-                padding-bottom: .25rem;            
-            }
+            // @media only screen and (max-width: 767px){
+            //     padding-right: .2rem;
+            //     padding-bottom: .25rem;            
+            // }
           }
           .tab {
             order: 9;
@@ -122,15 +161,25 @@
 
             .brand-logo{
                 display: flex;
+                flex-wrap: wrap;
                 margin-top: 2%;
+                margin-left: -7%;
+                margin-right: -7%;
                 .logo-img{
-                    max-width: 18%;
-                    flex: 1 18%;
-                    margin-right: 8%;
+                    max-width: 25%;
+                    flex: 1 25%;
+                    padding-right: 7%;
+                    padding-left: 7%;
                     position: relative;
+
+                    @media (max-width: 576px) {
+                        max-width: 33.33336%;
+                        flex: 0 0 33.33336%;
+                    }
+
                     img{
                         position: relative;
-                        width: 60%;
+                        width: 100%;
                         height: auto;
 
                     }

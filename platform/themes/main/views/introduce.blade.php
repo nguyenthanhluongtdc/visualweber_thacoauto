@@ -1,5 +1,5 @@
 <div id="introduce-page" class="font-pri">
-    <div class="navbar-menu">
+    <div class="navbar-menu font20">
         <div class="container-remake">
             <ul class="nav font-pri-bold">
                 @if(has_field($page, 'title_module_aboutus_introduce'))
@@ -94,7 +94,7 @@
                                     <div class="symbol">
                                         <img src="{{Theme::asset()->url('images/introduce/symbol11.png')}}" alt="">
                                     </div>
-                                    <div class="name  fontmb-small">
+                                    <div class="name font20 fontmb-small">
                                         R&d
                                     </div>
                                 </div>
@@ -104,7 +104,7 @@
                                     <div class="symbol">
                                         <img src="{{Theme::asset()->url('images/introduce/symbol2.png')}}" alt="">
                                     </div>
-                                    <div class="name  fontmb-small">
+                                    <div class="name font20 fontmb-small">
                                         Sản xuất - Lắp ráp Ô tô & xe máy
                                     </div>
                                 </div>
@@ -114,7 +114,7 @@
                                     <div class="symbol">
                                         <img src="{{Theme::asset()->url('images/introduce/symbol1.png')}}" alt="">
                                     </div>
-                                    <div class="name  fontmb-small">
+                                    <div class="name font20 fontmb-small">
                                         công nghiệp hỗ trợ & cơ khí
                                     </div>
                                 </div>
@@ -124,7 +124,7 @@
                                     <div class="symbol">
                                         <img src="{{Theme::asset()->url('images/introduce/symbol3.png')}}" alt="">
                                     </div>
-                                    <div class="name  fontmb-small">
+                                    <div class="name font20 fontmb-small">
                                         xuất khẩu
                                     </div>
                                 </div>
@@ -156,7 +156,7 @@
                                     <div class="symbol">
                                         <img src="{{Theme::asset()->url('images/introduce/symbol12.png')}}" alt="">
                                     </div>
-                                    <div class="name fontmb-small">
+                                    <div class="name font20 fontmb-small">
                                         xe du lịch
                                     </div>
                                 </div>
@@ -166,7 +166,7 @@
                                     <div class="symbol">
                                         <img src="{{Theme::asset()->url('images/introduce/symbol10.png')}}" alt="">
                                     </div>
-                                    <div class="name fontmb-small">
+                                    <div class="name font20 fontmb-small">
                                         Mô tô & Xe máy
                                     </div>
                                 </div>
@@ -176,7 +176,7 @@
                                     <div class="symbol">
                                         <img src="{{Theme::asset()->url('images/introduce/symbol9.png')}}" alt="">
                                     </div>
-                                    <div class="name fontmb-small">
+                                    <div class="name font20 fontmb-small">
                                         xe tải
                                     </div>
                                 </div>
@@ -186,7 +186,7 @@
                                     <div class="symbol">
                                         <img src="{{Theme::asset()->url('images/introduce/symbol8.png')}}" alt="">
                                     </div>
-                                    <div class="name fontmb-small">
+                                    <div class="name font20 fontmb-small">
                                         xe bus
                                     </div>
                                 </div>
@@ -196,7 +196,7 @@
                                     <div class="symbol">
                                         <img src="{{Theme::asset()->url('images/introduce/symbol7.png')}}" alt="">
                                     </div>
-                                    <div class="name fontmb-small">
+                                    <div class="name font20 fontmb-small">
                                         dịch vụ - phụ tùng
                                     </div>
                                 </div>
@@ -232,7 +232,7 @@
                             <h3 class="title font30 font-pri-bold fontmb-medium">
                                 {!! has_sub_field($row, 'title') !!}
                             </h3>
-                            <p class="description fontmb-little">
+                            <p class="description font18 fontmb-little">
                                 {!! has_sub_field($row, 'description') !!}
                             </p>
                         </div>
@@ -241,7 +241,7 @@
                             <h3 class="title font30 font-pri-bold fontmb-medium">
                                 Tầm nhìn
                             </h3>
-                            <p class="description fontmb-little">
+                            <p class="description font18 fontmb-little">
                                 Doanh nghiệp sản xuất – kinh doanh – xuất khẩu ô tô & cơ khí của Việt Nam, phát triển
                                 bền vững trong bối cảnh hội nhập khu vực và thế giới.
                             </p>
@@ -264,7 +264,7 @@
                                     <div class="symbol">
                                         <img src="{{Theme::asset()->url('images/introduce/symbol12.png')}}" alt="">
                                     </div>
-                                    <div class="name fontmb-small">
+                                    <div class="name font20 fontmb-small">
                                         xe du lịch
                                     </div>
                                 </div>
@@ -276,7 +276,7 @@
                                     <div class="symbol">
                                         <img src="{{Theme::asset()->url('images/introduce/symbol8.png')}}" alt="">
                                     </div>
-                                    <div class="name fontmb-small">
+                                    <div class="name font20 fontmb-small">
                                         xe bus
                                     </div>
                                 </div>
@@ -288,7 +288,7 @@
                                     <div class="symbol">
                                         <img src="{{Theme::asset()->url('images/introduce/symbol9.png')}}" alt="">
                                     </div>
-                                    <div class="name fontmb-small">
+                                    <div class="name font20 fontmb-small">
                                         xe tải
                                     </div>
                                 </div>
@@ -300,7 +300,7 @@
                                     <div class="symbol">
                                         <img src="{{Theme::asset()->url('images/introduce/symbol10.png')}}" alt="">
                                     </div>
-                                    <div class="name fontmb-small">
+                                    <div class="name font20 fontmb-small">
                                         xe chuyên dụng
                                     </div>
                                 </div>

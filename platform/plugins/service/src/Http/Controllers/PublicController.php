@@ -30,6 +30,18 @@ class PublicController extends BaseController
             abort(404);
         }
 
+        $meta = \MetaBox::getMetaData($data, 'seo_meta', true);
+        \SeoHelper::setTitle($meta['seo_title'] ?: $data->name)
+            ->setDescription($meta['seo_description'] ?: $data->description ?: theme_option('site_description'))
+            ->openGraph()
+            ->setImage(\RvMedia::getImageUrl(@$data->image, 'og', false, \RvMedia::getImageUrl(theme_option('seo_og_image'))))
+            ->addProperties(
+                [
+                    'image:width' => '1200',
+                    'image:height' => '630'
+                ]
+            );
+
         do_action(BASE_ACTION_PUBLIC_RENDER_SINGLE, SERVICE_MODULE_SCREEN_NAME, $data);
 
         return Theme::scope('pages/services/service-detail', compact('data'))->render();

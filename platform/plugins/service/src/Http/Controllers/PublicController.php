@@ -32,8 +32,6 @@ class PublicController extends BaseController
 
         do_action(BASE_ACTION_PUBLIC_RENDER_SINGLE, SERVICE_MODULE_SCREEN_NAME, $data);
 
-        dd($data);
-
         return Theme::scope('pages/services/service-detail', compact('data'))->render();
     }
 }

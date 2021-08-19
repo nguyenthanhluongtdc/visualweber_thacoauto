@@ -80,6 +80,7 @@
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
+            @include marginBottom(40, "-");
             @media(max-width : 1400px){
                 width: 65%;
             }
@@ -93,9 +94,10 @@
         
             .item {
                 width: 33%;
+                @include paddingY(40);
 
                 .title {
-                    margin-bottom: 24px;
+                    @include marginBottom(20, "+");
                 }
 
                 ul {

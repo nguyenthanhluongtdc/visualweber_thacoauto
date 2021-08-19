@@ -66,7 +66,7 @@
                     </ul>
                 </div>
 
-                <div class="item list-media-mobile">
+                <div class="item list-media-mobile font-pri">
                     <p>Kết nối với chúng tôi</p>
                     <ul class="list-media">
                         <li><a href=""><img src="{{ Theme::asset()->url('images/main/iconfb.png') }}" alt="facebook"></a></li>

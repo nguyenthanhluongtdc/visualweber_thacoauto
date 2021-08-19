@@ -5,7 +5,7 @@
 {!! do_shortcode('[filter-media][/filter-media]') !!}
 <div class="post-container container-remake Lineheight-Regular">
     <div class="post-primary">
-        <h2 class="title font-pri-bold font50 p-0">
+        <h2 class="title font-pri-bold font50 p-0 text-uppercase text-center">
             {{ $post->name }}
         </h2>
         <div class="post-author-wrap">
@@ -15,8 +15,8 @@
                     <li><span class="author font20 font-mi-bold">{{ get_field($post, 'author') }}</span></li>
                     @endif
                     <li><span class="icon"><i class="far fa-clock"></i></span>{{ $post->created_at->format('d/m/Y') }}</li>
-                    <li><span>Bình luận: </span><span>23</span></li>
-                    <li><span>Lượt xem: </span><span>999</span></li>
+                    <li><span>{{ __("Bình luận") }}: </span><span>23</span></li>
+                    <li><span>{{ __("Lượt xem") }}: </span><span>999</span></li>
                 </ul>
             </div>
             <div class="like-share desktop">
@@ -34,7 +34,7 @@
             <div class="fb-like fb-like-bottom" data-href="{{ Request::url() }}" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
         </div>
         <div class="tags">
-            <span class="font18 font-mi-bold">Tags: </span>
+            <span class="font18 font-mi-bold">{{ __("Tags") }}: </span>
             @if (!$post->tags->isEmpty())
             <span class="post__tags font-pri font15"><i class="ion-pricetags"></i>
                 @foreach ($post->tags as $tag)
@@ -96,12 +96,10 @@
     @php $relatedPosts = get_related_posts($post->id, 12); @endphp
         @if ($relatedPosts->count())
         <div class="post-relate">
-            <h2 class="font-pri-bold font50">Tin liên quan</h2>
+            <h2 class="font-pri-bold font50">{{ __("Tin liên quan") }}</h2>
             <div class="post-relate-carousel owl-carousel">
                 @foreach ($relatedPosts as $relatedItem)
                     <div class="post-relate-item">
-
-
                         <div class="post-thumbnail">
                             <a href="{{ $relatedItem->url }}" class="post__overlay">
                                 <img src="{{ RvMedia::getImageUrl($relatedItem->image, 'post-related') }}" alt="{{ $relatedItem->name }}">
@@ -113,7 +111,6 @@
                         </p>
                         <header class="post__header">
                             <h5 class="font-helve font30 font-pri-bold"><a href="{{ $relatedItem->url }}" class="post__title"> {{ $relatedItem->name }}</a></h5>
-
                             <div class="post__desc font20 font-pri">{{ $relatedItem->description }}</div>
                         </header>
                     </div>

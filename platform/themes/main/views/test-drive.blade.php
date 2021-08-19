@@ -19,13 +19,13 @@
                                         aria-selected="true">
                                         Đăng ký lái thử tại Showroom
                                     </button> --}}
-                                    <button class="nav-link active" data-toggle="tab" href="#at_showroom">
+                                    <button class="nav-link active fontmb-medium" data-toggle="tab" href="#at_showroom">
                                         Đăng ký lái thử tại Showroom
                                     <div class="bottom-line mt-1"></div>
                                 </button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" data-toggle="tab" href="#at_home">
+                                    <button class="nav-link fontmb-medium" data-toggle="tab" href="#at_home">
                                         Đăng ký lái thử tại nhà
                                         <div class="bottom-line mt-1"></div>
                                     </button>
@@ -332,10 +332,10 @@
                     </div>
 
                     <div class="form-submit font18">
-                        <button class="btn-submit">
+                        <button class="btn-submit fontmb-small">
                             Gửi đi
                         </button>
-                        <button class="btn-back">
+                        <button class="btn-back fontmb-small">
                             Quay lại
                         </button>
                     </div>

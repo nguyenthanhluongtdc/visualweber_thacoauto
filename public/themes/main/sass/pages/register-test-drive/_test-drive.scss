@@ -46,18 +46,7 @@
                     background-color: #F6F6F6;
                     color: #292929;
                     height: 100%;
-                    @media only screen and (max-width: 1080px){
-                        font-size: 35px;
-                    }
-                    @media only screen and (max-width: 992px){
-                        font-size: 28px;
-                    }
-                    @media only screen and (max-width: 767px){
-                        font-size: 23px;
-                    }
-                    @media only screen and (max-width: 600px){
-                        font-size: 13px;
-                    }
+                   
                     
                 }
                 &-link.active {
@@ -424,17 +413,9 @@
                 border: none;
                 outline: none;
              
-                  @media only screen and (max-width: 992px){
-                  
-                    font-size: 18px;
-      
-                  }
-                  @media only screen and (max-width: 767px){
-                   
-                    font-size: 15px;
-                  }
+                 
                 @media only screen and (max-width: 1080px){
-                    font-size: 20px;
+                   
                     display: table;
                     margin: 0 auto;
                     width: 70%;
@@ -447,17 +428,9 @@
             .btn-back{
                 display: none;
                
-                  @media only screen and (max-width: 992px){
-                  
-                    font-size: 18px;
-      
-                  }
-                  @media only screen and (max-width: 767px){
-                   
-                    font-size: 15px;
-                  }
+                 
                 @media only screen and (max-width: 1080px){
-                    font-size: 20px;
+                  
                     display: block;
                     display: table;
                     margin: 0 auto;

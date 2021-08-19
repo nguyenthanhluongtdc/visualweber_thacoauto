@@ -3,14 +3,14 @@
 {!!render_media_gallery($post)!!}
 @else
 {!! do_shortcode('[filter-media][/filter-media]') !!}
-<div class="post-container container-remake">
+<div class="post-container container-remake Lineheight-Regular">
     <div class="post-primary">
-        <h2 class="title font-pri-bold font50">
+        <h2 class="title font-pri-bold font50 p-0">
             {{ $post->name }}
         </h2>
         <div class="post-author-wrap">
-            <div class="left">
-                <ul class="statistical font20 font-pri">
+            <div class="left d-flex align-content-center">
+                <ul class="p-0 statistical font18 MyriadPro-Regular mb-0 mt-2">
                     @if(!empty(get_field($post, 'author')))
                     <li><span class="author font20 font-mi-bold">{{ get_field($post, 'author') }}</span></li>
                     @endif
@@ -23,10 +23,10 @@
                 <div class="fb-like" data-href="{{ Request::url() }}" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
             </div>
         </div>
-        <p class="desc font20 font-mi-bold">
+        <div class="desc font25 MyriadPro-BoldCond px-0 mx-0 w-100 my-5 text-center">
             {{$post->description}}
-        </p>
-        <div class="post__content font-pri font25">
+        </div>
+        <div class="post__content font-pri font18">
             @if (defined('GALLERY_MODULE_SCREEN_NAME') && !empty($galleries = gallery_meta_data($post)))
                 {!! render_object_gallery($galleries, ($post->first_category ? $post->first_category->name : __('Uncategorized'))) !!}
             @endif
@@ -94,15 +94,15 @@
     </div>
 
     @php $relatedPosts = get_related_posts($post->id, 12); @endphp
-    
+
             @if ($relatedPosts->count())
             <div class="post-relate">
                     <h2 class="font-pri-bold font50">Tin liên quan</h2>
                     <div class="post-relate-carousel owl-carousel">
                         @foreach ($relatedPosts as $relatedItem)
                             <div class="post-relate-item">
-                                
-                               
+
+
                                 <div class="post-thumbnail">
                                     <a href="{{ $relatedItem->url }}" class="post__overlay">
                                         <img src="{{ RvMedia::getImageUrl($relatedItem->image, 'post-related') }}" alt="{{ $relatedItem->name }}">
@@ -110,11 +110,11 @@
                                 </div>
                                 <p class="city-day font-pri font15">
                                     <span class="city">Hà Nội</span>
-                                    <span class="time"> {{ $relatedItem->created_at->format('d/m/Y') }}</span>      
+                                    <span class="time"> {{ $relatedItem->created_at->format('d/m/Y') }}</span>
                                 </p>
                                 <header class="post__header">
                                     <h5 class="font-helve font30 font-pri-bold"><a href="{{ $relatedItem->url }}" class="post__title"> {{ $relatedItem->name }}</a></h5>
-                                    
+
                                     <div class="post__desc font20 font-pri">{{ $relatedItem->description }}</div>
                                 </header>
                             </div>

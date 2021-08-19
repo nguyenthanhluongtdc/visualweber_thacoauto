@@ -653,7 +653,7 @@ a:hover {
     }
    
     @media (max-width: 600px){
-        font-size: 12px;
+        font-size: 15px;
     }
 }
 .fontmb-litte{
@@ -665,6 +665,9 @@ a:hover {
     }
    
     @media (max-width: 600px){
+        font-size: 12px;
+    }
+    @media (max-width: 400px){
         font-size: 10px;
     }
    

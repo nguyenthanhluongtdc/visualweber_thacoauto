@@ -297,6 +297,7 @@
                 display: flex;
                 margin-bottom: 3.5%;
                 &__item{
+                    text-decoration: none;
                     width: 1vw;
                     height: 1vw;
                     border-radius: 50%;
@@ -453,7 +454,7 @@
                         background-color: #f6f6f6;
                         padding: 2.1% 0;
                         a{
-                            color: $color-primary;
+                            color: $color-primary; 
                         }
                     }
             }
@@ -503,8 +504,9 @@
             display: flex;
             justify-content: start;
             margin: 2.5% 0 5.5%;
-           
+            text-decoration: unset;
             &__item{
+                text-decoration: unset;
                 max-width: 22%;
                 flex: 1 22%;
                 position: relative;

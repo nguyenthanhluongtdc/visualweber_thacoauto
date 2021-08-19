@@ -3,7 +3,7 @@ Route::domain('danang.thacoauto.dev.gistensal.com')->group(function () {
     Route::group([
         'namespace' => 'Theme\Thaco\Http\Controllers',
         'as' => 'public.landing-page.',
-        'middleware' => ['web', InitializeTenancyByDomain::class]        
+        'middleware' => ['web', InitializeTenancyByDomain::class]
     ], static function () {
         #region sub domain
         Route::get('/', 'RippleController@getIndex')->name('public.index');
@@ -15,7 +15,7 @@ Route::domain('binhduong.thacoauto.dev.gistensal.com')->group(function () {
     Route::group([
         'namespace' => 'Theme\RippThacole\Http\Controllers',
         'as' => 'public.landing-page.',
-        'middleware' => ['web', InitializeTenancyByDomain::class]        
+        'middleware' => ['web', InitializeTenancyByDomain::class]
     ], static function () {
         #region sub domain
         Route::get('/', 'RippleController@getIndex')->name('public.index');
@@ -29,24 +29,30 @@ Route::group(['namespace' => 'Theme\Thaco\Http\Controllers', 'middleware' => ['w
 
         //demo web. sẽ xóa khi đổ dữ liệu
         Route::get('/dich-vu-detail-1', function () {
+            Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
             return Theme::scope('pages/services/service-detail')->render();
         });
         Route::get('/product-detail-1', function () {
+            Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
             return Theme::scope('pages/business/product/product-detail-1')->render();
         });
         Route::get('/product-detail', function () {
+            Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
             return Theme::scope('pages/business/product/product-detail')->render();
         });
-       
+
         Route::get('/brand-detail', function () {
+            Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
             return Theme::scope('pages/business/brand-detail/index')->render();
         });
 
         Route::get('/car-selection', function () {
+            Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
             return Theme::scope('pages/business/car-selection/index')->render();
         });
 
         Route::get('/he-thong-phan-phoi-chi-tiet', function () {
+            Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
             return Theme::scope('pages/distribution-system/detail')->render();
         });
 
@@ -55,12 +61,10 @@ Route::group(['namespace' => 'Theme\Thaco\Http\Controllers', 'middleware' => ['w
         /* ===================== */
         Route::group(['prefix' => 'ajax'], function () {
             Route::get('get-new-posts', 'ThacoController@getNewPosts');
-            
         });
         /* ===================== */
 
         Route::get('ajax/search', 'ThacoController@getSearch')->name('public.ajax.search');
-
     });
 });
 
@@ -80,7 +84,5 @@ Route::group(['namespace' => 'Theme\Thaco\Http\Controllers', 'middleware' => ['w
             'as'   => 'public.single',
             'uses' => 'ThacoController@getView',
         ]);
-
     });
 });
-

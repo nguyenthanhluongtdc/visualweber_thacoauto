@@ -37,7 +37,7 @@
             </P>
             <a href="" class="font-pri-bold">Xem thêm</a>
         </div> --}}
-    </div>  
+    </div>
     {{-- <div class="slider-main-item">
         <img src="{{ Theme::asset()->url('images/main/slider1.jpg') }}" alt="">
         <div class="content-slider">
@@ -75,7 +75,7 @@
                             <div class="item-img-main">
                                 <a href="{{$post->url}}"><img src="{{ get_object_image($post->image, 'post-large') }}" alt=""></a>
                             </div>
-                
+
                             <div class="item-main">
                                 <div class="item-content">
                                     <h3 class="title font-pri-bold font30 fontmb-medium text-uppercase">
@@ -85,7 +85,7 @@
                                         {{Str::words($post->description,30)}}
                                     </p>
                                     <div class="city-day font-pri font20 fontmb-small">
-                                        <span class="city">Hà Nội</span>
+                                        <span class="city">{{ \MetaBox::getMetaData($post, 'region_post', true) ?? '--' }}</span>
                                         <span class="day">{{date_format($post->created_at,"d-m-Y")}}</span>
                                     </div>
                                 </div>
@@ -95,19 +95,19 @@
                     @else
                     <div class="item">
                         <div class="item-content">
-                            <h3 class="title font-pri-bold font20 fontmb-small text-uppercase">
+                            <h3 class="title font-pri-bold font20 fontmb-medium text-uppercase">
                                 <a href="{{$post->url}}">{{$post->name}}</a>
-                                
+
                             </h3>
                             <p class="desc font-pri font18 fontmb-little">
                                 {{Str::words($post->description,25)}}
                             </p>
                             <div class="city-day font-pri font20 fontmb-small">
-                                <span class="city">Hà Nội</span>
+                                <span class="city">{{ \MetaBox::getMetaData($post, 'region_post', true) ?? '--' }}</span>
                                 <span class="day">{{date_format($post->created_at,"d-m-Y")}}</span>
                             </div>
                         </div>
-        
+
                     </div>
                     @endif
                 @endforeach
@@ -132,7 +132,7 @@
                                 {{Str::words($post->description,20)}}
                             </p>
                             <div class="city-day font-pri fontmb-small">
-                                <span class="city">Hà Nội</span>
+                                <span class="city">{{ \MetaBox::getMetaData($post, 'region_post', true) ?? '--' }}</span>
                                 <span class="day">{{date_format($post->created_at,"d-m-Y")}}</span>
                             </div>
                         </div>
@@ -160,7 +160,7 @@
                         @endforeach
                         @endif
                     </div>
-            
+
             <div class="bottom" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="50">
                 <p class="title font-pri-bold -font16 fontmb-middle">
                     điểm tin
@@ -243,7 +243,7 @@
                         <p class="top-right-item-title font-pri-bold font30 fontmb-small"><a href="" class="link-item-home">công
                                 nghiệp hỗ trợ <br> & cơ khí</a></p>
                     </div>
-                    
+
                     <div class="top-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
                         <img src="{{ Theme::asset()->url('images/main/lv4.png') }}" alt="">
                         <p class="top-right-item-title font-pri-bold font30 fontmb-small"><a href="" class="link-item-home">xuất
@@ -272,7 +272,7 @@
                         <div class="symbol">
                             <img src="{{ Theme::asset()->url('images/main/lv7.png') }}" alt="">
                         </div>
-                        <p class="bottom-right-item-title font-pri-bold font30 fontmb-small"><a href="" class="link-item-home">MÔ TÔ & XE MÁY 
+                        <p class="bottom-right-item-title font-pri-bold font30 fontmb-small"><a href="" class="link-item-home">MÔ TÔ & XE MÁY
                             </a></p>
                     </div>
                     <div class="bottom-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
@@ -289,7 +289,7 @@
                         <p class="bottom-right-item-title font-pri-bold font30 fontmb-small"><a href="" class="link-item-home">XE
                                 BUS</a></p>
                     </div>
-                    
+
                     <div class="bottom-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
                         <div class="symbol">
                             <img src="{{ Theme::asset()->url('images/main/lv9.png') }}" alt="">
@@ -307,7 +307,7 @@
 <div class="section-shareholder-home container-remake">
     <div class="shareholder-home-top" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out">
         <h2 class="font-pri-bold font60 color-gray fontmb-large">Quan hệ cổ đông</h2>
-        <div class="menu-tab-right">
+        <div class="menu-tab-right font20">
             <ul class="nav nav-pills font-pri-bold color-gray fontmb-small" role="tablist">
                 <li class="nav-item">
                     <a class="nav-link active" data-toggle="pill" href="#shareholder1">Công bố thông tin</a>
@@ -348,12 +348,12 @@
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
-                                    <h5 class="title font-pri-bold color-gray">
+                                    <h5 class="title font20 font-pri-bold color-gray fontmb-small">
                                         Công bố thông tin phát hành cổ phiếu để tăng vốn cổ phần từ nguồn vốn chủ sở hữu
                                     </h5>
                                     <div class="desc-none">
                                         <div class="wrap">
-                                            <div class="desc-left font-cond font20 fontmb-small">CBTT phat hanh co phieu tang von co
+                                            <div class="desc-left font20 font-cond font20 fontmb-small">CBTT phat hanh co phieu tang von co
                                                 phan.pdf</div>
                                             <div class="desc-right">
                                                 <span class="font-cond font20 fontmb-small">804,24KB</span>
@@ -375,7 +375,7 @@
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
-                                    <h5 class="title font-pri-bold color-gray">
+                                    <h5 class="title font20 font-pri-bold color-gray fontmb-small">
                                         Nghị quyết Đại hội đồng Cổ đông Công ty Cổ phần Ô tô Trường Hải
                                     </h5>
                                     <div class="desc-none">
@@ -402,7 +402,7 @@
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
-                                    <h5 class="title font-pri-bold color-gray">
+                                    <h5 class="title font20 font-pri-bold color-gray fontmb-small">
                                         Biên bản kiểm phiếu lấy ý kiến Cổ đông bằng văn bản
                                     </h5>
                                     <div class="desc-none">
@@ -429,12 +429,12 @@
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
-                                    <h5 class="title font-pri-bold color-gray">
+                                    <h5 class="title font-pri-bold color-gray fontmb-small font20">
                                         Biên bản và Nghị quyết ĐHĐCĐ năm 2018
                                     </h5>
                                     <div class="desc-none">
                                         <div class="wrap">
-                                            <div class="desc-left font-cond font20 fontmb-small">CBTT phat hanh co phieu tang von co
+                                            <div class="desc-left font20 font-cond font20 fontmb-small">CBTT phat hanh co phieu tang von co
                                                 phan.pdf</div>
                                             <div class="desc-right">
                                                 <span class="font-cond font20 fontmb-small">804,24KB</span>
@@ -455,7 +455,7 @@
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
-                                    <h5 class="title font-pri-bold color-gray">
+                                    <h5 class="title font20 font-pri-bold color-gray fontmb-small">
                                         Công bố thông tin ngày đăng ký cuối cùng để thực hiện quyền tham dự Đại hội cổ
                                         đông năm 2018
                                     </h5>
@@ -482,7 +482,7 @@
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
-                                    <h5 class="title font-pri-bold color-gray">
+                                    <h5 class="title font20 font-pri-bold color-gray fontmb-small">
                                         Công bố thông tin về việc bổ sung ngành nghề kinh doanh và sửa đổi điều lệ THACO
                                     </h5>
                                     <div class="desc-none">
@@ -520,7 +520,7 @@
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
-                                    <h5 class="title font-pri-bold color-gray">
+                                    <h5 class="title font20 font-pri-bold color-gray fontmb-small">
                                         Công bố thông tin phát hành cổ phiếu để tăng vốn cổ phần từ nguồn vốn chủ sở hữu
                                     </h5>
                                     <div class="desc-none">
@@ -547,7 +547,7 @@
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
-                                    <h5 class="title font-pri-bold color-gray">
+                                    <h5 class="title font20 font-pri-bold color-gray fontmb-small">
                                         Nghị quyết Đại hội đồng Cổ đông Công ty Cổ phần Ô tô Trường Hải
                                     </h5>
                                     <div class="desc-none">
@@ -574,7 +574,7 @@
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
-                                    <h5 class="title font-pri-bold color-gray">
+                                    <h5 class="title font20 font-pri-bold color-gray fontmb-small">
                                         Biên bản kiểm phiếu lấy ý kiến Cổ đông bằng văn bản
                                     </h5>
                                     <div class="desc-none">
@@ -601,7 +601,7 @@
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
-                                    <h5 class="title font-pri-bold color-gray">
+                                    <h5 class="title font20 font-pri-bold color-gray fontmb-small">
                                         Biên bản và Nghị quyết ĐHĐCĐ năm 2018
                                     </h5>
                                     <div class="desc-none">
@@ -627,7 +627,7 @@
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
-                                    <h5 class="title font-pri-bold color-gray">
+                                    <h5 class="title font20 font-pri-bold color-gray fontmb-small">
                                         Công bố thông tin ngày đăng ký cuối cùng để thực hiện quyền tham dự Đại hội cổ
                                         đông năm 2018
                                     </h5>
@@ -654,7 +654,7 @@
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
-                                    <h5 class="title font-pri-bold color-gray">
+                                    <h5 class="title font20 font-pri-bold color-gray fontmb-small">
                                         Công bố thông tin về việc bổ sung ngành nghề kinh doanh và sửa đổi điều lệ THACO
                                     </h5>
                                     <div class="desc-none">
@@ -692,7 +692,7 @@
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
-                                    <h5 class="title font-pri-bold color-gray">
+                                    <h5 class="title font20 font-pri-bold color-gray fontmb-small">
                                         Công bố thông tin phát hành cổ phiếu để tăng vốn cổ phần từ nguồn vốn chủ sở hữu
                                     </h5>
                                     <div class="desc-none">
@@ -719,7 +719,7 @@
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
-                                    <h5 class="title font-pri-bold color-gray">
+                                    <h5 class="title font20 font-pri-bold color-gray fontmb-small">
                                         Nghị quyết Đại hội đồng Cổ đông Công ty Cổ phần Ô tô Trường Hải
                                     </h5>
                                     <div class="desc-none">
@@ -746,7 +746,7 @@
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
-                                    <h5 class="title font-pri-bold color-gray">
+                                    <h5 class="title font20 font-pri-bold color-gray fontmb-small">
                                         Biên bản kiểm phiếu lấy ý kiến Cổ đông bằng văn bản
                                     </h5>
                                     <div class="desc-none">
@@ -773,7 +773,7 @@
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
-                                    <h5 class="title font-pri-bold color-gray">
+                                    <h5 class="title font20 font-pri-bold color-gray fontmb-small">
                                         Biên bản và Nghị quyết ĐHĐCĐ năm 2018
                                     </h5>
                                     <div class="desc-none">
@@ -799,7 +799,7 @@
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
-                                    <h5 class="title font-pri-bold color-gray">
+                                    <h5 class="title font20 font-pri-bold color-gray fontmb-small">
                                         Công bố thông tin ngày đăng ký cuối cùng để thực hiện quyền tham dự Đại hội cổ
                                         đông năm 2018
                                     </h5>
@@ -826,7 +826,7 @@
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
-                                    <h5 class="title font-pri-bold color-gray">
+                                    <h5 class="title font20 font-pri-bold color-gray fontmb-small">
                                         Công bố thông tin về việc bổ sung ngành nghề kinh doanh và sửa đổi điều lệ THACO
                                     </h5>
                                     <div class="desc-none">
@@ -864,7 +864,7 @@
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
-                                    <h5 class="title font-pri-bold color-gray">
+                                    <h5 class="title font20 font-pri-bold color-gray fontmb-small">
                                         Công bố thông tin phát hành cổ phiếu để tăng vốn cổ phần từ nguồn vốn chủ sở hữu
                                     </h5>
                                     <div class="desc-none">
@@ -891,7 +891,7 @@
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
-                                    <h5 class="title font-pri-bold color-gray">
+                                    <h5 class="title font20 font-pri-bold color-gray fontmb-small">
                                         Nghị quyết Đại hội đồng Cổ đông Công ty Cổ phần Ô tô Trường Hải
                                     </h5>
                                     <div class="desc-none">
@@ -918,7 +918,7 @@
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
-                                    <h5 class="title font-pri-bold color-gray">
+                                    <h5 class="title font20 font-pri-bold color-gray fontmb-small">
                                         Biên bản kiểm phiếu lấy ý kiến Cổ đông bằng văn bản
                                     </h5>
                                     <div class="desc-none">
@@ -945,7 +945,7 @@
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
-                                    <h5 class="title font-pri-bold color-gray">
+                                    <h5 class="title font20 font-pri-bold color-gray fontmb-small">
                                         Biên bản và Nghị quyết ĐHĐCĐ năm 2018
                                     </h5>
                                     <div class="desc-none">
@@ -971,7 +971,7 @@
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
-                                    <h5 class="title font-pri-bold color-gray">
+                                    <h5 class="title font20 font-pri-bold color-gray fontmb-small">
                                         Công bố thông tin ngày đăng ký cuối cùng để thực hiện quyền tham dự Đại hội cổ
                                         đông năm 2018
                                     </h5>
@@ -998,7 +998,7 @@
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
-                                    <h5 class="title font-pri-bold font25 color-gray">
+                                    <h5 class="title font20 font-pri-bold font25 color-gray fontmb-small">
                                         Công bố thông tin về việc bổ sung ngành nghề kinh doanh và sửa đổi điều lệ THACO
                                     </h5>
                                     <div class="desc-none">

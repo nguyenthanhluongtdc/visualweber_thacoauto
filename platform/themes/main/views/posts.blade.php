@@ -22,7 +22,7 @@
                                 {{$loop->first ? Str::words($post->description,40): Str::words($post->description,20)}}
                             </p>
                             <p class="city-day font-pri font15">
-                                <span class="city">Hà Nội</span>
+                                <span class="city">{{ \MetaBox::getMetaData($post, 'region_post', true) ?? '--' }}</span>
                                 <span>{{date_format($post->created_at,"d-m-Y")}}</span>
                             </p>
                         </div>
@@ -45,14 +45,14 @@
                                 <h4 class="font-mi-bold font20"><a href="{{$post->url}}">{{$post->name}}</a></h4>
                                 <p class="desc font-pri font20">{{Str::words($post->description,40)}}</p>
                                 <p class="city-day font-pri font15">
-                                    <span class="city">Hà Nội</span>
+                                    <span class="city">{{ \MetaBox::getMetaData($post, 'region_post', true) ?? '--' }}</span>
                                     <span>{{date_format($post->created_at,"d-m-Y")}}</span>
                                 </p>
                             </div>
                         </div>
                         @endforeach
                     @endif
-                    
+
                 </div>
                 <div class="page-pagination">
                     @if(!empty($posts))
@@ -92,4 +92,3 @@
             </div>
         </div>
     </div>
-    

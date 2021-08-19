@@ -37,7 +37,7 @@
             </P>
             <a href="" class="font-pri-bold">Xem thêm</a>
         </div> --}}
-    </div>  
+    </div>
     {{-- <div class="slider-main-item">
         <img src="{{ Theme::asset()->url('images/main/slider1.jpg') }}" alt="">
         <div class="content-slider">
@@ -75,7 +75,7 @@
                             <div class="item-img-main">
                                 <a href="{{$post->url}}"><img src="{{ get_object_image($post->image, 'post-large') }}" alt=""></a>
                             </div>
-                
+
                             <div class="item-main">
                                 <div class="item-content">
                                     <h3 class="title font-pri-bold font30 fontmb-medium text-uppercase">
@@ -85,7 +85,7 @@
                                         {{Str::words($post->description,30)}}
                                     </p>
                                     <div class="city-day font-pri font20 fontmb-small">
-                                        <span class="city">Hà Nội</span>
+                                        <span class="city">{{ \MetaBox::getMetaData($post, 'region_post', true) ?? '--' }}</span>
                                         <span class="day">{{date_format($post->created_at,"d-m-Y")}}</span>
                                     </div>
                                 </div>
@@ -97,17 +97,17 @@
                         <div class="item-content">
                             <h3 class="title font-pri-bold font20 fontmb-medium text-uppercase">
                                 <a href="{{$post->url}}">{{$post->name}}</a>
-                                
+
                             </h3>
                             <p class="desc font-pri font18 fontmb-little">
                                 {{Str::words($post->description,25)}}
                             </p>
                             <div class="city-day font-pri font20 fontmb-small">
-                                <span class="city">Hà Nội</span>
+                                <span class="city">{{ \MetaBox::getMetaData($post, 'region_post', true) ?? '--' }}</span>
                                 <span class="day">{{date_format($post->created_at,"d-m-Y")}}</span>
                             </div>
                         </div>
-        
+
                     </div>
                     @endif
                 @endforeach
@@ -132,7 +132,7 @@
                                 {{Str::words($post->description,20)}}
                             </p>
                             <div class="city-day font-pri fontmb-small">
-                                <span class="city">Hà Nội</span>
+                                <span class="city">{{ \MetaBox::getMetaData($post, 'region_post', true) ?? '--' }}</span>
                                 <span class="day">{{date_format($post->created_at,"d-m-Y")}}</span>
                             </div>
                         </div>
@@ -160,7 +160,7 @@
                         @endforeach
                         @endif
                     </div>
-            
+
             <div class="bottom" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="50">
                 <p class="title font-pri-bold -font16 fontmb-middle">
                     điểm tin
@@ -243,7 +243,7 @@
                         <p class="top-right-item-title font-pri-bold font30 fontmb-small"><a href="" class="link-item-home">công
                                 nghiệp hỗ trợ <br> & cơ khí</a></p>
                     </div>
-                    
+
                     <div class="top-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
                         <img src="{{ Theme::asset()->url('images/main/lv4.png') }}" alt="">
                         <p class="top-right-item-title font-pri-bold font30 fontmb-small"><a href="" class="link-item-home">xuất
@@ -272,7 +272,7 @@
                         <div class="symbol">
                             <img src="{{ Theme::asset()->url('images/main/lv7.png') }}" alt="">
                         </div>
-                        <p class="bottom-right-item-title font-pri-bold font30 fontmb-small"><a href="" class="link-item-home">MÔ TÔ & XE MÁY 
+                        <p class="bottom-right-item-title font-pri-bold font30 fontmb-small"><a href="" class="link-item-home">MÔ TÔ & XE MÁY
                             </a></p>
                     </div>
                     <div class="bottom-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
@@ -289,7 +289,7 @@
                         <p class="bottom-right-item-title font-pri-bold font30 fontmb-small"><a href="" class="link-item-home">XE
                                 BUS</a></p>
                     </div>
-                    
+
                     <div class="bottom-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
                         <div class="symbol">
                             <img src="{{ Theme::asset()->url('images/main/lv9.png') }}" alt="">

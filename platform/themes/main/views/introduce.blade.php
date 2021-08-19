@@ -2,11 +2,13 @@
     <div class="navbar-menu">
         <div class="container-remake">
             <ul class="nav font-pri-bold">
-                <li class="nav-item" data-aos="fade-down">
-                    <a href="#section_one" title="Về THACO AUTO" class="click_scroll">
-                        Về THACO AUTO
-                    </a>
-                </li>
+                @if(has_field($page, 'title_module_aboutus_introduce'))
+                    <li class="nav-item" data-aos="fade-down">
+                        <a href="#{{Illuminate\Support\Str::slug(has_field($page, 'title_module_aboutus_introduce'), '_')}}" title="Về THACO AUTO" class="click_scroll">
+                            {{has_field($page, 'title_module_aboutus_introduce')}}
+                        </a>
+                    </li>
+                @endif
                 <li class="nav-item" data-aos="fade-down" data-aos-delay="300">
                     <a href="#section_two" title="Sản xuất - Kinh doanh ô tô & Cơ khí" class="click_scroll">
                         Sản xuất - Kinh doanh ô tô & Cơ khí
@@ -31,25 +33,22 @@
         </div>
     </div>
     <div class="section-aboutus-wrapper">
-        <div class="section-aboutus__picture" data-aos="fade-right">
-            <img class="mw-100" src="{{Theme::asset()->url('images/introduce/banner.jpg')}}" alt="">
-        </div>
+        @if(has_field($page, 'image_module_aboutus_introduce'))
+            <div class="section-aboutus__picture" data-aos="fade-right">
+                <img class="mw-100" src="{{get_image_url(has_field($page, 'image_module_aboutus_introduce'))}}" alt="">
+            </div>
+        @endif
         <div class="container-remake">
-            <div class="section-aboutus" id="section_one">
+            <div class="section-aboutus" id="{{Illuminate\Support\Str::slug(has_field($page, 'title_module_aboutus_introduce'), '_')}}">
                 <div class="section-aboutus__content font20" data-aos="fade-down-right">
-                    <h2 class="section-aboutus__content__title font-pri-bold font60 fontmb-large" >
-                        về chúng tôi
-                    </h2>
-                    <p>
-                        Công ty ôtô Trường Hải (THACO) được thành lập vào ngày 29/04/1997. Người sáng lập là ông Trần Bá Dương, hiện là Chủ tịch Hội đồng Quản trị THACO. Văn phòng Tổng quản TP.HCM đặt tại Tòa nhà IIA, số 10 đường Mai Chí Thọ, phường Thủ Thiêm, Quận 2. Tổng số nhân sự hiện nay khoảng 20.000 người.
-                    </p>
-                    <p>
-                        Sau 22 năm hình thành và phát triển, THACO đã trở thành Tập đoàn công nghiệp đa ngành, trong đó Cơ khí và Ô tô là chủ lực, đồng thời phát triển các lĩnh vực sản xuất kinh doanh bổ trợ cho nhau, tạo ra giá trị cộng hưởng và nâng cao năng lực cạnh tranh, bao gồm: Nông nghiệp; Đầu tư xây dựng; Logistics và Thương mại & Dịch vụ.
-                    </p>
-                    
-                    <p>
-                        Bên cạnh hoạt động sản xuất kinh doanh, THACO còn xây dựng môi trường văn hóa doanh nghiệp lành mạnh, định hình được bản sắc văn hóa riêng của THACO dựa trên triết lý kinh doanh “Mang lại giá trị cho khách hàng, xã hội và có đóng góp thiết thực vào nền kinh tế đất nước” và nguyên tắc “8 chữ T: Tận tâm - Trung Thực - Trí Tuệ - Tự Tin - Tôn Trọng - Trung Tín - Tận Tình - Thuận Tiện”. Đây chính là giá trị cốt lõi của văn hóa THACO, là tài sản vô hình để tạo ra động lực thúc đẩy sự phát triển.
-                    </p>
+                    @if(has_field($page, 'title_module_aboutus_introduce'))
+                        <h2 class="section-aboutus__content__title font-pri-bold font60 fontmb-large" >
+                            {!! has_field($page, 'title_module_aboutus_introduce') !!}
+                        </h2>
+                    @endif
+                    @if(has_field($page, 'content_module_aboutus_introduce'))
+                        {!! has_field($page, 'content_module_aboutus_introduce') !!}
+                    @endif
                 </div>
             </div>
         </div>

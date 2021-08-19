@@ -333,3 +333,12 @@
     }
   }
 }
+
+#bb-comment {
+  &.bb-comment-wrapper {
+    padding: 1.5rem 0;
+    .bb-comment {
+      max-width: 100%;
+    }
+  }
+}

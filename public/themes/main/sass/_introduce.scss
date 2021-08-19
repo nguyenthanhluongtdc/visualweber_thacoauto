@@ -452,14 +452,8 @@
                     @include paddingX(47);
                     font-family: $font-primary-bold;
                     
-                    @media (max-width: 1080px) {
-                        height: 64px;
-                        line-height: 67px;
-                    }
-
-                    @media (max-width: 992px) {
-                        height: auto;
-                    }
+                    @include mobileHeight(63);
+                    @include mobileLineHeight(67);
                 }
             }
 

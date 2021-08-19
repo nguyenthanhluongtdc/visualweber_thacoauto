@@ -250,11 +250,7 @@
                                     <div class="symbol">
                                         <img src="{{Theme::asset()->url('images/introduce/symbol12.png')}}" alt="">
                                     </div>
-<<<<<<< HEAD
                                     <div class="name fontmb-small">
-=======
-                                    <div class="fontmb-medium name">
->>>>>>> d4bfa5fac4d90757731947509d257b81f1e4bb2e
                                         xe du lịch
                                     </div>
                                 </div>
@@ -266,11 +262,7 @@
                                     <div class="symbol">
                                         <img src="{{Theme::asset()->url('images/introduce/symbol8.png')}}" alt="">
                                     </div>
-<<<<<<< HEAD
                                     <div class="name fontmb-small">
-=======
-                                    <div class="fontmb-medium name">
->>>>>>> d4bfa5fac4d90757731947509d257b81f1e4bb2e
                                         xe bus
                                     </div>
                                 </div>
@@ -282,11 +274,7 @@
                                     <div class="symbol">
                                         <img src="{{Theme::asset()->url('images/introduce/symbol9.png')}}" alt="">
                                     </div>
-<<<<<<< HEAD
                                     <div class="name fontmb-small">
-=======
-                                    <div class="fontmb-medium name">
->>>>>>> d4bfa5fac4d90757731947509d257b81f1e4bb2e
                                         xe tải
                                     </div>
                                 </div>
@@ -298,11 +286,7 @@
                                     <div class="symbol">
                                         <img src="{{Theme::asset()->url('images/introduce/symbol10.png')}}" alt="">
                                     </div>
-<<<<<<< HEAD
                                     <div class="name fontmb-small">
-=======
-                                    <div class="fontmb-medium name">
->>>>>>> d4bfa5fac4d90757731947509d257b81f1e4bb2e
                                         xe chuyên dụng
                                     </div>
                                 </div>
@@ -693,18 +677,10 @@
         <div class="container-remake">
             <div class="section-behave">
                 <div class="section-behave__left">
-<<<<<<< HEAD
                     <h2 class="section-behave__title font60 font-pri-bold fontmb-middle" data-aos="fade-right">
-=======
-                    <h2 class="section-behave__title font60 fontmb-big font-pri-bold" data-aos="fade-right">
->>>>>>> d4bfa5fac4d90757731947509d257b81f1e4bb2e
                         văn hóa ứng xử
                     </h2>
-<<<<<<< HEAD
                     <div class="section-behave__des" data-aos="fade-right">
-=======
-                    <div class="section-behave__des fontmb-little" data-aos="fade-left">
->>>>>>> 1bf4bc1a3e806834c84eac81b41433460e458bac
                         <p>
                             Quá trình phát triển của THACO AUTO là thành quả của nỗ lực vượt khó, tự tin, trí tuệ, kỷ luật và ý chí, nghị lực của người sáng lập cùng với đội ngũ nhân sự có thái độ làm việc tích cực, ý thức đóng góp cống hiến đã hình thành nên Văn hóa này.
                         </p>

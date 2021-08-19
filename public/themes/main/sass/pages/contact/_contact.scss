@@ -635,7 +635,10 @@
                             width: 30%;
                             font-size: 25px;
                             color: #0054a0;
+                            margin-top: 5px;
                             @media only screen and (max-width: 400px){font-size: 12px;}
+                            @media only screen and (max-width: 767px){margin-top: 3px;}
+
                         }
                         p{
                             font-size: 25px;

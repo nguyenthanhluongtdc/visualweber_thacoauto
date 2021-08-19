@@ -195,5 +195,93 @@ app()->booted(function () {
                     'class' => 'form-control',
                 ],
             ],
+        ])
+        ->setSection([ // Set section with no field
+            'title' => __('Sản xuất - kinh doanh ô tô & cơ khí'),
+            'desc' => __('Sản xuất - kinh doanh ô tô & cơ khí settings'),
+            'id' => 'opt-text-subsection-manufacturing_business',
+            'subsection' => true,
+            'icon' => 'fa fa-home',
+        ])
+        // ->setField([ // Set field for section
+        //     'id' => 'section_manufacturing',
+        //     'section_id' => 'opt-text-subsection-manufacturing_business',
+        //     'type' => 'text',
+        //     'label' => __('Copyright'),
+        //     'attributes' => [
+        //         'name' => 'section_manufacturing',
+        //         'value' => '© 2016 Botble Technologies. All right reserved.',
+        //         'options' => [
+        //             'class' => 'form-control',
+        //             'placeholder' => __('Change copyright'),
+        //             'data-counter' => 120,
+        //         ]
+        //     ],
+        //     'helper' => __('Copyright on footer of site'),
+        // ])
+        ->setField([
+            'id'         => 'repeater_munufacturing',
+            'section_id' => 'opt-text-subsection-manufacturing_business',
+            'type'       => 'repeater',
+            'label'      => __('Repeater manufacturing'),
+            'attributes' => [
+                'name'   => 'repeater_munufacturing',
+                'value'  => null,
+                'fields' => [
+                    [
+                        'type'       => 'mediaImage',
+                        'label'      => __('Image'),
+                        'attributes' => [
+                            'name'  => 'image',
+                            'value' => null,
+                        ],
+                    ],
+                    [
+                        'type'       => 'textarea',
+                        'label'      => __('Description'),
+                        'attributes' => [
+                            'name'    => 'description',
+                            'value'   => null,
+                            'options' => [
+                                'class'        => 'form-control',
+                                'data-counter' => 255,
+                                'rows'         => 3,
+                            ],
+                        ],
+                    ],
+                ],
+            ],
+        ])->setField([
+            'id'         => 'repeater_business',
+            'section_id' => 'opt-text-subsection-manufacturing_business',
+            'type'       => 'repeater',
+            'label'      => __('Repeater business'),
+            'attributes' => [
+                'name'   => 'repeater_business',
+                'value'  => null,
+                'fields' => [
+                    [
+                        'type'       => 'mediaImage',
+                        'label'      => __('Image'),
+                        'attributes' => [
+                            'name'  => 'image',
+                            'value' => null,
+                        ],
+                    ],
+                    [
+                        'type'       => 'textarea',
+                        'label'      => __('Description'),
+                        'attributes' => [
+                            'name'    => 'description',
+                            'value'   => null,
+                            'options' => [
+                                'class'        => 'form-control',
+                                'data-counter' => 255,
+                                'rows'         => 3,
+                            ],
+                        ],
+                    ],
+                ],
+            ],
         ]);
 });

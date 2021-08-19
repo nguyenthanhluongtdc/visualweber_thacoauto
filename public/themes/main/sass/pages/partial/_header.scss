@@ -3,14 +3,14 @@
 }
 
 .header{
-    
+
     background: $color-primary;
     position: fixed;
     height: 4.2vw;
     z-index: 99;
     width: 100%;
     transition: all 0.3s ease-out;
-    
+
     .header-wrap{
         display: flex;
         align-items: center;
@@ -30,12 +30,13 @@
         .main-menu{
             width: 65%;
             margin-left: 3.5%;
-            
+
             ul{
                 width: 100%;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                margin-bottom: unset;
                 li.menu-big{
                     position: relative;
                     &:last-child{
@@ -44,6 +45,10 @@
                     a{
                         text-transform: uppercase;
                         color: #fff;
+
+                        position: relative;
+                        top: 2px;
+
                     }
                     &:hover .sub-menu-drop{
                         display: block;
@@ -60,7 +65,7 @@
                         font-family: $font-semi;
                         padding: 10% 25%;
                         display: none;
-                        
+
                         &::after{
                             content: '';
                             position: absolute;
@@ -144,6 +149,7 @@
                 margin-left: 10px;
             }
             .nav-lang{
+                margin-bottom: unset;
                 display: flex;
                 &:lang(vi){
                     .lang-vi{
@@ -160,9 +166,12 @@
                     }
                 }
                 .nav-item{
-                    
+
                     .nav-link{
                         color: #fff;
+
+                        position: relative;
+                        top: 2px;
                     }
                 }
             }
@@ -175,7 +184,7 @@
             // .dropdown-menu{
             //     min-width: auto;
             //     width: 100%;
-                
+
             //     align-items: center;
             //     li{
             //         align-items: center;
@@ -193,7 +202,7 @@
             //     outline: none;
             //     display: flex;
             //     align-items: center;
-               
+
             // }
             // .dropdown-toggle::after{
             //     color: #fff;
@@ -205,7 +214,7 @@
     @media (max-width: 1080px) {
         display: none;
     }
-    
+
 }
 
 .header-fixed{
@@ -228,7 +237,7 @@
     @media (max-width: 1080px) {
         display: block;
     }
-    
+
     .menu-main {
         position: relative;
         height: 100%;
@@ -273,7 +282,7 @@
         transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
         background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
     }
-    
+
     .hamburgerspan:first-child {
         transform-origin: 0% 0%;
     }

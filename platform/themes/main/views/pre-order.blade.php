@@ -190,8 +190,8 @@
                     <div class="gray-line"></div>
                 </div>
                 <div class="deposit-price">
-                    <h3 class="deposit-price__title font20 font-cond-bold fontmb-middle">ĐẶT CỌC GIÁ BÁN LẺ</h3>
-                    <span class="deposit-price__price font20 font-cond-bold fontmb-middle">10,000,000đ</span>
+                    <h3 class="deposit-price__title font20 font-cond-bold fontmb-medium">ĐẶT CỌC GIÁ BÁN LẺ</h3>
+                    <span class="deposit-price__price font20 font-cond-bold fontmb-medium">10,000,000đ</span>
                 </div>
                 
                 <a class="select-button font18 font-pri fontmb-small" type="button" href="">Tiếp theo</a>

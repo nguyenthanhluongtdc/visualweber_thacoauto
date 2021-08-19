@@ -519,7 +519,27 @@
                 // }  
                 .item{
                     display: flex;
+                    margin-top: 10px;
+                    @media(max-width : 1720px){
+                        margin-top: 8px;
+                    }
+                    @media(max-width : 1680px){
+                        margin-top: 6px;
+                    }
+                    @media(max-width : 1440px){
+                        margin-top: -5px;
+                        p{
+                            font-size: 12px;
+                        }
+                    }
+                    @media(max-width : 1300px){
+                        margin-top: -9px;
+                        p{
+                            font-size: 10px;
+                        }
+                    }
                     ion-icon{
+                       font-size: 15px;
                         color: #0054a0;
                         margin-top: 5.5px;
                     }
@@ -553,7 +573,7 @@
                 p{
                    
                     color: #0054a0;
- 
+                    margin-top: 2px;
                     @media(max-width : 1200px){
                         font-size: 15px;
                         line-height: 27px;

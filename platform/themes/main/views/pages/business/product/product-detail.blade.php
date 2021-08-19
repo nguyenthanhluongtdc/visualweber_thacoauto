@@ -30,7 +30,7 @@
                     <div class="detail-info">
                         <div class="detail-info--frame">
                             
-                            <div class="text font15 fontmb-majority font-pri">
+                            <div class="text font15 fontmb-little font-pri">
                                 <div class="logo mb-4">
                                     <img src="{{Theme::asset()->url('images/services/kia-logo.png')}}" alt="">
                                 </div>

@@ -11,7 +11,7 @@
                 nhiều năm qua.</p>
             <div data-aos="zoom-in-up" data-aos-duration="2000" class="select-list mt-40 mb-40">
                 <form action="">
-                    <select class="ui search selection dropdown city w-100 fontmb-majority" name="" id="">
+                    <select class="ui search selection dropdown city w-100" name="" id="">
                         <option value="">Tỉnh/Thành phố</option>
                         <option value="1">TP.HỒ CHÍ MINH</option>
                         <option value="2">TP.HỒ CHÍ MINH</option>
@@ -28,8 +28,8 @@
                 <div class="left">
                     <div class="branch-overflow">
                         <div class="branch-item mb-20">
-                            <p class="branch-name font30 mb-20 fontmb-medium">Chi Nhánh An Lạc - Công Ty CP Ô Tô Trường Hải</p>
-                            <p class="branch-address font20 mb-20 fontmb-majority">36C11, QL1A, Tân Kiên, Bình Chánh, Thành phố Hồ Chí
+                            <p class="branch-name font30 mb-20">Chi Nhánh An Lạc - Công Ty CP Ô Tô Trường Hải</p>
+                            <p class="branch-address font20 mb-20">36C11, QL1A, Tân Kiên, Bình Chánh, Thành phố Hồ Chí
                                 Minh 700000</p>
                             <div class="logo-wrap mb-20">
                                 <div class="logo-wrap__left">
@@ -46,15 +46,15 @@
                                         <img src="{{Theme::asset()->url('images/distribution/thacobus.png')}}" alt="">
                                     </div>
                                 </div>
-                                <div class="logo-wrap__right font17 font-pri font-17 fontmb-majority">
+                                <div class="logo-wrap__right font17 font-pri font-17">
                                     <a href="/he-thong-phan-phoi-chi-tiet">Xem chi tiết <i class="fa fa-arrow-right"
                                             aria-hidden="true"></i></a>
                                 </div>
                             </div>
                         </div>
                         <div class="branch-item mb-20">
-                            <p class="branch-name font30 mb-20 fontmb-medium">Chi Nhánh An Lạc - Công Ty CP Ô Tô Trường Hải</p>
-                            <p class="branch-address font20 mb-20 fontmb-majority">36C11, QL1A, Tân Kiên, Bình Chánh, Thành phố Hồ Chí
+                            <p class="branch-name font30 mb-20">Chi Nhánh An Lạc - Công Ty CP Ô Tô Trường Hải</p>
+                            <p class="branch-address font20 mb-20">36C11, QL1A, Tân Kiên, Bình Chánh, Thành phố Hồ Chí
                                 Minh 700000</p>
                             <div class="logo-wrap mb-20">
                                 <div class="logo-wrap__left">
@@ -71,15 +71,15 @@
                                         <img src="{{Theme::asset()->url('images/distribution/thacobus.png')}}" alt="">
                                     </div>
                                 </div>
-                                <div class="logo-wrap__right font17 font-pri font-17 fontmb-majority">
+                                <div class="logo-wrap__right font17 font-pri font-17">
                                     <a href="/he-thong-phan-phoi-chi-tiet">Xem chi tiết <i class="fa fa-arrow-right"
                                             aria-hidden="true"></i></a>
                                 </div>
                             </div>
                         </div>
                         <div class="branch-item mb-20">
-                            <p class="branch-name font30 mb-20 fontmb-medium">Chi Nhánh An Lạc - Công Ty CP Ô Tô Trường Hải</p>
-                            <p class="branch-address font20 mb-20 fontmb-majority">36C11, QL1A, Tân Kiên, Bình Chánh, Thành phố Hồ Chí
+                            <p class="branch-name font30 mb-20">Chi Nhánh An Lạc - Công Ty CP Ô Tô Trường Hải</p>
+                            <p class="branch-address font20 mb-20">36C11, QL1A, Tân Kiên, Bình Chánh, Thành phố Hồ Chí
                                 Minh 700000</p>
                             <div class="logo-wrap mb-20">
                                 <div class="logo-wrap__left">
@@ -96,15 +96,15 @@
                                         <img src="{{Theme::asset()->url('images/distribution/thacobus.png')}}" alt="">
                                     </div>
                                 </div>
-                                <div class="logo-wrap__right font17 font-pri font-17 fontmb-majority">
+                                <div class="logo-wrap__right font17 font-pri font-17">
                                     <a href="/he-thong-phan-phoi-chi-tiet">Xem chi tiết <i class="fa fa-arrow-right"
                                             aria-hidden="true"></i></a>
                                 </div>
                             </div>
                         </div>
                         <div class="branch-item mb-20">
-                            <p class="branch-name font30 mb-20 fontmb-medium">Chi Nhánh An Lạc - Công Ty CP Ô Tô Trường Hải</p>
-                            <p class="branch-address font20 mb-20 fontmb-majority">36C11, QL1A, Tân Kiên, Bình Chánh, Thành phố Hồ Chí
+                            <p class="branch-name font30 mb-20">Chi Nhánh An Lạc - Công Ty CP Ô Tô Trường Hải</p>
+                            <p class="branch-address font20 mb-20">36C11, QL1A, Tân Kiên, Bình Chánh, Thành phố Hồ Chí
                                 Minh 700000</p>
                             <div class="logo-wrap mb-20">
                                 <div class="logo-wrap__left">
@@ -121,7 +121,7 @@
                                         <img src="{{Theme::asset()->url('images/distribution/thacobus.png')}}" alt="">
                                     </div>
                                 </div>
-                                <div class="logo-wrap__right font17 font-pri font-17 fontmb-majority">
+                                <div class="logo-wrap__right font17 font-pri font-17">
                                     <a href="/he-thong-phan-phoi-chi-tiet">Xem chi tiết <i class="fa fa-arrow-right"
                                             aria-hidden="true"></i></a>
                                 </div>
@@ -133,7 +133,7 @@
                     <img src="{{Theme::asset()->url('images/distribution/mapitem.png')}}" alt="">
                 </div>
             </div>
-            <p data-aos="fade-left" data-aos-duration="1500" class="description mobile font20 fontmb-majority">THACO là doanh nghiệp hàng
+            <p data-aos="fade-left" data-aos-duration="1500" class="description mobile font20">THACO là doanh nghiệp hàng
                 đầu và có quy mô lớn nhất tại Việt Nam về lĩnh vực sản xuất lắp ráp ô tô, với chuỗi giá trị từ nghiên
                 cứu phát triển sản phẩm (R&D), sản xuất linh kiện phụ tùng, lắp ráp ô tô, đến giao nhận vận chuyển và
                 phân phối, bán lẻ. Sản phẩm có đầy đủ các chủng loại: xe tải, xe bus, xe du lịch, xe chuyên dụng và đầy
@@ -157,14 +157,14 @@
                     <div class="news-body">
                         <a class="news-title font30" href="#">CÔNG TY TNHH MTV ĐỒNG PHƯỚC ĐẦU TƯ 5 XE MINI BUS IVECO
                             DAILY</a>
-                        <p class="news-description font20 fontmb-majority">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                        <p class="news-description font20">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                             do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse
                             ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
                         <div class="news-info">
-                            <div class="news-info__item font15 fontmb-majority">
+                            <div class="news-info__item font15">
                                 <p>Hà nội</p>
                             </div>
-                            <div class="news-info__item font15 fontmb-majority">
+                            <div class="news-info__item font15">
                                 <p>20-12-2021</p>
                             </div>
                         </div>
@@ -177,10 +177,10 @@
                         <p class="news-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                             eiusmod tempor incididunt ut labore et dolore</p>
                         <div class="news-info">
-                            <div class="news-info__item font15 fontmb-majority">
+                            <div class="news-info__item font15">
                                 <p>Hà nội</p>
                             </div>
-                            <div class="news-info__item font15 fontmb-majority">
+                            <div class="news-info__item font15">
                                 <p>20-12-2021</p>
                             </div>
                         </div>
@@ -196,10 +196,10 @@
                         <div class="news-body">
                             <a class="news-title font25" href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6</a>
                             <div class="news-info">
-                                <div class="news-info__item font15 fontmb-majority">
+                                <div class="news-info__item font15">
                                     <p>Hà nội</p>
                                 </div>
-                                <div class="news-info__item font15 fontmb-majority">
+                                <div class="news-info__item font15">
                                     <p>20-12-2021</p>
                                 </div>
                             </div>
@@ -220,10 +220,10 @@
                         <p class="news-description fontmb-little">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         <div class="news-info">
-                            <div class="news-info__item font15 fontmb-majority">
+                            <div class="news-info__item font15">
                                 <p>Hà nội</p>
                             </div>
-                            <div class="news-info__item font15 fontmb-majority">
+                            <div class="news-info__item font15">
                                 <p>20-12-2021</p>
                             </div>
                         </div>
@@ -253,10 +253,10 @@
                         eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
                         gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
                     <div class="news-info">
-                        <div class="news-info__item font15 fontmb-majority">
+                        <div class="news-info__item font15">
                             <p>Hà nội</p>
                         </div>
-                        <div class="news-info__item font15 fontmb-majority">
+                        <div class="news-info__item font15">
                             <p>20-12-2021</p>
                         </div>
                     </div>
@@ -278,10 +278,10 @@
                         eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
                         gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
                     <div class="news-info">
-                        <div class="news-info__item font15 fontmb-majority">
+                        <div class="news-info__item font15">
                             <p>Hà nội</p>
                         </div>
-                        <div class="news-info__item font15 fontmb-majority">
+                        <div class="news-info__item font15">
                             <p>20-12-2021</p>
                         </div>
                     </div>
@@ -303,10 +303,10 @@
                         eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
                         gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
                     <div class="news-info">
-                        <div class="news-info__item font15 fontmb-majority">
+                        <div class="news-info__item font15">
                             <p>Hà nội</p>
                         </div>
-                        <div class="news-info__item font15 fontmb-majority">
+                        <div class="news-info__item font15">
                             <p>20-12-2021</p>
                         </div>
                     </div>
@@ -396,9 +396,6 @@
                         <a href="#" class="library-title font25  fontmb-medium">THADICO ủng hộ 3 tỷ đồng cho Quỹ phòng, chống Covid-19
                             tỉnh Bến Tre</a>
                         <p class="library-description font20 fontmb-little">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        <a href="#" class="library-title font25 fontmb-medium">THADICO ủng hộ 3 tỷ đồng cho Quỹ phòng, chống Covid-19
-                            tỉnh Bến Tre</a>
-                        <p class="library-description font20 fontmb-majority">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                             sed do eiusmod</p>
                     </div>
                 </div>
@@ -414,9 +411,6 @@
                         <a href="#" class="library-title font25  fontmb-medium">THADICO ủng hộ 3 tỷ đồng cho Quỹ phòng, chống Covid-19
                             tỉnh Bến Tre</a>
                         <p class="library-description font20 fontmb-little">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        <a href="#" class="library-title font25 fontmb-medium">THADICO ủng hộ 3 tỷ đồng cho Quỹ phòng, chống Covid-19
-                            tỉnh Bến Tre</a>
-                        <p class="library-description font20 fontmb-majority">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                             sed do eiusmod</p>
                     </div>
                 </div>
@@ -432,9 +426,6 @@
                         <a href="#" class="library-title font25  fontmb-medium">THADICO ủng hộ 3 tỷ đồng cho Quỹ phòng, chống Covid-19
                             tỉnh Bến Tre</a>
                         <p class="library-description font20 fontmb-little">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        <a href="#" class="library-title font25 fontmb-medium">THADICO ủng hộ 3 tỷ đồng cho Quỹ phòng, chống Covid-19
-                            tỉnh Bến Tre</a>
-                        <p class="library-description font20 fontmb-majority">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                             sed do eiusmod</p>
                     </div>
                 </div>
@@ -450,9 +441,6 @@
                         <a href="#" class="library-title font25  fontmb-medium">THADICO ủng hộ 3 tỷ đồng cho Quỹ phòng, chống Covid-19
                             tỉnh Bến Tre</a>
                         <p class="library-description font20 fontmb-little">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        <a href="#" class="library-title font25 fontmb-medium">THADICO ủng hộ 3 tỷ đồng cho Quỹ phòng, chống Covid-19
-                            tỉnh Bến Tre</a>
-                        <p class="library-description font20 fontmb-majority">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                             sed do eiusmod</p>
                     </div>
                 </div>
@@ -468,9 +456,6 @@
                         <a href="#" class="library-title font25  fontmb-medium">THADICO ủng hộ 3 tỷ đồng cho Quỹ phòng, chống Covid-19
                             tỉnh Bến Tre</a>
                         <p class="library-description font20 fontmb-little">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        <a href="#" class="library-title font25 fontmb-medium">THADICO ủng hộ 3 tỷ đồng cho Quỹ phòng, chống Covid-19
-                            tỉnh Bến Tre</a>
-                        <p class="library-description font20 fontmb-majority">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                             sed do eiusmod</p>
                     </div>
                 </div>

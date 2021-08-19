@@ -37,7 +37,7 @@ class ServiceForm extends FormAbstract
                 ],
             ])
             ->add('is_support', 'onOff', [
-                'label'         => trans('plugins/service::service.name.is_support'),
+                'label'         => trans('plugins/service::service.is_support'),
                 'label_attr'    => ['class' => 'control-label'],
                 'default_value' => false,
             ])

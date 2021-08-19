@@ -1,0 +1,9 @@
+{
+    "name": "Career",
+    "namespace": "Platform\\Career\\",
+    "provider": "Platform\\Career\\Providers\\CareerServiceProvider",
+    "author": "Laravel Technologies",
+    "url": "https://laravel-cms.demo.gistensal.com",
+    "version": "1.0",
+    "description": "Career plugin"
+}

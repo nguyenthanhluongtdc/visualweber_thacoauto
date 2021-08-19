@@ -85,8 +85,8 @@
 }
 
 .owl-theme .owl-dots .owl-dot span {
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
 }
 
 .scollbar-wrap-home {
@@ -157,7 +157,7 @@
     .content {
         display: flex;
         justify-content: space-between;
-        
+
         .left {
             width: 70%;
             display: flex;
@@ -341,7 +341,7 @@
                     position: relative;
 
                     a {
-                        
+
                         width: 100%;
                         height: 100%;
                         position: absolute;
@@ -424,12 +424,12 @@
         .left-mobile{
             display: none;
         }
-         //mobile 
+         //mobile
         @media (max-width: 1080px) {
             flex-wrap: wrap;
             .left-desktop{
                 display: none;
-                
+
             }
             .left-mobile{
                 display: flex;
@@ -524,7 +524,7 @@
                             height: auto;
                         }
                     }
-    
+
                     #cells {
                         @include mobilePaddingLeft(25);
                         width: 70%;
@@ -663,7 +663,7 @@
         @media(max-width: 995px) {
             transform: scale(0.6);
         }
-        
+
     }
     .field-home-content {
         margin-top: 45px;
@@ -720,7 +720,7 @@
                 justify-content: center;
                 align-items: center;
 
-                //mobile 
+                //mobile
                 @media (max-width: 1080px) {
                     max-width: 100%;
                     flex: 0 0 100%;
@@ -780,7 +780,7 @@
                     }
                     width: 50%;
                     text-align: center;
-                    
+
                     p {
                         margin-top: 40px;
                         text-transform: uppercase;
@@ -864,7 +864,7 @@
         .bottom {
             display: flex;
             height: 470px;
-            
+
             @media(max-width: 1680px) {
                 height: 410px;
             }
@@ -886,7 +886,7 @@
                 width: 31%;
                 background: #f4f4f4;
                 padding: 0 100px;
-                
+
                 @media(max-width: 1680px) {
                     padding: 0 70px;
                 }
@@ -962,14 +962,14 @@
 
                     .symbol {
                         img {
-                            
+
                             max-width: 90%;
                         }
                     }
                     @media(max-width: 1680px) {
                         padding: 0 50px;
 
-                        
+
                     }
                     @media (max-width: 1080px) {
                         @include mobilePaddingX(30);
@@ -1026,7 +1026,7 @@
     }
 }
 
-// quan hệ cổ đông 
+// quan hệ cổ đông
 .section-shareholder-home {
     padding-top: 60px;
     @media(max-width: 1680px) {
@@ -1050,7 +1050,7 @@
         @media (max-width: 1080px) {
             flex-wrap: wrap;
 
-            .menu-tab-right { 
+            .menu-tab-right {
                 flex: 0 0 100%;
                 max-width: 100%;
                 @include mobileMarginTop(35, "+");

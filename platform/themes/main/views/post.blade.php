@@ -94,34 +94,33 @@
     </div>
 
     @php $relatedPosts = get_related_posts($post->id, 12); @endphp
+        @if ($relatedPosts->count())
+        <div class="post-relate">
+            <h2 class="font-pri-bold font50">Tin liên quan</h2>
+            <div class="post-relate-carousel owl-carousel">
+                @foreach ($relatedPosts as $relatedItem)
+                    <div class="post-relate-item">
 
-            @if ($relatedPosts->count())
-            <div class="post-relate">
-                    <h2 class="font-pri-bold font50">Tin liên quan</h2>
-                    <div class="post-relate-carousel owl-carousel">
-                        @foreach ($relatedPosts as $relatedItem)
-                            <div class="post-relate-item">
 
+                        <div class="post-thumbnail">
+                            <a href="{{ $relatedItem->url }}" class="post__overlay">
+                                <img src="{{ RvMedia::getImageUrl($relatedItem->image, 'post-related') }}" alt="{{ $relatedItem->name }}">
+                            </a>
+                        </div>
+                        <p class="city-day font-pri font15">
+                            <span class="city">{{ \MetaBox::getMetaData($post, 'region_post', true) ?? '--' }}</span>
+                            <span class="time"> {{ $relatedItem->created_at->format('d/m/Y') }}</span>
+                        </p>
+                        <header class="post__header">
+                            <h5 class="font-helve font30 font-pri-bold"><a href="{{ $relatedItem->url }}" class="post__title"> {{ $relatedItem->name }}</a></h5>
 
-                                <div class="post-thumbnail">
-                                    <a href="{{ $relatedItem->url }}" class="post__overlay">
-                                        <img src="{{ RvMedia::getImageUrl($relatedItem->image, 'post-related') }}" alt="{{ $relatedItem->name }}">
-                                    </a>
-                                </div>
-                                <p class="city-day font-pri font15">
-                                    <span class="city">{{ \MetaBox::getMetaData($post, 'region_post', true) ?? '--' }}</span>
-                                    <span class="time"> {{ $relatedItem->created_at->format('d/m/Y') }}</span>
-                                </p>
-                                <header class="post__header">
-                                    <h5 class="font-helve font30 font-pri-bold"><a href="{{ $relatedItem->url }}" class="post__title"> {{ $relatedItem->name }}</a></h5>
-
-                                    <div class="post__desc font20 font-pri">{{ $relatedItem->description }}</div>
-                                </header>
-                            </div>
-                        @endforeach
+                            <div class="post__desc font20 font-pri">{{ $relatedItem->description }}</div>
+                        </header>
                     </div>
+                @endforeach
             </div>
-            @endif
+        </div>
+    @endif
 </div>
 @endif
 

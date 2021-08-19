@@ -11,6 +11,7 @@ use Platform\Base\Supports\Helper;
 use Illuminate\Support\Facades\Event;
 use Platform\Base\Traits\LoadAndPublishDataTrait;
 use Illuminate\Routing\Events\RouteMatched;
+use League\OAuth1\Client\Server\Server;
 
 class ServiceServiceProvider extends ServiceProvider
 {
@@ -51,6 +52,9 @@ class ServiceServiceProvider extends ServiceProvider
         });
 
         $this->app->booted(function () {
+            \SlugHelper::registerModule(Service::class);
+            \SlugHelper::setPrefix(Service::class, 'dich-vu');
+
             if (defined('CUSTOM_FIELD_MODULE_SCREEN_NAME')) {
                 \CustomField::registerModule(Service::class)
                     ->registerRule('basic', trans('plugins/service::service.name'), Service::class, function () {

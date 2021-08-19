@@ -57,14 +57,14 @@ return [
             $theme->asset()->add('alert_bootstrap', '//cdn.jsdelivr.net/alertifyjs/1.10.0/css/themes/default.min.css');
             $theme->asset()->add('alert_bootstrap', '//unpkg.com/swiper/swiper-bundle.min.css');
             $theme->asset()->usePath()->add('semantic_ui_style', 'semantic-ui/semantic.min.css');
-            $theme->asset()->add('transition', 'https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/transition.min.css');
-            $theme->asset()->add('dropdown', 'https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/dropdown.min.css');
-            $theme->asset()->add('accordion', 'https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/accordion.min.css');
+            $theme->asset()->add('transition', '//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/transition.min.css');
+            $theme->asset()->add('dropdown', '//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/dropdown.min.css');
+            $theme->asset()->add('accordion', '//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/accordion.min.css');
 
             $theme->asset()->usePath()->add('style', 'css/common.css', [], [], time());
 
-            $theme->asset()->container('footer')->add('bootstrapjsdelivr', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js');
-            $theme->asset()->container('footer')->add('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js');
+            $theme->asset()->container('footer')->add('bootstrapjsdelivr', '//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js');
+            $theme->asset()->container('footer')->add('bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js');
             $theme->asset()->container('header')->add('jquery', '//code.jquery.com/jquery-3.5.1.min.js');
             $theme->asset()->container('footer')->add('semantic', '//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js');
             $theme->asset()->container('footer')->add('popper', '//cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js');

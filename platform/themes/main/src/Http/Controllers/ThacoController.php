@@ -12,10 +12,10 @@ use Platform\Theme\Events\RenderingSingleEvent;
 use Illuminate\Support\Arr;
 use Illuminate\Http\Request;
 use Platform\Kernel\Repositories\Interfaces\PostInterface as InterfacesPostInterface;
-use Platform\Partner\Models\Partner;
-use Platform\Services\Models\Services;
+// use Platform\Partner\Models\Partner;
+// use Platform\Services\Models\Services;
 use Theme;
-use Response;
+// use Response;
 use SeoHelper;
 use SlugHelper;
 use RvMedia;
@@ -27,6 +27,7 @@ class ThacoController extends PublicController
     public function __construct()
     {
         $this->postInterface = app(InterfacesPostInterface::class);
+        Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
     }
 
     /**
@@ -77,9 +78,12 @@ class ThacoController extends PublicController
         event(new RenderingSingleEvent($slug));
         Theme::layout('default');
 
-
         if (!empty($result) && is_array($result)) {
-            return Theme::scope(isset(Arr::get($result, 'data.page')->template) ? Arr::get($result, 'data.page')->template : Arr::get($result, 'view', ''), $result['data'], Arr::get($result, 'default_view'))->render();
+            $view = isset(Arr::get($result, 'data.page')->template) ? Arr::get($result, 'data.page')->template : Arr::get($result, 'view', '');
+            if($view == 'post' || $view == 'page') {
+                Theme::asset()->usePath()->add('reset_css', 'css/non-reset.css');
+            }
+            return Theme::scope($view, $result['data'], Arr::get($result, 'default_view'))->render();
         }
 
         abort(404);

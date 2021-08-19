@@ -20,15 +20,11 @@
 
     <style>
         :root {
-            --color-1st: {
-                    {
-                    theme_option('primary_color', '#bead8e')
-                }
-            }
+            --color-1st: {{ theme_option('primary_color', '#bead8e') }}
 
             ;
-            --primary-font: '{{ theme_option('primary_font', 'Roboto') }}',
-            sans-serif;
+            /* --primary-font: '{{ theme_option('primary_font', 'Roboto') }}', */
+            /* sans-serif; */
         }
     </style>
 
@@ -43,12 +39,12 @@
 <!--[if IE 8]><body class="ie8 lt-ie9 lt-ie10"><![endif]-->
 <!--[if IE 9]><body class="ie9 lt-ie10"><![endif]-->
 
-<body @if (BaseHelper::siteLanguageDirection()=='rtl' ) dir="rtl" @endif>
+<body @if (BaseHelper::siteLanguageDirection()=='rtl' ) dir="rtl" class="MyriadPro-Regular font15" @endif>
     {!! apply_filters(THEME_FRONT_BODY, null) !!}
     <header class="header header-desktop" id="header">
         <div class="header-wrap container-remake">
             <div class="logo">
-                <a href="{{ route('public.single') }}" class="page-logo">
+                <a href="{{ route('public.single') }}" class="page-logo d-flex">
                     @if (theme_option('logo'))
                     <img src="{{ RvMedia::getImageUrl(theme_option('logo')) }}" alt="{{ theme_option('site_title') }}"
                         height="17">
@@ -67,7 +63,6 @@
             <div class="search-language">
                 <div class="search">
                     <a href="/search"><img src="{{ Theme::asset()->url('images/main/search.png') }}" alt=""></a>
-
                 </div>
                 <div class="language">
                     <ul class="nav-lang">

@@ -1,0 +1,9 @@
+{
+    "name": "Service",
+    "namespace": "Platform\\Service\\",
+    "provider": "Platform\\Service\\Providers\\ServiceServiceProvider",
+    "author": "Laravel Developer Team",
+    "url": "https://developers.laravel.com",
+    "version": "1.0",
+    "description": "The description for module service"
+}

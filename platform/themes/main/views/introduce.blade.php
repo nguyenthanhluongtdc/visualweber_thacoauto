@@ -64,7 +64,7 @@
     <div class="section-production-business-wrapper" id="section_two">
         <div class="container-remake">
             <div class="section-production-business">
-                <h2 class="section-production-business__title font-pri-bold font60 fontmb-lả" data-aos="fade-right">
+                <h2 class="section-production-business__title font-pri-bold font60 fontmb-large" data-aos="fade-right">
                     SẢN XUẤT - KINH DOANH Ô TÔ & CƠ KHÍ
                 </h2>
 
@@ -698,7 +698,7 @@
         <div class="container-remake">
             <div class="section-behave">
                 <div class="section-behave__left">
-                    <h2 class="section-behave__title font60 font-pri-bold fontmb-middle" data-aos="fade-right">
+                    <h2 class="section-behave__title font60 font-pri-bold fontmb-large" data-aos="fade-right">
                         văn hóa ứng xử
                     </h2>
                     <div class="section-behave__des" data-aos="fade-right">
@@ -728,7 +728,7 @@
         <div class="container-remake">
             <div class="section-criteria">
                 <div class="section-criteria__header">
-                    <h2 class="section-criteria__header__title font60 font-pri-bold fontmb-middle"
+                    <h2 class="section-criteria__header__title fontmb-large font60 font-pri-bold"
                         data-aos="fade-right">
                         Tiêu chí 8T
                     </h2>
@@ -747,7 +747,7 @@
                             <div class="defect-shape">
                                 <div class="box-center">
                                     <img src="{{Theme::asset()->url('images/introduce/love1.png')}}" alt="">
-                                    <div class="name">
+                                    <div class="name font20">
                                         TẬN TÂM
                                     </div>
                                     <div class="des">
@@ -763,7 +763,7 @@
                             <div class="defect-shape">
                                 <div class="box-center">
                                     <img src="{{Theme::asset()->url('images/introduce/icon2.png')}}" alt="">
-                                    <div class="name">
+                                    <div class="name font20">
                                         TRUNG THỰC
                                     </div>
                                     <div class="des">
@@ -779,7 +779,7 @@
                             <div class="defect-shape">
                                 <div class="box-center">
                                     <img src="{{Theme::asset()->url('images/introduce/icon6.png')}}" alt="">
-                                    <div class="name">
+                                    <div class="name font20">
                                         TRÍ TUỆ
                                     </div>
                                     <div class="des">
@@ -795,7 +795,7 @@
                             <div class="defect-shape">
                                 <div class="box-center">
                                     <img src="{{Theme::asset()->url('images/introduce/icon8.png')}}" alt="">
-                                    <div class="name">
+                                    <div class="name font20">
                                         TỰ TIN
                                     </div>
                                     <div class="des">
@@ -814,7 +814,7 @@
                             <div class="defect-shape">
                                 <div class="box-center">
                                     <img src="{{Theme::asset()->url('images/introduce/icon4.png')}}" alt="">
-                                    <div class="name">
+                                    <div class="name font20">
                                         TÔN TRỌNG
                                     </div>
                                     <div class="des">
@@ -831,7 +831,7 @@
                             <div class="defect-shape">
                                 <div class="box-center">
                                     <img src="{{Theme::asset()->url('images/introduce/icon7.png')}}" alt="">
-                                    <div class="name">
+                                    <div class="name font20">
                                         TRUNG TÍN
                                     </div>
                                     <div class="des">
@@ -848,7 +848,7 @@
                             <div class="defect-shape">
                                 <div class="box-center">
                                     <img src="{{Theme::asset()->url('images/introduce/icon3.png')}}" alt="">
-                                    <div class="name">
+                                    <div class="name font20">
                                         TẬN TÌNH
                                     </div>
                                     <div class="des">
@@ -864,7 +864,7 @@
                             <div class="defect-shape">
                                 <div class="box-center">
                                     <img src="{{Theme::asset()->url('images/introduce/icon5.png')}}" alt="">
-                                    <div class="name">
+                                    <div class="name font20">
                                         THUẬN TIỆN
                                     </div>
                                     <div class="des">
@@ -882,7 +882,7 @@
     <div class="section-criteria-wrapper mobile">
         <div class="container-remake">
             <div class="section-criteria__header">
-                <h2 class="section-criteria__header__title font60 font-pri-bold fontmb-middle"
+                <h2 class="section-criteria__header__title fontmb-large font60 font-pri-bold"
                     data-aos="fade-right">
                     Tiêu chí 8T
                 </h2>
@@ -903,7 +903,7 @@
                                     <div class="defect-shape">
                                         <div class="box-center">
                                             <img src="{{Theme::asset()->url('images/introduce/love1.png')}}" alt="">
-                                            <div class="name">
+                                            <div class="name mb-3 mt-4 fontmb-medium ">
                                                 TẬN TÂM
                                             </div>
                                             <div class="des">
@@ -921,7 +921,7 @@
                                     <div class="defect-shape">
                                         <div class="box-center">
                                             <img src="{{Theme::asset()->url('images/introduce/icon2.png')}}" alt="">
-                                            <div class="name">
+                                            <div class="name mb-3 mt-4 fontmb-medium ">
                                                 TRUNG THỰC
                                             </div>
                                             <div class="des">
@@ -939,7 +939,7 @@
                                     <div class="defect-shape">
                                         <div class="box-center">
                                             <img src="{{Theme::asset()->url('images/introduce/icon6.png')}}" alt="">
-                                            <div class="name">
+                                            <div class="name mb-3 mt-4 fontmb-medium ">
                                                 TRÍ TUỆ
                                             </div>
                                             <div class="des">
@@ -957,7 +957,7 @@
                                     <div class="defect-shape">
                                         <div class="box-center">
                                             <img src="{{Theme::asset()->url('images/introduce/icon8.png')}}" alt="">
-                                            <div class="name">
+                                            <div class="name mb-3 mt-4 fontmb-medium ">
                                                 TỰ TIN
                                             </div>
                                             <div class="des">
@@ -975,7 +975,7 @@
                                     <div class="defect-shape">
                                         <div class="box-center">
                                             <img src="{{Theme::asset()->url('images/introduce/icon4.png')}}" alt="">
-                                            <div class="name">
+                                            <div class="name mb-3 mt-4 fontmb-medium ">
                                                 TÔN TRỌNG
                                             </div>
                                             <div class="des">
@@ -993,7 +993,7 @@
                                     <div class="defect-shape">
                                         <div class="box-center">
                                             <img src="{{Theme::asset()->url('images/introduce/icon7.png')}}" alt="">
-                                            <div class="name">
+                                            <div class="name mb-3 mt-4 fontmb-medium ">
                                                 TRUNG TÍN
                                             </div>
                                             <div class="des">
@@ -1011,7 +1011,7 @@
                                     <div class="defect-shape">
                                         <div class="box-center">
                                             <img src="{{Theme::asset()->url('images/introduce/icon3.png')}}" alt="">
-                                            <div class="name">
+                                            <div class="name mb-3 mt-4 fontmb-medium ">
                                                 TẬN TÌNH
                                             </div>
                                             <div class="des">
@@ -1029,7 +1029,7 @@
                                     <div class="defect-shape">
                                         <div class="box-center">
                                             <img src="{{Theme::asset()->url('images/introduce/icon5.png')}}" alt="">
-                                            <div class="name">
+                                            <div class="name mb-3 mt-4 fontmb-medium ">
                                                 THUẬN TIỆN
                                             </div>
                                             <div class="des">

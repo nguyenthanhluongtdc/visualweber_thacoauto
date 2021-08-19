@@ -592,6 +592,18 @@
         @include paddingBottom(47);
         @include marginTop(60, "+");
 
+        .section-criteria-swiper {
+            position: relative;
+
+            .swiper-button-next {
+                display: none;
+            }
+            .swiper-button-prev {
+                left: 0;
+                transform: translateX(-100%)
+            }
+        }
+
         .section-criteria {
             &__header {
                 @include marginBottom(90, "+");
@@ -655,24 +667,29 @@
                         padding-right: 5px;
                     }
 
-                    @media (max-width: 991px) {
-                        flex: 0 0 calc(25%);
-                        max-width: calc(25%);
+                    @media (max-width: 1080px) {
+                        flex: 0 0 100%;
+                        max-width: 100%;
                     }
 
-                    @media (max-width: 768px) {
-                        flex: 0 0 calc(50% - 35px);
-                        max-width: calc(50% - 35px);
-                        padding-left: 15px;
-                        padding-right: 15px;
-                    }
+                    // @media (max-width: 991px) {
+                    //     flex: 0 0 calc(25%);
+                    //     max-width: calc(25%);
+                    // }
 
-                    @media (max-width: 576px) {
-                        flex: 0 0 calc(50%);
-                        max-width: calc(50%);
-                        padding-left: 5px;
-                        padding-right: 5px;
-                    }
+                    // @media (max-width: 768px) {
+                    //     flex: 0 0 calc(50% - 35px);
+                    //     max-width: calc(50% - 35px);
+                    //     padding-left: 15px;
+                    //     padding-right: 15px;
+                    // }
+
+                    // @media (max-width: 576px) {
+                    //     flex: 0 0 calc(50%);
+                    //     max-width: calc(50%);
+                    //     padding-left: 5px;
+                    //     padding-right: 5px;
+                    // }
 
                     .box-center-bark {
                         display: flex;
@@ -829,9 +846,26 @@
             }
         }
 
+        &.mobile {
+            display: none;
+        }
+
         //mobile 
         @media (max-width: 1080px) {
             margin-top: 0;
+
+            &.desktop {
+                display: none
+            }
+            &.mobile {
+                display: block;
+
+                .container-remake {
+                    width: 90%;
+                    margin-left: auto;
+                    margin-right: 0;
+                }
+            }
         }
     }
 

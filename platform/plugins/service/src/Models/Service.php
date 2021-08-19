@@ -5,11 +5,10 @@ namespace Platform\Service\Models;
 use Platform\Base\Traits\EnumCastable;
 use Platform\Base\Enums\BaseStatusEnum;
 use Platform\Base\Models\BaseModel;
-use Platform\Slug\Traits\SlugTrait;
 
 class Service extends BaseModel
 {
-    use EnumCastable, SlugTrait;
+    use EnumCastable;
 
     /**
      * The database table used by the model.

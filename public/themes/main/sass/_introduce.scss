@@ -376,6 +376,13 @@
                         padding-left: 9px;
                         padding-right: 9px;
                         $size: 213;
+
+                        >div {
+                            background-color: #F5F5F5;
+                            padding-left: 25px;
+                            padding-right: 25px;
+                        }
+                        
                         @media (max-width: 1080px) {
                             height: #{$size}px;
                         }
@@ -388,13 +395,12 @@
                             height: #{MobilecalculatorPixel($size, 768)}px;
                             padding-top: 9px;
                             padding-bottom: 9px;
+
+                            >div {
+                                padding: 0;
+                            }
                         }
 
-                        >div {
-                            background-color: #F5F5F5;
-                            padding-left: 25px;
-                            padding-right: 25px;
-                        }
                     }
                 }
                 .box {

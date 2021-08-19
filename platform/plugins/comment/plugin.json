@@ -1,0 +1,9 @@
+{
+    "name": "Comment",
+    "namespace": "Platform\\Comment\\",
+    "provider": "Platform\\Comment\\Providers\\CommentServiceProvider",
+    "author": "Bao Boi",
+    "url": "https://github.com/vswb/comment",
+    "version": "4.2.3",
+    "description": "Ajax Comments"
+}

@@ -11,3 +11,7 @@ if (!defined('BRAND_MODULE_SCREEN_NAME')) {
 if (!defined('CAR_LINE_MODULE_SCREEN_NAME')) {
     define('CAR_LINE_MODULE_SCREEN_NAME', 'car-line');
 }
+
+if (!defined('CAR_MODULE_SCREEN_NAME')) {
+    define('CAR_MODULE_SCREEN_NAME', 'car');
+}

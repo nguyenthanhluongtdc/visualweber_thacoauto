@@ -578,6 +578,7 @@
     @include lineHeight(49.5);
     @include paddingX(49.5);
     margin-right: 0.15vw;
+    border: 2px solid $color-primary;
     background-color: $color-primary;
     display: flex;
     justify-content: center;
@@ -586,7 +587,6 @@
     color:white;
     transition: all 1000ms cubic-bezier(0.19, 1, 0.22, 1);
     &:hover{
-        border: 2px solid $color-primary;
         color: $color-primary;
         background-color: #f6f6f6;
     }

@@ -9,7 +9,7 @@
         
     @endforelse
     
-    <div class="slider-main-item">
+    {{-- <div class="slider-main-item">
         <img src="{{ Theme::asset()->url('images/main/slider2.jpg') }}" alt="">
         <div class="content-slider">
             <h2 class="font-pri-bold font60">THACO AUTO GIỚI THIỆU NEW PEUGEOT 3008</h2>
@@ -178,16 +178,16 @@
 {{-- lĩnh vực hoạt động --}}
 <div class="section-field-home">
     <div class="section-field-home-wrap container-remake">
-        <h2 class="font-pri-bold font60 fontmb-large color-gray" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out">SẢN XUẤT - KINH DOANH Ô TÔ & XE MÁY</h2>
+        <h2 class="font-pri-bold font60 fontmb-large color-gray" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out">
+            {{get_field($page, 'homepage_production_business_title')}}
+        </h2>
         <div class="field-home-content">
             <div class="top">
                 <div class="top-left" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" >
-                    <img src="{{ Theme::asset()->url('images/main/lv2.png') }}" alt="">
+                    <img src="{{ get_image_url(get_field($page,'homepage_production_logo')) }}" alt="">
                     <p class="name-img font-pri-bold font18 color-pri fontmb-small">THACO AUTO</p>
-                    <p class="title font-pri-bold font40 fontmb-middle color-gray">sản xuất</p>
-                    <P class="desc font-pri font20 color-gray fontmb-little">THACO là doanh nghiệp hàng đầu và có quy mô lớn nhất tại
-                        Việt Nam về lĩnh vực sản xuất lắp ráp ô tô, sản xuất linh kiện phụ tùng,
-                        lắp ráp ô tô, đến giao nhận vận chuyển và phân phối, bán lẻ.</P>
+                    <p class="title font-pri-bold font40 fontmb-middle color-gray">{{get_field($page, 'homepage_production_title')}}</p>
+                    <P class="desc font-pri font20 color-gray fontmb-little">{{get_field($page, 'homepage_production_descrtiption')}}</P>
                 </div>
                 <div class="top-right">
                     <div class="top-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">

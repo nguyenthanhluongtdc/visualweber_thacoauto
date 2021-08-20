@@ -4,10 +4,12 @@ namespace Platform\Car\Forms;
 
 use Platform\Base\Forms\FormAbstract;
 use Platform\Base\Enums\BaseStatusEnum;
-use Platform\Car\Http\Requests\CarCategoryRequest;
-use Platform\Car\Models\CarCategory;
+use Platform\Car\Http\Requests\CarRequest;
+use Platform\Car\Models\Car;
+use Platform\Car\Models\CarLine;
+use Platform\Car\Repositories\Interfaces\CarLineInterface;
 
-class CarCategoryForm extends FormAbstract
+class CarForm extends FormAbstract
 {
 
     /**
@@ -15,21 +17,20 @@ class CarCategoryForm extends FormAbstract
      */
     public function buildForm()
     {
-        $list = get_car_categories();
+        $list = get_cars();
 
-        $categories = [];
+        $cars = [];
         foreach ($list as $row) {
             if ($this->getModel() && ($this->model->id === $row->id || $this->model->id === $row->parent_id)) {
                 continue;
             }
 
-            $categories[$row->id] = $row->indent_text . ' ' . $row->name;
+            $cars[$row->id] = $row->indent_text . ' ' . $row->name;
         }
-        $categories = [0 => trans('plugins/blog::categories.none')] + $categories;
-
+        $cars = [0 => __('Chọn dòng xe')] + $cars;
         $this
-            ->setupModel(new CarCategory)
-            ->setValidatorClass(CarCategoryRequest::class)
+            ->setupModel(new Car)
+            ->setValidatorClass(CarRequest::class)
             ->withCustomFields()
             ->add('name', 'text', [
                 'label'      => trans('core/base::forms.name'),
@@ -45,7 +46,7 @@ class CarCategoryForm extends FormAbstract
                 'attr'       => [
                     'class' => 'select-search-full',
                 ],
-                'choices'    => $categories,
+                'choices'    => $cars,
             ])
             ->add('description', 'textarea', [
                 'label'      => trans('core/base::forms.description'),
@@ -65,6 +66,18 @@ class CarCategoryForm extends FormAbstract
                     'with-short-code' => true,
                 ],
             ])
+            ->add('car_line_id', 'customSelect', [
+                'label'      => __('Loại xe'),
+                'label_attr' => ['class' => 'control-label required'],
+                'choices' => ['' => 'Lựa chọn loại xe'] + app(CarLineInterface::class)->advancedGet([
+                    "condition" => [
+                        "status" => BaseStatusEnum::PUBLISHED
+                    ]
+                ])->pluck('name', 'id')->toArray() ?? [],
+                'attr'       => [
+                    'class' => 'form-control select-search-full',
+                ]
+            ])
             ->add('status', 'customSelect', [
                 'label'      => trans('core/base::tables.status'),
                 'label_attr' => ['class' => 'control-label required'],
@@ -72,6 +85,10 @@ class CarCategoryForm extends FormAbstract
                     'class' => 'form-control select-full',
                 ],
                 'choices'    => BaseStatusEnum::labels(),
+            ])
+            ->add('image', 'mediaImage', [
+                'label'      => trans('core/base::forms.image') . ' (810x445)',
+                'label_attr' => ['class' => 'control-label'],
             ])
             ->add('order', 'number', [
                 'label'         => trans('core/base::forms.order'),

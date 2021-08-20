@@ -88,48 +88,27 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col-right col-top font-pri-bold fontmb-medium">
-                            <div class="col-right__item" data-aos="zoom-in" data-aos-delay="400">
-                                <div class="box-center">
-                                    <div class="symbol">
-                                        <img src="{{Theme::asset()->url('images/introduce/symbol11.png')}}" alt="">
+
+                        @php
+                            $manufacturing = json_decode(theme_option('repeater_munufacturing'))??[];
+                        @endphp
+
+                        @if(!empty($manufacturing))
+                            <div class="col-right col-top font-pri-bold fontmb-medium">
+                                @foreach($manufacturing as $item)
+                                    <div class="col-right__item" data-aos="zoom-in" data-aos-delay="400">
+                                        <div class="box-center">
+                                            <div class="symbol">
+                                                <img src="{{get_image_url($item[0]->value)}}" alt="">
+                                            </div>
+                                            <div class="name font20 fontmb-small">
+                                                {!! $item[1]->value !!}
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="name font20 fontmb-small">
-                                        R&d
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
-                            <div class="col-right__item" data-aos="zoom-in" data-aos-delay="400">
-                                <div class="box-center">
-                                    <div class="symbol">
-                                        <img src="{{Theme::asset()->url('images/introduce/symbol2.png')}}" alt="">
-                                    </div>
-                                    <div class="name font20 fontmb-small">
-                                        Sản xuất - Lắp ráp Ô tô & xe máy
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-right__item" data-aos="zoom-in" data-aos-delay="400">
-                                <div class="box-center">
-                                    <div class="symbol">
-                                        <img src="{{Theme::asset()->url('images/introduce/symbol1.png')}}" alt="">
-                                    </div>
-                                    <div class="name font20 fontmb-small">
-                                        công nghiệp hỗ trợ & cơ khí
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-right__item" data-aos="zoom-in" data-aos-delay="400">
-                                <div class="box-center">
-                                    <div class="symbol">
-                                        <img src="{{Theme::asset()->url('images/introduce/symbol3.png')}}" alt="">
-                                    </div>
-                                    <div class="name font20 fontmb-small">
-                                        xuất khẩu
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endif
                     </div>
                     <div class="section-production-business__content__row __row-bottom">
                         <div class="col-left" data-aos="fade-right">
@@ -150,58 +129,27 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col-right col-bottom font-pri-bold fontmb-medium">
-                            <div class="col-right__item" data-aos="zoom-in" data-aos-delay="400">
-                                <div class="box-center">
-                                    <div class="symbol">
-                                        <img src="{{Theme::asset()->url('images/introduce/symbol12.png')}}" alt="">
-                                    </div>
-                                    <div class="name font20 fontmb-small">
-                                        xe du lịch
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-right__item" data-aos="zoom-in" data-aos-delay="400">
-                                <div class="box-center">
-                                    <div class="symbol">
-                                        <img src="{{Theme::asset()->url('images/introduce/symbol10.png')}}" alt="">
-                                    </div>
-                                    <div class="name font20 fontmb-small">
-                                        Mô tô & Xe máy
+
+                        @php
+                            $business = json_decode(theme_option('repeater_business'))??[];
+                        @endphp
+
+                        @if(!empty($business))
+                            <div class="col-right col-bottom font-pri-bold fontmb-medium">
+                                @foreach($business as $item)
+                                <div class="col-right__item" data-aos="zoom-in" data-aos-delay="400">
+                                    <div class="box-center">
+                                        <div class="symbol">
+                                            <img src="{{get_image_url($item[0]->value)}}" alt="">
+                                        </div>
+                                        <div class="name font20 fontmb-small">
+                                            {!! $item[1]->value !!}
+                                        </div>
                                     </div>
                                 </div>
+                                @endforeach
                             </div>
-                            <div class="col-right__item" data-aos="zoom-in" data-aos-delay="400">
-                                <div class="box-center">
-                                    <div class="symbol">
-                                        <img src="{{Theme::asset()->url('images/introduce/symbol9.png')}}" alt="">
-                                    </div>
-                                    <div class="name font20 fontmb-small">
-                                        xe tải
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-right__item" data-aos="zoom-in" data-aos-delay="400">
-                                <div class="box-center">
-                                    <div class="symbol">
-                                        <img src="{{Theme::asset()->url('images/introduce/symbol8.png')}}" alt="">
-                                    </div>
-                                    <div class="name font20 fontmb-small">
-                                        xe bus
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-right__item" data-aos="zoom-in" data-aos-delay="400">
-                                <div class="box-center">
-                                    <div class="symbol">
-                                        <img src="{{Theme::asset()->url('images/introduce/symbol7.png')}}" alt="">
-                                    </div>
-                                    <div class="name font20 fontmb-small">
-                                        dịch vụ - phụ tùng
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -317,380 +265,73 @@
             <h2 class="section-leader-room__title font-pri-bold font60 fontmb-large" data-aos="fade-right">
                 ban lãnh đạo
             </h2>
-            <div class="section-leader-room__row font20">
-                <div class="section-leader-room__row__header" data-aos="zoom-in">
-                    <span class="box font25 fontmb-small">
-                        Hội đồng quản trị thaco auto
-                    </span>
-                </div>
-                <div class="section-leader-room__row__content row">
-                    <div class="__content__col col-xl-3 col-md-4 col-sm-6 col-12" data-aos="fade-down"
-                        data-aos-delay="300">
-                        <div class="avatar">
-                            <img src="{{Theme::asset()->url('images/introduce/symbol-person.png')}}" alt="">
-                        </div>
-                        <div class="header-profile">
-                            <strong class="name font25 fontmb-medium">
-                                họ tên
-                            </strong>
-                            <p class="rote fontmb-majority">
-                                <span>
-                                    Chức danh
-                                </span>
-                                {{-- <span>
-                                    :
-                                </span>
-                                <span>
-                                    GIÁM ĐỐC
-                                </span> --}}
-                            </p>
-                        </div>
-                        <div class="more-info fontmb-majority">
-                            <p>
-                                <span>
-                                    Sinh năm
-                                </span>
-                                <span>
-                                    :
-                                </span>
-                                <span>
-                                    **/**/****
-                                </span>
-                            </p>
-                            <p>
-                                <span>Nơi sinh </span>
-                                <span>
-                                    :
-                                </span>
-                            </p>
-                            <p>
-                                <span>
-                                    Trình độ
-                                </span>
-                                <span>
-                                    :
-                                </span>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="__content__col col-xl-3 col-md-4 col-sm-6 col-12" data-aos="fade-down"
-                        data-aos-delay="600">
-                        <div class="avatar">
-                            <img src="{{Theme::asset()->url('images/introduce/symbol-person.png')}}" alt="">
-                        </div>
-                        <div class="header-profile">
-                            <strong class="name font25 fontmb-medium">
-                                họ tên
-                            </strong>
-                            <p class="rote fontmb-majority">
-                                <span>
-                                    Chức danh
-                                </span>
-                                {{-- <span>
-                                    :
-                                </span>
-                                <span>
-                                    GIÁM ĐỐC
-                                </span> --}}
-                            </p>
-                        </div>
-                        <div class="more-info fontmb-majority">
-                            <p>
-                                <span>
-                                    Sinh năm
-                                </span>
-                                <span>
-                                    :
-                                </span>
-                                <span>
-                                    **/**/****
-                                </span>
-                            </p>
-                            <p>
-                                <span>Nơi sinh </span>
-                                <span>
-                                    :
-                                </span>
-                            </p>
-                            <p>
-                                <span>
-                                    Trình độ
-                                </span>
-                                <span>
-                                    :
-                                </span>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="__content__col col-xl-3 col-md-4 col-sm-6 col-12" data-aos="fade-down"
-                        data-aos-delay="900">
-                        <div class="avatar">
-                            <img src="{{Theme::asset()->url('images/introduce/symbol-person.png')}}" alt="">
-                        </div>
-                        <div class="header-profile">
-                            <strong class="name font25 fontmb-medium">
-                                họ tên
-                            </strong>
-                            <p class="rote fontmb-majority">
-                                <span>
-                                    Chức danh
-                                </span>
-                                {{-- <span>
-                                    :
-                                </span>
-                                <span>
-                                    GIÁM ĐỐC
-                                </span> --}}
-                            </p>
-                        </div>
-                        <div class="more-info fontmb-majority">
-                            <p>
-                                <span>
-                                    Sinh năm
-                                </span>
-                                <span>
-                                    :
-                                </span>
-                                <span>
-                                    **/**/****
-                                </span>
-                            </p>
-                            <p>
-                                <span>Nơi sinh </span>
-                                <span>
-                                    :
-                                </span>
-                            </p>
-                            <p>
-                                <span>
-                                    Trình độ
-                                </span>
-                                <span>
-                                    :
-                                </span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="section-leader-room__row font20">
-                <div class="section-leader-room__row__header" data-aos="zoom-in">
-                    <span class="box font25 fontmb-small">
-                        ban kiểm soát
-                    </span>
-                </div>
-                <div class="section-leader-room__row__content row">
-                    <div class="__content__col col-xl-3 col-md-4 col-sm-6 col-12" data-aos="fade-down"
-                        data-aos-delay="900">
-                        <div class="avatar">
-                            <img src="{{Theme::asset()->url('images/introduce/symbol-person.png')}}" alt="">
+            @if(has_field($page, 'repeater_room_introduce'))
+                @foreach(has_field($page, 'repeater_room_introduce') as $item)
+                    <div class="section-leader-room__row font20">
+                        <div class="section-leader-room__row__header" data-aos="zoom-in">
+                            <span class="box font25 fontmb-small">
+                                {!! has_sub_field($item, 'name_room') ? has_sub_field($item, 'name_room') : '' !!}
+                            </span>
                         </div>
-                        <div class="header-profile">
-                            <strong class="name font25 fontmb-medium">
-                                họ tên
-                            </strong>
-                            <p class="rote fontmb-majority">
-                                <span>
-                                    Chức danh
-                                </span>
-                                {{-- <span>
-                                    :
-                                </span>
-                                <span>
-                                    GIÁM ĐỐC
-                                </span> --}}
-                            </p>
-                        </div>
-                        <div class="more-info fontmb-majority">
-                            <p>
-                                <span>
-                                    Sinh năm
-                                </span>
-                                <span>
-                                    :
-                                </span>
-                                <span>
-                                    **/**/****
-                                </span>
-                            </p>
-                            <p>
-                                <span>Nơi sinh </span>
-                                <span>
-                                    :
-                                </span>
-                            </p>
-                            <p>
-                                <span>
-                                    Trình độ
-                                </span>
-                                <span>
-                                    :
-                                </span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section-leader-room__row font20">
-                <div class="section-leader-room__row__header" data-aos="zoom-in">
-                    <span class="box font25 fontmb-small">
-                        Ban tổng giám đốc
-                    </span>
-                </div>
-                <div class="section-leader-room__row__content row">
-                    <div class="__content__col col-xl-3 col-md-4 col-sm-6 col-12" data-aos="fade-down"
-                        data-aos-delay="900">
-                        <div class="avatar">
-                            <img src="{{Theme::asset()->url('images/introduce/symbol-person.png')}}" alt="">
-                        </div>
-                        <div class="header-profile">
-                            <strong class="name font25 fontmb-medium">
-                                họ tên
-                            </strong>
-                            <p class="rote fontmb-majority">
-                                <span>
-                                    Chức danh
-                                </span>
-                                {{-- <span>
-                                    :
-                                </span>
-                                <span>
-                                    GIÁM ĐỐC
-                                </span> --}}
-                            </p>
-                        </div>
-                        <div class="more-info fontmb-majority">
-                            <p>
-                                <span>
-                                    Sinh năm
-                                </span>
-                                <span>
-                                    :
-                                </span>
-                                <span>
-                                    **/**/****
-                                </span>
-                            </p>
-                            <p>
-                                <span>Nơi sinh </span>
-                                <span>
-                                    :
-                                </span>
-                            </p>
-                            <p>
-                                <span>
-                                    Trình độ
-                                </span>
-                                <span>
-                                    :
-                                </span>
-                            </p>
+                        <div class="section-leader-room__row__content row">
+                            @foreach(has_sub_field($item, 'repeater_people_introduce') as $sub_item)
+                                <div class="__content__col col-xl-3 col-md-4 col-sm-6 col-12" data-aos="fade-down"
+                                    data-aos-delay="300">
+                                    <div class="avatar">
+                                        <img src="{{get_image_url(has_sub_field($sub_item,'avatar'))}}" alt="">
+                                    </div>
+                                    <div class="header-profile">
+                                        <strong class="name font25 fontmb-medium">
+                                            {!! has_sub_field($sub_item, 'name') ? has_sub_field($sub_item, 'name') : __('chưa cập nhật') !!}
+                                        </strong>
+                                        <p class="rote fontmb-majority">
+                                            <span>
+                                                {!! has_sub_field($sub_item, 'title') ? has_sub_field($sub_item, 'title') : __('chưa cập nhật') !!}
+                                            </span>
+                                            {{-- <span>
+                                                :
+                                            </span>
+                                            <span>
+                                                GIÁM ĐỐC
+                                            </span> --}}
+                                        </p>
+                                    </div>
+                                    <div class="more-info fontmb-majority">
+                                        <p>
+                                            <span>
+                                                Sinh năm
+                                            </span>
+                                            <span>
+                                                :
+                                            </span>
+                                            <span>
+                                                {!! has_sub_field($sub_item, 'year_of_birth') ? has_sub_field($sub_item, 'year_of_birth') : __('chưa cập nhật') !!}
+                                            </span>
+                                        </p>
+                                        <p>
+                                            <span>Nơi sinh </span>
+                                            <span>
+                                                :
+                                            </span>
+                                            <span>{!! has_sub_field($sub_item, 'birth_place') ? has_sub_field($sub_item, 'birth_place') : __('chưa cập nhật') !!}</span>
+                                        </p>
+                                        <p>
+                                            <span>
+                                                Trình độ
+                                            </span>
+                                            <span>
+                                                :
+                                            </span>
+                                            <span>{!! has_sub_field($sub_item, 'level') ? has_sub_field($sub_item, 'level') : __('chưa cập nhật') !!}</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            @endforeach
                         </div>
                     </div>
-
-                    <div class="__content__col col-xl-3 col-md-4 col-sm-6 col-12" data-aos="fade-down"
-                        data-aos-delay="900">
-                        <div class="avatar">
-                            <img src="{{Theme::asset()->url('images/introduce/symbol-person.png')}}" alt="">
-                        </div>
-                        <div class="header-profile">
-                            <strong class="name font25 fontmb-medium">
-                                họ tên
-                            </strong>
-                            <p class="rote fontmb-majority">
-                                <span>
-                                    Chức danh
-                                </span>
-                                {{-- <span>
-                                    :
-                                </span>
-                                <span>
-                                    GIÁM ĐỐC
-                                </span> --}}
-                            </p>
-                        </div>
-                        <div class="more-info fontmb-majority">
-                            <p>
-                                <span>
-                                    Sinh năm
-                                </span>
-                                <span>
-                                    :
-                                </span>
-                                <span>
-                                    **/**/****
-                                </span>
-                            </p>
-                            <p>
-                                <span>Nơi sinh </span>
-                                <span>
-                                    :
-                                </span>
-                            </p>
-                            <p>
-                                <span>
-                                    Trình độ
-                                </span>
-                                <span>
-                                    :
-                                </span>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="__content__col col-xl-3 col-md-4 col-sm-6 col-12" data-aos="fade-down"
-                        data-aos-delay="900">
-                        <div class="avatar">
-                            <img src="{{Theme::asset()->url('images/introduce/symbol-person.png')}}" alt="">
-                        </div>
-                        <div class="header-profile">
-                            <strong class="name font25 fontmb-medium">
-                                họ tên
-                            </strong>
-                            <p class="rote fontmb-majority">
-                                <span>
-                                    Chức danh
-                                </span>
-                                {{-- <span>
-                                    :
-                                </span>
-                                <span>
-                                    GIÁM ĐỐC
-                                </span> --}}
-                            </p>
-                        </div>
-                        <div class="more-info fontmb-majority">
-                            <p>
-                                <span>
-                                    Sinh năm
-                                </span>
-                                <span>
-                                    :
-                                </span>
-                                <span>
-                                    **/**/****
-                                </span>
-                            </p>
-                            <p>
-                                <span>Nơi sinh </span>
-                                <span>
-                                    :
-                                </span>
-                            </p>
-                            <p>
-                                <span>
-                                    Trình độ
-                                </span>
-                                <span>
-                                    :
-                                </span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                @endforeach
+            @endif
         </div>
     </div>
 

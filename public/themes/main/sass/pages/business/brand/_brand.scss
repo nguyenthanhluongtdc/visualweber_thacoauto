@@ -183,11 +183,11 @@
                     &::before{
                         position: absolute;
                         top: 0;
-                        left: -75%;
+                        left: 0%;
                         z-index: 2;
                         display: block;
                         content: '';
-                        width: 50%;
+                        width: 20%;
                         height: 100%;
                         background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.5) 100%);
                         background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.5) 100%);
@@ -195,18 +195,8 @@
                         transform: skewX(-25deg);
                     }
                     &:hover::before {
-                        -webkit-animation: shine 2s;
-                        animation: shine 2s;
-                    }
-                    @-webkit-keyframes shine {
-                        100% {
-                            left: 125%;
-                        }
-                    }
-                    @keyframes shine {
-                        100% {
-                            left: 125%;
-                        }
+                        transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+                        left: 70%;
                     }
                 }
                

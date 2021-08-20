@@ -2,11 +2,7 @@
 
 namespace Platform\Car\Providers;
 
-use Platform\Car\Models\Car;
 use Illuminate\Support\ServiceProvider;
-use Platform\Car\Repositories\Caches\CarCacheDecorator;
-use Platform\Car\Repositories\Eloquent\CarRepository;
-use Platform\Car\Repositories\Interfaces\CarInterface;
 use Platform\Base\Supports\Helper;
 use Illuminate\Support\Facades\Event;
 use Platform\Base\Traits\LoadAndPublishDataTrait;

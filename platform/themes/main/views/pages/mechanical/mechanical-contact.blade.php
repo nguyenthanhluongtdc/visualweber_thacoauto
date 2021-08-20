@@ -78,7 +78,7 @@
                     <div class="right col-md-12 mt-5">
                         <img src="{{Theme::asset()->url('images/mechandical/form-contact.jpg')}}" alt="">
                     </div>
-                    <div class="left col-md-12">
+                    <div class="left col-md-12 ">
                         <div class="address">
                             <span class="text">KHU CÔNG NGHIỆP TAM HIỆP, HUYỆN NÚI THÀNH, QUẢNG NAM.</span>
                         </div>

@@ -6,9 +6,8 @@
     .section-list-news {
         
         @include paddingTop(60);
-        .title {
+        .title a {
             font-family: $font-my-bold;
-            
         }
         .content { 
             img {
@@ -127,7 +126,7 @@
                         flex: 0 0 100%;
                         max-width: 100%;
                     }
-                    .title {
+                    .title a {
                         font-family: $font-primary;
                         color: #01498b;
                         @include split_str(2);

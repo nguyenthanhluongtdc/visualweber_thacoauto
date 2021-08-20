@@ -381,6 +381,7 @@
                 </div>
 
                 <div class="section-criteria__content justify-content-end row-first">
+<<<<<<< HEAD
                    
                     @for ($i = 0; $i < $count; $i++)
                         <div class="section-criteria__content__box" data-aos="fade-up">
@@ -395,6 +396,67 @@
                                         <div class="des">
                                             {!! $criteria[$i][3]->value !!}
                                         </div>
+=======
+                    <div class="section-criteria__content__box" data-aos="fade-up">
+                        <div class="box-center-bark">
+                            <img src="{{Theme::asset()->url('images/introduce/shap1.png')}}" alt="">
+                            <div class="defect-shape">
+                                <div class="box-center">
+                                    <img src="{{Theme::asset()->url('images/introduce/love1.png')}}" alt="">
+                                    <div class="name font20">
+                                        TẬN TÂM
+                                    </div>
+                                    <div class="des fontmb-little">
+                                        Lorem ipsum dolor sit amet, consectetur.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-criteria__content__box" data-aos="fade-up" data-aos-delay="300">
+                        <div class="box-center-bark">
+                            <img src="{{Theme::asset()->url('images/introduce/shape2.png')}}" alt="">
+                            <div class="defect-shape">
+                                <div class="box-center">
+                                    <img src="{{Theme::asset()->url('images/introduce/icon2.png')}}" alt="">
+                                    <div class="name font20">
+                                        TRUNG THỰC
+                                    </div>
+                                    <div class="des fontmb-little">
+                                        Lorem ipsum dolor sit amet, consectetur.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-criteria__content__box" data-aos="fade-up" data-aos-delay="600">
+                        <div class="box-center-bark">
+                            <img src="{{Theme::asset()->url('images/introduce/shape3.png')}}" alt="">
+                            <div class="defect-shape">
+                                <div class="box-center">
+                                    <img src="{{Theme::asset()->url('images/introduce/icon6.png')}}" alt="">
+                                    <div class="name font20">
+                                        TRÍ TUỆ
+                                    </div>
+                                    <div class="des fontmb-little">
+                                        Lorem ipsum dolor sit amet, consectetur.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-criteria__content__box" data-aos="fade-up" data-aos-delay="900">
+                        <div class="box-center-bark">
+                            <img src="{{Theme::asset()->url('images/introduce/shape4.png')}}" alt="">
+                            <div class="defect-shape">
+                                <div class="box-center">
+                                    <img src="{{Theme::asset()->url('images/introduce/icon8.png')}}" alt="">
+                                    <div class="name font20">
+                                        TỰ TIN
+                                    </div>
+                                    <div class="des fontmb-little">
+                                        Lorem ipsum dolor sit amet, consectetur.
+>>>>>>> 721c1875d6c0304917ef7a6853f174aa0ce08f9b
                                     </div>
                                 </div>
                             </div>

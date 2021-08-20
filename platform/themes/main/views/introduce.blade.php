@@ -336,31 +336,34 @@
             <div class="section-behave">
                 <div class="section-behave__left">
                     <h2 class="section-behave__title font60 font-pri-bold fontmb-large" data-aos="fade-right">
-                        văn hóa ứng xử
+                        @if(has_field($page, 'title_module_behave_introduce'))
+                            {!! has_field($page, 'title_module_behave_introduce') !!}
+                        @endif
                     </h2>
                     <div class="section-behave__des" data-aos="fade-right">
-                        <p>
-                            Quá trình phát triển của THACO AUTO là thành quả của nỗ lực vượt khó, tự tin, trí tuệ, kỷ
-                            luật và ý chí, nghị lực của người sáng lập cùng với đội ngũ nhân sự có thái độ làm việc tích
-                            cực, ý thức đóng góp cống hiến đã hình thành nên Văn hóa này.
-                        </p>
-                        <p>
-                            Xây dựng môi trường làm việc “Văn hóa & thuận tiện”. Bên cạnh đặc trưng văn hóa THACO là: Kỷ
-                            luật, Nhân văn, Trung thực, Năng động, Sáng Tạo; Tận tâm phục vụ chính là yếu tố tiên quyết
-                            hàng đầu.
-                        </p>
+                        @if(has_field($page, 'content_module_behave_introduce'))
+                            {!! has_field($page, 'content_module_behave_introduce') !!}
+                        @endif
                     </div>
                 </div>
                 <div class="section-behave__right" data-aos="zoom-in">
                     <h2 class="right-title font-pri-bold fontmb-large" data-aos="fade-right">
                         văn hóa
                     </h2>
-                    <img src="{{Theme::asset()->url('images/introduce/layer1.jpg')}}" alt="">
+                    @if(has_field($page, 'image_module_behave_introduce'))
+                        {!! has_field($page, 'image_module_behave_introduce') !!}
+                        <img src="{{get_image_url(has_field($page, 'image_module_behave_introduce'))}}" alt="">
+                    @endif
                 </div>
             </div>
         </div>
     </div>
 
+
+    @php
+        $criteria = json_decode(theme_option('repeater_criteria'))??[];
+        $count = count($criteria);
+    @endphp
     <div class="section-criteria-wrapper font20 desktop">
         <div class="container-remake">
             <div class="section-criteria">
@@ -378,140 +381,52 @@
                 </div>
 
                 <div class="section-criteria__content justify-content-end row-first">
-                    <div class="section-criteria__content__box" data-aos="fade-up">
-                        <div class="box-center-bark">
-                            <img src="{{Theme::asset()->url('images/introduce/shap1.png')}}" alt="">
-                            <div class="defect-shape">
-                                <div class="box-center">
-                                    <img src="{{Theme::asset()->url('images/introduce/love1.png')}}" alt="">
-                                    <div class="name font20">
-                                        TẬN TÂM
-                                    </div>
-                                    <div class="des">
-                                        Lorem ipsum dolor sit amet, consectetur.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section-criteria__content__box" data-aos="fade-up" data-aos-delay="300">
-                        <div class="box-center-bark">
-                            <img src="{{Theme::asset()->url('images/introduce/shape2.png')}}" alt="">
-                            <div class="defect-shape">
-                                <div class="box-center">
-                                    <img src="{{Theme::asset()->url('images/introduce/icon2.png')}}" alt="">
-                                    <div class="name font20">
-                                        TRUNG THỰC
-                                    </div>
-                                    <div class="des">
-                                        Lorem ipsum dolor sit amet, consectetur.
+                   
+                    @for ($i = 0; $i < $count; $i++)
+                        <div class="section-criteria__content__box" data-aos="fade-up">
+                            <div class="box-center-bark">
+                                <img src="{{get_image_url($criteria[$i][0]->value)}}" alt="">
+                                <div class="defect-shape">
+                                    <div class="box-center">
+                                        <img src="{{get_image_url($criteria[$i][1]->value)}}" alt="">
+                                        <div class="name font20">
+                                            {!! $criteria[$i][2]->value !!}
+                                        </div>
+                                        <div class="des">
+                                            {!! $criteria[$i][3]->value !!}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="section-criteria__content__box" data-aos="fade-up" data-aos-delay="600">
-                        <div class="box-center-bark">
-                            <img src="{{Theme::asset()->url('images/introduce/shape3.png')}}" alt="">
-                            <div class="defect-shape">
-                                <div class="box-center">
-                                    <img src="{{Theme::asset()->url('images/introduce/icon6.png')}}" alt="">
-                                    <div class="name font20">
-                                        TRÍ TUỆ
-                                    </div>
-                                    <div class="des">
-                                        Lorem ipsum dolor sit amet, consectetur.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section-criteria__content__box" data-aos="fade-up" data-aos-delay="900">
-                        <div class="box-center-bark">
-                            <img src="{{Theme::asset()->url('images/introduce/shape4.png')}}" alt="">
-                            <div class="defect-shape">
-                                <div class="box-center">
-                                    <img src="{{Theme::asset()->url('images/introduce/icon8.png')}}" alt="">
-                                    <div class="name font20">
-                                        TỰ TIN
-                                    </div>
-                                    <div class="des">
-                                        Lorem ipsum dolor sit amet, consectetur.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+                        @break($i == 3)
+                    @endfor
                 </div>
 
+                @if($count > 4)
                 <div class="section-criteria__content justify-content-start">
-                    <div class="section-criteria__content__box" data-aos="fade-up" data-aos-delay="1200">
-                        <div class="box-center-bark">
-                            <img src="{{Theme::asset()->url('images/introduce/shape5.png')}}" alt="">
-                            <div class="defect-shape">
-                                <div class="box-center">
-                                    <img src="{{Theme::asset()->url('images/introduce/icon4.png')}}" alt="">
-                                    <div class="name font20">
-                                        TÔN TRỌNG
-                                    </div>
-                                    <div class="des">
-                                        Lorem ipsum dolor sit amet, consectetur.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="section-criteria__content__box" data-aos="fade-up" data-aos-delay="1500">
-                        <div class="box-center-bark">
-                            <img src="{{Theme::asset()->url('images/introduce/shape6.png')}}" alt="">
-                            <div class="defect-shape">
-                                <div class="box-center">
-                                    <img src="{{Theme::asset()->url('images/introduce/icon7.png')}}" alt="">
-                                    <div class="name font20">
-                                        TRUNG TÍN
-                                    </div>
-                                    <div class="des">
-                                        Lorem ipsum dolor sit amet, consectetur.
+                     
+                        @for ($i = 4; $i < $count; $i++)
+                            <div class="section-criteria__content__box" data-aos="fade-up">
+                                <div class="box-center-bark">
+                                    <img src="{{get_image_url($criteria[$i][0]->value)}}" alt="">
+                                    <div class="defect-shape">
+                                        <div class="box-center">
+                                            <img src="{{get_image_url($criteria[$i][1]->value)}}" alt="">
+                                            <div class="name font20">
+                                                {!! $criteria[$i][2]->value !!}
+                                            </div>
+                                            <div class="des">
+                                                {!! $criteria[$i][3]->value !!}
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="section-criteria__content__box" data-aos="fade-up" data-aos-delay="1800">
-                        <div class="box-center-bark">
-                            <img src="{{Theme::asset()->url('images/introduce/shape7.png')}}" alt="">
-                            <div class="defect-shape">
-                                <div class="box-center">
-                                    <img src="{{Theme::asset()->url('images/introduce/icon3.png')}}" alt="">
-                                    <div class="name font20">
-                                        TẬN TÌNH
-                                    </div>
-                                    <div class="des">
-                                        Lorem ipsum dolor sit amet, consectetur.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section-criteria__content__box" data-aos="fade-up" data-aos-delay="2100">
-                        <div class="box-center-bark">
-                            <img src="{{Theme::asset()->url('images/introduce/shape8.png')}}" alt="">
-                            <div class="defect-shape">
-                                <div class="box-center">
-                                    <img src="{{Theme::asset()->url('images/introduce/icon5.png')}}" alt="">
-                                    <div class="name font20">
-                                        THUẬN TIỆN
-                                    </div>
-                                    <div class="des">
-                                        Lorem ipsum dolor sit amet, consectetur.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        @endfor
                 </div>
+                @endif
             </div>
         </div>
     </div>
@@ -533,150 +448,26 @@
             <div class="section-criteria-swiper">
                 <div class="swiper-container mySwiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="section-criteria__content__box" data-aos="fade-up">
-                                <div class="box-center-bark">
-                                    <img src="{{Theme::asset()->url('images/introduce/shap1.png')}}" alt="">
-                                    <div class="defect-shape">
-                                        <div class="box-center">
-                                            <img src="{{Theme::asset()->url('images/introduce/love1.png')}}" alt="">
-                                            <div class="name mb-3 mt-4 fontmb-medium ">
-                                                TẬN TÂM
-                                            </div>
-                                            <div class="des">
-                                                Lorem ipsum dolor sit amet, consectetur.
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="section-criteria__content__box" data-aos="fade-up" data-aos-delay="300">
-                                <div class="box-center-bark">
-                                    <img src="{{Theme::asset()->url('images/introduce/shape2.png')}}" alt="">
-                                    <div class="defect-shape">
-                                        <div class="box-center">
-                                            <img src="{{Theme::asset()->url('images/introduce/icon2.png')}}" alt="">
-                                            <div class="name mb-3 mt-4 fontmb-medium ">
-                                                TRUNG THỰC
-                                            </div>
-                                            <div class="des">
-                                                Lorem ipsum dolor sit amet, consectetur.
+                        @foreach($criteria as $item)
+                            <div class="swiper-slide">
+                                <div class="section-criteria__content__box" data-aos="fade-up">
+                                    <div class="box-center-bark">
+                                        <img src="{{get_image_url($item[0]->value)}}" alt="">
+                                        <div class="defect-shape">
+                                            <div class="box-center">
+                                                <img src="{{get_image_url($item[1]->value)}}" alt="">
+                                                <div class="name mb-3 mt-4 fontmb-medium ">
+                                                    {!! $item[2]->value !!}
+                                                </div>
+                                                <div class="des">
+                                                    {!! $item[3]->value !!}
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="section-criteria__content__box" data-aos="fade-up" data-aos-delay="600">
-                                <div class="box-center-bark">
-                                    <img src="{{Theme::asset()->url('images/introduce/shape3.png')}}" alt="">
-                                    <div class="defect-shape">
-                                        <div class="box-center">
-                                            <img src="{{Theme::asset()->url('images/introduce/icon6.png')}}" alt="">
-                                            <div class="name mb-3 mt-4 fontmb-medium ">
-                                                TRÍ TUỆ
-                                            </div>
-                                            <div class="des">
-                                                Lorem ipsum dolor sit amet, consectetur.
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="section-criteria__content__box" data-aos="fade-up" data-aos-delay="900">
-                                <div class="box-center-bark">
-                                    <img src="{{Theme::asset()->url('images/introduce/shape4.png')}}" alt="">
-                                    <div class="defect-shape">
-                                        <div class="box-center">
-                                            <img src="{{Theme::asset()->url('images/introduce/icon8.png')}}" alt="">
-                                            <div class="name mb-3 mt-4 fontmb-medium ">
-                                                TỰ TIN
-                                            </div>
-                                            <div class="des">
-                                                Lorem ipsum dolor sit amet, consectetur.
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="section-criteria__content__box" data-aos="fade-up" data-aos-delay="1200">
-                                <div class="box-center-bark">
-                                    <img src="{{Theme::asset()->url('images/introduce/shape5.png')}}" alt="">
-                                    <div class="defect-shape">
-                                        <div class="box-center">
-                                            <img src="{{Theme::asset()->url('images/introduce/icon4.png')}}" alt="">
-                                            <div class="name mb-3 mt-4 fontmb-medium ">
-                                                TÔN TRỌNG
-                                            </div>
-                                            <div class="des">
-                                                Lorem ipsum dolor sit amet, consectetur.
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="section-criteria__content__box" data-aos="fade-up" data-aos-delay="1500">
-                                <div class="box-center-bark">
-                                    <img src="{{Theme::asset()->url('images/introduce/shape6.png')}}" alt="">
-                                    <div class="defect-shape">
-                                        <div class="box-center">
-                                            <img src="{{Theme::asset()->url('images/introduce/icon7.png')}}" alt="">
-                                            <div class="name mb-3 mt-4 fontmb-medium ">
-                                                TRUNG TÍN
-                                            </div>
-                                            <div class="des">
-                                                Lorem ipsum dolor sit amet, consectetur.
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="section-criteria__content__box" data-aos="fade-up" data-aos-delay="1800">
-                                <div class="box-center-bark">
-                                    <img src="{{Theme::asset()->url('images/introduce/shape7.png')}}" alt="">
-                                    <div class="defect-shape">
-                                        <div class="box-center">
-                                            <img src="{{Theme::asset()->url('images/introduce/icon3.png')}}" alt="">
-                                            <div class="name mb-3 mt-4 fontmb-medium ">
-                                                TẬN TÌNH
-                                            </div>
-                                            <div class="des">
-                                                Lorem ipsum dolor sit amet, consectetur.
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="section-criteria__content__box" data-aos="fade-up" data-aos-delay="2100">
-                                <div class="box-center-bark">
-                                    <img src="{{Theme::asset()->url('images/introduce/shape8.png')}}" alt="">
-                                    <div class="defect-shape">
-                                        <div class="box-center">
-                                            <img src="{{Theme::asset()->url('images/introduce/icon5.png')}}" alt="">
-                                            <div class="name mb-3 mt-4 fontmb-medium ">
-                                                THUẬN TIỆN
-                                            </div>
-                                            <div class="des">
-                                                Lorem ipsum dolor sit amet, consectetur.
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
                 <div class="swiper-button-next"></div>
@@ -688,48 +479,38 @@
     <div class="splide splide_video">
         <div class="splide__track">
             <ul class="splide__list">
-                <li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=cdz__ojQOuU">
-                    <img src="{{Theme::asset()->url('images/introduce/video.jpg')}}" alt="">
-                    <div class="btn-play">
-                        <img src="{{Theme::asset()->url('images/introduce/btn-play.png')}}" alt="">
-                    </div>
-                    <div class="header_video">
-                        <div class="name font30 font-pri-bold">
-                            Bài hát Chu Lai - Trường Hải ca
-                        </div>
-                        <div class="conposed font25 font-pri">
-                            Sáng tác Trần Quế Sơn
-                        </div>
-                    </div>
-                </li>
-                <li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=cdz__ojQOuU">
-                    <img src="{{Theme::asset()->url('images/introduce/video.jpg')}}" alt="">
-                    <div class="btn-play">
-                        <img src="{{Theme::asset()->url('images/introduce/btn-play.png')}}" alt="">
-                    </div>
-                    <div class="header_video ">
-                        <div class="name font30 font-pri-bold">
-                            Bài hát Chu Lai - Trường Hải ca
-                        </div>
-                        <div class="conposed font25 font-pri">
-                            Sáng tác Trần Quế Sơn
-                        </div>
-                    </div>
-                </li>
-                <li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=cdz__ojQOuU">
-                    <img src="{{Theme::asset()->url('images/introduce/video.jpg')}}" alt="">
-                    <div class="btn-play">
-                        <img src="{{Theme::asset()->url('images/introduce/btn-play.png')}}" alt="">
-                    </div>
-                    <div class="header_video">
-                        <div class="name font30 font-pri-bold">
-                            Bài hát Chu Lai - Trường Hải ca
-                        </div>
-                        <div class="conposed font-pri font25">
-                            Sáng tác Trần Quế Sơn
-                        </div>
-                    </div>
-                </li>
+                @if(has_field($page, 'repeater_module_video_introduce')) 
+                    @foreach(has_field($page, 'repeater_module_video_introduce') as $row)
+                        <li class="splide__slide" data-splide-youtube="{{has_sub_field($row, 'link_video_youtube')}}">
+                            <img src="{{get_image_url(has_sub_field($row,'image'))}}" alt="">
+                            <div class="btn-play">
+                                <img src="{{Theme::asset()->url('images/introduce/btn-play.png')}}" alt="">
+                            </div>
+                            <div class="header_video">
+                                <div class="name font30 font-pri-bold">
+                                    {!! has_sub_field($row, 'name') !!}
+                                </div>
+                                <div class="conposed font25 font-pri">
+                                    {!! has_sub_field($row, 'description') !!}
+                                </div>
+                            </div>
+                        </li>
+                    @endforeach
+                        <li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=cdz__ojQOuU">
+                            <img src="{{Theme::asset()->url('images/introduce/video.jpg')}}" alt="">
+                            <div class="btn-play">
+                                <img src="{{Theme::asset()->url('images/introduce/btn-play.png')}}" alt="">
+                            </div>
+                            <div class="header_video ">
+                                <div class="name font30 font-pri-bold">
+                                    Bài hát Chu Lai - Trường Hải ca
+                                </div>
+                                <div class="conposed font25 font-pri">
+                                    Sáng tác Trần Quế Sơn
+                                </div>
+                            </div>
+                        </li>
+                @endif
             </ul>
         </div>
     </div>

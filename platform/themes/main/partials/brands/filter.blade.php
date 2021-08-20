@@ -1,5 +1,20 @@
 <section class="section-car-filter">
-    @includeIf("theme.main::views.pages.business.brand-detail.section.filter-top")
+    <div class="car-filter container-remake">
+        <h2 class="car-filter__title-mobile font30 font-mi-bold">{{ __("Kiểu dáng xe") }}</h2>
+    </div>
+    <div class="car-filter--top-mobile">
+        <ul class="car-model font18 font-pri ">
+            <li class="car-model__item {{ request('car_line', '') == '' ? 'active' : ''  }}">
+                <span>{{ __('Tất cả') }}</span>
+            </li>
+            @foreach (get_car_lines() ?? collect() as $item)
+                <li class="car-model__item" {{ request('car_line', '') == $item->id ? 'active' : ''  }}>
+                    <span class="text-uppercase">{{ $item->name }}</span>
+                </li>
+            @endforeach
+        </ul>
+        <a href="#" class="font18 font-pri pre-order desktop">{{ __("PRE-ORDER") }}</a>
+    </div>
     <div class="container-remake">
         <form action="">
             <div class="car-filter">

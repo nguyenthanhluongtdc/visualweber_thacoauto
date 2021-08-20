@@ -1,6 +1,5 @@
 <section class="section-brand-list">
     <div class="brand-list__banner">
-
         <img class="brand-list__banner__img" src="{{Theme::asset()->url('images/business/brand-detail/brand-detail-banner.jpg')}}" alt="">
         <div class="brand-list__banner__content">
             <h2 class= "font60 font-cond-bold text-uppercase">{{ __('tìm các dòng xe :brand', ['brand' => $data->name]) }}</h2>
@@ -40,3 +39,5 @@
         </ul>
     </div>
 </section>
+{!! Theme::partial('brands/filter') !!}
+{!! Theme::partial('brands/content') !!}

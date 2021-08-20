@@ -8,6 +8,11 @@ use Illuminate\Support\Facades\Event;
 use Platform\Base\Traits\LoadAndPublishDataTrait;
 use Illuminate\Routing\Events\RouteMatched;
 use Platform\Car\Models\Brand;
+use Platform\Car\Models\Car;
+use Platform\Car\Models\CarCategory;
+use Platform\Car\Repositories\Interfaces\BrandInterface;
+use Platform\Car\Repositories\Interfaces\CarCategoryInterface;
+use Platform\Car\Repositories\Interfaces\CarInterface;
 
 class CarServiceProvider extends ServiceProvider
 {
@@ -119,6 +124,20 @@ class CarServiceProvider extends ServiceProvider
                 'url'         => route('car.index'),
                 'permissions' => ['car.index'],
             ]);
+        });
+
+        $this->app->booted(function () {
+            if (defined('CUSTOM_FIELD_MODULE_SCREEN_NAME')) {
+                \CustomField::registerModule(Brand::class)
+                    ->registerRule('basic', trans('plugins/car::brand.name'), Brand::class, function () {
+                        return $this->app->make(BrandInterface::class)->pluck('app_brands.name', 'app_brands.id');
+                    })
+                    ->expandRule('other', trans('plugins/custom-field::rules.model_name'), 'model_name', function () {
+                        return [
+                            Brand::class => trans('plugins/car::brand.name'),
+                        ];
+                    });
+            }
         });
     }
 }

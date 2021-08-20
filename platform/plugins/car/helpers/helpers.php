@@ -6,6 +6,7 @@ use Platform\Base\Supports\SortItemsWithChildrenHelper;
 use Platform\Car\Repositories\Interfaces\BrandInterface;
 use Platform\Car\Repositories\Interfaces\CarCategoryInterface;
 use Platform\Car\Repositories\Interfaces\CarInterface;
+use Platform\Car\Repositories\Interfaces\CarLineInterface;
 
 if (!function_exists('get_car_categories')) {
     /**
@@ -115,6 +116,26 @@ if (!function_exists('get_categories_parent')) {
                 ],
                 'select'    => ['*'],
                 'with'      => ['children'],
+            ]);
+    }
+}
+
+if (!function_exists('get_car_lines')) {
+    /**
+     * Get all car lines function
+     *
+     * @return void
+     */
+    function get_car_lines()
+    {
+        return app(CarLineInterface::class)
+            ->advancedGet([
+                'condition' => [
+                    'status' => BaseStatusEnum::PUBLISHED,
+                ],
+                'order_by'  => [
+                    'created_at' => 'ASC',
+                ]
             ]);
     }
 }

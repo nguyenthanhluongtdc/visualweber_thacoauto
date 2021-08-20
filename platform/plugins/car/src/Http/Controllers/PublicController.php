@@ -29,6 +29,18 @@ class PublicController extends BaseController
             abort(404);
         }
 
+        $meta = \MetaBox::getMetaData($data, 'seo_meta', true);
+        \SeoHelper::setTitle(isset($meta['seo_title']) ? $meta['seo_title'] : $data->name)
+            ->setDescription((isset($meta['seo_description']) ? $meta['seo_description'] : $data->description) ?: theme_option('site_description'))
+            ->openGraph()
+            ->setImage(\RvMedia::getImageUrl(@$data->image, 'og', false, \RvMedia::getImageUrl(theme_option('seo_og_image'))))
+            ->addProperties(
+                [
+                    'image:width' => '1200',
+                    'image:height' => '630'
+                ]
+            );
+
         do_action(BASE_ACTION_PUBLIC_RENDER_SINGLE, BRAND_MODULE_SCREEN_NAME, $data);
 
         return \Theme::scope('pages/business/brand-detail/index', compact('data'))->render();

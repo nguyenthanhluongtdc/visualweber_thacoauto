@@ -51,10 +51,18 @@ class CarServiceProvider extends ServiceProvider
             ->loadRoutes(['web']);
 
         Event::listen(RouteMatched::class, function () {
+            $modules = [
+                \Platform\Car\Models\CarCategory::class,
+                \Platform\Car\Models\Brand::class
+            ];
+
             if (defined('LANGUAGE_MODULE_SCREEN_NAME')) {
-                \Language::registerModule([\Platform\Car\Models\CarCategory::class]);
-                \Language::registerModule([\Platform\Car\Models\Brand::class]);
+                \Language::registerModule($modules);
             }
+
+            $this->app->booted(function () use ($modules) {
+                \SeoHelper::registerModule($modules);
+            });
 
             dashboard_menu()->registerItem([
                 'id'          => 'cms-plugins-car',

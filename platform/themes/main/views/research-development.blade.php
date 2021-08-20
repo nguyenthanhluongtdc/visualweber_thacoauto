@@ -32,13 +32,6 @@
                             {!! has_sub_field($item, 'content_top_research_development') ? has_sub_field($item, 'content_top_research_development') : '' !!}
                         </li>
 
-                        {{-- <li>
-                            Nâng cấp sản phẩm: Chuẩn hóa và nâng cấp sản phẩm để tăng công năng sử dụng và tối ưu giá thành sản phẩm.
-                        </li>
-
-                        <li>
-                            Phát triển công nghệ: Thay đổi công nghệ mới mang tính đột phá để nâng cấp chất lượng sản phẩm và tối ưu chi phí sản xuất.
-                        </li> --}}
                         @endforeach
                         @endif
                     </ul>
@@ -48,9 +41,7 @@
                         {!! has_sub_field($item, 'content_bottom_research_development') ? has_sub_field($item, 'content_bottom_research_development') : '' !!}
                     </p>
 
-                    {{-- <p class="fontmb-little">
-                        Trong thời gian tới, Trung tâm R&D sẽ tập trung nâng cao năng lực nghiên cứu phát triển sản phẩm cho đội ngũ kỹ sư, tiếp nhận chuyển giao công nghệ từ các đối tác lớn, liên doanh với các nhà cung cấp trong và ngoài nước, đồng thời nỗ lực phát triển sản phẩm mới theo nhu cầu của khách hàng.
-                    </p> --}}
+                   
                     @endforeach
                     @endif
                 </div>

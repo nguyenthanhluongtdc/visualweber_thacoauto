@@ -84,29 +84,29 @@
                 <div id="contact-form" class="form-horizontal form-contact-us">
             {!! Form::open(['route' => 'public.send.contact', 'method' => 'POST']) !!}                   
             <div class="contact-input">
-                <label class="font40 font-pri-bold">Họ và tên<span>*</span></label> 
+                <label class="fontmb-medium font-pri-bold">Họ và tên<span>*</span></label> 
                 <input type="text" required />
             </div>   
             <div class="contact-input">
-                <label class="font40 font-pri-bold">Điện thoại<span>*</span></label> 
+                <label class="fontmb-medium font-pri-bold">Điện thoại<span>*</span></label> 
                 <input  type="text" required />
             </div>  
             <div class="contact-input">
-                <label class="font40 font-pri-bold">Email<span>*</span></label> 
+                <label class="fontmb-medium font-pri-bold">Email<span>*</span></label> 
                 <input  type="text" required />
             </div>   
             <div class="contact-input">
-                <label class="font40 font-pri-bold">Tiêu đề<span>*</span></label> 
+                <label class="fontmb-medium font-pri-bold">Tiêu đề<span>*</span></label> 
                 <input  type="text" required />
             </div>   
             <div class="contact-input wide">
-                <label class="font40 font-pri-bold">Nội dung <span>*</span></label>
+                <label class="fontmb-medium font-pri-bold">Nội dung <span>*</span></label>
                 <textarea   required></textarea>
                 
             </div> 
             <div class="contact-noti">
-                <label class="font40 font-pri-bold py-2">Thông báo bảo mật dữ liệu</label>
-                <p class="font28 font-pri text-noti">Thaco hoặc các đại lý của Thaco có thể sử dụng thông tin mà bạn cung cấp cùng với thông tin khác mà chúng tôi có thể liên hệ với bạn, bao gồm thư, điện thoại, SMS, fax hoặc email, với các ưu đãi hoặc thông tin về sản phẩm và dịch vụ của Thaco mà chúng tôi có thể cung cấp. Chúng tôi có thể giữ thông tin của bạn trong một khoản thời gian hợp lý để liên hệ với bạn về các đề nghị, lời mời hoặc thông tin về các sản phẩm và dịch vụ của chúng tôi. Để tiếp tục bạn phải đọc  <a href="#">Chính sách bảo mật</a></p>
+                <label class="fontmb-medium font-pri-bold py-2">Thông báo bảo mật dữ liệu</label>
+                <p class="font-pri text-noti">Thaco hoặc các đại lý của Thaco có thể sử dụng thông tin mà bạn cung cấp cùng với thông tin khác mà chúng tôi có thể liên hệ với bạn, bao gồm thư, điện thoại, SMS, fax hoặc email, với các ưu đãi hoặc thông tin về sản phẩm và dịch vụ của Thaco mà chúng tôi có thể cung cấp. Chúng tôi có thể giữ thông tin của bạn trong một khoản thời gian hợp lý để liên hệ với bạn về các đề nghị, lời mời hoặc thông tin về các sản phẩm và dịch vụ của chúng tôi. Để tiếp tục bạn phải đọc  <a href="#">Chính sách bảo mật</a></p>
                 <div class="checkpolicy">
                     <div class="styled-input-single">
                         <input type="checkbox" name="fieldset-2" id="radio-example-two" />
@@ -118,7 +118,7 @@
                 </div>
                 
             </div>
-            <div class="btn-lrg  submit-btn font40">GỬI THÔNG TIN</div>   
+            <div class="btn-lrg  submit-btn fontmb-medium">GỬI THÔNG TIN</div>   
                    
                     
             

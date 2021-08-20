@@ -11,5 +11,14 @@ Route::group(['namespace' => 'Platform\Car\Http\Controllers', 'middleware' => ['
                 'permission' => 'car-category.destroy',
             ]);
         });
+
+        Route::group(['prefix' => 'brands', 'as' => 'brand.'], function () {
+            Route::resource('', 'BrandController')->parameters(['' => 'brand']);
+            Route::delete('items/destroy', [
+                'as'         => 'deletes',
+                'uses'       => 'BrandController@deletes',
+                'permission' => 'brand.destroy',
+            ]);
+        });
     });
 });

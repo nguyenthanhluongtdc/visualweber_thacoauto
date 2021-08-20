@@ -28,6 +28,12 @@ class CarServiceProvider extends ServiceProvider
             );
         });
 
+        $this->app->bind(\Platform\Car\Repositories\Interfaces\BrandInterface::class, function () {
+            return new \Platform\Car\Repositories\Caches\BrandCacheDecorator(
+                new \Platform\Car\Repositories\Eloquent\BrandRepository(new \Platform\Car\Models\Brand)
+            );
+        });
+
         Helper::autoload(__DIR__ . '/../../helpers');
     }
 
@@ -42,8 +48,8 @@ class CarServiceProvider extends ServiceProvider
 
         Event::listen(RouteMatched::class, function () {
             if (defined('LANGUAGE_MODULE_SCREEN_NAME')) {
-                // \Language::registerModule([Car::class]);
                 \Language::registerModule([\Platform\Car\Models\CarCategory::class]);
+                \Language::registerModule([\Platform\Car\Models\Brand::class]);
             }
 
             dashboard_menu()->registerItem([
@@ -64,6 +70,16 @@ class CarServiceProvider extends ServiceProvider
                 'icon'        => null,
                 'url'         => route('car-category.index'),
                 'permissions' => ['car-category.index'],
+            ]);
+
+            dashboard_menu()->registerItem([
+                'id'          => 'cms-plugins-brand',
+                'priority'    => 0,
+                'parent_id'   => 'cms-plugins-car',
+                'name'        => 'plugins/car::brand.name',
+                'icon'        => null,
+                'url'         => route('brand.index'),
+                'permissions' => ['brand.index'],
             ]);
         });
     }

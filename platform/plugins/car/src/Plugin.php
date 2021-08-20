@@ -10,5 +10,6 @@ class Plugin extends PluginOperationAbstract
     public static function remove()
     {
         Schema::dropIfExists('app_car_categories');
+        Schema::dropIfExists('app_brands');
     }
 }

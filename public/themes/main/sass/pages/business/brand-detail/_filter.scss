@@ -526,7 +526,8 @@
                     &.active {
                         .symbol {
                             &::before {
-                                content: "\f00c";
+                                content: "";
+                                display: block;
                                 position: absolute;
                                 top: -3px;
                                 right: 0;

@@ -2,23 +2,24 @@
 
 namespace Theme\Thaco\Http\Controllers;
 
+use Theme;
+use RvMedia;
+use SeoHelper;
 use BaseHelper;
-use Platform\Page\Models\Page;
-use Platform\Base\Http\Responses\BaseHttpResponse;
-use Platform\Blog\Repositories\Interfaces\PostInterface;
-use Platform\Theme\Http\Controllers\PublicController;
-use Illuminate\Contracts\Filesystem\FileNotFoundException;
-use Platform\Theme\Events\RenderingSingleEvent;
+use SlugHelper;
 use Illuminate\Support\Arr;
 use Illuminate\Http\Request;
-use Platform\Kernel\Repositories\Interfaces\PostInterface as InterfacesPostInterface;
+use Platform\Page\Models\Page;
+use Platform\Page\Services\PageService;
+use Platform\Theme\Events\RenderingSingleEvent;
 // use Platform\Partner\Models\Partner;
 // use Platform\Services\Models\Services;
-use Theme;
+use Platform\Base\Http\Responses\BaseHttpResponse;
 // use Response;
-use SeoHelper;
-use SlugHelper;
-use RvMedia;
+use Platform\Theme\Http\Controllers\PublicController;
+use Platform\Blog\Repositories\Interfaces\PostInterface;
+use Illuminate\Contracts\Filesystem\FileNotFoundException;
+use Platform\Kernel\Repositories\Interfaces\PostInterface as InterfacesPostInterface;
 
 class ThacoController extends PublicController
 {
@@ -35,7 +36,36 @@ class ThacoController extends PublicController
      */
     public function getIndex()
     {
-        return parent::getIndex();
+        SeoHelper::setTitle(theme_option('seo_title', 'Thaco Auto'))
+            ->setDescription(theme_option('seo_description', 'Thaco Auto'))
+            ->openGraph()
+            ->setTitle(@theme_option('seo_title'))
+            ->setSiteName(@theme_option('site_title'))
+            ->setUrl(route('public.index'))
+            ->setImage(RvMedia::getImageUrl(theme_option('seo_og_image'), 'og'))
+            ->addProperty('image:width', '1200')
+            ->addProperty('image:height', '630');
+
+        if (defined('PAGE_MODULE_SCREEN_NAME')) {
+            $homepageId = BaseHelper::getHomepageId();
+            if ($homepageId) {
+                $slug = SlugHelper::getSlug(null, SlugHelper::getPrefix(Page::class), Page::class, $homepageId);
+
+                if ($slug) {
+                    $data = (new PageService)->handleFrontRoutes($slug);
+                    
+                    Theme::layout('default');
+                    return Theme::scope('index', $data['data'], $data['default_view'])->render();
+                }
+            }
+        }
+
+        SeoHelper::setTitle(theme_option('site_title'));
+
+        Theme::breadcrumb()->add(__('Home'), route('public.index'));
+
+        event(RenderingHomePageEvent::class);
+
     }
 
     /**
@@ -57,6 +87,7 @@ class ThacoController extends PublicController
             return $this->getIndex();
         }
 
+        
         $slug = SlugHelper::getSlug($key, '');
 
         if (!$slug) {
@@ -85,7 +116,6 @@ class ThacoController extends PublicController
             }
             return Theme::scope($view, $result['data'], Arr::get($result, 'default_view'))->render();
         }
-
         abort(404);
     }
 

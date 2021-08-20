@@ -65,6 +65,11 @@ class BrandController extends BaseController
 
         event(new CreatedContentEvent(BRAND_MODULE_SCREEN_NAME, $request, $brand));
 
+        $categories = $request->input('categories');
+        if (!empty($categories) && is_array($categories)) {
+            $brand->categories()->sync($categories);
+        }
+
         return $response
             ->setPreviousUrl(route('brand.index'))
             ->setNextUrl(route('brand.edit', $brand->id))
@@ -103,6 +108,11 @@ class BrandController extends BaseController
         $brand = $this->brandRepository->createOrUpdate($brand);
 
         event(new UpdatedContentEvent(BRAND_MODULE_SCREEN_NAME, $request, $brand));
+
+        $categories = $request->input('categories');
+        if (!empty($categories) && is_array($categories)) {
+            $brand->categories()->sync($categories);
+        }
 
         return $response
             ->setPreviousUrl(route('brand.index'))

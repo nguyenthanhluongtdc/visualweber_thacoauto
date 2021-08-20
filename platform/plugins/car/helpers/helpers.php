@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Arr;
+use Platform\Base\Enums\BaseStatusEnum;
+use Platform\Base\Supports\SortItemsWithChildrenHelper;
 use Platform\Car\Repositories\Interfaces\CarCategoryInterface;
 
 if (!function_exists('get_car_categories')) {
@@ -34,5 +36,25 @@ if (!function_exists('get_car_categories')) {
         }
 
         return $categories;
+    }
+}
+
+if (!function_exists('get_car_categories_with_children')) {
+    /**
+     * @return \Illuminate\Support\Collection
+     * @throws Exception
+     */
+    function get_car_categories_with_children()
+    {
+        $categories = app(CarCategoryInterface::class)
+            ->advancedGet([
+                'condition' => ['status' => BaseStatusEnum::PUBLISHED],
+                'select' => ['id', 'name', 'parent_id']
+            ]);
+
+        return app(SortItemsWithChildrenHelper::class)
+            ->setChildrenProperty('child_cats')
+            ->setItems($categories)
+            ->sort();
     }
 }

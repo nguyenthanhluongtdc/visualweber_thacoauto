@@ -2,6 +2,7 @@
 
 namespace Platform\Car\Models;
 
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Platform\Base\Traits\EnumCastable;
 use Platform\Base\Enums\BaseStatusEnum;
 use Platform\Base\Models\BaseModel;
@@ -22,6 +23,8 @@ class Brand extends BaseModel
      */
     protected $fillable = [
         'name',
+        'content',
+        'image',
         'status',
     ];
 
@@ -31,4 +34,12 @@ class Brand extends BaseModel
     protected $casts = [
         'status' => BaseStatusEnum::class,
     ];
+
+    /**
+     * @return BelongsToMany
+     */
+    public function categories(): BelongsToMany
+    {
+        return $this->belongsToMany(CarCategory::class, 'app__brand_car_categories');
+    }
 }

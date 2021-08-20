@@ -1,31 +1,39 @@
 <section class="section-car-filter">
-    @includeIf("theme.main::views.pages.business.brand-detail.section.filter-top")
+    <div class="car-filter container-remake">
+        <h2 class="car-filter__title-mobile font30 font-mi-bold">{{ __("Kiểu dáng xe") }}</h2>
+    </div>
+    <div class="car-filter--top-mobile">
+        <ul class="car-model font18 font-pri ">
+            <li class="car-model__item {{ request('car_line', '') == '' ? 'active' : ''  }}">
+                <span>{{ __('Tất cả') }}</span>
+            </li>
+            @foreach (get_car_lines() ?? collect() as $item)
+                <li class="car-model__item" {{ request('car_line', '') == $item->id ? 'active' : ''  }}>
+                    <span class="text-uppercase">{{ $item->name }}</span>
+                </li>
+            @endforeach
+        </ul>
+        <a href="#" class="font18 font-pri pre-order desktop">{{ __("PRE-ORDER") }}</a>
+    </div>
     <div class="container-remake">
         <form action="">
             <div class="car-filter">
-                <h2 class="car-filter__title font30 font-mi-bold">KIỂU DÁNG XE</h2>
+                <h2 class="car-filter__title font30 font-mi-bold text-uppercase">{{ __("Kiểu dáng xe") }}</h2>
             </div>
             <div class="car-filter--top">
                 <ul class="car-model font18 font-pri car-model">
-                    <li class="car-model__item">
-                        <span>TẤT CẢ</span>
+                    <li class="car-model__item {{ request('car_line', '') == '' ? 'active' : ''  }}">
+                        <span>{{ __('Tất cả') }}</span>
                     </li>
-                    <li class="car-model__item">
-                        <span>HATCHBACK</span>
-                    </li>
-                    <li class="car-model__item active">
-                        <span>SEDAN</span>
-                    </li>
-                    <li class="car-model__item">
-                        <span>SUV</span>
-                    </li>
-                    <li class="car-model__item">
-                        <span>MPV</span>
-                    </li>
+                    @foreach (get_car_lines() ?? collect() as $item)
+                        <li class="car-model__item" {{ request('car_line', '') == $item->id ? 'active' : ''  }}>
+                            <span class="text-uppercase">{{ $item->name }}</span>
+                        </li>
+                    @endforeach
                 </ul>
-                <a href="#" class="font18 font-pri pre-order desktop">PRE-ORDER</a>
+                <a href="#" class="font18 font-pri pre-order desktop text-uppercase">{{ __("PRE-ORDER") }}</a>
             </div>
-        
+
             <div class="car-filter--center">
                 <select class="provinces-select2 font18 font-pri" name="" id="">
                     <option value="">TP. HỒ CHÍ MINH</option>
@@ -41,16 +49,16 @@
                         <input type="range" min="100000000" max="20000000000" step="50000000" value="50000000" class="slider" id="myRange">
                     </div>
                 </div>
-                
+
             </div>
             <div class="row_pre-order mobile">
-                <a href="#" class="font18 font-pri pre-order ml-auto">PRE-ORDER</a>
+                <a href="#" class="font18 font-pri pre-order ml-auto text-uppercase">{{ __("PRE-ORDER") }}</a>
             </div>
             <div class="car-filter--bottom position-relative">
                 <button type="button" class="modal-button btn-join">
-                    <span class="frame"> 
+                    <span class="frame text-uppercase">
                         <img src="{{Theme::asset()->url('images/business/brand-detail/filter.png')}}" alt="filter icon">
-                        BỘ LỌC NÂNG CAO
+                        {{ __("BỘ LỌC NÂNG CAO") }}
                     </span>
                 </button>
 
@@ -197,14 +205,14 @@
                         Màu sơn
                         </div>
                         <div class="row-filter__content row">
-                        
+
                             <div class="col-sm-4 col-6 item">
                                 <a href="" class="col-filter">
                                     <div class="symbol">
                                         <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
                                     </div>
                                     <div class="name font25">
-                                        Đen 
+                                        Đen
                                     </div>
                                 </a>
                             </div>
@@ -236,7 +244,7 @@
                         Động cơ
                         </div>
                         <div class="row-filter__content row">
-                        
+
                             <div class="col-sm-4 col-6 item">
                                 <a href="" class="col-filter">
                                     <div class="symbol">
@@ -275,14 +283,14 @@
                         Nhiên liệu
                         </div>
                         <div class="row-filter__content row">
-                        
+
                             <div class="col-sm-4 col-6 item">
                                 <a href="" class="col-filter active">
                                     <div class="symbol">
                                         <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
                                     </div>
                                     <div class="name font25">
-                                        Xăng 
+                                        Xăng
                                     </div>
                                 </a>
                             </div>
@@ -304,7 +312,7 @@
                         Hộp số
                         </div>
                         <div class="row-filter__content row">
-                        
+
                             <div class="col-sm-4 col-6 item">
                                 <a href="" class="col-filter active">
                                     <div class="symbol">
@@ -327,7 +335,7 @@
                             </div>
                         </div>
                     </div>
-                </div> 
+                </div>
             </div>
         </form>
     </div>
@@ -352,7 +360,7 @@
 
         document.body.addEventListener("click",function(e){
             if(e.target.classList[0]=="overlay") {
-                modal.style.display="none" 
+                modal.style.display="none"
             }
         })
     })

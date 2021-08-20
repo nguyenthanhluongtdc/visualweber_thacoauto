@@ -144,11 +144,19 @@
                             font-size: 12px;
                            
                         }
+                        @media only screen and (max-width: 400px){
+                            font-size: 8px;
+                           
+                        }
                     }
                     .text2{
                         font-size: 50px;
                         @media only screen and (max-width: 600px){
                             font-size: 20px;
+                           
+                        }
+                        @media only screen and (max-width: 400px){
+                            font-size: 18px;
                            
                         }
                     }
@@ -158,6 +166,11 @@
                     font-family: $font-primary;
                     @media only screen and (max-width: 600px){
                         font-size: 10px;
+                       
+                    }
+                    @media only screen and (max-width: 600px){
+                        font-size: 6px;
+                        margin-top: -10px;
                        
                     }
                 }
@@ -206,6 +219,10 @@
                                 font-size: 20px;
                                
                             }
+                            @media only screen and (max-width: 400px){
+                                font-size: 15px;
+                               
+                            }
                         }
     
                         .text {
@@ -213,6 +230,10 @@
                             font-family: $font-cond;
                             @media only screen and (max-width: 600px){
                                 font-size: 12px;
+                               
+                            }
+                            @media only screen and (max-width: 400px){
+                                font-size: 10px;
                                
                             }
                         }

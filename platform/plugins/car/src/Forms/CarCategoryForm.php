@@ -41,7 +41,7 @@ class CarCategoryForm extends FormAbstract
             ])
             ->add('parent_id', 'customSelect', [
                 'label'      => trans('core/base::forms.parent'),
-                'label_attr' => ['class' => 'control-label required'],
+                'label_attr' => ['class' => 'control-label'],
                 'attr'       => [
                     'class' => 'select-search-full',
                 ],

@@ -1,6 +1,6 @@
 <section class="section-car-filter-content">
     <div class="container-remake">
-    
+
         <div class="list-car-mobile row">
             <div class="swiper-container researchDevSwiper">
                 <div class="swiper-wrapper">
@@ -46,9 +46,9 @@
                             <div class="bottom-line"></div>
                         </a>
                     </div>
-                    
+
                 </div>
-               
+
             </div>
         </div>
         <ul class="list-car">
@@ -84,14 +84,14 @@
                 <div class="car-detail__frame">
                     <img src="{{Theme::asset()->url('images/business/brand-detail/car-detail.png')}}" alt="">
                 </div>
-                
+
             </div>
             <div class="car-detail__info col-sm-12 col-md-12">
                 <h3 class="info-title font30 font-mi-bold">KIA Optima</h3>
                 <ul class="info-equip">
                     <li class="info-equip__item font18 font-pri">
                         <img src="{{Theme::asset()->url('images/business/brand-detail/chon-xe-1.png')}}" alt="filter icon">
-                        <span>270 kW (367 HP)</span>    
+                        <span>270 kW (367 HP)</span>
                     </li>
                     <li class="info-equip__item font18 font-pri">
                         <img src="{{Theme::asset()->url('images/business/brand-detail/chon-xe-2.png')}}" alt="filter icon">
@@ -99,32 +99,32 @@
                     </li>
                     <li class="info-equip__item font18 font-pri">
                         <img src="{{Theme::asset()->url('images/business/brand-detail/chon-xe-3.png')}}" alt="filter icon">
-                        <span>Tự động</span>  
+                        <span>Tự động</span>
                     </li>
                 </ul>
                 <ul class="info-color">
                     <li class="info-color__item active" style="background-color: white">
-                        
+
                     </li>
                     <li class="info-color__item" style="background-color: black">
-                        
+
                     </li>
                     <li class="info-color__item" style="background-color: #cdcdcd">
-                        
+
                     </li>
                     <li class="info-color__item" style="background-color: #cb0000">
-                        
+
                     </li>
                     <li class="info-color__item" style="background-color: #003499">
-                        
+
                     </li>
                     <li class="info-color__item" style="background-color: #235150">
-                        
+
                     </li>
                 </ul>
                 <ul class="info-option">
                     <li class="info-option__item">
-                        
+
                         <h3 class="info-option-title font18 font-pri"><a href="">KIA OPTIMA 2.0 GAT LUXURY</a></h3>
                         <p class="info-option-price font15 font-pri">Giá từ 759,000,000đ</p>
 
@@ -148,7 +148,7 @@
                 <button class="info-button font18 font-pri" type="button">
                     <a href="car-selection">Tiếp theo</a>
                 </button>
-                
+
                 <div class="info-hotline font18 font-pri">HOTLINE - 1900 54 55 91</div>
             </div>
         </div>
@@ -230,9 +230,9 @@
                                 <h4 class="list-related-cars__viewmore  font-cond-bold font15 fontmb-little">XEM CHI TIẾT <i class="fas fa-arrow-right font15"></i></h4>
                             </a>
                         </div>
-                        
+
                     </div>
-                   
+
                 </div>
             </div>
         </div>

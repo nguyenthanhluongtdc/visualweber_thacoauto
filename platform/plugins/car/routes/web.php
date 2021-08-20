@@ -28,6 +28,15 @@ Route::group(['namespace' => 'Platform\Car\Http\Controllers', 'middleware' => ['
                 'permission' => 'car-line.destroy',
             ]);
         });
+
+        Route::group(['prefix' => 'cars', 'as' => 'car.'], function () {
+            Route::resource('', 'CarController')->parameters(['' => 'car']);
+            Route::delete('items/destroy', [
+                'as'         => 'deletes',
+                'uses'       => 'CarController@deletes',
+                'permission' => 'car.destroy',
+            ]);
+        });
     });
 });
 Route::group(['namespace' => 'Platform\Car\Http\Controllers', 'middleware' => ['web']], function () {

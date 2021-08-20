@@ -8,6 +8,11 @@ use Illuminate\Support\Facades\Event;
 use Platform\Base\Traits\LoadAndPublishDataTrait;
 use Illuminate\Routing\Events\RouteMatched;
 use Platform\Car\Models\Brand;
+use Platform\Car\Models\Car;
+use Platform\Car\Models\CarCategory;
+use Platform\Car\Repositories\Interfaces\BrandInterface;
+use Platform\Car\Repositories\Interfaces\CarCategoryInterface;
+use Platform\Car\Repositories\Interfaces\CarInterface;
 
 class CarServiceProvider extends ServiceProvider
 {
@@ -33,6 +38,12 @@ class CarServiceProvider extends ServiceProvider
             );
         });
 
+        $this->app->bind(\Platform\Car\Repositories\Interfaces\CarInterface::class, function () {
+            return new \Platform\Car\Repositories\Caches\CarCacheDecorator(
+                new \Platform\Car\Repositories\Eloquent\CarRepository(new \Platform\Car\Models\Car)
+            );
+        });
+
         Helper::autoload(__DIR__ . '/../../helpers');
     }
 
@@ -52,7 +63,8 @@ class CarServiceProvider extends ServiceProvider
             $modules = [
                 \Platform\Car\Models\CarCategory::class,
                 \Platform\Car\Models\Brand::class,
-                \Platform\Car\Models\CarLine::class
+                \Platform\Car\Models\CarLine::class,
+                \Platform\Car\Models\Car::class
             ];
 
             if (defined('LANGUAGE_MODULE_SCREEN_NAME')) {
@@ -102,6 +114,30 @@ class CarServiceProvider extends ServiceProvider
                 'url'         => route('car-line.index'),
                 'permissions' => ['car-line.index'],
             ]);
+
+            dashboard_menu()->registerItem([
+                'id'          => 'cms-plugins-cars',
+                'priority'    => 0,
+                'parent_id'   => 'cms-plugins-car',
+                'name'        => 'plugins/car::car.name',
+                'icon'        => null,
+                'url'         => route('car.index'),
+                'permissions' => ['car.index'],
+            ]);
+        });
+
+        $this->app->booted(function () {
+            if (defined('CUSTOM_FIELD_MODULE_SCREEN_NAME')) {
+                \CustomField::registerModule(Brand::class)
+                    ->registerRule('basic', trans('plugins/car::brand.name'), Brand::class, function () {
+                        return $this->app->make(BrandInterface::class)->pluck('app_brands.name', 'app_brands.id');
+                    })
+                    ->expandRule('other', trans('plugins/custom-field::rules.model_name'), 'model_name', function () {
+                        return [
+                            Brand::class => trans('plugins/car::brand.name'),
+                        ];
+                    });
+            }
         });
     }
 }

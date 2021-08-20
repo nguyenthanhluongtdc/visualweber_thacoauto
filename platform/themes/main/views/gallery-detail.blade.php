@@ -2,8 +2,9 @@
     <div class="gallery">
         @if (!empty($galleries = gallery_meta_data($post)))
                 @foreach ($galleries as $gallery)
+                {{-- @dd($gallery) --}}
                 <div class="gallery-pic">
-                    <a href="{{ RvMedia::getImageUrl(Arr::get($gallery, 'img')) }}" data-fancybox="images">
+                    <a href="{{ RvMedia::getImageUrl(Arr::get($gallery, 'img')) }}" data-fancybox="images" data-caption="{{Arr::get($gallery, 'description')}}">
                         <img src="{{ RvMedia::getImageUrl(Arr::get($gallery, 'img')) }}" />
                     </a>
                 </div>
@@ -13,7 +14,7 @@
         @if (!empty(get_field($post, 'video_gallery')))
                 @foreach (get_field($post, 'video_gallery') as $gallery)
                 <div class="gallery-pic">
-                    <a data-fancybox href="https://www.youtube.com/watch?v={{get_sub_field($gallery, 'youtube_code')}}">
+                    <a data-fancybox href="https://www.youtube.com/watch?v={{get_sub_field($gallery, 'youtube_code')}}" data-caption="{{get_sub_field($gallery, 'video_description')}}">
                         <img src="http://img.youtube.com/vi/{{get_sub_field($gallery, 'youtube_code')}}/mqdefault.jpg" />
                     </a>
                 </div>

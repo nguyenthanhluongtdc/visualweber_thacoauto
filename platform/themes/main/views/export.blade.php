@@ -2,9 +2,14 @@
     <div class="section-intro-wrapper expor">
         <div class="container-remake">
             <div class="section-intro">
-                <h1 class="section-intro__title font-pri-bold font40 fontmb-large text-uppercase"> Xuất khẩu </h1>
-                <p class="rd-production__content font20 fontmb-little font-pri">Có thể tóm tắt vai trò của xuất khẩu bao gồm: Đem lại doanh thu cho doanh nghiệp. Việc bán hàng cho khách hàng nước ngoài chính là cách mở rộng thị trường vượt ra khỏi biên giới quốc gia, góp phần nâng tầm của doanh nghiệp nội địa. Đây cũng là một trong những lợi ích chính yếu mà buôn bán quốc tế đem lại.
+                @if(has_field($page, 'intro_module_export'))
+                <h1 class="section-intro__title font-pri-bold font40 fontmb-large text-uppercase">{!! has_field($page,'intro_module_export') !!}   </h1>
+                @endif
+                @if(has_field($page, 'description_module_export'))
+                <p class="rd-production__content font20 fontmb-little font-pri">
+                    {!! has_field($page,'description_module_export') !!} 
                 </p>
+                @endif
             </div>
         </div>
 
@@ -13,12 +18,16 @@
         <div class="section-info-more-wrapper font-pri">
             <div class="content font20">
                 <div class="container-remake">
+                    @if(has_field($page, 'tittle_module_export'))
                     <h2 class="title font-pri-bold font40 fontmb-large text-uppercase ">
-                        Những dự án tiêu biểu
+                        {!! has_field($page,'tittle_module_export') !!}
                     </h2>
+                    @endif
                 </div>
             </div>
             <div class="list-image-mobile container-remake">
+               
+                
                 <div class="swiper-slide">
                     <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu4.jpg')}}" alt="" class="image"/>
                         <div class="text text-uppercase fontmb-medium font-pri-bold mt-4">công ty cổ phần ô tô trường hải(thaco) xuất khẩu ô tô và linh kiện phụ tùng lớn nhất từ trước đến nay</div>
@@ -64,14 +73,19 @@
             <div class="list-image row">
                 <div class="swiper-container researchDevSwiper">
                     <div class="swiper-wrapper">
+                       
+                        @if(has_field($page, 'repeater_slider_export'))
+                        @foreach(has_field($page, 'repeater_slider_export') as $item)
                         <div class="swiper-slide">
-                            <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu4.jpg')}}" alt="" class="image"/>
+                            <img width="" height="" src="{{get_image_url(has_sub_field($item,'slider_image'))}}" alt="" class="image"/>
                             <div class="overlay">
                                 <div class="text text-uppercase font30 font-pri-bold">thaco xuất khẩu ô tô qua thái lan</div>
                                 <div class="read-more"><a href="">Xem chi tiết</a></div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
+                        @endforeach
+                        @endif
+                        {{-- <div class="swiper-slide">
                             <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu4.jpg')}}" alt="" class="image"/>
                             <div class="overlay">
                                 <div class="text text-uppercase font30 font-pri-bold">thaco xuất khẩu ô tô qua thái lan</div>
@@ -141,7 +155,7 @@
                                 <div class="text text-uppercase font30 font-pri-bold">thaco xuất khẩu ô tô qua thái lan</div>
                                 <div class="read-more"><a href="">Xem chi tiết</a></div>
                             </div>
-                        </div>
+                        </div> --}}
                        
                     </div>
                     <div class="swiper-scrollbar"></div>

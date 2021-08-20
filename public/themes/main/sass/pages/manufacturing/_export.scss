@@ -3,7 +3,9 @@
     top: 45%;
     right: 0;
     z-index: 99;
-
+    @media(max-width : 1080px){
+      display: none;
+    }
     .pagination-customize {
       border-right: 1px solid $color-primary;
       .pagi-item {

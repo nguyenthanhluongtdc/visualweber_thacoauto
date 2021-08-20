@@ -5,6 +5,8 @@ use Platform\Base\Enums\BaseStatusEnum;
 use Platform\Base\Supports\SortItemsWithChildrenHelper;
 use Platform\Car\Repositories\Interfaces\BrandInterface;
 use Platform\Car\Repositories\Interfaces\CarCategoryInterface;
+use Platform\Car\Repositories\Interfaces\CarInterface;
+use Platform\Car\Repositories\Interfaces\CarLineInterface;
 
 if (!function_exists('get_car_categories')) {
     /**
@@ -37,6 +39,40 @@ if (!function_exists('get_car_categories')) {
         }
 
         return $categories;
+    }
+}
+
+if (!function_exists('get_cars')) {
+    /**
+     * @param array $args
+     * @return \Illuminate\Support\Collection|mixed
+     */
+    function get_cars(array $args = [])
+    {
+        $indent = Arr::get($args, 'indent', '——');
+
+        $repo = app(CarInterface::class);
+
+        $cars = $repo->advancedGet([
+            'order_by'  => [
+                'created_at' => 'DESC',
+                'order'      => 'ASC',
+            ],
+            'select'    => Arr::get($args, 'select', ['*'])
+        ]);
+
+        $cars = sort_item_with_children($cars);
+
+        foreach ($cars as $car) {
+            $indentText = '';
+            $depth = (int)$car->depth;
+            for ($index = 0; $index < $depth; $index++) {
+                $indentText .= $indent;
+            }
+            $car->indent_text = $indentText;
+        }
+
+        return $cars;
     }
 }
 
@@ -80,6 +116,26 @@ if (!function_exists('get_categories_parent')) {
                 ],
                 'select'    => ['*'],
                 'with'      => ['children'],
+            ]);
+    }
+}
+
+if (!function_exists('get_car_lines')) {
+    /**
+     * Get all car lines function
+     *
+     * @return void
+     */
+    function get_car_lines()
+    {
+        return app(CarLineInterface::class)
+            ->advancedGet([
+                'condition' => [
+                    'status' => BaseStatusEnum::PUBLISHED,
+                ],
+                'order_by'  => [
+                    'created_at' => 'ASC',
+                ]
             ]);
     }
 }

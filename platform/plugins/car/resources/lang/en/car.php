@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'name'   => 'Car',
+    'name'   => 'Cars',
     'create' => 'New car',
     'edit'   => 'Edit car',
 ];

@@ -3,6 +3,7 @@
 use Illuminate\Support\Arr;
 use Platform\Base\Enums\BaseStatusEnum;
 use Platform\Base\Supports\SortItemsWithChildrenHelper;
+use Platform\Car\Repositories\Interfaces\BrandInterface;
 use Platform\Car\Repositories\Interfaces\CarCategoryInterface;
 
 if (!function_exists('get_car_categories')) {
@@ -56,5 +57,29 @@ if (!function_exists('get_car_categories_with_children')) {
             ->setChildrenProperty('child_cats')
             ->setItems($categories)
             ->sort();
+    }
+}
+
+if (!function_exists('get_categories_parent')) {
+    /**
+     * Get all brand parents function
+     *
+     * @return void
+     */
+    function get_categories_parent()
+    {
+        return app(CarCategoryInterface::class)
+            ->advancedGet([
+                'condition' => [
+                    'status' => BaseStatusEnum::PUBLISHED,
+                    'parent_id' => 0
+                ],
+                'order_by'  => [
+                    'created_at' => 'ASC',
+                    'order' => 'DESC'
+                ],
+                'select'    => ['*'],
+                'with'      => ['children'],
+            ]);
     }
 }

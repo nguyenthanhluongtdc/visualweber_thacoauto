@@ -3,6 +3,7 @@
 namespace Platform\Car\Models;
 
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Platform\Base\Traits\EnumCastable;
 use Platform\Base\Enums\BaseStatusEnum;
@@ -54,6 +55,14 @@ class CarCategory extends BaseModel
     public function children(): HasMany
     {
         return $this->hasMany(CarCategory::class, 'parent_id');
+    }
+
+    /**
+     * @return BelongsToMany
+     */
+    public function brands(): BelongsToMany
+    {
+        return $this->belongsToMany(Brand::class, 'app__brand_car_categories');
     }
 
     protected static function boot()

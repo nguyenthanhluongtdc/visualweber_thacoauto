@@ -623,11 +623,13 @@ a:hover {
         font-size: 25px;
     }
     @media (max-width: 768px){
-        font-size: 20px;
+        font-size: 15px;
     }
-    @media (max-width: 600px){
-        font-size: 18px;
+    @media (max-width: 500px){
+        font-size: 15px;
     }
+    
+    
 }
 .fontmb-middle{
     @media (max-width: 1080px){
@@ -677,51 +679,7 @@ a:hover {
         font-family: "MyriadPro-BoldCond";
     }
 }
-// @media (max-width: 1080px) {
-//         //font-size mobile
-//     .fontmb-big {
-//         font-size: 40px;
-//     }
 
-//     .fontmb-rather {
-//         font-size: 30px;
-//     }
-
-//     .fontmb-medium {
-//         font-size: 25px;
-//     }
-
-//     // .fontmb-weak {
-//     //     font-size: 20px;
-//     // }
-
-//     .fontmb-majority {
-//         font-size: 18px;
-//     }
-// }
-
-// @media (max-width: 992px) {
-//     //font-size mobile
-//     .fontmb-big {
-//         font-size: 35px;
-//     }
-
-//     .fontmb-rather {
-//         font-size: 30px;
-//     }
-
-//     .fontmb-medium {
-//         font-size: 22px;
-//     }
-
-//     // .fontmb-weak {
-//     //     font-size: 18px;
-//     // }
-
-//     .fontmb-majority {
-//         font-size: 16px;
-//     }
-// }
 
 
 @media (max-width: 768px) {

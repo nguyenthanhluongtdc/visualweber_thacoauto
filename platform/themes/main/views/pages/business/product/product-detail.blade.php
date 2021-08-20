@@ -103,12 +103,13 @@
                                     <p class="car-decs font-mi-bold font18 fontmb-cond-bold fontmb-little">
                                         PHONG CÁCH RIÊNG CỦA BẠN
                                     </p>
+                                    <a href="#">
+                                        <p class="readmore font-mi-bold font18 mt-lg-3 mt-3 fontmb-cond-bold fontmb-little">
+                                            XEM CHI TIẾT ->
+                                        </p>
+                                    </a>
                                 </div>
-                                <a href="#">
-                                    <p class="readmore font-mi-bold font18 mt-lg-5 mt-3 fontmb-cond-bold fontmb-little">
-                                        XEM CHI TIẾT ->
-                                    </p>
-                                </a>
+                                
                             </div>
                         </div>
                         <div class="car-frame">
@@ -124,12 +125,13 @@
                                     <p class="car-decs font-mi-bold font18 fontmb-cond-bold fontmb-little">
                                         SẮC MÀU THỜI TRANG KHẲNG ĐỊNH PHONG CÁCH
                                     </p>
+                                    <a href="#">
+                                        <p class="readmore font-mi-bold font18 mt-lg-3 mt-3 fontmb-cond-bold fontmb-little">
+                                            XEM CHI TIẾT ->
+                                        </p>
+                                    </a>
                                 </div>
-                                <a href="#">
-                                    <p class="readmore font-mi-bold font18 mt-lg-5 mt-3 fontmb-cond-bold fontmb-little">
-                                        XEM CHI TIẾT ->
-                                    </p>
-                                </a>
+                               
                             </div>
                         </div>
                     </div>
@@ -152,12 +154,13 @@
                                     <p class="car-decs font-mi-bold font18 fontmb-cond-bold fontmb-little">
                                         KẾT NỐI GIÁ TRỊ THẬT
                                     </p>
+                                    <a href="#">
+                                        <p class="readmore font-mi-bold font18 mt-lg-3 mt-3 fontmb-cond-bold fontmb-little">
+                                            XEM CHI TIẾT ->
+                                        </p>
+                                    </a>
                                 </div>
-                                <a href="#">
-                                    <p class="readmore font-mi-bold font18 mt-lg-5 mt-3 fontmb-cond-bold fontmb-little">
-                                        XEM CHI TIẾT ->
-                                    </p>
-                                </a>
+                              
                             </div>
                         </div>
                         <div class="car-frame">
@@ -173,12 +176,13 @@
                                     <p class="car-decs font-mi-bold font18 fontmb-cond-bold fontmb-little">
                                         KHẲNG ĐỊNH PHONG CÁCH MỚI 
                                     </p>
+                                    <a href="#">
+                                        <p class="readmore font-mi-bold font18 mt-lg-3 mt-3 fontmb-cond-bold fontmb-little">
+                                            XEM CHI TIẾT ->
+                                        </p>
+                                    </a>
                                 </div>
-                                <a href="#">
-                                    <p class="readmore font-mi-bold font18 mt-lg-5 mt-3 fontmb-cond-bold fontmb-little">
-                                        XEM CHI TIẾT ->
-                                    </p>
-                                </a>
+                               
                             </div>
                         </div>
                         <div class="car-frame">
@@ -194,12 +198,13 @@
                                     <p class="car-decs font-mi-bold font18 fontmb-cond-bold fontmb-little">
                                         TỤ TIN VÀ PHONG CÁCH
                                     </p>
+                                    <a href="#">
+                                        <p class="readmore font-mi-bold font18 mt-lg-3 mt-3 fontmb-cond-bold fontmb-little">
+                                            XEM CHI TIẾT ->
+                                        </p>
+                                    </a>
                                 </div>
-                                <a href="#">
-                                    <p class="readmore font-mi-bold font18 mt-lg-5 mt-3 fontmb-cond-bold fontmb-little">
-                                        XEM CHI TIẾT ->
-                                    </p>
-                                </a>
+                               
                             </div>
                         </div>
                         <div class="car-frame">
@@ -215,12 +220,13 @@
                                     <p class="car-decs font-mi-bold font18 fontmb-cond-bold fontmb-little">
                                         SANG TRỌNG VÀ ĐẲNG CẤP
                                     </p>
+                                    <a href="#">
+                                        <p class="readmore font-mi-bold font18 mt-lg-3 mt-3 fontmb-cond-bold fontmb-little">
+                                            XEM CHI TIẾT ->
+                                        </p>
+                                    </a>
                                 </div>
-                                <a href="#">
-                                    <p class="readmore font-mi-bold font18 mt-lg-5 mt-3 fontmb-cond-bold fontmb-little">
-                                        XEM CHI TIẾT ->
-                                    </p>
-                                </a>
+                                
                             </div>
                         </div>
                     </div>
@@ -243,13 +249,14 @@
                                     <p class="car-decs font-mi-bold font18 fontmb-cond-bold fontmb-little">
                                         ĐẲNG CẤP TỪ GIÁ TRỊ
                                     </p>
+                                    
+                                    <a href="#">
+                                        <p class="readmore font-mi-bold font18 mt-lg-3 mt-3 fontmb-cond-bold fontmb-little">
+                                            XEM CHI TIẾT ->
+                                        </p>
+                                    </a>
                                 </div>
 
-                                <a href="#">
-                                    <p class="readmore font-mi-bold font18 mt-lg-5 mt-3 fontmb-cond-bold fontmb-little">
-                                        XEM CHI TIẾT ->
-                                    </p>
-                                </a>
                             </div>
                         </div>
                         <div class="car-frame">
@@ -265,13 +272,14 @@
                                     <p class="car-decs font-mi-bold font18 fontmb-cond-bold fontmb-little">
                                         KHỞI ĐẦU XU HƯỚNG MỚI
                                     </p>
+                                    
+                                    <a href="#">
+                                        <p class="readmore font-mi-bold font18 mt-lg-3 mt-3 fontmb-cond-bold fontmb-little">
+                                            XEM CHI TIẾT ->
+                                        </p>
+                                    </a>
                                 </div>
 
-                                <a href="#">
-                                    <p class="readmore font-mi-bold font18 mt-lg-5 mt-3 fontmb-cond-bold fontmb-little">
-                                        XEM CHI TIẾT ->
-                                    </p>
-                                </a>
                             </div>
                         </div>
                         <div class="car-frame">
@@ -287,13 +295,14 @@
                                     <p class="car-decs font-mi-bold font18 fontmb-cond-bold fontmb-little">
                                         HOÀN TOÀN MỚI - ĐẲNG CẤP 4.0
                                     </p>
+                                    
+                                    <a href="#">
+                                        <p class="readmore font-mi-bold font18 mt-lg-3 mt-3 fontmb-cond-bold fontmb-little">
+                                            XEM CHI TIẾT ->
+                                        </p>
+                                    </a>
                                 </div>
 
-                                <a href="#">
-                                    <p class="readmore font-mi-bold font18 mt-lg-5 mt-3 fontmb-cond-bold fontmb-little">
-                                        XEM CHI TIẾT ->
-                                    </p>
-                                </a>
                             </div>
                         </div>
                     </div>
@@ -317,13 +326,14 @@
                                     <p class="car-decs font-mi-bold font18 fontmb-cond-bold fontmb-little">
                                         SANG TRỌNG VÀ TIỆN NGHI
                                     </p>
+                                    
+                                    <a href="#">
+                                        <p class="readmore font-mi-bold font18 mt-lg-3 mt-3 fontmb-cond-bold fontmb-little">
+                                            XEM CHI TIẾT ->
+                                        </p>
+                                    </a>
                                 </div>
 
-                                <a href="#">
-                                    <p class="readmore font-mi-bold font18 mt-lg-5 mt-3 fontmb-cond-bold fontmb-little">
-                                        XEM CHI TIẾT ->
-                                    </p>
-                                </a>
                             </div>
                         </div>
                         <div class="car-frame">
@@ -339,13 +349,14 @@
                                     <p class="car-decs font-mi-bold font18 fontmb-cond-bold fontmb-little">
                                         SANG TRỌNG VÀ TIỆN NGHI
                                     </p>
+                                    <a href="#">
+                                        <p class="readmore font-mi-bold font18 mt-lg-3 mt-3 fontmb-cond-bold fontmb-little">
+                                            XEM CHI TIẾT ->
+                                        </p>
+                                    </a>
                                 </div>
 
-                                <a href="#">
-                                    <p class="readmore font-mi-bold font18 mt-lg-5 mt-3 fontmb-cond-bold fontmb-little">
-                                        XEM CHI TIẾT ->
-                                    </p>
-                                </a>
+                               
                             </div>
                         </div>
                     </div>

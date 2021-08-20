@@ -387,7 +387,7 @@
                                     <div class="name font20">
                                         TẬN TÂM
                                     </div>
-                                    <div class="des">
+                                    <div class="des fontmb-little">
                                         Lorem ipsum dolor sit amet, consectetur.
                                     </div>
                                 </div>
@@ -403,7 +403,7 @@
                                     <div class="name font20">
                                         TRUNG THỰC
                                     </div>
-                                    <div class="des">
+                                    <div class="des fontmb-little">
                                         Lorem ipsum dolor sit amet, consectetur.
                                     </div>
                                 </div>
@@ -419,7 +419,7 @@
                                     <div class="name font20">
                                         TRÍ TUỆ
                                     </div>
-                                    <div class="des">
+                                    <div class="des fontmb-little">
                                         Lorem ipsum dolor sit amet, consectetur.
                                     </div>
                                 </div>
@@ -435,7 +435,7 @@
                                     <div class="name font20">
                                         TỰ TIN
                                     </div>
-                                    <div class="des">
+                                    <div class="des fontmb-little">
                                         Lorem ipsum dolor sit amet, consectetur.
                                     </div>
                                 </div>

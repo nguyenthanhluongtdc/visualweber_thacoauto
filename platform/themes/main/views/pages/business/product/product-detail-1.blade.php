@@ -98,7 +98,7 @@
                                 THIẾT KẾ LAY ĐỘNG CẢM XÚC
                             </p>
                             <a href="#">
-                                <p class="readmore font-mi-bold font18 mt-5 fontmb-cond-bold fontmb-little">
+                                <p class="readmore font-mi-bold font18 mt-3 mt-lg-3 fontmb-cond-bold fontmb-little">
                                     XEM CHI TIẾT ->
                                 </p>
                             </a>

@@ -3,8 +3,8 @@
         
         <img class="brand-list__banner__img" src="{{Theme::asset()->url('images/business/brand-detail/brand-detail-banner.jpg')}}" alt="">
         <div class="brand-list__banner__content">
-            <h2 class="font-cond-bold text-uppercase">tìm các dòng xe kia</h2>
-            <p class="font28 font-pri">Tìm dòng xe và đăng kí lái thử hoặt đặt hàng thanh toán</p>
+            <h2 class= "font60 font-cond-bold text-uppercase">tìm các dòng xe kia</h2>
+            <p class="font20 font-pri">Tìm dòng xe và đăng kí lái thử hoặc đặt hàng thanh toán</p>
         </div>
        
         {{-- <div class="banner-mobile">

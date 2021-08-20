@@ -574,9 +574,9 @@
 }
 
 .pre-order{
-    @include height(60);
-    @include lineHeight(60);
-    @include paddingX(60);
+    @include height(49.5);
+    @include lineHeight(49.5);
+    @include paddingX(49.5);
     margin-right: 0.15vw;
     background-color: $color-primary;
     display: flex;

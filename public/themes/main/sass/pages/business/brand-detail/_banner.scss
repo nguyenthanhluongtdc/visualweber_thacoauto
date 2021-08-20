@@ -19,7 +19,15 @@
            
         }
         &__content{
-            display: none;
+            display: block;
+            position: absolute;
+            z-index: 3;
+            top: 25%;
+            left: 13%;
+            color: #fff;
+            h2{
+                margin-bottom: 0;
+            }
             @media only screen and (max-width: 1080px){
                 display: block;
                 position: absolute;
@@ -28,7 +36,7 @@
                 left: 13%;
                 color: #fff;
                 h2{
-                    font-size: 40px;
+                    font-size: 40px !important;
                 }
             }
            

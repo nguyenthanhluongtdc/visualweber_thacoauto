@@ -1,5 +1,7 @@
 <?php
 
+use Platform\Service\Models\Service;
+
 Route::group(['namespace' => 'Platform\Service\Http\Controllers', 'middleware' => ['web', 'core']], function () {
 
     Route::group(['prefix' => BaseHelper::getAdminPrefix(), 'middleware' => 'auth'], function () {
@@ -14,4 +16,10 @@ Route::group(['namespace' => 'Platform\Service\Http\Controllers', 'middleware' =
         });
     });
 
+    Route::group(apply_filters(BASE_FILTER_GROUP_PUBLIC_ROUTE, []), function () {
+
+        Route::get(\SlugHelper::getPrefix(Service::class, 'dich-vu') . '/{slug}', [
+            'uses' => 'PublicController@getBySlug',
+        ]);
+    });
 });

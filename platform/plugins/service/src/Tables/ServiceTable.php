@@ -55,6 +55,9 @@ class ServiceTable extends TableAbstract
                 }
                 return Html::link(route('service.edit', $item->id), $item->name);
             })
+            ->editColumn('image', function ($item) {
+                return $this->displayThumbnail($item->image);
+            })
             ->editColumn('checkbox', function ($item) {
                 return $this->getCheckbox($item->id);
             })
@@ -78,11 +81,12 @@ class ServiceTable extends TableAbstract
     {
         $query = $this->repository->getModel()
             ->select([
-               'id',
-               'name',
-               'created_at',
-               'status',
-           ]);
+                'id',
+                'name',
+                'image',
+                'created_at',
+                'status',
+            ]);
 
         return $this->applyScopes($query);
     }
@@ -96,6 +100,10 @@ class ServiceTable extends TableAbstract
             'id' => [
                 'title' => trans('core/base::tables.id'),
                 'width' => '20px',
+            ],
+            'image'      => [
+                'title' => trans('core/base::tables.image'),
+                'width' => '70px',
             ],
             'name' => [
                 'title' => trans('core/base::tables.name'),

@@ -11,6 +11,7 @@ use Platform\Base\Supports\Helper;
 use Illuminate\Support\Facades\Event;
 use Platform\Base\Traits\LoadAndPublishDataTrait;
 use Illuminate\Routing\Events\RouteMatched;
+use League\OAuth1\Client\Server\Server;
 
 class ServiceServiceProvider extends ServiceProvider
 {
@@ -27,6 +28,8 @@ class ServiceServiceProvider extends ServiceProvider
 
     public function boot()
     {
+        \SlugHelper::registerModule(Service::class, 'Services');
+        \SlugHelper::setPrefix(Service::class, 'dich-vu');
         $this->setNamespace('plugins/service')
             ->loadAndPublishConfigurations(['permissions'])
             ->loadMigrations()
@@ -35,10 +38,6 @@ class ServiceServiceProvider extends ServiceProvider
             ->loadRoutes(['web']);
 
         Event::listen(RouteMatched::class, function () {
-            if (defined('LANGUAGE_MODULE_SCREEN_NAME')) {
-                \Language::registerModule([Service::class]);
-            }
-
             dashboard_menu()->registerItem([
                 'id'          => 'cms-plugins-service',
                 'priority'    => 5,
@@ -50,7 +49,16 @@ class ServiceServiceProvider extends ServiceProvider
             ]);
         });
 
+        $modules = [Service::class];
+        if (defined('LANGUAGE_MODULE_SCREEN_NAME')) {
+            \Language::registerModule($modules);
+        }
+        $this->app->booted(function () use ($modules) {
+            \SeoHelper::registerModule($modules);
+        });
+
         $this->app->booted(function () {
+
             if (defined('CUSTOM_FIELD_MODULE_SCREEN_NAME')) {
                 \CustomField::registerModule(Service::class)
                     ->registerRule('basic', trans('plugins/service::service.name'), Service::class, function () {

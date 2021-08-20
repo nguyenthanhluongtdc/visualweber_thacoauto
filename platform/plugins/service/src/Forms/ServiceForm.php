@@ -27,7 +27,7 @@ class ServiceForm extends FormAbstract
                     'data-counter' => 120,
                 ],
             ])
-            ->add('description', 'editor', [
+            ->add('description', 'textarea', [
                 'label'      => trans('core/base::forms.description'),
                 'label_attr' => ['class' => 'control-label'],
                 'attr'       => [
@@ -60,6 +60,7 @@ class ServiceForm extends FormAbstract
                     'placeholder'  => trans('plugins/service::service.order_placeholder'),
                     'data-counter' => 120,
                 ],
+                "default_value" => 0
             ])
             ->setBreakFieldPoint('status');
     }

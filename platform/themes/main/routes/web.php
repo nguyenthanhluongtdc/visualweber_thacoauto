@@ -28,10 +28,10 @@ Route::group(['namespace' => 'Theme\Thaco\Http\Controllers', 'middleware' => ['w
     Route::group(apply_filters(BASE_FILTER_GROUP_PUBLIC_ROUTE, []), function () {
 
         //demo web. sẽ xóa khi đổ dữ liệu
-        Route::get('/dich-vu-detail-1', function () {
-            Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
-            return Theme::scope('pages/services/service-detail')->render();
-        });
+        // Route::get('/dich-vu-detail-1', function () {
+        //     Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
+        //     return Theme::scope('pages/services/service-detail')->render();
+        // });
         Route::get('/product-detail-1', function () {
             Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
             return Theme::scope('pages/business/product/product-detail-1')->render();

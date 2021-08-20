@@ -1,0 +1,9 @@
+{
+    "name": "Car",
+    "namespace": "Platform\\Car\\",
+    "provider": "Platform\\Car\\Providers\\CarServiceProvider",
+    "author": "Laravel Developer Team",
+    "url": "https://developers.laravel.com",
+    "version": "1.0",
+    "description": "The description for module car"
+}

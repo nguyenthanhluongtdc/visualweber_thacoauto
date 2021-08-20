@@ -1,13 +1,13 @@
 .section-support-industry-overview {
-    @media only screen and (max-width: 1080px){
-        display: none;       
-               
-   }
     .mechandical-overview {
         
         &__boxfield {
             display: flex;
             flex-wrap: wrap;
+            @media (max-width: 1080px) {
+                margin-left: -15px;
+                margin-right: -15px;
+            }
             
             // height: 215px;
             .item{
@@ -52,13 +52,16 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                width: 15%;
+                max-width: 15%;
+                flex: 0 0 15%;
                 
                 text-align: center;
                 margin-right: 2%;
                 padding: 1%;
                 max-width: 215px;
-                background-color: #f1f1f1;
+                .bg-color { 
+                    background-color: #f1f1f1;
+                }
                 img{
                     margin-bottom: 5%;
                     width: 50%;
@@ -66,6 +69,14 @@
                 .name {
                     margin-top: 6%;
                     line-height: 1.2;
+                }
+
+                @media (max-width: 1080px) {
+                    max-width: 50%;
+                    flex: 0 0 50%;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    margin-right: 0;
                 }
             }
             .boxfield-item:last-child {

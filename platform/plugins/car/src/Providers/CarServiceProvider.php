@@ -11,6 +11,7 @@ use Platform\Base\Supports\Helper;
 use Illuminate\Support\Facades\Event;
 use Platform\Base\Traits\LoadAndPublishDataTrait;
 use Illuminate\Routing\Events\RouteMatched;
+use Platform\Car\Models\Brand;
 
 class CarServiceProvider extends ServiceProvider
 {
@@ -39,6 +40,9 @@ class CarServiceProvider extends ServiceProvider
 
     public function boot()
     {
+        \SlugHelper::registerModule(Brand::class, 'Brands');
+        \SlugHelper::setPrefix(Brand::class, 'thuong-hieu');
+
         $this->setNamespace('plugins/car')
             ->loadAndPublishConfigurations(['permissions'])
             ->loadMigrations()

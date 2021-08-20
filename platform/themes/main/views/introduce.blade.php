@@ -73,18 +73,16 @@
                         <div class="col-left" data-aos="fade-down">
                             <div class="box-main font20">
                                 <div class="symbol">
-                                    <img src="{{Theme::asset()->url('images/introduce/symbol6.png')}}" alt="">
+                                    <img src="{{get_image_url(theme_option('image_manufacturing'))}}" alt="">
                                 </div>
                                 <div class="company-name font17 font-pri-bold fontmb-small">
                                     THACO AUTO
                                 </div>
                                 <div class="name font40 font-pri-bold fontmb-middle">
-                                    sản xuất
+                                    {!! theme_option('name_manufacturing') !!}
                                 </div>
                                 <p class="description fontmb-little">
-                                    THACO là doanh nghiệp hàng đầu và có quy mô lớn nhất tại Việt Nam về lĩnh vực sản
-                                    xuất lắp ráp ô tô, sản xuất linh kiện phụ tùng, lắp ráp ô tô, đến giao nhận vận
-                                    chuyển và phân phối, bán lẻ.
+                                    {!! theme_option('description_manufacturing') !!}
                                 </p>
                             </div>
                         </div>
@@ -114,18 +112,16 @@
                         <div class="col-left" data-aos="fade-right">
                             <div class="box-main font20">
                                 <div class="symbol">
-                                    <img src="{{Theme::asset()->url('images/introduce/symbol5.png')}}" alt="">
+                                    <img src="{{get_image_url(theme_option('image_business'))}}" alt="">
                                 </div>
                                 <div class="company-name font17 font-pri-bold fontmb-small">
                                     THACO AUTO
                                 </div>
                                 <div class="name font40 font-pri-bold fontmb-middle">
-                                    kinh doanh
+                                    {!! theme_option('name_business') !!}
                                 </div>
                                 <p class="description fontmb-little">
-                                    Kinh doanh ô tô với chuỗi giá trị xuyên suốt từ nghiên cứu và phát triển sản phẩm
-                                    đến Sản xuất - Phân phối - Bán lẻ, đáp ứng nhu cầu thị trường trong nước và xuất
-                                    khẩu.
+                                    {!! theme_option('description_business') !!}
                                 </p>
                             </div>
                         </div>

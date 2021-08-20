@@ -15,6 +15,8 @@ class ManufacturingCreateAppManufacturingTable extends Migration
         Schema::create('app_manufacturings', function (Blueprint $table) {
             $table->id();
             $table->string('name', 255);
+            $table->text('description')->nullable();
+            $table->string('image')->nullable();
             $table->string('status', 60)->default('published');
             $table->timestamps();
         });

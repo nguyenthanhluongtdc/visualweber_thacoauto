@@ -49,5 +49,7 @@ class ManufacturingServiceProvider extends ServiceProvider
                 'permissions' => ['manufacturing.index'],
             ]);
         });
+
+        $this->app->register(HookServiceProvider::class);
     }
 }

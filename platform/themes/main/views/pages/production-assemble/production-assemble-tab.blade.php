@@ -29,80 +29,80 @@
                             </div>
                         </div>
                         <div class="tab-pane fade" id="field_tab_content_2" role="tabpanel" aria-labelledby="list-home-list">
-                            <div class="content-right">
-                                <div class="content-right__top">
+                            <div class="content-right ">
+                                <div class="img">
                                     <img src="{{ Theme::asset()->url('images/manufacturing/assemble1.jpg') }}" alt="">
                                 </div>
                                
                                 <div class="content">
-                                    <h3 class="title font24">
-                                        NHÀ MÁY THACOBUS
+                                    <h3 class="title font30">
+                                        NHÀ SẢN GIA CÔNG THÉP
                                     </h3>
-                                    <p class="desc font18 ">Nhà máy Gia công và cung ứng phôi thép được thành lập vào năm 2009 với chức năng sản xuất các sản phẩm vật tư thép, kim loại màu nhằm cung cấp cho thị trường nội địa và xuất khẩu. Nhà máy có diện tích 5ha, tổng vốn đầu tư 201 tỷ đồng, công suất 255.000 tấn thép/năm.</p>
+                                    <p class="desc font15 ">Nhà máy Gia công và cung ứng phôi thép được thành lập vào năm 2009 với chức năng sản xuất các sản phẩm vật tư thép, kim loại màu nhằm cung cấp cho thị trường nội địa và xuất khẩu. Nhà máy có diện tích 5ha, tổng vốn đầu tư 201 tỷ đồng, công suất 255.000 tấn thép/năm.</p>
                                    <div class="read-more font18"><a href="">Xem chi tiết</a></div>
                                 </div>
                                 
                             </div>
                         </div>
                         <div class="tab-pane fade" id="field_tab_content_3" role="tabpanel" aria-labelledby="list-home-list">
-                            <div class="content-right">
-                                <div class="content-right__top">
+                            <div class="content-right ">
+                                <div class="img">
                                     <img src="{{ Theme::asset()->url('images/manufacturing/assemble1.jpg') }}" alt="">
                                 </div>
                                
                                 <div class="content">
-                                    <h3 class="title font24">
-                                        NHÀ MÁY TẢI THACO
+                                    <h3 class="title font30">
+                                        NHÀ SẢN GIA CÔNG THÉP
                                     </h3>
-                                    <p class="desc font18 ">Nhà máy Gia công và cung ứng phôi thép được thành lập vào năm 2009 với chức năng sản xuất các sản phẩm vật tư thép, kim loại màu nhằm cung cấp cho thị trường nội địa và xuất khẩu. Nhà máy có diện tích 5ha, tổng vốn đầu tư 201 tỷ đồng, công suất 255.000 tấn thép/năm.</p>
+                                    <p class="desc font15 ">Nhà máy Gia công và cung ứng phôi thép được thành lập vào năm 2009 với chức năng sản xuất các sản phẩm vật tư thép, kim loại màu nhằm cung cấp cho thị trường nội địa và xuất khẩu. Nhà máy có diện tích 5ha, tổng vốn đầu tư 201 tỷ đồng, công suất 255.000 tấn thép/năm.</p>
                                    <div class="read-more font18"><a href="">Xem chi tiết</a></div>
                                 </div>
                                 
                             </div>
                         </div>
                         <div class="tab-pane fade" id="field_tab_content_4" role="tabpanel" aria-labelledby="list-home-list">
-                            <div class="content-right">
-                                <div class="content-right__top">
+                            <div class="content-right ">
+                                <div class="img">
                                     <img src="{{ Theme::asset()->url('images/manufacturing/assemble1.jpg') }}" alt="">
                                 </div>
                                
                                 <div class="content">
-                                    <h3 class="title font24">
-                                        NHÀ MÁY THACO KIA
+                                    <h3 class="title font30">
+                                        NHÀ SẢN GIA CÔNG THÉP
                                     </h3>
-                                    <p class="desc font18 ">Nhà máy Gia công và cung ứng phôi thép được thành lập vào năm 2009 với chức năng sản xuất các sản phẩm vật tư thép, kim loại màu nhằm cung cấp cho thị trường nội địa và xuất khẩu. Nhà máy có diện tích 5ha, tổng vốn đầu tư 201 tỷ đồng, công suất 255.000 tấn thép/năm.</p>
+                                    <p class="desc font15 ">Nhà máy Gia công và cung ứng phôi thép được thành lập vào năm 2009 với chức năng sản xuất các sản phẩm vật tư thép, kim loại màu nhằm cung cấp cho thị trường nội địa và xuất khẩu. Nhà máy có diện tích 5ha, tổng vốn đầu tư 201 tỷ đồng, công suất 255.000 tấn thép/năm.</p>
                                    <div class="read-more font18"><a href="">Xem chi tiết</a></div>
                                 </div>
                                 
                             </div>
                         </div>
                         <div class="tab-pane fade" id="field_tab_content_5" role="tabpanel" aria-labelledby="list-home-list">
-                            <div class="content-right">
-                                <div class="content-right__top">
+                            <div class="content-right ">
+                                <div class="img">
                                     <img src="{{ Theme::asset()->url('images/manufacturing/assemble1.jpg') }}" alt="">
                                 </div>
                                
                                 <div class="content">
-                                    <h3 class="title font24">
-                                        NHÀ MÁY THACO MAZDA
+                                    <h3 class="title font30">
+                                        NHÀ SẢN GIA CÔNG THÉP
                                     </h3>
-                                    <p class="desc font18 ">Nhà máy Gia công và cung ứng phôi thép được thành lập vào năm 2009 với chức năng sản xuất các sản phẩm vật tư thép, kim loại màu nhằm cung cấp cho thị trường nội địa và xuất khẩu. Nhà máy có diện tích 5ha, tổng vốn đầu tư 201 tỷ đồng, công suất 255.000 tấn thép/năm.</p>
+                                    <p class="desc font15 ">Nhà máy Gia công và cung ứng phôi thép được thành lập vào năm 2009 với chức năng sản xuất các sản phẩm vật tư thép, kim loại màu nhằm cung cấp cho thị trường nội địa và xuất khẩu. Nhà máy có diện tích 5ha, tổng vốn đầu tư 201 tỷ đồng, công suất 255.000 tấn thép/năm.</p>
                                    <div class="read-more font18"><a href="">Xem chi tiết</a></div>
                                 </div>
                                 
                             </div>
                         </div>
                         <div class="tab-pane fade" id="field_tab_content_6" role="tabpanel" aria-labelledby="list-home-list">
-                            <div class="content-right">
-                                <div class="content-right__top">
+                            <div class="content-right ">
+                                <div class="img">
                                     <img src="{{ Theme::asset()->url('images/manufacturing/assemble1.jpg') }}" alt="">
                                 </div>
                                
                                 <div class="content">
-                                    <h3 class="title font24">
-                                        NHÀ MÁY XE CHUYÊN DỤNG
+                                    <h3 class="title font30">
+                                        NHÀ SẢN GIA CÔNG THÉP
                                     </h3>
-                                    <p class="desc font18 ">Nhà máy Gia công và cung ứng phôi thép được thành lập vào năm 2009 với chức năng sản xuất các sản phẩm vật tư thép, kim loại màu nhằm cung cấp cho thị trường nội địa và xuất khẩu. Nhà máy có diện tích 5ha, tổng vốn đầu tư 201 tỷ đồng, công suất 255.000 tấn thép/năm.</p>
+                                    <p class="desc font15 ">Nhà máy Gia công và cung ứng phôi thép được thành lập vào năm 2009 với chức năng sản xuất các sản phẩm vật tư thép, kim loại màu nhằm cung cấp cho thị trường nội địa và xuất khẩu. Nhà máy có diện tích 5ha, tổng vốn đầu tư 201 tỷ đồng, công suất 255.000 tấn thép/năm.</p>
                                    <div class="read-more font18"><a href="">Xem chi tiết</a></div>
                                 </div>
                                 

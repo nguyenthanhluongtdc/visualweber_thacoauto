@@ -1133,6 +1133,9 @@
 
                 .title {
                     @include mobileMarginBottom(30, "+");
+                    a{
+                        color: black;
+                    }
                 }
             }
             

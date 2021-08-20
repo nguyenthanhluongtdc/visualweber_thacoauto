@@ -15,126 +15,53 @@
         <div class="tab-content" id="nav-tabContent">
           <div class="tab-pane fade" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
             <div class="image-gallery-list font-pri">
-                <div class="gallery-item">
-                    <div class="thumbnail">
-                        <a data-fancybox href="https://www.youtube.com/watch?v=6y03pMANB78">
-                            <div class="play"></div>
-                            <img src="{{Theme::asset()->url('images/media/image5.jpg')}}" alt="">
-                        </a>
+                @if (!empty($videoFeatures))
+                    @foreach ($videoFeatures as $post)
+                    <div class="gallery-item">
+                        <div class="thumbnail">
+                            <a data-fancybox data-type="ajax" data-src="{{$post->url}}" data-filter="#gallery" href="javascript:;">
+                                <img src="{{get_image_url($post->image)}}" alt="{{$post->name}}">
+                            </a>
+                        </div>
+                        <div class="content">
+                            <h3 class="title font-pri-bold font30">
+                                <a data-fancybox data-type="ajax" data-src="{{$post->url}}" data-filter="#gallery" href="javascript:;">
+                                    {{$post->name}}
+                                </a>
+                            </h3>
+                            <p class="day fon20">
+                                {{date_format($post->created_at,"d-m-Y")}}
+                            </p>
+                        </div>
                     </div>
-                    <div class="content">
-                        <h3 class="title font-pri-bold font30">
-                            CHI NHÁNH TẢI & BUS THACO ĐỒNG NAI BÀN GIAO 5 XE FUSO ROSA
-                        </h3>
-                        <p class="day fon20">
-                            20-12-2021
-                        </p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="thumbnail">
-                        <a data-fancybox href="https://www.youtube.com/watch?v=6y03pMANB78">
-                            <div class="play"></div>
-                            <img src="{{Theme::asset()->url('images/media/image6.jpg')}}" alt="">
-                        </a>
-                    </div>
-                    <div class="content">
-                        <h3 class="title font-pri-bold font30">
-                            CHI NHÁNH TẢI & BUS THACO ĐỒNG NAI BÀN GIAO 5 XE FUSO ROSA
-                        </h3>
-                        <p class="day fon20">
-                            20-12-2021
-                        </p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="thumbnail">
-                        <a data-fancybox href="https://www.youtube.com/watch?v=6y03pMANB78">
-                            <div class="play"></div>
-                            <img src="{{Theme::asset()->url('images/media/image7.jpg')}}" alt="">
-                        </a>
-                    </div>
-                    <div class="content">
-                        <h3 class="title font-pri-bold font30">
-                            CHI NHÁNH TẢI & BUS THACO ĐỒNG NAI BÀN GIAO 5 XE FUSO ROSA
-                        </h3>
-                        <p class="day fon20">
-                            20-12-2021
-                        </p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="thumbnail">
-                        <a data-fancybox href="https://www.youtube.com/watch?v=6y03pMANB78">
-                            <div class="play"></div>
-                            <img src="{{Theme::asset()->url('images/media/image8.jpg')}}" alt="">
-                        </a>
-                    </div>
-                    <div class="content">
-                        <h3 class="title font-pri-bold font30">
-                            CHI NHÁNH TẢI & BUS THACO ĐỒNG NAI BÀN GIAO 5 XE FUSO ROSA
-                        </h3>
-                        <p class="day fon20">
-                            20-12-2021
-                        </p>
-                    </div>
-                </div>
+                    @endforeach
+                @endif
+                
             </div>
           </div>
           <div class="tab-pane fade show active" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
             <div class="video-gallery-list font-pri">
-                <div class="gallery-item">
-                    <div class="thumbnail">
-                        <img src="{{Theme::asset()->url('images/media/image1.jpg')}}" alt="">
+                @if (!empty($imageFeatures))
+                    @foreach ($imageFeatures as $post)
+                    <div class="gallery-item">
+                        <div class="thumbnail">
+                            <a data-fancybox data-type="ajax" data-src="{{$post->url}}" data-filter="#gallery" href="javascript:;">
+                                <img src="{{get_image_url($post->image)}}" alt="{{$post->name}}">
+                            </a>
+                        </div>
+                        <div class="content">
+                            <h3 class="title font-pri-bold font30">
+                                <a data-fancybox data-type="ajax" data-src="{{$post->url}}" data-filter="#gallery" href="javascript:;">
+                                    {{$post->name}}
+                                </a>
+                            </h3>
+                            <p class="day fon20">
+                                {{date_format($post->created_at,"d-m-Y")}}
+                            </p>
+                        </div>
                     </div>
-                    <div class="content">
-                        <h3 class="title font-pri-bold font30">
-                            CHI NHÁNH TẢI & BUS THACO ĐỒNG NAI BÀN GIAO 5 XE FUSO ROSA
-                        </h3>
-                        <p class="day fon20">
-                            20-12-2021
-                        </p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="thumbnail">
-                        <img src="{{Theme::asset()->url('images/media/image2.jpg')}}" alt="">
-                    </div>
-                    <div class="content">
-                        <h3 class="title font-pri-bold font30">
-                            CHI NHÁNH TẢI & BUS THACO ĐỒNG NAI BÀN GIAO 5 XE FUSO ROSA
-                        </h3>
-                        <p class="day fon20">
-                            20-12-2021
-                        </p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="thumbnail">
-                        <img src="{{Theme::asset()->url('images/media/image3.jpg')}}" alt="">
-                    </div>
-                    <div class="content">
-                        <h3 class="title font-pri-bold font30">
-                            CHI NHÁNH TẢI & BUS THACO ĐỒNG NAI BÀN GIAO 5 XE FUSO ROSA
-                        </h3>
-                        <p class="day fon20">
-                            20-12-2021
-                        </p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="thumbnail">
-                        <img src="{{Theme::asset()->url('images/media/image4.jpg')}}" alt="">
-                    </div>
-                    <div class="content">
-                        <h3 class="title font-pri-bold font30">
-                            CHI NHÁNH TẢI & BUS THACO ĐỒNG NAI BÀN GIAO 5 XE FUSO ROSA
-                        </h3>
-                        <p class="day fon20">
-                            20-12-2021
-                        </p>
-                    </div>
-                </div>
+                    @endforeach
+                @endif
             </div>
           </div>
         </div>

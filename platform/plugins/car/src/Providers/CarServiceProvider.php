@@ -2,15 +2,12 @@
 
 namespace Platform\Car\Providers;
 
-use Platform\Car\Models\Car;
 use Illuminate\Support\ServiceProvider;
-use Platform\Car\Repositories\Caches\CarCacheDecorator;
-use Platform\Car\Repositories\Eloquent\CarRepository;
-use Platform\Car\Repositories\Interfaces\CarInterface;
 use Platform\Base\Supports\Helper;
 use Illuminate\Support\Facades\Event;
 use Platform\Base\Traits\LoadAndPublishDataTrait;
 use Illuminate\Routing\Events\RouteMatched;
+use Platform\Car\Models\Brand;
 
 class CarServiceProvider extends ServiceProvider
 {
@@ -39,6 +36,9 @@ class CarServiceProvider extends ServiceProvider
 
     public function boot()
     {
+        \SlugHelper::registerModule(Brand::class, 'Brands');
+        \SlugHelper::setPrefix(Brand::class, 'thuong-hieu');
+
         $this->setNamespace('plugins/car')
             ->loadAndPublishConfigurations(['permissions'])
             ->loadMigrations()
@@ -47,10 +47,18 @@ class CarServiceProvider extends ServiceProvider
             ->loadRoutes(['web']);
 
         Event::listen(RouteMatched::class, function () {
+            $modules = [
+                \Platform\Car\Models\CarCategory::class,
+                \Platform\Car\Models\Brand::class
+            ];
+
             if (defined('LANGUAGE_MODULE_SCREEN_NAME')) {
-                \Language::registerModule([\Platform\Car\Models\CarCategory::class]);
-                \Language::registerModule([\Platform\Car\Models\Brand::class]);
+                \Language::registerModule($modules);
             }
+
+            $this->app->booted(function () use ($modules) {
+                \SeoHelper::registerModule($modules);
+            });
 
             dashboard_menu()->registerItem([
                 'id'          => 'cms-plugins-car',

@@ -16,7 +16,7 @@ class CarCategoryTable extends TableAbstract
     /**
      * @var bool
      */
-    protected $useDefaultSorting = true;
+    protected $useDefaultSorting = false;
 
     /**
      * @var bool

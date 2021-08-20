@@ -41,10 +41,10 @@ Route::group(['namespace' => 'Theme\Thaco\Http\Controllers', 'middleware' => ['w
             return Theme::scope('pages/business/product/product-detail')->render();
         });
 
-        Route::get('/brand-detail', function () {
-            Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
-            return Theme::scope('pages/business/brand-detail/index')->render();
-        });
+        // Route::get('/brand-detail', function () {
+        //     Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
+        //     return Theme::scope('pages/business/brand-detail/index')->render();
+        // });
 
         Route::get('/car-selection', function () {
             Theme::asset()->usePath()->add('reset_css', 'css/reset.css');

@@ -361,7 +361,8 @@
 
 
     @php
-        $criteria = json_decode(theme_option('repeater_criteria'))??[];
+        
+        $criteria = has_field($page, 'repeater_module_tieuchi_introduce');
         $count = count($criteria);
     @endphp
     <div class="section-criteria-wrapper font20 desktop">
@@ -370,124 +371,61 @@
                 <div class="section-criteria__header">
                     <h2 class="section-criteria__header__title fontmb-large font60 font-pri-bold"
                         data-aos="fade-right">
-                        Tiêu chí 8T
+                        @if(has_field($page, 'title_module_tieuchi_introduce'))
+                            {!! has_field($page, 'title_module_tieuchi_introduce') !!}
+                        @endif
                     </h2>
-                    <p class="section-criteria__headers__des" data-aos="fade-right">
-                        “Tiêu chí 8 chữ T” là những tiêu chí vàng đóng vai trò cốt lõi trong Văn hóa Thaco, hỗ trợ cho
-                        quá trình rèn luyện, tự kỷ luật và hoàn thiện bản thân của mỗi con người Thaco. Đây được xem như
-                        là những tiêu chí mà mỗi CB.CNV phấn đấu đạt đến để góp phần tạo nên thương hiệu Thaco tiêu biểu
-                        cho nền công nghiệp ô tô của đất nước.
-                    </p>
+                    @if(has_field($page, 'description_module_tieuchi_introduce'))
+                        <p class="section-criteria__headers__des" data-aos="fade-right">
+                            {!! has_field($page, 'description_module_tieuchi_introduce') !!}
+                        </p>
+                    @endif
                 </div>
 
                 <div class="section-criteria__content justify-content-end row-first">
-<<<<<<< HEAD
                    
-                    @for ($i = 0; $i < $count; $i++)
+                    @foreach ($criteria as $row)
                         <div class="section-criteria__content__box" data-aos="fade-up">
                             <div class="box-center-bark">
-                                <img src="{{get_image_url($criteria[$i][0]->value)}}" alt="">
+                                <img src="{{get_image_url(has_sub_field($row, 'image'))}}" alt="">
                                 <div class="defect-shape">
                                     <div class="box-center">
-                                        <img src="{{get_image_url($criteria[$i][1]->value)}}" alt="">
+                                        <img src="{{get_image_url(has_sub_field($row, 'symbol'))}}" alt="">
                                         <div class="name font20">
-                                            {!! $criteria[$i][2]->value !!}
+                                            {!! has_sub_field($row, 'title') !!}
                                         </div>
                                         <div class="des">
-                                            {!! $criteria[$i][3]->value !!}
+                                            {!! has_sub_field($row, 'description') !!}
                                         </div>
-=======
-                    <div class="section-criteria__content__box" data-aos="fade-up">
-                        <div class="box-center-bark">
-                            <img src="{{Theme::asset()->url('images/introduce/shap1.png')}}" alt="">
-                            <div class="defect-shape">
-                                <div class="box-center">
-                                    <img src="{{Theme::asset()->url('images/introduce/love1.png')}}" alt="">
-                                    <div class="name font20">
-                                        TẬN TÂM
-                                    </div>
-                                    <div class="des fontmb-little">
-                                        Lorem ipsum dolor sit amet, consectetur.
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="section-criteria__content__box" data-aos="fade-up" data-aos-delay="300">
-                        <div class="box-center-bark">
-                            <img src="{{Theme::asset()->url('images/introduce/shape2.png')}}" alt="">
-                            <div class="defect-shape">
-                                <div class="box-center">
-                                    <img src="{{Theme::asset()->url('images/introduce/icon2.png')}}" alt="">
-                                    <div class="name font20">
-                                        TRUNG THỰC
-                                    </div>
-                                    <div class="des fontmb-little">
-                                        Lorem ipsum dolor sit amet, consectetur.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section-criteria__content__box" data-aos="fade-up" data-aos-delay="600">
-                        <div class="box-center-bark">
-                            <img src="{{Theme::asset()->url('images/introduce/shape3.png')}}" alt="">
-                            <div class="defect-shape">
-                                <div class="box-center">
-                                    <img src="{{Theme::asset()->url('images/introduce/icon6.png')}}" alt="">
-                                    <div class="name font20">
-                                        TRÍ TUỆ
-                                    </div>
-                                    <div class="des fontmb-little">
-                                        Lorem ipsum dolor sit amet, consectetur.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section-criteria__content__box" data-aos="fade-up" data-aos-delay="900">
-                        <div class="box-center-bark">
-                            <img src="{{Theme::asset()->url('images/introduce/shape4.png')}}" alt="">
-                            <div class="defect-shape">
-                                <div class="box-center">
-                                    <img src="{{Theme::asset()->url('images/introduce/icon8.png')}}" alt="">
-                                    <div class="name font20">
-                                        TỰ TIN
-                                    </div>
-                                    <div class="des fontmb-little">
-                                        Lorem ipsum dolor sit amet, consectetur.
->>>>>>> 721c1875d6c0304917ef7a6853f174aa0ce08f9b
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        @break($i == 3)
-                    @endfor
+                        @break($loop->index == 3)
+                    @endforeach
                 </div>
 
                 @if($count > 4)
-                <div class="section-criteria__content justify-content-start">
-                     
+                    <div class="section-criteria__content justify-content-start">
                         @for ($i = 4; $i < $count; $i++)
                             <div class="section-criteria__content__box" data-aos="fade-up">
                                 <div class="box-center-bark">
-                                    <img src="{{get_image_url($criteria[$i][0]->value)}}" alt="">
+                                    <img src="{{get_image_url(has_sub_field($criteria[$i], 'image'))}}" alt="">
                                     <div class="defect-shape">
                                         <div class="box-center">
-                                            <img src="{{get_image_url($criteria[$i][1]->value)}}" alt="">
+                                            <img src="{{get_image_url(has_sub_field($criteria[$i], 'symbol'))}}" alt="">
                                             <div class="name font20">
-                                                {!! $criteria[$i][2]->value !!}
+                                                {!! has_sub_field($criteria[$i], 'title') !!}
                                             </div>
                                             <div class="des">
-                                                {!! $criteria[$i][3]->value !!}
+                                                {!! has_sub_field($criteria[$i], 'description') !!}
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         @endfor
-                </div>
+                    </div>
                 @endif
             </div>
         </div>
@@ -497,33 +435,32 @@
         <div class="container-remake">
             <div class="section-criteria__header">
                 <h2 class="section-criteria__header__title fontmb-large font60 font-pri-bold"
-                    data-aos="fade-right">
-                    Tiêu chí 8T
+                data-aos="fade-right">
+                    @if(has_field($page, 'title_module_tieuchi_introduce'))
+                        {!! has_field($page, 'title_module_tieuchi_introduce') !!}
+                    @endif
                 </h2>
-                <p class="section-criteria__headers__des" data-aos="fade-right">
-                    “Tiêu chí 8 chữ T” là những tiêu chí vàng đóng vai trò cốt lõi trong Văn hóa Thaco, hỗ trợ cho
-                    quá trình rèn luyện, tự kỷ luật và hoàn thiện bản thân của mỗi con người Thaco. Đây được xem như
-                    là những tiêu chí mà mỗi CB.CNV phấn đấu đạt đến để góp phần tạo nên thương hiệu Thaco tiêu biểu
-                    cho nền công nghiệp ô tô của đất nước.
-                </p>
+                @if(has_field($page, 'description_module_tieuchi_introduce'))
+                    <p class="section-criteria__headers__des" data-aos="fade-right">
+                        {!! has_field($page, 'description_module_tieuchi_introduce') !!}
+                    </p>
+                @endif
             </div>
             <div class="section-criteria-swiper">
                 <div class="swiper-container mySwiper">
                     <div class="swiper-wrapper">
-                        @foreach($criteria as $item)
-                            <div class="swiper-slide">
-                                <div class="section-criteria__content__box" data-aos="fade-up">
-                                    <div class="box-center-bark">
-                                        <img src="{{get_image_url($item[0]->value)}}" alt="">
-                                        <div class="defect-shape">
-                                            <div class="box-center">
-                                                <img src="{{get_image_url($item[1]->value)}}" alt="">
-                                                <div class="name mb-3 mt-4 fontmb-medium ">
-                                                    {!! $item[2]->value !!}
-                                                </div>
-                                                <div class="des">
-                                                    {!! $item[3]->value !!}
-                                                </div>
+                        @foreach($criteria as $row)
+                            <div class="section-criteria__content__box" data-aos="fade-up">
+                                <div class="box-center-bark">
+                                    <img src="{{get_image_url(has_sub_field($row, 'image'))}}" alt="">
+                                    <div class="defect-shape">
+                                        <div class="box-center">
+                                            <img src="{{get_image_url(has_sub_field($row, 'symbol'))}}" alt="">
+                                            <div class="name font20">
+                                                {!! has_sub_field($row, 'title') !!}
+                                            </div>
+                                            <div class="des">
+                                                {!! has_sub_field($row, 'description') !!}
                                             </div>
                                         </div>
                                     </div>

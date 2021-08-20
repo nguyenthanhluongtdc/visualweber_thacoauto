@@ -6,10 +6,11 @@
                 <span class="font30"> những con số </span> <br>
                 <span class="font60"> NỔI BẬT </span>
             </h2>
-
+            @if(has_field($page, 'date_banner_research_development'))
             <div class="sub-title text-white font15">
-                Dữ liệu đến ngày 5/1/2021
+                Dữ liệu đến ngày   {!! has_field($page,'date_banner_research_development') !!}
             </div>
+            @endif
         </div>
 
         <ul class="column-right ">
@@ -20,10 +21,12 @@
                 </div>
 
                 <div class="description counter">
-                    <strong class="number counter-value"data-count="651" data-speed="500">
+                    @if(has_field($page, 'client_banner_research_development'))
+                    <strong class="number counter-value"data-count="{!! has_field($page,'client_banner_research_development') !!}" data-speed="500">
                         0
                     </strong>
-
+                    @endif
+                    
                     <span class="text">
                         Khách hàng
                     </span>
@@ -37,10 +40,11 @@
                 </div>
 
                 <div class="description counter">
-                    <strong class="number counter-value"data-count="20" data-speed="500">
+                    @if(has_field($page, 'contry_banner_research_development'))
+                    <strong class="number counter-value" data-count="{!! has_field($page,'contry_banner_research_development') !!}" data-speed="500">
                         0
                     </strong>
-
+                    @endif
                     <span class="text">
                         Quốc gia xuất khẩu
                     </span>
@@ -54,10 +58,11 @@
                 </div>
 
                 <div class="description counter">
-                    <strong class="number counter-value"data-count="1000" data-speed="500">
+                    @if(has_field($page, 'staff_banner_research_development'))
+                    <strong class="number counter-value"data-count="{!! has_field($page,'staff_banner_research_development') !!}" data-speed="500">
                         0
                     </strong>
-
+                    @endif
                     <span class="text">
                         Nhân công
                     </span>
@@ -71,10 +76,11 @@
                 </div>
 
                 <div class="description counter">
-                    <strong class="number counter-value"data-count="12" data-speed="500">
+                    @if(has_field($page, 'factory_banner_research_development'))
+                    <strong class="number counter-value"data-count="{!! has_field($page,'factory_banner_research_development') !!}" data-speed="500">
                         0
                     </strong>
-
+                    @endif
                     <span class="text">
                         Nhà máy
                     </span>
@@ -95,9 +101,11 @@
                 <span class="text2"> NỔI BẬT </span>
             </h2>
 
+            @if(has_field($page, 'date_banner_research_development'))
             <div class="sub-title text-white font15">
-                Dữ liệu đến ngày 5/1/2021
+                Dữ liệu đến ngày   {!! has_field($page,'date_banner_research_development') !!}
             </div>
+            @endif
         </div>
 
         <ul class="column-right col-4">
@@ -108,9 +116,11 @@
                 </div>
 
                 <div class="description counter">
-                    <strong class="number counter-value"data-count="651" data-speed="500">
+                    @if(has_field($page, 'client_banner_research_development'))
+                    <strong class="number counter-value"data-count="{!! has_field($page,'client_banner_research_development') !!}" data-speed="500">
                         0
                     </strong>
+                    @endif
 
                     <span class="text">
                         Khách hàng
@@ -125,10 +135,11 @@
                 </div>
 
                 <div class="description counter">
-                    <strong class="number counter-value"data-count="20" data-speed="500">
+                    @if(has_field($page, 'contry_banner_research_development'))
+                    <strong class="number counter-value" data-count="{!! has_field($page,'contry_banner_research_development') !!}" data-speed="500">
                         0
                     </strong>
-
+                    @endif
                     <span class="text">
                         Quốc gia xuất khẩu
                     </span>
@@ -142,10 +153,11 @@
                 </div>
 
                 <div class="description counter">
-                    <strong class="number counter-value"data-count="1000" data-speed="500">
+                    @if(has_field($page, 'staff_banner_research_development'))
+                    <strong class="number counter-value"data-count="{!! has_field($page,'staff_banner_research_development') !!}" data-speed="500">
                         0
                     </strong>
-
+                    @endif
                     <span class="text">
                         Nhân công
                     </span>
@@ -159,10 +171,11 @@
                 </div>
 
                 <div class="description counter">
-                    <strong class="number counter-value"data-count="12" data-speed="500">
+                    @if(has_field($page, 'factory_banner_research_development'))
+                    <strong class="number counter-value"data-count="{!! has_field($page,'factory_banner_research_development') !!}" data-speed="500">
                         0
                     </strong>
-
+                    @endif
                     <span class="text">
                         Nhà máy
                     </span>

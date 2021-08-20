@@ -506,7 +506,7 @@
             
             .select-button{
                 width: 100%;
-                border: 0px solid $color-primary;
+                border: 2px solid $color-primary;
                 background-color: $color-primary;
                 color: white;
                 padding: 2.5% 0;
@@ -519,10 +519,8 @@
                     color: white;
                 }
                 &:hover{
-                    border: 2px solid $color-primary;
                     color: $color-primary;
                     background-color: #f6f6f6;
-                    padding: 2.1% 0;
                     a{
                         color: $color-primary;
                     }

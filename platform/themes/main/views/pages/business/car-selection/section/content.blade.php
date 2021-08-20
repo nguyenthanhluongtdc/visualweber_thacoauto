@@ -26,7 +26,7 @@
             <div class="car-selection-content__right  col-sm-12 col-md-12">
                 <div class="car-version">
                     <div id="car-version-select" class="car-version__select font15 font-pri">
-                        <h3 >Chọn phiên bản xe</h3>
+                        <h3 class="font15 font-pri">Chọn phiên bản xe</h3>
                         <i class="fas fa-chevron-down font12"></i>
                     </div>
                     

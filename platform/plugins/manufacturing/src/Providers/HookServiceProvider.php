@@ -1,6 +1,6 @@
 <?php
 
-namespace Platform\ProjectCategories\Providers;
+namespace Platform\Manufacturing\Providers;
 
 use Platform\Base\Enums\BaseStatusEnum;
 use Illuminate\Support\ServiceProvider;

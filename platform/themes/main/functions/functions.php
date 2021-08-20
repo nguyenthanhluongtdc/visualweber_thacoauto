@@ -39,6 +39,7 @@ register_page_template([
 ]);
 
 Menu::addMenuLocation('menu-tabs-support-industry', 'Tabs - công nghiệp hỗ trợ');
+Menu::addMenuLocation('menu-tabs-production-assembly', 'Tabs - Tabs - sản xuất lắp ráp');
 
 register_sidebar([
     'id'          => 'top_sidebar',

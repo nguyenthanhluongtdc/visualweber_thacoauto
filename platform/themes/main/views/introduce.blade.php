@@ -351,7 +351,6 @@
                         văn hóa
                     </h2>
                     @if(has_field($page, 'image_module_behave_introduce'))
-                        {!! has_field($page, 'image_module_behave_introduce') !!}
                         <img src="{{get_image_url(has_field($page, 'image_module_behave_introduce'))}}" alt="">
                     @endif
                 </div>

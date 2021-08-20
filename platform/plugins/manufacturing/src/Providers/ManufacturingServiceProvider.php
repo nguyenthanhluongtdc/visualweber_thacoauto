@@ -35,9 +35,9 @@ class ManufacturingServiceProvider extends ServiceProvider
             ->loadRoutes(['web']);
 
         Event::listen(RouteMatched::class, function () {
-            // if (defined('LANGUAGE_MODULE_SCREEN_NAME')) {
-            //    \Language::registerModule([Manufacturing::class]);
-            // }
+            if (defined('LANGUAGE_MODULE_SCREEN_NAME')) {
+               \Language::registerModule([Manufacturing::class]);
+            }
 
             dashboard_menu()->registerItem([
                 'id'          => 'cms-plugins-manufacturing',
@@ -51,5 +51,6 @@ class ManufacturingServiceProvider extends ServiceProvider
         });
 
         $this->app->register(HookServiceProvider::class);
+        \SlugHelper::registerModule(Manufacturing::class, 'Manufacturing');
     }
 }

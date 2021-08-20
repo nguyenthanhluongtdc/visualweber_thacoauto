@@ -38,6 +38,8 @@ register_page_template([
     'distribution-system' => 'Distribution system'
 ]);
 
+Menu::addMenuLocation('menu-tabs-support-industry', 'Tabs - công nghiệp hỗ trợ');
+
 register_sidebar([
     'id'          => 'top_sidebar',
     'name'        => __('Top sidebar'),

@@ -307,6 +307,8 @@
                                     left: 0;
                                     height: 45%;
                                     width: 70%;
+                                    max-width: 15px;
+                                    max-height: 15px;
                                     border:0.5px solid #ccc;
                                     background-color: #eee;
                                     overflow: hidden;
@@ -354,7 +356,7 @@
             }
             .select-button{
                 width: 100%;
-                border: 0px solid $color-primary;
+                border: 2px solid $color-primary;
                 background-color: $color-primary;
                 color: white;
                 padding: 2.5% 0;
@@ -383,7 +385,6 @@
                     border: 2px solid $color-primary;
                     color: $color-primary;
                     background-color: #f6f6f6;
-                    padding: 2.1% 0;
                     a{
                         color: $color-primary;
                     }

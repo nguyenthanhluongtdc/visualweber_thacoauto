@@ -22,3 +22,10 @@ Route::group(['namespace' => 'Platform\Car\Http\Controllers', 'middleware' => ['
         });
     });
 });
+Route::group(['namespace' => 'Platform\Car\Http\Controllers', 'middleware' => ['web']], function () {
+    Route::group(apply_filters(BASE_FILTER_GROUP_PUBLIC_ROUTE, []), function () {
+        Route::get(\SlugHelper::getPrefix(Service::class, 'thuong-hieu') . '/{slug}', [
+            'uses' => 'PublicController@getBrandBySlug',
+        ]);
+    });
+});

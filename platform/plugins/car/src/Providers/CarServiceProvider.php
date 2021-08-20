@@ -15,9 +15,11 @@ class CarServiceProvider extends ServiceProvider
 
     public function register()
     {
-        // $this->app->bind(CarInterface::class, function () {
-        //     return new CarCacheDecorator(new CarRepository(new Car));
-        // });
+        $this->app->bind(\Platform\Car\Repositories\Interfaces\CarLineInterface::class, function () {
+            return new \Platform\Car\Repositories\Caches\CarLineCacheDecorator(
+                new \Platform\Car\Repositories\Eloquent\CarLineRepository(new \Platform\Car\Models\CarLine)
+            );
+        });
 
         $this->app->bind(\Platform\Car\Repositories\Interfaces\CarCategoryInterface::class, function () {
             return new \Platform\Car\Repositories\Caches\CarCategoryCacheDecorator(
@@ -49,7 +51,8 @@ class CarServiceProvider extends ServiceProvider
         Event::listen(RouteMatched::class, function () {
             $modules = [
                 \Platform\Car\Models\CarCategory::class,
-                \Platform\Car\Models\Brand::class
+                \Platform\Car\Models\Brand::class,
+                \Platform\Car\Models\CarLine::class
             ];
 
             if (defined('LANGUAGE_MODULE_SCREEN_NAME')) {
@@ -88,6 +91,16 @@ class CarServiceProvider extends ServiceProvider
                 'icon'        => null,
                 'url'         => route('brand.index'),
                 'permissions' => ['brand.index'],
+            ]);
+
+            dashboard_menu()->registerItem([
+                'id'          => 'cms-plugins-car-line',
+                'priority'    => 0,
+                'parent_id'   => 'cms-plugins-car',
+                'name'        => 'plugins/car::car-line.name',
+                'icon'        => null,
+                'url'         => route('car-line.index'),
+                'permissions' => ['car-line.index'],
             ]);
         });
     }

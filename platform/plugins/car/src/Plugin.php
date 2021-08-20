@@ -11,5 +11,6 @@ class Plugin extends PluginOperationAbstract
     {
         Schema::dropIfExists('app_car_categories');
         Schema::dropIfExists('app_brands');
+        Schema::dropIfExists('app_car_lines');
     }
 }

@@ -39,4 +39,23 @@ return [
         'flag'        => 'brand.destroy',
         'parent_flag' => 'brand.index',
     ],
+    [
+        'name' => 'Car lines',
+        'flag' => 'car-line.index',
+    ],
+    [
+        'name'        => 'Create',
+        'flag'        => 'car-line.create',
+        'parent_flag' => 'car-line.index',
+    ],
+    [
+        'name'        => 'Edit',
+        'flag'        => 'car-line.edit',
+        'parent_flag' => 'car-line.index',
+    ],
+    [
+        'name'        => 'Delete',
+        'flag'        => 'car-line.destroy',
+        'parent_flag' => 'car-line.index',
+    ],
 ];

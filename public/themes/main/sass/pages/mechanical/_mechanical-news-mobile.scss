@@ -69,29 +69,31 @@
                                 display: flex;
                                 flex-wrap: wrap;
                                 align-content: center;
-                                width: 20%;
-                                height: 28%;
                                 position: absolute; 
                                 padding: 30px 0;
-                                @media only screen and (max-width: 992px){
-                                    width: 20%;
-                                    height: 25%;
-                                }
-                                @media only screen and (max-width: 768px){
-                                    width: 18%;
-                                    height: 25%;
-                                }
+                                // @media only screen and (max-width: 992px){
+                                //     width: 20%;
+                                //     height: 25%;
+                                // }
+                                // @media only screen and (max-width: 768px){
+                                //     width: 18%;
+                                //     height: 25%;
+                                // }
                                 
-                                @media only screen and (max-width: 600px){
-                                    width: 22%;
-                                    height: 25%;
-                                }
-                                @media only screen and (max-width: 400px){
-                                    width: 20%;
-                                    height: 23%;
-                                }
+                                // @media only screen and (max-width: 600px){
+                                //     width: 22%;
+                                //     height: 25%;
+                                // }
+                                // @media only screen and (max-width: 400px){
+                                //     width: 20%;
+                                //     height: 23%;
+                                // }
                                 // @include width(200);
                                 // @include height(196);
+
+                                @include mobileWidth(143);
+                                @include mobileHeight(143);
+
                                 >div {
                                     flex: 0 0 100%;
                                     max-width: 100%;

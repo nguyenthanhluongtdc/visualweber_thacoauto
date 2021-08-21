@@ -7,7 +7,7 @@
     @if($count > 6)
         <div class="tab col-2 item-right">
             @foreach($menu_nodes as $item)
-                <button class="tablink font25 text-uppercase fontmb-medium" id-name="{{Str::Slug($item->name, '')}}"
+                <button class="tablink font25 text-uppercase fontmb-medium" id-name="{{Str::Slug($item->name, '_')}}"
                 >
                 {!! $item->name !!}
                 </button>
@@ -18,7 +18,7 @@
         @else 
         <div class="tab col-3 item-right">
             @foreach($menu_nodes as $item)
-                <button class="tablink font25 text-uppercase fontmb-medium" id-name="{{Str::Slug($item->name, '')}}"
+                <button class="tablink font25 text-uppercase fontmb-medium" id-name="{{Str::Slug($item->name, '_')}}"
                 >
                 {!! $item->name !!}
                 </button>
@@ -31,7 +31,7 @@
             @php 
                 $manufacturing = get_manufacturing_by_id($item->reference_id);
             @endphp
-            <div id="{{Str::Slug($item->name, '')}}" class="tabcontents">
+            <div id="{{Str::Slug($item->name, '_')}}" class="tabcontents">
                 <img src="{{ Storage::disk('public')->exists($manufacturing->image) ? get_image_url($manufacturing->image) : RvMedia::getDefaultImage()}}" alt=""
                     class="mb-2">
                 <div class="content-bottom p-2">
@@ -41,7 +41,7 @@
                     <p class="font-pri font15 mb-2 fontmb-little">
                         {!! $manufacturing->description !!}
                     </p>
-                    <div class="read-more font18"><a href="{{$manufacturing->url}}">Xem chi tiết</a></div>
+                    <div class="read-more font18"><a href="{{$manufacturing->url}}"> {!! __('Read more') !!} </a></div>
                 </div>
             </div>
         @endforeach
@@ -50,7 +50,7 @@
     @if($count > 6)
         <div class="tab col-2 item-left">
             @for($i = ceil(count($menu_nodes)/2); $i < count($menu_nodes); $i++ )
-                <button class="font25 text-uppercase tablink fontmb-medium" id-name="{{Str::Slug($menu_nodes[$i]->name, '')}}">
+                <button class="font25 text-uppercase tablink fontmb-medium" id-name="{{Str::Slug($menu_nodes[$i]->name, '_')}}">
                     {!! $menu_nodes[$i]->name !!}
                 </button>
             @endfor

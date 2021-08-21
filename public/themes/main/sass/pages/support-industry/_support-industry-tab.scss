@@ -8,7 +8,9 @@
         .mechanical-tab__content{
 
             @media (min-width: 1081px) {
-                padding: 0;
+                .row {
+                    padding: 0;
+                }
             }
             
             @media only screen and (max-width: 1080px){
@@ -70,7 +72,7 @@
                             max-width: 50%;
                         }
 
-                        @include mobilePaddingLeft(16);
+                        //@include mobilePaddingLeft(16);
                         // @media (max-width: 1080px) {
                         //     padding-right: 0;
                         // }

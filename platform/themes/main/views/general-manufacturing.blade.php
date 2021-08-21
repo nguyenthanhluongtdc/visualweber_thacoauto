@@ -1,4 +1,4 @@
-<section class="general-manufacturing">
+<section class="general-manufacturing" style="overflow-x: hidden;">
     <div class="container-remake"> 
         @if(has_field($page, 'repeater_module_classify_manufacturing'))
             @foreach(has_field($page, 'repeater_module_classify_manufacturing') as $row)

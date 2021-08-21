@@ -17,7 +17,7 @@
                     @foreach(has_field($page, 'repeater_module_overview_sindustry') as $row)
                         <div class="boxfield-item">
                             <div class="bg-color h-100 w-100">
-                                <img src="{{ has_sub_field($row, 'image') }}" alt="{!! has_sub_field($row, 'name') !!}">
+                                <img src="{{ has_sub_field($row, 'symbol') }}" alt="{!! has_sub_field($row, 'name') !!}">
                                 <p class="font24 font-pri-bold name"> {!! has_sub_field($row, 'name') !!} </p>
                             </div>
                         </div>

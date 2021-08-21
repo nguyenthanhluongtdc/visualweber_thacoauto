@@ -1375,6 +1375,13 @@
         position: absolute;
         right: 105%;
       }
+
+      @include maxWidth(1080) {
+        .owl-next,
+        .owl-prev {
+          display: none;
+        }
+      }
     }
   }
 }

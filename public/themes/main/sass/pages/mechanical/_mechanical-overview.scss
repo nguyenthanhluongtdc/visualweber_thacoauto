@@ -119,12 +119,15 @@
                     height: auto;
                     margin-bottom: 5%;
                     background-color: #f1f1f1;
-                    
-                    img{
-                        margin-top: 10%;
-                        margin-bottom: 5%;
-                        width: 50%;
+                    .content{
+                        .center{
+                            img{
+                               
+                                width: 80%;
+                            }
+                        }
                     }
+                   
                     .name {
                         margin-top: 6%;
                         line-height: 1.2;

@@ -3,7 +3,7 @@
     <div class="page-pagination">
         <ul class="pagination news font-pri-bold">
                {{-- Previous Page Link --}}
-            @if ($paginator->onFirstPage())
+            {{-- @if ($paginator->onFirstPage())
                 <li class="disabled" aria-disabled="true" aria-label="@lang('pagination.previous')">
                     <span aria-hidden="true"> < </span>
                 </li>
@@ -11,7 +11,7 @@
                 <li>
                     <a href="{{ $paginator->previousPageUrl() }}" rel="prev" aria-label="@lang('pagination.previous')"> < </a>
                 </li>
-            @endif
+            @endif --}}
 
             {{-- Pagination Elements --}}
             @foreach ($elements as $element)
@@ -42,7 +42,12 @@
                     <span aria-hidden="true"> > </span>
                 </li>
             @endif
-            <li class="color">>></li>
+
+            @if($paginator->lastPage() == $paginator->currentPage())
+                <li class="active"> <span>>></span> </li>
+            @else 
+                <li class="color"> <a href="{{$elements[0][$paginator->lastPage()]}}"> >> </a> </li>
+            @endif
         </ul>
     </div>
 @endif

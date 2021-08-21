@@ -26,7 +26,7 @@
         </div>
     @endif
 
-    <div class="{{$count>6?'col-6':'col-7'}} item-top p-0">
+    <div class="{{$count>6?'col-6':'col-7'}} item-top">
         @foreach($menu_nodes as $item)
             @php 
                 $manufacturing = get_manufacturing_by_id($item->reference_id);

@@ -38,8 +38,9 @@ register_page_template([
     'distribution-system' => 'Distribution system'
 ]);
 
-Menu::addMenuLocation('menu-tabs-support-industry', 'Tabs - công nghiệp hỗ trợ');
-Menu::addMenuLocation('menu-tabs-production-assembly', 'Tabs - Tabs - sản xuất lắp ráp');
+Menu::addMenuLocation('menu-tabs-support-industry', 'Tabs - Công nghiệp hỗ trợ');
+Menu::addMenuLocation('menu-tabs-production-assembly', 'Tabs - Tabs - Sản xuất lắp ráp');
+Menu::addMenuLocation('menu-tabs-mechanical', 'Tabs - Tabs - Cơ khí');
 
 register_sidebar([
     'id'          => 'top_sidebar',

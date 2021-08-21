@@ -24,7 +24,7 @@
 
                             <div class="sub--right">
                                 <a href="{{$post->url}}" title="{!! $post->name !!}">
-                                    <img width="" height="" src="{{get_image_url($post->image)}}"
+                                    <img width="" height="" src="{{Storage::disk('public')->exists($post->image) ? get_image_url($post->image) : RvMedia::getDefaultImage()}}"
                                     alt="" />
                                 </a>
                             </div>

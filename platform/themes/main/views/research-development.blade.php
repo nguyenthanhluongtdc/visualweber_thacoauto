@@ -7,7 +7,7 @@
                     'intro_module_research_development') !!}  </h1>
                 @endif
                 @if(has_field($page, 'description_module_research_development'))
-                <p class="rd-production__content font20 font-pri fontmb-little"> {!! has_field($page,
+                <p class="rd-production__content font20 font-pri  fontmb-small"> {!! has_field($page,
                     'description_module_research_development') !!}  
                 </p>
                 @endif
@@ -37,7 +37,7 @@
                     </ul>
                     @if(has_field($page, 'repeater_bottom_research_development'))
                         @foreach(has_field($page, 'repeater_bottom_research_development') as $item)
-                            <div class="fontmb-little">
+                            <div class=" fontmb-small">
                                 <p>
                                     {!! has_sub_field($item, 'content_bottom_research_development') ? has_sub_field($item, 'content_bottom_research_development') : '' !!}
                                 </p>
@@ -92,8 +92,11 @@
                             <div class="top">
                                 <img width="" height="" src="{{get_image_url(has_sub_field($item,'image_news_research_development'))}}" alt="" />
                             </div>
-                            <div class="bottom  fontmb-little">
-                                <p class="font-pri"> {!! has_sub_field($item, 'description_news_research_development') ? has_sub_field($item, 'description_news_research_development') : '' !!}</p>
+                            <div class="bottom">
+                                <div class="fontmb-small font-pri">
+                                    <p> {!! has_sub_field($item, 'description_news_research_development') ? has_sub_field($item, 'description_news_research_development') : '' !!}</p>
+                                </div>
+                            
                             </div>
                         </div>
                     @endforeach

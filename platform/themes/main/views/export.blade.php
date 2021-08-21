@@ -6,7 +6,7 @@
                 <h1 class="section-intro__title font-pri-bold font40 fontmb-large text-uppercase">{!! has_field($page,'intro_module_export') !!}   </h1>
                 @endif
                 @if(has_field($page, 'description_module_export'))
-                <p class="rd-production__content font20 fontmb-little font-pri">
+                <p class="rd-production__content font20 fontmb-small font-pri">
                     {!! has_field($page,'description_module_export') !!} 
                 </p>
                 @endif
@@ -31,7 +31,7 @@
                 @foreach(has_field($page, 'repeater_main_project_module_export') as $item)
                 <div class="swiper-slide">
                     <img width="" height="" src="{{get_image_url(has_sub_field($item,'image'))}}" alt="" class="image"/>
-                        <div class="text text-uppercase fontmb-medium font-pri-bold mt-4">{!! has_sub_field($item, 'description') ? has_sub_field($item, 'description') : '' !!}</div>
+                        <div class="text text-uppercase fontmb-middle font-pri-bold my-3">{!! has_sub_field($item, 'description') ? has_sub_field($item, 'description') : '' !!}</div>
                 </div> 
                 @endforeach
                 @endif
@@ -44,7 +44,7 @@
                             <img width="" height="" src="{{get_image_url(has_sub_field($item,'image'))}}" alt="" />
                         </div>
                         <div class="right">
-                            <h3 class="text-dark fontmb-medium font-pri-bold">{!! has_sub_field($item, 'description') ? has_sub_field($item, 'description') : '' !!}</h3>
+                            <h3 class="text-dark fontmb-middle font-pri-bold">{!! has_sub_field($item, 'description') ? has_sub_field($item, 'description') : '' !!}</h3>
                         </div>
                     
                 </div>

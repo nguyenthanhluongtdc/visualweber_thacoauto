@@ -46,7 +46,7 @@
                                     <p class="desc font-pri font18 fontmb-little">
                                         {{Str::words($post->description,30)}}
                                     </p>
-                                    <div class="city-day font-pri font20 fontmb-small">
+                                    <div class="city-day font-pri font18 fontmb-small">
                                         <span class="city">{{ \MetaBox::getMetaData($post, 'region_post', true) ?? '--' }}</span>
                                         <span class="day">{{date_format($post->created_at,"d-m-Y")}}</span>
                                     </div>
@@ -59,25 +59,23 @@
                         <div class="item-content">
                             <h3 class="title font-pri-bold font20 fontmb-medium text-uppercase">
                                 <a href="{{$post->url}}">{{$post->name}}</a>
-
                             </h3>
                             <p class="desc font-pri font18 fontmb-little">
                                 {{Str::words($post->description,25)}}
                             </p>
-                            <div class="city-day font-pri font20 fontmb-small">
+                            <div class="city-day font-pri font18 fontmb-small">
                                 <span class="city">{{ \MetaBox::getMetaData($post, 'region_post', true) ?? '--' }}</span>
                                 <span class="day">{{date_format($post->created_at,"d-m-Y")}}</span>
                             </div>
                         </div>
-
                     </div>
                     @endif
                 @endforeach
             @endif
 
-            <div class="avatar-news">
+            {{-- <div class="avatar-news">
                 <img src="{{ Theme::asset()->url('images/main/avt.png') }}" alt="avatar">
-            </div>
+            </div> --}}
         </div>
         <div class="left left-mobile">
             @if (!empty($postMobile))

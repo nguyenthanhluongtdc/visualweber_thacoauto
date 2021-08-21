@@ -27,21 +27,31 @@
             </div>
             <div class="list-image-mobile container-remake">
                
-                
+                @if(has_field($page, 'repeater_main_project_module_export'))
+                @foreach(has_field($page, 'repeater_main_project_module_export') as $item)
                 <div class="swiper-slide">
-                    <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu4.jpg')}}" alt="" class="image"/>
-                        <div class="text text-uppercase fontmb-medium font-pri-bold mt-4">công ty cổ phần ô tô trường hải(thaco) xuất khẩu ô tô và linh kiện phụ tùng lớn nhất từ trước đến nay</div>
+                    <img width="" height="" src="{{get_image_url(has_sub_field($item,'image'))}}" alt="" class="image"/>
+                        <div class="text text-uppercase fontmb-medium font-pri-bold mt-4">{!! has_sub_field($item, 'description') ? has_sub_field($item, 'description') : '' !!}</div>
                 </div> 
+                @endforeach
+                @endif
+
+               
+                @if(has_field($page, 'repeater_side_project_module_export'))
+                @foreach(has_field($page, 'repeater_side_project_module_export') as $item)
                 <div class="news">
                         <div class="left p-0">
-                            <img width="" height="" src="{{Theme::asset()->url('images/mechandical/news.png')}}" alt="" />
+                            <img width="" height="" src="{{get_image_url(has_sub_field($item,'image'))}}" alt="" />
                         </div>
                         <div class="right">
-                            <h3 class="text-dark fontmb-medium font-pri-bold">Lorem ipsum dolor sit amet consectetur adipisi elit. Minima nostrum, magnam</h3>
+                            <h3 class="text-dark fontmb-medium font-pri-bold">{!! has_sub_field($item, 'description') ? has_sub_field($item, 'description') : '' !!}</h3>
                         </div>
                     
                 </div>
-                <div class="news">
+                @endforeach
+                @endif
+
+                {{-- <div class="news">
                     <div class="left p-0">
                         <img width="" height="" src="{{Theme::asset()->url('images/mechandical/news.png')}}" alt="" />
                     </div>
@@ -67,7 +77,7 @@
                 <h3 class="text-dark fontmb-medium font-pri-bold">Lorem ipsum dolor sit amet consectetur adipisi elit. Minima nostrum, magnam</h3>
             </div>
         
-        </div>
+        </div> --}}
 
             </div>
             <div class="list-image row">

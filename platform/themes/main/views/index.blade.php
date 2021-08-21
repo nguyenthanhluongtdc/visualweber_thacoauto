@@ -130,7 +130,7 @@
 
                 <div class="scollbar-wrap-home">
                     <div id="hours">
-                        <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin3.png') }}" alt=""></a>
+                        {{-- <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin3.png') }}" alt=""></a>
                         <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt=""></a>
                         <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin3.png') }}" alt=""></a>
                         <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin3.png') }}" alt=""></a>
@@ -141,10 +141,59 @@
                         <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin3.png') }}" alt=""></a>
                         <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin3.png') }}" alt=""></a>
                         <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt=""></a>
-                        <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin3.png') }}" alt=""></a>
+                        <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin3.png') }}" alt=""></a> --}}
+                        <img class="logo-frame" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
+                        <img class="logo-frame" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
+                        <img class="logo-frame" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
+                        <img class="logo-frame" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
+                        <img class="logo-frame" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
+                        <img class="logo-frame" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
+                        <img class="logo-frame" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
                     </div>
                     <div id="cells">
-                        <h5 class="font-pri-bold fontmb-small"><a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
+                        <div class="cell-item citem-1">
+                            <img src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
+                            <span class="font-pri-bold fontmb-small">
+                                <a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
+                            </span>
+                        </div>
+                        <div class="cell-item citem-2">
+                            <img src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
+                            <span class="font-pri-bold fontmb-small">
+                                <a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
+                            </span>
+                        </div>
+                        <div class="cell-item citem-3">
+                            <img src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
+                            <span class="font-pri-bold fontmb-small">
+                                <a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
+                            </span>
+                        </div>
+                        <div class="cell-item citem-4">
+                            <img src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
+                            <span class="font-pri-bold fontmb-small">
+                                <a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
+                            </span>
+                        </div>
+                        <div class="cell-item citem-5">
+                            <img src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
+                            <span class="font-pri-bold fontmb-small">
+                                <a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
+                            </span>
+                        </div>
+                        <div class="cell-item citem-6">
+                            <img src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
+                            <span class="font-pri-bold fontmb-small">
+                                <a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
+                            </span>
+                        </div>
+                        <div class="cell-item citem-7">
+                            <img src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
+                            <span class="font-pri-bold fontmb-small">
+                                <a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
+                            </span>
+                        </div>
+                        {{-- <h5 class="font-pri-bold fontmb-small"><a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
                         </h5>
                         <h5 class="font-pri-bold fontmb-small "><a href="#">MAZDA CX-8: ĐA DẠNG PHIÊN BẢN PHÙ HỢP VỚI MỌI NHU CẦU</a>
                         </h5>
@@ -166,7 +215,7 @@
                         </h5>
                         <h5 class="font-pri-bold fontmb-small"><a href="#">MAZDA CX-8: ĐA DẠNG PHIÊN BẢN PHÙ HỢP VỚI MỌI NHU CẦU</a>
                         </h5>
-                        <h5 class="font-pri-bold fontmb-small"><a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
+                        <h5 class="font-pri-bold fontmb-small"><a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a> --}}
                         </h5>
                     </div>
                 </div>
@@ -193,23 +242,23 @@
                     <div class="top-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
                         <img src="{{ get_image_url(get_field($page,'homepage_production_block_1_logo')) }}" alt="{{get_field($page, 'homepage_production_block_1')}}">
                         <p class="top-right-item-title font-pri-bold font30 fontmb-small"><a href="" class="link-item-home">
-                            {{get_field($page, 'homepage_production_block_1')}}</a></p>
+                            {!!get_field($page, 'homepage_production_block_1')!!}</a></p>
                     </div>
                     <div class="top-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
                         <img src="{{ get_image_url(get_field($page,'homepage_production_block_2_logo')) }}" alt="{{get_field($page, 'homepage_production_block_2')}}">
                         <p class="top-right-item-title font-pri-bold font30 fontmb-small"><a href="" class="link-item-home">
-                            {{get_field($page, 'homepage_production_block_2')}}</a></p>
+                            {!!get_field($page, 'homepage_production_block_2')!!}</a></p>
                     </div>
                     <div class="top-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
                         <img src="{{ get_image_url(get_field($page,'homepage_production_block_3_logo')) }}" alt="{{get_field($page, 'homepage_production_block_3')}}">
-                        <p class="top-right-item-title font-pri-bold font30 fontmb-small"><a href="" class="link-item-home">công
-                            {{get_field($page, 'homepage_production_block_3')}}</a></p>
+                        <p class="top-right-item-title font-pri-bold font30 fontmb-small"><a href="" class="link-item-home">
+                            {!!get_field($page, 'homepage_production_block_3')!!}</a></p>
                     </div>
 
                     <div class="top-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
                         <img src="{{ get_image_url(get_field($page,'homepage_production_block_4_logo')) }}" alt="{{get_field($page, 'homepage_production_block_4')}}">
                         <p class="top-right-item-title font-pri-bold font30 fontmb-small"><a href="" class="link-item-home">
-                            {{get_field($page, 'homepage_production_block_4')}}</a></p>
+                            {!!get_field($page, 'homepage_production_block_4')!!}</a></p>
                     </div>
                 </div>
             </div>
@@ -225,33 +274,33 @@
                         <div class="symbol">
                             <img src="{{ get_image_url(get_field($page,'homepage_business_block_1_logo')) }}" alt="{{get_field($page, 'homepage_business_block_1')}}">
                         </div>
-                        <p class="bottom-right-item-title font-pri-bold font30 fontmb-small"><a href="" class="link-item-home">{{get_field($page, 'homepage_business_block_1')}}</a></p>
+                        <p class="bottom-right-item-title font-pri-bold font30 fontmb-small"><a href="" class="link-item-home">{!!get_field($page, 'homepage_business_block_1')!!}</a></p>
                     </div>
                     <div class="bottom-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
                         <div class="symbol">
                             <img src="{{ get_image_url(get_field($page,'homepage_business_block_2_logo')) }}" alt="{{get_field($page, 'homepage_business_block_2')}}">
                         </div>
-                        <p class="bottom-right-item-title font-pri-bold font30 fontmb-small"><a href="" class="link-item-home">{{get_field($page, 'homepage_business_block_2')}}
+                        <p class="bottom-right-item-title font-pri-bold font30 fontmb-small"><a href="" class="link-item-home">{!!get_field($page, 'homepage_business_block_2')!!}
                             </a></p>
                     </div>
                     <div class="bottom-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
                         <div class="symbol">
                             <img src="{{ get_image_url(get_field($page,'homepage_business_block_3_logo')) }}" alt="{{get_field($page, 'homepage_business_block_3')}}">
                         </div>
-                        <p class="bottom-right-item-title font-pri-bold font30 fontmb-small"><a href="" class="link-item-home">{{get_field($page, 'homepage_business_block_3')}}</a></p>
+                        <p class="bottom-right-item-title font-pri-bold font30 fontmb-small"><a href="" class="link-item-home">{!!get_field($page, 'homepage_business_block_3')!!}</a></p>
                     </div>
                     <div class="bottom-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
                         <div class="symbol">
                             <img src="{{ get_image_url(get_field($page,'homepage_business_block_4_logo')) }}" alt="{{get_field($page, 'homepage_business_block_4')}}">
                         </div>
-                        <p class="bottom-right-item-title font-pri-bold font30 fontmb-small"><a href="" class="link-item-home">{{get_field($page, 'homepage_business_block_4')}}</a></p>
+                        <p class="bottom-right-item-title font-pri-bold font30 fontmb-small"><a href="" class="link-item-home">{!!get_field($page, 'homepage_business_block_4')!!}</a></p>
                     </div>
 
                     <div class="bottom-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
                         <div class="symbol">
                             <img src="{{ get_image_url(get_field($page,'homepage_business_block_5_logo')) }}" alt="{{get_field($page, 'homepage_business_block_5')}}">
                         </div>
-                        <p class="bottom-right-item-title font-pri-bold font30 fontmb-small"><a href="" class="link-item-home">{{get_field($page, 'homepage_business_block_5')}}</a></p>
+                        <p class="bottom-right-item-title font-pri-bold font30 fontmb-small"><a href="" class="link-item-home">{!!get_field($page, 'homepage_business_block_5')!!}</a></p>
                     </div>
                 </div>
             </div>
@@ -263,19 +312,19 @@
 <div class="section-shareholder-home container-remake">
     <div class="shareholder-home-top" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out">
         <h2 class="font-pri-bold font60 color-gray fontmb-large">Quan hệ cổ đông</h2>
-        <div class="menu-tab-right font20">
+        <div class="menu-tab-right font20 fontmb-litte">
             <ul class="nav nav-pills font-pri-bold color-gray fontmb-small" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active" data-toggle="pill" href="#shareholder1">Công bố thông tin</a>
+                    <a class="nav-link fontmb-litte active" data-toggle="pill" href="#shareholder1">Công bố thông tin</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="pill" href="#shareholder2">Thông tin cổ đông</a>
+                    <a class="nav-link fontmb-litte" data-toggle="pill" href="#shareholder2">Thông tin cổ đông</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="pill" href="#shareholder3">Báo cáo thường nhiên</a>
+                    <a class="nav-link fontmb-litte" data-toggle="pill" href="#shareholder3">Báo cáo thường nhiên</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="pill" href="#shareholder4">Báo cáo tài chính</a>
+                    <a class="nav-link fontmb-litte" data-toggle="pill" href="#shareholder4">Báo cáo tài chính</a>
                 </li>
             </ul>
             <div class="link-views-all font-pri-bold font18 fontmb-small color-gray">

@@ -18,6 +18,7 @@ $max) {
     }
 }
 
+
 @mixin split_str($line_number) {
     overflow: hidden;
     text-overflow: ellipsis;

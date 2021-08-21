@@ -666,9 +666,21 @@ a:hover {
     @media (max-width: 992px){
         font-size: 18px;
     }
+
+    @media (max-width: 768px){
+        font-size: 17px;
+    }
    
-    @media (max-width: 600px){
+    @media (max-width: 640px){
         font-size: 15px;
+    }
+    @media (max-width: 480px){
+        font-size: 13px;
+        line-height: 1.25;
+    }
+    @media (max-width: 380px){
+        font-size: 11px;
+        line-height: 1.1;
     }
 }
 .fontmb-litte{
@@ -678,12 +690,17 @@ a:hover {
     @media (max-width: 992px){
         font-size: 15px;
     }
-   
+    @media (max-width: 785px){
+        font-size: 13px;
+    }
     @media (max-width: 600px){
         font-size: 12px;
     }
-    @media (max-width: 400px){
+    @media (max-width: 460px){
         font-size: 10px;
+    }
+    @media (max-width: 380px){
+        font-size: 9px;
     }
    
 }

@@ -6,9 +6,9 @@
         <a href="{{get_sub_field($item, 'link')}}"><img src="{{ get_image_url(get_sub_field($item, 'image')) }}" alt="Banner trang chủ"></a>
     </div>
     @empty
-        
+
     @endforelse
-    
+
     {{-- <div class="slider-main-item">
         <img src="{{ Theme::asset()->url('images/main/slider2.jpg') }}" alt="">
         <div class="content-slider">
@@ -87,13 +87,13 @@
                 @foreach ($postMobile as $post)
                     <div class="item">
                         <div class="item-content">
-                            <h3 class="title font-pri-bold fontmb-small text-uppercase">
+                            <h3 class="title font-pri-bold font18 text-uppercase">
                                 <a href="{{$post->url}}">{{$post->name}}</a>
                             </h3>
-                            <p class="desc font-pri fontmb-little">
+                            <p class="desc font-pri font18">
                                 {{Str::words($post->description,20)}}
                             </p>
-                            <div class="city-day font-pri fontmb-small">
+                            <div class="city-day font-pri font18">
                                 <span class="city">{{ \MetaBox::getMetaData($post, 'region_post', true) ?? '--' }}</span>
                                 <span class="day">{{date_format($post->created_at,"d-m-Y")}}</span>
                             </div>
@@ -102,7 +102,7 @@
                 @endforeach
             @endif
         </div>
-        <div class="right">
+        {{-- <div class="right">
             <div class="top" data-aos="fade-left" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="250">
             @if (!empty(get_featured_posts_by_category(22, 1)))
                 @foreach (get_featured_posts_by_category(22, 1) as $post)
@@ -118,10 +118,10 @@
                             <a data-fancybox href="https://www.youtube.com/watch?v={{get_sub_field(get_field($post, 'video_gallery')[0], 'youtube_code')}}" class="font-pri-bold color-gray font30 fontmb-small">{{$post->name}}</a>
                         </h3>
                         @endif
-                        @endif
-                        @endforeach
-                        @endif
-                    </div>
+                    @endif
+                @endforeach
+            @endif
+            </div>
 
             <div class="bottom" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="50">
                 <p class="title font-pri-bold -font16 fontmb-middle">
@@ -130,18 +130,6 @@
 
                 <div class="scollbar-wrap-home">
                     <div id="hours">
-                        {{-- <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin3.png') }}" alt=""></a>
-                        <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt=""></a>
-                        <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin3.png') }}" alt=""></a>
-                        <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin3.png') }}" alt=""></a>
-                        <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt=""></a>
-                        <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin3.png') }}" alt=""></a>
-                        <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin3.png') }}" alt=""></a>
-                        <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt=""></a>
-                        <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin3.png') }}" alt=""></a>
-                        <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin3.png') }}" alt=""></a>
-                        <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt=""></a>
-                        <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin3.png') }}" alt=""></a> --}}
                         <img class="logo-frame flag-1" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
                         <img class="logo-frame flag-2" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
                         <img class="logo-frame flag-3" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
@@ -193,34 +181,11 @@
                                 <a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
                             </span>
                         </div>
-                        {{-- <h5 class="font-pri-bold fontmb-small"><a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
-                        </h5>
-                        <h5 class="font-pri-bold fontmb-small "><a href="#">MAZDA CX-8: ĐA DẠNG PHIÊN BẢN PHÙ HỢP VỚI MỌI NHU CẦU</a>
-                        </h5>
-                        <h5 class="font-pri-bold fontmb-small "><a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
-                        </h5>
-                        <h5 class="font-pri-bold fontmb-small "><a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
-                        </h5>
-                        <h5 class="font-pri-bold fontmb-small "><a href="#">MAZDA CX-8: ĐA DẠNG PHIÊN BẢN PHÙ HỢP VỚI MỌI NHU CẦU</a>
-                        </h5>
-                        <h5 class="font-pri-bold fontmb-small "><a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
-                        </h5>
-                        <h5 class="font-pri-bold fontmb-small "><a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
-                        </h5>
-                        <h5 class="font-pri-bold fontmb-small"><a href="#">MAZDA CX-8: ĐA DẠNG PHIÊN BẢN PHÙ HỢP VỚI MỌI NHU CẦU</a>
-                        </h5>
-                        <h5 class="font-pri-bold fontmb-small"><a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
-                        </h5>
-                        <h5 class="font-pri-bold fontmb-small"><a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
-                        </h5>
-                        <h5 class="font-pri-bold fontmb-small"><a href="#">MAZDA CX-8: ĐA DẠNG PHIÊN BẢN PHÙ HỢP VỚI MỌI NHU CẦU</a>
-                        </h5>
-                        <h5 class="font-pri-bold fontmb-small"><a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a> --}}
                         </h5>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>
 </div>
 
@@ -236,7 +201,7 @@
                     <img src="{{ get_image_url(get_field($page,'homepage_production_logo')) }}" alt="{{get_field($page, 'homepage_production_title')}}">
                     <p class="name-img font-pri-bold font18 color-pri fontmb-small">THACO AUTO</p>
                     <p class="title font-pri-bold font40 fontmb-middle color-gray">{{get_field($page, 'homepage_production_title')}}</p>
-                    <P class="desc font-pri font20 color-gray fontmb-little">{{get_field($page, 'homepage_production_descrtiption')}}</P>
+                    <P class="desc font-pri font20 color-gray">{{get_field($page, 'homepage_production_descrtiption')}}</P>
                 </div>
                 <div class="top-right">
                     <div class="top-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
@@ -267,7 +232,7 @@
                     <img src="{{ get_image_url(get_field($page,'homepage_business_logo')) }}" alt="{{get_field($page, 'homepage_business_title')}}">
                     <p class="name-img font-pri-bold font18 color-pri fontmb-small">THACO AUTO</p>
                     <p class="title font-pri-bold font40 color-gray fontmb-middle">{{get_field($page, 'homepage_business_title')}}</p>
-                    <P class="desc font-pri font20 color-gray fontmb-little">{{get_field($page, 'homepage_business_descrtiption')}}</P>
+                    <P class="desc font-pri font20 color-gray">{{get_field($page, 'homepage_business_descrtiption')}}</P>
                 </div>
                 <div class="bottom-right">
                     <div class="bottom-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">

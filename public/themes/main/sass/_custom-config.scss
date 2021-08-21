@@ -315,12 +315,13 @@ a:hover {
     font-size: 14px;
     // line-height: 19px;
   }
-  @media (max-width: 1270px) {
-    font-size: 13px;
-  }
-  @media (max-width: 1199px) {
-    font-size: 12px;
-  }
+  /** remove fix issue footer text quá nhỏ */
+  //   @media (max-width: 1270px) {
+  //     font-size: 13px;
+  //   }
+  //   @media (max-width: 1199px) {
+  //     font-size: 12px;
+  //   }
 }
 
 .font18 {

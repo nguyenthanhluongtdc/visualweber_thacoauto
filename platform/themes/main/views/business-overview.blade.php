@@ -5,7 +5,7 @@
         <div class="provincial-company">
             <div class="container-remake">
                 <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font40 fontmb-middle">công ty tỉnh thành</h1>
-                <p data-aos="fade-left" data-aos-duration="1500" class="description font20 mt-20 fontmb-little">THACO là doanh nghiệp hàng đầu và có quy mô lớn nhất tại Việt Nam về lĩnh vực sản xuất lắp ráp ô tô, với chuỗi giá trị từ nghiên cứu phát triển sản phẩm (R&D), sản xuất linh kiện phụ tùng, lắp ráp ô tô, đến giao nhận vận chuyển và phân phối, bán lẻ. Sản phẩm có đầy đủ các chủng loại: xe tải, xe bus, xe du lịch, xe chuyên dụng và đầy đủ phân khúc từ trung cấp đến cao cấp với doanh số và thị phần luôn dẫn đầu thị trường Việt Nam trong nhiều năm qua.</p>
+                <p data-aos="fade-left" data-aos-duration="1500" class="description font20 mt-20 fontmb-small">THACO là doanh nghiệp hàng đầu và có quy mô lớn nhất tại Việt Nam về lĩnh vực sản xuất lắp ráp ô tô, với chuỗi giá trị từ nghiên cứu phát triển sản phẩm (R&D), sản xuất linh kiện phụ tùng, lắp ráp ô tô, đến giao nhận vận chuyển và phân phối, bán lẻ. Sản phẩm có đầy đủ các chủng loại: xe tải, xe bus, xe du lịch, xe chuyên dụng và đầy đủ phân khúc từ trung cấp đến cao cấp với doanh số và thị phần luôn dẫn đầu thị trường Việt Nam trong nhiều năm qua.</p>
                 <div data-aos="zoom-in-up" data-aos-duration="2000" class="select-list mt-40 mb-40">
                     <form action="">
                         <select class="ui search selection dropdown city w-100" name="" id="">
@@ -25,7 +25,7 @@
                         <div class="branch-overflow">
                             <div class="branch-item mb-20">
                                 <p class="branch-name font30 mb-20">Chi Nhánh An Lạc - Công Ty CP Ô Tô Trường Hải</p>
-                                <p class="branch-address font20 mb-20">36C11, QL1A, Tân Kiên, Bình Chánh, Thành phố Hồ Chí Minh 700000</p>
+                                <p class="branch-address font20 mb-20 ">36C11, QL1A, Tân Kiên, Bình Chánh, Thành phố Hồ Chí Minh 700000</p>
                                 <div class="logo-wrap mb-20">
                                     <div class="logo-wrap__left">
                                         <div class="logo-item">

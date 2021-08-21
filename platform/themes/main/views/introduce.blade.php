@@ -1,4 +1,4 @@
-<div id="introduce-page" class="font-pri">
+<div id="introduce-page" class="font-pri overflow-x-hidden">
     <div class="navbar-menu font20">
         <div class="container-remake">
             <ul class="nav font-pri-bold">

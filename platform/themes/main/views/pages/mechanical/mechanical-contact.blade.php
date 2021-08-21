@@ -1,5 +1,4 @@
-<div class="section-mechanical-contact"  >
-    {{-- data-aos="zoom-in" data-aos-duration="1500" data-aos-easing="ease-in-out" data-aos-delay="50" --}}
+<div class="section-mechanical-contact"  data-aos="zoom-in" data-aos-duration="1500" data-aos-easing="ease-in-out" data-aos-delay="50">
     <div class="container-remake">
         <div class="mechanical-contact mt-60 mb-60">
             <h2 class="mechanical-contact__title font60 font-pri-bold mb-4">LIÊN HỆ</h2>
@@ -67,8 +66,7 @@
 </div>
 
 <div class="section-mechanical-contact-mobile"  data-aos="zoom-in" data-aos-duration="1500" data-aos-easing="ease-in-out" data-aos-delay="50">
-   
-    {{-- data-aos="zoom-in" data-aos-duration="1500" data-aos-easing="ease-in-out" data-aos-delay="50" --}}
+
 
         <h2 class="mechanical-contact__title fontmb-large font-pri-bold mb-4 container-remake">LIÊN HỆ</h2>
         <div class="mechanical-contact mt-60 mb-60">

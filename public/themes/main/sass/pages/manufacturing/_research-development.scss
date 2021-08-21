@@ -139,15 +139,20 @@
                     line-height: 1.1;
                     @include marginBottom(15,"+");
                     @media only screen and (max-width: 600px){line-height: 0.9;}
-                    @media only screen and (max-width: 400px){line-height: 0.7;}
+                    @media only screen and (max-width: 420px){line-height: 1;}
+                    @media only screen and (max-width: 360px){line-height: 0.8;}
                     .text1{
                         font-size: 25px;
                         @media only screen and (max-width: 600px){
                             font-size: 12px;
                            
                         }
-                        @media only screen and (max-width: 400px){
-                            font-size: 8px;
+                        @media only screen and (max-width: 420px){
+                            font-size: 12px;
+                           
+                        }
+                        @media only screen and (max-width: 360px){
+                            font-size: 10px;
                            
                         }
                     }
@@ -158,6 +163,11 @@
                            
                         }
                         @media only screen and (max-width: 400px){
+                            font-size: 25px;
+                            
+                           
+                        }
+                        @media only screen and (max-width: 360px){
                             font-size: 18px;
                            
                         }
@@ -172,9 +182,16 @@
                         margin-top: -10px;
                        
                     }
-                    @media only screen and (max-width: 400px){
-                        font-size: 4px;
+                    @media only screen and (max-width: 420px){
+                        font-size: 10px;
+                        width: 200px;
+                        text-align: left;
                         margin-top: -12px;
+                        margin-left: -20px;
+                       
+                    }
+                    @media only screen and (max-width: 360px){
+                        font-size: 8px;
                        
                     }
                 }

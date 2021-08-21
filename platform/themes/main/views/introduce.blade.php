@@ -81,7 +81,7 @@
                                 <div class="name font40 font-pri-bold fontmb-middle">
                                     {!! theme_option('name_manufacturing') !!}
                                 </div>
-                                <p class="description fontmb-little">
+                                <p class="description">
                                     {!! theme_option('description_manufacturing') !!}
                                 </p>
                             </div>
@@ -120,7 +120,7 @@
                                 <div class="name font40 font-pri-bold fontmb-middle">
                                     {!! theme_option('name_business') !!}
                                 </div>
-                                <p class="description fontmb-little">
+                                <p class="description">
                                     {!! theme_option('description_business') !!}
                                 </p>
                             </div>
@@ -169,7 +169,7 @@
                     </p>
                 @endif
 
-                
+
                 <div class="section-system-value__content">
                     @if(has_field($page, 'repeat_content_module_value_introduce') && !empty(has_field($page, 'repeat_content_module_value_introduce')))
                         <div class="section-system-value__content__left">
@@ -453,7 +453,7 @@
     <div class="splide splide_video">
         <div class="splide__track">
             <ul class="splide__list">
-                @if(has_field($page, 'repeater_module_video_introduce')) 
+                @if(has_field($page, 'repeater_module_video_introduce'))
                     @foreach(has_field($page, 'repeater_module_video_introduce') as $row)
                         <li class="splide__slide">
                             <a data-fancybox href="{{has_sub_field($row, 'link_video_youtube')}}">

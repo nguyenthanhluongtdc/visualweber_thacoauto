@@ -85,5 +85,7 @@
         </div>
     </div>
     
-    {{ $posts->links('vendor.pagination.custom') }}
+    <div class="container-remake">
+        {{ $posts->links('vendor.pagination.custom') }}
+    </div>
 </div>

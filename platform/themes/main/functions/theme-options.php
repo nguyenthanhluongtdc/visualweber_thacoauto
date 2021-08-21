@@ -228,6 +228,11 @@ app()->booted(function () {
                     'attributes' => [
                         'name' => 'description_manufacturing',
                         'value' => null,
+                        'options' => [
+                            'class'        => 'form-control',
+                            'data-counter' => 255,
+                            'rows'         => 2,
+                        ],
                     ],
                 ],
             ],
@@ -260,24 +265,13 @@ app()->booted(function () {
             'attributes' => [
                 'name'    => 'description_business',
                 'value'   => null,
+                'options' => [
+                    'class'        => 'form-control',
+                    'data-counter' => 255,
+                    'rows'         => 2,
+                ],
             ],
         ])
-        // ->setField([ // Set field for section
-        //     'id' => 'section_manufacturing',
-        //     'section_id' => 'opt-text-subsection-manufacturing_business',
-        //     'type' => 'text',
-        //     'label' => __('Copyright'),
-        //     'attributes' => [
-        //         'name' => 'section_manufacturing',
-        //         'value' => '© 2016 Botble Technologies. All right reserved.',
-        //         'options' => [
-        //             'class' => 'form-control',
-        //             'placeholder' => __('Change copyright'),
-        //             'data-counter' => 120,
-        //         ]
-        //     ],
-        //     'helper' => __('Copyright on footer of site'),
-        // ])
         ->setField([
             'id'         => 'repeater_munufacturing',
             'section_id' => 'opt-text-subsection-manufacturing_business',
@@ -304,7 +298,7 @@ app()->booted(function () {
                             'options' => [
                                 'class'        => 'form-control',
                                 'data-counter' => 255,
-                                'rows'         => 3,
+                                'rows'         => 2,
                             ],
                         ],
                     ],
@@ -336,71 +330,11 @@ app()->booted(function () {
                             'options' => [
                                 'class'        => 'form-control',
                                 'data-counter' => 255,
-                                'rows'         => 3,
+                                'rows'         => 2,
                             ],
                         ],
                     ],
                 ],
             ],
-        ])
-        // ->setSection([ // Set section with no field
-        //     'title' => __('Tiêu chí 8T'),
-        //     'desc' => __('Tiêu chí 8T settings'),
-        //     'id' => 'opt-text-subsection-criteria',
-        //     'subsection' => true,
-        //     'icon' => 'fa fa-home',
-        // ])->setField([
-        //     'id'         => 'repeater_criteria',
-        //     'section_id' => 'opt-text-subsection-criteria',
-        //     'type'       => 'repeater',
-        //     'label'      => __('Bộ lập tiêu chí'),
-        //     'attributes' => [
-        //         'name'   => 'repeater_criteria',
-        //         'value'  => null,
-        //         'fields' => [
-        //             [
-        //                 'type'       => 'mediaImage',
-        //                 'label'      => __('Image'),
-        //                 'attributes' => [
-        //                     'name'  => 'image_criteria',
-        //                     'value' => null,
-        //                 ],
-        //             ],
-        //             [
-        //                 'type'       => 'mediaImage',
-        //                 'label'      => __('Symbol'),
-        //                 'attributes' => [
-        //                     'name'  => 'symbol_criteria',
-        //                     'value' => null,
-        //                 ],
-        //             ],
-        //             [
-        //                 'type'       => 'text',
-        //                 'label'      => __('Name'),
-        //                 'attributes' => [
-        //                     'name'    => 'name_criteria',
-        //                     'value'   => null,
-        //                     'options' => [
-        //                         'class'        => 'form-control',
-        //                         'data-counter' => 255,
-        //                     ],
-        //                 ],
-        //             ],
-        //             [
-        //                 'type'       => 'textarea',
-        //                 'label'      => __('Description'),
-        //                 'attributes' => [
-        //                     'name'    => 'description_criteria',
-        //                     'value'   => null,
-        //                     'options' => [
-        //                         'class'        => 'form-control',
-        //                         'data-counter' => 150,
-        //                         'rows'         => 3,
-        //                     ],
-        //                 ],
-        //             ],
-        //         ],
-        //     ],
-        // ])
-        ;
+        ]);
 });

@@ -1,4 +1,4 @@
-<div class="business-overview">
+<div class="business-overview overflow-x-hidden">
     @includeIf("theme.main::views.pages.business.section.product-intro")
     <div class="distribution">
 

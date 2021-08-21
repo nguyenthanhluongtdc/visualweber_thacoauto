@@ -354,8 +354,8 @@
                 textarea:focus { outline: 0; }
         }
         .contact-noti{
-            .text-noti{
-                font-weight: 600;
+            .text-noti{ 
+                
                 @media (max-width: 1080px){
                     font-size: 18px;
                 }
@@ -632,7 +632,7 @@
                             font-size: 25px;
                             color: #0054a0;
                             margin-top: 5px;
-                            @media only screen and (max-width: 400px){font-size: 12px;}
+                            @media only screen and (max-width: 400px){font-size: 15px;}
                             @media only screen and (max-width: 767px){margin-top: 3px;}
 
                         }
@@ -641,13 +641,13 @@
                             margin-left: 5%;
                             
                             @media only screen and (max-width: 767px){font-size: 20px;}
-                            @media only screen and (max-width: 400px){font-size: 12px;}
+                            @media only screen and (max-width: 400px){font-size: 12px; margin-top: 3px;}
                         }
                     }
                     .location{
                         height: 90px;
                         @media only screen and (max-width: 767px){height: 70px;}
-                        @media only screen and (max-width: 400px){height: 50px;}
+                        @media only screen and (max-width: 400px){height: 40px;}
                     }
                 }
                 .right{
@@ -668,7 +668,7 @@
                     .location{
                         height: 90px;
                         @media only screen and (max-width: 767px){height: 70px;}
-                        @media only screen and (max-width: 400px){height: 50px;}
+                        @media only screen and (max-width: 400px){height: 40px;}
                     }
                 }
 

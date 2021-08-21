@@ -1,378 +1,394 @@
 #footer {
-    background: #f3f3f3;
-    @include paddingY(65);
-    vertical-align: middle;
+  background: #f3f3f3;
+  @include paddingY(65);
+  vertical-align: middle;
+
+  @media (max-width: 1080px) {
+    @include mobilePaddingY(23);
+  }
+  .footer-wrap {
+    display: flex;
+    justify-content: space-between;
+
+    .footer-left {
+      width: 28%;
+      .logo-bottom {
+        width: 100%;
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+
+      .img-bct-mobile {
+        display: none;
+        @media (max-width: 1080px) {
+          display: block;
+        }
+        img {
+          width: 30vw;
+          min-width: 100px;
+          max-width: 170px;
+        }
+      }
+      .footer-left-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 2px;
+
+        .img-bct {
+          width: 40%;
+          display: none;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .list-media {
+          width: 40%;
+          display: flex;
+          align-items: center;
+          @media (max-width: 1400px) {
+            width: 45%;
+          }
+          @media (max-width: 1199px) {
+            width: 50%;
+          }
+          li {
+            margin-right: 15px;
+
+            img {
+              width: 38px;
+              @media (max-width: 1400px) {
+                width: 34px;
+              }
+              @media (max-width: 1199px) {
+                width: 30px;
+              }
+            }
+          }
+        }
+      }
+
+      .thaco-contact {
+        margin-top: 1rem;
+        .name-company {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .footer-right {
+      width: 60%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      @include marginBottom(40, "-");
+      @media (max-width: 1400px) {
+        width: 65%;
+      }
+      @media (max-width: 1199px) {
+        width: 70%;
+      }
+
+      .list-media-mobile {
+        display: none;
+      }
+
+      .item {
+        width: 33%;
+        @include paddingY(40);
+
+        .title {
+          @include marginBottom(20, "+");
+        }
+
+        ul {
+          li {
+            line-height: 36px;
+            @media (max-width: 1680px) {
+              line-height: 31px;
+            }
+            @media (max-width: 1440px) {
+              line-height: 28px;
+            }
+            @media (max-width: 1366px) {
+              line-height: 26px;
+            }
+            @media (max-width: 1199px) {
+              line-height: 24px;
+            }
+          }
+        }
+      }
+
+      .item:last-child {
+        margin-top: 90px;
+        width: 100%;
+        @media (max-width: 1680px) {
+          margin-top: 75px;
+        }
+        @media (max-width: 1440px) {
+          margin-top: 60px;
+        }
+        @media (max-width: 1366px) {
+          margin-top: 45px;
+        }
+        @media (max-width: 1199px) {
+          margin-top: 30px;
+        }
+      }
+    }
 
     @media (max-width: 1080px) {
-        @include mobilePaddingY(23);
-    }
-    .footer-wrap {
-        display: flex;
-        justify-content: space-between;
+      flex-wrap: wrap;
+      .footer-left,
+      .footer-right {
+        max-width: 100%;
+        flex: 0 0 100%;
+      }
 
-        .footer-left {
-            width: 28%;
-            .logo-bottom{
-                width: 100%;
-                img{
-                    max-width: 100%;
-                    height: auto;
-                }
-            }
-
-            .img-bct-mobile {
-                display: none;
-                @media (max-width: 1080px) {
-                    display: block;
-                }
-            }
-            .footer-left-bottom {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                margin-top: 2px;
-
-                .img-bct {
-                    width: 40%;
-                    display: none;
-
-                    img {
-                        width: 100%;
-                    }
-                }
-
-                .list-media {
-                    width: 40%;
-                    display: flex;
-                    align-items: center;
-                    @media(max-width : 1400px){
-                        width: 45%;
-                    }
-                    @media(max-width : 1199px){
-                        width: 50%;
-                    }
-                    li {
-                        margin-right: 15px;
-
-                        img {
-                            width: 38px;
-                            @media(max-width : 1400px){
-                                width: 34px;
-                            }
-                            @media(max-width : 1199px){
-                                width: 30px;
-                            }
-                        }
-                    }
-                }
-            }
-
-            .thaco-contact {
-                margin-top: 1rem;
-                .name-company {
-                    margin-bottom: 10px;
-                }
-            }
+      .footer-left {
+        @include mobilePaddingBottom(23);
+        border-bottom: 1px solid #c7c7c7;
+        .logo-bottom {
+          display: none;
+        }
+        .img-bct {
+          display: inline-block;
+          margin-bottom: 10px;
+        }
+        &-bottom {
+          display: none !important;
         }
 
-        .footer-right {
-            width: 60%;
+        .name-company {
+          font-size: 25px;
+          text-transform: uppercase;
+          @media (max-width: 576px) {
+            font-size: 20px;
+          }
+        }
+      }
+
+      .footer-right {
+        flex-wrap: wrap;
+        .item {
+          max-width: 100%;
+          flex: 0 0 100%;
+          @include mobilePaddingY(23);
+          border-bottom: 1px solid #c7c7c7;
+
+          &:last-child {
+            margin-top: 0;
+            border-bottom: none;
+          }
+
+          .title {
+            text-transform: uppercase;
+            margin-bottom: 0;
+            @media (max-width: 1080px) {
+              cursor: pointer;
+            }
+          }
+          .list-link {
+            display: none;
+            margin-bottom: 0;
+            padding: 10px 0;
+          }
+          .active {
+            display: block;
+          }
+        }
+
+        .list-media-mobile {
+          display: block;
+          p {
+            font-size: 14px;
+            // font-size: 20px;
+            // @include marginBottom(23, "+");
+            // @media (max-width: 576px) {
+            //   font-size: 17px;
+            // }
+          }
+
+          .list-media {
             display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            @include marginBottom(40, "-");
-            @media(max-width : 1400px){
-                width: 65%;
-            }
-            @media(max-width : 1199px){
-                width: 70%;
-            }
-
-            .list-media-mobile {
-                display: none;
-            }
-
-            .item {
-                width: 33%;
-                @include paddingY(40);
-
-                .title {
-                    @include marginBottom(20, "+");
-                }
-
-                ul {
-                    li {
-                        line-height: 36px;
-                        @media(max-width : 1680px){
-                            line-height: 31px;
-                        }
-                        @media(max-width : 1440px){
-                            line-height: 28px;
-                        }
-                        @media(max-width : 1366px){
-                            line-height: 26px;
-                        }
-                        @media(max-width : 1199px){
-                            line-height: 24px;
-                        }
-                    }
-                }
-            }
-
-            .item:last-child {
-                margin-top: 90px;
+            flex-direction: row;
+            li {
+              width: 38px;
+              height: 38px;
+              margin-right: 0.75rem;
+              &:last-child {
+                margin-right: unset;
+              }
+              img {
                 width: 100%;
-                @media(max-width : 1680px){
-                    margin-top: 75px;
-                }
-                @media(max-width : 1440px){
-                    margin-top: 60px;
-                }
-                @media(max-width : 1366px){
-                    margin-top: 45px;
-                }
-                @media(max-width : 1199px){
-                    margin-top: 30px;
-                }
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+              }
             }
+            // display: flex;
+            // margin-left: -8px;
+            // margin-right: -8px;
+
+            // li {
+            //   padding-left: 8px;
+            //   padding-right: 8px;
+            // }
+          }
         }
-
-        @media (max-width: 1080px) {
-            flex-wrap: wrap;
-            .footer-left, .footer-right {
-                max-width: 100%;
-                flex: 0 0 100%;
-            }
-
-            .footer-left {
-                @include mobilePaddingBottom(23);
-                border-bottom: 1px solid #c7c7c7;
-                .logo-bottom {
-                    display: none;
-                }
-                .img-bct {
-                    display: inline-block;
-                    margin-bottom: 10px;
-                }
-                &-bottom {
-                    display: none !important;
-                }
-
-                .name-company {
-                    font-size: 25px;
-                    text-transform: uppercase;
-                    @media (max-width: 576px) {
-                        font-size: 20px;
-                    }
-                }
-            }
-
-            .footer-right {
-                flex-wrap: wrap;
-                .item {
-                    max-width: 100%;
-                    flex: 0 0 100%;
-                    @include mobilePaddingY(23);
-                    border-bottom: 1px solid #c7c7c7;
-
-                    &:last-child {
-                        margin-top: 0;
-                        border-bottom: none;
-                    }
-
-                    .title {
-                        text-transform: uppercase;
-                        margin-bottom: 0;
-                        @media (max-width: 1080px) {
-                            cursor: pointer;
-
-                        }
-                    }
-
-                    .list-link {
-                        display: none;
-                        margin-bottom: 0;
-                        padding: 2%;
-                    }
-                    .active{
-                        display: block;
-                        
-                    }
-                }
-
-                .list-media-mobile {
-                    display: block;
-                    p {
-                        font-size: 20px;
-                        @include marginBottom(23, "+");
-                        @media (max-width: 576px) {
-                            font-size: 17px;
-                        }
-                    }
-
-                    .list-media {
-                        display: flex;
-                        margin-left: -8px;
-                        margin-right: -8px;
-
-                        li {
-                            padding-left: 8px;
-                            padding-right: 8px;
-                        }
-                    }
-                }
-            }
-        }
+      }
     }
+  }
 
-    .thaco-contact {
-        h1 {
-            margin: 30px 0 14px 0;
-            @media(max-width : 1680px){
-                margin: 27px 0 14px 0;
-            }
-            @media(max-width : 1440px){
-                margin: 25px 0 14px 0;
-            }
-            @media(max-width : 1366px){
-                margin: 22px 0 14px 0;
-            }
-            @media(max-width : 1199px){
-                margin: 20px 0 14px 0;
-            }
-        }
-
-        p {
-            line-height: 36px;
-            @media(max-width : 1680px){
-                line-height: 31px;
-            }
-            @media(max-width : 1440px){
-                line-height: 28px;
-            }
-            @media(max-width : 1366px){
-                line-height: 26px;
-            }
-            @media(max-width : 1199px){
-                line-height: 24px;
-            }
-            @media(max-width : 1080px){
-                line-height: normal;
-            }
-        }
-    }
-}
-
-
-.end-web {
-    height: 58px;
-    @media(max-width : 1680px){
-        height: 50px;
-    }
-    @media(max-width : 1440px){
-        height: 42px;
-    }
-    @media(max-width : 1366px){
-        height: 37px;
-    }
-    @media(max-width : 1199px){
-        height: 32px;
-    }
-    .container-remake {
-        height: 100%;
+  .thaco-contact {
+    h1 {
+      margin: 30px 0 14px 0;
+      @media (max-width: 1680px) {
+        margin: 27px 0 14px 0;
+      }
+      @media (max-width: 1440px) {
+        margin: 25px 0 14px 0;
+      }
+      @media (max-width: 1366px) {
+        margin: 22px 0 14px 0;
+      }
+      @media (max-width: 1199px) {
+        margin: 20px 0 14px 0;
+      }
     }
 
     p {
-        height: 100%;
-        display: flex;
-        align-items: center;
-
+      line-height: 36px;
+      @media (max-width: 1680px) {
+        line-height: 31px;
+      }
+      @media (max-width: 1440px) {
+        line-height: 28px;
+      }
+      @media (max-width: 1366px) {
+        line-height: 26px;
+      }
+      @media (max-width: 1199px) {
+        line-height: 24px;
+      }
+      @media (max-width: 1080px) {
+        line-height: normal;
+      }
     }
+  }
 }
-.action-button{
-    position: fixed;
-    top: 25%;
-    z-index: 1000;
-    right: 0;
-    .item-button{
-        background: $color-primary;
-        margin-bottom: 2px;
-        // border-radius: 3px 0 0 3px;
-        opacity: 1;
-        transition: opacity .2s ease-in-out;
-        &:hover {
-            opacity: .85;
-        }
-        // height: 3vw;
-        // width: 3vw;
-        z-index: 88;
-        &:last-child {
-            margin-bottom: unset;
-        }
-        // max-width: 70px;
-        // max-height: 70px;
-        // @media(max-width : 1440px){
-        //     width: 3vw;
-        //     height: 3vw;
-        // }
-        // @media(max-width : 1199px){
-        //     width: 2.7vw;
-        //     height: 2.7vw;
-        // }
 
-        // @media(max-width: 1080px) {
-        //     width: 40px;
-        //     height: 40px;
-        // }
-
-        a{
-            padding: 10px 8px 10px 11px;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            img{
-                width: 25px;
-                height: auto;
-            }
-        }
-    }
-}
-#myBtn {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 99;
-    font-size: 18px;
-    border: none;
-    outline: none;
-    background-color: transparent;
-    color: white;
-    cursor: pointer;
-    border-radius: 4px;
-    width: 3vw;
-    height: 3vw;
-    max-width: 60px;
-    max-height: 60px;
-    opacity: 1;
-    transition: opacity .2s ease-in-out;
-    &:hover {
-        opacity: .85;
-    }
-    // @media(max-width : 1440px){
-    //     width: 3.1vw;
-    //     height: 3.1vw;
-    // }
-    // @media(max-width : 1199px){
-    //     width: 2.8vw;
-    //     height: 2.8vw;
-    // }
-    img{
-        width: 110%;
-        height: auto;
-    }
-
+.end-web {
+  height: 58px;
+  @media (max-width: 1680px) {
+    height: 50px;
+  }
+  @media (max-width: 1440px) {
+    height: 42px;
+  }
+  @media (max-width: 1366px) {
+    height: 37px;
+  }
+  @media (max-width: 1199px) {
+    height: 32px;
+  }
+  .container-remake {
+    height: 100%;
   }
 
+  p {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
+.action-button {
+  position: fixed;
+  top: 25%;
+  z-index: 1000;
+  right: 0;
+  .item-button {
+    background: $color-primary;
+    margin-bottom: 2px;
+    // border-radius: 3px 0 0 3px;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+    &:hover {
+      opacity: 0.85;
+    }
+    // height: 3vw;
+    // width: 3vw;
+    z-index: 88;
+    &:last-child {
+      margin-bottom: unset;
+    }
+    // max-width: 70px;
+    // max-height: 70px;
+    // @media(max-width : 1440px){
+    //     width: 3vw;
+    //     height: 3vw;
+    // }
+    // @media(max-width : 1199px){
+    //     width: 2.7vw;
+    //     height: 2.7vw;
+    // }
+
+    // @media(max-width: 1080px) {
+    //     width: 40px;
+    //     height: 40px;
+    // }
+
+    a {
+      padding: 10px 8px 10px 11px;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 25px;
+        height: auto;
+      }
+    }
+  }
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 3vw;
+  height: 3vw;
+  max-width: 60px;
+  max-height: 60px;
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+  &:hover {
+    opacity: 0.85;
+  }
+  // @media(max-width : 1440px){
+  //     width: 3.1vw;
+  //     height: 3.1vw;
+  // }
+  // @media(max-width : 1199px){
+  //     width: 2.8vw;
+  //     height: 2.8vw;
+  // }
+  img {
+    width: 110%;
+    height: auto;
+  }
+}

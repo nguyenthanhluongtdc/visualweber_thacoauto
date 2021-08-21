@@ -37,9 +37,12 @@
                     </ul>
                     @if(has_field($page, 'repeater_bottom_research_development'))
                     @foreach(has_field($page, 'repeater_bottom_research_development') as $item)
-                    <p class="fontmb-little">
-                        {!! has_sub_field($item, 'content_bottom_research_development') ? has_sub_field($item, 'content_bottom_research_development') : '' !!}
-                    </p>
+                    <div class="fontmb-little">
+                        <p>
+                            {!! has_sub_field($item, 'content_bottom_research_development') ? has_sub_field($item, 'content_bottom_research_development') : '' !!}
+                        </p>
+                    </div>
+                   
 
                    
                     @endforeach
@@ -86,15 +89,19 @@
                 </div>
             </div>
             <div class="rnd-news-mobile container-remake">
+                @if(has_field($page, 'repeater_module_news_research_development'))
+                @foreach(has_field($page, 'repeater_module_news_research_development') as $item)
                 <div class="rnd-news-mobile__wrapper" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="50">
                     <div class="top">
-                        <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu7.jpg')}}" alt="" />
+                        <img width="" height="" src="{{get_image_url(has_sub_field($item,'image_news_research_development'))}}" alt="" />
                     </div>
-                    <div class="bottom">
-                        <p class="font-pri fontmb-little">Nghiên cứu sản phẩm: Nghiên cứu và phát triển các sản phẩm mới với mục tiêu đáp ứng nhu cầu của khách hàng và gia tăng tính cạnh tranh trên thị trường</p>
+                    <div class="bottom  fontmb-little">
+                        <p class="font-pri"> {!! has_sub_field($item, 'description_news_research_development') ? has_sub_field($item, 'description_news_research_development') : '' !!}</p>
                     </div>
                 </div>
-                <div class="rnd-news-mobile__wrapper " data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="50">
+                @endforeach
+                @endif
+                {{-- <div class="rnd-news-mobile__wrapper " data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="50">
                     <div class="top">
                         <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu5.jpg')}}" alt="" />
                     </div>
@@ -109,7 +116,7 @@
                     <div class="bottom">
                         <p class="font-pri fontmb-little">Phát triển công nghệ: Thay đổi công nghệ mang tính đột phá để nâng cấp chất lượng sản phẩm và tối ưu chi phí sản xuất</p>
                     </div>
-                </div>
+                </div> --}}
             </div>
             {{-- <div class="container-remake">
                 <div class="line-border">

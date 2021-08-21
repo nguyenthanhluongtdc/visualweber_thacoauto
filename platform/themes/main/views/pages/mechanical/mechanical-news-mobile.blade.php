@@ -8,26 +8,33 @@
                 </div>
 
                 <div class="content">
+                    @foreach(get_latest_posts(3) as $post)
                     <div class="item mx-0"  data-aos="fade-left" data-aos-duration="1500" data-aos-easing="ease-in-out" data-aos-delay="50" >
                        
                         <div class="item-mobile">
                             <div class="img">
                                 <div class="sub-left font-pri-bold">
-                                    <div class="day"> 29 </div>
-                                    <div class="month"> May </div>
-                                    <div class="year"> 2021 </div> 
+                                    <div class="day"> {{ $post->created_at->format('d') }} </div>
+                                    <div class="month"> {{ $post->created_at->format('M') }} </div>
+                                    <div class="year"> {{ $post->created_at->format('Y') }} </div> 
                                 </div>
                                 <div class="sub-right">
-                                    <img width="" height="" src="{{Theme::asset()->url('images/mechandical/news.png')}}" alt="" />
+                                    <a href="{{$post->url}}" title="{!! $post->name !!}">
+                                        <img width="" height="" src="{{get_image_url($post->image)}}"
+                                        alt="" />
+                                    </a>
                                 </div>
                             </div>
                             <div class="content">
-                                <h3 class="fontmb-middle font-pri-bold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa quas nisi totam tenetur eveniet neque dolore nulla a consectetur amet, aliquam at voluptates illo labore!</h3>
+                                <a href="{{$post->url}}">
+                                    <h3 class="fontmb-middle font-pri-bold  text-dark"> {!! $post->name !!} </h3>
+                                </a>
+                                
                             </div>
                         </div>
                     </div>
-
-                    <div class="item mx-0" data-aos="fade-left" data-aos-duration="1600" data-aos-easing="ease-in-out" data-aos-delay="50" >
+                    @endforeach
+                    {{-- <div class="item mx-0" data-aos="fade-left" data-aos-duration="1600" data-aos-easing="ease-in-out" data-aos-delay="50" >
                         
                         <div class="item-mobile">
                             <div class="img">
@@ -63,7 +70,7 @@
                                 <h3 class="fontmb-middle font-pri-bold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa quas nisi totam tenetur eveniet neque dolore nulla a consectetur amet, aliquam at voluptates illo labore!</h3>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
         </div>
     </div>

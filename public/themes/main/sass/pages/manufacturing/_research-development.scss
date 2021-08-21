@@ -317,7 +317,7 @@
             @include marginBottom(80, "+");
 
             .title {
-                @include marginBottom(25, "+");
+                @include marginBottom(10, "+");
                 
                 @media only screen and (max-width: 600px){
                    

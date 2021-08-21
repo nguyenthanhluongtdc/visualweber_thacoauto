@@ -12,7 +12,7 @@
                 @endif
             </div>
         </div>
-
+ 
         @includeIf("theme.main::views.pages.support-industry.rnd-banner")
         
         <div class="section-info-more-wrapper font-pri">

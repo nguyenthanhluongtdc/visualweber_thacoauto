@@ -138,6 +138,7 @@
                 .title {
                     line-height: 1.1;
                     @include marginBottom(15,"+");
+                    @media only screen and (max-width: 400px){line-height: 0.7;}
                     .text1{
                         font-size: 25px;
                         @media only screen and (max-width: 600px){
@@ -164,13 +165,14 @@
 
                 .sub-title {
                     font-family: $font-primary;
+
                     @media only screen and (max-width: 600px){
                         font-size: 10px;
                        
                     }
-                    @media only screen and (max-width: 600px){
-                        font-size: 6px;
-                        margin-top: -10px;
+                    @media only screen and (max-width: 400px){
+                        font-size: 4px;
+                        margin-top: -12px;
                        
                     }
                 }
@@ -196,15 +198,36 @@
 
                 .item {
                     display: grid;
-                    grid-template-columns: 35% 100%;
+                    grid-template-columns: 20% 100%;
                     color: $color-white;
                     align-items: flex-end;
+                    @include marginRight(5,"+");
                     @include marginBottom(30,"+");
+                    @media only screen and (max-width: 600px){
+                        @include marginBottom(7,"+");
+                       
+                    }
+                    @media only screen and (max-width: 400px){
+                       margin-bottom: -7px;
+                       
+                    }
                     .symbol{
                         @media only screen and (max-width: 600px){
                             margin-top: -10px;
                            
                         }
+                       
+                        svg{
+                            width: 30px;
+                            height: 28px;
+                            padding-bottom: -20px;
+                            @media only screen and (max-width: 400px){
+                                width: 20px;
+                                height: 18px;
+                               
+                            }
+                        }
+                       
                     }
                     .description {
                         @media only screen and (max-width: 600px){
@@ -212,15 +235,24 @@
                             margin-top: 20px;
                            
                         }
+                        @media only screen and (max-width: 400px){
+                            padding-left: 7px;
+                            margin-top: 18px;
+                           
+                        }
                         .number {
-                            font-size: 25px;
+                            font-size: 20px;
                             font-weight: bold;
+                            @media only screen and (max-width: 768px){
+                                font-size: 18px;
+                               
+                            }
                             @media only screen and (max-width: 600px){
-                                font-size: 20px;
+                                font-size: 15px;
                                
                             }
                             @media only screen and (max-width: 400px){
-                                font-size: 15px;
+                                font-size: 12px;
                                
                             }
                         }
@@ -228,12 +260,16 @@
                         .text {
                             font-size: 18px;
                             font-family: $font-cond;
+                            @media only screen and (max-width: 768px){
+                                font-size: 15px;
+                               
+                            }
                             @media only screen and (max-width: 600px){
-                                font-size: 12px;
+                                font-size: 10px;
                                
                             }
                             @media only screen and (max-width: 400px){
-                                font-size: 10px;
+                                font-size: 8px;
                                
                             }
                         }

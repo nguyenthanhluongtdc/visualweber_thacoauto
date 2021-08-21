@@ -102,7 +102,7 @@
                 @endforeach
             @endif
         </div>
-        {{-- <div class="right">
+        <div class="right">
             <div class="top" data-aos="fade-left" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="250">
             @if (!empty(get_featured_posts_by_category(22, 1)))
                 @foreach (get_featured_posts_by_category(22, 1) as $post)
@@ -185,7 +185,7 @@
                     </div>
                 </div>
             </div>
-        </div> --}}
+        </div>
     </div>
 </div>
 

@@ -381,7 +381,7 @@
                         @for ($i = 4; $i < $count; $i++)
                             <div class="section-criteria__content__box" data-aos="fade-up">
                                 <div class="box-center-bark">
-                                    <img src="{{Storage::disk('public')->exists(has_sub_field($criteria[$i], 'image')) ? get_image_url(has_sub_field($$criteria[$i], 'image')) : RvMedia::getDefaultImage()}}" alt="">
+                                    <img src="{{Storage::disk('public')->exists(has_sub_field($criteria[$i], 'image')) ? get_image_url(has_sub_field($criteria[$i], 'image')) : RvMedia::getDefaultImage()}}" alt="">
                                     <div class="defect-shape">
                                         <div class="box-center">
                                             <img src="{{get_image_url(has_sub_field($criteria[$i], 'symbol'))}}" alt="">

@@ -1,7 +1,7 @@
 .section-support-industry-overview {
-    @media only screen and (max-width: 1080px){
-        display: none;                
-    }
+    // @media only screen and (max-width: 1080px){
+    //     display: none;                
+    // }
     .mechandical-overview {
         
         &__boxfield {
@@ -14,7 +14,7 @@
             
             // height: 215px;
             .item{
-                height: 190px;
+                // height: 190px;
                 position: relative;
                 .text{
                     // background-color: aqua;
@@ -28,27 +28,27 @@
                    }
                 }
                 
-                @media(max-width : 1720px){
-                    height: 180px;
+                // @media(max-width : 1720px){
+                //     height: 180px;
                    
-                }   
-                @media(max-width : 1600px){
-                    height: 160px;
+                // }   
+                // @media(max-width : 1600px){
+                //     height: 160px;
                     
-                } 
-                @media(max-width : 1400px){
-                    height: 150px;
+                // } 
+                // @media(max-width : 1400px){
+                //     height: 150px;
                    
-                } 
-                @media(max-width : 1300px){
-                    height: 135px;
+                // } 
+                // @media(max-width : 1300px){
+                //     height: 135px;
                    
-                } 
+                // } 
               
-                @media(max-width : 1100px){
-                    height: 120px;
+                // @media(max-width : 1100px){
+                //     height: 120px;
                    
-                }
+                // }
             }
             .boxfield-item {
                 display: flex;
@@ -57,12 +57,12 @@
                 justify-content: center;
                 max-width: 15%;
                 flex: 0 0 15%;
+                background-color: #F5F5F5;
                 
                 text-align: center;
                 margin-right: 2%;
-                padding: 1%;
+                padding: 2%;
                 max-width: 215px;
-                background-color: #f1f1f1;
                 
                 img{
                     margin-bottom: 5%;
@@ -79,6 +79,37 @@
                     padding-left: 15px;
                     padding-right: 15px;
                     margin-right: 0;
+                    height: auto;
+                    background-color: transparent;
+                    // @include mobileHeight(420);
+
+                    .content {
+                        background-color: #F5F5F5;
+                        height: 100%;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 30% 10%;
+                        img {
+                            margin-bottom: 0;
+                            width: auto;
+                            max-width: 100%;
+                        }
+                        .name {
+                            @include mobileMarginTop(26, "+");
+                        }
+
+                        @media(max-width: 576px) {
+                            padding: 20% 10%;
+                        }
+                    }
+                }
+
+                @media (max-width: 576px) {
+                    .content {
+                        padding: 20%;
+                    }
                 }
             }
             .boxfield-item:last-child {

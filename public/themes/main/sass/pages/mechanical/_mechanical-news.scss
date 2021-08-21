@@ -73,6 +73,8 @@
                         height: 226px;
                         @include width(230);
                         @include height(226);
+                        line-height: initial;
+                        
                         >div {
                             flex: 0 0 100%;
                             max-width: 100%;
@@ -82,7 +84,6 @@
                             font-size: 40px;
                             text-transform: uppercase;
                             font-weight: bold;
-                            line-height: .8;
                         }
                         .year {
                             font-size: 20px;

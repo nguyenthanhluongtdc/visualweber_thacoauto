@@ -138,6 +138,7 @@
                 .title {
                     line-height: 1.1;
                     @include marginBottom(15,"+");
+                    @media only screen and (max-width: 600px){line-height: 0.9;}
                     @media only screen and (max-width: 400px){line-height: 0.7;}
                     .text1{
                         font-size: 25px;
@@ -167,7 +168,8 @@
                     font-family: $font-primary;
 
                     @media only screen and (max-width: 600px){
-                        font-size: 10px;
+                        font-size: 6px;
+                        margin-top: -10px;
                        
                     }
                     @media only screen and (max-width: 400px){

@@ -14,7 +14,7 @@
                 @if(has_field($page, 'repeater_module_mechanical'))
                 @foreach(has_field($page, 'repeater_module_mechanical') as $row)
                <div class="boxfield-item">
-                   <img src="{{ has_sub_field($row, 'symbol') }}" alt="{!! has_sub_field($row, 'symbol') !!}" alt="">
+                   <img src="{{get_image_url(has_sub_field($row, 'symbol'))}}" alt="">
                    <p class="font24 font-pri-bold name text-uppercase">{!! has_sub_field($row, 'name') !!}</p>
                </div>
                @endforeach

@@ -18,7 +18,7 @@
                 @if(has_field($page, 'repeater_module_production_assemble'))
                 @foreach(has_field($page, 'repeater_module_production_assemble') as $row)
                <div class="boxfield-item item">
-                <img src="{{ has_sub_field($row, 'symbol') }}" alt="{!! has_sub_field($row, 'symbol') !!}" alt="">
+                <img src="{{get_image_url(has_sub_field($row, 'symbol'))}}" alt="">
                     <div class="text">
                         <p class="font24 font-pri-bold name">{!! has_sub_field($row, 'name') !!}</p>
                     </div>
@@ -98,7 +98,7 @@
                @if(has_field($page, 'repeater_module_production_assemble'))
                @foreach(has_field($page, 'repeater_module_production_assemble') as $row)
                <div class="boxfield-item item col-md-5 col-sm-5 col-5">
-                <img src="{{ has_sub_field($row, 'symbol') }}" alt="{!! has_sub_field($row, 'symbol') !!}" alt="">
+                <img src="{{get_image_url(has_sub_field($row, 'symbol'))}}" alt="">
                 <div class="text">
                     <p class="fontmb-medium font-pri-bold name">{!! has_sub_field($row, 'name') !!}</p>
                 </div>

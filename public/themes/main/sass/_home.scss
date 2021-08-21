@@ -819,6 +819,13 @@
                     width: 50%;
                     text-align: center;
 
+                    .symbol {
+                        img {
+
+                            max-width: 90%;
+                        }
+                    }
+
                     p {
                         margin-top: 40px;
                         text-transform: uppercase;

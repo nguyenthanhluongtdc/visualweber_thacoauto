@@ -231,7 +231,7 @@
   #mobileNav {
     padding: 5px;
     background-color: #01498B;
-    @include mobileHeight(130);
+    @include mobileHeight(100);
     display: none;
 
     @media (max-width: 1080px) {
@@ -244,12 +244,24 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-    }
-    .icon-menu {
-        margin-left: auto;
-        transition: margin 400ms;
-        @include mobileWidth(63);
-        @include mobileHeight(64);
+        .logo{
+            width: 45%;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+        .icon-menu {
+            margin-left: auto;
+            transition: margin 400ms;
+            @include mobileWidth(63);
+            @include mobileHeight(64);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 0.7% 0;
+        }
     }
 
     #top-nav {
@@ -270,10 +282,7 @@
         cursor: pointer;
         display: block;
         @include mobileWidth(63);
-        @include mobileMarginBottom(10, "+");
-        @include mobileMarginTop(10, "+");
-        @include mobileHeight(8);
-        margin-bottom: 5px;
+        @include mobileHeight(7);
         position: relative;
         background: white;
         border-radius: 3px;
@@ -290,10 +299,7 @@
         transform-origin: 0% 100%;
     }
     #top-nav:checked ~ .icon-menu .hamburgerspan {
-        transform: rotate(-45deg) translate(-20px, 0px);
-        @media (max-width: 768px) {
-            transform: rotate(-45deg) translate(-13px, 0px)
-        }
+        transform: rotate(-45deg) translate(-20%, 0px);
     }
     #top-nav:checked ~ .icon-menu .hamburgerspan:nth-last-child(3) {
         display: none;
@@ -301,14 +307,9 @@
     }
     #top-nav:checked ~ .icon-menu .hamburgerspan:nth-last-child(2) {
         opacity: 1;
-        transform: rotate(45deg) translate(-16px, 0);
-
-        @media (max-width: 768px) {
-            transform: rotate(45deg) translate(-10px, 0)
-        }
+        transform: rotate(45deg) translate(-20%, 0);
     }
     input[id^="menu-"] {
-        height: 60px;
         flex-grow: 1;
         margin: 0;
         cursor: pointer;
@@ -317,7 +318,6 @@
     div[id^="menu-cont-"] {
         border-right: 1px solid #ccc;
         background-color: #fff;
-        padding: 5px;
         box-sizing: border-box;
         margin: 0;
         height: 100vh;
@@ -334,15 +334,10 @@
     #top-nav:checked , #top-nav:checked ~ .icon-menu{
         position: fixed;
         right: 0;
-        top: 5%;
+        top: 1.5%;
         margin-right: 20%;
         z-index: 1100;
         transform: translateY(0);
-
-        @media (max-width: 768px) {
-            top: 3%;
-            margin-right: 23%;
-        }
     }
 
     #top-nav:checked ~ .icon-menu .hamburgerspan{
@@ -357,10 +352,8 @@
     li.nav-item {
         width: 100%;
         list-style: none;
-        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-        height: 60px;
-        line-height: 60px;
-        padding-left: 20px;
+        padding: 3% 0;
+        padding-left: 3%;
         display: flex;
         border-bottom: 1px solid #ccc;
         box-sizing: border-box;
@@ -380,7 +373,7 @@
     }
     .menu-ul {
         padding: 0;
-        @include mobileMarginTop(95, "+");
+        @include mobileMarginTop(85, "+");
     }
     .nav-item.sub-menu:after {
         z-index: -1;
@@ -397,8 +390,12 @@
         border-left-style: solid;
         border-left-width: 2px;
         display: block;
-        width: 15px;
-        height: 15px;
+        width: 3.5vw;
+        height: 3.5vw;
+        max-width: 15px;
+        max-height: 15px;
+        min-width: 7px;
+        min-height: 7px;
         margin-bottom: -5px;
         position: absolute;
         right: 20px;
@@ -412,22 +409,18 @@
         border-top-color: currentcolor;
         border-left: none;
         border-left-color: currentcolor;
-        margin-top: 20px;
     }
     label.menu-label {
         width: 100%;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding: 3.8% 3% 3%;
         display: block;
         border-bottom: 1px solid #ccc;
         color: white;
-        font-weight: bold;
         box-sizing: border-box;
         background-color:$color-primary;
     }
     label.menu-label:before {
         float:left;
-        margin-top: 20px;
         margin-right: 10px;
         margin-left:0px;
         -webkit-transform: rotate(135deg);

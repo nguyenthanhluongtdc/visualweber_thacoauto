@@ -356,11 +356,20 @@ $max) {
     @media (max-width: 1080px) {
         width: #{$size}px;
     }
-    @media only screen and (max-width: 768px) {
+    @media (max-width: 991px) {
+        width: #{MobilecalculatorPixel($size, 991)}px;
+    }
+    @media (max-width: 768px) {
         width: #{MobilecalculatorPixel($size, 768)}px;
     }
     @media (max-width: 576px) {
         width: #{MobilecalculatorPixel($size, 576)}px;
+    }
+    @media (max-width: 480px) {
+        width: #{MobilecalculatorPixel($size, 480)}px;
+    }
+    @media (max-width: 360px) {
+        width: #{MobilecalculatorPixel($size, 360)}px;
     }
 }
 
@@ -369,11 +378,20 @@ $max) {
     @media (max-width: 1080px) {
         height: #{$size}px;
     }
-    @media only screen and (max-width: 768px) {
+    @media (max-width: 991px) {
+        height: #{MobilecalculatorPixel($size, 991)}px;
+    }
+    @media (max-width: 768px) {
         height: #{MobilecalculatorPixel($size, 768)}px;
     }
     @media (max-width: 576px) {
         height: #{MobilecalculatorPixel($size, 576)}px;
+    }
+    @media (max-width: 480px) {
+        height: #{MobilecalculatorPixel($size, 480)}px;
+    }
+    @media (max-width: 360px) {
+        height: #{MobilecalculatorPixel($size, 360)}px;
     }
 }
 

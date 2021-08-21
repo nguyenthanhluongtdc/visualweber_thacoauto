@@ -312,19 +312,19 @@
 <div class="section-shareholder-home container-remake">
     <div class="shareholder-home-top" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out">
         <h2 class="font-pri-bold font60 color-gray fontmb-large">Quan hệ cổ đông</h2>
-        <div class="menu-tab-right font20 fontmb-litte">
+        <div class="menu-tab-right font20 fontmb-little">
             <ul class="nav nav-pills font-pri-bold color-gray fontmb-small" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link fontmb-litte active" data-toggle="pill" href="#shareholder1">Công bố thông tin</a>
+                    <a class="nav-link fontmb-little active" data-toggle="pill" href="#shareholder1">Công bố thông tin</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fontmb-litte" data-toggle="pill" href="#shareholder2">Thông tin cổ đông</a>
+                    <a class="nav-link fontmb-little" data-toggle="pill" href="#shareholder2">Thông tin cổ đông</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fontmb-litte" data-toggle="pill" href="#shareholder3">Báo cáo thường nhiên</a>
+                    <a class="nav-link fontmb-little" data-toggle="pill" href="#shareholder3">Báo cáo thường nhiên</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fontmb-litte" data-toggle="pill" href="#shareholder4">Báo cáo tài chính</a>
+                    <a class="nav-link fontmb-little" data-toggle="pill" href="#shareholder4">Báo cáo tài chính</a>
                 </li>
             </ul>
             <div class="link-views-all font-pri-bold font18 fontmb-small color-gray">

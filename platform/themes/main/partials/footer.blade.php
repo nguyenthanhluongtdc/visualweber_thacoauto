@@ -12,11 +12,11 @@
             </a>
             <div class="thaco-contact">
                 <h2 class="name-company font-pri-bold color-pri font32">CÔNG TY TNHH THACO AUTO</h2>
-                <p class="address font-pri font18">
+                <p class="address font-pri font18 fontmb-little">
                     <span>Địa chỉ:</span>
                     <span>KCN Cơ khí ô tô Chu Lai Trường Hải, Xã Tam Hiệp, Huyện Núi Thành, Tỉnh Quảng Nam ( Tìm vị trí )</span>
                 </p>
-                <p class="tax-code font-pri font18  ">
+                <p class="tax-code font-pri font18 fontmb-little  ">
                     <span>Mã số thuế:</span>
                     <span> 4001221658</span>
                 </p>
@@ -36,7 +36,7 @@
         <div class="footer-right">
                 <div class="item">
                     <h2 class="title font-pri-bold font30 color-gray">Giới thiệu</h2>
-                    <ul class="font-pri font18 list-link">
+                    <ul class="font-pri font18 fontmb-little list-link">
                         <li><a href="" class="color-gray">Lĩnh vực hoạt động</a></li>
                         <li><a href="" class="color-gray">Sản phẩm dịch vụ</a></li>
                         <li><a href="" class="color-gray">Công ty tỉnh thành</a></li>
@@ -44,7 +44,7 @@
                 </div>
                 <div class="item">
                     <p class="title font-pri-bold font30 color-gray">Truyền thông</p>
-                    <ul class="font-pri font18 list-link">
+                    <ul class="font-pri font18 fontmb-little list-link">
                         <li><a href="" class="color-gray">Tin tức hoạt động</a></li>
                         <li><a href="" class="color-gray">Hoạt động cộng đồng</a></li>
                         <li><a href="" class="color-gray">Bản tin Thaco Auto</a></li>
@@ -52,7 +52,7 @@
                 </div>
                 <div class="item">
                     <h2 class="title font-pri-bold font30 color-gray">Liên hệ</h2>
-                    <ul class="font-pri font18 list-link">
+                    <ul class="font-pri font18 fontmb-little list-link">
                         <li class="color-gray"><span>Hotline: </span><span><a href="tel:0980909789" class="color-gray">0980909789</a></span></li>
                         <li class="color-gray"><span>Email: </span><span><a href="mailto:Thacoauto@gmail.com" class="color-gray">Thacoauto@gmail.com</a></span></li>
                         <li class="color-gray"><span>Fax: </span><span><a href="tel:0980909789" class="color-gray">0980909789</a></span></li>
@@ -60,7 +60,7 @@
                 </div>
                 <div class="item">
                     <h2 class="title font-pri-bold font30 color-gray">Chính sách bảo mật thông tin</h2>
-                    <ul class="font-pri font18 list-link">
+                    <ul class="font-pri font18 fontmb-little list-link">
                         <li><a href="" class="color-gray">Chính sách bảo mật</a></li>
                         <li><a href="" class="color-gray">Các điều khoản và điều kiện</a></li>
                     </ul>

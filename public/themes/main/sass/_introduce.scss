@@ -604,7 +604,11 @@
             }
             .swiper-button-prev {
                 left: 0;
-                transform: translateX(-100%)
+                transform: translateX(-100%);
+
+                @media(max-width: 576px) {
+                    transform: translateX(0);
+                }
             }
         }
 
@@ -721,8 +725,8 @@
                                 color: white;
                                 // font-size: 20px;
                                 line-height: 26px;
-                                @include marginTop(10, "+");
-                                @include marginBottom(8, "+");
+                                @include mobileMarginTop(15, "+");
+                                @include mobileMarginBottom(20, "+");
                                 // @media(max-width: 1680px) {
                                 //     font-size: 18px;
                                 // }
@@ -741,9 +745,9 @@
                                 //     font-size: 13px;
                                 // }
 
-                                @media (max-width: 1080px) {
-                                    margin: 0;
-                                }
+                                // @media (max-width: 1080px) {
+                                //     margin: 0;
+                                // }
                             }
 
                             .des {
@@ -865,8 +869,8 @@
             &.mobile {
                 display: block;
 
-                .container-remake {
-                    width: 90%;
+                .container-remake-fullRight {
+                    width: 95%;
                     margin-left: auto;
                     margin-right: 0;
                 }

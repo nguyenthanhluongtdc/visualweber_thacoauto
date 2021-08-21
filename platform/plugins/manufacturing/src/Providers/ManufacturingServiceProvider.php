@@ -44,7 +44,7 @@ class ManufacturingServiceProvider extends ServiceProvider
                 'priority'    => 5,
                 'parent_id'   => null,
                 'name'        => 'plugins/manufacturing::manufacturing.name',
-                'icon'        => 'fa fa-list',
+                'icon'        => 'fa fa-cubes',
                 'url'         => route('manufacturing.index'),
                 'permissions' => ['manufacturing.index'],
             ]);

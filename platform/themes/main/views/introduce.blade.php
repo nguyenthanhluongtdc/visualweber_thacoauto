@@ -403,20 +403,23 @@
     </div>
 
     <div class="section-criteria-wrapper mobile">
-        <div class="container-remake">
+        
             <div class="section-criteria__header">
-                <h2 class="section-criteria__header__title fontmb-large font60 font-pri-bold"
-                data-aos="fade-right">
-                    @if(has_field($page, 'title_module_tieuchi_introduce'))
-                        {!! has_field($page, 'title_module_tieuchi_introduce') !!}
+                <div class="container-remake">
+                    <h2 class="section-criteria__header__title fontmb-large font60 font-pri-bold"
+                    data-aos="fade-right">
+                        @if(has_field($page, 'title_module_tieuchi_introduce'))
+                            {!! has_field($page, 'title_module_tieuchi_introduce') !!}
+                        @endif
+                    </h2>
+                    @if(has_field($page, 'description_module_tieuchi_introduce'))
+                        <p class="section-criteria__headers__des" data-aos="fade-right">
+                            {!! has_field($page, 'description_module_tieuchi_introduce') !!}
+                        </p>
                     @endif
-                </h2>
-                @if(has_field($page, 'description_module_tieuchi_introduce'))
-                    <p class="section-criteria__headers__des" data-aos="fade-right">
-                        {!! has_field($page, 'description_module_tieuchi_introduce') !!}
-                    </p>
-                @endif
+                </div>
             </div>
+        <div class="container-remake-fullRight">
             @if(!empty($criteria)))
                 <div class="section-criteria-swiper">
                     <div class="swiper-container mySwiper">
@@ -429,10 +432,10 @@
                                             <div class="defect-shape">
                                                 <div class="box-center">
                                                     <img src="{{get_image_url(has_sub_field($row, 'symbol'))}}" alt="">
-                                                    <div class="name font20">
+                                                    <div class="name font20 fontmb-medium">
                                                         {!! has_sub_field($row, 'title') !!}
                                                     </div>
-                                                    <div class="des">
+                                                    <div class="des fontmb-small">
                                                         {!! has_sub_field($row, 'description') !!}
                                                     </div>
                                                 </div>
@@ -507,10 +510,13 @@
             spaceBetween: 15,
             breakpoints: {
                 0: {
-                    slidesPerView: 1.5,
+                    slidesPerView: 1.8,
+                },
+                576: {
+                    slidesPerView: 2.2,
                     spaceBetween: 20,
                 },
-                768: {
+                700: {
                     slidesPerView: 2.5,
                     spaceBetween: 15,
                 },

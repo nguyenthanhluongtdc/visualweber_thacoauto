@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'name'   => 'Manufacture',
+    'name'   => 'Sản xuất',
     'create' => 'New manufacture',
     'edit'   => 'Edit manufacture',
 ];

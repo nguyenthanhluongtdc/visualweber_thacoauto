@@ -145,6 +145,7 @@
             <div class="col-md-4 img-detail">
                 <div class="image">
                     <div class="post-thumbnail">
+                        
                         <a href=""><img src="{{ Theme::asset()->url('images/contact/detail-contcact1.png') }}" alt="img-detail"></a>
                     </div>
                 </div>

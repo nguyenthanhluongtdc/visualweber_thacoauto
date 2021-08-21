@@ -77,6 +77,10 @@
                                     width: 20%;
                                     height: 25%;
                                 }
+                                @media only screen and (max-width: 768px){
+                                    width: 18%;
+                                    height: 25%;
+                                }
                                 
                                 @media only screen and (max-width: 600px){
                                     width: 22%;
@@ -103,7 +107,7 @@
                                     }
                                     @media only screen and (max-width: 992px){
                                         font-size: 35px;
-                                        line-height: 35px;
+                                        line-height: 30px;
                                     }
                                     @media only screen and (max-width: 768px){
                                         font-size: 30px;
@@ -111,11 +115,11 @@
                                     }
                                     @media only screen and (max-width: 600px){
                                         font-size: 18px;
-                                        line-height: 18px;
+                                        line-height: 15px;
                                     }
                                     @media only screen and (max-width: 400px){
                                         font-size: 15px;
-                                        line-height: 15px;
+                                        line-height: 12px;
                                     }
                                 }
                                 .year {

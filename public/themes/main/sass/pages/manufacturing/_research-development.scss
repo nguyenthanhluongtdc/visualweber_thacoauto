@@ -48,7 +48,7 @@
             .column-left {
                 padding-right: 100px;
                 .title {
-                    @include marginBottom(15,"+");
+                    @include marginBottom(10,"+");
                     line-height: 1.1;
                 }
 
@@ -163,7 +163,7 @@
                            
                         }
                         @media only screen and (max-width: 400px){
-                            font-size: 25px;
+                            font-size: 20px;
                             
                            
                         }

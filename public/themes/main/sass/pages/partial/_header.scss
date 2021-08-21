@@ -233,9 +233,10 @@
 
 //menu mobile
 #mobileNav {
-  padding: 5px;
-  background-color: #01498b;
-  @include mobileHeight(100);
+  //   padding: 5px;
+  height: 56px;
+  background-color: $color-primary;
+  //   @include mobileHeight(100);
   display: none;
 
   @media (max-width: 1080px) {
@@ -249,22 +250,35 @@
     align-items: center;
     justify-content: space-between;
     .logo {
-      width: 45%;
+      //   width: 45%;
+      //   img {
+      // width: 100%;
+      // height: auto;
+      //   }
+      display: block;
       img {
-        width: 100%;
-        height: auto;
+        width: auto;
+        position: relative;
+        top: -2px;
+
+        @include maxWidth(640) {
+          height: 15px;
+        }
       }
     }
     .icon-menu {
       margin-left: auto;
       transition: margin 400ms;
-      @include mobileWidth(63);
-      @include mobileHeight(64);
+      //   @include mobileWidth(37);
+      //   @include mobileHeight(64);
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      padding: 0.7% 0;
+      //   padding: 0.7% 0;
+      //   display: none;
+      height: 37px;
+      width: 37px;
     }
   }
 
@@ -285,8 +299,11 @@
   .hamburgerspan {
     cursor: pointer;
     display: block;
-    @include mobileWidth(63);
-    @include mobileHeight(7);
+    // @include mobileWidth(63);
+    // @include mobileHeight(7);
+    width: 30px;
+    height: 2px;
+
     position: relative;
     background: white;
     border-radius: 3px;
@@ -339,7 +356,7 @@
   #top-nav:checked ~ .icon-menu {
     position: fixed;
     right: 0;
-    top: 1.5%;
+    top: 0.5%;
     margin-right: 20%;
     z-index: 1100;
     transform: translateY(0);
@@ -377,8 +394,8 @@
     border: 0;
   }
   .menu-ul {
-    padding: 0;
-    @include mobileMarginTop(85, "+");
+    padding: 64px 0 0;
+    // @include mobileMarginTop(85, "+");
   }
   .nav-item.sub-menu:after {
     z-index: -1;

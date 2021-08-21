@@ -95,8 +95,8 @@
                     <div class="top">
                         <img width="" height="" src="{{get_image_url(has_sub_field($item,'image_news_research_development'))}}" alt="" />
                     </div>
-                    <div class="bottom">
-                        <p class="font-pri fontmb-little"> {!! has_sub_field($item, 'description_news_research_development') ? has_sub_field($item, 'description_news_research_development') : '' !!}</p>
+                    <div class="bottom  fontmb-little">
+                        <p class="font-pri"> {!! has_sub_field($item, 'description_news_research_development') ? has_sub_field($item, 'description_news_research_development') : '' !!}</p>
                     </div>
                 </div>
                 @endforeach

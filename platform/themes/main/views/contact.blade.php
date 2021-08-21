@@ -76,7 +76,7 @@
 
 <section class="section-info-contact-mobile" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="50">
     <div class="container-remake">
-        <h2 class="contact__title font-pri-bold text-uppercase">Thông tin cá nhân</h2>
+        <h2 class="contact__title font-pri-bold text-uppercase fontmb-large">Thông tin cá nhân</h2>
         <div class="info-contact">
            
             <div class="info-contact-form mb-6"> 

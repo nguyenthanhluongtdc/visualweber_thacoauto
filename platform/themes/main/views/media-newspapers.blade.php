@@ -25,7 +25,7 @@
                     </p>
                     
                     <div class="tags">
-                        <span class="name-tag font-pri-bold">Tags: </span>
+                        <span class="name-tag font-pri-bold font13">Tags: </span>
                         <div class="tag-list">
                             @foreach ($post->tags as $tag)
                             <p class="tag-title font-pri font13">

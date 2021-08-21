@@ -2,7 +2,7 @@
     <div class="container-remake">
         <div class="section-list-news">
             <div class="section-list-news-header  d-flex  align-items-center">
-                <h2 class="title font-pri-bold font40 text-uppercase">
+                <h2 class="title font-pri-bold font60 text-uppercase">
                     Tin tức
                 </h2>
 
@@ -43,8 +43,8 @@
                                 </p>
                             </div>
 
-                            <a href="#" title="{!!__('Read more')!!}" class="read-more text-dark font20 font-pri">
-                                {!!__('Read more')!!} <img width="" height=""
+                            <a href="{{$post->url}}" title="{!!__('Xem Thêm')!!}" class="read-more text-dark font20 font-pri">
+                                {!!__('Xem thêm')!!} <img width="" height=""
                                     src="{{Theme::asset()->url('images/mechandical/chevron-double-right.svg')}}"
                                     alt="" /></a>
                         </div>

@@ -53,7 +53,7 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="styled-input wide">
-                                    <textarea required></textarea>
+                                    <textarea rows="4" required></textarea>
                                     <label class="font20">nội dung</label>
                                 </div>
                             </div>

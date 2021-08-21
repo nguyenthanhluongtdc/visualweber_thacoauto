@@ -1,4 +1,12 @@
 
+.form-contact-only-mobile {
+    display: none;
+
+    @media(max-width: 1080px) {
+        display: block;
+    }
+}
+
 .section-mechanical-contact-again {
     
     .mechanical-contact {

@@ -142,52 +142,52 @@
                         <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin3.png') }}" alt=""></a>
                         <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt=""></a>
                         <a href="#"><img src="{{ Theme::asset()->url('images/main/diemtin3.png') }}" alt=""></a> --}}
-                        <img class="logo-frame" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
-                        <img class="logo-frame" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
-                        <img class="logo-frame" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
-                        <img class="logo-frame" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
-                        <img class="logo-frame" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
-                        <img class="logo-frame" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
-                        <img class="logo-frame" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
+                        <img class="logo-frame flag-1" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
+                        <img class="logo-frame flag-2" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
+                        <img class="logo-frame flag-3" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
+                        <img class="logo-frame flag-4" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
+                        <img class="logo-frame flag-5" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
+                        <img class="logo-frame flag-6" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
+                        <img class="logo-frame flag-7" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
                     </div>
                     <div id="cells">
-                        <div class="cell-item citem-1">
+                        <div class="cell-item flag-1">
                             <img src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
                             <span class="font-pri-bold fontmb-small">
                                 <a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
                             </span>
                         </div>
-                        <div class="cell-item citem-2">
+                        <div class="cell-item flag-2">
                             <img src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
                             <span class="font-pri-bold fontmb-small">
                                 <a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
                             </span>
                         </div>
-                        <div class="cell-item citem-3">
+                        <div class="cell-item flag-3">
                             <img src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
                             <span class="font-pri-bold fontmb-small">
                                 <a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
                             </span>
                         </div>
-                        <div class="cell-item citem-4">
+                        <div class="cell-item flag-4">
                             <img src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
                             <span class="font-pri-bold fontmb-small">
                                 <a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
                             </span>
                         </div>
-                        <div class="cell-item citem-5">
+                        <div class="cell-item flag-5">
                             <img src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
                             <span class="font-pri-bold fontmb-small">
                                 <a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
                             </span>
                         </div>
-                        <div class="cell-item citem-6">
+                        <div class="cell-item flag-6">
                             <img src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
                             <span class="font-pri-bold fontmb-small">
                                 <a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
                             </span>
                         </div>
-                        <div class="cell-item citem-7">
+                        <div class="cell-item flag-7">
                             <img src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
                             <span class="font-pri-bold fontmb-small">
                                 <a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>

@@ -181,17 +181,22 @@
                     }
 
                     .title {
-                        font-size: 25px;
                         text-transform: uppercase;
                         margin-bottom: 0;
+                        @media (max-width: 1080px) {
+                            cursor: pointer;
 
-                        @media (max-width: 576px) {
-                            font-size: 20px;
                         }
                     }
 
                     .list-link {
                         display: none;
+                        margin-bottom: 0;
+                        padding: 2%;
+                    }
+                    .active{
+                        display: block;
+                        
                     }
                 }
 

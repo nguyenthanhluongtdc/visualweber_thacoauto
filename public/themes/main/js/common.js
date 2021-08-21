@@ -43,12 +43,7 @@ $('.post-relate-carousel').owlCarousel({
         }
     }
 });
-$('#cells').on('scroll', function () {
-    $('#hours').scrollTop($(this).scrollTop());
-});
-$('#hours').on('scroll', function () {
-    $('#cells').scrollTop($(this).scrollTop());
-});
+
 
 var galleryTop = new Swiper('.distribution-slide-left', {
     centeredSlides: true,
@@ -268,6 +263,24 @@ var Helper = {
                     }
             });
         }
+    },
+    scrollNewsHomepage: () => {
+        if($('#hours .logo-frame').length>0){
+            var numOfHours = $('#hours .logo-frame').length
+            if(numOfHours != null){
+                for(i=1; i <= numOfHours; i++){
+                    var cellHeight = $('#cells').children('.flag-'+i).height()
+                    $('#hours').children('.flag-'+i).height(cellHeight)
+                }
+            }
+            
+            $('#cells').on('scroll', function () {
+                $('#hours').scrollTop($(this).scrollTop());
+            });
+            $('#hours').on('scroll', function () {
+                $('#cells').scrollTop($(this).scrollTop());
+            });
+        }
     }
 };
 
@@ -321,7 +334,7 @@ var Ajax = {
                 Ajax.postData();
             })
         }
-    }
+    },
 
 }
 
@@ -334,7 +347,9 @@ $(document).ready(function () {
     Helper.addSelect2toCarFilterProvinces();
     Helper.RangeFilterBranddetail();
     Helper.dropdownCarVersions();
+    Helper.scrollNewsHomepage();
 });
+
 
 $(document).ready(function(){
     var docEl = $(document),
@@ -350,7 +365,13 @@ $(document).ready(function(){
             scrollTop: $top
         }, 500);
     });
+    $(document).on('click', '#menu-footer', function(){
+        console.log($(this).parent().find('.list-link'));
+        $(this).parent().find('.list-link').toggleClass('active')
+    })
 });
+
+
 
 // counter
 if($('.counter-value').length > 0){

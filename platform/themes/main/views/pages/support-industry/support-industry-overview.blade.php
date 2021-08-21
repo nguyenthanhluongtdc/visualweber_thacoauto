@@ -15,11 +15,11 @@
             <div class="mechandical-overview__boxfield">
                 @if(has_field($page, 'repeater_module_overview_sindustry'))
                     @foreach(has_field($page, 'repeater_module_overview_sindustry') as $row)
-                        <div class="boxfield-item">
-                            <div class="bg-color h-100 w-100">
+                        <div class="boxfield-item item">
+                           
                                 <img src="{{get_image_url(has_sub_field($row, 'symbol'))}}" alt="">
                                 <p class="font24 font-pri-bold name"> {!! has_sub_field($row, 'name') !!} </p>
-                            </div>
+
                         </div>
                     @endforeach
                 @endif
@@ -27,7 +27,7 @@
         </div>
     </div>
 </div>
-{{-- <div class="section-support-industry-overview-mobile">
+<div class="section-support-industry-overview-mobile">
     <div class="container-remake">
         <div class="mechandical-overview mt-60 mb-60">
             @if(has_field($page, 'name_module_overview_sindustry'))
@@ -65,4 +65,4 @@
 </div>
 </div>
 </div>
-</div> --}}
+</div>

@@ -37,9 +37,12 @@
                     </ul>
                     @if(has_field($page, 'repeater_bottom_research_development'))
                     @foreach(has_field($page, 'repeater_bottom_research_development') as $item)
-                    <p class="fontmb-little">
-                        {!! has_sub_field($item, 'content_bottom_research_development') ? has_sub_field($item, 'content_bottom_research_development') : '' !!}
-                    </p>
+                    <div class="fontmb-little">
+                        <p>
+                            {!! has_sub_field($item, 'content_bottom_research_development') ? has_sub_field($item, 'content_bottom_research_development') : '' !!}
+                        </p>
+                    </div>
+                   
 
                    
                     @endforeach

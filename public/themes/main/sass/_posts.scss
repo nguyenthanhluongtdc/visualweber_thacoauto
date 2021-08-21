@@ -428,6 +428,7 @@
             .title{
                 width: 64%;
                 text-align: justify;
+                margin: 0;
                 a{
                     color: #303030;
                 text-align: justify;
@@ -467,6 +468,7 @@
         }
 
         .list-post-new {
+            display: none;
             width: 100%;
         }
     }

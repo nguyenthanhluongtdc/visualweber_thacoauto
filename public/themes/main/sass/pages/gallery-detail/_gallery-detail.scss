@@ -2,6 +2,9 @@
     background: rgb(0, 0, 0, 0.3);
     border: 2vw;
     padding: 1.5vw;
+    @media (max-width: 1080px){
+        padding: 3.5vw;
+    }
     .fancybox-button{
         color: white;
     }
@@ -9,19 +12,20 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        justify-content: start;
+        justify-content: center;
         
         .gallery-pic{
-            margin: 0 2%;
-            margin-bottom: 2%;
             
             img{
-                padding: 1%;
-                width: 20vw;
-                height: 12vw;
-                background-color: white;
+                padding: 3%;
+                width: 25vw;
+                height: 14vw;
                 position: relative;
                 transition: 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+                @media (max-width: 1080px){
+                    width: 40vw;
+                    height: 25vw;
+                }
                 &:hover{
                     background-color: $color-primary;
                 }

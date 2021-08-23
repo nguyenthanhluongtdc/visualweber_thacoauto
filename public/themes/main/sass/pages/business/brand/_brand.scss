@@ -15,14 +15,14 @@
     line-height: 1.5;
     margin: 0 auto;
     display: flex;
-    margin-bottom: 10%;
+    margin-bottom: 3%;
     @media only screen and (max-width: 1080px){
-        // padding-bottom: 25%;
+        margin-bottom: 3%;
         
     }
     @media only screen and (max-width: 767px){
-        //   padding-bottom: 35%;
-            
+        margin-bottom: 3%;
+        
     }
     .tabs {
         @media only screen and (max-width: 1080px){

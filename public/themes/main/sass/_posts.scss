@@ -922,9 +922,9 @@
 .news-thaco-content{
     @include paddingTop(60);
     @include paddingBottom(100);
-
-    @include mobilePaddingTop(70);
-    @include mobilePaddingBottom(80);
+    @media (max-width: 1080px) {
+        padding-bottom: 0;
+    }
     
     .news-thaco-top{
         display: flex;

@@ -130,7 +130,8 @@
                     </div>
                 </div>
                 <div class="right">
-                    <img src="{{Theme::asset()->url('images/distribution/mapitem.png')}}" alt="">
+                    <div class="w-100 h-100" id="map"></div>
+                    <!-- <img src="{{Theme::asset()->url('images/distribution/mapitem.png')}}" alt=""> -->
                 </div>
             </div>
             <p data-aos="fade-left" data-aos-duration="1500" class="description mobile font20">THACO là doanh nghiệp hàng
@@ -143,92 +144,96 @@
     </div>
     <div class="activity-news-desktop">
         <div class="container-remake">
+            @php
+                $posts = get_posts_by_category(15, 4);
+            @endphp
             <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 mb-20 fontmb-large">tin
                 tức hoạt động</h1>
             <div class="activity-news-desktop__wrap">
+                @if (!empty($posts[0]))
                 <div data-aos="fade-right" data-aos-duration="1500" class="activity-news-desktop__item">
                     <div class="img-container">
                         <div class="skewed">
-                            <a href="#">
-                                <img src="{{Theme::asset()->url('images/distribution/news1.png')}}" alt="">
+                            <a href="{{$posts[0]->url}}">
+                                <img src="{{ Storage::disk('public')->exists($posts[0]->image) ? get_object_image($posts[0]->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Tin tức">
                             </a>
                         </div>
                     </div>
                     <div class="news-body">
-                        <a class="news-title font30" href="#">CÔNG TY TNHH MTV ĐỒNG PHƯỚC ĐẦU TƯ 5 XE MINI BUS IVECO
-                            DAILY</a>
-                        <p class="news-description font20">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                            do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse
-                            ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                        <a class="news-title font30" href="{{$posts[0]->url}}">{{$posts[0]->name}}</a>
+                        <p class="news-description font20">{{Str::words($posts[0]->description,40)}}</p>
                         <div class="news-info">
                             <div class="news-info__item font15">
-                                <p>Hà nội</p>
+                                <p>{{ \MetaBox::getMetaData($posts[0], 'region_post', true) ?? '--' }}</p>
                             </div>
                             <div class="news-info__item font15">
-                                <p>20-12-2021</p>
+                                <p>{{date_format($posts[0]->created_at,"d-m-Y")}}</p>
                             </div>
                         </div>
                     </div>
                 </div>
+                @endif
                 <div class="activity-news-desktop__item">
+                    @if (!empty($posts[1]))
                     <div data-aos="flip-up" data-aos-duration="1500" class="item-top news-body">
-                        <a class="news-title font25" href="#">THADICO ủng hộ 3 tỷ đồng cho Quỹ phòng, chống Covid-19
-                            tỉnh Bến Tre</a>
-                        <p class="news-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore</p>
+                        <a class="news-title font25" href="{{$posts[1]->url}}">{{$posts[1]->name}}</a>
+                        <p class="news-description">{{Str::words($posts[1]->description,40)}}</p>
                         <div class="news-info">
                             <div class="news-info__item font15">
-                                <p>Hà nội</p>
+                                <p>{{ \MetaBox::getMetaData($posts[1], 'region_post', true) ?? '--' }}</p>
                             </div>
                             <div class="news-info__item font15">
-                                <p>20-12-2021</p>
+                                <p>{{date_format($posts[1]->created_at,"d-m-Y")}}</p>
                             </div>
                         </div>
                     </div>
+                    @endif
+                    @if (!empty($posts[2]))
                     <div data-aos="flip-down" data-aos-duration="1500" class="item-bottom">
                         <div class="img-container">
                             <div class="skewed">
-                                <a href="#">
-                                    <img src="{{Theme::asset()->url('images/distribution/news2.png')}}" alt="">
+                                <a href="{{$posts[2]->url}}">
+                                    <img src="{{ Storage::disk('public')->exists($posts[2]->image) ? get_object_image($posts[2]->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Tin tức">
                                 </a>
                             </div>
                         </div>
                         <div class="news-body">
-                            <a class="news-title font25" href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6</a>
+                            <a class="news-title font25" href="{{$posts[2]->url}}">{{$posts[2]->name}}</a>
                             <div class="news-info">
                                 <div class="news-info__item font15">
-                                    <p>Hà nội</p>
+                                    <p>{{ \MetaBox::getMetaData($posts[2], 'region_post', true) ?? '--' }}</p>
                                 </div>
                                 <div class="news-info__item font15">
-                                    <p>20-12-2021</p>
+                                    <p>{{date_format($posts[2]->created_at,"d-m-Y")}}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    @endif
                 </div>
+                @if (!empty($posts[3]))
                 <div data-aos="fade-left" data-aos-duration="1500" class="activity-news-desktop__item">
                     <div class="img-container">
                         <div class="skewed">
-                            <a href="#">
-                                <img src="{{Theme::asset()->url('images/distribution/news3.png')}}" alt="">
+                            <a href="{{$posts[3]->url}}">
+                                <img src="{{ Storage::disk('public')->exists($posts[3]->image) ? get_object_image($posts[3]->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Tin tức">
                             </a>
                         </div>
                     </div>
                     <div class="news-body">
-                        <a class="news-title font30" href="#">BÀN GIAO LÔ XE CITY BUS THACO GARDEN 79CT PHỤC VỤ VẬN TẢI
-                            HÀNH KHÁCH CÔNG CỘNG</a>
-                        <p class="news-description fontmb-little">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a class="news-title font30" href="{{$posts[3]->url}}">{{$posts[3]->name}}</a>
+                        <p class="news-description fontmb-little">{{Str::words($posts[3]->description,40)}}</p>
                         <div class="news-info">
                             <div class="news-info__item font15">
-                                <p>Hà nội</p>
+                                <p>{{ \MetaBox::getMetaData($posts[3], 'region_post', true) ?? '--' }}</p>
                             </div>
                             <div class="news-info__item font15">
-                                <p>20-12-2021</p>
+                                <p>{{date_format($posts[3]->created_at,"d-m-Y")}}</p>
                             </div>
                         </div>
                     </div>
                 </div>
+                @endif
             </div>
         </div>
     </div>
@@ -238,128 +243,128 @@
             <h2 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 mb-20 text-uppercase fontmb-large font-pri-bold">
                 tin tức hoạt động
             </h2>
+            @if (!empty($posts[0]))
             <div class="news-item">
                 <div class="img-container">
                     <div class="skewed">
-                        <a href="#">
-                            <img src="{{Theme::asset()->url('images/distribution/news1.png')}}" alt="">
+                        <a href="{{$posts[0]->url}}">
+                            <img src="{{ Storage::disk('public')->exists($posts[0]->image) ? get_object_image($posts[0]->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Tin tức">
                         </a>
                     </div>
                 </div>
                 <div class="news-body">
-                    <a class="news-title font-pri-bold fontmb-middle" href="#">CÔNG TY TNHH MTV ĐỒNG PHƯỚC ĐẦU TƯ 5 XE MINI BUS
-                        IVECO DAILY</a>
-                    <p class="news-description fontmb-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
-                        gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                    <a class="news-title font-pri-bold fontmb-middle" href="{{$posts[0]->url}}">{{$posts[0]->name}}</a>
+                    <p class="news-description fontmb-small">{{Str::words($posts[0]->description,40)}}</p>
                     <div class="news-info">
                         <div class="news-info__item fontmb-little">
-                            <p>Hà nội</p>
+                            <p>{{ \MetaBox::getMetaData($posts[0], 'region_post', true) ?? '--' }}</p>
                         </div>
                         <div class="news-info__item fontmb-little">
-                            <p>20-12-2021</p>
+                            <p>{{date_format($posts[0]->created_at,"d-m-Y")}}</p>
                         </div>
                     </div>
                 </div>
             </div>
+            @endif
 
+            @if (!empty($posts[1]))
             <div class="news-item">
                 <div class="img-container">
                     <div class="skewed">
-                        <a href="#">
-                            <img src="{{Theme::asset()->url('images/distribution/news2.png')}}" alt="">
+                        <a href="{{$posts[1]->url}}">
+                            <img src="{{ Storage::disk('public')->exists($posts[1]->image) ? get_object_image($posts[1]->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Tin tức">
                         </a>
                     </div>
                 </div>
                 <div class="news-body">
-                    <a class="news-title font-pri-bold fontmb-middle" href="#">CÔNG TY TNHH MTV ĐỒNG PHƯỚC ĐẦU TƯ 5 XE MINI BUS
-                        IVECO DAILY</a>
-                    <p class="news-description fontmb-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
-                        gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                    <a class="news-title font-pri-bold fontmb-middle" href="{{$posts[1]->url}}">{{$posts[1]->name}}</a>
+                    <p class="news-description fontmb-small">{{Str::words($posts[1]->description,40)}}</p>
                     <div class="news-info">
                         <div class="news-info__item fontmb-little">
-                            <p>Hà nội</p>
+                            <p>{{ \MetaBox::getMetaData($posts[1], 'region_post', true) ?? '--' }}</p>
                         </div>
                         <div class="news-info__item  fontmb-little">
-                            <p>20-12-2021</p>
+                            <p>{{date_format($posts[1]->created_at,"d-m-Y")}}</p>
                         </div>
                     </div>
                 </div>
             </div>
+            @endif
 
+            @if (!empty($posts[2]))
             <div class="news-item">
                 <div class="img-container">
                     <div class="skewed">
-                        <a href="#">
-                            <img src="{{Theme::asset()->url('images/distribution/news3.png')}}" alt="">
+                        <a href="{{$posts[2]->url}}">
+                            <img src="{{ Storage::disk('public')->exists($posts[2]->image) ? get_object_image($posts[2]->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Tin tức">
                         </a>
                     </div>
                 </div>
                 <div class="news-body">
-                    <a class="news-title font-pri-bold fontmb-middle" href="#">CÔNG TY TNHH MTV ĐỒNG PHƯỚC ĐẦU TƯ 5 XE MINI BUS
-                        IVECO DAILY</a>
-                    <p class="news-description fontmb-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
-                        gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                    <a class="news-title font-pri-bold fontmb-middle" href="{{$posts[2]->url}}">{{$posts[2]->name}}</a>
+                    <p class="news-description fontmb-small">{{Str::words($posts[2]->description,40)}}</p>
                     <div class="news-info">
                         <div class="news-info__item  fontmb-little">
-                            <p>Hà nội</p>
+                            <p>{{ \MetaBox::getMetaData($posts[2], 'region_post', true) ?? '--' }}</p>
                         </div>
                         <div class="news-info__item fontmb-little">
-                            <p>20-12-2021</p>
+                            <p>{{date_format($posts[2]->created_at,"d-m-Y")}}</p>
                         </div>
                     </div>
                 </div>
             </div>
+            @endif
 
-            <div class="nav-pagination font18">
-                <div class="page-item active">
+             @if(!empty($posts))
+                {{ $posts->links('vendor.pagination.custom-distribution') }}
+            @endif
+            {{-- <ul class="nav-pagination font18 mb-0">
+                <li class="page-item active">
                     <a href="" title="" class="page-link">
                         1
                     </a>
-                </div>
-                <div class="page-item">
+                </li>
+                <li class="page-item">
                     <a href="" title="" class="page-link">
                         2
                     </a>
-                </div>
-                <div class="page-item">
+                </li>
+                <li class="page-item">
                     <a href="" title="" class="page-link">
                         3
                     </a>
-                </div>
-                <div class="page-item">
+                </li>
+                <li class="page-item">
                     <a href="" title="" class="page-link">
                         4
                     </a>
-                </div>
-                <div class="page-item">
+                </li>
+                <li class="page-item">
                     <a href="" title="" class="page-link">
                         5
                     </a>
-                </div>
-                <div class="page-item">
+                </li>
+                <li class="page-item">
                     <a href="" title="" class="page-link">
                         6
                     </a>
-                </div>
-                <div class="page-item">
+                </li>
+                <li class="page-item">
                     <a href="" title="" class="page-link">
                         7
                     </a>
-                </div>
-                <div class="page-item">
+                </li>
+                <li class="page-item">
                     <a href="" title="" class="page-link">
                         >
                     </a>
-                </div>
-                <div class="page-item">
+                </li>
+                <li class="page-item">
                     <a href="" title="" class="page-link">
                         >>
                     </a>
-                </div>
-            </div>
+                </li>
+            </ul> --}}
         </div>
     </div>
 
@@ -481,7 +486,7 @@
             sortSelect: true,
             fullTextSearch:'exact',
         });
-    }
+    };
     var owl = $('.owl-carousel');
     owl.owlCarousel({
         loop:true,
@@ -498,13 +503,29 @@
                 items:2.5,
             }
         }
-    })
+    });
     // Go to the next item
     $('.customNextBtn').click(function() {
         owl.trigger('next.owl.carousel');
-    })
+    });
     // Go to the previous item
     $('.customPrevBtn').click(function() {
         owl.trigger('prev.owl.carousel', [300]);
-    })
+    });
+    //Map
+    function init() {
+        var map = L.map('map', {
+            maxZoom: 24,
+            minZoom: 1,
+            crs: L.CRS.Simple
+        }).setView([0, 0], 3);
+
+        map.setMaxBounds(new L.LatLngBounds([0,500], [500,0]));
+
+        var imageUrl = 'https://thacoauto.local/themes/main/images/distribution/map.png'
+        var imageBounds = [[250,0], [0,250]];
+
+        L.imageOverlay(imageUrl, imageBounds).addTo(map);
+    };
+    this.init();
 </script>

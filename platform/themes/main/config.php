@@ -61,6 +61,7 @@ return [
             $theme->asset()->add('dropdown', '//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/dropdown.min.css');
             $theme->asset()->add('accordion', '//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/accordion.min.css');
             $theme->asset()->add('zeynep_css', '//raw.githack.com/hsynlms/zeynepjs/master/dist/zeynep.min.css');
+            $theme->asset()->add('leaflet', '//unpkg.com/leaflet@1.7.1/dist/leaflet.css');
 
             $theme->asset()->usePath()->add('style', 'css/common.css', [], [], time());
 
@@ -86,6 +87,7 @@ return [
             $theme->asset()->container('footer')->add('zeynep_js', '//raw.githack.com/hsynlms/zeynepjs/master/dist/zeynep.min.js');
             $theme->asset()->container('footer')->usePath()->add('semantic_ui_js', 'semantic-ui/semantic.min.js');
             $theme->asset()->container('header')->usePath()->add('semantic', 'js/semantic/semantic.min.js');
+            $theme->asset()->container('header')->add('leaflet_js', '//unpkg.com/leaflet@1.7.1/dist/leaflet.js');
 
             $theme->asset()->container('footer')->usePath()->add('script', 'js/common.js', [], [], time());
         },

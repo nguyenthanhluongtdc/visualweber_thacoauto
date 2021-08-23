@@ -581,7 +581,7 @@
                 }
               }
             }
-           
+            
             .logo-frame {
               max-height: 34%;
               width: 38%;
@@ -623,6 +623,14 @@
                 @include maxWidth(400) {
                   width: 12%;
                  }
+              }
+              span{
+                @media (max-width: 480px) {
+                  font-size: 12px !important;
+                }
+                @media (max-width: 350px) {
+                  font-size: 9px !important;
+                }
               }
             }
           }
@@ -830,6 +838,7 @@
         p.title {
           text-transform: uppercase;
           margin: 35px 0;
+          
           @media (max-width: 1680px) {
             margin: 30px 0;
           }

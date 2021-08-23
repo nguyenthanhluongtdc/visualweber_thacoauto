@@ -450,7 +450,7 @@
     <div class="detail-contact" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
         <div class="row content-contact ">
             @if (has_sub_field($item, 'title_contact_office'))
-            <h3 class="detail-title font40 font-pri-bold mt-4 mb-3">{{ get_sub_field($item, 'title_contact_office') }}</h3>
+            <h3 class="detail-title font40 font-pri-bold mt-4 mb-2">{{ get_sub_field($item, 'title_contact_office') }}</h3>
             @endif
             <div class="detail-content-wrap">
                 <div class="left">

@@ -35,22 +35,24 @@
     </div>
 @endif --}}
 
-
+@php
+    Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
+@endphp
 <div class="search-page">
     <div class="container-remake">
             <div class="search-intro">
-                <h1 class="font-pri-bold font60 text-center mt-5">KẾT QUẢ TÌM KIẾM</h1>
+                <h1 class="font-pri-bold font60 text-center mt-md-5 mt-3">KẾT QUẢ TÌM KIẾM</h1>
             </div>
-            <div class="search-input row mt-5 mb-3">
+            <div class="search-input row mt-md-5 mt-3 mb-3">
                 <div class="col-sm-3">
 
                 </div>
                 <div class="col-sm-6 search-bar mb-4">
                     <div class="row search">
-                        <div class="col-md-11">
+                        <div class="col-10">
                             <input type="text" class="form-control font20" id="search-bar" placeholder="Tìm kiếm" name="search" value=""> 
                         </div>
-                        <div class="col-md-1 input-group-append ">
+                        <div class="col-1 input-group-append ">
 
                                 <button id="button-addon5" type="submit" class="btn"> <ion-icon name="search-outline" class="font20"></ion-icon> </button>
 
@@ -94,10 +96,11 @@
                 </div>
                 <div class="col-md-2 col-12 search-time">
                     <div class="time-picker">
-                        <ion-icon name="calendar-outline" class=" pl-3 font15 calendar"></ion-icon>
-                        <div class="date-frame">
-                            <input type="date" id="birthday" name="birthday" class="font15"> 
-                          </div>
+                        <ion-icon name="calendar-outline" class=" pl-md-3 pl-1 font15 calendar"></ion-icon>
+                        <input type="date" class="date-frame" id="birthday" name="birthday" class="font15"> 
+                        {{-- <div class="">
+                            
+                          </div> --}}
                         {{-- <input type="date" id="datepicker" name="calendars" autocomplete="off" class="font15"> --}}
                         <ion-icon name="chevron-down-outline" class="arrow font15"></ion-icon>
                     </div>

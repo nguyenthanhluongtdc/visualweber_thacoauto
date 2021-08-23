@@ -61,7 +61,7 @@
 
             .services-block__title{
                 h2{
-                    padding-bottom: 25px;
+                    padding-bottom: 3%;
                 }
             }
             .services-block__desc{
@@ -71,7 +71,7 @@
                 display: -webkit-box;
                 -webkit-box-orient: vertical;
                 -webkit-line-clamp: 3; /* number of lines to show */
-                margin-bottom: 25px;
+                margin-bottom: 3.2%;
                 color: #fffefe;
             }
             .services-block__button{
@@ -83,6 +83,13 @@
                 color: $color-primary;
                 font-size: 13px;
                 transition: 0.2s;
+                @media (max-width: 768px){
+                    padding: 4px 7px;
+                    font-size: 11px;
+                }
+                @media (max-width: 360px){
+                    padding: 2px 4px;
+                }
                 &:hover{
                     color: white;
                     background-color: $color-primary;

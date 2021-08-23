@@ -2,7 +2,7 @@
 
 $('.partner-home-carousel').owlCarousel({
     loop: true,
-    autoplay: false,
+    autoplay: true,
     nav: true,
     navText: [
         // "<div class='nav-btn prev-slide'><i class='fal fa-chevron-left'></i></div>",
@@ -71,12 +71,15 @@ var swiperProductIntro = new Swiper(".product-intro__swiper", {
         nextEl: ".product-intro__swiper--next",
         prevEl: ".product-intro__swiper--prev",
     },
+    autoplay: true,
     pagination: {
       el: ".product-intro__swiper--pagination",
+      clickable: true
     },
 });
 
 var swiperDetailSlide = new Swiper(".detail-slide", {
+    autoplay: true,
     pagination: {
         el: ".swiper-pagination",
         clickable: true

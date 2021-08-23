@@ -60,6 +60,7 @@ return [
             $theme->asset()->add('transition', '//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/transition.min.css');
             $theme->asset()->add('dropdown', '//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/dropdown.min.css');
             $theme->asset()->add('accordion', '//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/accordion.min.css');
+            $theme->asset()->add('zeynep_css', '//raw.githack.com/hsynlms/zeynepjs/master/dist/zeynep.min.css');
 
             $theme->asset()->usePath()->add('style', 'css/common.css', [], [], time());
 
@@ -82,6 +83,7 @@ return [
             $theme->asset()->container('footer')->add('validate-method', '//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/additional-methods.min.js');
             $theme->asset()->container('footer')->add('script_alert', '//cdn.jsdelivr.net/alertifyjs/1.10.0/alertify.min.js');
             $theme->asset()->container('footer')->add('script_alert', '//unpkg.com/swiper/swiper-bundle.min.js');
+            $theme->asset()->container('footer')->add('zeynep_js', '//raw.githack.com/hsynlms/zeynepjs/master/dist/zeynep.min.js');
             $theme->asset()->container('footer')->usePath()->add('semantic_ui_js', 'semantic-ui/semantic.min.js');
             $theme->asset()->container('header')->usePath()->add('semantic', 'js/semantic/semantic.min.js');
 

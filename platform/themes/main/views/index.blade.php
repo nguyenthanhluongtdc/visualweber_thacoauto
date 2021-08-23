@@ -995,38 +995,16 @@
 
 {{-- đối tác --}}
 <div class="section-partner-home container-remake" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out">
-    <h2 class="font-pri-bold font60 color-gray fontmb-large">ĐỐI TÁC</h2>
+    <h2 class="font-pri-bold font60 color-gray fontmb-large">{{get_field($page, 'homepage_partner_title')}}</h2>
     <div class="partner-home-carousel owl-carousel">
+        @forelse (get_field($page, 'homepage_slide_partner') as $item)
         <div class="item">
-            {{-- <img src="{{ Theme::asset()->url('images/main/doitac1.jpg') }}" alt=""> --}}
             <div class="logo">
-                <a href=""><img src="{{ Theme::asset()->url('images/main/bmw-logo.png') }}" alt=""></a>
+                <a href="{{get_sub_field($item, 'logo')}}"><img src="{{ get_image_url(get_sub_field($item, 'logo')) }}" alt="{{__('Partner logo')}}"></a>
             </div>
         </div>
-        <div class="item">
-            {{-- <img src="{{ Theme::asset()->url('images/main/doitac2.jpg') }}" alt=""> --}}
-            <div class="logo">
-                <a href=""><img src="{{ Theme::asset()->url('images/main/kia-logo.png') }}" alt=""></a>
-            </div>
-        </div>
-        <div class="item">
-            {{-- <img src="{{ Theme::asset()->url('images/main/doitac3.jpg') }}" alt=""> --}}
-            <div class="logo">
-                <a href=""><img src="{{ Theme::asset()->url('images/main/mazda-logo.png') }}" alt=""></a>
-            </div>
-        </div>
-        <div class="item">
-            {{-- <img src="{{ Theme::asset()->url('images/main/doitac4.jpg') }}" alt=""> --}}
-            <div class="logo">
-                <a href=""><img src="{{ Theme::asset()->url('images/main/mini-logo.png') }}" alt=""></a>
-            </div>
-        </div>
-        <div class="item">
-            {{-- <img src="{{ Theme::asset()->url('images/main/doitac1.jpg') }}" alt=""> --}}
-            <div class="logo">
-                <a href=""><img src="{{ Theme::asset()->url('images/main/peugeot-logo.png') }}" alt=""></a>
-            </div>
-        </div>
-        </div>
+        @empty
+            {{__('No data to show')}}
+        @endforelse
     </div>
 </div>

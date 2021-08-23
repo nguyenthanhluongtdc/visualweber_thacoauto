@@ -532,13 +532,13 @@ a:hover {
     margin-bottom: #{calculatorPixel(40, 992)}px;
   }
   @media (max-width: 768px) {
-    margin-bottom: #{calculatorPixel(40, 768)}px;
+    margin-bottom: #{calculatorPixel(30, 768)}px;
   }
   @media (max-width: 576px) {
-    margin-bottom: #{calculatorPixel(40, 576)}px;
+    margin-bottom: #{calculatorPixel(30, 576)}px;
   }
   @media (max-width: 480px) {
-    margin-bottom: #{calculatorPixel(40, 480)}px;
+    margin-bottom: #{calculatorPixel(30, 480)}px;
   }
 }
 

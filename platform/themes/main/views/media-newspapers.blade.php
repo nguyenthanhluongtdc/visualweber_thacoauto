@@ -1,7 +1,7 @@
 {!! do_shortcode('[filter-media][/filter-media]') !!}
 <div class="list-newspapers container-remake">
     @php
-        $posts = get_posts_by_category(18, 6);
+        $posts = get_posts_by_category(18, 3);
     @endphp
     @if (!empty($posts))
             @foreach ($posts as $post)
@@ -41,24 +41,7 @@
             </div>
             @endforeach
         @endif
-    <div class="page-pagination">
-        @if(!empty($posts))
-            @includeIf("theme.main::views.components.news-pagination",['paginator'=>$posts])
-        @endif
-
-        <ul class="pagination font25 font-pri-bold">
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-            <li>7</li>
-            <li>8</li>
-            <li>9</li>
-            <li>10</li>
-            <li class="color">></li>
-            <li class="color">>></li>
-        </ul>
+    <div class="container-remake">
+        {{ $posts->links('vendor.pagination.custom') }}
     </div>
 </div>

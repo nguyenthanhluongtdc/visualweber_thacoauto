@@ -131,9 +131,14 @@
     ul {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
+        @media (max-width: 1080px) {
+            justify-content: start;
+        }
         @include mobileMarginBottom(40, "-");
         
         li {
+            @include flex(60);
              @include mobileFlex(80);
              margin-right: 0;
 

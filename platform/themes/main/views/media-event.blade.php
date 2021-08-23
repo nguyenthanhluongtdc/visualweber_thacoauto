@@ -39,6 +39,6 @@
     @endif
 </div>
 
-<div class="container-remake paginate-mobile">
+<div class="container-remake">
     {{ $posts->links('vendor.pagination.custom') }}
 </div>

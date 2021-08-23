@@ -1,7 +1,7 @@
 
 @if ($paginator->hasPages())
     <div class="page-pagination">
-        <ul class="pagination news font-pri-bold">
+        <ul class="pagination news font-pri-bold w-100">
                {{-- Previous Page Link --}}
             {{-- @if ($paginator->onFirstPage())
                 <li class="disabled" aria-disabled="true" aria-label="@lang('pagination.previous')">

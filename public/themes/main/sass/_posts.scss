@@ -825,7 +825,6 @@
                 margin-top: 8%;
                 
                .tag-name{
-                margin-top: 4%;
                 .name-tag{
                     font-size: 18px;
                     margin-right: 10px;
@@ -861,8 +860,18 @@
     @media (max-width: 1080px) {
         .item-newspaper {
             width: 100%;
-            .row__bottom {
 
+            // .row__top {
+            //     @include mobileMarginBottom(25, "+");
+            //     @include mobilePaddingBottom(25);
+            //     p.desc {
+            //         padding-bottom: 0;
+            //         margin-bottom: 0;
+            //     }
+            // }
+
+            .row__bottom {
+                @include mobilePaddingTop(20);
                .title-docx {
                 color: #01498B;
                 }
@@ -889,6 +898,9 @@
                             margin-right: 15px;
                             margin-top: -2%;
                             margin-bottom: 0;
+                            @media (max-width: 1080px) {
+                                margin-top: 0;
+                            }
                         }
                     }
                 }

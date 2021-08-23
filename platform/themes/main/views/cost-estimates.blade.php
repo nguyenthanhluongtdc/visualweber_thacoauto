@@ -1,25 +1,4 @@
-{{-- thêm sidebar here --}}
-<section class="section-step-menu">
-    <div class="container-remake">
-        <ul class="step-menu">
-            <li class="step-menu__item font18 font-pri ">
-                <span>
-                    1. LỰA CHỌN XE
-                </span>
-            </li>
-            <li class="step-menu__item font18 font-pri active">
-                <span>
-                    2. DỰ TOÁN CHI PHÍ
-                </span>
-            </li>
-            <li class="step-menu__item font18 font-pri">
-                <span>
-                    3. ĐẶT CỌC ĐĂNG KÝ
-                </span>
-            </li>
-        </ul>
-    </div>
-</section>
+@includeIf("theme.main::views.pages.business.car-selection.section.menu")
 
 <div class="my-5 container-remake MyriadPro-Regular font15">
     <form action="" method="POST" class="row">

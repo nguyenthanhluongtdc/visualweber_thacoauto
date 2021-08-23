@@ -14,7 +14,7 @@
                 <h2 class="name-company font-pri-bold color-pri font32">{!! theme_option('name-company') !!}</h2>
                 <p class="address font-pri font18">
                     <span>{{__('Address')}}:</span>
-                    <span>{!! theme_option('address-company') !!} ( Tìm vị trí )</span>
+                    <span>{!! theme_option('address-company') !!} <a href="#">( {{__("Tìm vị trí") }} )</a></span>
                 </p>
                 <p class="tax-code font-pri font18">
                     <span>{{__('Tax Code')}}:</span>
@@ -48,9 +48,9 @@
                 <div class="item">
                     <h2 class="title font-pri-bold font30 color-gray fontmb-medium" id="menu-footer">{{__('Contact')}}</h2>
                     <ul class="font-pri font18 list-link">
-                        <li class="color-gray"><span>Hotline: </span><span><a href="tel:{{ theme_option('hotline-contact') }}" class="color-gray">{{ theme_option('hotline-contact') }}</a></span></li>
-                        <li class="color-gray"><span>Email: </span><span><a href="mailto:{{ theme_option('email-contact') }}" class="color-gray">{{ theme_option('email-contact') }}</a></span></li>
-                        <li class="color-gray"><span>Fax: </span><span><a href="tel:{{ theme_option('fax-contact') }}" class="color-gray">{{ theme_option('fax-contact') }}</a></span></li>
+                        <li class="color-gray"><span>{{ __("Hotline") }}: </span><span><a href="tel:{{ theme_option('hotline-contact') }}" class="color-gray">{{ theme_option('hotline-contact') }}</a></span></li>
+                        <li class="color-gray"><span>{{ __("Email") }}: </span><span><a href="mailto:{{ theme_option('email-contact') }}" class="color-gray">{{ theme_option('email-contact') }}</a></span></li>
+                        <li class="color-gray"><span>{{ __("Fax") }}: </span><span><a href="tel:{{ theme_option('fax-contact') }}" class="color-gray">{{ theme_option('fax-contact') }}</a></span></li>
                     </ul>
                 </div>
                 <div class="item">
@@ -71,7 +71,7 @@
 </footer>
 <div class="action-button">
     <div class="item-button">
-        <a href="#"><img src="{{ Theme::asset()->url('images/main/phone.png') }}" alt="phone"></a>
+        <a href="tel:{{ theme_option('hotline-contact') }}"><img src="{{ Theme::asset()->url('images/main/phone.png') }}" alt="phone"></a>
     </div>
     <div class="item-button">
         <a href="#"><img src="{{ Theme::asset()->url('images/main/mess.png') }}" alt="phone"></a>
@@ -79,7 +79,7 @@
 </div>
 <div class="end-web" style="background: url('{{ Theme::asset()->url('images/main/end.jpg') }}')">
     <div class="container-remake">
-        <p class="font-pri color-white font25">{{__('business license')}}: {!! theme_option('tax-code-company') !!}</p>
+        <p class="font-pri color-white font20">{{__('business license')}}: {!! theme_option('tax-code-company') !!}</p>
     </div>
 </div>
 <button  id="myBtn" title="Go to top"><img src="{{ Theme::asset()->url('images/main/btt.png') }}" alt="youtube"></button>

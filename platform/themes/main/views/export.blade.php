@@ -1,4 +1,4 @@
-<div id="research-development-page">
+<div id="research-development-page" class="overflow-x-hidden">
     <div class="section-intro-wrapper expor">
         <div class="container-remake">
             <div class="section-intro">

@@ -1,4 +1,4 @@
-<section class="section-brand">
+<section class="section-brand overflow-x-hidden">
     <div class="container-remake">
         @forelse (get_categories_parent() ?? collect() as $item)
             <div class="brand-block">

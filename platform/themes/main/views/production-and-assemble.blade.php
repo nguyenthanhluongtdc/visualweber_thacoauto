@@ -1,4 +1,4 @@
-<div id="production-assemble-page">
+<div id="production-assemble-page " class="overflow-x-hidden">
     <div class="container-remake">
         <div class="page__header my-90">
             <h1 class="font-pri-bold font60 text-uppercase">sản xuất & lắp ráp</h1>

@@ -458,12 +458,12 @@
                     text-transform: uppercase;
                     color: white;
                     @include height(63);
-                    @include lineHeight(67);
+                    @include lineHeight(63);
                     @include paddingX(47);
                     font-family: $font-primary-bold;
                     
                     @include mobileHeight(63);
-                    @include mobileLineHeight(67);
+                    @include mobileLineHeight(63);
                 }
             }
 

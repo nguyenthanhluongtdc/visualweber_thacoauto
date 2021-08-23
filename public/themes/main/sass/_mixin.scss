@@ -390,6 +390,12 @@
   @media (max-width: 576px) {
     line-height: #{MobilecalculatorPixel($size, 576)}px;
   }
+  @media (max-width: 480px) {
+    line-height: #{MobilecalculatorPixel($size, 480)}px;
+  }
+  @media (max-width: 360px) {
+    line-height: #{MobilecalculatorPixel($size, 360)}px;
+  }
 }
 
 @mixin mobileFlex($size) {

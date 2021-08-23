@@ -50,8 +50,8 @@
 
                         </div>
                     </div>
-                    <h3 class="product-detail__card-title font25 font-mi-bold mt-4 fontmb-medium">THƯƠNG HIỆU TOÀN CẦU TỐT NHẤT</h3>
-                    <div class="product-detail__card-desc font20 font-pri fontmb-small">
+                    <h3 class="product-detail__card-title font30 font-mi-bold mt-4 fontmb-middle">THƯƠNG HIỆU TOÀN CẦU TỐT NHẤT</h3>
+                    <div class="product-detail__card-desc font20 font-mi fontmb-small">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                     </div>
                 </div>
@@ -62,8 +62,8 @@
 
                         </div>
                     </div>
-                    <h3 class="product-detail__card-title font25 font-mi-bold mt-4 fontmb-medium">NHỊP ĐIỆU KHÁC BIỆT</h3>
-                    <div class="product-detail__card-desc font20 font-pri fontmb-small">
+                    <h3 class="product-detail__card-title font30 font-mi-bold mt-4 fontmb-middle">NHỊP ĐIỆU KHÁC BIỆT</h3>
+                    <div class="product-detail__card-desc font20 font-mi fontmb-small">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                     </div>
                 </div>
@@ -74,8 +74,8 @@
 
                         </div>
                     </div>
-                    <h3 class="product-detail__card-title font25 font-mi-bold mt-4 fontmb-medium">TRIẾT LÝ THIẾT KẾ</h3>
-                    <div class="product-detail__card-desc font20 font-pri fontmb-small">
+                    <h3 class="product-detail__card-title font30 font-mi-bold mt-4 fontmb-middle">TRIẾT LÝ THIẾT KẾ</h3>
+                    <div class="product-detail__card-desc font20 font-mi fontmb-small">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                     </div>
                 </div>
@@ -104,7 +104,7 @@
                                         PHONG CÁCH RIÊNG CỦA BẠN
                                     </p>
                                     <a href="#">
-                                        <p class="readmore font-mi-bold font18 mt-lg-5 mt-5 fontmb-cond-bold fontmb-little">
+                                        <p class="readmore font-mi-bold font18 mt-lg-4 mt-3 fontmb-cond-bold fontmb-little">
                                             XEM CHI TIẾT ->
                                         </p>
                                     </a>
@@ -126,7 +126,7 @@
                                         SẮC MÀU THỜI TRANG KHẲNG ĐỊNH PHONG CÁCH
                                     </p>
                                     <a href="#">
-                                        <p class="readmore font-mi-bold font18 mt-lg-5 mt-5 fontmb-cond-bold fontmb-little">
+                                        <p class="readmore font-mi-bold font18 mt-lg-4 mt-3 fontmb-cond-bold fontmb-little">
                                             XEM CHI TIẾT ->
                                         </p>
                                     </a>
@@ -155,7 +155,7 @@
                                         KẾT NỐI GIÁ TRỊ THẬT
                                     </p>
                                     <a href="#">
-                                        <p class="readmore font-mi-bold font18 mt-lg-5 mt-5 fontmb-cond-bold fontmb-little">
+                                        <p class="readmore font-mi-bold font18 mt-lg-4 mt-3 fontmb-cond-bold fontmb-little">
                                             XEM CHI TIẾT ->
                                         </p>
                                     </a>
@@ -177,7 +177,7 @@
                                         KHẲNG ĐỊNH PHONG CÁCH MỚI 
                                     </p>
                                     <a href="#">
-                                        <p class="readmore font-mi-bold font18 mt-lg-5 mt-5 fontmb-cond-bold fontmb-little">
+                                        <p class="readmore font-mi-bold font18 mt-lg-4 mt-3 fontmb-cond-bold fontmb-little">
                                             XEM CHI TIẾT ->
                                         </p>
                                     </a>
@@ -199,7 +199,7 @@
                                         TỤ TIN VÀ PHONG CÁCH
                                     </p>
                                     <a href="#">
-                                        <p class="readmore font-mi-bold font18 mt-lg-5 mt-5 fontmb-cond-bold fontmb-little">
+                                        <p class="readmore font-mi-bold font18 mt-lg-4 mt-3 fontmb-cond-bold fontmb-little">
                                             XEM CHI TIẾT ->
                                         </p>
                                     </a>
@@ -221,7 +221,7 @@
                                         SANG TRỌNG VÀ ĐẲNG CẤP
                                     </p>
                                     <a href="#">
-                                        <p class="readmore font-mi-bold font18 mt-lg-5 mt-5 fontmb-cond-bold fontmb-little">
+                                        <p class="readmore font-mi-bold font18 mt-lg-4 mt-3 fontmb-cond-bold fontmb-little">
                                             XEM CHI TIẾT ->
                                         </p>
                                     </a>
@@ -251,7 +251,7 @@
                                     </p>
                                     
                                     <a href="#">
-                                        <p class="readmore font-mi-bold font18 mt-lg-5 mt-5 fontmb-cond-bold fontmb-little">
+                                        <p class="readmore font-mi-bold font18 mt-lg-4 mt-3 fontmb-cond-bold fontmb-little">
                                             XEM CHI TIẾT ->
                                         </p>
                                     </a>
@@ -274,7 +274,7 @@
                                     </p>
                                     
                                     <a href="#">
-                                        <p class="readmore font-mi-bold font18 mt-lg-5 mt-5 fontmb-cond-bold fontmb-little">
+                                        <p class="readmore font-mi-bold font18 mt-lg-4 mt-3 fontmb-cond-bold fontmb-little">
                                             XEM CHI TIẾT ->
                                         </p>
                                     </a>
@@ -297,7 +297,7 @@
                                     </p>
                                     
                                     <a href="#">
-                                        <p class="readmore font-mi-bold font18 mt-lg-5 mt-5 fontmb-cond-bold fontmb-little">
+                                        <p class="readmore font-mi-bold font18 mt-lg-4 mt-3 fontmb-cond-bold fontmb-little">
                                             XEM CHI TIẾT ->
                                         </p>
                                     </a>
@@ -307,7 +307,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="car car4">
+                <div class="car">
                     <h3 class="cate font-mi-bold font30 mt-5 fontmb-middle">
                         MPV
                     </h3>
@@ -328,7 +328,7 @@
                                     </p>
                                     
                                     <a href="#">
-                                        <p class="readmore font-mi-bold font18 mt-lg-5 mt-5 fontmb-cond-bold fontmb-little">
+                                        <p class="readmore font-mi-bold font18 mt-lg-4 mt-3 fontmb-cond-bold fontmb-little">
                                             XEM CHI TIẾT ->
                                         </p>
                                     </a>
@@ -350,7 +350,7 @@
                                         SANG TRỌNG VÀ TIỆN NGHI
                                     </p>
                                     <a href="#">
-                                        <p class="readmore font-mi-bold font18 mt-lg-5 mt-5 fontmb-cond-bold fontmb-little">
+                                        <p class="readmore font-mi-bold font18 mt-lg-4 mt-3 fontmb-cond-bold fontmb-little">
                                             XEM CHI TIẾT ->
                                         </p>
                                     </a>

@@ -159,11 +159,13 @@ app()->booted(function () {
                     'class' => 'form-control',
                 ],
             ],
-            'helper'     => __('To show chat box on that website, please go to :link and add :domain to whitelist domains!',
+            'helper'     => __(
+                'To show chat box on that website, please go to :link and add :domain to whitelist domains!',
                 [
                     'domain' => Html::link(url('')),
                     'link'   => Html::link('https://www.facebook.com/' . theme_option('facebook_page_id') . '/settings/?tab=messenger_platform'),
-                ]),
+                ]
+            ),
         ])
         ->setField([
             'id'         => 'facebook_page_id',
@@ -253,6 +255,8 @@ app()->booted(function () {
             'type'       => 'text',
             'label'      => __('Tên kinh doanh'),
             'attributes' => [
+                'class'        => 'form-control',
+
                 'name'    => 'name_business',
                 'value'   => null,
             ],
@@ -337,7 +341,7 @@ app()->booted(function () {
                 ],
             ],
         ])
-        
+
         ->setSection([
             'title'      => __('Footer address company'),
             'desc'       => __('Footer address company'),
@@ -353,10 +357,10 @@ app()->booted(function () {
             'attributes' => [
                 'name'    => 'logo-footer',
                 'value'   => null,
-               
+
             ],
         ])
-        
+
         ->setField([
             'id'         => 'name-company',
             'section_id' => 'footer-address-company',
@@ -396,7 +400,8 @@ app()->booted(function () {
             'attributes' => [
                 'name'    => 'tax-code-company',
                 'value'   => null,
-               
+                'class'        => 'form-control',
+
             ],
         ])
         ->setField([
@@ -407,7 +412,8 @@ app()->booted(function () {
             'attributes' => [
                 'name'    => 'hotline-contact',
                 'value'   => null,
-               
+                'class'        => 'form-control',
+
             ],
         ])
         ->setField([
@@ -418,7 +424,8 @@ app()->booted(function () {
             'attributes' => [
                 'name'    => 'email-contact',
                 'value'   => null,
-               
+                'class'        => 'form-control',
+
             ],
         ])
         ->setField([
@@ -429,10 +436,7 @@ app()->booted(function () {
             'attributes' => [
                 'name'    => 'fax-contact',
                 'value'   => null,
-               
+                'class'        => 'form-control',
             ],
-        ])
-        ;
-
-        
+        ]);
 });

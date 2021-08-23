@@ -14,7 +14,9 @@
                     </div>
                     
                     <div class="production__image">
-                        <img  src="{{ get_image_url(has_sub_field($row, 'image')) }}" alt="">
+                        <a href="{{has_sub_field($row, 'link')}}" title=""> 
+                            <img  src="{{ get_image_url(has_sub_field($row, 'image')) }}" alt="">
+                        </a>
                     </div>
                 </div>
             @endforeach

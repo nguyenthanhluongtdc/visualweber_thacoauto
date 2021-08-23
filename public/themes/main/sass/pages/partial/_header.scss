@@ -65,7 +65,7 @@
           align-items: center;
           padding: 0 2rem;
           cursor: pointer;
-          @include maxWidth(1440) {
+          @include maxWidth(1600) {
             padding: 0 1.2rem;
           }
 

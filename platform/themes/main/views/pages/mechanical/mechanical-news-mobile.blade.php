@@ -1,4 +1,3 @@
-
 @php
     $posts = get_all_posts(true,3);
 @endphp
@@ -84,8 +83,7 @@
             </div>
         </div>
     </div>
-    
-    <div class="container-remake">
-        {{ $posts->links('vendor.pagination.custom') }}
-    </div>
+</div>
+<div class="container-remake">
+    {{ $posts->links('vendor.pagination.custom') }}
 </div>

@@ -37,72 +37,25 @@
         margin-left: 8%;
         
         .brand-name{
-            // border-right: 5px solid $color-primary;
-            // height: 86%;
-            // @include height(30);
-            margin-top: .5%;
-            margin-left: 0.66%;
-            margin-right: 2%;
-            @media(max-width : 1710px){
-                // height: 82%;
-                transform: translateY(1.5px);
-                margin-left: 8px;
-            }
-            @media(max-width : 1600px){
-                // height: 75%;
-                transform: translateY(2.5px);
-                margin-left: 8px;
-            }
-            @media(max-width : 1400px){
-                // height: 67%;
-                transform: translateY(4px);
-                margin-left: 8px;
-            }
-            @media(max-width : 1300px){
-                // height: 62%;
-                transform: translateY(7px);
-                margin-left: 8.5px;
-            }
-            @media(max-width : 1100px){
-                // height: 50%;
-                transform: translateY(11.8px);
-                margin-left: 9px;
-                // border-right: 3px solid $color-primary;
-            }
-            h3{
-                padding-right: 50px;
-                transform: translateY(-8px);
-                
-                @media only screen and (max-width: 767px){
-                   padding-right: 30px;       
-                }
-                @media(max-width : 1710px){
-                    transform: translateY(-8.5px);
-                }
-                @media(max-width : 1600px){
-                    transform: translateY(-7.5px);
-                }
-                @media(max-width : 1400px){
-                    transform: translateY(-4.7px);
-                }
-                @media(max-width : 1300px){
-                    transform: translateY(-5px);
-                }
-                @media(max-width : 1100px){
-                    transform: translateY(-6.2px);
-                }
+            position: relative;
+            line-height: initial;
+            @include paddingRight(50);
+            @include marginRight(50, "+");
 
-                &::after {
-                    position: absolute;
-                    content: "";
-                    right: 0;
-                    top: 20%;
-                    bottom: 30%;
-                    width: 5px;
-                    background-color: $color-primary;
+            &::after {
+                position: absolute;
+                content: "";
+                right: 0;
+                top: 15%;
+                bottom: 30%;
+                @include width(5);
+                background-color: $color-primary;
+
+                @media (max-width: 1080px) {
+                    top: 2%;
                 }
             }
-            
+
         }
 
         // .nav-brand {
@@ -130,26 +83,33 @@
         //     }
         // }
         label {
+            line-height: initial;
             order: 1;
+            @include marginRight(56, "+");
+            margin-top: 0.7%;
             display: flex;
-            padding: 1rem;
-            margin-right: .5rem;
             cursor: pointer;
             color: $color-primary;
             transition: background ease 0.3s;
-            // @media only screen and (max-width: 767px){
-            //     padding-right: .2rem;
-            //     padding-bottom: .25rem;            
-            // }
+
+            @media (max-width: 1080px) {
+                margin-top: 1.4%;
+            }
+            @media (max-width: 576px) {
+                margin-top: 0.6%;
+            }
           }
           .tab {
             order: 9;
             flex-grow: 1;
             width: 100%;
             display: none;
-            padding: 1rem;
             background: #fff;
             padding: 10px;
+
+            @media (max-width: 1080px) {
+                padding: 0;
+            }
             h1{
                 text-transform: uppercase;
             }

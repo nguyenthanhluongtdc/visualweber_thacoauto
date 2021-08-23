@@ -3,10 +3,7 @@
         @forelse (get_categories_parent() ?? collect() as $item)
             <div class="brand-block">
                 <div class="tabs">
-                    <div class="brand-name mb-3">
-                        <h3 class="font-pri-bold font40 fontmb-middle">{{ $item->name }}</h3>
-                    </div>
-
+                    <h3 class="brand-name font-pri-bold font40 fontmb-middle">{{ $item->name }}</h3>
                     @foreach ($item->children as $key => $children)
                         <input type="radio" name="{{ 'tabs_' . $item->id }}" id="{{ 'tab_' . $item->id . '_' . $children->id }}" @if($key == 0) checked="checked" @endif>
                         <label for="{{ 'tab_' . $item->id . '_' . $children->id }}" class="font-pri font18">{{ $children->name }}</label>

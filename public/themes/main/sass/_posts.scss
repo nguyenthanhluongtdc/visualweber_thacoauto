@@ -772,6 +772,10 @@
 
         .row__top {
             width: 100%;
+            @include marginBottom(30, "+");
+           .desc{
+              
+           }
             h5.title a{
                 color: #2e3a41;
             }
@@ -803,7 +807,7 @@
             width: 100%;
             padding-top: 30px;
             border-top: 1px solid #2e3a41;
-
+           
             .size-dowload{
                 margin: 15px 0;
                 display: flex;
@@ -823,7 +827,14 @@
                 display: flex;
                 align-items: flex-start;
                 margin-top: 8%;
-                
+                @include height(100);
+                @media (max-width: 1720px){@include height(120);}
+                @media (max-width: 1680px){@include height(140);}
+                @media (max-width: 1440px){@include height(150);}
+                @media (max-width: 1300px){@include height(180);}
+                @media (max-width: 1200px){@include height(100);}
+                @media (max-width: 600px){@include height(160);}
+                @media (max-width: 480px){@include height(240);}
                .tag-name{
                 .name-tag{
                     font-size: 18px;

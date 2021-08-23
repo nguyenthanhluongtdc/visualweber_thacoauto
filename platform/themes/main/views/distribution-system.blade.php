@@ -381,99 +381,27 @@
                 </div>
             </div>
         </div>
+        @php
+            $librarys = get_posts_by_category(20, 10);
+        @endphp
         <div class="container-library" data-aos="fade-up" data-aos-duration="1500"
             data-aos-anchor-placement="center-bottom">
             <div class="owl-carousel owl-theme">
+                @foreach ($librarys as $library)
                 <div class="library-item">
                     <div class="img-container">
                         <div class="skewed">
-                            <a href="#">
-                                <img src="{{Theme::asset()->url('images/distribution/library1.png')}}" alt="">
+                            <a href="{{$library->url}}">
+                                <img src="{{ Storage::disk('public')->exists($library->image) ? get_object_image($library->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Thư viện ảnh">
                             </a>
                         </div>
                     </div>
                     <div class="library-item__content">
-                        <a href="#" class="library-title font25 fontmb-medium">THADICO ủng hộ 3 tỷ đồng cho Quỹ phòng, chống Covid-19
-                            tỉnh Bến Tre</a>
-                        <p class="library-description font20 fontmb-little">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod</p>
+                        <a href="{{$library->url}}" class="library-title font25 fontmb-medium">{{$library->name}}</a>
+                        <p class="library-description font20 fontmb-little">{{Str::words($library->description,40)}}</p>
                     </div>
                 </div>
-                <div class="library-item">
-                    <div class="img-container">
-                        <div class="skewed">
-                            <a href="#">
-                                <img src="{{Theme::asset()->url('images/distribution/library2.png')}}" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="library-item__content">
-                        <a href="#" class="library-title font25  fontmb-medium">THADICO ủng hộ 3 tỷ đồng cho Quỹ phòng, chống Covid-19
-                            tỉnh Bến Tre</a>
-                        <p class="library-description font20 fontmb-little">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod</p>
-                    </div>
-                </div>
-                <div class="library-item">
-                    <div class="img-container">
-                        <div class="skewed">
-                            <a href="#">
-                                <img src="{{Theme::asset()->url('images/distribution/library3.png')}}" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="library-item__content">
-                        <a href="#" class="library-title font25  fontmb-medium">THADICO ủng hộ 3 tỷ đồng cho Quỹ phòng, chống Covid-19
-                            tỉnh Bến Tre</a>
-                        <p class="library-description font20 fontmb-little">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod</p>
-                    </div>
-                </div>
-                <div class="library-item">
-                    <div class="img-container">
-                        <div class="skewed">
-                            <a href="#">
-                                <img src="{{Theme::asset()->url('images/distribution/library1.png')}}" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="library-item__content">
-                        <a href="#" class="library-title font25  fontmb-medium">THADICO ủng hộ 3 tỷ đồng cho Quỹ phòng, chống Covid-19
-                            tỉnh Bến Tre</a>
-                        <p class="library-description font20 fontmb-little">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod</p>
-                    </div>
-                </div>
-                <div class="library-item">
-                    <div class="img-container">
-                        <div class="skewed">
-                            <a href="#">
-                                <img src="{{Theme::asset()->url('images/distribution/library2.png')}}" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="library-item__content">
-                        <a href="#" class="library-title font25  fontmb-medium">THADICO ủng hộ 3 tỷ đồng cho Quỹ phòng, chống Covid-19
-                            tỉnh Bến Tre</a>
-                        <p class="library-description font20 fontmb-little">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod</p>
-                    </div>
-                </div>
-                <div class="library-item">
-                    <div class="img-container">
-                        <div class="skewed">
-                            <a href="#">
-                                <img src="{{Theme::asset()->url('images/distribution/library3.png')}}" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="library-item__content">
-                        <a href="#" class="library-title font25  fontmb-medium">THADICO ủng hộ 3 tỷ đồng cho Quỹ phòng, chống Covid-19
-                            tỉnh Bến Tre</a>
-                        <p class="library-description font20 fontmb-little">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod</p>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
@@ -489,9 +417,9 @@
     };
     var owl = $('.owl-carousel');
     owl.owlCarousel({
-        loop:true,
+        loop: false,
         items: 2.5,
-        margin:25,
+        margin: 25,
         dots: false,
         nav : false,
         responsiveClass: true,

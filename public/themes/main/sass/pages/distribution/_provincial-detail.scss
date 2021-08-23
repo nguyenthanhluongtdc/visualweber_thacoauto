@@ -507,10 +507,12 @@
             &--name {
                 font-family: $font-primary-bold;
                 text-transform: uppercase;
-                color: #2a2a2a;
                 white-space: nowrap; 
                 overflow: hidden;
                 text-overflow: ellipsis;
+                a {
+                    color: #2a2a2a;
+                }
             }
             &--date {
                 font-family: $font-primary;

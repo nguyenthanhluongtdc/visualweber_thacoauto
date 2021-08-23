@@ -197,6 +197,10 @@
             </div>
         </div>
     </div>
+    @php
+        $posts = get_posts_by_category(15, 4);
+        $pictures = get_posts_by_category(20, 4);
+    @endphp
     <div class="event-news mt-55 mb-155">
         <div class="container-remake">
             <h1 class="title font60 fontmb-large mb-0">tin tức & sự kiện</h1>
@@ -214,146 +218,48 @@
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                         <div class="event-news__content">
+                            @foreach ($posts as $post)
                             <div class="event-news__item">
                                 <div class="left">
                                     <div class="img-container">
                                         <div class="skewed">
-                                            <img src="{{Theme::asset()->url('images/distribution/event1.png')}}" alt="">
+                                            <img src="{{ Storage::disk('public')->exists($post->image) ? get_object_image($post->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="tin tức & sự kiện">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="right">
-                                    <h2 class="event-news__item--name font30">MAZDA CX-30: TÂN BINH</h2>
-                                    <p class="event-news__item--date font20">10/10/2021</p>
-                                    <p class="event-news__item--description font20">Tiếp nối thành công của các mẫu xe SUV Mazda, THACO</p>
-                                    <a href="#">
+                                    <h2 class="event-news__item--name font30"><a href="{{$post->url}}">{{$post->name}}</a></h2>
+                                    <p class="event-news__item--date font20">{{date_format($post->created_at,"d-m-Y")}}</p>
+                                    <p class="event-news__item--description font20">{{Str::words($post->description,40)}}</p>
+                                    <a href="{{$post->url}}">
                                         <button class="event-news__item--more font15">Xem thêm</button>
                                     </a>
                                 </div>
                             </div>
-                            <div class="event-news__item">
-                                <div class="left">
-                                    <div class="img-container">
-                                        <div class="skewed">
-                                            <img src="{{Theme::asset()->url('images/distribution/event2.png')}}" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right">
-                                    <h2 class="event-news__item--name font30">MAZDA CX-8: ĐA DẠNG PHIÊN</h2>
-                                    <p class="event-news__item--date font20">10/10/2021</p>
-                                    <p class="event-news__item--description font20">Tiếp nối thành công của các mẫu xe SUV Mazda, THACO</p>
-                                    <a href="#">
-                                        <button class="event-news__item--more font15">Xem thêm</button>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="event-news__item">
-                                <div class="left">
-                                    <div class="img-container">
-                                        <div class="skewed">
-                                            <img src="{{Theme::asset()->url('images/distribution/event3.png')}}" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right">
-                                    <h2 class="event-news__item--name font30">New Morning - mẫu xe</h2>
-                                    <p class="event-news__item--date font20">10/10/2021</p>
-                                    <p class="event-news__item--description font20">Tiếp nối thành công của các mẫu xe SUV Mazda, THACO</p>
-                                    <a href="#">
-                                        <button class="event-news__item--more font15">Xem thêm</button>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="event-news__item">
-                                <div class="left">
-                                    <div class="img-container">
-                                        <div class="skewed">
-                                            <img src="{{Theme::asset()->url('images/distribution/event4.png')}}" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right">
-                                    <h2 class="event-news__item--name font30">Kia Seltos đã chinh phục </h2>
-                                    <p class="event-news__item--date font20">10/10/2021</p>
-                                    <p class="event-news__item--description font20">Tiếp nối thành công của các mẫu xe SUV Mazda, THACO</p>
-                                    <a href="#">
-                                        <button class="event-news__item--more font15">Xem thêm</button>
-                                    </a>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                         <div class="event-news__content">
+                            @foreach ($pictures as $picture)
                             <div class="event-news__item">
                                 <div class="left">
                                     <div class="img-container">
                                         <div class="skewed">
-                                            <img src="{{Theme::asset()->url('images/distribution/event1.png')}}" alt="">
+                                            <img src="{{ Storage::disk('public')->exists($picture->image) ? get_object_image($picture->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="video & hình ảnh">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="right">
-                                    <h2 class="event-news__item--name font30">MAZDA CX-30: TÂN BINH</h2>
-                                    <p class="event-news__item--date font20">10/10/2021</p>
-                                    <p class="event-news__item--description font20">Tiếp nối thành công của các mẫu xe SUV Mazda, THACO</p>
-                                    <a href="#">
+                                    <h2 class="event-news__item--name font30"><a href="{{$picture->url}}">{{$picture->name}}</a></h2>
+                                    <p class="event-news__item--date font20">{{date_format($picture->created_at,"d-m-Y")}}</p>
+                                    <p class="event-news__item--description font20">{{Str::words($picture->description,40)}}</p>
+                                    <a href="{{$picture->url}}">
                                         <button class="event-news__item--more font15">Xem thêm</button>
                                     </a>
                                 </div>
                             </div>
-                            <div class="event-news__item">
-                                <div class="left">
-                                    <div class="img-container">
-                                        <div class="skewed">
-                                            <img src="{{Theme::asset()->url('images/distribution/event2.png')}}" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right">
-                                    <h2 class="event-news__item--name font30">MAZDA CX-8: ĐA DẠNG PHIÊN</h2>
-                                    <p class="event-news__item--date font20">10/10/2021</p>
-                                    <p class="event-news__item--description font20">Tiếp nối thành công của các mẫu xe SUV Mazda, THACO</p>
-                                    <a href="#">
-                                        <button class="event-news__item--more font15">Xem thêm</button>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="event-news__item">
-                                <div class="left">
-                                    <div class="img-container">
-                                        <div class="skewed">
-                                            <img src="{{Theme::asset()->url('images/distribution/event3.png')}}" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right">
-                                    <h2 class="event-news__item--name font30">New Morning - mẫu xe</h2>
-                                    <p class="event-news__item--date font20">10/10/2021</p>
-                                    <p class="event-news__item--description font20">Tiếp nối thành công của các mẫu xe SUV Mazda, THACO</p>
-                                    <a href="#">
-                                        <button class="event-news__item--more font15">Xem thêm</button>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="event-news__item">
-                                <div class="left">
-                                    <div class="img-container">
-                                        <div class="skewed">
-                                            <img src="{{Theme::asset()->url('images/distribution/event4.png')}}" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right">
-                                    <h2 class="event-news__item--name font30">Kia Seltos đã chinh phục </h2>
-                                    <p class="event-news__item--date font20">10/10/2021</p>
-                                    <p class="event-news__item--description font20">Tiếp nối thành công của các mẫu xe SUV Mazda, THACO</p>
-                                    <a href="#">
-                                        <button class="event-news__item--more font15">Xem thêm</button>
-                                    </a>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>

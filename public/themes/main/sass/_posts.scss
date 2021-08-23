@@ -772,23 +772,32 @@
             }
             .tags{
                 display: flex;
-                align-items: center;
+                align-items: flex-start;
+                margin-top: 8%;
+                
+               .tag-name{
+                margin-top: 4%;
                 .name-tag{
                     font-size: 18px;
                     margin-right: 10px;
+                   
+                  
                 }
+               }
+               
                 .tag-list{
                     display: flex;
                     flex-wrap: wrap;
                     align-items: flex-end;
                     flex: 1;
+                    
                     p{
                         width: fit-content;
                         background: #e2e2e2;
                         text-align: center;
                         padding: 2%;
                         margin-right: 3%;
-                        margin-top: 3%;
+                        // margin-top: -5%;
                         margin-bottom: 0;
                         a{
                             color: #2e3a41;
@@ -815,7 +824,7 @@
                 }
 
                 .tags {
-                    @include mobileMarginTop(15, "+");
+                    @include mobileMarginTop(30, "+");
 
                     .name-tag {
                         margin-right: 25px;
@@ -829,7 +838,7 @@
                             padding-left: 10px;
                             padding-right: 10px;
                             margin-right: 15px;
-                            @include mobileMarginTop(15, "+");
+                            margin-top: -2%;
                             margin-bottom: 0;
                         }
                     }

@@ -5,9 +5,7 @@
         display: block;
         @include marginBottom(80, "+");
     .section-list-news {
-        .title{
-           
-        }
+        
         @include paddingTop(60);
         .title {
             font-family: $font-my-bold;
@@ -15,9 +13,7 @@
         }
         .content { 
             margin-top: 3%;
-            h3{
-                
-            }
+            
             img {
                 max-width: 100%;
             }
@@ -131,17 +127,16 @@
     ul {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
-        @media (max-width: 1080px) {
-            justify-content: start;
-        }
         @include mobileMarginBottom(40, "-");
         
         li {
-            @include flex(60);
-             @include mobileFlex(80);
+            display: table;
+            margin: 0 auto;
+            @include mobileFlex(55);
              margin-right: 0;
-
+             @media (max-width: 400px) {
+                @include mobileFlex(35);
+            }
              @include mobileMarginBottom(40, "+");
 
              @media (max-width: 1080px) {
@@ -157,10 +152,10 @@
                  font-size: 17px;
              }
              @media (max-width: 480px) {
-                 font-size: 15px;
+                 font-size: 12px;
              }
              @media (max-width: 360px) {
-                 font-size: 13px;
+                 font-size: 10px;
              }
         }
     }

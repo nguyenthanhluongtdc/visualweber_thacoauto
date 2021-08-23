@@ -1,7 +1,6 @@
-
 @if ($paginator->hasPages())
     <div class="page-pagination">
-        <ul class="pagination news font-pri-bold w-100">
+        <ul class="pagination news font-pri-bold">
                {{-- Previous Page Link --}}
             {{-- @if ($paginator->onFirstPage())
                 <li class="disabled" aria-disabled="true" aria-label="@lang('pagination.previous')">
@@ -20,7 +19,7 @@
                     <li class="disabled" aria-disabled="true"><span>{{ $element }}</span></li>
                 @endif
 
-                {{-- Array Of Links --}}
+                {{-- Array Of Link --}}
                 @if (is_array($element))
                     @foreach ($element as $page => $url)
                         @if ($page == $paginator->currentPage())

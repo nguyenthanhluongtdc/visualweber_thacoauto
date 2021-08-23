@@ -18,7 +18,7 @@
                             <h4 class="title font-pri-bold font30 text-uppercase fontmb-medium">
                                 <a href="{{$post->url}}">{{$post->name}}</a>
                             </h4>
-                            <p class="desc font-pri font20 fontmb-little">
+                            <p class="desc font-pri font20 fontmb-small">
                                 {{$loop->first ? Str::words($post->description,40): Str::words($post->description,20)}}
                             </p>
                             <p class="city-day font-pri font15">
@@ -44,9 +44,9 @@
                                 </div>
                             </div>
                             <div class="post-content">
-                                <h4 class="font-mi-bold font20 fontmb-medium"><a href="{{$post->url}}">{{$post->name}}</a></h4>
-                                <p class="desc font-pri font20 fontmb-little">{{Str::words($post->description,40)}}</p>
-                                <p class="city-day font-pri font15">
+                                <h4 class="font-mi-bold font30 fontmb-medium"><a href="{{$post->url}}">{{$post->name}}</a></h4>
+                                <p class="desc font-pri font20 fontmb-small">{{Str::words($post->description,40)}}</p>
+                                <p class="city-day font-pri font15 fontmb-small">
                                     <span class="city">{{ \MetaBox::getMetaData($post, 'region_post', true) ?? '--' }}</span>
                                     <span>{{date_format($post->created_at,"d-m-Y")}}</span>
                                 </p>
@@ -72,7 +72,7 @@
                                         <a href="{{$post->url}}"><img src="{{ Storage::disk('public')->exists($post->image) ? get_object_image($post->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="{{$post->name}}"></a>
                                     </div>
                                 </div>
-                                <h5 class="title font-mi-bold font20">
+                                <h5 class="title font-mi-bold font20 fontmb-medium">
                                     <a href="{{$post->url}}">{{$post->name}}</a>
                                 </h5>
                             </div>

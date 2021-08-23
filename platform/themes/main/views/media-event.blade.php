@@ -10,7 +10,7 @@
     @endphp
     @if (!empty($posts))
         @foreach ($posts as $post)
-        <div class="event-item"> 
+        <div class="event-item">
             <div class="title">
                 <div class="icon-title">
                     <img src="{{ Theme::asset()->url('images/media/event.png') }}" alt="Icon title">
@@ -24,7 +24,7 @@
             <div class="image-content">
                 <div class="image">
                     <div class="post-thumbnail">
-                        <a href="{{$post->url}}"><img src="{{ Storage::disk('public')->exists($post->image) ? get_object_image($post->image) : RvMedia::getDefaultImage() }}" alt=""></a>
+                        <a href="{{$post->url}}"><img src="{{ get_object_image($post->image) }}" alt=""></a>
                     </div>
                 </div>
                 <div class="content">
@@ -40,5 +40,11 @@
 </div>
 
 <div class="container-remake">
-    {{ $posts->links('vendor.pagination.custom') }}
+    <div class="page-pagination py-md-5 py-4">
+        <div class="page-pagination">
+            @if(!empty($posts))
+                @includeIf("theme.main::views.components.news-pagination",['paginator'=>$posts])
+            @endif
+        </div>
+     </div>
 </div>

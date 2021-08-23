@@ -328,7 +328,7 @@
                                                 Tiếp nối thành công của các mẫu xe SUV Mazda, THACO AUTO đưa về thị trường Việt Nam mẫu SUV đô thị thông minh, tiện nghi mang tên Mazda CX-30. Với những đột phá về thiết kế, trang bị tiện nghi hiện đại vượt trội trong phân khúc cùng khả năng vận hành linh hoạt, tiết kiệm và an toàn, CX-30 được đánh giá là lựa chọn mới đầy hấp dẫn cho khách hàng trẻ.
                                             </p>
 
-                                            <a href="#" title="" class="btn-read-more"> {!!__('Read more')!!} </a>
+                                            <a href="#" title="" class="btn-read-more"> {!!__('Xem thêm')!!} </a>
                                         </div>
                                     </div>
                                 </div>
@@ -348,7 +348,7 @@
                                                 Tiếp nối thành công của các mẫu xe SUV Mazda, THACO AUTO đưa về thị trường Việt Nam mẫu SUV đô thị thông minh, tiện nghi mang tên Mazda CX-30. Với những đột phá về thiết kế, trang bị tiện nghi hiện đại vượt trội trong phân khúc cùng khả năng vận hành linh hoạt, tiết kiệm và an toàn, CX-30 được đánh giá là lựa chọn mới đầy hấp dẫn cho khách hàng trẻ.
                                             </p>
 
-                                            <a href="#" title="" class="btn-read-more"> {!!__('Read more')!!} </a>
+                                            <a href="#" title="" class="btn-read-more"> {!!__('Xem thêm')!!} </a>
                                         </div>
                                     </div>
                                 </div>
@@ -368,7 +368,7 @@
                                                 Tiếp nối thành công của các mẫu xe SUV Mazda, THACO AUTO đưa về thị trường Việt Nam mẫu SUV đô thị thông minh, tiện nghi mang tên Mazda CX-30. Với những đột phá về thiết kế, trang bị tiện nghi hiện đại vượt trội trong phân khúc cùng khả năng vận hành linh hoạt, tiết kiệm và an toàn, CX-30 được đánh giá là lựa chọn mới đầy hấp dẫn cho khách hàng trẻ.
                                             </p>
 
-                                            <a href="#" title="" class="btn-read-more"> {!!__('Read more')!!} </a>
+                                            <a href="#" title="" class="btn-read-more"> {!!__('Xem thêm')!!} </a>
                                         </div>
                                     </div>
                                 </div>
@@ -388,7 +388,7 @@
                                                 Tiếp nối thành công của các mẫu xe SUV Mazda, THACO AUTO đưa về thị trường Việt Nam mẫu SUV đô thị thông minh, tiện nghi mang tên Mazda CX-30. Với những đột phá về thiết kế, trang bị tiện nghi hiện đại vượt trội trong phân khúc cùng khả năng vận hành linh hoạt, tiết kiệm và an toàn, CX-30 được đánh giá là lựa chọn mới đầy hấp dẫn cho khách hàng trẻ.
                                             </p>
 
-                                            <a href="#" title="" class="btn-read-more"> {!!__('Read more')!!} </a>
+                                            <a href="#" title="" class="btn-read-more"> {!!__('Xem thêm')!!} </a>
                                         </div>
                                     </div>
                                 </div>
@@ -408,7 +408,7 @@
                                                 Tiếp nối thành công của các mẫu xe SUV Mazda, THACO AUTO đưa về thị trường Việt Nam mẫu SUV đô thị thông minh, tiện nghi mang tên Mazda CX-30. Với những đột phá về thiết kế, trang bị tiện nghi hiện đại vượt trội trong phân khúc cùng khả năng vận hành linh hoạt, tiết kiệm và an toàn, CX-30 được đánh giá là lựa chọn mới đầy hấp dẫn cho khách hàng trẻ.
                                             </p>
 
-                                            <a href="#" title="" class="btn-read-more"> {!!__('Read more')!!} </a>
+                                            <a href="#" title="" class="btn-read-more"> {!!__('Xem thêm')!!} </a>
                                         </div>
                                     </div>
                                 </div>
@@ -428,7 +428,7 @@
                                                 Tiếp nối thành công của các mẫu xe SUV Mazda, THACO AUTO đưa về thị trường Việt Nam mẫu SUV đô thị thông minh, tiện nghi mang tên Mazda CX-30. Với những đột phá về thiết kế, trang bị tiện nghi hiện đại vượt trội trong phân khúc cùng khả năng vận hành linh hoạt, tiết kiệm và an toàn, CX-30 được đánh giá là lựa chọn mới đầy hấp dẫn cho khách hàng trẻ.
                                             </p>
 
-                                            <a href="#" title="" class="btn-read-more"> {!!__('Read more')!!} </a>
+                                            <a href="#" title="" class="btn-read-more"> {!!__('Xem thêm')!!} </a>
                                         </div>
                                     </div>
                                 </div>
@@ -453,7 +453,7 @@
                                                 Tiếp nối thành công của các mẫu xe SUV Mazda, THACO AUTO đưa về thị trường Việt Nam mẫu SUV đô thị thông minh, tiện nghi mang tên Mazda CX-30. Với những đột phá về thiết kế, trang bị tiện nghi hiện đại vượt trội trong phân khúc cùng khả năng vận hành linh hoạt, tiết kiệm và an toàn, CX-30 được đánh giá là lựa chọn mới đầy hấp dẫn cho khách hàng trẻ.
                                             </p>
 
-                                            <a href="#" title="" class="btn-read-more"> {!!__('Read more')!!} </a>
+                                            <a href="#" title="" class="btn-read-more"> {!!__('Xem thêm')!!} </a>
                                         </div>
                                     </div>
                                 </div>
@@ -473,7 +473,7 @@
                                                 Tiếp nối thành công của các mẫu xe SUV Mazda, THACO AUTO đưa về thị trường Việt Nam mẫu SUV đô thị thông minh, tiện nghi mang tên Mazda CX-30. Với những đột phá về thiết kế, trang bị tiện nghi hiện đại vượt trội trong phân khúc cùng khả năng vận hành linh hoạt, tiết kiệm và an toàn, CX-30 được đánh giá là lựa chọn mới đầy hấp dẫn cho khách hàng trẻ.
                                             </p>
 
-                                            <a href="#" title="" class="btn-read-more"> {!!__('Read more')!!} </a>
+                                            <a href="#" title="" class="btn-read-more"> {!!__('Xem thêm')!!} </a>
                                         </div>
                                     </div>
                                 </div>
@@ -493,7 +493,7 @@
                                                 Tiếp nối thành công của các mẫu xe SUV Mazda, THACO AUTO đưa về thị trường Việt Nam mẫu SUV đô thị thông minh, tiện nghi mang tên Mazda CX-30. Với những đột phá về thiết kế, trang bị tiện nghi hiện đại vượt trội trong phân khúc cùng khả năng vận hành linh hoạt, tiết kiệm và an toàn, CX-30 được đánh giá là lựa chọn mới đầy hấp dẫn cho khách hàng trẻ.
                                             </p>
 
-                                            <a href="#" title="" class="btn-read-more"> {!!__('Read more')!!} </a>
+                                            <a href="#" title="" class="btn-read-more"> {!!__('Xem thêm')!!} </a>
                                         </div>
                                     </div>
                                 </div>
@@ -513,7 +513,7 @@
                                                 Tiếp nối thành công của các mẫu xe SUV Mazda, THACO AUTO đưa về thị trường Việt Nam mẫu SUV đô thị thông minh, tiện nghi mang tên Mazda CX-30. Với những đột phá về thiết kế, trang bị tiện nghi hiện đại vượt trội trong phân khúc cùng khả năng vận hành linh hoạt, tiết kiệm và an toàn, CX-30 được đánh giá là lựa chọn mới đầy hấp dẫn cho khách hàng trẻ.
                                             </p>
 
-                                            <a href="#" title="" class="btn-read-more"> {!!__('Read more')!!} </a>
+                                            <a href="#" title="" class="btn-read-more"> {!!__('Xem thêm')!!} </a>
                                         </div>
                                     </div>
                                 </div>
@@ -533,7 +533,7 @@
                                                 Tiếp nối thành công của các mẫu xe SUV Mazda, THACO AUTO đưa về thị trường Việt Nam mẫu SUV đô thị thông minh, tiện nghi mang tên Mazda CX-30. Với những đột phá về thiết kế, trang bị tiện nghi hiện đại vượt trội trong phân khúc cùng khả năng vận hành linh hoạt, tiết kiệm và an toàn, CX-30 được đánh giá là lựa chọn mới đầy hấp dẫn cho khách hàng trẻ.
                                             </p>
 
-                                            <a href="#" title="" class="btn-read-more"> {!!__('Read more')!!} </a>
+                                            <a href="#" title="" class="btn-read-more"> {!!__('Xem thêm')!!} </a>
                                         </div>
                                     </div>
                                 </div>
@@ -553,7 +553,7 @@
                                                 Tiếp nối thành công của các mẫu xe SUV Mazda, THACO AUTO đưa về thị trường Việt Nam mẫu SUV đô thị thông minh, tiện nghi mang tên Mazda CX-30. Với những đột phá về thiết kế, trang bị tiện nghi hiện đại vượt trội trong phân khúc cùng khả năng vận hành linh hoạt, tiết kiệm và an toàn, CX-30 được đánh giá là lựa chọn mới đầy hấp dẫn cho khách hàng trẻ.
                                             </p>
 
-                                            <a href="#" title="" class="btn-read-more"> {!!__('Read more')!!} </a>
+                                            <a href="#" title="" class="btn-read-more"> {!!__('Xem thêm')!!} </a>
                                         </div>
                                     </div>
                                 </div>

@@ -9,7 +9,7 @@
                     <div class="production__content font20 font-pri mt-10 mb-40">
                         {!! has_sub_field($row, 'description') !!}
                         <div class="read-more desktop">
-                            <a href="{{has_sub_field($row, 'link')}}" class="read-more__link font-pri font20"> {!! __('Read more') !!} <i class="fas fa-angle-double-right"></i></a>
+                            <a href="{{has_sub_field($row, 'link')}}" class="read-more__link font-pri font20"> {!! __('Xem thêm') !!} <i class="fas fa-angle-double-right"></i></a>
                         </div>
                     </div>
                     

@@ -6,7 +6,7 @@
                     Tin tức
                 </h2>
 
-                <a href="#" title="{!!__('Read more')!!}" class="read-moree text-dark font20 font-pri"> {!!__('Xem
+                <a href="#" title="{!!__('Xem thêm')!!}" class="read-moree text-dark font20 font-pri"> {!!__('Xem
                     thêm')!!} <img width="" height=""
                         src="{{Theme::asset()->url('images/mechandical/chevron-double-right.svg')}}" alt="" /></a>
             </div>

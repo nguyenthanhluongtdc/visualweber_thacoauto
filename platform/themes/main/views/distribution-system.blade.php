@@ -1,4 +1,4 @@
-<div class="distribution">
+<div class="distribution"> 
     <div class="provincial-company">
         <div class="container-remake">
             <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 fontmb-large">công ty
@@ -235,7 +235,7 @@
 
     <div class="activity-news-mobile font-pri">
         <div class="container-remake">
-            <h2 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 mb-20 text-uppercase font-pri-bold">
+            <h2 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 mb-20 text-uppercase fontmb-large font-pri-bold">
                 tin tức hoạt động
             </h2>
             <div class="news-item">
@@ -247,16 +247,16 @@
                     </div>
                 </div>
                 <div class="news-body">
-                    <a class="news-title font-pri-bold fontmb-medium" href="#">CÔNG TY TNHH MTV ĐỒNG PHƯỚC ĐẦU TƯ 5 XE MINI BUS
+                    <a class="news-title font-pri-bold fontmb-middle" href="#">CÔNG TY TNHH MTV ĐỒNG PHƯỚC ĐẦU TƯ 5 XE MINI BUS
                         IVECO DAILY</a>
-                    <p class="news-description fontmb-little">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    <p class="news-description fontmb-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                         eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
                         gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
                     <div class="news-info">
-                        <div class="news-info__item font15">
+                        <div class="news-info__item fontmb-little">
                             <p>Hà nội</p>
                         </div>
-                        <div class="news-info__item font15">
+                        <div class="news-info__item fontmb-little">
                             <p>20-12-2021</p>
                         </div>
                     </div>
@@ -272,16 +272,16 @@
                     </div>
                 </div>
                 <div class="news-body">
-                    <a class="news-title font-pri-bold fontmb-medium" href="#">CÔNG TY TNHH MTV ĐỒNG PHƯỚC ĐẦU TƯ 5 XE MINI BUS
+                    <a class="news-title font-pri-bold fontmb-middle" href="#">CÔNG TY TNHH MTV ĐỒNG PHƯỚC ĐẦU TƯ 5 XE MINI BUS
                         IVECO DAILY</a>
-                    <p class="news-description fontmb-little">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    <p class="news-description fontmb-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                         eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
                         gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
                     <div class="news-info">
-                        <div class="news-info__item font15">
+                        <div class="news-info__item fontmb-little">
                             <p>Hà nội</p>
                         </div>
-                        <div class="news-info__item font15">
+                        <div class="news-info__item  fontmb-little">
                             <p>20-12-2021</p>
                         </div>
                     </div>
@@ -297,16 +297,16 @@
                     </div>
                 </div>
                 <div class="news-body">
-                    <a class="news-title font-pri-bold fontmb-medium" href="#">CÔNG TY TNHH MTV ĐỒNG PHƯỚC ĐẦU TƯ 5 XE MINI BUS
+                    <a class="news-title font-pri-bold fontmb-middle" href="#">CÔNG TY TNHH MTV ĐỒNG PHƯỚC ĐẦU TƯ 5 XE MINI BUS
                         IVECO DAILY</a>
-                    <p class="news-description fontmb-little">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    <p class="news-description fontmb-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                         eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
                         gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
                     <div class="news-info">
-                        <div class="news-info__item font15">
+                        <div class="news-info__item  fontmb-little">
                             <p>Hà nội</p>
                         </div>
-                        <div class="news-info__item font15">
+                        <div class="news-info__item fontmb-little">
                             <p>20-12-2021</p>
                         </div>
                     </div>
@@ -337,6 +337,16 @@
                 <div class="page-item">
                     <a href="" title="" class="page-link">
                         5
+                    </a>
+                </div>
+                <div class="page-item">
+                    <a href="" title="" class="page-link">
+                        6
+                    </a>
+                </div>
+                <div class="page-item">
+                    <a href="" title="" class="page-link">
+                        7
                     </a>
                 </div>
                 <div class="page-item">

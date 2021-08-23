@@ -55,6 +55,8 @@
         }
         .select-list {
             width: 37.5%;
+            z-index: 99;
+            position: relative;
             form {
                 display: flex;
                 .ui.selection.dropdown {
@@ -242,13 +244,14 @@
             //     }
             // }
             .news-body {
-                padding: 30px;
+                padding: 30px 30px 88px 30px;
                 height: 100%;
                 position: relative;
                 .news-title {
                     font-family: $font-primary-bold;
                     color: #444444;
                     margin-bottom: 25px;
+                    line-height: 1.2;
                 }
                 .news-description {
                     font-family: $font-primary;
@@ -321,6 +324,7 @@
 
         .news-item {
             @include mobileMarginBottom(40, "+");
+           
             &:last-child {
                 margin-bottom: 0;
             }
@@ -335,12 +339,14 @@
             .news-description {
                 @include mobileMarginBottom(23, "+");
                 text-align: justify;
+               
             }
 
             .news-title {
                 display: inline-block;
                 @include mobileMarginBottom(20, "+");
                 color: #444444;
+                line-height: 1.2;
             }
 
             .news-info {
@@ -407,7 +413,9 @@
             }
         }
         &-button {
-            @include width(80);
+            @include width(70);
+            @include mobileWidth(40);
+            @include mobileMarginX(35, "+");
             display: flex;
             justify-content: space-between;
             position: absolute;
@@ -431,6 +439,7 @@
             }
             &__content {
                 width: 58%;
+                line-height: 1.2;
                 .library-title {
                     font-family: $font-primary-bold;
                     color: #454343;

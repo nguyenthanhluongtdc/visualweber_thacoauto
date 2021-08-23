@@ -457,6 +457,15 @@ a:hover {
   @media (max-width: 992px) {
     margin-bottom: #{calculatorPixel(60, 992)}px;
   }
+  @media (max-width: 768px) {
+    margin-bottom: #{calculatorPixel(60, 768)}px;
+  }
+  @media (max-width: 576px) {
+    margin-bottom: #{calculatorPixel(60, 576)}px;
+  }
+  @media (max-width: 480px) {
+    margin-bottom: #{calculatorPixel(60, 480)}px;
+  }
 }
 
 .mt-85 {
@@ -521,6 +530,15 @@ a:hover {
   }
   @media (max-width: 992px) {
     margin-bottom: #{calculatorPixel(40, 992)}px;
+  }
+  @media (max-width: 768px) {
+    margin-bottom: #{calculatorPixel(40, 768)}px;
+  }
+  @media (max-width: 576px) {
+    margin-bottom: #{calculatorPixel(40, 576)}px;
+  }
+  @media (max-width: 480px) {
+    margin-bottom: #{calculatorPixel(40, 480)}px;
   }
 }
 

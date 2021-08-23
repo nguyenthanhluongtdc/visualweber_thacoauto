@@ -1,0 +1,12 @@
+.general-manufacturing{
+    .production{
+        @media (max-width:1080px){
+            .production__title{
+                margin-bottom: 1%;
+            }
+        }
+        &__image{
+            padding-top: 1%;
+        }
+    }
+}

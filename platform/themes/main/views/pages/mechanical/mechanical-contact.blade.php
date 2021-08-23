@@ -25,45 +25,46 @@
                         </div>
                         
                     </div>
+
+                    {!! Form::open(['route' => 'public.send.contact', 'method' => 'POST', 'class' => 'contact-form']) !!}
                     <div class="mechanical-contact__info">
                         <div class="row input-container">
                             <div class="col-6">
                                 <div class="styled-input">
-                                    <input type="text" required />
+                                    <input type="text" name="name" required />
                                     <label class="font20">họ và tên</label> 
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="styled-input">
-                                    <input type="text" required />
+                                    <input type="text" name="email" required />
                                     <label class="font20">email</label> 
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="styled-input">
-                                    <input type="text" required />
+                                    <input type="text" name="phone" required />
                                     <label class="font20">số điện thoại</label> 
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="styled-input">
-                                    <input type="text" required />
+                                    <input type="text" name="subject" required />
                                     <label class="font20">tiêu đề</label> 
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="styled-input wide">
-                                    <textarea rows="4" required></textarea>
+                                    <textarea rows="4" name="content" required></textarea>
                                     <label class="font20">nội dung</label>
                                 </div>
                             </div>
-     
                             <div class="col-md-12">
-                                <div class="btn-lrg  submit-btn font20">GỬI ĐI</div>
+                                <button type="submit" class="contact-button" class="btn-lrg  submit-btn font20">GỬI ĐI</button>
                             </div>
-    
-                    </div>      
+                        </div>      
                     </div>
+                    {!! Form::close() !!}
                 </div>    
             </div>
         </div>

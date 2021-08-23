@@ -53,9 +53,11 @@
                             {!! has_field($page, 'title_module_aboutus_introduce') !!}
                         </h2>
                     @endif
-                    @if(has_field($page, 'content_module_aboutus_introduce'))
-                        {!! has_field($page, 'content_module_aboutus_introduce') !!}
-                    @endif
+                   <div class="text-justify">
+                        @if(has_field($page, 'content_module_aboutus_introduce'))
+                            {!! has_field($page, 'content_module_aboutus_introduce') !!}
+                        @endif
+                   </div>
                 </div>
             </div>
         </div>
@@ -164,9 +166,9 @@
                 @endif
 
                 @if(has_field($page, 'description_module_value_introduce'))
-                    <p class="section-system-value__des" data-aos="fade-right">
+                    <div class="section-system-value__des text-justify" data-aos="fade-right">
                         {!! has_field($page, 'description_module_value_introduce') !!}
-                    </p>
+                    </div>
                 @endif
 
 
@@ -178,16 +180,16 @@
                                     <h3 class="title font30 font-pri-bold fontmb-medium">
                                         {!! has_sub_field($row, 'title') !!}
                                     </h3>
-                                    <p class="description font18 fontmb-little">
+                                    <div class="description font18 fontmb-little text-justify">
                                         {!! has_sub_field($row, 'description') !!}
-                                    </p>
+                                    </div>
                                 </div>
                             @empty
                                 <div class="__left__row" data-aos="fade-up" data-aos-delay="300">
                                     <h3 class="title font30 font-pri-bold fontmb-medium">
                                         Tầm nhìn
                                     </h3>
-                                    <p class="description font18 fontmb-little">
+                                    <p class="description font18 fontmb-little text-justify">
                                         Doanh nghiệp sản xuất – kinh doanh – xuất khẩu ô tô & cơ khí của Việt Nam, phát triển
                                         bền vững trong bối cảnh hội nhập khu vực và thế giới.
                                     </p>
@@ -403,7 +405,6 @@
     </div>
 
     <div class="section-criteria-wrapper mobile">
-        
             <div class="section-criteria__header">
                 <div class="container-remake">
                     <h2 class="section-criteria__header__title fontmb-large font60 font-pri-bold"
@@ -420,7 +421,7 @@
                 </div>
             </div>
         <div class="container-remake-fullRight">
-            @if(!empty($criteria)))
+            @if(!empty($criteria))
                 <div class="section-criteria-swiper">
                     <div class="swiper-container mySwiper">
                         <div class="swiper-wrapper">

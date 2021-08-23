@@ -11,14 +11,14 @@
                 <img src="{{ Theme::asset()->url('images/main/logobt.png') }}" alt="THACO AUTO" height="34">
             </a>
             <div class="thaco-contact">
-                <h2 class="name-company font-pri-bold color-pri font32">CÔNG TY TNHH THACO AUTO</h2>
+                <h2 class="name-company font-pri-bold color-pri font32">{!! theme_option('name-company') !!}</h2>
                 <p class="address font-pri font18">
-                    <span>Địa chỉ:</span>
-                    <span>KCN Cơ khí ô tô Chu Lai Trường Hải, Xã Tam Hiệp, Huyện Núi Thành, Tỉnh Quảng Nam ( Tìm vị trí )</span>
+                    <span>{{__('Address')}}:</span>
+                    <span>{!! theme_option('address-company') !!} ( Tìm vị trí )</span>
                 </p>
                 <p class="tax-code font-pri font18">
-                    <span>Mã số thuế:</span>
-                    <span> 4001221658</span>
+                    <span>{{__('Tax Code')}}:</span>
+                    <span> {!! theme_option('tax-code-company') !!}</span>
                 </p>
             </div>
 
@@ -27,51 +27,43 @@
                     <img src="{{ Theme::asset()->url('images/main/bct.png') }}" alt="Bộ công thương">
                 </a>
                 <ul class="list-media">
-                    <li><a href=""><img src="{{ Theme::asset()->url('images/main/iconfb.png') }}" alt="facebook"></a></li>
-                    <li><a href=""><img src="{{ Theme::asset()->url('images/main/iconin.png') }}" alt="in"></a></li>
-                    <li><a href=""><img src="{{ Theme::asset()->url('images/main/iconyt.png') }}" alt="youtube"></a></li>
+                    <li><a href="{{ theme_option('facebook') }}" target="_blank"><img src="{{ Theme::asset()->url('images/main/iconfb.png') }}" alt="facebook"></a></li>
+                    <li><a href="{{ theme_option('linkedin') }}" target="_blank"><img src="{{ Theme::asset()->url('images/main/iconin.png') }}" alt="in"></a></li>
+                    <li><a href="{{ theme_option('youtube') }}" target="_blank"><img src="{{ Theme::asset()->url('images/main/iconyt.png') }}" alt="youtube"></a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-right">
                 <div class="item">
-                    <h2 class="title font-pri-bold font30 color-gray fontmb-medium" id="menu-footer">Giới thiệu</h2>
-                    <ul class="font-pri font18 list-link">
-                        <li><a href="" class="color-gray">Lĩnh vực hoạt động</a></li>
-                        <li><a href="" class="color-gray">Sản phẩm dịch vụ</a></li>
-                        <li><a href="" class="color-gray">Công ty tỉnh thành</a></li>
-                    </ul>
+                    <h2 class="title font-pri-bold font30 color-gray fontmb-medium" id="menu-footer">{{__('Introduce')}}</h2>
+                    {!! dynamic_sidebar('footer_introduce') !!}
                 </div>
                 <div class="item">
-                    <p class="title font-pri-bold font30 color-gray fontmb-medium" id="menu-footer">Truyền thông</p>
-                    <ul class="font-pri font18 list-link">
-                        <li><a href="" class="color-gray">Tin tức hoạt động</a></li>
+                    <p class="title font-pri-bold font30 color-gray fontmb-medium" id="menu-footer">{{__('The media')}}</p>
+                        {!! dynamic_sidebar('footer_media') !!}
+                        {{-- <li><a href="" class="color-gray">Tin tức hoạt động</a></li>
                         <li><a href="" class="color-gray">Hoạt động cộng đồng</a></li>
-                        <li><a href="" class="color-gray">Bản tin Thaco Auto</a></li>
+                        <li><a href="" class="color-gray">Bản tin Thaco Auto</a></li> --}}
+                </div>
+                <div class="item">
+                    <h2 class="title font-pri-bold font30 color-gray fontmb-medium" id="menu-footer">{{__('Contact')}}</h2>
+                    <ul class="font-pri font18 list-link">
+                        <li class="color-gray"><span>Hotline: </span><span><a href="tel:{{ theme_option('hotline-contact') }}" class="color-gray">{{ theme_option('hotline-contact') }}</a></span></li>
+                        <li class="color-gray"><span>Email: </span><span><a href="mailto:{{ theme_option('email-contact') }}" class="color-gray">{{ theme_option('email-contact') }}</a></span></li>
+                        <li class="color-gray"><span>Fax: </span><span><a href="tel:{{ theme_option('fax-contact') }}" class="color-gray">{{ theme_option('fax-contact') }}</a></span></li>
                     </ul>
                 </div>
                 <div class="item">
-                    <h2 class="title font-pri-bold font30 color-gray fontmb-medium" id="menu-footer">Liên hệ</h2>
-                    <ul class="font-pri font18 list-link">
-                        <li class="color-gray"><span>Hotline: </span><span><a href="tel:0980909789" class="color-gray">0980909789</a></span></li>
-                        <li class="color-gray"><span>Email: </span><span><a href="mailto:Thacoauto@gmail.com" class="color-gray">Thacoauto@gmail.com</a></span></li>
-                        <li class="color-gray"><span>Fax: </span><span><a href="tel:0980909789" class="color-gray">0980909789</a></span></li>
-                    </ul>
-                </div>
-                <div class="item">
-                    <h2 class="title font-pri-bold font30 color-gray fontmb-medium" id="menu-footer">Chính sách bảo mật thông tin</h2>
-                    <ul class="font-pri font18 list-link">
-                        <li><a href="" class="color-gray">Chính sách bảo mật</a></li>
-                        <li><a href="" class="color-gray">Các điều khoản và điều kiện</a></li>
-                    </ul>
+                    <h2 class="title font-pri-bold font30 color-gray fontmb-medium" id="menu-footer">{{__('information privacy policy')}}</h2>
+                    {!! dynamic_sidebar('footer_policy') !!}
                 </div>
 
                 <div class="item list-media-mobile font-pri">
-                    <p>Kết nối với chúng tôi</p>
+                    <p>{{__('connect with us')}}</p>
                     <ul class="list-media">
-                        <li><a href=""><img src="{{ Theme::asset()->url('images/main/iconfb.png') }}" alt="facebook"></a></li>
-                        <li><a href=""><img src="{{ Theme::asset()->url('images/main/iconin.png') }}" alt="in"></a></li>
-                        <li><a href=""><img src="{{ Theme::asset()->url('images/main/iconyt.png') }}" alt="youtube"></a></li>
+                        <li><a href="{{ theme_option('facebook') }}" target="_blank"><img src="{{ Theme::asset()->url('images/main/iconfb.png') }}" alt="facebook"></a></li>
+                        <li><a href="{{ theme_option('linkedin') }}" target="_blank"><img src="{{ Theme::asset()->url('images/main/iconin.png') }}" alt="in"></a></li>
+                        <li><a href="{{ theme_option('youtube') }}" target="_blank"><img src="{{ Theme::asset()->url('images/main/iconyt.png') }}" alt="youtube"></a></li>
                     </ul>
                 </div>
         </div>
@@ -87,7 +79,7 @@
 </div>
 <div class="end-web" style="background: url('{{ Theme::asset()->url('images/main/end.jpg') }}')">
     <div class="container-remake">
-        <p class="font-pri color-white font25">Giấy phép kinh doanh: 4001221658</p>
+        <p class="font-pri color-white font25">{{__('business license')}}: {!! theme_option('tax-code-company') !!}</p>
     </div>
 </div>
 <button  id="myBtn" title="Go to top"><img src="{{ Theme::asset()->url('images/main/btt.png') }}" alt="youtube"></button>

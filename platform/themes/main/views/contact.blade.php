@@ -52,11 +52,11 @@
                                 <label for="" class="col-sm-3 text-label mt-3">{{ __('Full name') }}:</label>
                                 <div class="col-sm-9 row pr-0">
                                     <div class="col-sm-6 pr-0">
-                                        <input type="text" class="form-control" id="contact_name_first"
+                                        <input type="text" class="form-control" id="contact_firstname"
                                             placeholder="{{ __('Surname') }}*" name="firstname" value="{{ old('firstname') }}">
                                     </div>
                                     <div class="col-sm-6 pr-0">
-                                        <input type="text" class="form-control" id="contact_name_last"
+                                        <input type="text" class="form-control" id="contact_lastname"
                                             placeholder="{{ __('First name') }}*" name="lastname" value="{{ old('lastname') }}">
                                     </div>
                                 </div>

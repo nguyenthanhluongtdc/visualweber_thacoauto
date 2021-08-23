@@ -43,15 +43,20 @@ Menu::addMenuLocation('menu-tabs-production-assembly', 'Tabs - Tabs - Sản xu�
 Menu::addMenuLocation('menu-tabs-mechanical', 'Tabs - Tabs - Cơ khí');
 
 register_sidebar([
-    'id'          => 'top_sidebar',
-    'name'        => __('Top sidebar'),
-    'description' => __('Area for widgets on the top sidebar'),
+    'id'          => 'footer_introduce',
+    'name'        => __('Footer Introduce'),
+    'description' => __('Footer Introduce list'),
 ]);
 
 register_sidebar([
-    'id'          => 'footer_sidebar',
-    'name'        => __('Footer sidebar'),
-    'description' => __('Area for footer widgets'),
+    'id'          => 'footer_media',
+    'name'        => __('Footer media'),
+    'description' => __('Footer media list'),
+]);
+register_sidebar([
+    'id'          => 'footer_policy',
+    'name'        => __('Footer policy'),
+    'description' => __('Footer policy list'),
 ]);
 
 RvMedia::setUploadPathAndURLToPublic();

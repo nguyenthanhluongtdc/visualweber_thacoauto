@@ -42,13 +42,12 @@ class PublicController extends Controller
 
             EmailHandler::setModule(CONTACT_MODULE_SCREEN_NAME)
                 ->setVariableValues([
-                    'contact_name'    => $contact->name ?? 'N/A',
+                    // 'contact_name'    => $contact->name ?? 'N/A',
                     'contact_firstname' => $contact->firstname ?? 'N/A',
                     'contact_lastname' => $contact->lastname ?? 'N/A',
                     'contact_subject' => $contact->subject ?? 'N/A',
                     'contact_email'   => $contact->email ?? 'N/A',
                     'contact_phone'   => $contact->phone ?? 'N/A',
-                    'contact_agree'   => $contact->agree ?? 0,
                     'contact_address' => $contact->address ?? 'N/A',
                     'contact_content' => $contact->content ?? 'N/A',
                 ])

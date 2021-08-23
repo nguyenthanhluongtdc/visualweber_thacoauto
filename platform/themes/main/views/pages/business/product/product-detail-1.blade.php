@@ -29,12 +29,17 @@
                     </div>
                     <div class="detail-info">
                         <div class="detail-info--frame">
-                            
                             <div class="text font15 font-pri fontmb-small">
                                 <div class="logo mb-4 ml-4">
                                     <img src="{{Theme::asset()->url('images/services/logo-peugeot.png')}}" alt="">
                                 </div>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
+                                <div class="position-relative">
+                                    <input type="checkbox" id="expanded">
+                                    <p class="fontmb-small">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
+                                    </p>
+                                    <label for="expanded" role="button" class="btn-load-more">... {{__('xem thêm')}} </label>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -87,27 +92,86 @@
                 <div class="car car4">
                     <div class="item mt-2">
                         <div class="car-frame">
-                            <div class="car-img mb-2">
+                            <div class="car-img">
                                 <img src="{{Theme::asset()->url('images/services/django.png')}}" alt="">
                             </div>
-                           <a href="#"><h3 class="car-name font-mi-bold font25 mb-2 fontmb-cond-bold fontmb-medium">
-                            DJANGO 125 ABS
-                        </h3></a>
-                            
-                            <p class="car-decs font-mi-bold font18 fontmb-cond-bold fontmb-small">
-                                THIẾT KẾ LAY ĐỘNG CẢM XÚC
-                            </p>
-                            <a href="#">
-                                <p class="readmore font-mi-bold font18 mt-3 mt-lg-3 fontmb-cond-bold fontmb-small">
-                                    XEM CHI TIẾT ->
-                                </p>
-                            </a>
                            
+                            <div class="d-flex align-content-between flex-wrap car-content">
+                                <div class="info h-100">
+                                    <h3 class="car-name font-mi-bold font25 mb-2 fontmb-cond-bold fontmb-medium">
+                                        DJANGO 125 ABS
+                                    </h3>
+                                    <p class="car-decs font-mi-bold font18 fontmb-cond-bold fontmb-little">
+                                        THIẾT KẾ LAY ĐỘNG CẢM XÚC
+                                    </p>
+                                    <a href="#" class="readmore font-mi-bold font18 fontmb-cond-bold fontmb-little">
+                                        XEM CHI TIẾT ->
+                                    </a>
+                                </div>
+                                
+                            </div>
                         </div>
-                        
-                        
+                        <div class="car-frame">
+                            <div class="car-img">
+                                <img src="{{Theme::asset()->url('images/services/django.png')}}" alt="">
+                            </div>
+                           
+                            <div class="d-flex align-content-between flex-wrap car-content">
+                                <div class="info h-100">
+                                    <h3 class="car-name font-mi-bold font25 mb-2 fontmb-cond-bold fontmb-medium">
+                                        DJANGO 125 ABS
+                                    </h3>
+                                    <p class="car-decs font-mi-bold font18 fontmb-cond-bold fontmb-little">
+                                        THIẾT KẾ LAY ĐỘNG CẢM XÚC
+                                    </p>
+                                    <a href="#" class="readmore font-mi-bold font18 fontmb-cond-bold fontmb-little">
+                                        XEM CHI TIẾT ->
+                                    </a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="car-frame">
+                            <div class="car-img">
+                                <img src="{{Theme::asset()->url('images/services/django.png')}}" alt="">
+                            </div>
+                           
+                            <div class="d-flex align-content-between flex-wrap car-content">
+                                <div class="info h-100">
+                                    <h3 class="car-name font-mi-bold font25 mb-2 fontmb-cond-bold fontmb-medium">
+                                        DJANGO 125 ABS
+                                    </h3>
+                                    <p class="car-decs font-mi-bold font18 fontmb-cond-bold fontmb-little">
+                                        THIẾT KẾ LAY ĐỘNG CẢM XÚC
+                                    </p>
+                                    <a href="#" class="readmore font-mi-bold font18 fontmb-cond-bold fontmb-little">
+                                        XEM CHI TIẾT ->
+                                    </a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="car-frame">
+                            <div class="car-img">
+                                <img src="{{Theme::asset()->url('images/services/django.png')}}" alt="">
+                            </div>
+                           
+                            <div class="d-flex align-content-between flex-wrap car-content">
+                                <div class="info h-100">
+                                    <h3 class="car-name font-mi-bold font25 mb-2 fontmb-cond-bold fontmb-medium">
+                                        DJANGO 125 ABS
+                                    </h3>
+                                    <p class="car-decs font-mi-bold font18 fontmb-cond-bold fontmb-little">
+                                        THIẾT KẾ LAY ĐỘNG CẢM XÚC
+                                    </p>
+                                    <a href="#" class="readmore font-mi-bold font18 fontmb-cond-bold fontmb-little">
+                                        XEM CHI TIẾT ->
+                                    </a>
+                                </div>
+                                
+                            </div>
+                        </div>
                     </div>
-                        
                 </div>
             </div>
         </div>

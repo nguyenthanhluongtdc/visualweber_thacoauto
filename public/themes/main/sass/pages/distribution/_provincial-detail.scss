@@ -229,6 +229,10 @@
                             width: 1.5rem;
                             margin-left: -1rem;
                             margin-top: 0.3rem;
+                            @media (max-width: 1080px) {
+                                width: auto;
+                                margin-right: 2%;
+                            }
                         }
                         p {
                             font-family: $font-primary;

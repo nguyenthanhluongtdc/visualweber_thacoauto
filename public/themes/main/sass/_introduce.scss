@@ -83,21 +83,19 @@
                             width: 100%;
                             flex: 0 0 100%;
                             height: auto;
-                            @include mobilePaddingY(37);
-
-                            .box-main {
-                                width: 80%;
-                                margin-left: auto;
-                                margin-right: auto;
-                            }
                         }
 
                         .box-main {
                             text-align: center;
                             @include paddingX(100);
+                            @include mobilePaddingY(37);
 
                             @media (max-width: 1080px) {
-                                @include mobilePaddingX(80);
+                                width: 80%;
+                                margin-left: auto;
+                                margin-right: auto;
+                                padding-left: 0;
+                                padding-right: 0;
                             }
 
                             .symbol {
@@ -116,17 +114,19 @@
 
                             .name {
                                 text-transform: uppercase;
-                                
+                                line-height: initial;
                             }
 
                             .company-name {
                                 @include marginBottom(18, "+");
                                 color: $color-primary;
                                 text-transform: uppercase;
+                                line-height: initial;
                             }
 
                             .description {
                                 @include marginTop(40, "+");
+                                @include mobileMarginTop(10, "+");
                                 text-align: justify;
                                 text-align-last: center;
                             }

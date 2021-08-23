@@ -144,9 +144,7 @@
                         <a class="font18 font-pri" href="">Xem brochure</a>
                     </li>
                 </ul>
-                <button class="info-button font18 font-pri" type="button">
-                    <a href="car-selection">Tiếp theo</a>
-                </button>
+                <a href="{{ url('car-selection') }}" class="text-center info-button font18 font-pri" type="button">Tiếp theo</a>
 
                 <div class="info-hotline font18 font-pri">HOTLINE - 1900 54 55 91</div>
             </div>

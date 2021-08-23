@@ -320,7 +320,7 @@
     transform-origin: 0% 100%;
   }
   #top-nav:checked ~ .icon-menu .hamburgerspan {
-    transform: rotate(-45deg) translate(-20%, 0px);
+    transform: rotate(-45deg) translate( -2px, 0);
   }
   #top-nav:checked ~ .icon-menu .hamburgerspan:nth-last-child(3) {
     display: none;
@@ -328,7 +328,7 @@
   }
   #top-nav:checked ~ .icon-menu .hamburgerspan:nth-last-child(2) {
     opacity: 1;
-    transform: rotate(45deg) translate(-20%, 0);
+    transform: rotate(45deg) translate( 1px, 0);
   }
   input[id^="menu-"] {
     flex-grow: 1;
@@ -357,7 +357,7 @@
     position: fixed;
     right: 0;
     top: 0.5%;
-    margin-right: 20%;
+    margin-right: 21.5%;
     z-index: 1100;
     transform: translateY(0);
   }
@@ -413,20 +413,19 @@
     border-left-style: solid;
     border-left-width: 2px;
     display: block;
-    width: 3.5vw;
-    height: 3.5vw;
-    max-width: 15px;
-    max-height: 15px;
+    @include mobileWidth(15);
+    @include mobileHeight(15);
     min-width: 7px;
     min-height: 7px;
     margin-bottom: -5px;
     position: absolute;
     right: 20px;
+    top: 47.8%;
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+    transform: rotate(-45deg) translateY(-50%);
     border-color: rgba(0, 0, 0, 0.3);
     border-top: none;
     border-top-color: currentcolor;
@@ -439,6 +438,7 @@
     display: block;
     border-bottom: 1px solid #ccc;
     color: white;
+    position: relative;
     box-sizing: border-box;
     background-color: $color-primary;
   }
@@ -446,11 +446,11 @@
     float: left;
     margin-right: 10px;
     margin-left: 0px;
-    -webkit-transform: rotate(135deg);
-    -moz-transform: rotate(135deg);
-    -ms-transform: rotate(135deg);
-    -o-transform: rotate(135deg);
-    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg) translateY(60%);
+    -moz-transform: rotate(135deg) translateY(60%);
+    -ms-transform: rotate(135deg) translateY(60%);
+    -o-transform: rotate(135deg) translateY(60%); 
+    transform: rotate(135deg) translateY(60%);
     border-color: white;
   }
   #menu-cont-1 {

@@ -87,8 +87,11 @@ class ContactTable extends TableAbstract
         $query = $this->repository->getModel()->select([
             'id',
             'name',
+            'firstname',
+            'lastname',
             'phone',
             'email',
+            'agree',
             'created_at',
             'status',
         ]);
@@ -110,12 +113,24 @@ class ContactTable extends TableAbstract
                 'title' => trans('core/base::tables.name'),
                 'class' => 'text-left',
             ],
-            'email'      => [
-                'title' => trans('plugins/contact::contact.tables.email'),
+            'firstname'       => [
+                'title' => trans('firstname'),
                 'class' => 'text-left',
             ],
+            'lastname'       => [
+                'title' => trans('lastname'),
+                'class' => 'text-left',
+            ],
+            // 'email'      => [
+            //     'title' => trans('plugins/contact::contact.tables.email'),
+            //     'class' => 'text-left',
+            // ],
             'phone'      => [
                 'title' => trans('plugins/contact::contact.tables.phone'),
+            ],
+            'agree'      => [
+                'title' => trans('Xác nhận cung cấp thông tin'),
+                'width' => '150px',
             ],
             'created_at' => [
                 'title' => trans('core/base::tables.created_at'),
@@ -144,6 +159,16 @@ class ContactTable extends TableAbstract
         return [
             'name'       => [
                 'title'    => trans('core/base::tables.name'),
+                'type'     => 'text',
+                'validate' => 'required|max:120',
+            ],
+            'firstname'       => [
+                'title'    => trans('core/base::tables.firstname'),
+                'type'     => 'text',
+                'validate' => 'required|max:120',
+            ],
+            'lastname'       => [
+                'title'    => trans('core/base::tables.lastname'),
                 'type'     => 'text',
                 'validate' => 'required|max:120',
             ],

@@ -221,9 +221,9 @@ app()->booted(function () {
                     'attributes' => [
                         'name' => 'name_manufacturing',
                         'value' => null,
-                    'options' => [
-                        'class' => 'form-control',
-                    ],
+                        'options' => [
+                            'class' => 'form-control',
+                        ],
                     ],
                 ],
                 [
@@ -257,9 +257,10 @@ app()->booted(function () {
             'section_id' => 'opt-text-subsection-manufacturing_business',
             'type'       => 'text',
             'label'      => __('Tên kinh doanh'),
-            'options' => [
-                'class' => 'form-control',
-            ],
+            'attributes' => [
+                'options' => [
+                    'class' => 'form-control',
+                ],
                 'name'    => 'name_business',
                 'value'   => null,
             ],
@@ -403,9 +404,9 @@ app()->booted(function () {
             'attributes' => [
                 'name'    => 'tax-code-company',
                 'value'   => null,
-            'options' => [
-                'class' => 'form-control',
-            ],
+                'options' => [
+                    'class' => 'form-control',
+                ],
             ],
         ])
         ->setField([
@@ -416,9 +417,9 @@ app()->booted(function () {
             'attributes' => [
                 'name'    => 'hotline-contact',
                 'value'   => null,
-            'options' => [
-                'class' => 'form-control',
-            ],
+                'options' => [
+                    'class' => 'form-control',
+                ],
 
             ],
         ])
@@ -430,9 +431,9 @@ app()->booted(function () {
             'attributes' => [
                 'name'    => 'email-contact',
                 'value'   => null,
-            'options' => [
-                'class' => 'form-control',
-            ],
+                'options' => [
+                    'class' => 'form-control',
+                ],
             ],
         ])
         ->setField([
@@ -443,9 +444,9 @@ app()->booted(function () {
             'attributes' => [
                 'name'    => 'fax-contact',
                 'value'   => null,
-            'options' => [
-                'class' => 'form-control',
-            ],
+                'options' => [
+                    'class' => 'form-control',
+                ],
             ],
         ]);
 });

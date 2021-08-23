@@ -6,7 +6,7 @@
     @if (!empty($posts))
             @foreach ($posts as $post)
             <div class="item-newspaper">
-                <div class="row__top">
+                <div class="row__top"> 
                     <h5 class="title font-pri-bold font30 color-gray text-uppercase">
                         <a href="">{{$post->name}}</a>
                     </h5>
@@ -25,10 +25,13 @@
                     </p>
                     
                     <div class="tags">
-                        <span class="name-tag font-pri-bold font13">Tags: </span>
+                        <div class="tag-name">
+                            <span class="name-tag font-pri-bold font13">Tags: </span>
+                        </div>
+                       
                         <div class="tag-list">
                             @foreach ($post->tags as $tag)
-                            <p class="tag-title font-pri font13">
+                            <p class="tag-title font-pri font13 mb-3">
                                 <a href="">{{$tag->name}}</a>
                             </p>
                             @endforeach

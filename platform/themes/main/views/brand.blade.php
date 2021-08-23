@@ -25,7 +25,7 @@
                         </div>
                     @endforeach
                 </div>
-            </div>
+            </div> 
         @empty
             {!! Theme::partial('templates/no-content') !!}
         @endforelse

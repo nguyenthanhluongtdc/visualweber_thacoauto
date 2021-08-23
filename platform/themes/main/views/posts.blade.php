@@ -5,7 +5,7 @@
             $posts = get_posts_by_category(15, 5);
             $postsFeatures = get_featured_posts_by_category(15, 5);
         @endphp
-        <div class="meida-top">
+        <div class="meida-top">     
             @if (!empty($postsFeatures))
                 @foreach ($postsFeatures as $post)
                     <div class="media-top-item">

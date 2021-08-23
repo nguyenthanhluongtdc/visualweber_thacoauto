@@ -1,5 +1,5 @@
 <div id="thacoauto-province-page">
-    <section class="section-intro-wrapper mb-90" id="section_one">
+    <section class="section-intro-wrapper overflow-x-hidden mb-90" id="section_one">
         <div class="container-remake">
             <div class="section-intro font-pri">
                 <h2 class="section-intro__title font-pri-bold font60 text-uppercase"> 

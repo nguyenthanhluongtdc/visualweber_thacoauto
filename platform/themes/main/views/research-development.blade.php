@@ -1,5 +1,5 @@
 <div id="research-development-page">
-    <div class="section-intro-wrapper">
+    <div class="section-intro-wrapper overflow-x-hidden">
         <div class="container-remake">
             <div class="section-intro">
                 @if(has_field($page, 'intro_module_research_development'))

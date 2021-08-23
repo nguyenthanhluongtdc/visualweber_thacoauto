@@ -995,7 +995,7 @@
 
 {{-- đối tác --}}
 <div class="section-partner-home container-remake" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out">
-    <h2 class="font-pri-bold font60 color-gray fontmb-large">{{get_field($page, 'homepage_partner_title')}}</h2>
+    <h2 class="font-pri-bold font60 color-gray fontmb-large text-uppercase">{{get_field($page, 'homepage_partner_title')}}</h2>
     <div class="partner-home-carousel owl-carousel">
         @forelse (get_field($page, 'homepage_slide_partner') as $item)
         <div class="item">

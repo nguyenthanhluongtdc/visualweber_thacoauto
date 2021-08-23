@@ -180,7 +180,7 @@
                                     <h3 class="title font30 font-pri-bold fontmb-medium">
                                         {!! has_sub_field($row, 'title') !!}
                                     </h3>
-                                    <div class="description font18 fontmb-little text-justify">
+                                    <div class="description font18 text-justify">
                                         {!! has_sub_field($row, 'description') !!}
                                     </div>
                                 </div>
@@ -189,7 +189,7 @@
                                     <h3 class="title font30 font-pri-bold fontmb-medium">
                                         Tầm nhìn
                                     </h3>
-                                    <p class="description font18 fontmb-little text-justify">
+                                    <p class="description font18 text-justify">
                                         Doanh nghiệp sản xuất – kinh doanh – xuất khẩu ô tô & cơ khí của Việt Nam, phát triển
                                         bền vững trong bối cảnh hội nhập khu vực và thế giới.
                                     </p>

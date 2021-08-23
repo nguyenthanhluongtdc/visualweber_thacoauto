@@ -263,6 +263,7 @@
             text-align: justify;
         }
         .item-image{
+            overflow: hidden;
             img{
                 width: 100%;
             }
@@ -342,6 +343,7 @@
         @include marginBottom(40, "+");
         
         .item-image {
+            overflow: hidden;
             @include height(270);
            
             img {
@@ -1267,6 +1269,7 @@
         justify-content: space-between;
         flex-wrap: wrap;
         .item-image{
+            overflow: hidden;
             width: 23%;
             margin-bottom: 2%;
             .day{

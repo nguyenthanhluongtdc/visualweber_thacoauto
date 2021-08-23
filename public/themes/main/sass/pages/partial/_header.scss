@@ -11,6 +11,15 @@
   min-height: 55px;
   width: 100%;
   transition: all 0.3s ease-out;
+  &-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: $color-primary !important;
+    z-index: 99;
+    transition: all 0.3s ease-out;
+  }
 
   .header-wrap {
     display: flex;
@@ -58,6 +67,10 @@
           cursor: pointer;
           @include maxWidth(1440) {
             padding: 0 1.2rem;
+          }
+
+          @include maxWidth(1280) {
+            padding: 0 1 rem;
           }
 
           transition: background-color 0.2s linear;

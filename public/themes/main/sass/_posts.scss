@@ -1,3 +1,14 @@
+.paginate-mobile {
+    display: none;
+    @media(max-width: 1080px) {
+        display: block;
+        .page-pagination {
+            @include mobilePaddingTop(50);
+            @include mobilePaddingBottom(60);
+        }
+    }
+}
+
 .post-thumbnail{
     width: 100%;
     height: 0%;

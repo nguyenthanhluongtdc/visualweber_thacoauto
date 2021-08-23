@@ -99,9 +99,10 @@
                     <span class="hamburgerspan"></span>
                     <span class="hamburgerspan"></span>
                 </div>
-                {!! Menu::renderMenuLocation('main-menu', [
-                'view' => 'menu-mobile',
-                ])
+                {!!
+                    Menu::renderMenuLocation('main-menu', [
+                        'view' => 'menu-mobile',
+                    ])
                 !!}
             </div>
         </div>

@@ -11,7 +11,7 @@
 //menu mobile
 #mobileNav {
   //   padding: 5px;
-  height: 56px;
+  height: 50px;
   background-color: $color-primary;
   //   @include mobileHeight(100);
   display: none;
@@ -37,10 +37,7 @@
         width: auto;
         position: relative;
         top: -2px;
-
-        @include maxWidth(640) {
-          height: 12px;
-        }
+        height: 12px;
       }
     }
     .icon-menu {
@@ -54,8 +51,8 @@
       align-items: center;
       //   padding: 0.7% 0;
       //   display: none;
-      height: 37px;
-      width: 37px;
+      height: 32px;
+      width: 32px;
     }
   }
 

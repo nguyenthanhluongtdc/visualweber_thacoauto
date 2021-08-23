@@ -202,25 +202,11 @@ a:hover {
 
 .font25 {
   font-size: 25px;
-  // line-height: 29px;
   @media (max-width: 1680px) {
     font-size: 21px;
-    // line-height: 26px;
   }
   @media (max-width: 1560px) {
     font-size: 16px;
-    // line-height: 23px;
-  }
-  @media (max-width: 1440px) {
-    font-size: 15px;
-    // line-height: 20px;
-  }
-  @media (max-width: 1367px) {
-    font-size: 14px;
-    // line-height: 18px;
-  }
-  @media (max-width: 1199px) {
-    font-size: 13px;
   }
 }
 

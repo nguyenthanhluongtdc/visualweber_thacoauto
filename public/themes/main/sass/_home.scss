@@ -578,6 +578,7 @@
                 border-radius: 5px;
               }
             }
+           
             .logo-frame {
               max-height: 34%;
               width: 38%;
@@ -587,7 +588,9 @@
               @media (max-width: 480px) {
                 width: 20%;
                 line-height: 1.25;
+                
               }
+             
             }
           }
 
@@ -600,13 +603,11 @@
               max-height: 18%;
               margin-bottom: 2vw;
               line-height: 1.2;
-              span{
-                @include maxWidth(600) {
-                 font-size: 10px !important;
-                }
-                @include maxWidth(400) {
-                  font-size: 8px !important;
-                 }
+              @media (max-width: 600px) {
+                max-height: 30%;
+              }
+              @media (max-width: 400px) {
+                max-height: 40%;
               }
               img {
                 width: 20%;

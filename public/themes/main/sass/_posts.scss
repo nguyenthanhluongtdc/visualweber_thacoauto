@@ -58,6 +58,7 @@
         >span {
             @include mobileMarginBottom(30, "+");
             @include mobileHeight(50);
+            min-height: 35px;
             margin-right: 0 !important;
             background-color: white;
             min-width: unset !important;
@@ -205,6 +206,12 @@
                 padding: 0 10px;
                 font-size: 16px;
             }
+
+            @include mobileHeight(50    );
+            @include mobileWidth(150);
+            @media (max-width: 1080px) {
+                padding: 0;
+            }
         }
     }
     
@@ -297,6 +304,7 @@
        
         @include paddingX(15);
         @include marginBottom(40, "+");
+        
         img{
             width: 100%;
             object-fit: cover;
@@ -311,25 +319,30 @@
             h4{
                 text-align: justify;
                 margin-bottom: 6%;
+                
+                a {
+                    @include split_str(3);
+                }
             }
             p.desc{
                 margin-bottom: 6%;
                 height: 40%;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                -webkit-line-clamp: 2;
-                display: -webkit-box;
-                -webkit-box-orient: vertical;
+                @include split_str(2);
             }
         }
 
         //mobile 
         @media (max-width: 1080px) {
             width: 50%;
+            display: grid;
+
+            .item-img {
+                background-color: #f3f3f3;
+            }
         }
-        @media (max-width: 576px) {
-            width: 100%;
-        }
+        // @media (max-width: 576px) {
+        //     width: 100%;
+        // }
     }
 }
 .city-day{
@@ -363,10 +376,12 @@
                     a{
                         color: #303030;
                     }
+                    @include mobileMarginBottom(25, "+");
                 }
                 p.desc{
                     margin: 15px 0;
                     text-align: justify;
+                    @include mobileMarginBottom(35, "+");
                 }
             }
         }
@@ -378,11 +393,15 @@
                 .post-thumbnail-wrap{ 
                     width: 100%;
                 } 
+
+                @include mobilePaddingTop(50);
                 .post-content {
                     width: 100%;
-                    background-color: #F3F3F3;
-                    @include mobilePaddingX(20);
-                    @include mobilePaddingY(20);
+                    background-color:transparent;
+                    padding-left: 0;
+                    padding-right: 0;
+                    @include mobilePaddingBottom(40);
+                    @include mobilePaddingTop(60);
                     h4 {
                         font-size: 25px;
                     }

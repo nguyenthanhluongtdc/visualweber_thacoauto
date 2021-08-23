@@ -11,14 +11,14 @@
                     <div class="media-top-item">
                         <div class="item-img">
                             <div class="post-thumbnail">
-                                <a href="{{$post->url}}"><img src="{{ get_object_image($post->image, 'post-large') }}" alt=""></a>
+                                <a href="{{$post->url}}"><img src="{{ Storage::disk('public')->exists($post->image) ? get_object_image($post->image, 'post-large') : RvMedia::getDefaultImage()}}" alt=""></a>
                             </div>
                         </div>
                         <div class="item-content flex-fill">
-                            <h4 class="title font-pri-bold font30 text-uppercase">
+                            <h4 class="title font-pri-bold font30 text-uppercase fontmb-medium">
                                 <a href="{{$post->url}}">{{$post->name}}</a>
                             </h4>
-                            <p class="desc font-pri font20">
+                            <p class="desc font-pri font20 fontmb-little">
                                 {{$loop->first ? Str::words($post->description,40): Str::words($post->description,20)}}
                             </p>
                             <p class="city-day font-pri font15">
@@ -38,12 +38,14 @@
                         <div class="all-post-item">
                             <div class="post-thumbnail-wrap">
                                 <div class="post-thumbnail">
-                                    <a href="{{$post->url}}"><img src="{{ get_object_image($post->image, 'post-related') }}" alt="Tin tức"></a>
+                                    <a href="{{$post->url}}">
+                                        <img src="{{ Storage::disk('public')->exists($post->image) ? get_object_image($post->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Tin tức">
+                                    </a>
                                 </div>
                             </div>
                             <div class="post-content">
-                                <h4 class="font-mi-bold font20"><a href="{{$post->url}}">{{$post->name}}</a></h4>
-                                <p class="desc font-pri font20">{{Str::words($post->description,40)}}</p>
+                                <h4 class="font-mi-bold font20 fontmb-medium"><a href="{{$post->url}}">{{$post->name}}</a></h4>
+                                <p class="desc font-pri font20 fontmb-little">{{Str::words($post->description,40)}}</p>
                                 <p class="city-day font-pri font15">
                                     <span class="city">{{ \MetaBox::getMetaData($post, 'region_post', true) ?? '--' }}</span>
                                     <span>{{date_format($post->created_at,"d-m-Y")}}</span>
@@ -54,11 +56,9 @@
                     @endif
 
                 </div>
-                <div class="page-pagination">
-                    @if(!empty($posts))
-                        @includeIf("theme.main::views.components.news-pagination",['paginator'=>$posts])
-                    @endif
-                </div>
+                @if(!empty($posts))
+                    {{ $posts->links('vendor.pagination.custom') }}
+                @endif
             </div>
             <div class="list-post-new">
                 <div class="wrap">
@@ -69,7 +69,7 @@
                             <div class="post-new-item">
                                 <div class="post-thumbnail-wrap">
                                     <div class="post-thumbnail">
-                                        <a href="{{$post->url}}"><img src="{{ get_object_image($post->image, 'post-related') }}" alt="{{$post->name}}"></a>
+                                        <a href="{{$post->url}}"><img src="{{ Storage::disk('public')->exists($post->image) ? get_object_image($post->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="{{$post->name}}"></a>
                                     </div>
                                 </div>
                                 <h5 class="title font-mi-bold font20">
@@ -92,3 +92,9 @@
             </div>
         </div>
     </div>
+
+    <style>
+        .action-button {
+            top: 50%;
+        }
+    </style>

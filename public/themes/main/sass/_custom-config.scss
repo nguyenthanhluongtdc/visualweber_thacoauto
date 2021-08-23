@@ -2,7 +2,7 @@
   width: 80%;
   margin: 0 auto;
   max-width: 1536px;
-  @include maxWidth(1080) {
+  @include maxWidth(1280) {
     width: 90%;
   }
   @include maxWidth(758) {
@@ -11,8 +11,8 @@
   }
 }
 
-.overflow-x-hidden{
-    overflow-x: hidden;
+.overflow-x-hidden {
+  overflow-x: hidden;
 }
 
 a:hover {
@@ -457,6 +457,15 @@ a:hover {
   @media (max-width: 992px) {
     margin-bottom: #{calculatorPixel(60, 992)}px;
   }
+  @media (max-width: 768px) {
+    margin-bottom: #{calculatorPixel(60, 768)}px;
+  }
+  @media (max-width: 576px) {
+    margin-bottom: #{calculatorPixel(60, 576)}px;
+  }
+  @media (max-width: 480px) {
+    margin-bottom: #{calculatorPixel(60, 480)}px;
+  }
 }
 
 .mt-85 {
@@ -521,6 +530,15 @@ a:hover {
   }
   @media (max-width: 992px) {
     margin-bottom: #{calculatorPixel(40, 992)}px;
+  }
+  @media (max-width: 768px) {
+    margin-bottom: #{calculatorPixel(30, 768)}px;
+  }
+  @media (max-width: 576px) {
+    margin-bottom: #{calculatorPixel(30, 576)}px;
+  }
+  @media (max-width: 480px) {
+    margin-bottom: #{calculatorPixel(30, 480)}px;
   }
 }
 

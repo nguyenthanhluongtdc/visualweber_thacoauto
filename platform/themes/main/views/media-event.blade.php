@@ -10,7 +10,7 @@
     @endphp
     @if (!empty($posts))
         @foreach ($posts as $post)
-        <div class="event-item">
+        <div class="event-item"> 
             <div class="title">
                 <div class="icon-title">
                     <img src="{{ Theme::asset()->url('images/media/event.png') }}" alt="Icon title">

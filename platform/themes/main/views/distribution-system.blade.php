@@ -18,7 +18,7 @@
                         <option value="3">TP.HỒ CHÍ MINH</option>
                         <option value="4">TP.HỒ CHÍ MINH</option>
                     </select>
-                    <button type="submit" class="font20 fontmb-medium">xác nhận</button>
+                    <button type="submit" class="font20 fontmb-small">xác nhận</button>
                 </form>
             </div>
             <div data-aos="zoom-in" data-aos-duration="2500" class="branch-wrap">

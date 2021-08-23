@@ -1,8 +1,9 @@
 .section-list-news-wrapper-mobile.mechandical {
     display: none;
+   
     @media only screen and (max-width: 1080px){
         display: block;
-    @include marginBottom(80, "+");
+        @include marginBottom(80, "+");
     .section-list-news {
         .title{
            

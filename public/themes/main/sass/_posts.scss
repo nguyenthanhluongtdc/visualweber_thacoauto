@@ -22,6 +22,10 @@
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
     background: $color-primary;
     height: 45px;
+    font-size: 20px;
+    @media(max-width : 1080px){
+        font-size: 16px;
+    }
     color: #fff;
     font-family: $font-cond;
     display: flex;
@@ -29,12 +33,19 @@
 }
 .select2-dropdown{
     border: none;
+    font-size: 20px;
+    @media(max-width : 1080px){
+        font-size: 16px;
+    }
 }
 .select2-results__option,
 .select2-results__option--selectable {
     height: 45px;
     background: #e9e9e9;
-
+    font-size: 20px;
+    @media(max-width : 1080px){
+        font-size: 16px;
+    }
     color: #5c5c5c;
     font-family: $font-cond;
     display: flex;
@@ -45,10 +56,18 @@
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable:hover {
     background: $color-primary;
     padding: 0 18px;
+    font-size: 20px;
+    @media(max-width : 1080px){
+        font-size: 16px;
+    }
 }
 
 .select2-container--default .select2-results__option--selected {
     background: #e9e9e9;
+    font-size: 20px;
+    @media(max-width : 1080px){
+        font-size: 16px;
+    }
 }
 
 .form-filter {

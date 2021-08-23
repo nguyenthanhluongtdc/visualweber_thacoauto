@@ -6,6 +6,9 @@
     @media(max-width : 1199px){
         margin-top: 50px;
     }
+    @media(max-width : 1080px){
+        margin-top: 2%;
+    }
     h1.title {
         font-family: $font-my-bold;
         text-transform: uppercase;
@@ -87,6 +90,9 @@
             width: 100%;
             height: 660px;
             position:relative;
+            @media(max-width: 991px) {
+                height: 450px;
+            }
             .branch-background-image {
                 width: 100%;
                 height: 100%;
@@ -195,6 +201,8 @@
                 padding-left: 10px;
                 overflow: hidden;
                 img {
+                    width: 100%;
+                    height: 100%;
                     object-fit: cover;
                 }
             }
@@ -415,7 +423,7 @@
         &-button {
             @include width(70);
             @include mobileWidth(40);
-            @include mobileMarginX(35, "+");
+            // @include mobileMarginX(35, "+");
             display: flex;
             justify-content: space-between;
             position: absolute;
@@ -482,6 +490,9 @@
             width: 90%;
             margin-left: auto;
             padding: 40px 0px;
+            @media (max-width: 991px) {
+                width: 95%;
+            } 
         }
     }
 }

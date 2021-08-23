@@ -8,18 +8,18 @@
             <div class="mechanical-contact mt-60 mb-60">
                 <div class="mechanical-contact__content">
                     <div class="mechanical-contact__content__top row">
-                        <div class="left col-3">
+                        <div class="left col-5">
                             <div class="address font20">
-                                <span class="text">KHU CÔNG NGHIỆP TAM HIỆP, HUYỆN NÚI THÀNH, QUẢNG NAM.</span>
+                                <span class="text fontmb-medium">KHU CÔNG NGHIỆP TAM HIỆP, HUYỆN NÚI THÀNH, QUẢNG NAM.</span>
                             </div>
                             <div class="phone font20">
-                                <span class="text">0235.3567.16 - 0235.3567.162 - 0235.3567.163</span>
+                                <span class="text fontmb-medium">0235.3567.16 - 0235.3567.162 - 0235.3567.163</span>
                             </div>
                             <div class="email font20">
-                                <span class="text">CHULAICOMPLEX@THACO.COM.VN</span>
+                                <span class="text fontmb-medium">CHULAICOMPLEX@THACO.COM.VN</span>
                             </div>
                         </div>
-                        <div class="col-2"></div>
+                        {{-- <div class="col-1"></div> --}}
                         <div class="right col-7">
                             <img src="{{Theme::asset()->url('images/mechandical/form-contact.jpg')}}" alt="">
                         </div>
@@ -32,35 +32,35 @@
                             <div class="col-6">
                                 <div class="styled-input">
                                     <input type="text" name="name" required />
-                                    <label class="font20">họ và tên</label> 
+                                    <label class="font20 fontmb-medium">họ và tên</label> 
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="styled-input">
                                     <input type="text" name="email" required />
-                                    <label class="font20">email</label> 
+                                    <label class="font20 fontmb-medium">email</label> 
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="styled-input">
                                     <input type="text" name="phone" required />
-                                    <label class="font20">số điện thoại</label> 
+                                    <label class="font20 fontmb-medium">số điện thoại</label> 
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="styled-input">
                                     <input type="text" name="subject" required />
-                                    <label class="font20">tiêu đề</label> 
+                                    <label class="font20 fontmb-medium">tiêu đề</label> 
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="styled-input wide">
                                     <textarea rows="4" name="content" required></textarea>
-                                    <label class="font20">nội dung</label>
+                                    <label class="font20 fontmb-medium">nội dung</label>
                                 </div>
                             </div>
                             <div class="col-md-12">
-                                <button type="submit" class="contact-button" class="btn-lrg  submit-btn font20">GỬI ĐI</button>
+                                <button type="submit" class="contact-button  fontmb-medium btn-lrg  submit-btn font20"  >GỬI ĐI</button>
                             </div>
                         </div>      
                     </div>

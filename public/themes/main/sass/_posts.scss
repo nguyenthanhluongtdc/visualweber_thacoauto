@@ -348,6 +348,8 @@
         .item-content{
             margin-top: -3px;
             background: #f3f3f3;
+            @include paddingX(25);
+            @include paddingY(25);
             @include mobilePaddingX(25);
             @include mobilePaddingY(25);
             @include heightMinus(270);

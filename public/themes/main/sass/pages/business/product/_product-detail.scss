@@ -377,6 +377,20 @@
                     margin-bottom: 5%;
                 }
             }
+            .car4{
+                border-bottom: none;
+                .item{
+                    .car-frame{
+                        .car-img{
+                            @include width(200);
+                            @include mobileWidth(165);
+                            @media (max-width: 375px) {
+                                height: 65px;
+                            }
+                        }
+                    }
+                }
+            }
 
            
         }

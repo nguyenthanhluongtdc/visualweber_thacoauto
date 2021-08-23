@@ -48,8 +48,8 @@
 
                         </div>
                     </div>
-                    <h3 class="product-detail__card-title font25 font-mi-bold mt-4 fontmb-medium">AN TOÀN</h3>
-                    <div class="product-detail__card-desc font20 font-pri fontmb-small">
+                    <h3 class="product-detail__card-title font30 font-mi-bold mt-4 fontmb-middle">AN TOÀN</h3>
+                    <div class="product-detail__card-desc font20 font-mi fontmb-small">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                     </div>
                 </div>
@@ -94,11 +94,11 @@
                             DJANGO 125 ABS
                         </h3></a>
                             
-                            <p class="car-decs font-mi-bold font18 fontmb-cond-bold fontmb-small">
+                            <p class="car-decs font-mi-bold font18 fontmb-cond-bold fontmb-little">
                                 THIẾT KẾ LAY ĐỘNG CẢM XÚC
                             </p>
                             <a href="#">
-                                <p class="readmore font-mi-bold font18 mt-3 mt-lg-3 fontmb-cond-bold fontmb-little">
+                                <p class="readmore font-mi-bold font18 mt-lg-4 mt-3 fontmb-cond-bold fontmb-little">
                                     XEM CHI TIẾT ->
                                 </p>
                             </a>

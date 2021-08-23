@@ -1,17 +1,25 @@
 .section-list-news-wrapper-mobile.mechandical {
     display: none;
+   
     @media only screen and (max-width: 1080px){
         display: block;
+       
     .page-pagination{
+    
+         
        ul {
            display: flex;
            flex-wrap: wrap;
            @include mobileMarginBottom(40, "-");
            
            li {
-                @include mobileFlex(80);
+                @include mobileFlex(60);
                 margin-right: 0;
-
+               display: table;
+               margin: 0 auto;
+               @media only screen and (max-width: 400px){
+                @include mobileFlex(40);
+               }
                 @include mobileMarginBottom(40, "+");
 
                 @media (max-width: 1080px) {

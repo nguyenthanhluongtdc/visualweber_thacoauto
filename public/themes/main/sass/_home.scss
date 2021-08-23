@@ -98,6 +98,7 @@
   justify-content: space-between;
   position: relative;
   height: 120px;
+  
   #hours {
     position: absolute;
     top: 0;
@@ -110,11 +111,13 @@
     font-size: 20px;
     overflow-y: auto;
     overflow-x: hidden;
+    
     .logo-frame {
       width: 1px;
       height: 42px;
       opacity: 0;
       display: block;
+      
     }
   }
 
@@ -536,11 +539,20 @@
         .scollbar-wrap-home {
           height: calc(70%);
           @include maxWidth(1080) {
+            height: calc(80%);
+          }
+          @include maxWidth(992) {
+            height: calc(75%);
+          }
+          @include maxWidth(768) {
+            height: calc(70%);
+          }
+          @include maxWidth(600) {
             height: calc(62%);
           }
           align-items: inherit;
           #hours {
-            width: 30%;
+            width: 22%;
             height: 100%;
             left: -2%;
             @include maxWidth(1080) {
@@ -579,16 +591,28 @@
             height: 100%;
             padding: 0;
             .cell-item {
-              max-height: 34%;
+              max-height: 18%;
               margin-bottom: 2vw;
+              line-height: 1.2;
+              span{
+                @include maxWidth(600) {
+                 font-size: 10px !important;
+                }
+                @include maxWidth(400) {
+                  font-size: 8px !important;
+                 }
+              }
               img {
-                width: 38%;
+                width: 20%;
                 padding: 5% 0;
                 margin-right: 15%;
                 @media (max-width: 480px) {
-                  width: 20%;
+                  width: 15%;
                   line-height: 1.25;
                 }
+                @include maxWidth(400) {
+                  width: 12%;
+                 }
               }
             }
           }

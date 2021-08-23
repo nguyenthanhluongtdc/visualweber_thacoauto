@@ -43,7 +43,7 @@
                                     <h3 class="title font-pri-bold font30 fontmb-medium text-uppercase">
                                         <a href="{{$post->url}}">{{$post->name}}</a>
                                     </h3>
-                                    <p class="desc font-pri font18 fontmb-little">
+                                    <p class="desc font-pri font18 fontmb-small">
                                         {{Str::words($post->description,30)}}
                                     </p>
                                     <div class="city-day font-pri font18 fontmb-small">

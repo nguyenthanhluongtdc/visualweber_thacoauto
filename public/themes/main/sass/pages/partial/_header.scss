@@ -75,8 +75,12 @@
           }
 
           transition: background-color 0.2s linear;
-          &:hover {
+          &:hover,
+          &.active {
             background-color: #043869;
+            & > a {
+              color: white !important;
+            }
           }
           &:last-child {
             margin-left: 0;

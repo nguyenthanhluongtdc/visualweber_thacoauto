@@ -1,5 +1,10 @@
 .general-manufacturing {
     .production {
+        @media (max-width:1080px){
+            .production__title{
+                margin-bottom: 1%;
+            }
+        }
         &__content {
             .read-more {
                 margin: 5px 0;
@@ -7,6 +12,9 @@
                     float: right;
                     text-transform: capitalize;
                     color: #01498B;
+                    i{
+                        font-size: 0.8vw;
+                    }
                 }
 
                 @media (max-width: 1080px) {
@@ -17,6 +25,7 @@
             }
         }
         &__image {
+            padding-top: 1%;
             img {
                 max-width: 100%;
                 height: auto;

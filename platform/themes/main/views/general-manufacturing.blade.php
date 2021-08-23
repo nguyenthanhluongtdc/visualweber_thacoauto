@@ -6,7 +6,7 @@
                     <h2 class="production__title font60 font-pri-bold fontmb-middle">
                         {!! has_sub_field($row, 'name') !!}
                     </h2>
-                    <div class="production__content font20 font-pri mt-10 mb-40 fontmb-little">
+                    <div class="production__content font20 font-pri mt-10 mb-40 fontmb-small">
                         {!! has_sub_field($row, 'description') !!}
                         <div class="read-more desktop">
                             <a href="{{has_sub_field($row, 'link')}}" class="read-more__link font20"> {!! __('Read more') !!} <i class="fas fa-angle-double-right"></i></a>

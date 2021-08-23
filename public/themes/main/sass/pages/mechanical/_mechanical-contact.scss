@@ -39,6 +39,20 @@
                     .text{
                         opacity: 70%;
                     }
+                    .address, .phone, .email {
+                        &::before {
+                            font-size: 40px;
+                            @media screen and (max-width: 1680px) {
+                                font-size: 30px;
+                            }
+                            @media screen and (max-width: 1080px) {
+                                font-size: 25px;
+                            }
+                            @media screen and (max-width: 768px) {
+                                font-size: 20px;
+                            }
+                        }
+                    }
                     .address {
                         padding-left: 70px;
                         // margin-top: 30px;
@@ -54,10 +68,7 @@
                             top: 0;
                             bottom: 0;
                             font-weight: bold;
-                            font-size: 40px;
-                            @media screen and (max-width: 1680px) {
-                                font-size: 30px;
-                            }
+                            
                         }
                     }
                     .phone {
@@ -77,10 +88,6 @@
                             top: 0;
                             bottom: 0;
                             font-weight: bold;
-                            font-size: 40px;
-                            @media screen and (max-width: 1680px) {
-                                font-size: 30px;
-                            }
                         }
                     }
                     .email {
@@ -99,10 +106,6 @@
                             bottom: 0;
                             top: 0;
                             font-weight: bold;
-                            font-size: 40px;
-                            @media screen and (max-width: 1680px) {
-                                font-size: 30px;
-                            }
                         }
                     }
 

@@ -9,22 +9,24 @@
             @if (!empty($postsFeatures))
                 @foreach ($postsFeatures as $post)
                     <div class="media-top-item">
-                        <div class="item-img">
-                            <div class="post-thumbnail">
-                                <a href="{{$post->url}}"><img src="{{ Storage::disk('public')->exists($post->image) ? get_object_image($post->image, 'post-large') : RvMedia::getDefaultImage()}}" alt=""></a>
-                            </div>
+                        <div class="item-image">
+                            <a href="{{$post->url}}">
+                                <img src="{{ Storage::disk('public')->exists($post->image) ? get_object_image($post->image, 'post-large') : RvMedia::getDefaultImage()}}" alt="">
+                            </a>
                         </div>
                         <div class="item-content flex-fill">
                             <h4 class="title font-pri-bold font30 text-uppercase fontmb-medium">
                                 <a href="{{$post->url}}">{{$post->name}}</a>
                             </h4>
-                            <p class="desc font-pri font20 fontmb-small">
-                                {{$loop->first ? Str::words($post->description,40): Str::words($post->description,20)}}
-                            </p>
-                            <p class="city-day font-pri font15">
-                                <span class="city">{{ \MetaBox::getMetaData($post, 'region_post', true) ?? '--' }}</span>
-                                <span>{{date_format($post->created_at,"d-m-Y")}}</span>
-                            </p>
+                            <div class="bottom">
+                                <p class="desc font-pri font20 fontmb-small">
+                                    {{$loop->first ? Str::words($post->description,40): Str::words($post->description,20)}}
+                                </p>
+                                <p class="city-day font-pri font15">
+                                    <span class="city">{{ \MetaBox::getMetaData($post, 'region_post', true) ?? '--' }}</span>
+                                    <span>{{date_format($post->created_at,"d-m-Y")}}</span>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 @endforeach

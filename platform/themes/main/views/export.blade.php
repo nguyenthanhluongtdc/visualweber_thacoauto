@@ -14,7 +14,6 @@
         </div>
  
         @includeIf("theme.main::views.pages.support-industry.rnd-banner")
-        
         <div class="section-info-more-wrapper font-pri">
             <div class="content font20">
                 <div class="container-remake">

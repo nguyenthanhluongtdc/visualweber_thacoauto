@@ -41,7 +41,8 @@
             </div>
             @endforeach
         @endif
-    <div class="container-remake">
-        {{ $posts->links('vendor.pagination.custom') }}
-    </div>
+    
+</div>
+<div class="container-remake">
+    {{ $posts->links('vendor.pagination.custom') }}
 </div>

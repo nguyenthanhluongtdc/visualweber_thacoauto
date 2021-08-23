@@ -5,7 +5,7 @@
     "Add a custom menu to your widget area.": "Add a custom menu to your widget area.",
     "Add item": "Add item",
     "Add youtube video": "Add youtube video",
-    "Address": "Address",
+    "Address": "Địa chỉ",
     "All Galleries": "All Galleries",
     "An Error Occurred: Internal Server Error": "An Error Occurred: Internal Server Error",
     "An error may have occurred.": "An error may have occurred.",
@@ -56,7 +56,7 @@
     "Payment info": "Payment info",
     "Payment with PayPal": "Payment with PayPal",
     "Payment with Stripe": "Payment with Stripe",
-    "Phone": "Phone",
+    "Phone": "SĐT",
     "Please try again in a few minutes, or alternatively return to the homepage by <a href=\":link\">clicking here</a>.": "Please try again in a few minutes, or alternatively return to the homepage by <a href=\":link\">clicking here</a>.",
     "Popular tags": "Popular tags",
     "Previous Post": "Previous Post",
@@ -75,7 +75,7 @@
     "Search result for: \":query\"": "Search result for: \":query\"",
     "Security": "Security",
     "Select menu": "Select menu",
-    "Send": "Send",
+    "Send": "Gửi",
     "Send message successfully!": "Send message successfully!",
     "Site description": "Site description",
     "Social": "Social",
@@ -116,5 +116,10 @@
     "Youtube video": "Youtube video",
     "here": "here",
     "Related news" : "Related news",
-    "Provincial company": "Công ty tỉnh thành"
+    "Provincial company": "Công ty tỉnh thành",
+    "Send to" : "NƠI GỬI ĐẾN",
+    "Full name" : "HỌ TÊN",
+    "Content" : "NỘI DUNG",
+    "First name" : "Tên",
+    "Surname" : "Họ"
 }

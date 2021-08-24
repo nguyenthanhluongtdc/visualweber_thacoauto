@@ -127,7 +127,7 @@
                 </p>
 
                 <div class="scollbar-wrap-home overflow-x-hidden">
-                    <div id="hours">
+                    <div id="hours overflow-x-hidden">
                         <img class="logo-frame flag-1" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
                         <img class="logo-frame flag-2" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
                         <img class="logo-frame flag-3" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
@@ -136,7 +136,7 @@
                         <img class="logo-frame flag-6" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
                         <img class="logo-frame flag-7" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
                     </div>
-                    <div id="cells">
+                    <div id="cells overflow-x-hidden">
                         <div class="cell-item flag-1">
                             <img src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
                             <span class="font-pri-bold fontmb-small">

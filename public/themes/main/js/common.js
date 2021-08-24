@@ -329,7 +329,7 @@ var Ajax = {
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
-            url: `ajax/get-new-posts?page=${globalConfig.pageNews}`,
+            url: `ajax/get-new-posts?page=${globalConfig.pageNews}&category=${globalConfig.categoryId}`,
             method: "GET",
             success: function ({ data, disable }) {
                 $('.loading').removeClass('d-flex').addClass('d-none')
@@ -358,6 +358,10 @@ var Ajax = {
             //     $('.loading').removeClass('d-none').addClass('d-flex')
             // }
             // Ajax.postData();
+            globalConfig = {
+                ...globalConfig,
+                categoryId: $('#posts-load-more').data('category')
+            }
             $(document).on('click', '#posts-load-more', function () {
                 if (globalConfig.disableLoadMoreNews) return
                 if ($('.loading').length > 0) {
@@ -442,22 +446,22 @@ if ($('.counter-value').length > 0) {
 
 //search
 
-$(document).ready(function() {
-    if($('a[href="#search"]').length) {
-        $('a[href="#search"]').click(function() {
+$(document).ready(function () {
+    if ($('a[href="#search"]').length) {
+        $('a[href="#search"]').click(function () {
             event.preventDefault()
             $("#search-box").toggleClass("-open");
-                setTimeout(function() {
-                    inputSearch.focus();
-                }, 800);
-            });
-    
-            $('a[href="#close"]').click(function() {
-                event.preventDefault()
-                $("#search-box").removeClass("-open");
-            });
-    
-            $(document).keyup(function(e) {
+            setTimeout(function () {
+                inputSearch.focus();
+            }, 800);
+        });
+
+        $('a[href="#close"]').click(function () {
+            event.preventDefault()
+            $("#search-box").removeClass("-open");
+        });
+
+        $(document).keyup(function (e) {
             if (e.keyCode == 27) { // escape key maps to keycode `27`
                 $("#search-box").removeClass("-open");
             }

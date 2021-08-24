@@ -39,14 +39,14 @@
                         @foreach ($posts as $post)
                         <div class="all-post-item">
                             <div class="post-thumbnail-wrap">
-                                <div class="post-thumbnail">
+                                <div class="post-thumbnail fontmb-medium">
                                     <a href="{{$post->url}}">
                                         <img src="{{ Storage::disk('public')->exists($post->image) ? get_object_image($post->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Tin tức">
                                     </a>
                                 </div>
                             </div>
                             <div class="post-content">
-                                <h4 class="font-mi-bold font30 fontmb-medium"><a href="{{$post->url}}">{{$post->name}}</a></h4>
+                                <h4 class="font-mi-bold font30 fontmb-medium"><a href="{{$post->url}}" class="fontmb-medium">{{$post->name}}</a></h4>
                                 <p class="desc font-pri font20 fontmb-small">{{Str::words($post->description,40)}}</p>
                                 <p class="city-day font-pri font15 fontmb-small">
                                     <span class="city">{{ \MetaBox::getMetaData($post, 'region_post', true) ?? '--' }}</span>

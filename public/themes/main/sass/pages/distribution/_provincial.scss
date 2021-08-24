@@ -9,6 +9,9 @@
     @media(max-width : 1080px){
         margin-top: 2%;
     }
+    [data-aos^=zoom][data-aos^=zoom].aos-animate {
+        transform: unset;
+    }
     h1.title {
         font-family: $font-my-bold;
         text-transform: uppercase;
@@ -35,9 +38,6 @@
     .provincial-company {
         background-color: $color-white;
         @include paddingBottom(65);
-        // @media (max-width: 1080px) {
-        //     padding-bottom: 0;
-        // }
         .description {
             font-family: $font-primary;
         }
@@ -58,8 +58,10 @@
         }
         .select-list {
             width: 37.5%;
-            z-index: 99;
             position: relative;
+            @media (max-width: 640px) {
+                width: 100%;
+            }
             form {
                 display: flex;
                 .ui.selection.dropdown {
@@ -93,6 +95,9 @@
             @media(max-width: 991px) {
                 height: 450px;
             }
+            @media(max-width: 640px) {
+                height: 300px;
+            }
             .branch-background-image {
                 width: 100%;
                 height: 100%;
@@ -115,11 +120,14 @@
                 position: absolute;
                 top: 0;
                 left: 0;
-                z-index: 100;
-
-                @media (max-width: 1080px) {
-                    @include mobilePaddingY(50);
-                    @include mobilePaddingLeft(50);
+                z-index: 1;
+                @media (max-width: 991px) {
+                    padding: 25px;
+                    padding-right: unset;
+                }
+                @media (max-width: 640px) {
+                    padding: 20px;
+                    padding-right: unset;
                 }
 
                 .branch-overflow {
@@ -149,39 +157,58 @@
                         .logo-wrap {
                             display: flex;
                             justify-content: space-between;
+                            @media (max-width: 480px) {
+                                flex-direction: column;
+                            }
                             &__left {
                                 display: flex;
-                                align-items: baseline;
+                                align-items: flex-end;
                                 flex-wrap: wrap;
                                 flex-grow: 1;
                                 @include marginX(30, "-");
                                 @include marginTop(15, "-");
                                 @include marginBottom(15, "-");
+                                @media (max-width: 640px) {
+                                    flex-wrap: wrap;
+                                }
 
                                 .logo-item {
-                                    @include paddingX(30);
+                                    width: 20%;
+                                    text-align: center;
                                     @include paddingY(15);
+                                    @media (max-width: 640px) {
+                                        width: 45%;
+                                    }
+                                    @media (max-width: 480px) {
+                                        width: 50%;
+                                    }
                                 }
                                 
                                 @media (max-width: 1368px) {
                                     margin: 0;
                                     .logo-item {
-
                                         padding: 0;
-                                        
                                         img {
-                                            transform: scale(0.6);
+                                            transform: scale(0.7);
                                         }
                                     }
                                 }
                             }
                             &__right{
+                                text-align: end;
                                 align-self: flex-end;
                                 a {
                                     color: $color-white;
                                     i {
                                         font-size: 0.8rem;
                                     }
+                                }
+                                @media (max-width: 1368px) {
+                                    width: 33%;
+                                }
+                                @media (max-width: 480px) {
+                                    width: 100%;
+                                    padding-top: 10px;
                                 }
                             }
                         }
@@ -206,17 +233,6 @@
                     object-fit: cover;
                 }
             }
-
-            @media (max-width: 768px) {
-                .left {
-                    width: 100%;
-                }
-
-                .right {
-                    width: 100%;
-                    opacity: 0.3;
-                }
-            }
         }
     }
     .activity-news-desktop {
@@ -234,23 +250,6 @@
             background-color: $color-white;
             display: flex;
             flex-direction: column;
-            // .img-container {
-            //     overflow: hidden;
-            //     width: 100%;
-            //     height: 100%;
-            //     .skewed{
-            //         overflow: hidden;
-            //         img {
-            //             width: 100%;
-            //             height: 100%;
-            //             object-fit: cover;
-            //             transition: transform 0.3s, visibility 0.3s ease-in;
-            //             &:hover {
-            //                 transform: scale(1.1);
-            //             }
-            //         }
-            //     }
-            // }
             .news-body {
                 padding: 30px 30px 88px 30px;
                 height: 100%;
@@ -323,7 +322,7 @@
 
     .activity-news-mobile {
         display: none;
-        background-color: #f3f3f3;
+        background-color: #f0f0f0;
         @include mobilePaddingTop(25);
 
         @media (max-width: 1080px) {
@@ -421,22 +420,18 @@
             }
         }
         &-button {
-            @include width(70);
-            @include mobileWidth(40);
-            // @include mobileMarginX(35, "+");
             display: flex;
             justify-content: space-between;
             position: absolute;
             right: 0;
             top: 50%;
             transform: translate(100%,-50%);
-
-            @media (max-width: 576px) {
-                transform: translate(50%,-50%);
-            } 
             img {
                 width: 40%;
                 cursor: pointer;
+            }
+            @media (max-width: 991px) {
+                right: 54px;
             }
         }
         &-item {
@@ -493,6 +488,9 @@
             @media (max-width: 991px) {
                 width: 95%;
             } 
+            @media (max-width: 640px) {
+                width: 98%;
+            }
         }
     }
 }

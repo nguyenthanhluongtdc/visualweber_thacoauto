@@ -92,18 +92,22 @@
                     </a>
                 </div>
 
-
-                <input type="checkbox" id="top-nav" />
-                <div class="icon-menu">
-                    <span class="hamburgerspan"></span>
-                    <span class="hamburgerspan"></span>
-                    <span class="hamburgerspan"></span>
+                <div class="zeynep-open">
+                    <input type="checkbox" id="top-nav" />
+                    <div class="icon-menu">
+                        <span class="hamburgerspan"></span>
+                        <span class="hamburgerspan"></span>
+                        <span class="hamburgerspan"></span>
+                    </div>
                 </div>
-                {!!
-                    Menu::renderMenuLocation('main-menu', [
-                        'view' => 'menu-mobile',
-                    ])
-                !!}
+                <div class="zeynep">
+                    {!!
+                        Menu::renderMenuLocation('main-menu', [
+                            'view' => 'menu-mobile',
+                        ])
+                    !!}
+                </div>
+                <div class="zeynep-overlay"></div>
             </div>
         </div>
     </div>

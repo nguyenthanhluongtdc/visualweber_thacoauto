@@ -8,7 +8,7 @@
                 <ul class="info-equip">
                     <li class="info-equip__item font15 font-pri">
                         <img src="{{Theme::asset()->url('images/business/brand-detail/chon-xe-1.png')}}" alt="filter icon">
-                        <span>270 kW (367 HP)</span>    
+                        <span>270 kW (367 HP)</span>
                     </li>
                     <li class="info-equip__item font15 font-pri">
                         <img src="{{Theme::asset()->url('images/business/brand-detail/chon-xe-2.png')}}" alt="filter icon">
@@ -16,7 +16,7 @@
                     </li>
                     <li class="info-equip__item font15 font-pri">
                         <img src="{{Theme::asset()->url('images/business/brand-detail/chon-xe-3.png')}}" alt="filter icon">
-                        <span>Tự động</span>  
+                        <span>Tự động</span>
                     </li>
                 </ul>
                 <div class="button">
@@ -26,10 +26,10 @@
             <div class="car-selection-content__right  col-sm-12 col-md-12">
                 <div class="car-version">
                     <div id="car-version-select" class="car-version__select font15 font-pri">
-                        <h3 class="font15 font-pri">Chọn phiên bản xe</h3>
+                        <h3 class="font15 font-pri mb-0">Chọn phiên bản xe</h3>
                         <i class="fas fa-chevron-down font12"></i>
                     </div>
-                    
+
                     <a href="" class="car-version__viewdetail font15 font-pri">Xem chi tiết phiên bản</a>
                 </div>
                 <ul id="car-version-list" class="car-version__list active">
@@ -51,22 +51,22 @@
                     <h3 class="select-color__title font15 font-pri">Lựa chọn màu</h3>
                     <ul class="info-color">
                         <li class="info-color__item active" style="background-color: white">
-                            
+
                         </li>
                         <li class="info-color__item" style="background-color: black">
-                            
+
                         </li>
                         <li class="info-color__item" style="background-color: #cdcdcd">
-                            
+
                         </li>
                         <li class="info-color__item" style="background-color: #cb0000">
-                            
+
                         </li>
                         <li class="info-color__item" style="background-color: #003499">
-                            
+
                         </li>
                         <li class="info-color__item" style="background-color: #235150">
-                            
+
                         </li>
                     </ul>
                 </div>
@@ -182,6 +182,6 @@
                 Quay lại
             </button>
         </div>
-       
+
     </div>
 </section>

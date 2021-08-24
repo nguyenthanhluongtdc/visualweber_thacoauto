@@ -1,5 +1,5 @@
-<div id="research-development-page">
-    <div class="section-intro-wrapper expor">
+<div id="research-development-page" class="overflow-x-hidden">
+    <div class="section-intro-wrapper overflow-x-hidden expor">
         <div class="container-remake">
             <div class="section-intro">
                 @if(has_field($page, 'intro_module_export'))

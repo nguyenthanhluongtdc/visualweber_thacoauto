@@ -91,7 +91,6 @@ class ContactTable extends TableAbstract
             'lastname',
             'phone',
             'email',
-            'agree',
             'created_at',
             'status',
         ]);
@@ -128,10 +127,7 @@ class ContactTable extends TableAbstract
             'phone'      => [
                 'title' => trans('plugins/contact::contact.tables.phone'),
             ],
-            'agree'      => [
-                'title' => trans('Xác nhận cung cấp thông tin'),
-                'width' => '150px',
-            ],
+          
             'created_at' => [
                 'title' => trans('core/base::tables.created_at'),
                 'width' => '100px',

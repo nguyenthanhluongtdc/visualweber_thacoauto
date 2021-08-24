@@ -108,6 +108,9 @@
         ul {
           li {
             line-height: 36px;
+            a{
+              color: #2e3a41;
+            }
             @media (max-width: 1680px) {
               line-height: 31px;
             }

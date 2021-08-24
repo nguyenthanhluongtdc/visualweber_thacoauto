@@ -75,8 +75,12 @@
           }
 
           transition: background-color 0.2s linear;
-          &:hover {
+          &:hover,
+          &.active {
             background-color: #043869;
+            & > a {
+              color: white !important;
+            }
           }
           &:last-child {
             margin-left: 0;
@@ -183,7 +187,7 @@
     }
     .search-language {
       padding-left: 5%;
-      width: 17%;
+      width: 15%;
       display: flex;
       align-items: center;
       justify-content: flex-end;

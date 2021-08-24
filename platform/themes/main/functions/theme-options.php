@@ -100,16 +100,16 @@ app()->booted(function () {
             ],
         ])
         ->setField([
-            'id'         => 'twitter',
+            'id'         => 'linkedin',
             'section_id' => 'opt-text-subsection-social',
             'type'       => 'text',
-            'label'      => 'Twitter',
+            'label'      => 'Linkedin',
             'attributes' => [
-                'name'    => 'twitter',
+                'name'    => 'linkedin',
                 'value'   => null,
                 'options' => [
                     'class'       => 'form-control',
-                    'placeholder' => 'https://twitter.com/@username',
+                    'placeholder' => 'https://linkedin.com/@username',
                 ],
             ],
         ])
@@ -159,11 +159,13 @@ app()->booted(function () {
                     'class' => 'form-control',
                 ],
             ],
-            'helper'     => __('To show chat box on that website, please go to :link and add :domain to whitelist domains!',
+            'helper'     => __(
+                'To show chat box on that website, please go to :link and add :domain to whitelist domains!',
                 [
                     'domain' => Html::link(url('')),
                     'link'   => Html::link('https://www.facebook.com/' . theme_option('facebook_page_id') . '/settings/?tab=messenger_platform'),
-                ]),
+                ]
+            ),
         ])
         ->setField([
             'id'         => 'facebook_page_id',

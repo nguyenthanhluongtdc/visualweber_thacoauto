@@ -43,7 +43,6 @@ class Contact extends BaseModel
         'email',
         'phone',
         'address',
-        'agree',
         'subject',
         'content',
         'status',

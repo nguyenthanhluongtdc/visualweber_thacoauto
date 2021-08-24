@@ -41,7 +41,7 @@
                     <p class="font-pri font15 mb-2 fontmb-little">
                         {!! $manufacturing->description !!}
                     </p>
-                    <div class="read-more font18"><a href="{{$manufacturing->url}}"> {!! __('Read more') !!} </a></div>
+                    <div class="read-more font18"><a href="{{$manufacturing->url}}"> {!! __('Xem thêm') !!} </a></div>
                 </div>
             </div>
         @endforeach

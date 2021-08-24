@@ -10,7 +10,7 @@
                 @foreach ($postsFeatures as $post)
                     <div class="media-top-item">
                         <div class="item-image">
-                            <a href="{{$post->url}}">
+                            <a href="{{$post->url}}" >
                                 <img src="{{ Storage::disk('public')->exists($post->image) ? get_object_image($post->image, 'post-large') : RvMedia::getDefaultImage()}}" alt="">
                             </a>
                         </div>

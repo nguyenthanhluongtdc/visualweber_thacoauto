@@ -7,9 +7,9 @@ $('.partner-home-carousel').owlCarousel({
     navText: [
         // "<div class='nav-btn prev-slide'><i class='fal fa-chevron-left'></i></div>",
         "<div class='nav-btn prev-slide'><img src='themes/main/images/main/left.png'></" +
-                "div>",
+        "div>",
         "<div class='nav-btn prev-slide'><img src='themes/main/images/main/right.png'><" +
-                "/div>"
+        "/div>"
     ],
     responsive: {
         576: {
@@ -73,8 +73,8 @@ var swiperProductIntro = new Swiper(".product-intro__swiper", {
     },
     autoplay: true,
     pagination: {
-      el: ".product-intro__swiper--pagination",
-      clickable: true
+        el: ".product-intro__swiper--pagination",
+        clickable: true
     },
 });
 
@@ -115,7 +115,7 @@ $(window).scroll(function () {
             $('.agent-system__showroom__number').each(function () {
                 var $this = $(this),
                     countTo = $this.attr('data-count');
-                $({countNum: $this.text()}).animate({
+                $({ countNum: $this.text() }).animate({
                     countNum: countTo
                 }, {
 
@@ -142,7 +142,7 @@ $(window).scroll(function () {
 });
 
 $('.slider-for').slick(
-    {slidesToShow: 1, slidesToScroll: 1, arrows: false, fade: true, asNavFor: '.slider-nav'}
+    { slidesToShow: 1, slidesToScroll: 1, arrows: false, fade: true, asNavFor: '.slider-nav' }
 );
 $('.slider-nav').slick({
     slidesToShow: 4,
@@ -187,37 +187,37 @@ var swiper = new Swiper(".researchDevSwiper", {
     },
     breakpoints: {
         "@0.00": {
-          spaceBetween: 10,
+            spaceBetween: 10,
         },
         "@0.75": {
-          slidesPerView: 2,
-          spaceBetween: 20,
+            slidesPerView: 2,
+            spaceBetween: 20,
         },
         "@1.00": {
-          slidesPerView: 3,
-          spaceBetween: 30,
+            slidesPerView: 3,
+            spaceBetween: 30,
         },
-      },
+    },
 });
 
 var Helper = {
-    addSelect2toNewsFilter: function(){
-      if($('.js-example-disabled-results').length > 0){
-        $('.js-example-disabled-results').select2({minimumResultsForSearch: Infinity});
-      }
-    },
-    addSelect2toCarFilterProvinces: function(){
-        if($('.provinces-select2').length > 0){
-          $('.provinces-select2').select2({minimumResultsForSearch: Infinity});
+    addSelect2toNewsFilter: function () {
+        if ($('.js-example-disabled-results').length > 0) {
+            $('.js-example-disabled-results').select2({ minimumResultsForSearch: Infinity });
         }
     },
-    RangeFilterBranddetail: function(){
+    addSelect2toCarFilterProvinces: function () {
+        if ($('.provinces-select2').length > 0) {
+            $('.provinces-select2').select2({ minimumResultsForSearch: Infinity });
+        }
+    },
+    RangeFilterBranddetail: function () {
         var range = $("#myRange").attr("value");
         $(".filter-value").html(range);
-        $(document).on('input change', '#myRange', function() {
-            $('.filter-value').html( $(this).val() );
+        $(document).on('input change', '#myRange', function () {
+            $('.filter-value').html($(this).val());
             var slideWidth = $(this).val() * 100 / 20000000000;
-            $(".slider-range__line").css("width", "calc(" + slideWidth + "% - " + slideWidth/7.5 + "px)");
+            $(".slider-range__line").css("width", "calc(" + slideWidth + "% - " + slideWidth / 7.5 + "px)");
             $(".slider-range__button").css("left", slideWidth + "%");
         });
     },
@@ -249,10 +249,10 @@ var Helper = {
         }); //missing );
     },
     dropdownCarVersions: function () {
-        if($('#car-version-select').length>0){
-            $('#car-version-select').on('click',function(){
+        if ($('#car-version-select').length > 0) {
+            $('#car-version-select').on('click', function () {
                 $(this).toggleClass('active')
-                if($(this).hasClass('active')) {
+                if ($(this).hasClass('active')) {
                     $(this).parent().parent().find('#car-version-list').css({
                         'height': 'auto',
                         'transition': "0.2s",
@@ -262,21 +262,21 @@ var Helper = {
                     $(this).parent().parent().find('#car-version-list').css({
                         'height': '0',
                         'transition': "0.2s",
-                        })
-                    }
+                    })
+                }
             });
         }
     },
     scrollNewsHomepage: () => {
-        if($('#hours .logo-frame').length>0){
+        if ($('#hours .logo-frame').length > 0) {
             var numOfHours = $('#hours .logo-frame').length
-            if(numOfHours != null){
-                for(i=1; i <= numOfHours; i++){
-                    var cellHeight = $('#cells').children('.flag-'+i).height()
-                    $('#hours').children('.flag-'+i).height(cellHeight)
+            if (numOfHours != null) {
+                for (i = 1; i <= numOfHours; i++) {
+                    var cellHeight = $('#cells').children('.flag-' + i).height()
+                    $('#hours').children('.flag-' + i).height(cellHeight)
                 }
             }
-            
+
             $('#cells').on('scroll', function () {
                 $('#hours').scrollTop($(this).scrollTop());
             });
@@ -284,6 +284,37 @@ var Helper = {
                 $('#cells').scrollTop($(this).scrollTop());
             });
         }
+    },
+    zeynepInit: function () {
+        let is_enable_menu = false
+        const zeynep = $('.zeynep').zeynep({
+            opened: function () {
+                is_enable_menu = true
+                console.log('the side menu is opened')
+            }
+        })
+
+        // dynamically bind 'closing' event
+        zeynep.on('closing', function () {
+            is_enable_menu = false
+            console.log('this event is dynamically binded')
+        })
+
+        $('.zeynep-overlay').on('click', function (e) {
+            zeynep.close()
+            $("#top-nav").prop("checked", false);
+        })
+
+        // open zeynepjs side menu
+        $('.zeynep-open').on('click', function (e) {
+            if (is_enable_menu) {
+                $("#top-nav").prop("checked", false);
+                zeynep.close()
+            } else {
+                $("#top-nav").prop("checked", true);
+                zeynep.open()
+            }
+        })
     }
 };
 
@@ -293,15 +324,14 @@ let globalConfig = {
 }
 
 var Ajax = {
-    postData: () =>{
+    postData: () => {
         $.ajax({
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
             url: `ajax/get-new-posts?page=${globalConfig.pageNews}`,
-            method:"GET",
-            success:function({data, disable})
-            {
+            method: "GET",
+            success: function ({ data, disable }) {
                 $('.loading').removeClass('d-flex').addClass('d-none')
                 $('#new-posts').append(data);
                 globalConfig = {
@@ -310,12 +340,11 @@ var Ajax = {
                     disableLoadMoreNews: disable
                 }
 
-                if(disable) {
+                if (disable) {
                     $('#posts-load-more').addClass('d-none')
                 }
             },
-            error:function(xhr,thrownError)
-            {
+            error: function (xhr, thrownError) {
                 console.log(xhr.responseText);
                 console.log(thrownError)
                 $('.loading').removeClass('d-flex').addClass('d-none')
@@ -324,14 +353,14 @@ var Ajax = {
         })
     },
     postLoadMore: () => {
-        if($('#posts-load-more').length>0){
+        if ($('#posts-load-more').length > 0) {
             // if($('.loading').length>0){
             //     $('.loading').removeClass('d-none').addClass('d-flex')
             // }
             // Ajax.postData();
-            $(document).on('click', '#posts-load-more', function(){
-                if(globalConfig.disableLoadMoreNews) return
-                if($('.loading').length>0){
+            $(document).on('click', '#posts-load-more', function () {
+                if (globalConfig.disableLoadMoreNews) return
+                if ($('.loading').length > 0) {
                     $('.loading').removeClass('d-none').addClass('d-flex')
                 }
                 Ajax.postData();
@@ -351,24 +380,25 @@ $(document).ready(function () {
     Helper.RangeFilterBranddetail();
     Helper.dropdownCarVersions();
     Helper.scrollNewsHomepage();
+    Helper.zeynepInit();
 });
 
 
-$(document).ready(function(){
+$(document).ready(function () {
     var docEl = $(document),
         headerEl = $('header'),
         headerWrapEl = $('.wrapHead'),
         navEl = $('nav'),
         linkScroll = $('.click_scroll');
-    
-    linkScroll.click(function(e){
+
+    linkScroll.click(function (e) {
         $top = $(this.hash).offset().top - 100;
-        e.preventDefault(); 
+        e.preventDefault();
         $('body, html').animate({
             scrollTop: $top
         }, 500);
     });
-    $(document).on('click', '#menu-footer', function(){
+    $(document).on('click', '#menu-footer', function () {
         console.log($(this).parent().find('.list-link'));
         $(this).parent().find('.list-link').toggleClass('active')
     })
@@ -377,35 +407,35 @@ $(document).ready(function(){
 
 
 // counter
-if($('.counter-value').length > 0){
+if ($('.counter-value').length > 0) {
     var a = 0;
-    $(window).scroll(function() {
-      var oTop = $('.counter').offset().top - window.innerHeight;
-      if (a == 0 && $(window).scrollTop() > oTop) {
-        $('.counter-value').each(function() {
-          var $this = $(this),
-            countTo = $this.attr('data-count');
-          $({
-            countNum: $this.text()
-          }).animate({
-              countNum: countTo
-            },
-    
-            {
-    
-              duration: 2000,
-              easing: 'swing',
-              step: function() {
-                $this.text(Math.floor(this.countNum));
-              },
-              complete: function() {
-                $this.text(this.countNum);
-              }
-    
+    $(window).scroll(function () {
+        var oTop = $('.counter').offset().top - window.innerHeight;
+        if (a == 0 && $(window).scrollTop() > oTop) {
+            $('.counter-value').each(function () {
+                var $this = $(this),
+                    countTo = $this.attr('data-count');
+                $({
+                    countNum: $this.text()
+                }).animate({
+                    countNum: countTo
+                },
+
+                    {
+
+                        duration: 2000,
+                        easing: 'swing',
+                        step: function () {
+                            $this.text(Math.floor(this.countNum));
+                        },
+                        complete: function () {
+                            $this.text(this.countNum);
+                        }
+
+                    });
             });
-        });
-        a = 1;
-      }
-    
+            a = 1;
+        }
+
     });
 }

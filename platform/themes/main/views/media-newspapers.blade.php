@@ -7,10 +7,10 @@
             @foreach ($posts as $post)
             <div class="item-newspaper">
                 <div class="row__top"> 
-                    <h5 class="title font-pri-bold font30 color-gray text-uppercase">
+                    <h5 class="title font-pri-bold font30 color-gray text-uppercase ">
                         <a href="">{{$post->name}}</a>
                     </h5>
-                    <p class="desc font-pri color-gray font21">
+                    <p class="desc font-pri color-gray font21 ">
                         {{$post->description}}
                     </p>
                 </div>

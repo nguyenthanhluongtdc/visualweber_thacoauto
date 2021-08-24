@@ -1,4 +1,4 @@
-<div class="mechanical">
+<div class="mechanical overflow-x-hidden">
     @includeIf("theme.main::views.pages.mechanical.mechanical-overview")
     @includeIf("theme.main::views.pages.support-industry.support-industry-tab", ['name_menu'=>'menu-tabs-mechanical'])
     @includeIf("theme.main::views.pages.mechanical.mechanical-news")

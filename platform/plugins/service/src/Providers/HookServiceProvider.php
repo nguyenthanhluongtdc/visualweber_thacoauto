@@ -25,7 +25,7 @@ class HookServiceProvider extends ServiceProvider
     {
 
         if (Auth::user()->hasPermission('tags.index')) {
-            Menu::registerMenuOptions(Service::class, 'Manufacturing');
+            Menu::registerMenuOptions(Service::class, 'Dịch vụ');
         }
     }
 }

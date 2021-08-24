@@ -198,6 +198,121 @@ app()->booted(function () {
                 ],
             ],
         ])
+
+        ->setSection([
+            'title'      => __('Footer address company'),
+            'desc'       => __('Footer address company'),
+            'id'         => 'footer-address-company',
+            'subsection' => true,
+            'icon'       => 'fa fa-building',
+        ])
+        ->setField([
+            'id'         => 'logo-footer',
+            'section_id' => 'footer-address-company',
+            'type'       => 'mediaImage',
+            'label'      => "Image logo footer",
+            'attributes' => [
+                'name'    => 'logo-footer',
+                'value'   => null,
+
+            ],
+        ])
+
+        ->setField([
+            'id'         => 'name-company',
+            'section_id' => 'footer-address-company',
+            'type'       => 'textarea',
+            'label'      =>  __('Name company'),
+            'attributes' => [
+                'name'    => 'name-company',
+                'value'   => null,
+                'options' => [
+                    'class'        => 'form-control',
+                    'data-counter' => 255,
+                    'rows'         => 2,
+                ],
+            ],
+        ])
+
+        ->setField([
+            'id'         => 'address-company',
+            'section_id' => 'footer-address-company',
+            'type'       => 'textarea',
+            'label'      => __('Address company'),
+            'attributes' => [
+                'name'    => 'address-company',
+                'value'   => null,
+                'options' => [
+                    'class'        => 'form-control',
+                    'data-counter' => 255,
+                    'rows'         => 2,
+                ],
+            ],
+        ])
+        ->setField([
+            'id'         => 'tax-code-company',
+            'section_id' => 'footer-address-company',
+            'type'       => 'text',
+            'label'      => __('Tax code company'),
+            'attributes' => [
+                'name'    => 'tax-code-company',
+                'value'   => null,
+            'options' => [
+                'class' => 'form-control',
+            ],
+            ],
+        ])
+        ->setField([
+            'id'         => 'hotline-contact',
+            'section_id' => 'footer-address-company',
+            'type'       => 'text',
+            'label'      => __('Hotline'),
+            'attributes' => [
+                'name'    => 'hotline-contact',
+                'value'   => null,
+            'options' => [
+                'class' => 'form-control',
+            ],
+
+            ],
+        ])
+        ->setField([
+            'id'         => 'email-contact',
+            'section_id' => 'footer-address-company',
+            'type'       => 'text',
+            'label'      => __('Email'),
+            'attributes' => [
+                'name'    => 'email-contact',
+                'value'   => null,
+            'options' => [
+                'class' => 'form-control',
+            ],
+            ],
+        ])
+        ->setField([
+            'id'         => 'fax-contact',
+            'section_id' => 'footer-address-company',
+            'type'       => 'text',
+            'label'      => __('FAX'),
+            'attributes' => [
+                'name'    => 'fax-contact',
+                'value'   => null,
+            'options' => [
+                'class' => 'form-control',
+            ],
+            ],
+        ]);
+
+
+
+
+
+
+
+
+
+
+
         // ->setSection([ // Set section with no field
         //     'title' => __('Sản xuất - kinh doanh ô tô & cơ khí'),
         //     'desc' => __('Sản xuất - kinh doanh ô tô & cơ khí settings'),
@@ -339,5 +454,10 @@ app()->booted(function () {
         //         ],
         //     ],
         // ])
+
+
+
+
+
         ;
 });

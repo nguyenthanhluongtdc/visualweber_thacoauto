@@ -165,20 +165,23 @@
                                 @include marginX(30, "-");
                                 @include marginTop(15, "-");
                                 @include marginBottom(15, "-");
+                                @media (max-width: 640px) {
+                                    flex-wrap: wrap;
+                                }
 
                                 .logo-item {
                                     width: 20%;
                                     text-align: center;
-                                    // @include paddingX(30);
                                     @include paddingY(15);
+                                    @media (max-width: 640px) {
+                                        width: 45%;
+                                    }
                                 }
                                 
                                 @media (max-width: 1368px) {
                                     margin: 0;
                                     .logo-item {
-
                                         padding: 0;
-                                        
                                         img {
                                             transform: scale(0.7);
                                         }
@@ -220,17 +223,6 @@
                     object-fit: cover;
                 }
             }
-
-            // @media (max-width: 768px) {
-            //     .left {
-            //         width: 100%;
-            //     }
-
-            //     .right {
-            //         width: 100%;
-            //         opacity: 0.3;
-            //     }
-            // }
         }
     }
     .activity-news-desktop {
@@ -418,19 +410,12 @@
             }
         }
         &-button {
-            // @include width(70);
-            // @include mobileWidth(40);
-            // @include mobileMarginX(35, "+");
             display: flex;
             justify-content: space-between;
             position: absolute;
             right: 0;
             top: 50%;
             transform: translate(100%,-50%);
-
-            // @media (max-width: 576px) {
-            //     transform: translate(50%,-50%);
-            // }
             img {
                 width: 40%;
                 cursor: pointer;

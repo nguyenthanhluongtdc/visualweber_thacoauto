@@ -1,8 +1,7 @@
 {!! do_shortcode('[filter-media][/filter-media]') !!}
 
 @php
-    $imageFeatures = get_featured_posts_by_category(20, 5);
-    $videoFeatures = get_featured_posts_by_category(22, 5);
+    $imageFeatures = $videoFeatures = get_featured_posts_by_category($category->id, 5);
 @endphp
 <div class="tabs-mobile">
     <div class="container-remake">
@@ -36,7 +35,6 @@
                     </div>
                     @endforeach
                 @endif
-                
             </div>
           </div>
           <div class="tab-pane fade show active" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
@@ -71,7 +69,7 @@
 <div class="section-desktop">
     <div class="image-gallery container-remake">
         <h3 class="title font-pri-bold font50">
-            Hình ảnh
+            {{ __("Hình ảnh") }}
         </h3>
         <div class="image-gallery-list">
             @if (!empty($imageFeatures))
@@ -95,7 +93,7 @@
     </div>
     <div class="image-gallery video container-remake">
         <h3 class="title font-pri-bold font50">
-            VIDEO
+            {{ __("VIDEO") }}
         </h3>
         <div class="image-gallery-list">
             @if (!empty($videoFeatures))

@@ -10,5 +10,4 @@
         </h5>
     </div>
 @empty
-    <span class="font-pri font20 text-center">{{ __('Not found') }}</span>
 @endforelse

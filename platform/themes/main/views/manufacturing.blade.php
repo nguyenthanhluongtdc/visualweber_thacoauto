@@ -1,4 +1,4 @@
-<section class="section-rd-production">
+{{-- <section class="section-rd-production">
     <div class="container-remake">
         <div class="rd-production">
             <h2 class="rd-production__title font60 font-pri-bold">THÔNG TIN CHUNG</h2>
@@ -68,8 +68,8 @@
                 </div>
 
                 <div class="row-full__colPicture col-xl-7 col-md-6">
-                    <div class="play-video"> 
-                        <img src="{{Theme::asset()->url('images/manufacturing/play.png')}}" alt="" width="" height="" /> 
+                    <div class="play-video">
+                        <img src="{{Theme::asset()->url('images/manufacturing/play.png')}}" alt="" width="" height="" />
                     </div>
                     <div class="row-full__picture">
                         <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu3.jpg')}}" alt="" />
@@ -84,7 +84,7 @@
                     </h3>
 
                     <p class="row-full__description">
-                        Thực hiện chiến lược tham gia chuỗi giá trị toàn cầu, gia tăng năng lực cạnh tranh trong bối cảnh hội nhập khu vực và thế giới, với những nỗ lực nghiên cứu phát triển sản phẩm, mở rộng thị trường, thời gian qua, THACO đã chủ động xuất khẩu nhiều sản phẩm ô tô sang các nước trong khu vực ASEAN và thế giới. 
+                        Thực hiện chiến lược tham gia chuỗi giá trị toàn cầu, gia tăng năng lực cạnh tranh trong bối cảnh hội nhập khu vực và thế giới, với những nỗ lực nghiên cứu phát triển sản phẩm, mở rộng thị trường, thời gian qua, THACO đã chủ động xuất khẩu nhiều sản phẩm ô tô sang các nước trong khu vực ASEAN và thế giới.
                     </p>
 
                     <a href="#" title="{!! __('Xem thêm') !!}" class="btn-read-more">
@@ -101,4 +101,8 @@
         </div>
 
     </div>
-</section>
+</section> --}}
+
+@includeIf("theme.main::views.pages.services.service-detail", [
+    'data' => $page ?? collect()
+])

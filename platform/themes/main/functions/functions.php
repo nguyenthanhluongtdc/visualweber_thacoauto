@@ -35,7 +35,7 @@ register_page_template([
     'deposit' => 'Deposit',
     'cost-estimates' => "Cost Estimates",
     'pre-order' => "Pre-order",
-    'distribution-system' => 'Distribution system'
+    'distribution-system' => 'Distribution system',
 ]);
 
 Menu::addMenuLocation('menu-tabs-support-industry', 'Tabs - Công nghiệp hỗ trợ');

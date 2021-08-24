@@ -46,8 +46,8 @@
                 </div>
             </div>
             <div class="product-detail__features">
-                @if(!blank(get_field($data, 'car_category_detail_sologan')))
-                    @foreach (get_field($data, 'car_category_detail_sologan') as $item)
+                @if(!blank(get_field($data, 'car_category_detail_slogan')))
+                    @foreach (get_field($data, 'car_category_detail_slogan') as $item)
                     <div class="product-detail__card">
                         <div class="product-detail__card-image">
                             <div class="product-detail__card-frame">
@@ -62,42 +62,6 @@
                     </div>
                     @endforeach
                 @endif
-                <div class="product-detail__card">
-                    <div class="product-detail__card-image">
-                        <div class="product-detail__card-frame">
-                            <img src="{{Theme::asset()->url('images/services/Layer-16.png')}}" alt="">
-
-                        </div>
-                    </div>
-                    <h3 class="product-detail__card-title font25 font-mi-bold fontmb-medium">THƯƠNG HIỆU TOÀN CẦU TỐT NHẤT</h3>
-                    <div class="product-detail__card-desc font20 font-pri fontmb-small">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                    </div>
-                </div>
-                <div class="product-detail__card">
-                    <div class="product-detail__card-image">
-                        <div class="product-detail__card-frame">
-                            <img src="{{Theme::asset()->url('images/services/Layer-17.png')}}" alt="">
-
-                        </div>
-                    </div>
-                    <h3 class="product-detail__card-title font25 font-mi-bold fontmb-medium">NHỊP ĐIỆU KHÁC BIỆT</h3>
-                    <div class="product-detail__card-desc font20 font-pri fontmb-small">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                    </div>
-                </div>
-                <div class="product-detail__card">
-                    <div class="product-detail__card-image">
-                        <div class="product-detail__card-frame">
-                            <img src="{{Theme::asset()->url('images/services/Layer-18.png')}}" alt="">
-
-                        </div>
-                    </div>
-                    <h3 class="product-detail__card-title font25 font-mi-bold fontmb-medium">TRIẾT LÝ THIẾT KẾ</h3>
-                    <div class="product-detail__card-desc font20 font-pri fontmb-small">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                    </div>
-                </div>
             </div>
 
             <div class="relate-product">

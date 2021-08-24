@@ -13,10 +13,10 @@
         <div class="event-item">
             <div class="title">
                 <div class="icon-title">
-                    <img src="{{ Theme::asset()->url('images/media/event.png') }}" alt="Icon title">
+                    <img src="{{ Theme::asset()->url('images/media/event.png') }}" class="img-fluid" alt="Icon title">
                 </div>
                 <div class="title-wrap">
-                    <h5 class="font30 font-pri-bold color-gray"><a href="{{$post->url}}">{{$post->name}}
+                    <h5 class="font30 font-pri-bold color-gray mb-0"><a href="{{$post->url}}">{{$post->name}}
                     </a></h5>
                     <p class="time font20 font-pri">{{date_format($post->created_at,"d-m-Y")}}</p>
                 </div>
@@ -30,7 +30,7 @@
                 <div class="content">
                     <p class="font25 font-pri">{{Str::words($post->description,100)}}</p>
                     <div class="view-detail font-pri-bold font18">
-                        <a href="{{$post->url}}">xem chi tiết</a>
+                        <a href="{{$post->url}}">{{ __("Xem chi tiết") }}</a>
                     </div>
                 </div>
             </div>

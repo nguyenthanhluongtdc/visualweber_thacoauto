@@ -7,7 +7,7 @@
             @endif
 
             @if(has_field($page, 'description_module_overview_sindustry'))
-                <div class="mechandical-overview__desc font20 font-pri mt-40 mb-40">
+                <div class="mechandical-overview__desc font20 font-pri mt-40 mb-40  fontmb-small">
                     {!! has_field($page, 'description_module_overview_sindustry') !!}
                 </div>
             @endif

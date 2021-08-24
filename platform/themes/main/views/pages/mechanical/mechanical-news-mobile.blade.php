@@ -27,8 +27,7 @@
                             </div>
                             <div class="content">
                                 <h3 class="fontmb-middle font-pri-bold">Lorem ipsum dolor, sit amet consectetur adipisicing
-                                    elit. Ipsa quas nisi totam tenetur eveniet neque dolore nulla a consectetur amet,
-                                    aliquam at voluptates illo labore!</h3>
+                                    elit. Ipsa quas nisi totam tenetur eveniet neque</h3>
                             </div>
                         </div>
                     </div>

@@ -93,13 +93,15 @@ class SocialLoginController extends BaseController
             $firstName = implode(' ', explode(' ', $oAuth->getName(), -1));
 
             $account = app(MemberInterface::class)->createOrUpdate([
-                'first_name'  => $firstName,
-                'last_name'   => trim(str_replace($firstName, '', $oAuth->getName())),
-                'email'       => $oAuth->getEmail(),
-                'verified_at' => now(),
-                'password'    => bcrypt(Str::random(36)),
-                'avatar_id'   => $avatarId,
+                'first_name'   => $firstName,
+                'last_name'    => trim(str_replace($firstName, '', $oAuth->getName())),
+                'email'        => $oAuth->getEmail(),
+                'password'     => bcrypt(Str::random(36)),
+                'avatar_id'    => $avatarId,
             ]);
+
+            $account->confirmed_at = now();
+            $account->save();
         }
 
         auth('member')->login($account, true);

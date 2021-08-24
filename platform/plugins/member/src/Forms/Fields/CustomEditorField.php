@@ -2,6 +2,7 @@
 
 namespace Platform\Member\Forms\Fields;
 
+use BaseHelper;
 use Platform\Base\Supports\Editor;
 use Illuminate\Support\Arr;
 use Kris\LaravelFormBuilder\Fields\FormField;
@@ -28,8 +29,7 @@ class CustomEditorField extends FormField
     {
         (new Editor)->registerAssets();
 
-        $options['attr'] = Arr::set($options['attr'], 'class', Arr::get($options['attr'], 'class') . 'form-control editor-' .
-            setting('rich_editor', config('core.base.general.editor.primary')));
+        $options['attr'] = Arr::set($options['attr'], 'class', Arr::get($options['attr'], 'class') . 'form-control editor-' . BaseHelper::getRichEditor());
 
         return parent::render($options, $showLabel, $showField, $showError);
     }

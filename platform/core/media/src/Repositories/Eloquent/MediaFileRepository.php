@@ -53,7 +53,7 @@ class MediaFileRepository extends RepositoriesAbstract implements MediaFileInter
      */
     public function createSlug($name, $extension, $folderPath)
     {
-        $slug = Str::slug($name);
+        $slug = Str::slug($name, '-', !RvMedia::turnOffAutomaticUrlTranslationIntoLatin() ? 'en' : false);
         $index = 1;
         $baseSlug = $slug;
         while (File::exists(RvMedia::getRealPath(rtrim($folderPath, '/') . '/' . $slug . '.' . $extension))) {

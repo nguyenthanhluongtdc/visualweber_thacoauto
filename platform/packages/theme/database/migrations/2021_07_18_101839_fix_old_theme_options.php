@@ -1,6 +1,7 @@
 <?php
 
 use Platform\Setting\Models\Setting as SettingModel;
+use Platform\Widget\Models\Widget as WidgetModel;
 use Illuminate\Database\Migrations\Migration;
 
 class FixOldThemeOptions extends Migration
@@ -15,12 +16,18 @@ class FixOldThemeOptions extends Migration
         try {
             $theme = Theme::getThemeName();
 
-            foreach (SettingModel::get() as $item) {
-                $item->key = str_replace('theme--', 'theme-' . $theme . '-', $item->key);
+            if ($theme) {
+                foreach (SettingModel::where('key', 'LIKE', 'theme--%')->get() as $item) {
+                    $item->key = str_replace('theme--', 'theme-' . $theme . '-', $item->key);
 
-                if (DB::table('settings')->where('key', $item->key)->count() == 0) {
-                    $item->save();
+                    if (DB::table('settings')->where('key', $item->key)->count() == 0) {
+                        $item->save();
+                    }
                 }
+
+                SettingModel::insertOrIgnore(['theme' => $theme]);
+
+                WidgetModel::whereNull('theme')->update(['theme' => $theme]);
             }
         } catch (Exception $exception) {
             info($exception->getMessage());

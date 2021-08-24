@@ -14,10 +14,8 @@ class TinyMceField extends FormField
      */
     protected function getTemplate()
     {
-        Assets::addScriptsDirectly([
-            'vendor/core/core/base/libraries/tinymce/tinymce.min.js',
-            'vendor/core/core/base/js/editor.js',
-        ]);
+        Assets::addScriptsDirectly(config('core.base.general.editor.tinymce.js'))
+            ->addScriptsDirectly('vendor/core/core/base/js/editor.js');
 
         return 'core/base::forms.fields.tinymce';
     }

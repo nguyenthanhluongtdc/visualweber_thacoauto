@@ -64,7 +64,7 @@ trait LoadAndPublishDataTrait
     {
         $file = $this->getBasePath() . $this->getDashedNamespace() . '/config/' . $file . '.php';
 
-        if (!file_exists($file)) {
+        if (!file_exists($file) && str_contains($file, plugin_path())) {
             $this->throwInvalidPluginError();
         }
 
@@ -132,7 +132,7 @@ trait LoadAndPublishDataTrait
     {
         $file = $this->getBasePath() . $this->getDashedNamespace() . '/routes/' . $file . '.php';
 
-        if (!file_exists($file)) {
+        if (!file_exists($file) && str_contains($file, plugin_path())) {
             $this->throwInvalidPluginError();
         }
 
@@ -146,8 +146,10 @@ trait LoadAndPublishDataTrait
     {
         $this->loadViewsFrom($this->getViewsPath(), $this->getDashedNamespace());
         if ($this->app->runningInConsole()) {
-            $this->publishes([$this->getViewsPath() => resource_path('views/vendor/' . $this->getDashedNamespace())],
-                'cms-views');
+            $this->publishes(
+                [$this->getViewsPath() => resource_path('views/vendor/' . $this->getDashedNamespace())],
+                'cms-views'
+            );
         }
 
         return $this;

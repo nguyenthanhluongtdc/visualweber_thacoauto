@@ -144,6 +144,21 @@
                         </div>
                     </div>
 
+                    <div class="form-group">
+                        <label class="text-title-field"
+                               for="media_turn_off_automatic_url_translation_into_latin">{{ trans('core/setting::setting.media.turn_off_automatic_url_translation_into_latin') }}
+                        </label>
+                        <label class="hrv-label">
+                            <input type="radio" name="media_turn_off_automatic_url_translation_into_latin" class="hrv-radio"
+                                   value="1"
+                                   @if (RvMedia::turnOffAutomaticUrlTranslationIntoLatin()) checked @endif>{{ trans('core/setting::setting.general.yes') }}
+                        </label>
+                        <label class="hrv-label">
+                            <input type="radio" name="media_turn_off_automatic_url_translation_into_latin" class="hrv-radio"
+                                   value="0"
+                                   @if (!RvMedia::turnOffAutomaticUrlTranslationIntoLatin()) checked @endif>{{ trans('core/setting::setting.general.no') }}
+                        </label>
+                    </div>
 
                     <div class="form-group">
                         <label class="text-title-field"

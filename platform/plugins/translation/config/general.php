@@ -8,11 +8,11 @@ return [
      *
      * @type array
      *
-     *    array(
+     *    [
      *        'pagination',
      *        'reminders',
      *        'validation',
-     *    )
+     *    ]
      */
     'exclude_groups' => [],
 ];

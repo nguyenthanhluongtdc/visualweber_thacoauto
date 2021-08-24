@@ -10,6 +10,8 @@ class Botble {
         if (BotbleVariables && BotbleVariables.authorized === '0') {
             this.processAuthorize();
         }
+
+        this.countMenuItemNotifications();
     }
 
     static blockUI(options) {
@@ -338,6 +340,58 @@ class Botble {
                 $(this).append($element);
                 $(this).trigger("change");
             });
+
+            $.each($(document).find('.select-search-ajax'), function (index, value) {
+                const $elSelect = $(value);
+                if ($elSelect.data('url')) {
+                    $elSelect.select2({
+                        placeholder: $elSelect.data('placeholder') || '--Select--',
+                        minimumInputLength: $elSelect.data('minimum-input') || 1,
+                        width: '100%',
+                        delay: 250,
+                        ajax: {
+                            url: $elSelect.data('url'),
+                            dataType: 'json',
+                            type: $(value).data('type') || 'GET',
+                            quietMillis: 50,
+                            data: function (params) {
+                                // Query parameters will be ?search=[term]&page=[page]
+                                return {
+                                    search: params.term,
+                                    page: params.page || 1
+                                };
+                            },
+                            processResults: function (response) {
+                                /**
+                                 * response {
+                                 *  error: false
+                                 *  data: {},
+                                 *  message: ''
+                                 * }
+                                 */
+                                return {
+                                    results: $.map(response.data, function (item) {
+                                        return Object.assign(
+                                            {
+                                                text: item.name,
+                                                id: item.id
+                                            },
+                                            item
+                                        );
+                                    }),
+                                    pagination: {
+                                        more: response.links
+                                            ? response.links.next
+                                            : null
+                                    }
+                                };
+                            },
+                            cache: true
+                        },
+                        allowClear: true
+                    });
+                }
+            });
         }
 
         if (jQuery().timepicker) {
@@ -491,22 +545,24 @@ class Botble {
         // *    example 12: number_format('1.2000', 3);
         // *    returns 12: '1.200'
         let n = !isFinite(+number) ? 0 : +number,
-            prec = !isFinite(+decimals) ? 0 : Math.abs(decimals),
+            precision = !isFinite(+decimals) ? 0 : Math.abs(decimals),
             sep = (typeof thousands_sep === 'undefined') ? ',' : thousands_sep,
             dec = (typeof dec_point === 'undefined') ? '.' : dec_point,
-            toFixedFix = (n, prec) => {
+            toFixedFix = (n, precision) => {
                 // Fix for IE parseFloat(0.55).toFixed(0) = 0;
-                let k = Math.pow(10, prec);
+                let k = Math.pow(10, precision);
                 return Math.round(n * k) / k;
             },
-            s = (prec ? toFixedFix(n, prec) : Math.round(n)).toString().split('.');
+            s = (precision ? toFixedFix(n, precision) : Math.round(n)).toString().split('.');
         if (s[0].length > 3) {
             s[0] = s[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, sep);
         }
-        if ((s[1] || '').length < prec) {
+
+        if ((s[1] || '').length < precision) {
             s[1] = s[1] || '';
-            s[1] += new Array(prec - s[1].length + 1).join('0');
+            s[1] += new Array(precision - s[1].length + 1).join('0');
         }
+
         return s.join(dec);
     }
 
@@ -642,7 +698,7 @@ class Botble {
 
                     $('.default-placeholder-gallery-image').addClass('hidden');
 
-                    _.forEach(files, (file) => {
+                    _.forEach(files, file => {
                         let template = $(document).find('#gallery_select_image_template').html();
 
                         let imageBox = template
@@ -799,6 +855,26 @@ class Botble {
             url: route('membership.authorize'),
             type: 'POST'
         });
+    }
+
+    countMenuItemNotifications() {
+        let $menuItems = $('.menu-item-count');
+        if ($menuItems.length) {
+            $.ajax({
+                type: 'GET',
+                url: route('menu-items-count'),
+                success: res => {
+                    if (!res.error) {
+                        res.data.map(x => {
+                            $('.menu-item-count.' + x.key).text(x.value).show().removeClass('hidden');
+                        });
+                    }
+                },
+                error: err => {
+                    Botble.handleError(err);
+                }
+            });
+        }
     }
 }
 

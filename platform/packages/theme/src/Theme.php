@@ -734,7 +734,7 @@ class Theme implements ThemeContract
      */
     public function has(string $region): bool
     {
-        return (boolean)isset($this->regions[$region]);
+        return isset($this->regions[$region]);
     }
 
     /**
@@ -769,6 +769,7 @@ class Theme implements ThemeContract
     public function ofWithLayout($view, $args = [])
     {
         $view = $this->getLayoutName() . '.' . $view;
+
         return $this->of($view, $args);
     }
 
@@ -1043,5 +1044,14 @@ class Theme implements ThemeContract
     public function routes()
     {
         return File::requireOnce(package_path('theme/routes/public.php'));
+    }
+
+    /**
+     * @param string $view
+     * @return string
+     */
+    public function loadView(string $view)
+    {
+        return $this->view->make($this->getThemeNamespace('views') . '.' . $view)->render();
     }
 }

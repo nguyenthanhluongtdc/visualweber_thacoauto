@@ -3,10 +3,9 @@ This is a plugin for Laravel CMS so you have to purchase Laravel CMS first to us
 Purchase it here: [laravel-cms.demo.gistensal.com](https://mailto:get-quote@visualweber.co)
 
 # Installation
-- Download and copy source code into `/platform/plugins/log-viewer`.
-- Run command `php artisan cms:plugin:activate log-viewer` to activate this plugin.
-- Go to Admin -> Platform Administration -> System logs.
-
+- Download and rename folder `log-viewer-master` to `log-viewer`.
+- Copy folder `log-viewer` into `/platform/plugins`.
+- Go to Admin -> Plugins then activate plugin Log Viewer.
 
 # Screenshots
 

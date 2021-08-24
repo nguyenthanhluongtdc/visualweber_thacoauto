@@ -10,7 +10,6 @@ use Exception;
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Exceptions\PostTooLargeException;
-use Illuminate\Support\Arr;
 use League\OAuth2\Server\Exception\OAuthServerException;
 use Log;
 use RvMedia;
@@ -54,12 +53,14 @@ class Handler extends ExceptionHandler
                             ->setMessage(trans('core/acl::permissions.access_denied_message'))
                             ->setCode($code)
                             ->toResponse($request);
+
                     case 403:
                         return $response
                             ->setError()
                             ->setMessage(trans('core/acl::permissions.action_unauthorized'))
                             ->setCode($code)
                             ->toResponse($request);
+
                     case 404:
                         return $response
                             ->setError()
@@ -84,11 +85,11 @@ class Handler extends ExceptionHandler
     {
         if ($this->shouldReport($exception) && !$this->isExceptionFromBot()) {
             if (!app()->isLocal() && !app()->runningInConsole()) {
-                if (setting('enable_send_error_reporting_via_email', false) && setting('email_driver',
-                        config('mail.default'))) {
-                    if ($exception instanceof Exception) {
-                        EmailHandler::sendErrorException($exception);
-                    }
+                if (setting('enable_send_error_reporting_via_email', false) &&
+                    setting('email_driver', config('mail.default')) &&
+                    $exception instanceof Exception
+                ) {
+                    EmailHandler::sendErrorException($exception);
                 }
 
                 if (config('core.base.general.error_reporting.via_slack', false) == true &&
@@ -141,13 +142,7 @@ class Handler extends ExceptionHandler
         }
 
         if (class_exists('Theme')) {
-
-            $theme = setting('theme');
-            if (!$theme) {
-                $theme = Arr::first(scan_folder(theme_path()));
-            }
-
-            return 'theme.' . $theme . '::views.' . $code;
+            return 'theme.' . \Theme::getThemeName() . '::views.' . $code;
         }
 
         return parent::getHttpExceptionView($exception);

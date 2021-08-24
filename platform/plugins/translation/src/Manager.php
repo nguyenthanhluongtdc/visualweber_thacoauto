@@ -17,12 +17,12 @@ use Symfony\Component\VarExporter\VarExporter;
 class Manager
 {
     /**
-     * @var \Illuminate\Foundation\Application
+     * @var Application
      */
     protected $app;
 
     /**
-     * @var \Illuminate\Filesystem\Filesystem
+     * @var Filesystem
      */
     protected $files;
 

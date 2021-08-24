@@ -30,9 +30,9 @@ class MemberActivityLog extends BaseModel
     {
         parent::boot();
         self::creating(function ($model) {
-            $model->user_agent = $model->user_agent ? $model->user_agent : request()->userAgent();
-            $model->ip_address = $model->ip_address ? $model->ip_address : request()->ip();
-            $model->member_id = $model->member_id ? $model->member_id : auth('member')->id();
+            $model->user_agent = $model->user_agent ?: request()->userAgent();
+            $model->ip_address = $model->ip_address ?: request()->ip();
+            $model->member_id = $model->member_id ?: auth('member')->id();
             $model->reference_url = str_replace(route('public.index'), '', $model->reference_url);
         });
     }

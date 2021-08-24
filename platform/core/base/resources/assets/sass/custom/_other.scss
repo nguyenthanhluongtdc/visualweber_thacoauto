@@ -480,6 +480,19 @@ h4.modal-title {
     }
 }
 
+.ui-select-wrapper {
+    .select2-container--default {
+        .select2-selection--single {
+            .select2-selection__rendered {
+                .select2-selection__clear {
+                    font-size: 1.1rem;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
 .modal-open {
     .modal-backdrop {
         opacity: 0.5;

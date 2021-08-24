@@ -15,7 +15,7 @@
                             </a>
                         </div>
                         <div class="item-content flex-fill">
-                            <h4 class="title font-pri-bold font30 text-uppercase fontmb-medium">
+                            <h4 class="title font-pri-bold font30 text-uppercase fontmb-middle">
                                 <a href="{{$post->url}}">{{$post->name}}</a>
                             </h4>
                             <div class="bottom">
@@ -46,7 +46,7 @@
                                 </div>
                             </div>
                             <div class="post-content">
-                                <h4 class="font-mi-bold font30 fontmb-medium"><a href="{{$post->url}}" class="fontmb-medium">{{$post->name}}</a></h4>
+                                <h4 class="font-mi-bold font30 fontmb-medium"><a href="{{$post->url}}" class="fontmb-middle">{{$post->name}}</a></h4>
                                 <p class="desc font-pri font20 fontmb-small">{{Str::words($post->description,40)}}</p>
                                 <p class="city-day font-pri font15 fontmb-small">
                                     <span class="city">{{ \MetaBox::getMetaData($post, 'region_post', true) ?? '--' }}</span>
@@ -64,7 +64,7 @@
             </div>
             <div class="list-post-new">
                 <div class="wrap">
-                    <h2 class="font-mi-bold font30">{{ __("tin tức mới nhất") }}</h2>
+                    <h2 class="font-mi-bold font30 fontmb-middle">{{ __("tin tức mới nhất") }}</h2>
                     <ul id="new-posts" class="">
                         @if (!empty($postsFeatures))
                             @foreach ($postsFeatures as $post)
@@ -74,7 +74,7 @@
                                         <a href="{{$post->url}}"><img src="{{ Storage::disk('public')->exists($post->image) ? get_object_image($post->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="{{$post->name}}"></a>
                                     </div>
                                 </div>
-                                <h5 class="title font-mi-bold font20 fontmb-medium">
+                                <h5 class="title font-mi-bold font20 fontmb-middle">
                                     <a href="{{$post->url}}">{{$post->name}}</a>
                                 </h5>
                             </div>
@@ -87,7 +87,7 @@
                     <div class="loading d-none">
                         <img src="{{Theme::asset()->url('images/media/loading.gif')}}" alt="">
                     </div>
-                    <div class="view-all-news font15 font-mi-bold">
+                    <div class="view-all-news font15 font-mi-bold ">
                         <a id="posts-load-more" data-category="{{ $category->id ?? 15 }}" href="javascript:;">{{ __("Xem thêm") }}<span><i class="fas fa-arrow-right font15"></i></span></a>
                     </div>
                 </div>

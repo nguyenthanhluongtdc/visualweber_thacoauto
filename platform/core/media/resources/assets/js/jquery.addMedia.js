@@ -51,11 +51,7 @@
 
         let instance = $el.data('target');
         for (let i = 0; i < files.length; i++) {
-            if (files[i].type === 'video') {
-                let link = files[i].full_url;
-                link = link.replace('watch?v=', 'embed/');
-                $(instance).summernote('pasteHTML', '<iframe width="420" height="315" src="' + link + '" frameborder="0" allowfullscreen></iframe>');
-            } else if (files[i].type === 'image') {
+            if (files[i].type === 'image') {
                 $(instance).summernote('insertImage', files[i].full_url, files[i].basename);
             } else {
                 $(instance).summernote('pasteHTML', '<a href="' + files[i].full_url + '">' + files[i].full_url + '</a>');
@@ -76,11 +72,7 @@
         // insert images for the wysihtml5 editor
         let s = '';
         for (let i = 0; i < files.length; i++) {
-            if (files[i].type === 'video') {
-                let link = files[i].full_url;
-                link = link.replace('watch?v=', 'embed/');
-                s += '<iframe width="420" height="315" src="' + link + '" frameborder="0" allowfullscreen></iframe>';
-            } else if (files[i].type === 'image') {
+            if (files[i].type === 'image') {
                 s += '<img src="' + files[i].full_url + '" alt="' + files[i].name + '">';
             } else {
                 s += '<a href="' + files[i].full_url + '">' + files[i].full_url + '</a>';
@@ -107,10 +99,7 @@
         let content = '';
         $.each(files, (index, file) => {
             let link = file.full_url;
-            if (file.type === 'youtube') {
-                link = link.replace('watch?v=', 'embed/');
-                content += '<iframe width="420" height="315" src="' + link + '" frameborder="0" allowfullscreen></iframe><br />';
-            } else if (file.type === 'image') {
+            if (file.type === 'image') {
                 content += '<img src="' + link + '" alt="' + file.name + '" /><br />';
             } else {
                 content += '<a href="' + link + '">' + file.name + '</a><br />';
@@ -127,10 +116,7 @@
         let html = '';
         $.each(files, (index, file) => {
             let link = file.full_url;
-            if (file.type === 'youtube') {
-                link = link.replace('watch?v=', 'embed/');
-                html += '<iframe width="420" height="315" src="' + link + '" frameborder="0" allowfullscreen></iframe><br />';
-            } else if (file.type === 'image') {
+            if (file.type === 'image') {
                 html += '<img src="' + link + '" alt="' + file.name + '" /><br />';
             } else {
                 html += '<a href="' + link + '">' + file.name + '</a><br />';

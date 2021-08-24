@@ -4,7 +4,6 @@ namespace Platform\Theme;
 
 use Exception;
 use Form;
-use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Illuminate\Support\Arr;
 use Language;
 use Setting;
@@ -93,6 +92,7 @@ class ThemeOption
             }
             $sections[$priority] = $section;
         }
+
         ksort($sections);
 
         return $sections;
@@ -118,6 +118,7 @@ class ThemeOption
                 }
             }
         }
+
         ksort($fields);
 
         return $fields;
@@ -146,22 +147,27 @@ class ThemeOption
         if (empty($this->optName) || is_array($this->optName)) {
             return;
         }
+
         if (!isset($this->sections[$this->optName])) {
             $this->sections[$this->optName] = [];
             $this->priority[$this->optName]['sections'] = 1;
         }
+
         if (!isset($this->args[$this->optName])) {
             $this->args[$this->optName] = [];
             $this->priority[$this->optName]['args'] = 1;
         }
+
         if (!isset($this->fields[$this->optName])) {
             $this->fields[$this->optName] = [];
             $this->priority[$this->optName]['fields'] = 1;
         }
+
         if (!isset($this->help[$this->optName])) {
             $this->help[$this->optName] = [];
             $this->priority[$this->optName]['help'] = 1;
         }
+
         if (!isset($this->errors[$this->optName])) {
             $this->errors[$this->optName] = [];
         }
@@ -234,15 +240,18 @@ class ThemeOption
 
                 return $this;
             }
+
             if (!isset($section['priority'])) {
                 $section['priority'] = $this->getPriority('sections');
             }
+
             if (isset($section['fields'])) {
                 if (!empty($section['fields']) && is_array($section['fields'])) {
                     $this->processFieldsArray($section['id'], $section['fields']);
                 }
                 unset($section['fields']);
             }
+
             $this->sections[$this->optName][$section['id']] = $section;
         } else {
             $this->errors[$this->optName]['section']['empty'] = 'Unable to create a section due an empty section array or the section variable passed was not an array.';
@@ -294,10 +303,12 @@ class ThemeOption
             if (!isset($field['priority'])) {
                 $field['priority'] = $this->getPriority('fields');
             }
+
             if (isset($field['id'])) {
                 $this->fields[$this->optName][$field['id']] = $field;
             }
         }
+
         return $this;
     }
 
@@ -319,6 +330,7 @@ class ThemeOption
                         unset($this->sections[$this->optName][$id]);
                         continue;
                     }
+
                     if ($priority != '') {
                         $newPriority = $section['priority'];
                         $section['priority'] = $priority;
@@ -348,10 +360,8 @@ class ThemeOption
     {
         $this->checkOptName();
 
-        if (!empty($this->optName) && !empty($id)) {
-            if (isset($this->sections[$this->optName][$id])) {
-                $this->sections[$this->optName][$id]['hidden'] = $hide;
-            }
+        if (!empty($this->optName) && !empty($id) && isset($this->sections[$this->optName][$id])) {
+            $this->sections[$this->optName][$id]['hidden'] = $hide;
         }
     }
 
@@ -407,6 +417,7 @@ class ThemeOption
                         unset($this->fields[$this->optName][$id]);
                         continue;
                     }
+
                     if (isset($priority) && $priority != '') {
                         $newPriority = $field['priority'];
                         $field['priority'] = $priority;
@@ -446,6 +457,7 @@ class ThemeOption
             if (isset($this->args[$this->optName]) && isset($this->args[$this->optName]['clearArgs'])) {
                 $this->args[$this->optName] = [];
             }
+
             $this->args[$this->optName] = parse_args($args, $this->args[$this->optName]);
         }
 
@@ -471,7 +483,6 @@ class ThemeOption
      * @param string $key
      * @param string $value
      * @return ThemeOption
-     * @throws FileNotFoundException
      */
     public function setOption(string $key, ?string $value = ''): self
     {

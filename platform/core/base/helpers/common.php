@@ -93,7 +93,7 @@ if (!function_exists('get_cms_version')) {
         try {
             return trim(get_file_data(core_path('VERSION'), false));
         } catch (Exception $exception) {
-            return '5.14';
+            return '5.20';
         }
     }
 }

@@ -161,3 +161,7 @@ if (!defined('BASE_FILTER_FOOTER_LAYOUT_TEMPLATE')) {
 if (!defined('BASE_FILTER_HEADER_LAYOUT_TEMPLATE')) {
     define('BASE_FILTER_HEADER_LAYOUT_TEMPLATE', 'base_filter_headerer_layout_template');
 }
+
+if (!defined('BASE_FILTER_MENU_ITEMS_COUNT')) {
+    define('BASE_FILTER_MENU_ITEMS_COUNT', 'base_filter_menu_items_count');
+}

@@ -14,10 +14,8 @@ class CkEditorField extends FormField
      */
     protected function getTemplate()
     {
-        Assets::addScriptsDirectly([
-            'vendor/core/core/base/libraries/ckeditor/ckeditor.js',
-            'vendor/core/core/base/js/editor.js',
-        ]);
+        Assets::addScriptsDirectly(config('core.base.general.editor.ckeditor.js'))
+            ->addScriptsDirectly('vendor/core/core/base/js/editor.js');
 
         return 'core/base::forms.fields.ckeditor';
     }

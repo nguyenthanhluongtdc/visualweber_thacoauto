@@ -135,7 +135,7 @@ class TranslationController extends BaseController
      */
     public function postImport(Request $request, BaseHttpResponse $response)
     {
-        $counter = $this->manager->importTranslations($request->get('replace', false));
+        $counter = $this->manager->importTranslations($request->input('replace', false));
 
         return $response->setMessage(trans('plugins/translation::translation.import_done', compact('counter')));
     }

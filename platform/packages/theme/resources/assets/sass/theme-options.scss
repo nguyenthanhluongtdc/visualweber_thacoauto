@@ -92,6 +92,7 @@
         .form-group {
             div.clearfix {
                 height: 10px;
+                clear: none;
             }
         }
     }
@@ -123,9 +124,15 @@
     opacity: 1;
 }
 
-.tab-in-left li a:hover {
-    background: #e5e5e5;
-    color: #777777;
+.tab-in-left {
+    li {
+        a {
+            &:hover {
+                background: #e5e5e5;
+                color: #777777;
+            }
+        }
+    }
 }
 
 .tab-content-in-right {

@@ -188,6 +188,8 @@ class RvMedia
      */
     public function getImageUrl($url, $size = null, $relativePath = false, $default = null)
     {
+        $url = trim($url);
+
         if (empty($url)) {
             return $default;
         }
@@ -232,6 +234,8 @@ class RvMedia
      */
     public function url($path): string
     {
+        $path = trim($path);
+
         if (Str::contains($path, 'https://') || Str::contains($path, 'http://')) {
             return $path;
         }
@@ -403,7 +407,7 @@ class RvMedia
     public function uploadFromEditor(Request $request, $folderId = 0, $folderName = null, $fileInput = 'upload')
     {
         $validator = Validator::make($request->all(), [
-            'upload' => 'required|image|mimes:jpg,jpeg,png,webp',
+            'upload' => $this->imageValidationRule(),
         ]);
 
         if ($validator->fails()) {
@@ -904,5 +908,21 @@ class RvMedia
         }
 
         return Arr::get($configs, $key, $default);
+    }
+
+    /**
+     * @return string
+     */
+    public function imageValidationRule(): string
+    {
+        return 'required|image|mimes:jpg,jpeg,png,webp';
+    }
+
+    /**
+     * @return bool
+     */
+    public function turnOffAutomaticUrlTranslationIntoLatin(): bool
+    {
+        return setting('media_turn_off_automatic_url_translation_into_latin', 0) == 1;
     }
 }

@@ -86,6 +86,26 @@ var swiperDetailSlide = new Swiper(".detail-slide", {
     }
 });
 
+var swiperRelatedSlide = new Swiper(".related-slide", {
+    autoplay: true,
+    slidesPerView: 2,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+        "480": {
+            slidesPerView: 2,
+        },
+        "768": {
+            slidesPerView: 3,
+        },
+        "1080": {
+            slidesPerView: 4.5,
+        },
+    },
+});
+
 var swiperVideo = new Swiper(".video-introduce", {
     pagination: {
         el: ".swiper-pagination",

@@ -312,6 +312,100 @@
                 .cate {
                     @include marginTop(50, "+");
                 }
+                .related-slide{
+                    margin-bottom: 3%;
+                    .swiper-slide{
+                        margin-top: 5%;
+                        position: relative;
+                        &::after{
+                            position: absolute;
+                            content: "";
+                            width: 1px;
+                            height: 100%;
+                            background-color: #7d7d7d;
+                            right: 10%;
+                            opacity: 0.5;
+                            top: 0
+                        }
+                        .car-img{
+
+                            @include height(160);
+                            @include mobileHeight(165);
+                            @media (max-width: 375px) {
+                                height: 65px;
+                            }
+                            img{
+                                width: 100%;
+                                max-height: 80%;
+                                object-fit: contain;
+                                position: relative;
+                                margin-bottom: 2%;
+                                overflow: hidden;
+                                transition: all 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                                &:hover {
+                                    transform: scale(1.1);
+                                   
+                                }
+    
+                            }
+                        }
+                        .info {
+                            display: flex;
+                            flex-wrap: wrap;
+
+                            h3,p,a {
+                                flex: 0 0 100%;
+                                max-width: 100%;
+                            }
+
+                            p {
+                                margin-bottom: 0;
+                            }
+
+                            a {
+                                align-self: flex-end;
+                                margin-top: 1.5rem;
+                                @include mobileMarginTop(35, "+");
+                            }
+                            .car-content {
+                                height: calc(100% - 160px);
+                                @media only screen and (max-width: 1680px) {
+                                    height: calc(100% - #{calculatorPixel(160, 1680)}px);
+                                }
+                                @media only screen and (max-width: 1368px) {
+                                    height: calc(100% -  #{calculatorPixel(160, 1368)}px);
+                                }
+                                @media (max-width: 1080px) {
+                                    height: calc(100% - 165px);
+                                }
+                                @media only screen and (max-width: 768px) {
+                                    height: calc(100% - #{MobilecalculatorPixel(165, 768)}px);
+                                }
+                                @media (max-width: 576px) {
+                                    height: calc(100% - #{MobilecalculatorPixel(165, 576)}px);
+                                }
+                                @media (max-width: 375px) {
+                                    height: calc(100% - 65px);
+                                }
+                            }
+                           
+                            .car-name{
+                                color: $color-primary;
+                               
+                            }
+                            .car-decs{
+                                opacity: 50%;
+                            }
+                            .readmore{
+                                color: $color-primary;
+                                margin-top: 5%;
+                            }
+                        }
+                    }
+                    .swiper-button-next::after, .swiper-button-prev::after{
+                        color: #7d7d7d;
+                    }
+                }
                 .item{
                     width: 100%;
                     display: flex;
@@ -332,7 +426,6 @@
                         margin-top: 5%;
                         max-width: 22%;
                         flex: 1 22%;
-                        @include paddingX(30);
                         @include mobilePaddingBottom(70);
                         @media(max-width : 1100px){
                             max-width: 20%;

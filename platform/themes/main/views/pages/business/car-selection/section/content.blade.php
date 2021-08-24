@@ -176,7 +176,8 @@
                         </div>
                     </div>
                 </div>
-                <a class="select-button font18 font-pri" type="button" href="">Tiếp theo</a>
+                <a class="select-button font18 font-pri fontmb-small" type="button" href="">Tiếp theo</a>
+               
             </div>
             <button class="btn-back mt-4">
                 Quay lại

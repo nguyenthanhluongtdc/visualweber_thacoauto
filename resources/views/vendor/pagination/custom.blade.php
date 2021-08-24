@@ -1,6 +1,6 @@
 @if ($paginator->hasPages())
     <div class="page-pagination">
-        <ul class="pagination news font-pri-bold">
+        <ul class="pagination news font-pri-bold font20">
                {{-- Previous Page Link --}}
             {{-- @if ($paginator->onFirstPage())
                 <li class="disabled" aria-disabled="true" aria-label="@lang('pagination.previous')">
@@ -44,7 +44,7 @@
 
             @if($paginator->lastPage() == $paginator->currentPage())
                 <li class="active"> <span>>></span> </li>
-            @else 
+            @else
                 <li class="color"> <a href="{{$elements[0][$paginator->lastPage()]}}"> >> </a> </li>
             @endif
         </ul>

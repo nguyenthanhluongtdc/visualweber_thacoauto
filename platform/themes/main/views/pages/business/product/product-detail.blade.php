@@ -66,45 +66,256 @@
 
             <div class="relate-product">
                 <h2 class="title font-mi-bold font60 fontmb-large fontmb-cond-bold">
-                    SẢN PHẨM KIA
+                    {{has_field($data, 'car_category_related_parent_title')}}
                 </h2>
-                <div class="car">
+                @if(!blank(get_field($data, 'car_category_related')))
+                    @foreach (get_field($data, 'car_category_related') as $item)
+                    <div class="car">
+                        <h3 class="cate font-mi-bold font30 fontmb-middle">
+                            {{has_sub_field($item,'car_category_related_title')}}
+                        </h3>
+                        <div class="swiper-container related-slide mt-2">
+                            <div class="swiper-wrapper">
+                                @if(!blank(has_sub_field($item, 'car_category_related_car')))
+                                @foreach (has_sub_field($item, 'car_category_related_car') as $child)
+                                
+                                <div class="car-frame swiper-slide">
+                                    <div class="car-img">
+                                        <img src="{{get_image_url(has_sub_field($child,'image'))}}" alt="">
+                                    </div>
+                                
+                                    <div class="d-flex align-content-between flex-wrap car-content">
+                                        <div class="info h-100">
+                                            <h3 class="car-name font-mi-bold font25 mb-2 fontmb-cond-bold fontmb-medium">
+                                                {{has_sub_field($child,'title')}}
+                                            </h3>
+                                            <p class="car-decs font-mi-bold font18 fontmb-cond-bold fontmb-little">
+                                                {{has_sub_field($child,'type')}}
+                                            </p>
+                                            <a href="{{has_sub_field($child,'link')}}" class="readmore font-mi-bold font18 fontmb-cond-bold fontmb-little">
+                                                XEM CHI TIẾT ->
+                                            </a>
+                                        </div>
+                                    
+                                    </div>
+                                </div>
+                                    
+                                @endforeach
+                                @endif
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                    @endforeach
+                @endif
+                {{-- <div class="car">
                     <h3 class="cate font-mi-bold font30 fontmb-middle">
-                        HATCHBACK
+                        SEDAN
                     </h3>
-                    <div class="swiper-container related-slide mt-2">
-                        <div class="swiper-wrapper">
-                            @if(!blank(get_field($data, 'car_category_detail_slide')))
-                            @foreach (get_field($data, 'car_category_detail_slide') as $item)
+                    <div class="item mt-2">
+                        <div class="car-frame">
+                            <div class="car-img">
+                                <img src="{{Theme::asset()->url('images/services/kia-soluto.png')}}" alt="">
+                            </div>
+                           
+                            <div class="d-flex align-content-between flex-wrap car-content">
+                                <div class="info h-100">
+                                    <h3 class="car-name font-mi-bold font25 mb-2 fontmb-cond-bold fontmb-medium">
+                                        KIA SOLUTO
+                                    </h3>
+                                    <p class="car-decs font-mi-bold font18 fontmb-cond-bold fontmb-little">
+                                        KẾT NỐI GIÁ TRỊ THẬT
+                                    </p>
+                                    <a href="#" class="readmore font-mi-bold font18 fontmb-cond-bold fontmb-little">
+                                        XEM CHI TIẾT ->
+                                    </a>
+                                </div>
+                              
+                            </div>
+                        </div>
+                        <div class="car-frame">
+                            <div class="car-img">
+                                <img src="{{Theme::asset()->url('images/services/kia-all.png')}}" alt="">
+                            </div>
                             
-                            <div class="car-frame swiper-slide">
-                                <div class="car-img">
-                                    <img src="{{Theme::asset()->url('images/services/kia-soluto.png')}}" alt="">
+                            <div class="d-flex align-content-between flex-wrap car-content">
+                                <div class="info h-100">
+                                    <h3 class="car-name font-mi-bold font25 mb-2 fontmb-cond-bold fontmb-medium">
+                                        KIA ALL-NEW CERATO
+                                    </h3>
+                                    <p class="car-decs font-mi-bold font18 fontmb-cond-bold fontmb-little">
+                                        KHẲNG ĐỊNH PHONG CÁCH MỚI 
+                                    </p>
+                                    <a href="#" class="readmore font-mi-bold font18 fontmb-cond-bold fontmb-little">
+                                        XEM CHI TIẾT ->
+                                    </a>
                                 </div>
                                
-                                <div class="d-flex align-content-between flex-wrap car-content">
-                                    <div class="info h-100">
-                                        <h3 class="car-name font-mi-bold font25 mb-2 fontmb-cond-bold fontmb-medium">
-                                            KIA SOLUTO
-                                        </h3>
-                                        <p class="car-decs font-mi-bold font18 fontmb-cond-bold fontmb-little">
-                                            KẾT NỐI GIÁ TRỊ THẬT
-                                        </p>
-                                        <a href="#" class="readmore font-mi-bold font18 fontmb-cond-bold fontmb-little">
-                                            XEM CHI TIẾT ->
-                                        </a>
-                                    </div>
-                                  
-                                </div>
                             </div>
-                                
-                            @endforeach
-                            @endif
                         </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
+                        <div class="car-frame">
+                            <div class="car-img">
+                                <img src="{{Theme::asset()->url('images/services/kia-optima.png')}}" alt="">
+                            </div>
+                           
+                            <div class="d-flex align-content-between flex-wrap car-content">
+                                <div class="info h-100">
+                                    <h3 class="car-name font-mi-bold font25 mb-2 fontmb-cond-bold fontmb-medium">
+                                        KIA OTIMA
+                                    </h3>
+                                    <p class="car-decs font-mi-bold font18 fontmb-cond-bold fontmb-little">
+                                        TỤ TIN VÀ PHONG CÁCH
+                                    </p>
+                                    <a href="#" class="readmore font-mi-bold font18 fontmb-cond-bold fontmb-little">
+                                        XEM CHI TIẾT ->
+                                    </a>
+                                </div>
+                               
+                            </div>
+                        </div>
+                        <div class="car-frame">
+                            <div class="car-img">
+                                <img src="{{Theme::asset()->url('images/services/kia-optima-black.png')}}" alt="">
+                            </div>
+                            
+                            <div class="d-flex align-content-between flex-wrap car-content">
+                                <div class="info h-100">
+                                    <h3 class="car-name font-mi-bold font25 mb-2 fontmb-cond-bold fontmb-medium">
+                                        KIA OPTIMA
+                                    </h3>
+                                    <p class="car-decs font-mi-bold font18 fontmb-cond-bold fontmb-little">
+                                        SANG TRỌNG VÀ ĐẲNG CẤP
+                                    </p>
+                                    <a href="#" class="readmore font-mi-bold font18 fontmb-cond-bold fontmb-little">
+                                        XEM CHI TIẾT ->
+                                    </a>
+                                </div>
+                                
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <div class="car">
+                    <h3 class="cate font-mi-bold font30 fontmb-middle">
+                        SUV
+                    </h3>
+                    <div class="item mt-2">
+                        <div class="car-frame">
+                            <div class="car-img">
+                                <img src="{{Theme::asset()->url('images/services/kia-seltos.png')}}" alt="">
+                            </div>
+                           
+                            <div class="d-flex align-content-between flex-wrap car-content">
+                                <div class="info h-100">
+                                    <h3 class="car-name font-mi-bold font25 mb-2 fontmb-cond-bold fontmb-medium">
+                                        KIA SELTOS
+                                    </h3>
+                                    <p class="car-decs font-mi-bold font18 fontmb-cond-bold fontmb-little">
+                                        ĐẲNG CẤP TỪ GIÁ TRỊ
+                                    </p>
+                                    
+                                    <a href="#" class="readmore font-mi-bold font18 fontmb-cond-bold fontmb-little">
+                                        XEM CHI TIẾT ->
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="car-frame">
+                            <div class="car-img">
+                                <img src="{{Theme::asset()->url('images/services/kia-optima.png')}}" alt="">
+                            </div>
+                            
+                            <div class="d-flex align-content-between flex-wrap car-content">
+                                <div class="info h-100">
+                                    <h3 class="car-name font-mi-bold font25 mb-2 fontmb-cond-bold fontmb-medium">
+                                        KIA SORENTO
+                                    </h3>
+                                    <p class="car-decs font-mi-bold font18 fontmb-cond-bold fontmb-little">
+                                        KHỞI ĐẦU XU HƯỚNG MỚI
+                                    </p>
+                                    
+                                    <a href="#" class="readmore font-mi-bold font18 fontmb-cond-bold fontmb-little">
+                                        XEM CHI TIẾT ->
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="car-frame">
+                            <div class="car-img">
+                                <img src="{{Theme::asset()->url('images/services/kia-optima.png')}}" alt="">
+                            </div>
+                            
+                            <div class="d-flex align-content-between flex-wrap car-content">
+                                <div class="info h-100">
+                                    <h3 class="car-name font-mi-bold font25 mb-2 fontmb-cond-bold fontmb-medium">
+                                        KIA SORENTO (ALL NEW)
+                                    </h3>
+                                    <p class="car-decs font-mi-bold font18 fontmb-cond-bold fontmb-little">
+                                        HOÀN TOÀN MỚI - ĐẲNG CẤP 4.0
+                                    </p>
+                                    
+                                    <a href="#" class="readmore font-mi-bold font18 fontmb-cond-bold fontmb-little">
+                                        XEM CHI TIẾT ->
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="car car4">
+                    <h3 class="cate font-mi-bold font30 fontmb-middle">
+                        MPV
+                    </h3>
+                    <div class="item mt-2">
+                        <div class="car-frame">
+                            
+                            <div class="car-img">
+                                <img src="{{Theme::asset()->url('images/services/kia-optima.png')}}" alt="">
+                            </div>
+                            
+                            <div class="d-flex align-content-between flex-wrap car-content">
+                                <div class="info h-100">
+                                    <h3 class="car-name font-mi-bold font25 mb-2 fontmb-cond-bold fontmb-medium">
+                                        KIA RONDO
+                                    </h3>
+                                    <p class="car-decs font-mi-bold font18 fontmb-cond-bold fontmb-little">
+                                        SANG TRỌNG VÀ TIỆN NGHI
+                                    </p>
+                                    
+                                    <a href="#" class="readmore font-mi-bold font18 fontmb-cond-bold fontmb-little">
+                                        XEM CHI TIẾT ->
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="car-frame">
+                            <div class="car-img">
+                                <img src="{{Theme::asset()->url('images/services/kia-optima-black.png')}}" alt="">
+                            </div>
+                            
+                            <div class="d-flex align-content-between flex-wrap car-content">
+                                <div class="info h-100">
+                                    <h3 class="car-name font-mi-bold font25 mb-1 fontmb-cond-bold fontmb-medium">
+                                        NEW SEDONA
+                                    </h3>
+                                    <p class="car-decs font-mi-bold font18 fontmb-cond-bold fontmb-little">
+                                        SANG TRỌNG VÀ TIỆN NGHI
+                                    </p>
+                                    <a href="#" class="readmore font-mi-bold font18 fontmb-cond-bold fontmb-little">
+                                        XEM CHI TIẾT ->
+                                    </a>
+                                </div>
+
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div> --}}
             </div>
         </div>
     </div>

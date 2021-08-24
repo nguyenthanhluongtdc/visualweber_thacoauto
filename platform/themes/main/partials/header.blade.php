@@ -66,11 +66,11 @@
                 </div>
                 <div class="language">
                     <ul class="nav-lang">
-                        <li class="nav-item lang-vi" style="pointer-events: none;opacity:0.6;">
+                        <li class="nav-item lang-vi" style="{{ Language::getCurrentLocale() == 'vi' ? 'pointer-events: none; opacity: 0.6;' : '' }}">
                             <a class="nav-link font-pri-bold font18" rel="alternate" hreflang="vi"
                                 href="{{ Language::getLocalizedURL('vi') }}">VI</a>
                         </li>
-                        <li class="nav-item lang-en">
+                        <li class="nav-item lang-en" style="{{ Language::getCurrentLocale() == 'en' ? 'pointer-events: none; opacity: 0.6;' : '' }}">
                             <a class="nav-link font-pri-bold font18" rel="alternate" hreflang="en"
                                 href="{{ Language::getLocalizedURL('en') }}">EN</a>
                         </li>

@@ -38,9 +38,6 @@
     .provincial-company {
         background-color: $color-white;
         @include paddingBottom(65);
-        // @media (max-width: 1080px) {
-        //     padding-bottom: 0;
-        // }
         .description {
             font-family: $font-primary;
         }
@@ -124,10 +121,13 @@
                 top: 0;
                 left: 0;
                 z-index: 1;
-
-                @media (max-width: 1080px) {
-                    @include mobilePaddingY(50);
-                    @include mobilePaddingLeft(50);
+                @media (max-width: 991px) {
+                    padding: 25px;
+                    padding-right: unset;
+                }
+                @media (max-width: 640px) {
+                    padding: 20px;
+                    padding-right: unset;
                 }
 
                 .branch-overflow {
@@ -157,6 +157,9 @@
                         .logo-wrap {
                             display: flex;
                             justify-content: space-between;
+                            @media (max-width: 480px) {
+                                flex-direction: column;
+                            }
                             &__left {
                                 display: flex;
                                 align-items: flex-end;
@@ -175,6 +178,9 @@
                                     @include paddingY(15);
                                     @media (max-width: 640px) {
                                         width: 45%;
+                                    }
+                                    @media (max-width: 480px) {
+                                        width: 50%;
                                     }
                                 }
                                 
@@ -199,6 +205,10 @@
                                 }
                                 @media (max-width: 1368px) {
                                     width: 33%;
+                                }
+                                @media (max-width: 480px) {
+                                    width: 100%;
+                                    padding-top: 10px;
                                 }
                             }
                         }

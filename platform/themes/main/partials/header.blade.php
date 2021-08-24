@@ -60,20 +60,30 @@
 
             </div>
 
+            @php
+                $supportedLocales = array_reverse(Language::getSupportedLocales()) ;
+                $showRelated = setting('language_show_default_item_if_current_version_not_existed', true);
+                $currentLanguage = Language::getCurrentLocale();
+                // $currentLocate = Arr::get($supportedLocales, Language::getCurrentLocale(), []);
+            @endphp
             <div class="search-language">
                 <div class="search">
                     <a href="/search"><img src="{{ Theme::asset()->url('images/main/search.png') }}" alt=""></a>
                 </div>
                 <div class="language">
                     <ul class="nav-lang">
-                        <li class="nav-item lang-vi" style="pointer-events: none;opacity:0.6;">
-                            <a class="nav-link font-pri-bold font18" rel="alternate" hreflang="vi"
-                                href="{{ Language::getLocalizedURL('vi') }}">VI</a>
+                        @foreach($supportedLocales as $name => $language)
+                        <li class="nav-item lang-vi text-uppercase {{$name==$currentLanguage?'active':''}}">
+                            <a class="nav-link font-pri-bold font18" rel="alternate" hreflang="{{$name}}"
+                                href="{{$showRelated ? Language::getLocalizedURL($name) : url($name)}}">
+                                {!! $name !!}
+                            </a>
                         </li>
-                        <li class="nav-item lang-en">
+                        @endforeach
+                        {{-- <li class="nav-item lang-en">
                             <a class="nav-link font-pri-bold font18" rel="alternate" hreflang="en"
                                 href="{{ Language::getLocalizedURL('en') }}">EN</a>
-                        </li>
+                        </li> --}}
                     </ul>
                 </div>
             </div>

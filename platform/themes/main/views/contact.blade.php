@@ -112,7 +112,7 @@
     </div>
 </section>
 
-{{-- <section class="section-info-contact-mobile" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out"
+<section class="section-info-contact-mobile" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out"
     data-aos-delay="50">
     <div class="container-remake">
         <h2 class="contact__title font-pri-bold text-uppercase fontmb-large">Thông tin cá nhân</h2>
@@ -124,23 +124,32 @@
                     {!! Form::open(['route' => 'public.send.contact', 'method' => 'POST']) !!}
                     <div class="contact-input">
                         <label class="fontmb-medium font-pri-bold">Họ và tên<span>*</span></label>
-                        <input type="text" required />
+                        <input type="text" class="contact-form-input" name="name" value="{{ old('name') }}" id="contact_name"
+                       placeholder="{{ __('Name') }}" required />
+                        {{-- <input type="text" required /> --}}
                     </div>
                     <div class="contact-input">
                         <label class="fontmb-medium font-pri-bold">Điện thoại<span>*</span></label>
-                        <input type="text" required />
+                        <input type="text" class="contact-form-input" name="phone" value="{{ old('phone') }}" id="contact_phone"
+                       placeholder="{{ __('Phone') }}" required>
+                        {{-- <input type="text" required /> --}}
                     </div>
                     <div class="contact-input">
                         <label class="fontmb-medium font-pri-bold">Email<span>*</span></label>
-                        <input type="text" required />
+                        <input type="email" class="contact-form-input" name="email" value="{{ old('email') }}" id="contact_email"
+                       placeholder="{{ __('Email') }}" required>
+                        {{-- <input type="text" required /> --}}
                     </div>
                     <div class="contact-input">
                         <label class="fontmb-medium font-pri-bold">Tiêu đề<span>*</span></label>
-                        <input type="text" required />
+                        <input type="text" class="contact-form-input" name="subject" value="{{ old('subject') }}" id="contact_subject"
+                       placeholder="{{ __('Subject') }}" required>
+                        {{-- <input type="text" required /> --}}
                     </div>
                     <div class="contact-input wide">
                         <label class="fontmb-medium font-pri-bold">Nội dung <span>*</span></label>
-                        <textarea required></textarea>
+                        <textarea name="content" id="contact_content" class="contact-form-input" rows="5" placeholder="{{ __('Message') }}" required>{{ old('content') }}</textarea>
+                        {{-- <textarea required></textarea> --}}
 
                     </div>
                     <div class="contact-noti">
@@ -163,9 +172,11 @@
                     </div>
 
                 </div>
-                <div class="btn-lrg  submit-btn fontmb-medium">GỬI THÔNG TIN</div>
+                {{-- <div class="btn-lrg  submit-btn fontmb-medium">GỬI THÔNG TIN</div> --}}
 
-
+                <button class="btn btn-secondary" type="submit" value="SEND">
+                    {{ __('Send') }}
+                </button>
 
                 {!! Form::close() !!}
 
@@ -179,7 +190,7 @@
 
 
     </div>
-</section> --}}
+</section>
 
 
 @if (has_field($page, 'list_contact_office'))

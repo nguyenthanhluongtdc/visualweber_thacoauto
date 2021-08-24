@@ -33,18 +33,23 @@ class PublicController extends Controller
      */
     public function postSendContact(ContactRequest $request, BaseHttpResponse $response)
     {
+
+        // if($request->has('firstname') && $request->has('lastname')){
+        //     $request->request->add(['name' =>$request->firstname. ' ' .$request->lastname]);
+        //     $request->request->remove('firstname');
+        //     $request->$request->remove('lastname');
+        // }
         try {
             $contact = $this->contactRepository->getModel();
             $contact->fill($request->input());
+            $contact_name = $contact->firstname . " " . $contact->lastname;
             $this->contactRepository->createOrUpdate($contact);
 
             event(new SentContactEvent($contact));
 
             EmailHandler::setModule(CONTACT_MODULE_SCREEN_NAME)
                 ->setVariableValues([
-                    // 'contact_name'    => $contact->name ?? 'N/A',
-                    'contact_firstname' => $contact->firstname ?? 'N/A',
-                    'contact_lastname' => $contact->lastname ?? 'N/A',
+                    'contact_name'    => $contact_name ?? 'N/A',
                     'contact_subject' => $contact->subject ?? 'N/A',
                     'contact_email'   => $contact->email ?? 'N/A',
                     'contact_phone'   => $contact->phone ?? 'N/A',

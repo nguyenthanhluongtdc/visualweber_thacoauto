@@ -1,4 +1,4 @@
-<div class="distribution"> 
+<div class="distribution">
     <div class="provincial-company">
         <div class="container-remake">
             <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 fontmb-large">công ty
@@ -406,6 +406,14 @@
         </div>
     </div>
 </div>
+<style>
+    #map {
+        background: transparent
+    }
+    .leaflet-top, .leaflet-bottom {
+        display: none !important
+    }
+</style>
 <script>
     if($('.city').length){
         var ignoreDiacritics = true;
@@ -441,19 +449,76 @@
         owl.trigger('prev.owl.carousel', [300]);
     });
     //Map
-    function init() {
+    const initMap = () => {
+        // var map = L.map('map', {
+        //     maxZoom: 3,
+        //     minZoom: 1,
+        //     crs: L.CRS.Simple
+        // }).setView([0, 0], 1);
+
+        // map.setMaxBounds(new L.LatLngBounds([0,500], [500,0]));
+
+        // var imageUrl = "{{ Theme::asset()->url('images/distribution/map.png') }}"
+        // var imageBounds = [[250,0], [0,250]];
+
+        // L.imageOverlay(imageUrl, imageBounds).addTo(map);
+        // var map = L.map('map', {
+        //     crs: L.CRS.Simple
+        // });
+        // // var bounds = [[0,0], [1000,1000]];
+        // L.imageOverlay("{{ Theme::asset()->url('images/distribution/map.png') }}").addTo(map);
+        // map.fitBounds(bounds);
+
+        // var map = L.map('map').setView([51.505, -0.09], 13);
+
+        // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        //     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        // }).addTo(map);
+
+        // L.marker([51.5, -0.09]).addTo(map)
+        //     .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+        //     .openPopup();
+        // };
         var map = L.map('map', {
-            maxZoom: 24,
             minZoom: 1,
+            maxZoom: 3,
+            center: [0, 0],
+            zoom: 1,
             crs: L.CRS.Simple
-        }).setView([0, 0], 3);
+        });
+        var w = 2000;
+        var h = 3500;
+        var url = "{{ Theme::asset()->url('images/distribution/map.png') }}";
+        var southWest = map.unproject([ 0, h], map.getMaxZoom()-1);
+        var northEast = map.unproject([ w, 0], map.getMaxZoom()-1);
+        var bounds = new L.LatLngBounds( southWest, northEast);
+        window.__map = map
 
-        map.setMaxBounds(new L.LatLngBounds([0,500], [500,0]));
+        L.imageOverlay( url, bounds).addTo(map);
 
-        var imageUrl = 'https://thacoauto.local/themes/main/images/distribution/map.png'
-        var imageBounds = [[250,0], [0,250]];
+        map.setMaxBounds(bounds);
 
-        L.imageOverlay(imageUrl, imageBounds).addTo(map);
-    };
-    this.init();
+        var yx = L.latLng;
+
+        var xy = function(x, y) {
+            if (L.Util.isArray(x)) {    // When doing xy([x, y]);
+                return yx(x[1], x[0]);
+            }
+            return yx(y, x);  // When doing xy(x, y);
+        };
+
+        var sol      = xy(0, 0);
+        var mizar    = xy( 525, 0);
+        var kruegerZ = xy( 0,  -875);
+        var deneb    = xy(525,   -875);
+
+        L.marker(new L.LatLng(-500, 200)).addTo(map).bindPopup(      'Sol');
+
+        setTimeout(() => {
+            window.__map.panTo(new L.LatLng(-500, 200))
+        }, 300)
+    }
+    $(document).ready(function() {
+        initMap()
+    })
 </script>

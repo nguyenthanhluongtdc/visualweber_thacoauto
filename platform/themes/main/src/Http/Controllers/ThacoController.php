@@ -162,6 +162,15 @@ class ThacoController extends PublicController
             ->setError()
             ->setMessage(__('No results found, please try with different keywords.'));
     }
+
+    public function getSearchCate(Request $request) {
+        if($request->ajax() && $request->has('cate')) {
+            $data = get_posts_by_category($request->input('cate'), 5);
+
+            return view("theme.main::views.components.result-search", compact('data'))->render();
+        }
+    }
+
     public function getNewPosts()
     {
         $data['posts'] = $this->postInterface->getOnlyFeaturedByCategoryCreated(15, request('limit', 5));

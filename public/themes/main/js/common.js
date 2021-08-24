@@ -467,4 +467,30 @@ $(document).ready(function () {
             }
         });
     }
+
+    if($('.form-search').length) {
+        $('input[name=cate]').change(function() {
+            if($(this).val().length !== 0) {
+                filter_data($(this).val());
+            }
+        });
+
+        $('.trigger').trigger('change');
+    }
+
+    function filter_data($value){
+        // $('.filter_data').html('<div id="loading"></div>');
+        let cate = $value;
+        $.ajax({
+                headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                url: '/api/search',
+                type: 'get',
+                data: {cate: cate},
+                success:function(data){
+                    $('.section-content').html(data)
+                }
+        });
+    }
 })

@@ -1,6 +1,9 @@
 #row__empty {
   height: 3.5vw;
   min-height: 55px;
+  @media (max-width: 1080px) {
+    display: none;
+  }
 }
 
 .header {

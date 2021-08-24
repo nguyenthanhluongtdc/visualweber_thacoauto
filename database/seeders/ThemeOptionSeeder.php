@@ -40,7 +40,7 @@ class ThemeOptionSeeder extends BaseSeeder
                 ],
                 [
                     'key'   => 'copyright',
-                    'value' => '©' . now()->format('Y') . ' Botble Technologies. All right reserved.',
+                    'value' => '©' . now()->format('Y') . ' Laravel Technologies. All right reserved.',
                 ],
                 [
                     'key'   => 'favicon',
@@ -111,7 +111,7 @@ class ThemeOptionSeeder extends BaseSeeder
                 ],
                 [
                     'key'   => 'copyright',
-                    'value' => '©' . now()->format('Y') . ' Botble Technologies. Tất cả quyền đã được bảo hộ.',
+                    'value' => '©' . now()->format('Y') . ' Laravel Technologies. Tất cả quyền đã được bảo hộ.',
                 ],
                 [
                     'key'   => 'favicon',

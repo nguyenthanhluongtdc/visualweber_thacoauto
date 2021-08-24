@@ -302,15 +302,15 @@ class BlogSeeder extends BaseSeeder
                         '[youtube-video]https://www.youtube.com/watch?v=SlPhMPnQ58k[/youtube-video]') : '') .
                     Html::tag('p', $faker->realText(1000)) .
                     Html::tag('p',
-                        Html::image(RvMedia::getImageUrl('news/' . $faker->numberBetween(1, 5) . '.jpg', 'medium'))
+                        Html::image(RvMedia::getImageUrl('news/' . $faker->numberBetween(1, 5) . '.jpg', 'medium'), 'image', ['style' => 'width: 100%', 'class' => 'image_resized'])
                             ->toHtml(), ['class' => 'text-center']) .
                     Html::tag('p', $faker->realText(500)) .
                     Html::tag('p',
-                        Html::image(RvMedia::getImageUrl('news/' . $faker->numberBetween(6, 10) . '.jpg', 'medium'))
+                        Html::image(RvMedia::getImageUrl('news/' . $faker->numberBetween(6, 10) . '.jpg', 'medium'), 'image', ['style' => 'width: 100%', 'class' => 'image_resized'])
                             ->toHtml(), ['class' => 'text-center']) .
                     Html::tag('p', $faker->realText(1000)) .
                     Html::tag('p',
-                        Html::image(RvMedia::getImageUrl('news/' . $faker->numberBetween(11, 14) . '.jpg', 'medium'))
+                        Html::image(RvMedia::getImageUrl('news/' . $faker->numberBetween(11, 14) . '.jpg', 'medium'), 'image', ['style' => 'width: 100%', 'class' => 'image_resized'])
                             ->toHtml(), ['class' => 'text-center']) .
                     Html::tag('p', $faker->realText(1000));
                 $item['author_id'] = 1;
@@ -319,7 +319,6 @@ class BlogSeeder extends BaseSeeder
                 $item['is_featured'] = $index < 6;
                 $item['image'] = 'news/' . ($index + 1) . '.jpg';
                 $item['description'] = $faker->text();
-                $item['format_type'] = $index % 3 == 0 ? 'video' : 'default';
 
                 $post = Post::create($item);
 

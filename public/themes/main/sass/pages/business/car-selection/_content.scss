@@ -355,6 +355,8 @@
                 }
             }
             .select-button{
+                // display: -webkit-flex;
+                -webkit-appearance: none;
                 width: 100%;
                 border: 2px solid $color-primary;
                 background-color: $color-primary;

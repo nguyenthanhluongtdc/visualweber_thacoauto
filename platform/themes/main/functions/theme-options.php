@@ -196,145 +196,146 @@ app()->booted(function () {
                 ],
             ],
         ])
-        ->setSection([ // Set section with no field
-            'title' => __('Sản xuất - kinh doanh ô tô & cơ khí'),
-            'desc' => __('Sản xuất - kinh doanh ô tô & cơ khí settings'),
-            'id' => 'opt-text-subsection-manufacturing_business',
-            'subsection' => true,
-            'icon' => 'fa fa-home',
-            'fields' => [
-                [
-                    'id' => 'image_manufacturing',
-                    'type' => 'mediaImage',
-                    'label' => __('Ảnh Sản xuất'),
-                    'attributes' => [
-                        'name' => 'image_manufacturing',
-                        'value' => null,
-                    ],
-                ],
-                [
-                    'id' => 'name_manufacturing',
-                    'type' => 'text',
-                    'label' => __('Tên Sản xuất'),
-                    'attributes' => [
-                        'name' => 'name_manufacturing',
-                        'value' => null,
-                    ],
-                ],
-                [
-                    'id' => 'description_manufacturing',
-                    'type' => 'textarea',
-                    'label' => __('Mô tả Sản xuất'),
-                    'attributes' => [
-                        'name' => 'description_manufacturing',
-                        'value' => null,
-                        'options' => [
-                            'class'        => 'form-control',
-                            'data-counter' => 255,
-                            'rows'         => 2,
-                        ],
-                    ],
-                ],
-            ],
-        ])
-        ->setField([
-            'id'         => 'image_business',
-            'section_id' => 'opt-text-subsection-manufacturing_business',
-            'type'       => 'mediaImage',
-            'label'      => __('Ảnh kinh doanh'),
-            'attributes' => [
-                'name'    => 'image_business',
-                'value'   => null,
-            ],
-        ])
-        ->setField([
-            'id'         => 'name_business',
-            'section_id' => 'opt-text-subsection-manufacturing_business',
-            'type'       => 'text',
-            'label'      => __('Tên kinh doanh'),
-            'attributes' => [
-                'name'    => 'name_business',
-                'value'   => null,
-            ],
-        ])
-        ->setField([
-            'id'         => 'description_business',
-            'section_id' => 'opt-text-subsection-manufacturing_business',
-            'type'       => 'textarea',
-            'label'      => __('Mô tả kinh doanh'),
-            'attributes' => [
-                'name'    => 'description_business',
-                'value'   => null,
-                'options' => [
-                    'class'        => 'form-control',
-                    'data-counter' => 255,
-                    'rows'         => 2,
-                ],
-            ],
-        ])
-        ->setField([
-            'id'         => 'repeater_munufacturing',
-            'section_id' => 'opt-text-subsection-manufacturing_business',
-            'type'       => 'repeater',
-            'label'      => __('Repeater manufacturing'),
-            'attributes' => [
-                'name'   => 'repeater_munufacturing',
-                'value'  => null,
-                'fields' => [
-                    [
-                        'type'       => 'mediaImage',
-                        'label'      => __('Image'),
-                        'attributes' => [
-                            'name'  => 'image',
-                            'value' => null,
-                        ],
-                    ],
-                    [
-                        'type'       => 'textarea',
-                        'label'      => __('Description'),
-                        'attributes' => [
-                            'name'    => 'description',
-                            'value'   => null,
-                            'options' => [
-                                'class'        => 'form-control',
-                                'data-counter' => 255,
-                                'rows'         => 2,
-                            ],
-                        ],
-                    ],
-                ],
-            ],
-        ])->setField([
-            'id'         => 'repeater_business',
-            'section_id' => 'opt-text-subsection-manufacturing_business',
-            'type'       => 'repeater',
-            'label'      => __('Repeater business'),
-            'attributes' => [
-                'name'   => 'repeater_business',
-                'value'  => null,
-                'fields' => [
-                    [
-                        'type'       => 'mediaImage',
-                        'label'      => __('Image'),
-                        'attributes' => [
-                            'name'  => 'image',
-                            'value' => null,
-                        ],
-                    ],
-                    [
-                        'type'       => 'textarea',
-                        'label'      => __('Description'),
-                        'attributes' => [
-                            'name'    => 'description',
-                            'value'   => null,
-                            'options' => [
-                                'class'        => 'form-control',
-                                'data-counter' => 255,
-                                'rows'         => 2,
-                            ],
-                        ],
-                    ],
-                ],
-            ],
-        ]);
+        // ->setSection([ // Set section with no field
+        //     'title' => __('Sản xuất - kinh doanh ô tô & cơ khí'),
+        //     'desc' => __('Sản xuất - kinh doanh ô tô & cơ khí settings'),
+        //     'id' => 'opt-text-subsection-manufacturing_business',
+        //     'subsection' => true,
+        //     'icon' => 'fa fa-home',
+        //     'fields' => [
+        //         [
+        //             'id' => 'image_manufacturing',
+        //             'type' => 'mediaImage',
+        //             'label' => __('Ảnh Sản xuất'),
+        //             'attributes' => [
+        //                 'name' => 'image_manufacturing',
+        //                 'value' => null,
+        //             ],
+        //         ],
+        //         [
+        //             'id' => 'name_manufacturing',
+        //             'type' => 'text',
+        //             'label' => __('Tên Sản xuất'),
+        //             'attributes' => [
+        //                 'name' => 'name_manufacturing',
+        //                 'value' => null,
+        //             ],
+        //         ],
+        //         [
+        //             'id' => 'description_manufacturing',
+        //             'type' => 'textarea',
+        //             'label' => __('Mô tả Sản xuất'),
+        //             'attributes' => [
+        //                 'name' => 'description_manufacturing',
+        //                 'value' => null,
+        //                 'options' => [
+        //                     'class'        => 'form-control',
+        //                     'data-counter' => 255,
+        //                     'rows'         => 2,
+        //                 ],
+        //             ],
+        //         ],
+        //     ],
+        // ])
+        // ->setField([
+        //     'id'         => 'image_business',
+        //     'section_id' => 'opt-text-subsection-manufacturing_business',
+        //     'type'       => 'mediaImage',
+        //     'label'      => __('Ảnh kinh doanh'),
+        //     'attributes' => [
+        //         'name'    => 'image_business',
+        //         'value'   => null,
+        //     ],
+        // ])
+        // ->setField([
+        //     'id'         => 'name_business',
+        //     'section_id' => 'opt-text-subsection-manufacturing_business',
+        //     'type'       => 'text',
+        //     'label'      => __('Tên kinh doanh'),
+        //     'attributes' => [
+        //         'name'    => 'name_business',
+        //         'value'   => null,
+        //     ],
+        // ])
+        // ->setField([
+        //     'id'         => 'description_business',
+        //     'section_id' => 'opt-text-subsection-manufacturing_business',
+        //     'type'       => 'textarea',
+        //     'label'      => __('Mô tả kinh doanh'),
+        //     'attributes' => [
+        //         'name'    => 'description_business',
+        //         'value'   => null,
+        //         'options' => [
+        //             'class'        => 'form-control',
+        //             'data-counter' => 255,
+        //             'rows'         => 2,
+        //         ],
+        //     ],
+        // ])
+        // ->setField([
+        //     'id'         => 'repeater_munufacturing',
+        //     'section_id' => 'opt-text-subsection-manufacturing_business',
+        //     'type'       => 'repeater',
+        //     'label'      => __('Repeater manufacturing'),
+        //     'attributes' => [
+        //         'name'   => 'repeater_munufacturing',
+        //         'value'  => null,
+        //         'fields' => [
+        //             [
+        //                 'type'       => 'mediaImage',
+        //                 'label'      => __('Image'),
+        //                 'attributes' => [
+        //                     'name'  => 'image',
+        //                     'value' => null,
+        //                 ],
+        //             ],
+        //             [
+        //                 'type'       => 'textarea',
+        //                 'label'      => __('Description'),
+        //                 'attributes' => [
+        //                     'name'    => 'description',
+        //                     'value'   => null,
+        //                     'options' => [
+        //                         'class'        => 'form-control',
+        //                         'data-counter' => 255,
+        //                         'rows'         => 2,
+        //                     ],
+        //                 ],
+        //             ],
+        //         ],
+        //     ],
+        // ])->setField([
+        //     'id'         => 'repeater_business',
+        //     'section_id' => 'opt-text-subsection-manufacturing_business',
+        //     'type'       => 'repeater',
+        //     'label'      => __('Repeater business'),
+        //     'attributes' => [
+        //         'name'   => 'repeater_business',
+        //         'value'  => null,
+        //         'fields' => [
+        //             [
+        //                 'type'       => 'mediaImage',
+        //                 'label'      => __('Image'),
+        //                 'attributes' => [
+        //                     'name'  => 'image',
+        //                     'value' => null,
+        //                 ],
+        //             ],
+        //             [
+        //                 'type'       => 'textarea',
+        //                 'label'      => __('Description'),
+        //                 'attributes' => [
+        //                     'name'    => 'description',
+        //                     'value'   => null,
+        //                     'options' => [
+        //                         'class'        => 'form-control',
+        //                         'data-counter' => 255,
+        //                         'rows'         => 2,
+        //                     ],
+        //                 ],
+        //             ],
+        //         ],
+        //     ],
+        // ])
+        ;
 });

@@ -5,7 +5,7 @@
 {!! do_shortcode('[filter-media][/filter-media]') !!}
 <div class="post-container container-remake Lineheight-Regular">
     <div class="post-primary">
-        <h2 class="title font-pri-bold font50 p-0 text-uppercase text-center">
+        <h2 class="title font-pri-bold font50 p-0 text-uppercase text-center fontmb-large">
             {{ $post->name }}
         </h2>
         <div class="post-author-wrap">
@@ -23,7 +23,7 @@
                 <div class="fb-like" data-href="{{ Request::url() }}" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
             </div>
         </div>
-        <div class="desc font25 MyriadPro-BoldCond px-0 mx-0 w-100 my-5 text-center">
+        <div class="desc font30 MyriadPro-BoldCond px-0 mx-0 w-100 my-5 text-center fontmb-small">
             {{$post->description}}
         </div>
         <div class="post__content font-pri font18">

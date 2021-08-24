@@ -230,7 +230,7 @@
                 @endif
 
                 @if(has_field($page, 'description_module_value_introduce'))
-                <div class="section-system-value__des text-justify" data-aos="fade-right">
+                <div class="section-system-value__des text-justify fontmb-small" data-aos="fade-right">
                     {!! has_field($page, 'description_module_value_introduce') !!}
                 </div>
                 @endif
@@ -242,19 +242,19 @@
                     <div class="section-system-value__content__left">
                         @forelse(has_field($page, 'repeat_content_module_value_introduce') as $row)
                         <div class="__left__row" data-aos="fade-up" data-aos-delay="300">
-                            <h3 class="title font30 font-pri-bold fontmb-medium">
+                            <h3 class="title font30 font-pri-bold fontmb-middle">
                                 {!! has_sub_field($row, 'title') !!}
                             </h3>
-                            <div class="description font18 fontmb-little text-justify">
+                            <div class="description font18 fontmb-small text-justify">
                                 {!! has_sub_field($row, 'description') !!}
                             </div>
                         </div>
                         @empty
                         <div class="__left__row" data-aos="fade-up" data-aos-delay="300">
-                            <h3 class="title font30 font-pri-bold fontmb-medium">
+                            <h3 class="title font30 font-pri-bold fontmb-middle">
                                 Tầm nhìn
                             </h3>
-                            <p class="description font18 fontmb-little text-justify">
+                            <p class="description font18 fontmb-small text-justify">
                                 Doanh nghiệp sản xuất – kinh doanh – xuất khẩu ô tô & cơ khí của Việt Nam, phát triển
                                 bền vững trong bối cảnh hội nhập khu vực và thế giới.
                             </p>
@@ -388,7 +388,7 @@
                         {!! has_field($page, 'title_module_behave_introduce') !!}
                         @endif
                     </h2>
-                    <div class="section-behave__des" data-aos="fade-right">
+                    <div class="section-behave__des fontmb-small" data-aos="fade-right">
                         @if(has_field($page, 'content_module_behave_introduce'))
                         {!! has_field($page, 'content_module_behave_introduce') !!}
                         @endif
@@ -421,7 +421,7 @@
                         @endif
                     </h2>
                     @if(has_field($page, 'description_module_tieuchi_introduce'))
-                    <p class="section-criteria__headers__des" data-aos="fade-right">
+                    <p class="section-criteria__headers__des fontmb-small" data-aos="fade-right">
                         {!! has_field($page, 'description_module_tieuchi_introduce') !!}
                     </p>
                     @endif

@@ -3,7 +3,7 @@
         <div class="section-list-news">
             <div class="section-list-news-header  d-flex  align-items-center">
                 <h2 class="title font-pri-bold font60 text-uppercase">
-                    Tin tức
+                    {{ __("Tin tức") }}
                 </h2>
 
                 <a href="#" title="{!!__('Xem thêm')!!}" class="read-moree text-dark font20 font-pri"> {!!__('Xem
@@ -32,8 +32,8 @@
 
                         <div class="item__right">
                             <div class="item__right__top">
-                                <h3 class="font30 title"> 
-                                    <a href="{{$post->url}}"> {!! $post->name !!} </a>   
+                                <h3 class="font30 title">
+                                    <a href="{{$post->url}}"> {!! $post->name !!} </a>
                                 </h3>
                                 <p class="description text-dark font20">
                                     @empty($post->description)

@@ -71,5 +71,7 @@ class ServiceServiceProvider extends ServiceProvider
                     });
             }
         });
+
+        $this->app->register(HookServiceProvider::class);
     }
 }

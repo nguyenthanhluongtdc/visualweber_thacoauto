@@ -149,4 +149,15 @@ class SystemController extends Controller
 
         return redirect()->back();
     }
+
+    /**
+     * @param BaseHttpResponse $response
+     * @return BaseHttpResponse
+     */
+    public function getMenuItemsCount(BaseHttpResponse $response)
+    {
+        $data = apply_filters(BASE_FILTER_MENU_ITEMS_COUNT, []);
+
+        return $response->setData($data);
+    }
 }

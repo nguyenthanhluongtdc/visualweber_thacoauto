@@ -142,20 +142,18 @@ class TableController extends Controller
             return $data;
         }
 
+        $value = $request->input('value');
+        $choices = Arr::get($column, 'choices', []);
+
         if (isset($column['callback']) && method_exists($object, $column['callback'])) {
-            return $object->getValueInput(
-                null,
-                $request->input('value'),
-                $column['type'],
-                call_user_func([$object, $column['callback']])
-            );
+            $choices = call_user_func_array([$object, $column['callback']], [$value]);
         }
 
         return $object->getValueInput(
             null,
-            $request->input('value'),
+            $value,
             $column['type'],
-            Arr::get($column, 'choices', [])
+            $choices
         );
     }
 }

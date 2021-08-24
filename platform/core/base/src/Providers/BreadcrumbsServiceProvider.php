@@ -26,9 +26,11 @@ class BreadcrumbsServiceProvider extends ServiceProvider
             $url = URL::current();
             $siteTitle = setting('admin_title', config('core.base.general.base_name'));
             $arMenu = dashboard_menu()->getAll();
+
             if (Route::currentRouteName() != 'dashboard.index') {
                 $breadcrumbs->parent('dashboard.index');
             }
+
             $found = false;
             foreach ($arMenu as $menuCategory) {
                 if (($url == $menuCategory['url'] || (Str::contains($menuCategory['url'],
@@ -41,6 +43,7 @@ class BreadcrumbsServiceProvider extends ServiceProvider
                     break;
                 }
             }
+
             if (!$found) {
                 foreach ($arMenu as $menuCategory) {
                     if (!count($menuCategory['children'])) {

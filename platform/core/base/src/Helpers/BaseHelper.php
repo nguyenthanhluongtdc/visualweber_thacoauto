@@ -3,7 +3,9 @@
 namespace Platform\Base\Helpers;
 
 use Carbon\Carbon;
+use Exception;
 use Illuminate\Database\Query\Builder;
+use Illuminate\Support\Facades\File;
 
 class BaseHelper
 {
@@ -12,9 +14,15 @@ class BaseHelper
      * @param string $format
      * @return string
      */
-    public function formatTime(Carbon $timestamp, string $format = 'j M Y H:i')
+    public function formatTime(Carbon $timestamp, ?string $format = 'j M Y H:i')
     {
-        return format_time($timestamp, $format);
+        $first = Carbon::create(0000, 0, 0, 00, 00, 00);
+
+        if ($timestamp->lte($first)) {
+            return '';
+        }
+
+        return $timestamp->format($format);
     }
 
     /**
@@ -22,13 +30,35 @@ class BaseHelper
      * @param string $format
      * @return string
      */
-    public function formatDate(?string $date, string $format = null)
+    public function formatDate(?string $date, ?string $format = null)
     {
         if (empty($format)) {
             $format = config('core.base.general.date_format.date');
         }
 
-        return date_from_database($date, $format);
+        if (empty($date)) {
+            return $date;
+        }
+
+        return format_time(Carbon::parse($date), $format);
+    }
+
+    /**
+     * @param string $date
+     * @param string $format
+     * @return string
+     */
+    public function formatDateTime(?string $date, string $format = null)
+    {
+        if (empty($format)) {
+            $format = config('core.base.general.date_format.date_time');
+        }
+
+        if (empty($date)) {
+            return $date;
+        }
+
+        return format_time(Carbon::parse($date), $format);
     }
 
     /**
@@ -38,7 +68,15 @@ class BaseHelper
      */
     public function humanFilesize(int $bytes, int $precision = 2)
     {
-        return human_file_size($bytes, $precision);
+        $units = ['B', 'kB', 'MB', 'GB', 'TB'];
+
+        $bytes = max($bytes, 0);
+        $pow = floor(($bytes ? log($bytes) : 0) / log(1024));
+        $pow = min($pow, count($units) - 1);
+
+        $bytes /= pow(1024, $pow);
+
+        return number_format($bytes, $precision, ',', '.') . ' ' . $units[$pow];
     }
 
     /**
@@ -46,29 +84,57 @@ class BaseHelper
      * @param bool $convertToArray
      * @return array|bool|mixed|null
      */
-    public function getFileData(string $file, bool $convertToArray = true)
+    public function getFileData($file, $convertToArray = true)
     {
-        return get_file_data($file, $convertToArray);
+        $file = File::get($file);
+        if (!empty($file)) {
+            if ($convertToArray) {
+                return json_decode($file, true);
+            }
+
+            return $file;
+        }
+
+        if (!$convertToArray) {
+            return null;
+        }
+
+        return [];
     }
 
     /**
      * @param string $path
-     * @param string $data
+     * @param string|array $data
      * @param bool $json
      * @return bool|mixed
      */
-    public function saveFileData(string $path, string $data, bool $json)
+    public function saveFileData($path, $data, $json = true)
     {
-        return save_file_data($path, $data, $json);
+        try {
+            if ($json) {
+                $data = $this->jsonEncodePrettify($data);
+            }
+
+            if (!File::isDirectory(File::dirname($path))) {
+                File::makeDirectory(File::dirname($path), 493, true);
+            }
+
+            File::put($path, $data);
+
+            return true;
+        } catch (Exception $exception) {
+            info($exception->getMessage());
+            return false;
+        }
     }
 
     /**
      * @param array $data
      * @return string
      */
-    public function jsonEncodePrettify(array $data)
+    public function jsonEncodePrettify($data)
     {
-        return json_encode_prettify($data);
+        return json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
     }
 
     /**
@@ -76,13 +142,23 @@ class BaseHelper
      * @param array $ignoreFiles
      * @return array
      */
-    public function scanFolder(string $path, array $ignoreFiles = [])
+    public function scanFolder($path, array $ignoreFiles = [])
     {
-        return scan_folder($path, $ignoreFiles);
+        try {
+            if (File::isDirectory($path)) {
+                $data = array_diff(scandir($path), array_merge(['.', '..', '.DS_Store'], $ignoreFiles));
+                natsort($data);
+                return $data;
+            }
+
+            return [];
+        } catch (Exception $exception) {
+            return [];
+        }
     }
 
     /**
-     * @return \Illuminate\Config\Repository|\Illuminate\Contracts\Foundation\Application|mixed
+     * @return string
      */
     public function getAdminPrefix(): string
     {
@@ -146,5 +222,13 @@ class BaseHelper
         }
 
         return false;
+    }
+
+    /**
+     * @return string
+     */
+    public function getRichEditor(): string
+    {
+        return setting('rich_editor', config('core.base.general.editor.primary'));
     }
 }

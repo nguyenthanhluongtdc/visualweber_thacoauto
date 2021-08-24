@@ -7,6 +7,7 @@ use Platform\Support\Repositories\Eloquent\RepositoriesAbstract;
 use Eloquent;
 use Illuminate\Database\Query\Builder;
 use Illuminate\Support\Str;
+use RvMedia;
 
 /**
  * @since 19/08/2015 07:45 AM
@@ -40,7 +41,7 @@ class MediaFolderRepository extends RepositoriesAbstract implements MediaFolderI
      */
     public function createSlug($name, $parentId)
     {
-        $slug = Str::slug($name);
+        $slug = Str::slug($name, '-', !RvMedia::turnOffAutomaticUrlTranslationIntoLatin() ? 'en' : false);
         $index = 1;
         $baseSlug = $slug;
         while ($this->checkIfExists('slug', $slug, $parentId)) {

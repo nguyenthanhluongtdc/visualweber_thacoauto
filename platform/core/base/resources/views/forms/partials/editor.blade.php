@@ -1,24 +1,24 @@
-@if (!(isset($attributes['without-buttons']) && $attributes['without-buttons'] == true))
+@if (Arr::get($attributes, 'without-buttons', false) != true)
     <div style="height: 34px;">
-        @php $result = !empty($attributes['id']) ? $attributes['id'] : $name; @endphp
-        <span class="editor-action-item action-show-hide-editor">
+        @php $result = Arr::get($attributes, 'id', $name); @endphp
+        <div class="d-inline-block editor-action-item action-show-hide-editor">
             <button class="btn btn-primary show-hide-editor-btn" type="button" data-result="{{ $result }}">{{ trans('core/base::forms.show_hide_editor') }}</button>
-        </span>
-        <span class="editor-action-item">
+        </div>
+        <div class="d-inline-block editor-action-item">
             <a href="#" class="btn_gallery btn btn-primary"
                data-result="{{ $result }}"
                data-multiple="true"
-               data-action="media-insert-{{ setting('rich_editor', config('core.base.general.editor.primary')) }}">
+               data-action="media-insert-{{ BaseHelper::getRichEditor() }}">
                 <i class="far fa-image"></i> {{ trans('core/media::media.add') }}
             </a>
-        </span>
-        @if (isset($attributes['with-short-code']) && $attributes['with-short-code'] == true && function_exists('shortcode'))
-            <span class="editor-action-item list-shortcode-items">
+        </div>
+        @if (function_exists('shortcode') && Arr::get($attributes, 'with-short-code', false) == true)
+            <div class="d-inline-block editor-action-item list-shortcode-items">
                 <div class="dropdown">
                     <button class="btn btn-primary dropdown-toggle add_shortcode_btn_trigger" data-result="{{ $result }}" type="button" data-toggle="dropdown"><i class="fa fa-code"></i> {{ trans('core/base::forms.short_code') }}
                     </button>
                     <ul class="dropdown-menu">
-                        @foreach ($shortcodes = shortcode()->getAll() as $key => $item)
+                        @foreach (shortcode()->getAll() as $key => $item)
                             @if ($item['name'])
                                 <li>
                                     <a href="{{ route('short-codes.ajax-get-admin-config', $key) }}" data-has-admin-config="{{ Arr::has($item, 'admin_config') }}" data-key="{{ $key }}" data-description="{{ $item['description'] }}">{{ $item['name'] }}</a>
@@ -27,7 +27,7 @@
                         @endforeach
                     </ul>
                 </div>
-            </span>
+            </div>
             @once
                 @push('footer')
                     <div class="modal fade short_code_modal" tabindex="-1" role="dialog">
@@ -42,13 +42,9 @@
                                     <form class="form-horizontal short-code-data-form">
                                         <input type="hidden" class="short_code_input_key">
 
-                                        <div class="half-circle-spinner">
-                                            <div class="circle circle-1"></div>
-                                            <div class="circle circle-2"></div>
-                                        </div>
+                                        @include('core/base::elements.loading')
 
-                                        <div class="short-code-admin-config">
-                                        </div>
+                                        <div class="short-code-admin-config"></div>
                                     </form>
                                 </div>
                                 <div class="modal-footer">
@@ -58,7 +54,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- end Modal -->
                 @endpush
             @endonce
         @endif
@@ -66,6 +61,8 @@
         {!! apply_filters(BASE_FILTER_FORM_EDITOR_BUTTONS, null) !!}
     </div>
     <div class="clearfix"></div>
+@else
+    @php Arr::forget($attributes, 'with-short-code'); @endphp
 @endif
 
-{!! call_user_func_array([Form::class, setting('rich_editor', config('core.base.general.editor.primary'))], [$name, $value, $attributes]) !!}
+{!! call_user_func_array([Form::class, BaseHelper::getRichEditor()], [$name, $value, $attributes]) !!}

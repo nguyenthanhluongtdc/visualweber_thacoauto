@@ -33,6 +33,12 @@ Route::group(['namespace' => 'Platform\Base\Http\Controllers', 'middleware' => [
             'uses'       => 'SystemController@authorize',
             'permission' => false,
         ]);
+
+        Route::get('menu-items-count', [
+            'as'         => 'menu-items-count',
+            'uses'       => 'SystemController@getMenuItemsCount',
+            'permission' => false,
+        ]);
     });
 
     Route::get('settings-language/{alias}', [SystemController::class, 'getLanguage'])->name('settings.language');

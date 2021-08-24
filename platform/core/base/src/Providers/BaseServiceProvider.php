@@ -21,7 +21,6 @@ use Platform\Setting\Providers\SettingServiceProvider;
 use Platform\Setting\Supports\SettingStore;
 use Platform\Support\Http\Middleware\BaseMiddleware;
 use DateTimeZone;
-use Illuminate\Support\Facades\Event;
 use Illuminate\Contracts\Container\BindingResolutionException;
 use Illuminate\Contracts\Debug\ExceptionHandler;
 use Illuminate\Foundation\AliasLoader;
@@ -29,6 +28,7 @@ use Illuminate\Pagination\Paginator;
 use Illuminate\Routing\Events\RouteMatched;
 use Illuminate\Routing\ResourceRegistrar;
 use Illuminate\Routing\Router;
+use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
 use MetaBox;
 use URL;
@@ -70,11 +70,9 @@ class BaseServiceProvider extends ServiceProvider
         });
 
         $this->app->make('config')->set([
-            'session.cookie'                                     => 'platform_session',
-            'purifier.settings.default.AutoFormat.AutoParagraph' => false,
-            'purifier.settings.default.AutoFormat.RemoveEmpty'   => false,
-            'ziggy.except'                                       => ['debugbar.*'],
-            'app.debug_blacklist'                                => [
+            'session.cookie'                   => 'platform_session',
+            'ziggy.except'                     => ['debugbar.*'],
+            'app.debug_blacklist'              => [
                 '_ENV'    => [
                     'APP_KEY',
                     'ADMIN_DIR',
@@ -101,8 +99,8 @@ class BaseServiceProvider extends ServiceProvider
                     'password',
                 ],
             ],
-            'datatables-buttons.pdf_generator'                   => 'excel',
-            'excel.exports.csv.use_bom'                          => true,
+            'datatables-buttons.pdf_generator' => 'excel',
+            'excel.exports.csv.use_bom'        => true,
         ]);
     }
 
@@ -170,6 +168,10 @@ class BaseServiceProvider extends ServiceProvider
         }
 
         $this->configureIni();
+
+        $config = $this->app->make('config');
+
+        $config->set(['purifier.settings.default' => $config->get('core.base.general.purifier')]);
     }
 
     /**

@@ -165,11 +165,11 @@
                             </label>
                             <label class="hrv-label">
                                 <input type="radio" name="rich_editor" class="hrv-radio" value="ckeditor"
-                                       @if (setting('rich_editor', 'ckeditor') == 'ckeditor') checked @endif>CKEditor
+                                       @if (BaseHelper::getRichEditor() == 'ckeditor') checked @endif>CKEditor
                             </label>
                             <label class="hrv-label">
                                 <input type="radio" name="rich_editor" class="hrv-radio" value="tinymce"
-                                       @if (setting('rich_editor', 'ckeditor') == 'tinymce') checked @endif>TinyMCE
+                                       @if (BaseHelper::getRichEditor() == 'tinymce') checked @endif>TinyMCE
                             </label>
                         </div>
 

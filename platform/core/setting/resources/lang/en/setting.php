@@ -149,6 +149,7 @@ return [
         'watermark_position_bottom_left'                => 'Bottom left',
         'watermark_position_bottom_right'               => 'Bottom right',
         'watermark_position_center'                     => 'Center',
+        'turn_off_automatic_url_translation_into_latin' => 'Turn off automatic URL translation into Latin?',
     ],
     'license'                      => [
         'purchase_code' => 'Purchase code',

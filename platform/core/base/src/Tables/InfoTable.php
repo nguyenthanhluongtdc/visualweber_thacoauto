@@ -5,9 +5,7 @@ namespace Platform\Base\Tables;
 use Platform\Base\Supports\SystemManagement;
 use Platform\Table\Abstracts\TableAbstract;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
-use Illuminate\Contracts\Routing\UrlGenerator;
 use Illuminate\Support\Collection;
-use Yajra\DataTables\DataTables;
 
 class InfoTable extends TableAbstract
 {
@@ -83,14 +81,6 @@ class InfoTable extends TableAbstract
     /**
      * {@inheritDoc}
      */
-    protected function getDom(): ?string
-    {
-        return "rt<'datatables__info_wrap'pli<'clearfix'>>";
-    }
-
-    /**
-     * {@inheritDoc}
-     */
     public function getBuilderParameters(): array
     {
         return [
@@ -104,5 +94,13 @@ class InfoTable extends TableAbstract
     public function actions()
     {
         return [];
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    protected function getDom(): ?string
+    {
+        return "rt<'datatables__info_wrap'pli<'clearfix'>>";
     }
 }

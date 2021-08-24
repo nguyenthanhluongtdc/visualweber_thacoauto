@@ -3,10 +3,10 @@
 namespace Platform\Table\Abstracts;
 
 use Assets;
+use BaseHelper;
 use Platform\Base\Events\UpdatedContentEvent;
 use Platform\Support\Repositories\Interfaces\RepositoryInterface;
 use Platform\Table\Supports\TableExportHandler;
-use Carbon\Carbon;
 use Form;
 use Html;
 use Illuminate\Contracts\Foundation\Application;
@@ -790,7 +790,7 @@ abstract class TableAbstract extends DataTable
                     break;
                 }
 
-                $value = Carbon::createFromFormat(config('core.base.general.date_format.date'), $value)->toDateString();
+                $value = BaseHelper::formatDate($value);
                 $query = $query->whereDate($this->repository->getTable() . '.' . $key, $operator, $value);
                 break;
             default:
@@ -839,20 +839,35 @@ abstract class TableAbstract extends DataTable
                 $attributes['placeholder'] = trans('core/table::table.select_option');
                 $html = Form::customSelect($inputName, $data, $value, $attributes)->toHtml();
                 break;
+
             case 'select-search':
                 $attributes['class'] = $attributes['class'] . ' select-search-full';
                 $attributes['placeholder'] = trans('core/table::table.select_option');
                 $html = Form::customSelect($inputName, $data, $value, $attributes)->toHtml();
                 break;
+
+            case 'select-ajax':
+                $attributes = [
+                    'class'              => $attributes['class'] . ' select-search-ajax',
+                    'data-url'           => Arr::get($data, 'url'),
+                    'data-minimum-input' => Arr::get($data, 'minimum-input', 2),
+                    'multiple'           => Arr::get($data, 'multiple', false),
+                    'data-placeholder'   => Arr::get($data, 'placeholder', $attributes['placeholder']),
+                ];
+                $html = Form::customSelect($inputName, Arr::get($data, 'selected', []), $value, $attributes)->toHtml();
+                break;
+
             case 'number':
                 $html = Form::number($inputName, $value, $attributes)->toHtml();
                 break;
+
             case 'date':
                 $attributes['class'] = $attributes['class'] . ' datepicker';
                 $attributes['data-date-format'] = config('core.base.general.date_format.js.date');
                 $content = Form::text($inputName, $value, $attributes)->toHtml();
                 $html = view('core/table::partials.date-field', compact('content'))->render();
                 break;
+
             default:
                 $html = Form::text($inputName, $value, $attributes)->toHtml();
                 break;
@@ -907,8 +922,7 @@ abstract class TableAbstract extends DataTable
         switch ($key) {
             case 'created_at':
             case 'updated_at':
-                $value = Carbon::createFromFormat(config('core.base.general.date_format.date'), $value)
-                    ->toDateTimeString();
+                $value = BaseHelper::formatDateTime($value);
                 break;
         }
 

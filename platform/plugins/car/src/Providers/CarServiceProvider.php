@@ -52,6 +52,8 @@ class CarServiceProvider extends ServiceProvider
         \SlugHelper::registerModule(Brand::class, 'Brands');
         \SlugHelper::setPrefix(Brand::class, 'thuong-hieu');
 
+        \SlugHelper::registerModule(CarCategory::class, 'CarCategory');
+
         $this->setNamespace('plugins/car')
             ->loadAndPublishConfigurations(['permissions'])
             ->loadMigrations()

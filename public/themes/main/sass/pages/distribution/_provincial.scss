@@ -418,9 +418,9 @@
             }
         }
         &-button {
-            @include width(70);
-            @include mobileWidth(40);
-            @include mobileMarginX(35, "+");
+            // @include width(70);
+            // @include mobileWidth(40);
+            // @include mobileMarginX(35, "+");
             display: flex;
             justify-content: space-between;
             position: absolute;
@@ -428,9 +428,9 @@
             top: 50%;
             transform: translate(100%,-50%);
 
-            @media (max-width: 576px) {
-                transform: translate(50%,-50%);
-            }
+            // @media (max-width: 576px) {
+            //     transform: translate(50%,-50%);
+            // }
             img {
                 width: 40%;
                 cursor: pointer;

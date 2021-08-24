@@ -87,8 +87,6 @@ class ContactTable extends TableAbstract
         $query = $this->repository->getModel()->select([
             'id',
             'name',
-            'firstname',
-            'lastname',
             'phone',
             'email',
             'created_at',
@@ -112,18 +110,11 @@ class ContactTable extends TableAbstract
                 'title' => trans('core/base::tables.name'),
                 'class' => 'text-left',
             ],
-            'firstname'       => [
-                'title' => trans('firstname'),
+           
+            'email'      => [
+                'title' => trans('plugins/contact::contact.tables.email'),
                 'class' => 'text-left',
             ],
-            'lastname'       => [
-                'title' => trans('lastname'),
-                'class' => 'text-left',
-            ],
-            // 'email'      => [
-            //     'title' => trans('plugins/contact::contact.tables.email'),
-            //     'class' => 'text-left',
-            // ],
             'phone'      => [
                 'title' => trans('plugins/contact::contact.tables.phone'),
             ],
@@ -158,16 +149,7 @@ class ContactTable extends TableAbstract
                 'type'     => 'text',
                 'validate' => 'required|max:120',
             ],
-            'firstname'       => [
-                'title'    => trans('core/base::tables.firstname'),
-                'type'     => 'text',
-                'validate' => 'required|max:120',
-            ],
-            'lastname'       => [
-                'title'    => trans('core/base::tables.lastname'),
-                'type'     => 'text',
-                'validate' => 'required|max:120',
-            ],
+           
             'email'      => [
                 'title'    => trans('core/base::tables.email'),
                 'type'     => 'text',

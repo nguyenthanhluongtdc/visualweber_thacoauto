@@ -3,6 +3,7 @@
 namespace Platform\Member\Http\Requests;
 
 use Platform\Support\Http\Requests\Request;
+use RvMedia;
 
 class MemberChangeAvatarRequest extends Request
 {
@@ -15,7 +16,7 @@ class MemberChangeAvatarRequest extends Request
     public function rules()
     {
         return [
-            'avatar' => 'required|image|mimes:jpg,jpeg,png',
+            'avatar' => RvMedia::imageValidationRule(),
         ];
     }
 }

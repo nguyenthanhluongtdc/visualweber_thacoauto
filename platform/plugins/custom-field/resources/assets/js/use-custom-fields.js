@@ -295,7 +295,7 @@ class UseCustomFields {
                 case 'select':
                     $result = $(result);
                     choices = parseChoices(box.options.selectChoices);
-                    choices.forEach((choice) => {
+                    choices.forEach(choice => {
                         $result.append('<option value="' + choice[0] + '">' + choice[1] + '</option>');
                     });
                     $result.val(Helpers.arrayGet(box, 'value', box.options.defaultValue));
@@ -304,17 +304,18 @@ class UseCustomFields {
                 case 'checkbox':
                     choices = parseChoices(box.options.selectChoices);
                     let boxValue = Helpers.jsonDecode(box.value);
-                    choices.forEach((choice) => {
+                    choices.forEach(choice => {
                         let template = result.replace(/__value__/gi, choice[0] || '');
                         template = template.replace(/__title__/gi, choice[1] || '');
                         template = template.replace(/__checked__/gi, ($.inArray(choice[0], boxValue) != -1) ? 'checked' : '');
                         $wrapper.append($(template));
                     });
+
                     return $wrapper;
                 case 'radio':
                     choices = parseChoices(box.options.selectChoices);
                     let isChecked = false;
-                    choices.forEach((choice) => {
+                    choices.forEach(choice => {
                         let template = result.replace(/__value__/gi, choice[0] || '');
                         template = template.replace(/__id__/gi, box.id + box.slug + repeaterFieldAdded);
                         template = template.replace(/__title__/gi, choice[1] || '');
@@ -338,13 +339,12 @@ class UseCustomFields {
                     registerRepeaterItem(box.items, box.value || [], $result.find('> .field-group-items'));
                     return $result;
                 case 'wysiwyg':
-                    result = result.replace(/__value__/gi, box.value || '');
-
-                    $(result).attr('data-toolbar');
+                    result = result.replace(/__value__/gi, box.value || box.options.defaultValueTextarea || '');
                     break;
             }
 
             $wrapper.append($(result));
+
             return $wrapper;
         };
 

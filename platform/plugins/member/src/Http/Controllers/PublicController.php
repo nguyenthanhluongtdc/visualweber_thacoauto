@@ -217,7 +217,7 @@ class PublicController extends Controller
     {
         if (!RvMedia::isChunkUploadEnabled()) {
             $validator = Validator::make($request->all(), [
-                'file.0' => 'required|image|mimes:jpg,jpeg,png,webp',
+                'file.0' => RvMedia::imageValidationRule(),
             ]);
 
             if ($validator->fails()) {

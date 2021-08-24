@@ -366,7 +366,6 @@ class ManageCustomFields {
                 $template.find('.line[data-option=defaultvalue] input').val(Helpers.arrayGet(field.options, 'defaultValue', ''));
                 $template.find('.line[data-option=defaultvaluetextarea] textarea').val(Helpers.arrayGet(field.options, 'defaultValueTextarea', ''));
                 $template.find('.line[data-option=placeholdertext] input').val(Helpers.arrayGet(field.options, 'placeholderText', ''));
-                $template.find('.line[data-option=wysiwygtoolbar] select').val(Helpers.arrayGet(field.options, 'wysiwygToolbar', 'basic'));
                 $template.find('.line[data-option=selectchoices] textarea').val(Helpers.arrayGet(field.options, 'selectChoices', ''));
                 $template.find('.line[data-option=buttonlabel] input').val(Helpers.arrayGet(field.options, 'buttonLabel', ''));
                 $template.find('.line[data-option=rows] input').val(Helpers.arrayGet(field.options, 'rows', ''));

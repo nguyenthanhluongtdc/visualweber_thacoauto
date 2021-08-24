@@ -14,7 +14,6 @@ use Platform\Contact\Http\Requests\EditContactRequest;
 use Platform\Contact\Repositories\Interfaces\ContactReplyInterface;
 use Platform\Contact\Tables\ContactTable;
 use Platform\Contact\Repositories\Interfaces\ContactInterface;
-use Platform\Setting\Supports\SettingStore;
 use EmailHandler;
 use Exception;
 use Illuminate\Http\Request;

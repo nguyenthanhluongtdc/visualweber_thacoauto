@@ -62,7 +62,7 @@ class MemberController extends Controller
     public function updateAvatar(Request $request, BaseHttpResponse $response)
     {
         $validator = Validator::make($request->all(), [
-            'avatar' => 'required|image|mimes:jpg,jpeg,png',
+            'avatar' => RvMedia::imageValidationRule(),
         ]);
 
         if ($validator->fails()) {

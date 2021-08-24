@@ -151,15 +151,12 @@ class CustomFieldServiceProvider extends ServiceProvider
             })
             ->registerRule('basic', trans('plugins/custom-field::rules.page'), Page::class, function () {
                 return $this->app->make(PageInterface::class)
-                    ->advancedGet([
-                        'select'   => [
-                            'id',
-                            'name',
-                        ],
-                        'order_by' => [
-                            'created_at' => 'DESC',
-                        ],
+                    ->getModel()
+                    ->select([
+                        'id',
+                        'name',
                     ])
+                    ->orderBy('created_at', 'DESC')
                     ->pluck('name', 'id')
                     ->toArray();
             })
@@ -193,6 +190,7 @@ class CustomFieldServiceProvider extends ServiceProvider
                     foreach (get_post_formats() as $key => $format) {
                         $formats[$key] = $format['name'];
                     }
+
                     return $formats;
                 })
             ->expandRule('other', trans('plugins/custom-field::rules.model_name'), 'model_name', function () {

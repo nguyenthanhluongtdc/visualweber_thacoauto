@@ -2,7 +2,11 @@
 
 namespace Platform\Member\Http\Requests;
 
-class PostRequest extends \Platform\Blog\Http\Requests\PostRequest
+use Platform\Blog\Http\Requests\PostRequest as BasePostRequest;
+use Illuminate\Support\Arr;
+use RvMedia;
+
+class PostRequest extends BasePostRequest
 {
 
     /**
@@ -12,6 +16,14 @@ class PostRequest extends \Platform\Blog\Http\Requests\PostRequest
      */
     public function rules()
     {
-        return parent::rules() + ['image_input' => 'image|mimes:jpg,jpeg,png'];
+        $imageRule = RvMedia::imageValidationRule();
+
+        if (is_string($imageRule)) {
+            $imageRule = str_replace('required|', '', $imageRule);
+        } elseif (is_array($imageRule)) {
+            Arr::forget($imageRule, 'required');
+        }
+
+        return parent::rules() + ['image_input' => $imageRule];
     }
 }

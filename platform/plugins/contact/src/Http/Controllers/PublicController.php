@@ -42,7 +42,6 @@ class PublicController extends Controller
         try {
             $contact = $this->contactRepository->getModel();
             $contact->fill($request->input());
-          
             $this->contactRepository->createOrUpdate($contact);
 
             event(new SentContactEvent($contact));

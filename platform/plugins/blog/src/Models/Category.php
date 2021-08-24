@@ -45,6 +45,7 @@ class Category extends BaseModel
         'order',
         'is_default',
         'status',
+        'template',
         'author_id',
         'author_type',
     ];

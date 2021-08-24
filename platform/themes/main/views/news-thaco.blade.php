@@ -2,8 +2,8 @@
 <div class="news-thaco-content container-remake">
     <div class="news-thaco-top">
         @php
-        $posts = get_posts_by_category(19, 999);
-        $postsFeatures = get_featured_posts_by_category(19, 2);
+        $posts = get_posts_by_category($category->id ?? 19, 999);
+        $postsFeatures = get_featured_posts_by_category($category->id ?? 19, 2);
         @endphp
         @if (!empty($postsFeatures))
         @foreach ($postsFeatures as $post)
@@ -24,11 +24,11 @@
                     {{Str::words($post->description,30)}}
                 </p>
                 <a href="{{$post->url}}" class="view-detail font-pri font15">
-                    Xem chi tiết<span><i class="fas fa-arrow-right font15"></i></span>
+                    {{ __("Xem chi tiết") }}<span><i class="fas fa-arrow-right font15"></i></span>
                 </a>
 
                 <p class="size-dowload">
-                    <span class="font-pri"><a href="">DOWNLOAD</a></span>
+                    <span class="font-pri"><a href="">{{ __("DOWNLOAD") }}</a></span>
                 </p>
             </div>
         </div>
@@ -63,7 +63,7 @@
                         <div class="desc-right">
                             <span class="font-cond font20">{{@get_file_size(get_field($post, 'newspaper_file'))}}</span>
                             <a href="{{ get_object_image(get_field($post, 'newspaper_file')) }}"
-                                class="font-pri">DOWNLOAD</a>
+                                class="font-pri">{{ __("DOWNLOAD") }}</a>
                         </div>
                     </div>
                 </div>

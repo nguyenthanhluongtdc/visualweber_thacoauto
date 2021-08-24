@@ -2,14 +2,15 @@
 
 namespace Platform\Car\Models;
 
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Platform\Base\Models\BaseModel;
+use Platform\Slug\Traits\SlugTrait;
 use Platform\Base\Traits\EnumCastable;
 use Platform\Base\Enums\BaseStatusEnum;
-use Platform\Base\Models\BaseModel;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Brand extends BaseModel
 {
-    use EnumCastable;
+    use EnumCastable, SlugTrait;
 
     /**
      * The database table used by the model.

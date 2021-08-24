@@ -87,6 +87,11 @@ class CategoryForm extends FormAbstract
                 'label_attr' => ['class' => 'control-label required'],
                 'choices'    => BaseStatusEnum::labels(),
             ])
+            ->add('template', 'customSelect', [
+                'label'      => trans('core/base::forms.template'),
+                'label_attr' => ['class' => 'control-label required'],
+                'choices'    => get_page_templates(),
+            ])
             ->setBreakFieldPoint('status');
     }
 }

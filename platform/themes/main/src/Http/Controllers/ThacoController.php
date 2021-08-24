@@ -53,7 +53,7 @@ class ThacoController extends PublicController
 
                 if ($slug) {
                     $data = (new PageService)->handleFrontRoutes($slug);
-                    
+
                     Theme::layout('default');
                     return Theme::scope('index', $data['data'], $data['default_view'])->render();
                 }
@@ -65,7 +65,6 @@ class ThacoController extends PublicController
         Theme::breadcrumb()->add(__('Home'), route('public.index'));
 
         event(RenderingHomePageEvent::class);
-
     }
 
     /**
@@ -87,7 +86,7 @@ class ThacoController extends PublicController
             return $this->getIndex();
         }
 
-        
+
         $slug = SlugHelper::getSlug($key, '');
 
         if (!$slug) {
@@ -111,7 +110,7 @@ class ThacoController extends PublicController
 
         if (!empty($result) && is_array($result)) {
             $view = isset(Arr::get($result, 'data.page')->template) ? Arr::get($result, 'data.page')->template : Arr::get($result, 'view', '');
-            if($view == 'post' || $view == 'page') {
+            if ($view == 'post' || $view == 'page') {
                 Theme::asset()->usePath()->add('reset_css', 'css/non-reset.css');
             }
             return Theme::scope($view, $result['data'], Arr::get($result, 'default_view'))->render();

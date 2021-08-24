@@ -37,10 +37,10 @@
                             <div class="form-group row">
                                 <label for="" class="col-sm-3 text-label mt-3">{{ __('Send to') }}:</label>
                                 <div class="col-sm-6 pr-0">
-                                    <select name="company" id="send_company">
+                                    <select name="company" id="contact_company">
                                         @if (has_field($page, 'send_to_list'))
                                         @foreach (get_field($page, 'send_to_list') as $key => $item)
-                                        <option value="sendto{{$key+1}}">{{ get_sub_field($item, 'send_to_item') }}</option>
+                                        <option value="{{ get_sub_field($item, 'send_to_item') }}">{{ get_sub_field($item, 'send_to_item') }}</option>
                                         @endforeach
                                         
                                         @endif
@@ -69,6 +69,14 @@
                                 </div>
 
                             </div>
+                            {{-- <div class="form-group row">
+                                <label for="" class="col-sm-3 text-label mt-3">{{ __('Email') }}:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="contact_email" placeholder=""
+                                        name="email" value="{{ old('email') }}">
+                                </div>
+
+                            </div> --}}
                             <div class="form-group row">
                                 <label for="" class="col-sm-3 text-label mt-3">{{ __('Content') }}:</label>
                                 <div class="col-sm-9">
@@ -115,7 +123,7 @@
 <section class="section-info-contact-mobile" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out"
     data-aos-delay="50">
     <div class="container-remake">
-        <h2 class="contact__title font-pri-bold text-uppercase fontmb-large">Thông tin cá nhân</h2>
+        <h2 class="contact__title font-pri-bold text-uppercase fontmb-large"> {{ __('personal information') }}</h2>
         <div class="info-contact">
 
             <div class="info-contact-form mb-6">
@@ -123,13 +131,13 @@
                 <div id="contact-form" class="form-horizontal form-contact-us">
                     {!! Form::open(['route' => 'public.send.contact', 'method' => 'POST']) !!}
                     <div class="contact-input">
-                        <label class="fontmb-medium font-pri-bold">Họ và tên<span>*</span></label>
+                        <label class="fontmb-medium font-pri-bold">{{ __('Full name') }}<span>*</span></label>
                         <input type="text" class="contact-form-input" name="name" value="{{ old('name') }}" id="contact_name"
                        placeholder="{{ __('Name') }}" required />
                         {{-- <input type="text" required /> --}}
                     </div>
                     <div class="contact-input">
-                        <label class="fontmb-medium font-pri-bold">Điện thoại<span>*</span></label>
+                        <label class="fontmb-medium font-pri-bold">{{ __('Phone') }}<span>*</span></label>
                         <input type="text" class="contact-form-input" name="phone" value="{{ old('phone') }}" id="contact_phone"
                        placeholder="{{ __('Phone') }}" required>
                         {{-- <input type="text" required /> --}}
@@ -141,30 +149,30 @@
                         {{-- <input type="text" required /> --}}
                     </div>
                     <div class="contact-input">
-                        <label class="fontmb-medium font-pri-bold">Tiêu đề<span>*</span></label>
+                        <label class="fontmb-medium font-pri-bold">{{ __('Subject') }}<span>*</span></label>
                         <input type="text" class="contact-form-input" name="subject" value="{{ old('subject') }}" id="contact_subject"
                        placeholder="{{ __('Subject') }}" required>
                         {{-- <input type="text" required /> --}}
                     </div>
                     <div class="contact-input wide">
-                        <label class="fontmb-medium font-pri-bold">Nội dung <span>*</span></label>
+                        <label class="fontmb-medium font-pri-bold">{{ __('Content') }}<span>*</span></label>
                         <textarea name="content" id="contact_content" class="contact-form-input" rows="5" placeholder="{{ __('Message') }}" required>{{ old('content') }}</textarea>
                         {{-- <textarea required></textarea> --}}
 
                     </div>
                     <div class="contact-noti">
-                        <label class="fontmb-medium font-pri-bold pt-4 pb-2">Thông báo bảo mật dữ liệu</label>
+                        <label class="fontmb-medium font-pri-bold pt-4 pb-2">{{ __('Data privacy notice') }}</label>
                         <p class="text-noti font-pri">Thaco hoặc các đại lý của Thaco có thể sử dụng thông tin mà bạn
                             cung cấp cùng với thông tin khác mà chúng tôi có thể liên hệ với bạn, bao gồm thư, điện
                             thoại, SMS, fax hoặc email, với các ưu đãi hoặc thông tin về sản phẩm và dịch vụ của Thaco
                             mà chúng tôi có thể cung cấp. Chúng tôi có thể giữ thông tin của bạn trong một khoản thời
                             gian hợp lý để liên hệ với bạn về các đề nghị, lời mời hoặc thông tin về các sản phẩm và
-                            dịch vụ của chúng tôi. Để tiếp tục bạn phải đọc <a href="#">Chính sách bảo mật</a></p>
+                            dịch vụ của chúng tôi. Để tiếp tục bạn phải đọc <a href="#">{{ __('Privacy Policy') }}</a></p>
                         <div class="checkpolicy">
                             <div class="styled-input-single">
                                 <input type="checkbox" name="fieldset-2" id="radio-example-two" />
-                                <label for="radio-example-two" class="font28 text-noti font-pri">Tôi đã đọc và hiểu <a
-                                        href="#">Chính sách bảo mật</a></label>
+                                <label for="radio-example-two" class="font28 text-noti font-pri">{{ __('I have read and understand') }} <a
+                                        href="#">{{ __('Privacy Policy') }}</a></label>
                             </div>
 
 
@@ -173,8 +181,27 @@
 
                 </div>
                 {{-- <div class="btn-lrg  submit-btn fontmb-medium">GỬI THÔNG TIN</div> --}}
+                @if(session()->has('success_msg') || session()->has('error_msg') || isset($errors))
+                @if (session()->has('success_msg'))
+                    <div class="alert alert-success font-helve-light font18">
+                        <p>{{__('Send successfully')}}</p>
+                    </div>
+                @endif
+                @if (session()->has('error_msg'))
+                    <div class="alert alert-danger font-helve-light font18">
+                        <p>{{ session('error_msg') }}</p>
+                    </div>
+                @endif
+                @if (isset($errors) && count($errors))
+                    <div class="alert alert-danger font-helve-light font18">
+                        @foreach ($errors->all() as $error)
+                            <span>{{ $error }}</span> <br>
+                        @endforeach
+                    </div>
+                @endif
+            @endif
 
-                <button class="btn btn-secondary" type="submit" value="SEND">
+                <button class="btn-lrg  submit-btn fontmb-medium" type="submit" value="SEND">
                     {{ __('Send') }}
                 </button>
 

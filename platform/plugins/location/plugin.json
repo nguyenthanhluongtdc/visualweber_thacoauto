@@ -1,0 +1,9 @@
+{
+    "name": "Location",
+    "namespace": "Platform\\Location\\",
+    "provider": "Platform\\Location\\Providers\\LocationServiceProvider",
+    "author": "Laravel Technologies",
+    "url": "https://laravel-cms.demo.gistensal.com",
+    "version": "1.0",
+    "description": "The description for module location"
+}

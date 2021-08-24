@@ -865,9 +865,21 @@
           @include height(240);
         }
         .tag-name {
+          margin-top: 6px;
+          @media (max-width: 1720px) {
+            margin-top: 3.5px;
+          }
+          @media (max-width: 1680px) {
+           margin-top: 3px;
+          }
+          @media (max-width: 1440px) {
+           margin-top: 2.5px;
+          }
+          
           .name-tag {
             font-size: 18px;
             margin-right: 10px;
+            
           }
         }
 

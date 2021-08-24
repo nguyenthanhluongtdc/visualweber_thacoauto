@@ -31,7 +31,7 @@ if (!function_exists('get_file_name')) {
     function get_file_name($reference)
     {
         $file = new SplFileInfo($reference);
-    
+
         return $file->getFilename();
     }
 }
@@ -39,25 +39,37 @@ if (!function_exists('get_file_name')) {
 if (!function_exists('get_file_size')) {
     function get_file_size($path)
     {
-        $bytes = sprintf('%u', filesize('storage/'.$path));
+        $bytes = sprintf('%u', filesize('storage/' . $path));
 
-    if ($bytes > 0)
-    {
-        $unit = intval(log($bytes, 1024));
-        $units = array('B', 'KB', 'MB', 'GB');
+        if ($bytes > 0) {
+            $unit = intval(log($bytes, 1024));
+            $units = array('B', 'KB', 'MB', 'GB');
 
-        if (array_key_exists($unit, $units) === true)
-        {
-            return sprintf('%d %s', $bytes / pow(1024, $unit), $units[$unit]);
+            if (array_key_exists($unit, $units) === true) {
+                return sprintf('%d %s', $bytes / pow(1024, $unit), $units[$unit]);
+            }
         }
-    }
 
-    return $bytes;
+        return $bytes;
     }
 }
+
 if (!function_exists('render_media_gallery')) {
+    /**
+     * render media gallery function
+     *
+     * @param [type] $post
+     * @return void
+     */
     function render_media_gallery($post)
     {
-        return \Theme::scope('gallery-detail', ['post'=> $post])->render();
+        return \Theme::scope('gallery-detail', ['post' => $post])->render();
+    }
+}
+
+if (!function_exists('get_first_video_post')) {
+    function get_first_video_post()
+    {
+        return app(PostInterface::class)->getFirstVideoPost() ?? collect();
     }
 }

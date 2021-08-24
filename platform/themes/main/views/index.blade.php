@@ -22,7 +22,7 @@
 
 
 <div class="section-news-home container-remake">
-    <h2 class="font-pri-bold font60 fontmb-large color-gray">TIN TỨC VÀ SỰ KIỆN</h2>
+    <h2 class="font-pri-bold font60 fontmb-large color-gray">{{ __('TIN TỨC VÀ SỰ KIỆN') }}</h2>
     <div class="content">
         <div class="left left-desktop" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
             @php
@@ -102,28 +102,25 @@
         </div>
         <div class="right">
             <div class="top" data-aos="fade-left" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="250">
-            @if (!empty(get_featured_posts_by_category(22, 1)))
-                @foreach (get_featured_posts_by_category(22, 1) as $post)
-                    @if($loop->first)
-                        @if(!empty(get_field($post, 'video_gallery')[0]))
-                        <div class="img-item">
-                            <a data-fancybox href="https://www.youtube.com/watch?v={{get_sub_field(get_field($post, 'video_gallery')[0], 'youtube_code')}}">
-                                <div class="play"></div>
-                                <img src="{{ get_object_image($post->image) }}" alt="">
-                            </a>
-                        </div>
-                        <h3 class="title font30 fontmb-small text-uppercase">
-                            <a data-fancybox href="https://www.youtube.com/watch?v={{get_sub_field(get_field($post, 'video_gallery')[0], 'youtube_code')}}" class="font-pri-bold color-gray font30 fontmb-small">{{$post->name}}</a>
-                        </h3>
-                        @endif
-                    @endif
-                @endforeach
-            @endif
+                @php
+                    $post = is_plugin_active() ? get_first_video_post() : collect();
+                @endphp
+                @if(isset(get_field($post, 'video_gallery')[0]))
+                    <div class="img-item">
+                        <a data-fancybox href="https://www.youtube.com/watch?v={{get_sub_field(get_field($post, 'video_gallery')[0], 'youtube_code')}}">
+                            <div class="play"></div>
+                            <img src="{{ get_object_image($post->image) }}" alt="">
+                        </a>
+                    </div>
+                    <h3 class="title font30 fontmb-small text-uppercase">
+                        <a data-fancybox href="https://www.youtube.com/watch?v={{get_sub_field(get_field($post, 'video_gallery')[0], 'youtube_code')}}" class="font-pri-bold color-gray font30 fontmb-small">{{$post->name}}</a>
+                    </h3>
+                @endif
             </div>
 
             <div class="bottom" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="50">
                 <p class="title font-pri-bold font16 fontmb-middle">
-                    Điểm tin
+                    {{ __("Điểm tin") }}
                 </p>
 
                 <div class="scollbar-wrap-home">
@@ -990,7 +987,7 @@
                 </div>
             </div>
         </div>
-    </div> 
+    </div>
 </div>
 
 {{-- đối tác --}}

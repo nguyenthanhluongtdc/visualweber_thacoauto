@@ -30,5 +30,10 @@ interface PostInterface extends BlogPostInterface
      */
     public function getOnlyFeaturedByCategoryCreated($categoryId, int $limit = 5, $createdAt = null, array $with = []);
 
-    
+    /**
+     * Get first video post function
+     *
+     * @return void
+     */
+    public function getFirstVideoPost();
 }

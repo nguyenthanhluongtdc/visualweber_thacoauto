@@ -69,7 +69,7 @@ class PostRepository extends BlogPostRepository
         }
 
         $data = $this->getModel()
-            ->whereHas('categories', function($q) use($categoryId) {
+            ->whereHas('categories', function ($q) use ($categoryId) {
                 $q->whereIn('categories.id', $categoryId);
             })
             ->with(array_merge(['slugable'], $with))
@@ -80,5 +80,19 @@ class PostRepository extends BlogPostRepository
 
         return $this->applyBeforeExecuteQuery($data)->paginate($limit);
     }
-    
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getFirstVideoPost()
+    {
+        $data = $this->getModel()
+            ->where('format_type', 'video')
+            ->whereStatus(BaseStatusEnum::PUBLISHED)
+            ->orderBy('is_featured', 'desc')
+            ->orderBy('created_at', 'desc')
+            ->orderBy('id', 'desc');
+
+        return $this->applyBeforeExecuteQuery($data)->first();
+    }
 }

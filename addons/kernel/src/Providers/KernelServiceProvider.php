@@ -24,9 +24,9 @@ class KernelServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        // $this->app->bind(PostInterface::class, function () {
-        //     return new PostCacheDecorator(new PostRepository(new Post));
-        // });
+        $this->app->bind(PostInterface::class, function () {
+            return new PostCacheDecorator(new PostRepository(new Post));
+        });
 
         // Helper::autoload(__DIR__ . '/../../helpers');
     }

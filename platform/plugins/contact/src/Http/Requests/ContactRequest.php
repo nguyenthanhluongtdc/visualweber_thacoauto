@@ -17,16 +17,20 @@ class ContactRequest extends Request
     {
         if (setting('enable_captcha') && is_plugin_active('captcha')) {
             return [
-                'firstname'           => 'required',
-                'lastname'           => 'required',
+                // 'firstname'           => 'required',
+                // 'lastname'           => 'required',
+                // 'agree'                 => 'required',
                 'content'              => 'required',
                 'g-recaptcha-response' => 'required|captcha',
             ];
         }
         return [
-            'firstname'           => 'required',
-            'lastname'           => 'required',
+            // 'firstname'           => 'required',
+            // 'lastname'           => 'required',
+
             'content' => 'required',
+            // 'agree'                 => 'required',
+
         ];
     }
 
@@ -36,9 +40,10 @@ class ContactRequest extends Request
     public function messages()
     {
         return [
-            'firstname.required'    => trans('Họ là bắt buộc'),
-            'lastname.required'    => trans('Tên là bắt buộc'),
+            // 'firstname.required'    => trans('Họ là bắt buộc'),
+            // 'lastname.required'    => trans('Tên là bắt buộc'),
             'content.required' => trans('plugins/contact::contact.form.content.required'),
+            // 'agree.required' => trans('Vui lòng nhấn vào ô xác nhận'),
         ];
     }
 }

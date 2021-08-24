@@ -82,7 +82,7 @@
     "Social links": "Social links",
     "Something is broken. Please let us know what you were doing when this error occurred. We will fix it as soon as possible. Sorry for any inconvenience caused.": "Something is broken. Please let us know what you were doing when this error occurred. We will fix it as soon as possible. Sorry for any inconvenience caused.",
     "Sorry, we are doing some maintenance. Please check back soon.": "Sorry, we are doing some maintenance. Please check back soon.",
-    "Subject": "Subject",
+    "Subject" : "Tiêu đề",
     "Submit": "Submit",
     "Subscribe to newsletter successfully!": "Subscribe to newsletter successfully!",
     "Tags": "Tags",
@@ -129,5 +129,10 @@
     "information privacy policy" : "Chính sách bảo mật thông tin",
     "Contact" : "Liên hệ",
     "business license" : "Giấy phép kinh doanh",
-    "connect with us" : "Kết nối với chúng tôi"
+    "connect with us" : "Kết nối với chúng tôi",
+    "Send successfully" : "Gửi thành công!!",
+    "personal information" : "Thông tin cá nhân",
+    "Data privacy notice" : "Thông báo bảo mật dữ liệu",
+    "Privacy Policy" : "Chính sách bảo mật",
+    "I have read and understand" : "Tôi đã đọc và hiểu"
 }

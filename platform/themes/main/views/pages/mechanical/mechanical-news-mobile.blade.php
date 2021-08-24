@@ -6,10 +6,10 @@
         <div class="section-list-news">
             <div class="section-list-news-header  d-flex  align-items-center mb-60">
                 <h2 class="title font-pri-bold fontmb-large text-uppercase">
-                    Tin tức
+                    {{ __("Tin tức") }}
                 </h2>
             </div>
-            
+
             <div class="content">
                 @forelse($posts as $post)
                     <div class="item mx-0" data-aos="fade-left" data-aos-duration="1500" data-aos-easing="ease-in-out"
@@ -26,14 +26,13 @@
                                 </div>
                             </div>
                             <div class="content">
-                                <h3 class="fontmb-middle font-pri-bold">Lorem ipsum dolor, sit amet consectetur adipisicing
-                                    elit. Ipsa quas nisi totam tenetur eveniet neque</h3>
+                                <h3 class="fontmb-middle font-pri-bold">{!! $post->name !!}</h3>
                             </div>
                         </div>
                     </div>
 
                     @empty
-                    <p> empty </p>
+                    <p>{{ __("Nội dung đang được cập nhật") }}</p>
                 @endforelse
 
                 {{-- <div class="item mx-0" data-aos="fade-left" data-aos-duration="1600" data-aos-easing="ease-in-out"

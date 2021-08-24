@@ -185,6 +185,7 @@
         }
       }
     }
+
     .search-language {
       padding-left: 5%;
       width: 15%;
@@ -247,7 +248,8 @@
         }
         .nav-item {
           &.active {
-            pointer-events: none;opacity:0.6;
+            pointer-events: none;
+            opacity: 0.6;
           }
           .nav-link {
             color: #fff;

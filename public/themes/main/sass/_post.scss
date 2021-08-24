@@ -76,6 +76,10 @@
       text-align: justify;
       align-items: center;
       justify-content: space-between;
+      font-size: 25px !important;
+      @media (max-width: 1080px) {
+        font-size: 18px !important;
+      }
     }
     .post__content {
       p{

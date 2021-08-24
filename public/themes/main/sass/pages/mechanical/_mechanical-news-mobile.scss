@@ -132,10 +132,12 @@
         flex-wrap: wrap;
         @include mobileMarginBottom(40, "-");
         @include marginRight(35, "-");
-        @include mobileMarginRight(85, "-");
+        @include mobileMarginRight(55, "-");
+        align-items: center;
+        justify-content: center;
         li {
             @include flex(35);
-            @include mobileFlex(85);
+            @include mobileFlex(55);
              margin-right: 0 !important;
             
              @include mobileMarginBottom(40, "+");
@@ -153,7 +155,7 @@
                  font-size: 17px;
              }
              @media (max-width: 480px) {
-                 font-size: 14px;
+                 font-size: 15px;
              }
         }
     }

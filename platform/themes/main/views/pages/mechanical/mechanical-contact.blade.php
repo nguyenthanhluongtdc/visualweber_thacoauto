@@ -64,6 +64,25 @@
                             </div>
                         </div>      
                     </div>
+                    @if(session()->has('success_msg') || session()->has('error_msg') || isset($errors))
+                @if (session()->has('success_msg'))
+                    <div class="alert alert-success font-helve-light font18" style="margin-top : 30px">
+                        <p>{{__('Send successfully')}}</p>
+                    </div>
+                @endif
+                @if (session()->has('error_msg'))
+                    <div class="alert alert-danger font-helve-light font18">
+                        <p>{{ session('error_msg') }}</p>
+                    </div>
+                @endif
+                @if (isset($errors) && count($errors))
+                    <div class="alert alert-danger font-helve-light font18">
+                        @foreach ($errors->all() as $error)
+                            <span>{{ $error }}</span> <br>
+                        @endforeach
+                    </div>
+                @endif
+            @endif
                     {!! Form::close() !!}
                 </div>    
             </div>

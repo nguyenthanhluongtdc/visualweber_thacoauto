@@ -1,7 +1,9 @@
 {!! do_shortcode('[filter-media][/filter-media]') !!}
 
 @php
-    $imageFeatures = $videoFeatures = get_featured_posts_by_category($category->id, 5);
+    $posts = get_featured_posts_by_category($category->id, 1000);
+    $imageFeatures = collect($posts)->where('format_type' , 'gallery');
+    $videoFeatures = collect($posts)->where('format_type' , 'video');
 @endphp
 <div class="tabs-mobile">
     <div class="container-remake">

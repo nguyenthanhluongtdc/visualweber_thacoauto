@@ -101,3 +101,24 @@ function save_addition_fields($screen, $request, $data)
         \MetaBox::saveMetaBoxData($data, 'region_post', $request->input('region'));
     }
 }
+
+
+register_post_format(
+    [
+        ''        => [
+            'key'  => '',
+            'icon' => null,
+            'name' => 'Default',
+        ],
+        'gallery' => [
+            'key'  => 'gallery',
+            'icon' => 'fa fa-image',
+            'name' => 'Gallery',
+        ],
+        'video'   => [
+            'key'  => 'video',
+            'icon' => 'fa fa-camera',
+            'name' => 'Video',
+        ],
+    ]
+);

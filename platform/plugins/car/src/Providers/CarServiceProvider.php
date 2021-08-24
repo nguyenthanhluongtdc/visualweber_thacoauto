@@ -2,17 +2,17 @@
 
 namespace Platform\Car\Providers;
 
-use Illuminate\Support\ServiceProvider;
-use Platform\Base\Supports\Helper;
-use Illuminate\Support\Facades\Event;
-use Platform\Base\Traits\LoadAndPublishDataTrait;
-use Illuminate\Routing\Events\RouteMatched;
-use Platform\Car\Models\Brand;
 use Platform\Car\Models\Car;
+use Platform\Car\Models\Brand;
+use Platform\Base\Supports\Helper;
 use Platform\Car\Models\CarCategory;
+use Illuminate\Support\Facades\Event;
+use Illuminate\Support\ServiceProvider;
+use Illuminate\Routing\Events\RouteMatched;
+use Platform\Car\Providers\HookServiceProvider;
+use Platform\Base\Traits\LoadAndPublishDataTrait;
 use Platform\Car\Repositories\Interfaces\BrandInterface;
 use Platform\Car\Repositories\Interfaces\CarCategoryInterface;
-use Platform\Car\Repositories\Interfaces\CarInterface;
 
 class CarServiceProvider extends ServiceProvider
 {
@@ -127,7 +127,7 @@ class CarServiceProvider extends ServiceProvider
                 'permissions' => ['car.index'],
             ]);
         });
-
+        $this->app->register(HookServiceProvider::class);
         $this->app->booted(function () {
             if (defined('CUSTOM_FIELD_MODULE_SCREEN_NAME')) {
                 \CustomField::registerModule(Brand::class)
@@ -138,7 +138,16 @@ class CarServiceProvider extends ServiceProvider
                         return [
                             Brand::class => trans('plugins/car::brand.name'),
                         ];
-                    });
+                    })
+                    ->registerModule(CarCategory::class)
+                        ->registerRule('basic', trans('plugins/car::car-category.name'), CarCategory::class, function () {
+                            return $this->app->make(CarCategoryInterface::class)->pluck('app_car_categories.name', 'app_car_categories.id');
+                        })
+                        ->expandRule('other', trans('plugins/custom-field::rules.model_name'), 'model_name', function () {
+                            return [
+                                CarCategory::class => trans('plugins/car::car-category.name'),
+                            ];
+                    });;
             }
         });
     }

@@ -1,5 +1,5 @@
 
-@if($post->categories->first()->id==20 || $post->categories->first()->id==22)
+@if(in_array($post->format_type, ['gallery', 'video']))
 {!!render_media_gallery($post)!!}
 @else
 {!! do_shortcode('[filter-media][/filter-media]') !!}

@@ -47,7 +47,7 @@ class PostForm extends FormAbstract
         if (!$this->formHelper->hasCustomField('categoryMulti')) {
             $this->formHelper->addCustomField('categoryMulti', CategoryMultiField::class);
         }
-
+        dd(get_categories_with_children());
         $this
             ->setupModel(new Post)
             ->setValidatorClass(PostRequest::class)

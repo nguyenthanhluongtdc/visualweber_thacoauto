@@ -13,25 +13,16 @@ class ContactRequest extends Request
      *
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      */
-    public function rules()
-    {
-        if (setting('enable_captcha') && is_plugin_active('captcha')) {
+     public function rules()
+    {   
             return [
                 // 'firstname'           => 'required',
                 // 'lastname'           => 'required',
-                // 'agree'                 => 'required',
-                'content'              => 'required',
-                'g-recaptcha-response' => 'required|captcha',
+                // 'content' => 'required',
+                'agree'                 => 'required',
+    
             ];
-        }
-        return [
-            // 'firstname'           => 'required',
-            // 'lastname'           => 'required',
-
-            'content' => 'required',
-            // 'agree'                 => 'required',
-
-        ];
+       
     }
 
     /**
@@ -42,8 +33,8 @@ class ContactRequest extends Request
         return [
             // 'firstname.required'    => trans('Họ là bắt buộc'),
             // 'lastname.required'    => trans('Tên là bắt buộc'),
-            'content.required' => trans('plugins/contact::contact.form.content.required'),
-            // 'agree.required' => trans('Vui lòng nhấn vào ô xác nhận'),
+            // 'content.required' => trans('plugins/contact::contact.form.content.required'),
+            'agree.required' => trans('Vui lòng nhấn vào ô xác nhận'),
         ];
     }
 }

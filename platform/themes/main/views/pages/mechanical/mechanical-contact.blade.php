@@ -59,6 +59,7 @@
                                     <label class="font20 fontmb-medium">nội dung</label>
                                 </div>
                             </div>
+                            <input type="checkbox" name="agree" checked/ style="opacity: 0">
                             <div class="col-md-12">
                                 <button type="submit" class="contact-button  fontmb-medium btn-lrg  submit-btn font20"  >GỬI ĐI</button>
                             </div>

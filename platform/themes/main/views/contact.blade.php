@@ -53,11 +53,11 @@
                                 <div class="col-sm-9 row pr-0">
                                     <div class="col-sm-6 pr-0">
                                         <input type="text" class="form-control" id="contact_firstname"
-                                            placeholder="{{ __('Surname') }}*" name="firstname" value="{{ old('firstname') }}">
+                                            placeholder="{{ __('Surname') }}*" name="firstname" value="{{ old('firstname') }}" required>
                                     </div>
                                     <div class="col-sm-6 pr-0">
                                         <input type="text" class="form-control" id="contact_lastname"
-                                            placeholder="{{ __('First name') }}*" name="lastname" value="{{ old('lastname') }}">
+                                            placeholder="{{ __('First name') }}*" name="lastname" value="{{ old('lastname') }}" required>
                                     </div>
                                 </div>
                             </div>
@@ -81,7 +81,7 @@
                                 <label for="" class="col-sm-3 text-label mt-3">{{ __('Content') }}:</label>
                                 <div class="col-sm-9">
                                     <textarea name="content" id="contact_content" class="form-control" rows="5"
-                                        placeholder="{{ __('Nội dung') }}">{{ old('content') }}</textarea>
+                                        placeholder="{{ __('Nội dung') }}" required>{{ old('content') }}</textarea>
                                 </div>
 
                             </div>
@@ -165,7 +165,7 @@
                         <p class="text-noti font-pri">{!! get_field($page, 'policy_mobie_text') !!} <a href="#">{{ __('Privacy Policy') }}</a></p>
                         <div class="checkpolicy">
                             <div class="styled-input-single">
-                                <input type="checkbox" name="fieldset-2" id="radio-example-two" />
+                                <input type="checkbox" name="agree" id="radio-example-two" />
                                 <label for="radio-example-two" class="font28 text-noti font-pri">{{ __('I have read and understand') }} <a
                                         href="#">{{ __('Privacy Policy') }}</a></label>
                             </div>

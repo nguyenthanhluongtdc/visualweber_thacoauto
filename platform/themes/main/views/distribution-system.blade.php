@@ -486,8 +486,8 @@
             zoom: 1,
             crs: L.CRS.Simple
         });
-        var w = 2000;
-        var h = 3500;
+        var w = 2049;
+        var h = 3185;
         var url = "{{ Theme::asset()->url('images/distribution/map.png') }}";
         var southWest = map.unproject([ 0, h], map.getMaxZoom()-1);
         var northEast = map.unproject([ w, 0], map.getMaxZoom()-1);
@@ -507,15 +507,23 @@
             return yx(y, x);  // When doing xy(x, y);
         };
 
-        var sol      = xy(0, 0);
-        var mizar    = xy( 525, 0);
-        var kruegerZ = xy( 0,  -875);
-        var deneb    = xy(525,   -875);
+        var greenIcon = L.icon({
+            iconUrl: "{{ Theme::asset()->url('images/distribution/marker.png') }}",
 
-        L.marker(new L.LatLng(-500, 200)).addTo(map).bindPopup(      'Sol');
+            iconSize:     [30, 30], // size of the icon
+            iconAnchor:   [20, 20], // point of the icon which will correspond to marker's location
+            popupAnchor:  [-3, -25] // point from which the popup should open relative to the iconAnchor
+        });
+
+        let marker = L.marker(new L.LatLng(-630.8, 254), {icon: greenIcon}).addTo(map).bindPopup('<h5>This is the Transamerica Pyramid</h5>')
+        L.marker(new L.LatLng(-640.8, 300), {icon: greenIcon}).addTo(map).bindPopup('<h5>This is the Transamerica Pyramid</h5>')
+        L.marker(new L.LatLng(-660.8, 200), {icon: greenIcon}).addTo(map).bindPopup('<h5>This is the Transamerica Pyramid</h5>')
+        L.marker(new L.LatLng(-650.8, 240), {icon: greenIcon}).addTo(map).bindPopup('<h5>This is the Transamerica Pyramid</h5>')
+        L.marker(new L.LatLng(-620.8, 240), {icon: greenIcon}).addTo(map).bindPopup('<h5>This is the Transamerica Pyramid</h5>')
 
         setTimeout(() => {
-            window.__map.panTo(new L.LatLng(-500, 200))
+            window.__map.setView(new L.LatLng(-630.8, 254), 2)
+            // marker.openPopup()
         }, 300)
     }
     $(document).ready(function() {

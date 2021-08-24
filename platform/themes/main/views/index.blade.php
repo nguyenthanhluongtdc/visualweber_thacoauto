@@ -103,7 +103,7 @@
         <div class="right">
             <div class="top" data-aos="fade-left" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="250">
                 @php
-                    $post = is_plugin_active() ? get_first_video_post() : collect();
+                    $post = is_plugin_active('blog') ? get_first_video_post() : collect();
                 @endphp
                 @if(isset(get_field($post, 'video_gallery')[0]))
                     <div class="img-item">

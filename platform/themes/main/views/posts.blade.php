@@ -2,10 +2,10 @@
     {!! do_shortcode('[filter-media][/filter-media]') !!}
     <div class="container-remake">
         @php
-            $posts = get_posts_by_category(15, 5);
-            $postsFeatures = get_featured_posts_by_category(15, 5);
+            $posts = get_posts_by_category($category->id ?? 15, 5);
+            $postsFeatures = get_featured_posts_by_category($category->id ?? 15, 5);
         @endphp
-        <div class="meida-top">   
+        <div class="meida-top">
             @if (!empty($postsFeatures))
                 @foreach ($postsFeatures as $post)
                     <div class="media-top-item">
@@ -64,7 +64,7 @@
             </div>
             <div class="list-post-new">
                 <div class="wrap">
-                    <h2 class="font-mi-bold font30">tin tức mới nhất</h2>
+                    <h2 class="font-mi-bold font30">{{ __("tin tức mới nhất") }}</h2>
                     <ul id="new-posts" class="">
                         @if (!empty($postsFeatures))
                             @foreach ($postsFeatures as $post)
@@ -88,7 +88,7 @@
                         <img src="{{Theme::asset()->url('images/media/loading.gif')}}" alt="">
                     </div>
                     <div class="view-all-news font15 font-mi-bold">
-                        <a id="posts-load-more" href="javascript:;">Xem thêm<span><i class="fas fa-arrow-right font15"></i></span></a>
+                        <a id="posts-load-more" href="javascript:;">{{ __("Xem thêm") }}<span><i class="fas fa-arrow-right font15"></i></span></a>
                     </div>
                 </div>
             </div>

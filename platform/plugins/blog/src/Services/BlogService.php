@@ -42,8 +42,11 @@ class BlogService
         switch ($slug->reference_type) {
             case Post::class:
                 $post = app(PostInterface::class)
-                    ->getFirstBy($condition, ['*'],
-                        ['categories', 'tags', 'slugable', 'categories.slugable', 'tags.slugable']);
+                    ->getFirstBy(
+                        $condition,
+                        ['*'],
+                        ['categories', 'tags', 'slugable', 'categories.slugable', 'tags.slugable']
+                    );
 
                 if (empty($post)) {
                     abort(404);
@@ -66,8 +69,10 @@ class BlogService
                 SeoHelper::setSeoOpenGraph($meta);
 
                 if (function_exists('admin_bar') && Auth::check() && Auth::user()->hasPermission('posts.edit')) {
-                    admin_bar()->registerLink(trans('plugins/blog::posts.edit_this_post'),
-                        route('posts.edit', $post->id));
+                    admin_bar()->registerLink(
+                        trans('plugins/blog::posts.edit_this_post'),
+                        route('posts.edit', $post->id)
+                    );
                 }
 
                 Theme::breadcrumb()->add(__('Home'), route('public.index'));
@@ -110,17 +115,19 @@ class BlogService
                 SeoHelper::setSeoOpenGraph($meta);
 
                 if (function_exists('admin_bar') && Auth::check() && Auth::user()->hasPermission('categories.edit')) {
-                    admin_bar()->registerLink(trans('plugins/blog::categories.edit_this_category'),
-                        route('categories.edit', $category->id));
+                    admin_bar()->registerLink(
+                        trans('plugins/blog::categories.edit_this_category'),
+                        route('categories.edit', $category->id)
+                    );
                 }
 
-                $allRelatedCategoryIds = array_unique(array_merge(
-                    app(CategoryInterface::class)->getAllRelatedChildrenIds($category),
-                    [$category->id]
-                ));
+                // $allRelatedCategoryIds = array_unique(array_merge(
+                //     app(CategoryInterface::class)->getAllRelatedChildrenIds($category),
+                //     [$category->id]
+                // ));
 
-                $posts = app(PostInterface::class)
-                    ->getByCategory($allRelatedCategoryIds, theme_option('number_of_posts_in_a_category', 12));
+                // $posts = app(PostInterface::class)
+                //     ->getByCategory($allRelatedCategoryIds, theme_option('number_of_posts_in_a_category', 12));
 
                 do_action(BASE_ACTION_PUBLIC_RENDER_SINGLE, CATEGORY_MODULE_SCREEN_NAME, $category);
 
@@ -128,11 +135,13 @@ class BlogService
                     ->add(__('Home'), route('public.index'))
                     ->add(SeoHelper::getTitle(), $category->url);
 
+                $slug = $category->slug;
+
                 return [
-                    'view'         => 'category',
+                    'view'         => $category->template ?: 'category',
                     'default_view' => 'plugins/blog::themes.category',
-                    'data'         => compact('category', 'posts'),
-                    'slug'         => $category->slug,
+                    'data'         => compact('category', 'slug'),
+                    'slug'         => $slug,
                 ];
             case Tag::class:
                 $tag = app(TagInterface::class)->getFirstBy($condition, ['*'], ['slugable']);

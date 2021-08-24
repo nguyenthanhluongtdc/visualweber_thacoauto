@@ -126,7 +126,7 @@
                     Điểm tin
                 </p>
 
-                <div class="scollbar-wrap-home overflow-x-hidden">
+                <div class="scollbar-wrap-home">
                     <div id="hours">
                         <img class="logo-frame flag-1" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
                         <img class="logo-frame flag-2" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">

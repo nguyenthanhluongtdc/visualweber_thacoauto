@@ -514,7 +514,9 @@
                 transition: all 1000ms cubic-bezier(0.19, 1, 0.22, 1);
                 box-sizing: border-box;
                 text-align: center;
-                
+                @supports (-webkit-touch-callout: none) {
+                  background-color: $color-primary;
+                }
                 a{
                     color: white;
                 }

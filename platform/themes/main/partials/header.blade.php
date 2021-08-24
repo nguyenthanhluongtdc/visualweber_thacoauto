@@ -68,7 +68,7 @@
             @endphp
             <div class="search-language">
                 <div class="search">
-                    <a href="/search"><img src="{{ Theme::asset()->url('images/main/search.png') }}" alt=""></a>
+                    <a href="#search"><img src="{{ Theme::asset()->url('images/main/search.png') }}" alt=""></a>
                 </div>
                 <div class="language">
                     <ul class="nav-lang">
@@ -86,6 +86,19 @@
                         </li> --}}
                     </ul>
                 </div>
+            </div>
+        </div>
+        <div id="search-box">
+            <div class="container">
+              <a class="close" href="#close"></a>
+              <div class="search-main">
+                <div class="search-inner">
+                  <form action="">
+                    <input class="font50" type="text" id="inputSearch" name="key" placeholder="">
+                    <span class="search-info">Hit enter to search or ESC to close</span>
+                  </form>
+                </div>
+              </div>
             </div>
         </div>
     </header>
@@ -121,5 +134,9 @@
             </div>
         </div>
     </div>
+
+    <script>
+       
+    </script>
 
     <div id="page-wrap">

@@ -2,7 +2,7 @@
     <div class="container-remake">
         <div class="product-detail">
             <h2 class="product-detail__title font-mi-bold font60 fontmb-large">
-                Ô TÔ DU LỊCH
+                {{$data->name}}
             </h2>
             <img src="{{Theme::asset()->url('images/services/otodulich.png')}}" alt="" class="product-detail__banner">
             <h2 class="product-detail__title font-mi-bold font60 fontmb-large">

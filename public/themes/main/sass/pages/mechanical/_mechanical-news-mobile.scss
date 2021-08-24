@@ -13,6 +13,9 @@
         }
         .content { 
             margin-top: 3%;
+            h3 {
+                @include split_str(3);
+            }
             
             img {
                 max-width: 100%;
@@ -128,15 +131,13 @@
         display: flex;
         flex-wrap: wrap;
         @include mobileMarginBottom(40, "-");
-        
+        @include marginRight(35, "-");
+        @include mobileMarginRight(85, "-");
         li {
-            display: table;
-            margin: 0 auto;
-            @include mobileFlex(55);
-             margin-right: 0;
-             @media (max-width: 400px) {
-                @include mobileFlex(35);
-            }
+            @include flex(35);
+            @include mobileFlex(85);
+             margin-right: 0 !important;
+            
              @include mobileMarginBottom(40, "+");
 
              @media (max-width: 1080px) {
@@ -152,10 +153,7 @@
                  font-size: 17px;
              }
              @media (max-width: 480px) {
-                 font-size: 12px;
-             }
-             @media (max-width: 360px) {
-                 font-size: 10px;
+                 font-size: 14px;
              }
         }
     }

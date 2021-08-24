@@ -167,12 +167,12 @@
                             thoại, SMS, fax hoặc email, với các ưu đãi hoặc thông tin về sản phẩm và dịch vụ của Thaco
                             mà chúng tôi có thể cung cấp. Chúng tôi có thể giữ thông tin của bạn trong một khoản thời
                             gian hợp lý để liên hệ với bạn về các đề nghị, lời mời hoặc thông tin về các sản phẩm và
-                            dịch vụ của chúng tôi. Để tiếp tục bạn phải đọc <a href="#">Chính sách bảo mật</a></p>
+                            dịch vụ của chúng tôi. Để tiếp tục bạn phải đọc <a href="#">{{ __('Privacy Policy') }}</a></p>
                         <div class="checkpolicy">
                             <div class="styled-input-single">
                                 <input type="checkbox" name="fieldset-2" id="radio-example-two" />
-                                <label for="radio-example-two" class="font28 text-noti font-pri">Tôi đã đọc và hiểu <a
-                                        href="#">Chính sách bảo mật</a></label>
+                                <label for="radio-example-two" class="font28 text-noti font-pri">{{ __('I have read and understand') }} <a
+                                        href="#">{{ __('Privacy Policy') }}</a></label>
                             </div>
 
 

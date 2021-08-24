@@ -36,7 +36,7 @@ class ShortcodeController extends BaseController
             $data = call_user_func($data, $attributes, $content);
         }
 
-        $data = apply_filters(SHORTCODE_REGISTER_CONTENT_IN_ADMIN, $data, $key);
+        $data = apply_filters(SHORTCODE_REGISTER_CONTENT_IN_ADMIN, $data, $key, $attributes);
 
         return $response->setData($data);
     }

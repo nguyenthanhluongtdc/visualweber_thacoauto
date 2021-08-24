@@ -31,4 +31,15 @@ class Widget extends BaseModel
     protected $casts = [
         'data' => 'json',
     ];
+
+    /**
+     * Set mutator for the "position" attribute.
+     *
+     * @param int $position
+     * @return void
+     */
+    public function setPositionAttribute($position)
+    {
+        $this->attributes['position'] = $position >= 0 && $position < 127 ? $position : (int)substr($position, -1);
+    }
 }

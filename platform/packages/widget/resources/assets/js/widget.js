@@ -10,12 +10,13 @@ class WidgetManagement {
             listWidgets.push({name: 'wrap-widgets', pull: true, put: true});
         });
 
-        let saveWidget = (parentElement) => {
+        let saveWidget = parentElement => {
             if (parentElement.length > 0) {
                 let items = [];
-                $.each(parentElement.find('li'), (index, widget) => {
+                $.each(parentElement.find('li[data-id]'), (index, widget) => {
                     items.push($(widget).find('form').serialize());
                 });
+
                 $.ajax({
                     type: 'POST',
                     cache: false,
@@ -33,6 +34,8 @@ class WidgetManagement {
                         } else {
                             parentElement.find('ul').html(data.data);
                             Botble.callScroll($('.list-page-select-widget'));
+                            Botble.initResources();
+                            Botble.initMediaIntegrate();
                             Botble.showSuccess(data.message);
                         }
 
@@ -60,7 +63,7 @@ class WidgetManagement {
                 dataIdAttr: 'data-id',
 
                 forceFallback: false, // ignore the HTML5 DnD behaviour and force the fallback to kick in
-                fallbackClass: "sortable-fallback", // Class name for the cloned DOM Element when using forceFallback
+                fallbackClass: 'sortable-fallback', // Class name for the cloned DOM Element when using forceFallback
                 fallbackOnBody: false,  // Appends the cloned DOM Element into the Document's Body
 
                 scroll: true, // or HTMLElement
@@ -84,6 +87,7 @@ class WidgetManagement {
 
             let widget = _self.closest('li');
             _self.addClass('button-loading');
+
             $.ajax({
                 type: 'DELETE',
                 cache: false,

@@ -2,6 +2,7 @@ $(document).ready(() => {
     if ($(document).find('.colorpicker-input').length > 0) {
         $(document).find('.colorpicker-input').colorpicker();
     }
+
     if ($(document).find('.iconpicker-input').length > 0) {
         $(document).find('.iconpicker-input').iconpicker({
             selected: true,
@@ -14,12 +15,6 @@ $(document).ready(() => {
             event.preventDefault();
             let _self = $(event.currentTarget);
             _self.addClass('button-loading');
-
-            if (typeof CKEDITOR != 'undefined') {
-                for (var i in CKEDITOR.instances) {
-                    CKEDITOR.instances[i].updateElement();
-                }
-            }
 
             if (typeof tinymce != 'undefined') {
                 for (var instance in tinymce.editors) {

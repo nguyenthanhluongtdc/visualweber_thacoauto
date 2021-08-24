@@ -18,6 +18,7 @@ class ThemeCreateCommand extends BaseMakeCommand
      * @var ThemeService
      */
     public $themeService;
+
     /**
      * The console command name.
      *
@@ -27,12 +28,14 @@ class ThemeCreateCommand extends BaseMakeCommand
         {name : The theme that you want to create}
         {--path= : Path to theme directory}
     ';
+
     /**
      * The console command description.
      *
      * @var string
      */
     protected $description = 'Generate theme structure';
+
     /**
      * @var File
      */

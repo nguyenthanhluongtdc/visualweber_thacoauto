@@ -2,7 +2,6 @@
 
 use Platform\Theme\Facades\AdminBarFacade;
 use Platform\Theme\Facades\ThemeOptionFacade;
-use Illuminate\Contracts\Filesystem\FileNotFoundException;
 
 if (!function_exists('sanitize_html_class')) {
     /**
@@ -62,8 +61,7 @@ if (!function_exists('theme')) {
      *
      * @param string $themeName
      * @param string $layoutName
-     * @return Theme
-     * @throws FileNotFoundException
+     * @return \Illuminate\Contracts\Foundation\Application|mixed
      */
     function theme($themeName = null, $layoutName = null)
     {
@@ -90,7 +88,7 @@ if (!function_exists('theme_option')) {
         if (!empty($key)) {
             try {
                 return ThemeOption::getOption($key, $default);
-            } catch (FileNotFoundException $exception) {
+            } catch (Exception $exception) {
                 info($exception->getMessage());
             }
         }

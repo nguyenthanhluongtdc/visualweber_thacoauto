@@ -10,7 +10,6 @@ use Platform\Widget\Repositories\Interfaces\WidgetInterface;
 use Platform\Widget\WidgetId;
 use Exception;
 use Illuminate\Contracts\Container\BindingResolutionException;
-use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\Request;
@@ -35,7 +34,6 @@ class WidgetController extends BaseController
     /**
      * WidgetController constructor.
      * @param WidgetInterface $widgetRepository
-     * @throws FileNotFoundException
      */
     public function __construct(WidgetInterface $widgetRepository)
     {
@@ -45,8 +43,6 @@ class WidgetController extends BaseController
 
     /**
      * @return Factory|View
-     *
-     * @throws FileNotFoundException
      * @since 24/09/2016 2:10 PM
      */
     public function index()
@@ -57,6 +53,7 @@ class WidgetController extends BaseController
             ->addScriptsDirectly('vendor/core/packages/widget/js/widget.js');
 
         $widgets = $this->widgetRepository->getByTheme($this->theme);
+
         foreach ($widgets as $widget) {
             WidgetGroup::group($widget->sidebar_id)
                 ->position($widget->position)
@@ -87,14 +84,13 @@ class WidgetController extends BaseController
                     continue;
                 }
 
-                $args = [
+                $this->widgetRepository->createOrUpdate([
                     'sidebar_id' => $sidebarId,
                     'widget_id'  => $data['id'],
                     'theme'      => $this->theme,
                     'position'   => $key,
                     'data'       => $data,
-                ];
-                $this->widgetRepository->createOrUpdate($args);
+                ]);
             }
 
             $widgetAreas = $this->widgetRepository->allBy([
@@ -122,10 +118,11 @@ class WidgetController extends BaseController
         try {
             $this->widgetRepository->deleteBy([
                 'theme'      => $this->theme,
-                'sidebar_id' => $request->get('sidebar_id'),
-                'position'   => $request->get('position'),
-                'widget_id'  => $request->get('widget_id'),
+                'sidebar_id' => $request->input('sidebar_id'),
+                'position'   => $request->input('position'),
+                'widget_id'  => $request->input('widget_id'),
             ]);
+
             return $response->setMessage(trans('packages/widget::widget.delete_success'));
         } catch (Exception $exception) {
             return $response
@@ -167,7 +164,6 @@ class WidgetController extends BaseController
 
     /**
      * @return null|string
-     * @throws FileNotFoundException
      */
     protected function getCurrentLocaleCode()
     {

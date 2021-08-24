@@ -9,7 +9,7 @@ app()->booted(function () {
             'label'      => __('Copyright'),
             'attributes' => [
                 'name'    => 'copyright',
-                'value'   => __('© :year Laravel Technologies. All right reserved.', ['year' => now()->format('Y')]),
+                'value'   => __('© :year Your Company. All right reserved.', ['year' => now()->format('Y')]),
                 'options' => [
                     'class'        => 'form-control',
                     'placeholder'  => __('Change copyright'),

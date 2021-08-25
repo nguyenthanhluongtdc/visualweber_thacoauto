@@ -159,16 +159,34 @@ class ThacoController extends PublicController
         }
 
         return $response
-            ->setError()
+            ->setError()    
             ->setMessage(__('No results found, please try with different keywords.'));
     }
 
-    public function getSearchCate(Request $request) {
-        if($request->ajax() && $request->has('cate')) {
-            $data = get_posts_by_category($request->input('cate'), 5);
+    public function getResultSearch(Request $request, PostInterface $postRepository) {
+        // if($request->ajax() && $request->has('cate')) {
+        //     $data = get_posts_by_category($request->input('cate'), 5);
+        //     return view("theme.main::views.components.result-search", compact('data'))->render();
+        // }
 
-            return view("theme.main::views.components.result-search", compact('data'))->render();
-        }
+        $query = $request->input('keyword');
+
+        $title = __('Search result for: ":query"', compact('query'));
+
+        SeoHelper::setTitle($title)
+            ->setDescription($title);
+
+        $posts = $postRepository->getSearch($query, 0, 5);
+
+        // Theme::breadcrumb()
+        //     ->add(__('Home'), route('public.index'))
+        //     ->add($title, route('public.search'));
+
+        $comment = count($posts).__('kết quả được tìm thấy').
+        "<strong class='text-uppercase color-pri font20'> $query </strong>";
+
+        return Theme::scope('search', compact(['posts','comment']))
+            ->render();
     }
 
     public function getNewPosts()

@@ -139,7 +139,7 @@
                     </div>
                     <div class="contact-input">
                         <label class="fontmb-medium font-pri-bold">{{ __('Phone') }}<span>*</span></label>
-                        <input type="text" class="contact-form-input" name="phone" value="{{ old('phone') }}" id="contact_phone"
+                        <input type="text" class="contact-form-input" name="phone" value="{{ old('phone') }}" id="contact_phone2"
                        placeholder="{{ __('Phone') }}" required>
                         {{-- <input type="text" required /> --}}
                     </div>
@@ -157,7 +157,7 @@
                     </div>
                     <div class="contact-input wide">
                         <label class="fontmb-medium font-pri-bold">{{ __('Content') }}<span>*</span></label>
-                        <textarea name="content" id="contact_content" class="contact-form-input" rows="5" placeholder="{{ __('Message') }}" required>{{ old('content') }}</textarea>
+                        <textarea name="content" id="contact_content2" class="contact-form-input" rows="5" placeholder="{{ __('Message') }}" required>{{ old('content') }}</textarea>
                         {{-- <textarea required></textarea> --}}
 
                     </div>

@@ -1,5 +1,5 @@
 <section class="general-manufacturing overflow-x-hidden">
-    <div class="container-remake"> 
+    <div class="container-remake">
         @if(has_field($page, 'repeater_module_classify_manufacturing'))
             @foreach(has_field($page, 'repeater_module_classify_manufacturing') as $row)
                 <div class="production mt-5 " data-aos="fade-left" data-aos-duration="1600"  data-aos-delay="100" >
@@ -12,9 +12,9 @@
                             <a href="{{has_sub_field($row, 'link')}}" class="read-more__link font-pri font20"> {!! __('Readmore') !!} <i class="fas fa-angle-double-right"></i></a>
                         </div>
                     </div>
-                    
+
                     <div class="production__image">
-                        <a href="{{has_sub_field($row, 'link')}}" title=""> 
+                        <a href="{{has_sub_field($row, 'link')}}" title="">
                             <img  src="{{ get_image_url(has_sub_field($row, 'image')) }}" alt="">
                         </a>
                     </div>

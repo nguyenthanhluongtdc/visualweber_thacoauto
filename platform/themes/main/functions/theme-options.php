@@ -316,7 +316,66 @@ app()->booted(function () {
                 'class' => 'form-control',
             ],
             ],
-        ]);
+        ])
+        ->setSection([ // Set section with no field
+                'title' => __('Contact'),
+                'desc' => __('Contact'),
+                'id' => 'opt-text-subsection-contact-form',
+                'subsection' => true,
+                'icon' => 'fa fa-home',
+                'fields' => [
+                    [
+                        'id' => 'image_contact',
+                        'type' => 'mediaImage',
+                        'label' => __('Ảnh'),
+                        'attributes' => [
+                            'name' => 'image_contact',
+                            'value' => null,
+                            'options' => [
+                                'class'        => 'form-control',
+                            ],
+                        ],
+                    ],
+                    [
+                        'id' => 'address_contact',
+                        'type' => 'textarea',
+                        'label' => __('Address'),
+                        'attributes' => [
+                            'name' => 'address_contact',
+                            'value' => null,
+                            'options' => [
+                                'class'        => 'form-control',
+                                'data-counter' => 255,
+                                'rows'         => 2,
+                            ],
+                        ],
+                    ],
+                    [
+                        'id' => 'phone_contact',
+                        'type' => 'text',
+                        'label' => __('số điện thoại'),
+                        'attributes' => [
+                            'name' => 'phone_contact',
+                            'value' => null,
+                            'options' => [
+                                'class'        => 'form-control',
+                            ],
+                        ],
+                    ],
+                    [
+                        'id' => 'email_contact',
+                        'type' => 'text',
+                        'label' => __('Email'),
+                        'attributes' => [
+                            'name' => 'email_contact',
+                            'value' => null,
+                            'options' => [
+                                'class'        => 'form-control',
+                            ],
+                        ],
+                    ],
+                ],
+            ]);
 
 
 

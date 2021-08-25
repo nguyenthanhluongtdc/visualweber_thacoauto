@@ -305,3 +305,15 @@
 }
 
 @import "./mobile";
+
+
+.default-page{
+  padding: 80px 0;
+  @media (max-width: 1360px) {
+    padding: 50px 0;
+  }
+  .title{
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}

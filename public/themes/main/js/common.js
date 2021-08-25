@@ -292,8 +292,9 @@ var Helper = {
             var numOfHours = $('#hours .logo-frame').length
             if (numOfHours != null) {
                 for (i = 1; i <= numOfHours; i++) {
-                    var cellHeight = $('#cells').children('.flag-' + i).height()
+                    var cellHeight = $('#cells').children('.flag-' + i).outerHeight()
                     $('#hours').children('.flag-' + i).height(cellHeight)
+                    console.log(cellHeight);
                 }
             }
 
@@ -399,7 +400,6 @@ $(document).ready(function () {
     AOS.init();
     Helper.addSelect2toNewsFilter();
     Helper.transitionHeaderFixed();
-    //Helper.changeColorHeader();
     Helper.addSelect2toCarFilterProvinces();
     Helper.RangeFilterBranddetail();
     Helper.dropdownCarVersions();
@@ -427,7 +427,6 @@ $(document).ready(function () {
         $(this).parent().find('.list-link').toggleClass('active')
     })
 });
-
 
 
 // counter

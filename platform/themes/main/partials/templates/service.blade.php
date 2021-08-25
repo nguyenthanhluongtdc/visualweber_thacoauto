@@ -5,6 +5,6 @@
             <h2 class=" font-mi-bold font40 fontmb-middle color-white">{{ $service->name }}</h2>
         </div>
         <div class="services-block__desc fontmb-little font20 font-pri color-white">{!! clean($service->description) !!}</div>
-        <a href="{{ $service->url }}" class=" services-block__button font-mi-bold text-uppercase">{{ __("Xem chi tiết") }}</a>
+        <a href="{{ $service->url }}" class=" services-block__button font-mi-bold text-uppercase">{{ __("VIEW DETAIL") }}</a>
     </div>
 </div>

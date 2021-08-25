@@ -137,7 +137,7 @@
       align-items: center;
       position: relative;
       // max-height: 42px;
-      @include marginBottom(15, "+");
+      @include paddingBottom(15);
       img {
         width: 20%;
         margin-right: 8%;
@@ -691,19 +691,7 @@
     p.title {
       text-transform: uppercase;
       color: #434343;
-      margin-bottom: 20px;
-      @media (max-width: 1680px) {
-        margin-bottom: 18px;
-      }
-      @media (max-width: 1440px) {
-        margin-bottom: 16px;
-      }
-      @media (max-width: 1366px) {
-        margin-bottom: 14px;
-      }
-      @media (max-width: 1199px) {
-        margin-bottom: 12px;
-      }
+      margin-bottom: 3%;
     }
   }
   .scollbar-wrap {

@@ -20,7 +20,7 @@
                             <div class="swiper-slide">
                                 <img src="{{get_image_url(has_sub_field($item, 'image'))}}" alt="{{$data->name}}">
                             </div>
-                                
+
                             @endforeach
                             @endif
                         </div>
@@ -28,7 +28,7 @@
                     </div>
                     <div class="detail-info">
                         <div class="detail-info--frame">
-                            
+
                             <div class="text font15 fontmb-little font-pri">
                                 <div class="logo mb-4">
                                     <img src="{{get_image_url(has_field($data, 'car_category_detail_logo'))}}" alt="{{$data->name}}">
@@ -38,7 +38,7 @@
                                     <p class="fontmb-small">
                                         {!!get_field($data, 'car_category_detail_description_2')!!}
                                     </p>
-                                    <label for="expanded" role="button" class="btn-load-more">... {{__('xem thêm')}} </label>
+                                    <label for="expanded" role="button" class="btn-load-more">... {{__('Readmore')}} </label>
                                 </div>
                             </div>
                         </div>
@@ -52,7 +52,7 @@
                         <div class="product-detail__card-image">
                             <div class="product-detail__card-frame">
                                 <img src="{{get_image_url(has_sub_field($item, 'image'))}}" alt="{{has_sub_field($item, 'title')}}">
-    
+
                             </div>
                         </div>
                         <h3 class="product-detail__card-title font25 font-mi-bold fontmb-medium">{{has_sub_field($item, 'title')}}</h3>
@@ -78,12 +78,12 @@
                             <div class="swiper-wrapper">
                                 @if(!blank(has_sub_field($item, 'car_category_related_car')))
                                 @foreach (has_sub_field($item, 'car_category_related_car') as $child)
-                                
+
                                 <div class="car-frame swiper-slide">
                                     <div class="car-img">
                                         <img src="{{get_image_url(has_sub_field($child,'image'))}}" alt="{{has_sub_field($child,'name')}}">
                                     </div>
-                                
+
                                     <div class="d-flex align-content-between flex-wrap car-content">
                                         <div class="info h-100">
                                             <h3 class="car-name font-mi-bold font25 mb-2 fontmb-cond-bold fontmb-medium">
@@ -98,10 +98,10 @@
                                                 {{__('VIEW DETAIL')}} ->
                                             </a>
                                         </div>
-                                    
+
                                     </div>
                                 </div>
-                                    
+
                                 @endforeach
                                 @endif
                             </div>

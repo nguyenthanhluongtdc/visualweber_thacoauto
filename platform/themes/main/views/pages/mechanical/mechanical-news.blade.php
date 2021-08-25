@@ -6,7 +6,7 @@
                     {{ __("Tin tức") }}
                 </h2>
 
-                <a href="{{ url('truyen-thong') }}" title="{!!__('Xem thêm')!!}" class="read-moree text-dark font20 font-pri"> {!!__('Xem
+                <a href="{{ url('truyen-thong') }}" title="{!!__('Readmore')!!}" class="read-moree text-dark font20 font-pri"> {!!__('Xem
                     thêm')!!} <img width="" height=""
                         src="{{Theme::asset()->url('images/mechandical/chevron-double-right.svg')}}" alt="" /></a>
             </div>
@@ -43,8 +43,8 @@
                                 </p>
                             </div>
 
-                            <a href="{{$post->url}}" title="{!!__('Xem Thêm')!!}" class="read-more text-dark font20 font-pri">
-                                {!!__('Xem thêm')!!} <img width="" height=""
+                            <a href="{{$post->url}}" title="{!!__('Readmore')!!}" class="read-more text-dark font20 font-pri">
+                                {!!__('Readmore')!!} <img width="" height=""
                                     src="{{Theme::asset()->url('images/mechandical/chevron-double-right.svg')}}"
                                     alt="" /></a>
                         </div>

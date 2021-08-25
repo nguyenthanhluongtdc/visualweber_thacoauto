@@ -25,8 +25,8 @@
     <div class="content">
         <div class="left left-desktop" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
             @php
-                $postDesktop = get_featured_posts_by_category(15, 4);
-                $postMobile = get_featured_posts_by_category(15, 2);
+                $postDesktop = get_featured_posts(4);
+                $postMobile = get_featured_posts(2);
             @endphp
             @if (!empty($postDesktop))
                 @foreach ($postDesktop as $post)
@@ -106,6 +106,7 @@
                 @php
                     $post = is_plugin_active('blog') ? get_first_video_post() : collect();
                 @endphp
+         
                 @if(isset(get_field($post, 'video_gallery')[0]))
                     <div class="img-item">
                         <a data-fancybox href="https://www.youtube.com/watch?v={{get_sub_field(get_field($post, 'video_gallery')[0], 'youtube_code')}}">

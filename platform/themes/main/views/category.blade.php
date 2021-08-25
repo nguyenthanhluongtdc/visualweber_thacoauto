@@ -1,6 +1,6 @@
 @php Theme::set('section-name', $category->name) @endphp
 
-@if ($posts->count() > 0)
+@if (isset($posts) && $posts->count() > 0)
     @foreach ($posts as $post)
         <article class="post post__horizontal mb-40 clearfix">
             <div class="post__thumbnail">

@@ -1,7 +1,7 @@
 <div class="section-mechanical-contact-again">
     {{-- data-aos="zoom-in" data-aos-duration="1500" data-aos-easing="ease-in-out" data-aos-delay="50" --}}
     <div class="container-remake">
-        <h2 class="mechanical-contact__title font60 font-pri-bold mb-4 fontmb-large">LIÊN HỆ</h2>
+        <h2 class="mechanical-contact__title font60 font-pri-bold mb-4 fontmb-large"> {!! __('Contact') !!} </h2>
     </div>
     <div class="section-mechanical-contact-again__content">
         <div class="container-remake">
@@ -10,18 +10,24 @@
                     <div class="mechanical-contact__content__top row">
                         <div class="left col-5">
                             <div class="address font20">
-                                <span class="text fontmb-medium">KHU CÔNG NGHIỆP TAM HIỆP, HUYỆN NÚI THÀNH, QUẢNG NAM.</span>
+                                <span class="text fontmb-medium">
+                                    {!! theme_option('address_contact') !!}
+                                </span>
                             </div>
                             <div class="phone font20">
-                                <span class="text fontmb-medium">0235.3567.16 - 0235.3567.162 - 0235.3567.163</span>
+                                <span class="text fontmb-medium">
+                                    {!! theme_option('phone_contact') !!}
+                                </span>
                             </div>
                             <div class="email font20">
-                                <span class="text fontmb-medium">CHULAICOMPLEX@THACO.COM.VN</span>
+                                <span class="text fontmb-medium">
+                                    {!! theme_option('email_contact') !!}
+                                </span>
                             </div>
                         </div>
                         {{-- <div class="col-1"></div> --}}
                         <div class="right col-7">
-                            <img src="{{Theme::asset()->url('images/mechandical/form-contact.jpg')}}" alt="">
+                            <img src="{{Storage::disk('public')->exists(theme_option('image_contact')) ? get_image_url(theme_option('image_contact')) : RvMedia::getDefaultImage()}}" alt="">
                         </div>
                         
                     </div>
@@ -32,36 +38,48 @@
                             <div class="col-6">
                                 <div class="styled-input">
                                     <input type="text" name="name" required />
-                                    <label class="font20 fontmb-medium">họ và tên</label> 
+                                    <label class="font20 fontmb-medium">
+                                        {!! __('họ và tên') !!}
+                                    </label> 
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="styled-input">
                                     <input type="text" name="email" required />
-                                    <label class="font20 fontmb-medium">email</label> 
+                                    <label class="font20 fontmb-medium">
+                                        {!! __('Email') !!}
+                                    </label> 
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="styled-input">
                                     <input type="text" name="phone" required />
-                                    <label class="font20 fontmb-medium">số điện thoại</label> 
+                                    <label class="font20 fontmb-medium">
+                                        {!! __('số điện thoại') !!}    
+                                    </label> 
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="styled-input">
                                     <input type="text" name="subject" required />
-                                    <label class="font20 fontmb-medium">tiêu đề</label> 
+                                    <label class="font20 fontmb-medium">
+                                        {!! __('tiêu đề') !!}
+                                    </label> 
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="styled-input wide">
                                     <textarea rows="4" name="content" required></textarea>
-                                    <label class="font20 fontmb-medium">nội dung</label>
+                                    <label class="font20 fontmb-medium">
+                                        {!! __('nội dung') !!}
+                                    </label>
                                 </div>
                             </div>
                             <input type="checkbox" name="agree" checked/ style="opacity: 0">
                             <div class="col-md-12">
-                                <button type="submit" class="contact-button  fontmb-medium btn-lrg  submit-btn font20"  >GỬI ĐI</button>
+                                <button type="submit" class="contact-button  fontmb-medium btn-lrg  submit-btn font20"  >
+                                    {!! __('gửi đi') !!}
+                                </button>
                             </div>
                         </div>      
                     </div>

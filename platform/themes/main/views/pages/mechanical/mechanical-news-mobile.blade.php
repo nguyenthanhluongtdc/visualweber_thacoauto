@@ -6,7 +6,7 @@
         <div class="section-list-news">
             <div class="section-list-news-header  d-flex  align-items-center mb-60">
                 <h2 class="title font-pri-bold fontmb-large text-uppercase">
-                    {{ __("Tin tức") }}
+                    {{ __("News") }}
                 </h2>
             </div>
 

@@ -1,7 +1,7 @@
 <div class="section-mechanical-contact-again">
     {{-- data-aos="zoom-in" data-aos-duration="1500" data-aos-easing="ease-in-out" data-aos-delay="50" --}}
     <div class="container-remake">
-        <h2 class="mechanical-contact__title font60 font-pri-bold mb-4 fontmb-large">LIÊN HỆ</h2>
+        <h2 class="mechanical-contact__title font60 font-pri-bold mb-4 fontmb-large text-uppercase"> {{ __("Contact") }}</h2>
     </div>
     <div class="section-mechanical-contact-again__content">
         <div class="container-remake">

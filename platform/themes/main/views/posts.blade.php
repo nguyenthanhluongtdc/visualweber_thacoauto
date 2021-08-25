@@ -64,7 +64,7 @@
             </div>
             <div class="list-post-new">
                 <div class="wrap">
-                    <h2 class="font-mi-bold font30 fontmb-middle">{{ __("tin tức mới nhất") }}</h2>
+                    <h2 class="font-mi-bold font30 fontmb-middle">{{ __("Latest News") }}</h2>
                     <ul id="new-posts" class="">
                         @if (!empty($postsFeatures))
                             @foreach ($postsFeatures as $post)
@@ -88,7 +88,7 @@
                         <img src="{{Theme::asset()->url('images/media/loading.gif')}}" alt="">
                     </div>
                     <div class="view-all-news font15 font-mi-bold ">
-                        <a id="posts-load-more" data-category="{{ $category->id ?? 15 }}" href="javascript:;">{{ __("Xem thêm") }}<span><i class="fas fa-arrow-right font15"></i></span></a>
+                        <a id="posts-load-more" data-category="{{ $category->id ?? 15 }}" href="javascript:;">{{ __("Readmore") }}<span><i class="fas fa-arrow-right font15"></i></span></a>
                     </div>
                 </div>
             </div>

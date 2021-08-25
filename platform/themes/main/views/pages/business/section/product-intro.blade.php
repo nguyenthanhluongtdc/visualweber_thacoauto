@@ -100,13 +100,14 @@
                                 <img src="{{get_image_url(has_sub_field($item,'image_slide_product_intro2'))}}" alt="">
                                 <div class="image-frame__overlay">
                                     <h3 class="image-frame__title font40 fontmb-middle font-mi-bold text-uppercase">
-                                        {!! has_sub_field($item, 'title_slide_product_intro2') ? has_sub_field($item, 'title_slide_product_intro2') : '' !!}
+                                        {!! has_sub_field($item, 'tittle_slide_product_intro2') ? has_sub_field($item, 'tittle_slide_product_intro2') : '' !!}
                                     </h3>
                                 </div>
                             </div>
                         </div>
                         @endforeach
                         @endif
+                       
                         {{-- <div class="swiper-slide">
                             <div class="image-frame">
                                 <img src="{{Theme::asset()->url('images/business/product-intro-slide-1.jpg')}}" alt="">
@@ -166,7 +167,7 @@
             <div class="product-intro--right">
                 <div class="product-intro__image">
                     @if(has_field($page, 'img_product_intro3'))
-                    <img src="{{get_image_url(has_sub_field($item,'img_product_intro3'))}}" alt="">
+                    <img src="{{Storage::disk('public')->exists(get_field($page,'img_product_intro3')) ? get_image_url(get_field($page,'img_product_intro3')) : RvMedia::getDefaultImage()}}" alt="">
                     @endif
                 </div>
             </div>

@@ -106,3 +106,52 @@
 @includeIf("theme.main::views.pages.services.service-detail", [
     'data' => $page ?? collect()
 ])
+@if(has_field($page, 'danh_sach_phu_tung'))
+    <section class="section-product-detail">
+        <div class="container-remake">
+            <div class="product-detail manufacturing__products">
+                @foreach (get_field($page, 'danh_sach_phu_tung') as $item)
+                    <div class="relate-product">
+                        <h2 class="title font-mi-bold font60 fontmb-large fontmb-cond-bold">
+                            {{has_sub_field($item, 'tieu_de_manufacturing') ? get_sub_field($item, 'tieu_de_manufacturing') : ''}}
+                        </h2>
+                        <div class="car">
+                            <div class="swiper-container related-slide mt-2">
+                                <div class="swiper-wrapper">
+                                    @if(!blank(has_sub_field($item, 'phu_tung_manufacturing')))
+                                        @foreach (get_sub_field($item, 'phu_tung_manufacturing') as $child)
+
+                                        <div class="car-frame swiper-slide">
+                                            <div class="car-img">
+                                                <img src="{{get_image_url(has_sub_field($child,'hinh_anh'))}}" alt="{{has_sub_field($child,'ten')}}">
+                                            </div>
+
+                                            <div class="d-flex align-content-between flex-wrap car-content">
+                                                <div class="info h-100">
+                                                    <h3 class="car-name font-mi-bold font25 mb-2 fontmb-cond-bold fontmb-medium">
+                                                        {{has_sub_field($child,'ten')}}
+                                                    </h3>
+                                                    <p class="car-decs font-mi-bold font18 fontmb-cond-bold fontmb-little">
+                                                        {!!has_sub_field($child,'loai')!!}
+                                                    </p>
+                                                    <a href="{{has_sub_field($child,'link')}}" class="readmore font-mi-bold font18 fontmb-cond-bold fontmb-little">
+                                                        {{__('VIEW DETAIL')}} ->
+                                                    </a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        @endforeach
+                                    @endif
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+@endif

@@ -121,7 +121,7 @@
             </div>
 
             <div class="bottom" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="50">
-                <p class="title font-pri-bold font16 fontmb-middle">
+                <p class="title font-pri-bold font20 fontmb-middle">
                     {{ __("Điểm tin") }}
                 </p>
 

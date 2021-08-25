@@ -519,7 +519,7 @@
                             </div>
                         </div>
                         <div class="branch-footer">
-                            <a href="#"><button>xem thêm</button></a>
+                            <a href="#"><button>{!! __('Readmore') !!}</button></a>
                         </div>
                     </div>`
 

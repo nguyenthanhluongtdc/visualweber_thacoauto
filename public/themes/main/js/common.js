@@ -428,6 +428,7 @@ $(document).ready(function () {
     })
 });
 
+
 // counter
 if ($('.counter-value').length > 0) {
     var a = 0;

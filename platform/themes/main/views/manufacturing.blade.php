@@ -18,8 +18,8 @@
                         Nghiên cứu, phát triển sản phẩm (R&D) là yêu cầu tất yếu nhằm tạo ra giá trị gia tăng cho sản phẩm, nâng cao năng lực cạnh tranh của doanh nghiệp, nhất là trong bối cảnh cuộc cách mạng công nghiệp lần thứ tư đặt ra yêu cầu ngày càng cao về ứng dụng công nghệ thế hệ mới vào hoạt động sản xuất kinh doanh.
                     </p>
 
-                    <a href="#" title="{!! __('Xem thêm') !!}" class="btn-read-more">
-                        {!! __('Xem thêm') !!}
+                    <a href="#" title="{!! __('Readmore') !!}" class="btn-read-more">
+                        {!! __('Readmore') !!}
                     </a>
                 </div>
 
@@ -40,8 +40,8 @@
                        Là doanh nghiệp đứng đầu trong lĩnh vực sản xuất, lắp ráp và phân phối ô tô tại Việt Nam, THACO xác định mục tiêu là giữ vững vị trí này đồng thời mở rộng thị trường trong khu vực ASEAN, tăng cường hợp tác quốc tế nhằm lựa chọn công nghệ phù hợp, gia tăng tỷ lệ nội địa hóa, tham gia chuỗi giá trị toàn cầu, tạo nền tảng để phát triển thành tập đoàn công nghiệp đa ngành, nâng cao năng lực cạnh tranh nhằm vươn tới vị trí hàng đầu khu vực.
                     </p>
 
-                    <a href="#" title="{!! __('Xem thêm') !!}" class="btn-read-more">
-                        {!! __('Xem thêm') !!}
+                    <a href="#" title="{!! __('Readmore') !!}" class="btn-read-more">
+                        {!! __('Readmore') !!}
                     </a>
                 </div>
 
@@ -62,8 +62,8 @@
                        Chúng tôi cung ứng dịch vụ chất lượng cao thông qua đội ngũ tư vấn kỹ thuật lành nghề, linh hoạt và đa dạng trong cách tiếp cận nhằm đảm bảo dự án vận hành trơn tru, đúng tiến độ.
                     </p>
 
-                    <a href="#" title="{!! __('Xem thêm') !!}" class="btn-read-more">
-                        {!! __('Xem thêm') !!}
+                    <a href="#" title="{!! __('Readmore') !!}" class="btn-read-more">
+                        {!! __('Readmore') !!}
                     </a>
                 </div>
 
@@ -87,8 +87,8 @@
                         Thực hiện chiến lược tham gia chuỗi giá trị toàn cầu, gia tăng năng lực cạnh tranh trong bối cảnh hội nhập khu vực và thế giới, với những nỗ lực nghiên cứu phát triển sản phẩm, mở rộng thị trường, thời gian qua, THACO đã chủ động xuất khẩu nhiều sản phẩm ô tô sang các nước trong khu vực ASEAN và thế giới.
                     </p>
 
-                    <a href="#" title="{!! __('Xem thêm') !!}" class="btn-read-more">
-                        {!! __('Xem thêm') !!}
+                    <a href="#" title="{!! __('Readmore') !!}" class="btn-read-more">
+                        {!! __('Readmore') !!}
                     </a>
                 </div>
 

@@ -17,7 +17,7 @@
                             <div class="slide-container">
                                 <div class="block">
                                     <img src="{{Theme::asset()->url('images/production/logo/logo-thaco-bus.png')}}" alt="">
-                                    <a class="slide-container__button font18 font-mi-bold" href="#">XEM THÊM</a>
+                                    <a class="slide-container__button font18 font-mi-bold" href="#">{{ __("Readmore") }}</a>
                                 </div>
                             </div>
                         </div>
@@ -25,7 +25,7 @@
                             <div class="slide-container">
                                 <div class="block">
                                     <img src="{{Theme::asset()->url('images/production/logo/logo-bmw.png')}}" alt="">
-                                    <a class="slide-container__button font18 font-mi-bold" href="#">XEM THÊM</a>
+                                    <a class="slide-container__button font18 font-mi-bold" href="#">{{ __("Readmore") }}</a>
                                 </div>
                             </div>
                         </div>
@@ -33,7 +33,7 @@
                             <div class="slide-container">
                                 <div class="block">
                                     <img src="{{Theme::asset()->url('images/production/logo/logo-peugeot.png')}}" alt="">
-                                    <a class="slide-container__button font18 font-mi-bold" href="#">XEM THÊM</a>
+                                    <a class="slide-container__button font18 font-mi-bold" href="#">{{ __("Readmore") }}</a>
                                 </div>
                             </div>
                         </div>
@@ -41,7 +41,7 @@
                             <div class="slide-container">
                                 <div class="block">
                                     <img src="{{Theme::asset()->url('images/production/logo/logo-kia.png')}}" alt="">
-                                    <a class="slide-container__button font18 font-mi-bold" href="#">XEM THÊM</a>
+                                    <a class="slide-container__button font18 font-mi-bold" href="#">{{ __("Readmore") }}</a>
                                 </div>
                             </div>
                         </div>

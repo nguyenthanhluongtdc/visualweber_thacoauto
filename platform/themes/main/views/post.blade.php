@@ -16,7 +16,7 @@
                     @endif
                     <li><span class="icon"><i class="far fa-clock"></i></span>{{ $post->created_at->format('d/m/Y') }}</li>
                     <li><span>{{ __("Comment") }}: </span><span>23</span></li>
-                    <li><span>{{ __("View") }}: </span><span>999</span></li>
+                    <li><span>{{ __("View") }}: </span><span>{{ $post->views ?? __("chưa cập nhật") }}</span></li>
                 </ul>
             </div>
             <div class="like-share desktop">

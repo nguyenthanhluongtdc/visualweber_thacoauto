@@ -47,7 +47,7 @@ input[type="number"]:focus,
 .footer-left-bottom .list-media,
 .main-menu .menu .menu-item .sub-menu-drop,
 .post-author-wrap .statistical {
-  padding: unset;
+  padding: unset !important;
   margin: unset;
-  list-style: none;
+  list-style: none !important;
 }

@@ -3,12 +3,16 @@
     <div class="content">
         <div class="column-left text-center ">
             <h2 class="title font-pri-bold text-white text-uppercase">
-                <span class="font30"> những con số </span> <br>
-                <span class="font60"> NỔI BẬT </span>
+                @if(has_field($page, 'title_banner1_banner_research_development'))
+                <span class="font30 text-uppercase"> {!! has_field($page,'title_banner1_banner_research_development') !!}</span> <br>
+                @endif
+                @if(has_field($page, 'title_banner2_banner_research_development'))
+                <span class="font60 text-uppercase">{!! has_field($page,'title_banner2_banner_research_development') !!}</span>
+                @endif
             </h2>
             @if(has_field($page, 'date_banner_research_development'))
             <div class="sub-title text-white font15">
-                Dữ liệu đến ngày   {!! has_field($page,'date_banner_research_development') !!}
+                {!! has_field($page,'date_banner_research_development') !!}
             </div>
             @endif
         </div>
@@ -26,10 +30,11 @@
                         0
                     </strong>
                     @endif
-                    
+                    @if(has_field($page, 'tittle_client_banner_research_development'))
                     <span class="text">
-                        Khách hàng
+                        {!! has_field($page,'tittle_client_banner_research_development') !!}
                     </span>
+                    @endif
                 </div>
             </li>
 
@@ -45,9 +50,11 @@
                         0
                     </strong>
                     @endif
+                    @if(has_field($page, 'tittle_contry_banner_research_development'))
                     <span class="text">
-                        Quốc gia xuất khẩu
+                        {!! has_field($page,'tittle_contry_banner_research_development') !!}
                     </span>
+                    @endif
                 </div>
             </li>
 
@@ -63,9 +70,11 @@
                         0
                     </strong>
                     @endif
+                    @if(has_field($page, 'tittle_staff_banner_research_development'))
                     <span class="text">
-                        Nhân công
+                        {!! has_field($page,'tittle_staff_banner_research_development') !!}
                     </span>
+                    @endif
                 </div>
             </li>
 
@@ -81,9 +90,11 @@
                         0
                     </strong>
                     @endif
+                    @if(has_field($page, 'tittle_factory_banner_research_development'))
                     <span class="text">
-                        Nhà máy
+                        {!! has_field($page,'tittle_factory_banner_research_development') !!}
                     </span>
+                    @endif
                 </div>
             </li>
         </ul>
@@ -97,13 +108,17 @@
     <div class="content row">
         <div class="column-left text-center col-4">
             <h2 class="title font-pri-bold text-white text-uppercase">
-                <span class="text1"> những con số </span> <br>
-                <span class="text2"> NỔI BẬT </span>
+                @if(has_field($page, 'title_banner1_banner_research_development'))
+                <span class="text1 text-uppercase">  {!! has_field($page,'title_banner1_banner_research_development') !!}</span> <br>
+                @endif
+                @if(has_field($page, 'title_banner2_banner_research_development'))
+                <span class="text2 text-uppercase">{!! has_field($page,'title_banner2_banner_research_development') !!}</span>
+                @endif
             </h2>
 
             @if(has_field($page, 'date_banner_research_development'))
             <div class="sub-title text-white font15">
-                Dữ liệu đến ngày   {!! has_field($page,'date_banner_research_development') !!}
+                {!! has_field($page,'date_banner_research_development') !!}
             </div>
             @endif
         </div>
@@ -122,9 +137,11 @@
                     </strong>
                     @endif
 
+                    @if(has_field($page, 'tittle_client_banner_research_development'))
                     <span class="text">
-                        Khách hàng
+                        {!! has_field($page,'tittle_client_banner_research_development') !!}
                     </span>
+                    @endif
                 </div>
             </li>
 
@@ -140,9 +157,11 @@
                         0
                     </strong>
                     @endif
+                    @if(has_field($page, 'tittle_contry_banner_research_development'))
                     <span class="text">
-                        Quốc gia xuất khẩu
+                        {!! has_field($page,'tittle_contry_banner_research_development') !!}
                     </span>
+                    @endif
                 </div>
             </li>
 
@@ -158,9 +177,11 @@
                         0
                     </strong>
                     @endif
+                    @if(has_field($page, 'tittle_staff_banner_research_development'))
                     <span class="text">
-                        Nhân công
+                        {!! has_field($page,'tittle_staff_banner_research_development') !!}
                     </span>
+                    @endif
                 </div>
             </li>
 
@@ -176,9 +197,11 @@
                         0
                     </strong>
                     @endif
+                    @if(has_field($page, 'tittle_factory_banner_research_development'))
                     <span class="text">
-                        Nhà máy
+                        {!! has_field($page,'tittle_factory_banner_research_development') !!}
                     </span>
+                    @endif
                 </div>
             </li>
         </ul>

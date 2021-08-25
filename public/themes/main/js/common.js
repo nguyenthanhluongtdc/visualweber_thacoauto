@@ -400,7 +400,6 @@ $(document).ready(function () {
     AOS.init();
     Helper.addSelect2toNewsFilter();
     Helper.transitionHeaderFixed();
-    //Helper.changeColorHeader();
     Helper.addSelect2toCarFilterProvinces();
     Helper.RangeFilterBranddetail();
     Helper.dropdownCarVersions();
@@ -428,8 +427,6 @@ $(document).ready(function () {
         $(this).parent().find('.list-link').toggleClass('active')
     })
 });
-
-
 
 // counter
 if ($('.counter-value').length > 0) {

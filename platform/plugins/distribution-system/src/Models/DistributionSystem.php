@@ -2,9 +2,11 @@
 
 namespace Platform\DistributionSystem\Models;
 
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Platform\Base\Traits\EnumCastable;
 use Platform\Base\Enums\BaseStatusEnum;
 use Platform\Base\Models\BaseModel;
+use Platform\Location\Models\City;
 
 class DistributionSystem extends BaseModel
 {
@@ -22,6 +24,8 @@ class DistributionSystem extends BaseModel
      */
     protected $fillable = [
         'name',
+        'description',
+        'city_id',
         'status',
     ];
 
@@ -31,4 +35,14 @@ class DistributionSystem extends BaseModel
     protected $casts = [
         'status' => BaseStatusEnum::class,
     ];
+
+    /**
+     * City function
+     *
+     * @return BelongsTo
+     */
+    public function city(): BelongsTo
+    {
+        return $this->belongsTo(City::class);
+    }
 }

@@ -16,12 +16,7 @@ class DistributionSystemForm extends FormAbstract
      */
     public function buildForm()
     {
-        $regions = ['' => '-- Chọn khu vực --'] + (app(CityInterface::class)->advancedGet([
-            'condition' => [
-                'status' => BaseStatusEnum::PUBLISHED
-            ],
-            'select' => ['id', 'name']
-        ])->pluck('name', 'id')->toArray() ?? []);
+        $regions = ['' => '-- Chọn khu vực --'] + get_cities();
 
         $this
             ->setupModel(new DistributionSystem)

@@ -411,7 +411,7 @@
     @php
         $criteria = has_field($page, 'repeater_module_tieuchi_introduce');
         
-        if(!empty($criteria) || $criteria != null) {
+        if(!empty($criteria)) {
             $count = count($criteria);
         }else {
             $count = 0;

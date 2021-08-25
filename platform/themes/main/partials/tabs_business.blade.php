@@ -58,34 +58,3 @@
     @endif
     <div class="col-1"></div>
 
-<script>
-    $(document).ready(function(){
-        let ele_prev = document.getElementsByClassName('tablink')[0];
-      
-        function openTabs(evt, tabsName) {
-            var i, tabcontent, tablinks;
-            
-            tabcontent = document.getElementsByClassName("tabcontents");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tablink");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(tabsName).style.display = "block";
-            ele_prev.classList.remove('active');
-            evt.classList.add('active');
-            ele_prev = evt;
-        }
-        // document.getElementById("defaultOpen").click();
-
-        Array.from(document.getElementsByClassName('tablink')).forEach((ele, index)=>{
-            ele.onclick = ()=> {
-                openTabs(ele, ele.getAttribute('id-name'));
-            }
-        })
-
-        ele_prev.click();
-    })
-</script>

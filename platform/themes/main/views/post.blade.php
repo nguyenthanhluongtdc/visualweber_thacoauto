@@ -15,8 +15,8 @@
                     <li><span class="author font20 font-mi-bold">{{ get_field($post, 'author') }}</span></li>
                     @endif
                     <li><span class="icon"><i class="far fa-clock"></i></span>{{ $post->created_at->format('d/m/Y') }}</li>
-                    <li><span>{{ __("Bình luận") }}: </span><span>23</span></li>
-                    <li><span>{{ __("Lượt xem") }}: </span><span>999</span></li>
+                    <li><span>{{ __("Comment") }}: </span><span>23</span></li>
+                    <li><span>{{ __("View") }}: </span><span>999</span></li>
                 </ul>
             </div>
             <div class="like-share desktop">

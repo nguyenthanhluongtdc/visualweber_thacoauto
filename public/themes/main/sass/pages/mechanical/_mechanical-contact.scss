@@ -41,6 +41,9 @@
                     }
                     .address, .phone, .email {
                         &::before {
+                            top: 50%;
+                            left: 0;
+                            transform: translateY(-50%);
                             font-size: 40px;
                             @media screen and (max-width: 1680px) {
                                 font-size: 30px;
@@ -66,10 +69,6 @@
                             content: "\f3c5";
                             // color: #fff;
                             font-family: "Font Awesome 5 Free";
-                            left: 0;
-                            right: 0;
-                            top: 0;
-                            bottom: 0;
                             font-weight: bold;
                             
                         }
@@ -88,10 +87,6 @@
                             content: "\f879";
                             // color: #fff;
                             font-family: "Font Awesome 5 Free";
-                            left: 0;
-                            right: 0;
-                            top: 0;
-                            bottom: 0;
                             font-weight: bold;
                         }
                     }
@@ -108,10 +103,6 @@
                             content: "\f0e0";
                             // color: #fff;
                             font-family: "Font Awesome 5 Free";
-                            left: 0;
-                            right: 0;
-                            bottom: 0;
-                            top: 0;
                             font-weight: bold;
                         }
                     }

@@ -11,11 +11,6 @@ if (!function_exists('get_cities')) {
      */
     function get_cities(): array
     {
-        return app(CityInterface::class)->advancedGet([
-            'condition' => [
-                'status' => BaseStatusEnum::PUBLISHED
-            ],
-            'select' => ['id', 'name']
-        ])->pluck('name', 'id')->toArray() ?? [];
+        return Location::getStates();
     }
 }

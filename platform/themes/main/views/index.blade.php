@@ -1000,7 +1000,7 @@
             @forelse (get_field($page, 'homepage_slide_partner') as $item)
                 <div class="item">
                     <div class="logo">
-                        <a href="{{get_sub_field($item, 'logo')}}"><img src="{{ get_image_url(get_sub_field($item, 'logo')) }}" alt="{{__('Partner logo')}}"></a>
+                        <a href="{{get_sub_field($item, 'lien_ket')}}"><img src="{{ get_image_url(get_sub_field($item, 'logo')) }}" alt="{{__('Partner logo')}}"></a>
                     </div>
                 </div>
             @empty

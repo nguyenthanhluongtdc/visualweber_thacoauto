@@ -9,21 +9,30 @@
                 <div class="mechanical-contact__content">
                     <div class="mechanical-contact__content__top row">
                         <div class="left col-5">
+                            @if(theme_option('address_contact'))
                             <div class="address font20">
                                 <span class="text fontmb-medium">
                                     {!! theme_option('address_contact') !!}
                                 </span>
                             </div>
+                            @endif
+
+                            @if(theme_option('phone_contact'))
                             <div class="phone font20">
                                 <span class="text fontmb-medium">
                                     {!! theme_option('phone_contact') !!}
                                 </span>
                             </div>
+                            @endif
+
+                            @if(theme_option('email_contact'))
                             <div class="email font20">
                                 <span class="text fontmb-medium">
                                     {!! theme_option('email_contact') !!}
                                 </span>
                             </div>
+                            @endif
+                            
                         </div>
                         {{-- <div class="col-1"></div> --}}
                         <div class="right col-7">

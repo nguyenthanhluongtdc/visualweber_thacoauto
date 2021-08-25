@@ -76,10 +76,10 @@ class DatabaseSettingStore extends SettingStore
             Setting::insert($this->prepareInsertData($insertData));
         }
 
-        if ($deleteKeys) {
-            Setting::whereIn('key', $deleteKeys)
-                ->delete();
-        }
+        // if ($deleteKeys) {
+        //     Setting::whereIn('key', $deleteKeys)
+        //         ->delete();
+        // }
 
         if (config('core.setting.general.cache.enabled')) {
             try {

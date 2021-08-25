@@ -515,11 +515,32 @@
             popupAnchor:  [-3, -25] // point from which the popup should open relative to the iconAnchor
         });
 
-        let marker = L.marker(new L.LatLng(-630.8, 254), {icon: greenIcon}).addTo(map).bindPopup('<h5>This is the Transamerica Pyramid</h5>')
-        L.marker(new L.LatLng(-640.8, 300), {icon: greenIcon}).addTo(map).bindPopup('<h5>This is the Transamerica Pyramid</h5>')
-        L.marker(new L.LatLng(-660.8, 200), {icon: greenIcon}).addTo(map).bindPopup('<h5>This is the Transamerica Pyramid</h5>')
-        L.marker(new L.LatLng(-650.8, 240), {icon: greenIcon}).addTo(map).bindPopup('<h5>This is the Transamerica Pyramid</h5>')
-        L.marker(new L.LatLng(-620.8, 240), {icon: greenIcon}).addTo(map).bindPopup('<h5>This is the Transamerica Pyramid</h5>')
+        let popup = `<div class="branch-popup">
+                        <h2 class="branch-name font20">thaco an sương</h2>
+                        <div class="branch-body">
+                            <div class="branch-body-item">
+                                <p class="info-number font30">70</p>
+                                <p class="info-text font15">Lorem Isum</p>
+                            </div>
+                            <div class="branch-body-item">
+                                <p class="info-number font30">1000</p>
+                                <p class="info-text font15">Lorem Isum</p>
+                            </div>
+                            <div class="branch-body-item">
+                                <p class="info-number font30">99%</p>
+                                <p class="info-text font15">Lorem Isum</p>
+                            </div>
+                        </div>
+                        <div class="branch-footer">
+                            <a href="#"><button>xem thêm</button></a>
+                        </div>
+                    </div>`
+
+        let marker = L.marker(new L.LatLng(-630.8, 254), {icon: greenIcon}).addTo(map).bindPopup(popup)
+        L.marker(new L.LatLng(-640.8, 300), {icon: greenIcon}).addTo(map).bindPopup(popup)
+        L.marker(new L.LatLng(-660.8, 200), {icon: greenIcon}).addTo(map).bindPopup(popup)
+        L.marker(new L.LatLng(-650.8, 240), {icon: greenIcon}).addTo(map).bindPopup(popup)
+        L.marker(new L.LatLng(-620.8, 240), {icon: greenIcon}).addTo(map).bindPopup(popup)
 
         setTimeout(() => {
             window.__map.setView(new L.LatLng(-630.8, 254), 2)

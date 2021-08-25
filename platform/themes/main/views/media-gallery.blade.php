@@ -5,7 +5,7 @@
     $imageFeatures = collect($posts)->where('format_type' , 'gallery');
     $videoFeatures = collect($posts)->where('format_type' , 'video');
 @endphp
-<div class="tabs-mobile">
+<div class="tabs-mobile overflow-x-hidden">
     <div class="container-remake">
         <nav>
             <div class="nav nav-tabs font30 font-pri-bold" id="nav-tab" role="tablist">

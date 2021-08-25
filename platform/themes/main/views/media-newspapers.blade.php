@@ -1,11 +1,11 @@
 {!! do_shortcode('[filter-media][/filter-media]') !!}
-<div class="list-newspapers container-remake">
+<div class="list-newspapers container-remake overflow-x-hidden">
     @php
         $posts = get_posts_by_category($category->id ?? 16, 3);
     @endphp
     @if (!empty($posts))
             @foreach ($posts as $post)
-            <div class="item-newspaper">
+            <div class="item-newspaper ">
                 <div class="row__top">
                     <h5 class="title font-pri-bold font30 color-gray text-uppercase ">
                         <a href="">{{$post->name}}</a>

@@ -1,5 +1,5 @@
 {!! do_shortcode('[filter-media][/filter-media]') !!}
-<div class="news-thaco-content container-remake">
+<div class="news-thaco-content container-remake overflow-x-hidden">
     <div class="news-thaco-top">
         @php
         $posts = get_posts_by_category($category->id ?? 19, 999);

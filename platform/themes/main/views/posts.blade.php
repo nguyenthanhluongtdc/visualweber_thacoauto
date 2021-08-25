@@ -1,6 +1,6 @@
 
     {!! do_shortcode('[filter-media][/filter-media]') !!}
-    <div class="container-remake">
+    <div class="container-remake overflow-x-hidden">
         @php
             $posts = get_posts_by_category($category->id ?? 15, 5);
             $postsFeatures = get_featured_posts_by_category($category->id ?? 15, 5);

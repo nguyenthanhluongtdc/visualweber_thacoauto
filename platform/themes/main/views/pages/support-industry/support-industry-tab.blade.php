@@ -56,7 +56,7 @@
                                         <h4 class="font20 mb-2 text-uppercase fontmb-middle">
                                             {!! has_sub_field($item, 'title_two') !!}
                                         </h4>
-                                        <p class="font-pri font15 mb-2 fontmb-little">
+                                        <p class="font-pri font15 mb-2 fontmb-little text-light">
                                             {!! has_sub_field($item, 'description') !!}
                                         </p>
                                         <div class="read-more font18"><a href="{{has_sub_field($item, 'link')}}"> {!! __('Readmore') !!} </a></div>

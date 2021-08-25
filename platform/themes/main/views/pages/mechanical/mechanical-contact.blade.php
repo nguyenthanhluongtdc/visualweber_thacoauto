@@ -77,7 +77,7 @@
                             </div>
                             <input type="checkbox" name="agree" checked/ style="opacity: 0">
                             <div class="col-md-12">
-                                <button type="submit" class="contact-button  fontmb-medium btn-lrg  submit-btn font20"  >
+                                <button type="submit" class="contact-button  fontmb-medium btn-lrg  submit-btn font20 text-uppercase"  >
                                     {!! __('gửi đi') !!}
                                 </button>
                             </div>

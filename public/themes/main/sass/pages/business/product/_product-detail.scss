@@ -340,45 +340,55 @@
               }
             }
             .info {
-              display: flex;
-              flex-wrap: wrap;
+                display: flex;
+                flex-wrap: wrap;
                 max-width: 88%;
-              h3,
-              p,
-              a {
-                flex: 0 0 100%;
-                max-width: 100%;
-              }
+                .flexible{
+                    flex-grow: 1;
+                    min-height: 5rem;
+                    @media (max-width: 768px) {
+                        min-height: 4rem;
+                    }
+                    @media (max-width: 480px) {
+                        min-height: 4rem;
+                    }
+                }
+                h3,
+                p,
+                a {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                }
 
-              p {
-                margin-bottom: 0;
-              }
+                p {
+                    margin-bottom: 0;
+                }
 
-              a {
-                align-self: flex-end;
-                margin-top: 1.5rem;
-                @include mobileMarginTop(35, "+");
-              }
-              .car-content {
-                height: calc(100% - 160px);
-                @media only screen and (max-width: 1680px) {
-                  height: calc(100% - #{calculatorPixel(160, 1680)}px);
+                a {
+                    align-self: flex-end;
+                    margin-top: 1.5rem;
+                    @include mobileMarginTop(35, "+");
                 }
-                @media only screen and (max-width: 1368px) {
-                  height: calc(100% - #{calculatorPixel(160, 1368)}px);
-                }
-                @media (max-width: 1080px) {
-                  height: calc(100% - 165px);
-                }
-                @media only screen and (max-width: 768px) {
-                  height: calc(100% - #{MobilecalculatorPixel(165, 768)}px);
-                }
-                @media (max-width: 576px) {
-                  height: calc(100% - #{MobilecalculatorPixel(165, 576)}px);
-                }
-                @media (max-width: 375px) {
-                  height: calc(100% - 65px);
-                }
+                .car-content {
+                    height: calc(100% - 160px);
+                    @media only screen and (max-width: 1680px) {
+                    height: calc(100% - #{calculatorPixel(160, 1680)}px);
+                    }
+                    @media only screen and (max-width: 1368px) {
+                    height: calc(100% - #{calculatorPixel(160, 1368)}px);
+                    }
+                    @media (max-width: 1080px) {
+                    height: calc(100% - 165px);
+                    }
+                    @media only screen and (max-width: 768px) {
+                    height: calc(100% - #{MobilecalculatorPixel(165, 768)}px);
+                    }
+                    @media (max-width: 576px) {
+                    height: calc(100% - #{MobilecalculatorPixel(165, 576)}px);
+                    }
+                    @media (max-width: 375px) {
+                    height: calc(100% - 65px);
+                    }
               }
 
               .car-name {
@@ -389,7 +399,7 @@
               }
               .readmore {
                 color: $color-primary;
-                margin-top: 5%;
+                margin-top: 0;
               }
             }
           }

@@ -81,17 +81,19 @@
                                 
                                 <div class="car-frame swiper-slide">
                                     <div class="car-img">
-                                        <img src="{{get_image_url(has_sub_field($child,'image'))}}" alt="{{has_sub_field($child,'title')}}">
+                                        <img src="{{get_image_url(has_sub_field($child,'image'))}}" alt="{{has_sub_field($child,'name')}}">
                                     </div>
                                 
                                     <div class="d-flex align-content-between flex-wrap car-content">
                                         <div class="info h-100">
                                             <h3 class="car-name font-mi-bold font25 mb-2 fontmb-cond-bold fontmb-medium">
-                                                {{has_sub_field($child,'title')}}
+                                                {{has_sub_field($child,'name')}}
                                             </h3>
-                                            <p class="car-decs font-mi-bold font18 fontmb-cond-bold fontmb-little">
-                                                {!!has_sub_field($child,'type')!!}
-                                            </p>
+                                            <div class="flexible">
+                                                <p class="car-decs font-mi-bold font18 fontmb-cond-bold fontmb-little">
+                                                    {!!has_sub_field($child,'type')!!}
+                                                </p>
+                                            </div>
                                             <a href="{{has_sub_field($child,'link')}}" class="readmore font-mi-bold font18 fontmb-cond-bold fontmb-little">
                                                 {{__('VIEW DETAIL')}} ->
                                             </a>

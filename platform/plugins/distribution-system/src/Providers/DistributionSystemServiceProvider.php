@@ -27,6 +27,9 @@ class DistributionSystemServiceProvider extends ServiceProvider
 
     public function boot()
     {
+        \SlugHelper::registerModule(DistributionSystem::class, 'DistributionSystem');
+        \SlugHelper::setPrefix(DistributionSystem::class, 'he-thong-phan-phoi');
+
         $this->setNamespace('plugins/distribution-system')
             ->loadAndPublishConfigurations(['permissions'])
             ->loadMigrations()
@@ -35,10 +38,6 @@ class DistributionSystemServiceProvider extends ServiceProvider
             ->loadRoutes(['web']);
 
         Event::listen(RouteMatched::class, function () {
-            // if (defined('LANGUAGE_MODULE_SCREEN_NAME')) {
-            //    \Language::registerModule([DistributionSystem::class]);
-            // }
-
             dashboard_menu()->registerItem([
                 'id'          => 'cms-plugins-distribution-system',
                 'priority'    => 5,
@@ -48,6 +47,29 @@ class DistributionSystemServiceProvider extends ServiceProvider
                 'url'         => route('distribution-system.index'),
                 'permissions' => ['distribution-system.index'],
             ]);
+        });
+
+        $modules = [DistributionSystem::class];
+        if (defined('LANGUAGE_MODULE_SCREEN_NAME')) {
+            \Language::registerModule($modules);
+        }
+        $this->app->booted(function () use ($modules) {
+            \SeoHelper::registerModule($modules);
+        });
+
+        $this->app->booted(function () {
+
+            if (defined('CUSTOM_FIELD_MODULE_SCREEN_NAME')) {
+                \CustomField::registerModule(DistributionSystem::class)
+                    ->registerRule('basic', trans('plugins/distribution-system::distribution-system.name'), DistributionSystem::class, function () {
+                        return $this->app->make(DistributionSystemInterface::class)->pluck('app_distribution_systems.name', 'app_distribution_systems.id');
+                    })
+                    ->expandRule('other', trans('plugins/custom-field::rules.model_name'), 'model_name', function () {
+                        return [
+                            DistributionSystem::class => trans('plugins/distribution-system::distribution-system.name'),
+                        ];
+                    });
+            }
         });
     }
 }

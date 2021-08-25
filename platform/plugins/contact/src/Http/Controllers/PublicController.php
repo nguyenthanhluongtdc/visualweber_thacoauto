@@ -33,9 +33,18 @@ class PublicController extends Controller
      */
     public function postSendContact(ContactRequest $request, BaseHttpResponse $response)
     {
+
+        if($request->has('firstname') && $request->has('lastname')){
+            $request->request->add(['name' =>$request->firstname. ' ' .$request->lastname]);
+            $request->request->remove('firstname');
+            $request->request->remove('lastname');
+        }
+        
         try {
             $contact = $this->contactRepository->getModel();
             $contact->fill($request->input());
+            $contact['email'] = $contact->email ?? "";
+            // dd($request->input());
             $this->contactRepository->createOrUpdate($contact);
 
             event(new SentContactEvent($contact));
@@ -43,6 +52,7 @@ class PublicController extends Controller
             EmailHandler::setModule(CONTACT_MODULE_SCREEN_NAME)
                 ->setVariableValues([
                     'contact_name'    => $contact->name ?? 'N/A',
+                    'contact_company' => $contact->company ?? 'N/A',
                     'contact_subject' => $contact->subject ?? 'N/A',
                     'contact_email'   => $contact->email ?? 'N/A',
                     'contact_phone'   => $contact->phone ?? 'N/A',
@@ -50,7 +60,6 @@ class PublicController extends Controller
                     'contact_content' => $contact->content ?? 'N/A',
                 ])
                 ->sendUsingTemplate('notice');
-
             return $response->setMessage(__('Send message successfully!'));
         } catch (Exception $exception) {
             info($exception->getMessage());

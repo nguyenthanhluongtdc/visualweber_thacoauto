@@ -2,15 +2,20 @@
 
 namespace Platform\Contact\Providers;
 
-use Platform\Contact\Enums\ContactStatusEnum;
-use Platform\Contact\Repositories\Interfaces\ContactInterface;
 use Html;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\ServiceProvider;
+use Platform\Contact\Repositories\Interfaces\ContactInterface;
 use Theme;
 
 class HookServiceProvider extends ServiceProvider
 {
+    /**
+     * @var Collection
+     */
+    protected $unreadContacts = [];
+
     /**
      * @throws \Throwable
      */
@@ -19,7 +24,6 @@ class HookServiceProvider extends ServiceProvider
         $this->app->booted(function () {
             add_filter(BASE_FILTER_TOP_HEADER_LAYOUT, [$this, 'registerTopHeaderNotification'], 120);
             add_filter(BASE_FILTER_APPEND_MENU_NAME, [$this, 'getUnreadCount'], 120, 2);
-            add_filter(BASE_FILTER_MENU_ITEMS_COUNT, [$this, 'getMenuItemCount'], 120);
 
             if (function_exists('add_shortcode')) {
                 add_shortcode('contact-form', trans('plugins/contact::contact.shortcode_name'), trans('plugins/contact::contact.shortcode_description'), [$this, 'form']);
@@ -38,18 +42,7 @@ class HookServiceProvider extends ServiceProvider
     public function registerTopHeaderNotification($options)
     {
         if (Auth::user()->hasPermission('contacts.edit')) {
-            $contacts = $this->app->make(ContactInterface::class)
-                ->advancedGet([
-                    'condition' => [
-                        'status' => ContactStatusEnum::UNREAD,
-                    ],
-                    'paginate'  => [
-                        'per_page'      => 10,
-                        'current_paged' => 1,
-                    ],
-                    'select'    => ['id', 'name', 'email', 'phone', 'created_at'],
-                    'order_by'  => ['created_at' => 'DESC'],
-                ]);
+            $contacts = $this->setUnreadContacts();
 
             if ($contacts->count() == 0) {
                 return $options;
@@ -70,31 +63,27 @@ class HookServiceProvider extends ServiceProvider
     public function getUnreadCount($number, $menuId)
     {
         if ($menuId == 'cms-plugins-contact') {
-            $attributes = [
-                'class'    => 'badge badge-success menu-item-count unread-contacts',
-                'style'    => 'display: none;',
-            ];
+            $unread = count($this->setUnreadContacts());
 
-            return Html::tag('span', '', $attributes)->toHtml();
+            if ($unread > 0) {
+                return Html::tag('span', (string)$unread, ['class' => 'badge badge-success'])->toHtml();
+            }
         }
 
         return $number;
     }
 
     /**
-     * @param array $data
-     * @return array
+     * @throws \Illuminate\Contracts\Container\BindingResolutionException
      */
-    public function getMenuItemCount(array $data = []) : array
+    protected function setUnreadContacts(): Collection
     {
-        if (Auth::user()->hasPermission('contacts.index')) {
-            $data[] = [
-                'key'   => 'unread-contacts',
-                'value' => app(ContactInterface::class)->countUnread(),
-            ];
+        if (!$this->unreadContacts) {
+            $this->unreadContacts = $this->app->make(ContactInterface::class)
+                ->getUnread(['id', 'name', 'email', 'phone', 'created_at']);
         }
 
-        return $data;
+        return $this->unreadContacts;
     }
 
     /**

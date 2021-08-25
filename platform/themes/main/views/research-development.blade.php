@@ -3,7 +3,7 @@
         <div class="container-remake">
             <div class="section-intro">
                 @if(has_field($page, 'intro_module_research_development'))
-                <h1 class="section-intro__title font-pri-bold font40 fontmb-large text-uppercase">{!! has_field($page,
+                <h1 class="section-intro__title font-pri-bold font60 fontmb-large text-uppercase">{!! has_field($page,
                     'intro_module_research_development') !!}  </h1>
                 @endif
                 @if(has_field($page, 'description_module_research_development'))
@@ -20,7 +20,7 @@
             <div class="content font20">
                 <div class="container-remake">
                     @if(has_field($page, 'tittle_module_research_development'))
-                        <h2 class="title font-pri-bold font40 fontmb-large text-uppercase ">
+                        <h2 class="title font-pri-bold font60 fontmb-large text-uppercase ">
                             {!! has_field($page,
                                 'tittle_module_research_development') !!}  
                         </h2>

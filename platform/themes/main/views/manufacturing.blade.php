@@ -107,12 +107,12 @@
     'data' => $page ?? collect()
 ])
 @if(has_field($page, 'danh_sach_phu_tung'))
-    <section class="section-product-detail">
+    <section class="section-product-detail mt-0">
         <div class="container-remake">
             <div class="product-detail manufacturing__products">
                 @foreach (get_field($page, 'danh_sach_phu_tung') as $item)
                     <div class="relate-product">
-                        <h2 class="title font-mi-bold font60 fontmb-large fontmb-cond-bold">
+                        <h2 class="title font-mi-bold mb-0 font60 fontmb-large fontmb-cond-bold">
                             {{has_sub_field($item, 'tieu_de_manufacturing') ? get_sub_field($item, 'tieu_de_manufacturing') : ''}}
                         </h2>
                         <div class="car">
@@ -145,8 +145,8 @@
                                         @endforeach
                                     @endif
                                 </div>
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
+                                {{-- <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div> --}}
                             </div>
                         </div>
                     </div>

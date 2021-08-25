@@ -27,8 +27,8 @@
                         <div class="col-1"></div>
                         @if($count > 6)
                             <div class="tab col-2 item-right">
-                                @foreach($menu_nodes as $item)
-                                    <button class="tablink font25 text-uppercase fontmb-medium" id-name="{{Str::Slug(has_sub_field($item, 'title_one'), '_')}}"
+                                @foreach($menu_nodes as $key => $item)
+                                    <button class="tablink font25 text-uppercase fontmb-medium" id-name="{{Str::Slug(has_sub_field($item, 'title_one'), '_').$key}}"
                                     >
                                     {!! has_sub_field($item, 'title_one') !!}
                                     </button>
@@ -38,8 +38,8 @@
 
                             @else 
                             <div class="tab col-3 item-right">
-                                @foreach($menu_nodes as $item)
-                                    <button class="tablink font25 text-uppercase fontmb-medium" id-name="{{Str::Slug(has_sub_field($item, 'title_one'), '_')}}"
+                                @foreach($menu_nodes as $key => $item)
+                                    <button class="tablink font25 text-uppercase fontmb-medium" id-name="{{Str::Slug(has_sub_field($item, 'title_one'), '_').$key}}"
                                     >
                                     {!! has_sub_field($item, 'title_one') !!}
                                     </button>
@@ -48,10 +48,10 @@
                         @endif
 
                         <div class="{{$count>6?'col-6':'col-7'}} item-top">
-                            @foreach($menu_nodes as $item)
-                                <div id="{{Str::Slug(has_sub_field($item, 'title_one'), '_')}}" class="tabcontents">
+                            @foreach($menu_nodes as $key => $item)
+                                <div id="{{Str::Slug(has_sub_field($item, 'title_one'), '_').$key}}" class="tabcontents">
                                     <img src="{{ Storage::disk('public')->exists(has_sub_field($item, 'image')) ? get_image_url(has_sub_field($item, 'image')) : RvMedia::getDefaultImage()}}" alt=""
-                                        class="mb-2">
+                                        class="mb-2" />
                                     <div class="content-bottom p-2">
                                         <h4 class="font20 mb-2 text-uppercase fontmb-middle"> 
                                             {!! has_sub_field($item, 'title_two') !!}
@@ -68,7 +68,7 @@
                         @if($count > 6)
                             <div class="tab col-2 item-left">
                                 @for($i = ceil(count($menu_nodes)/2); $i < $count; $i++ )
-                                    <button class="font25 text-uppercase tablink fontmb-medium" id-name="{{Str::Slug(has_sub_field($menu_nodes[$i], 'title_one'), '_')}}">
+                                    <button class="font25 text-uppercase tablink fontmb-medium" id-name="{{Str::Slug(has_sub_field($menu_nodes[$i], 'title_one'), '_').$i}}">
                                         {!! has_sub_field($menu_nodes[$i], 'title_one') !!}
                                     </button>
                                 @endfor

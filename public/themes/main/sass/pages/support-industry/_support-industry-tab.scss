@@ -291,6 +291,8 @@
             padding-bottom: 2%;
             .tablink{
                 font-family: $font-primary-bold;
+                @include paddingX(15);
+                @include mobilePaddingX(15);
                
             }
                 button {

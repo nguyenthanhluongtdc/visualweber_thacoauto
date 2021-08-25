@@ -6,6 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use Schema;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -16,11 +17,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        DB::connection()->enableQueryLog();
-        Event::listen('illuminate.query', function($query)
-        {
-            Log::channel('queries')->info($query);
-        });
+        //
     }
 
     /**
@@ -30,6 +27,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        DB::listen(function ($query) {
+            Log::channel('queries')->info(
+                $query->sql,
+                $query->bindings,
+                $query->time
+            );
+        });
+
         Schema::defaultStringLength(191);
     }
 }

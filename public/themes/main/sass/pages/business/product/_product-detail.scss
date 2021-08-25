@@ -342,7 +342,7 @@
             .info {
               display: flex;
               flex-wrap: wrap;
-
+                max-width: 88%;
               h3,
               p,
               a {
@@ -415,7 +415,7 @@
             flex-wrap: wrap;
           }
           .car-frame {
-            margin-top: 5%;
+            margin-top: 11%;
             max-width: 22%;
             flex: 1 22%;
             @include mobilePaddingBottom(70);

@@ -5,14 +5,15 @@
                 @if(has_field($page, 'title_module_aboutus_introduce'))
                 <li class="nav-item" data-aos="fade-down">
                     <a href="#{{Str::slug(has_field($page, 'title_module_aboutus_introduce'), '_')}}"
-                        title="Về THACO AUTO" class="click_scroll">
+                        title="{{has_field($page, 'title_module_aboutus_introduce')}}" class="click_scroll">
                         {{has_field($page, 'title_module_aboutus_introduce')}}
                     </a>
                 </li>
                 @endif
+                
                 <li class="nav-item" data-aos="fade-down" data-aos-delay="300">
-                    <a href="#section_two" title="Sản xuất - Kinh doanh ô tô & Cơ khí" class="click_scroll">
-                        Sản xuất - Kinh doanh ô tô & Cơ khí
+                    <a href="#section_two" title="{!!get_field($page, 'homepage_production_business_title')!!}" class="click_scroll">
+                        {!!get_field($page, 'homepage_production_business_title')!!}
                     </a>
                 </li>
 
@@ -26,13 +27,13 @@
                 @endif
 
                 <li class="nav-item" data-aos="fade-down" data-aos-delay="900">
-                    <a href="#section_four" title="Tổ chức" class="click_scroll">
-                        Tổ chức
+                    <a href="#section_four" title="{!! has_field($page, 'title_module_room_introduce') !!}" class="click_scroll">
+                        {!! has_field($page, 'title_module_room_introduce') !!}
                     </a>
                 </li>
                 <li class="nav-item" data-aos="fade-down" data-aos-delay="1200">
-                    <a href="#section_five" title="Văn hoá" class="click_scroll">
-                        Văn hoá
+                    <a href="#section_five" title="{!! has_field($page, 'title_module_behave_introduce') !!}" class="click_scroll">
+                        {!! has_field($page, 'title_module_behave_introduce') !!}
                     </a>
                 </li>
             </ul>
@@ -78,7 +79,7 @@
                                         alt="{!! get_field($page, 'homepage_production_title') !!}">
                                 </div>
                                 <div class="company-name font17 font-pri-bold fontmb-small">
-                                    THACO AUTO
+                                    {!!__('THACO AUTO')!!}
                                 </div>
                                 <div class="name font40 font-pri-bold fontmb-middle">
                                     {!! get_field($page, 'homepage_production_title') !!}
@@ -144,7 +145,7 @@
                                         alt="">
                                 </div>
                                 <div class="company-name font17 font-pri-bold fontmb-small">
-                                    THACO AUTO
+                                    {!!__('THACO AUTO')!!}
                                 </div>
                                 <div class="name font40 font-pri-bold fontmb-middle">
                                     {!! get_field($page, 'homepage_business_title') !!}
@@ -341,7 +342,7 @@
                         <div class="more-info fontmb-majority">
                             <p>
                                 <span>
-                                    Sinh năm
+                                    {!! __('Sinh năm') !!}
                                 </span>
                                 <span>
                                     :
@@ -352,7 +353,7 @@
                                 </span>
                             </p>
                             <p>
-                                <span>Nơi sinh </span>
+                                <span> {!!__('Nơi sinh')!!} </span>
                                 <span>
                                     :
                                 </span>
@@ -361,7 +362,7 @@
                             </p>
                             <p>
                                 <span>
-                                    Trình độ
+                                    {!! __('Trình độ') !!}
                                 </span>
                                 <span>
                                     :
@@ -395,9 +396,9 @@
                     </div>
                 </div>
                 <div class="section-behave__right" data-aos="zoom-in">
-                    <h2 class="right-title font-pri-bold fontmb-large" data-aos="fade-right">
+                    {{-- <h2 class="right-title font-pri-bold fontmb-large" data-aos="fade-right">
                         văn hóa
-                    </h2>
+                    </h2> --}}
                     @if(has_field($page, 'image_module_behave_introduce'))
                     <img src="{{Storage::disk('public')->exists(has_field($page,'image_module_behave_introduce')) ? get_image_url(has_field($page, 'image_module_behave_introduce')) : RvMedia::getDefaultImage()}}"
                         alt="">
@@ -408,9 +409,15 @@
     </div>
 
     @php
-    $criteria = has_field($page, 'repeater_module_tieuchi_introduce');
-    $count = count($criteria);
+        $criteria = has_field($page, 'repeater_module_tieuchi_introduce');
+        
+        if(!empty($criteria) || $criteria != null) {
+            $count = count($criteria);
+        }else {
+            $count = 0;
+        }
     @endphp
+
     <div class="section-criteria-wrapper font20 desktop">
         <div class="container-remake">
             <div class="section-criteria">
@@ -427,7 +434,7 @@
                     @endif
                 </div>
 
-                @if(!empty($criteria))
+                @if($count > 0)
                 <div class="section-criteria__content justify-content-end row-first">
                     @foreach ($criteria as $row)
                     <div class="section-criteria__content__box" data-aos="fade-up">

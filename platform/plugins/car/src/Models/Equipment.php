@@ -33,4 +33,8 @@ class Equipment extends BaseModel
     protected $casts = [
         'status' => BaseStatusEnum::class,
     ];
+
+    public function cars(){
+        return $this->belongsToMany(\Platform\Car\Models\Car::class,'app_car_equipments','equipment_id','car_id');
+    }
 }

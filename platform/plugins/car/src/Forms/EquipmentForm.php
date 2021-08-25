@@ -6,6 +6,7 @@ use Platform\Base\Forms\FormAbstract;
 use Platform\Base\Enums\BaseStatusEnum;
 use Platform\Car\Http\Requests\EquipmentRequest;
 use Platform\Car\Models\Equipment;
+use Platform\Blog\Forms\Fields\CategoryMultiField;
 
 class EquipmentForm extends FormAbstract
 {
@@ -15,6 +16,13 @@ class EquipmentForm extends FormAbstract
      */
     public function buildForm()
     {
+        $selectedCategories = [];
+        if ($this->getModel()) {
+            $selectedCategories = $this->getModel()->cars()->pluck('car_id')->all();
+        }
+        if (!$this->formHelper->hasCustomField('categoryMulti')) {
+            $this->formHelper->addCustomField('categoryMulti', CategoryMultiField::class);
+        }
         $this
             ->setupModel(new Equipment)
             ->setValidatorClass(EquipmentRequest::class)
@@ -41,6 +49,12 @@ class EquipmentForm extends FormAbstract
                     'class' => 'form-control select-full',
                 ],
                 'choices'    => BaseStatusEnum::labels(),
+            ])
+            ->add('cars[]', 'categoryMulti', [
+                'label'      => trans('Cars'),
+                'label_attr' => ['class' => 'control-label'],
+                'choices'    => \Platform\Car\Models\Car::get(),
+                'value'      => old('cars', $selectedCategories),
             ])
             ->setBreakFieldPoint('status');
     }

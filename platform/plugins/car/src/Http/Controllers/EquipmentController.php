@@ -70,6 +70,12 @@ class EquipmentController extends BaseController
         $request->merge(['slug' => $slug]);
         $equipment = $this->equipmentRepository->createOrUpdate($request->input());
 
+        // store car
+        $categories = $request->input('cars');
+        if (!empty($categories) && is_array($categories)) {
+            $equipment->cars()->sync($categories);
+        }
+
         event(new CreatedContentEvent(EQUIPMENT_MODULE_SCREEN_NAME, $request, $equipment));
 
         return $response
@@ -104,17 +110,21 @@ class EquipmentController extends BaseController
     public function update($id, EquipmentRequest $request, BaseHttpResponse $response)
     {
         $slug = \Illuminate\Support\Str::slug($request->get('name'),'-');
-        $checkSlug = $this->equipmentRepository->getFirstBy([
-            'slug'=>$slug
-        ]);
+        $checkSlug = \Platform\Car\Models\Equipment::where('slug',$slug)->whereNotIn('id',[$id])->first();
         $slug = $slug.'-'.time();
         $request->merge(['slug' => $slug]);
-        
+
         $equipment = $this->equipmentRepository->findOrFail($id);
 
         $equipment->fill($request->input());
 
         $equipment = $this->equipmentRepository->createOrUpdate($equipment);
+
+        // store car
+        $categories = $request->input('cars');
+        if (!empty($categories) && is_array($categories)) {
+            $equipment->cars()->sync($categories);
+        }
 
         event(new UpdatedContentEvent(EQUIPMENT_MODULE_SCREEN_NAME, $request, $equipment));
 

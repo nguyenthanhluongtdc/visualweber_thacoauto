@@ -73,7 +73,7 @@ class CarCreateAppCarTable extends Migration
             $table->timestamps();
         });
 
-        Schema::create('app_version_equipments', function (Blueprint $table) {
+        Schema::create('app_car_equipments', function (Blueprint $table) {
             $table->unsignedBigInteger('car_id')->references('id')->on('app_cars')->onDelete('cascade');
             $table->unsignedBigInteger('equipment_id')->references('id')->on('app_equipments')->onDelete('cascade');
         });

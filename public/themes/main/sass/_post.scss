@@ -83,8 +83,11 @@
     .post__content {
       &.font-pri.font18 > p,
       strong {
-        font-size: 15px !important;
-        line-height: 1.5;
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+        @include maxWidth(991) {
+          font-size: 14px !important;
+        }
       }
       ol,
       ul {

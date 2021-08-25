@@ -292,8 +292,9 @@ var Helper = {
             var numOfHours = $('#hours .logo-frame').length
             if (numOfHours != null) {
                 for (i = 1; i <= numOfHours; i++) {
-                    var cellHeight = $('#cells').children('.flag-' + i).height()
+                    var cellHeight = $('#cells').children('.flag-' + i).outerHeight()
                     $('#hours').children('.flag-' + i).height(cellHeight)
+                    console.log(cellHeight);
                 }
             }
 

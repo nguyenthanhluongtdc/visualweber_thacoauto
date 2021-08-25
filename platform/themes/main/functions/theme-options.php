@@ -253,7 +253,7 @@ app()->booted(function () {
             'id'         => 'map-company',
             'section_id' => 'footer-address-company',
             'type'       => 'textarea',
-            'label'      => __('Address company'),
+            'label'      => __('Map company'),
             'attributes' => [
                 'name'    => 'map-company',
                 'value'   => null,

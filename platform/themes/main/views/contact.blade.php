@@ -82,7 +82,7 @@
                                 <label for="" class="col-sm-3 text-label mt-3">{{ __('Content') }}:</label>
                                 <div class="col-sm-9">
                                     <textarea name="content" id="contact_content" class="form-control" rows="5"
-                                        placeholder="{{ __('Nội dung') }}" required>{{ old('content') }}</textarea>
+                                        placeholder="{{ __('Content') }}" required>{{ old('content') }}</textarea>
                                 </div>
 
                             </div>

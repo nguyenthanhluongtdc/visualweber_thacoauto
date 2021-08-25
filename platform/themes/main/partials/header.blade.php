@@ -95,7 +95,7 @@
                 <div class="search-inner">
                   <form action="">
                     <input class="font17" type="text" id="inputSearch" name="key" placeholder="">
-                    <span class="search-info font16">Hit enter to search or ESC to close</span>
+                    <span class="search-info font16">{{__('Hit enter to search or ESC to close')}}</span>
                   </form>
                 </div>
               </div>

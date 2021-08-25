@@ -38,6 +38,7 @@ class Contact extends BaseModel
      */
     protected $fillable = [
         'name',
+        'company',
         'email',
         'phone',
         'address',

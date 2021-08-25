@@ -18,9 +18,11 @@ class ContactPluginManagement {
 
             $(event.currentTarget).addClass('button-loading');
 
-            let message = $('#message').val();
+            let message = '';
             if (typeof tinymce != 'undefined') {
                 message = tinymce.get('message').getContent();
+            } else if (CKEDITOR.instances['message'] && typeof CKEDITOR.instances['message'] !== 'undefined') {
+                message = CKEDITOR.instances['message'].getData();
             }
 
             $.ajax({
@@ -35,16 +37,9 @@ class ContactPluginManagement {
                         $('.answer-wrapper').fadeOut();
                         if (typeof tinymce != 'undefined') {
                             tinymce.get('message').setContent('');
-                        } else {
-                            $('#message').val('');
-                            const domEditableElement = document.querySelector('.answer-wrapper .ck-editor__editable');
-                            const editorInstance = domEditableElement.ckeditorInstance;
-
-                            if (editorInstance) {
-                                editorInstance.setData('');
-                            }
+                        } else if (CKEDITOR.instances['message'] && typeof CKEDITOR.instances['message'] !== 'undefined') {
+                            CKEDITOR.instances['message'].setData('');
                         }
-
                         Botble.showSuccess(res.message);
                         $('#reply-wrapper').load(window.location.href + ' #reply-wrapper > *');
                     }

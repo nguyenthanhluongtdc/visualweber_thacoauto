@@ -292,7 +292,7 @@ var Helper = {
             var numOfHours = $('#hours .logo-frame').length
             if (numOfHours != null) {
                 for (i = 1; i <= numOfHours; i++) {
-                    var cellHeight = $('#cells').children('.flag-' + i).height()
+                    var cellHeight = $('#cells').children('.flag-' + i).outerHeight()
                     $('#hours').children('.flag-' + i).height(cellHeight)
                 }
             }
@@ -310,14 +310,12 @@ var Helper = {
         const zeynep = $('.zeynep').zeynep({
             opened: function () {
                 is_enable_menu = true
-                console.log('the side menu is opened')
             }
         })
 
         // dynamically bind 'closing' event
         zeynep.on('closing', function () {
             is_enable_menu = false
-            console.log('this event is dynamically binded')
         })
 
         $('.zeynep-overlay').on('click', function (e) {
@@ -399,7 +397,6 @@ $(document).ready(function () {
     AOS.init();
     Helper.addSelect2toNewsFilter();
     Helper.transitionHeaderFixed();
-    //Helper.changeColorHeader();
     Helper.addSelect2toCarFilterProvinces();
     Helper.RangeFilterBranddetail();
     Helper.dropdownCarVersions();
@@ -423,11 +420,9 @@ $(document).ready(function () {
         }, 500);
     });
     $(document).on('click', '#menu-footer', function () {
-        console.log($(this).parent().find('.list-link'));
         $(this).parent().find('.list-link').toggleClass('active')
     })
 });
-
 
 
 // counter

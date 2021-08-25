@@ -139,6 +139,7 @@
     "Find location" : "Tìm vị trí",
     "Hit enter to search or ESC to close": "Nhấn enter để tìm kiếm hoặc ESC để thoát",
     "TIN TỨC VÀ SỰ KIỆN" : "TIN TỨC VÀ SỰ KIỆN",
+    "Latest News": "tin tức mới nhất",
     "họ và tên": "họ và tên",
     "số điện thoại": "số điện thoại",
     "tiêu đề": "tiêu đề",
@@ -147,5 +148,14 @@
     "kết quả được tìm thấy": " kết quả được tìm thấy với từ khóa ",
     "kết quả tìm kiếm": "kết quả tìm kiếm",
     "Không tìm thấy kết quả nào": "Không tìm thấy kết quả nào",
-    "Tìm kiếm": "Tìm kiếm"
+    "Tìm kiếm": "Tìm kiếm",
+    "Readmore":"Xem thêm",
+    "tin tức mới nhất": "tin tức mới nhất",
+    "Sinh năm": "Sinh năm",
+    "Nơi sinh": "Nơi sinh",
+    "Trình độ": "Trình độ",
+    "chưa cập nhật" : "Nội dung chưa được cập nhật",
+    "News": "Tin tức",
+    "Comment": "Bình luận",
+    "View": "Lượt xem"
 }

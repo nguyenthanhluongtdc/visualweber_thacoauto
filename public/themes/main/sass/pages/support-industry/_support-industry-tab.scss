@@ -346,7 +346,7 @@
         
         .tabcontents {
             width: 100%;
-            color: #fff;
+            color: #fff ;
             background-color: $color-primary;
             
             border-left: none;
@@ -358,11 +358,16 @@
                 h4{
                     padding: 0 2%;
                     font-family: $font-primary-bold;
+                  
                 }
                 p{
                     padding: 0 2%;
+                   
                   
                 }
+               span{
+                   color: #fff !important;
+               }
                 .read-more {
                     margin: 2%;
                     padding: 0 2%;

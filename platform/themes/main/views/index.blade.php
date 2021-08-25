@@ -15,7 +15,7 @@
             <h2 class="font-pri-bold font60">THACO AUTO GIỚI THIỆU NEW PEUGEOT 3008</h2>
             <P class="font-cond">Peugeot – Thương hiệu xe Châu Âu với hơn 210 năm lịch sử & 100 năm dấu ấn tại Việt Nam
             </P>
-            <a href="" class="font-pri-bold">Xem thêm</a>
+            <a href="" class="font-pri-bold">{{ __("Readmore") }}</a>
         </div>
     </div> --}}
 </div>
@@ -106,7 +106,7 @@
                 @php
                     $post = is_plugin_active('blog') ? get_first_video_post() : collect();
                 @endphp
-         
+
                 @if(isset(get_field($post, 'video_gallery')[0]))
                     <div class="img-item">
                         <a data-fancybox href="https://www.youtube.com/watch?v={{get_sub_field(get_field($post, 'video_gallery')[0], 'youtube_code')}}">
@@ -121,7 +121,7 @@
             </div>
 
             <div class="bottom" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="50">
-                <p class="title font-pri-bold font16 fontmb-middle">
+                <p class="title font-pri-bold font20 fontmb-middle">
                     {{ __("Điểm tin") }}
                 </p>
 

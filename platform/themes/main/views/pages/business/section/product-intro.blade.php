@@ -1,12 +1,12 @@
 <section class="section-product-intro">
-    <div class="container-remake"> 
+    <div class="container-remake">
         <div class="product-intro">
             <div class="product-intro--left">
                 <h2 class="product-intro--left__title font-mi-bold font40 fontmb-middle">Ô TÔ & XE MÁY</h2>
                 <p class="product-intro--left__content font-pri font20 fontmb-small">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis
                 </p>
-                <a href="#" class="product-intro--left__button font-pri font18 fontmb-small">Xem thêm</a>
+                <a href="#" class="product-intro--left__button font-pri font18 fontmb-small">{{ __("Readmore") }}</a>
             </div>
             <div class="product-intro--right">
                 <div class="swiper-container product-intro__swiper">
@@ -60,9 +60,9 @@
                         <img src="{{Theme::asset()->url('images/business/prev.png')}}" alt="">
                     </div>
                     <div class="swiper-pagination product-intro__swiper--pagination"></div>
-                    
+
                 </div>
-            </div> 
+            </div>
         </div>
         <div class="product-intro">
             <div class="product-intro--left">
@@ -70,7 +70,7 @@
                 <p class="product-intro--left__content font-pri font20 fontmb-small">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
                 </p>
-                <a href="#" class="product-intro--left__button font-pri font18 fontmb-small">Xem thêm</a>
+                <a href="#" class="product-intro--left__button font-pri font18 fontmb-small">{{ __("Readmore") }}</a>
             </div>
             <div class="product-intro--right">
                 <div class="swiper-container product-intro__swiper">
@@ -132,7 +132,7 @@
                 <p class="product-intro--left__content font-pri font20 fontmb-small">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis
                 </p>
-                <a href="#" class="product-intro--left__button font-pri font18 fontmb-small">Xem thêm</a>
+                <a href="#" class="product-intro--left__button font-pri font18 fontmb-small">{{ __("Readmore") }}</a>
             </div>
             <div class="product-intro--right">
                 <div class="product-intro__image">

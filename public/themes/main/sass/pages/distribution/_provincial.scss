@@ -129,11 +129,19 @@
                     padding: 20px;
                     padding-right: unset;
                 }
+                @media (max-width: 480px) {
+                    padding: 15px;
+                    padding-right: unset;
+                }
 
                 .branch-overflow {
+                    overflow-x: hidden;
                     overflow-y: auto;
                     height: 100%;
                     padding-right: 15px;
+                    @media (max-width: 480px) {
+                        padding-right: 5px;
+                    }
                     &::-webkit-scrollbar-track {
                         -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
                         background-color: #707070;
@@ -227,6 +235,9 @@
                 z-index: 1;
                 padding-left: 10px;
                 overflow: hidden;
+                @media (max-width: 480px) {
+                    padding-left: 5px;
+                }
                 img {
                     width: 100%;
                     height: 100%;

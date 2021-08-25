@@ -14,7 +14,7 @@
                         ])
                     !!} --}}
 
-                    @php 
+                    @php
                         $menu_nodes = [];
                         $count = 0;
                         if(has_field($page, 'tabs_repeater_manufacture') && !empty(has_field($page, 'tabs_repeater_manufacture'))) {
@@ -36,7 +36,7 @@
                                 @endforeach
                             </div>
 
-                            @else 
+                            @else
                             <div class="tab col-3 item-right">
                                 @foreach($menu_nodes as $key => $item)
                                     <button class="tablink font25 text-uppercase fontmb-medium" id-name="{{Str::Slug(has_sub_field($item, 'title_one'), '_').$key}}"
@@ -53,13 +53,13 @@
                                     <img src="{{ Storage::disk('public')->exists(has_sub_field($item, 'image')) ? get_image_url(has_sub_field($item, 'image')) : RvMedia::getDefaultImage()}}" alt=""
                                         class="mb-2" />
                                     <div class="content-bottom p-2">
-                                        <h4 class="font20 mb-2 text-uppercase fontmb-middle"> 
+                                        <h4 class="font20 mb-2 text-uppercase fontmb-middle">
                                             {!! has_sub_field($item, 'title_two') !!}
                                         </h4>
                                         <p class="font-pri font15 mb-2 fontmb-little">
                                             {!! has_sub_field($item, 'description') !!}
                                         </p>
-                                        <div class="read-more font18"><a href="{{has_sub_field($item, 'link')}}"> {!! __('Xem thêm') !!} </a></div>
+                                        <div class="read-more font18"><a href="{{has_sub_field($item, 'link')}}"> {!! __('Readmore') !!} </a></div>
                                     </div>
                                 </div>
                             @endforeach
@@ -85,10 +85,10 @@
 <script>
     $(document).ready(function(){
         let ele_prev = document.getElementsByClassName('tablink')[0];
-      
+
         function openTabs(evt, tabsName) {
             var i, tabcontent, tablinks;
-            
+
             tabcontent = document.getElementsByClassName("tabcontents");
             for (i = 0; i < tabcontent.length; i++) {
                 tabcontent[i].style.display = "none";

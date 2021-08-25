@@ -1,7 +1,7 @@
 <div class="section-mechanical-contact-again">
     {{-- data-aos="zoom-in" data-aos-duration="1500" data-aos-easing="ease-in-out" data-aos-delay="50" --}}
     <div class="container-remake">
-        <h2 class="mechanical-contact__title font60 font-pri-bold mb-4 fontmb-large"> {!! __('Contact') !!} </h2>
+        <h2 class="mechanical-contact__title font60 font-pri-bold mb-4 fontmb-large text-uppercase"> {!! __('Contact') !!} </h2>
     </div>
     <div class="section-mechanical-contact-again__content">
         <div class="container-remake">
@@ -77,7 +77,7 @@
                             </div>
                             <input type="checkbox" name="agree" checked/ style="opacity: 0">
                             <div class="col-md-12">
-                                <button type="submit" class="contact-button  fontmb-medium btn-lrg  submit-btn font20"  >
+                                <button type="submit" class="contact-button  fontmb-medium btn-lrg  submit-btn font20 text-uppercase"  >
                                     {!! __('gửi đi') !!}
                                 </button>
                             </div>

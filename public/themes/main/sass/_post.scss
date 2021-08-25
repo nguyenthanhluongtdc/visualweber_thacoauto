@@ -1,5 +1,4 @@
 .post-container {
-  
   padding: 75px 0;
   .post-primary {
     // h2 {
@@ -72,7 +71,7 @@
     //   width: 90%;
     //   text-align: center;
     // }
-    .desc{
+    .desc {
       text-align: justify !important;
       align-items: center;
       justify-content: space-between;
@@ -82,12 +81,12 @@
       }
     }
     .post__content {
-      p{
-        text-align: justify !important;
-        font-size: 20px !important;
-        line-height: 1.3 !important;
-        @media (max-width: 1080px) {
-          font-size: 15px !important;
+      &.font-pri.font18 > p,
+      strong {
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+        @include maxWidth(991) {
+          font-size: 14px !important;
         }
       }
       ol,

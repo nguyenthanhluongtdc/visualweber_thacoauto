@@ -21,7 +21,7 @@
                             SHOW ROOM BMW</span>
                     </li>
                     <li class="agent-system__showroom__item">
-                        
+
                         <span class="agent-system__showroom__text font30 font-mi-bold">
                             <p class="agent-system__showroom__number font80 font-mi-bold" data-count="81">0</p>
                             TRUNG TÂM TẢI/BUS</span>
@@ -39,7 +39,7 @@
                             SHOW ROOM PEUGEOT</span>
                     </li>
                 </ul>
-                <a class="agent-system__showroom__button font18 font-mi-bold" href="#">XEM THÊM</a>
+                <a class="agent-system__showroom__button font18 font-mi-bold" href="#">{{ __("Readmore") }}</a>
             </div>
         </div>
     </div>

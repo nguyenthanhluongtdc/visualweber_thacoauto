@@ -53,7 +53,8 @@
                                 <div class="col-sm-9 row pr-0">
                                     <div class="col-sm-6 pr-0">
                                         <input type="text" class="form-control" id="contact_firstname"
-                                            placeholder="{{ __('Surname') }}*" name="firstname" value="{{ old('firstname') }}" required>
+                                            placeholder="{{ __('Surname') }}*" name="firstname" value="{{ old('firstname') }}"  required>
+
                                     </div>
                                     <div class="col-sm-6 pr-0">
                                         <input type="text" class="form-control" id="contact_lastname"

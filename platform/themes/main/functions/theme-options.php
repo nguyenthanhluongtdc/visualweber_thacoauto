@@ -250,6 +250,21 @@ app()->booted(function () {
             ],
         ])
         ->setField([
+            'id'         => 'map-company',
+            'section_id' => 'footer-address-company',
+            'type'       => 'textarea',
+            'label'      => __('Address company'),
+            'attributes' => [
+                'name'    => 'map-company',
+                'value'   => null,
+                'options' => [
+                    'class'        => 'form-control',
+                    'data-counter' => 255,
+                    'rows'         => 2,
+                ],
+            ],
+        ])
+        ->setField([
             'id'         => 'tax-code-company',
             'section_id' => 'footer-address-company',
             'type'       => 'text',

@@ -32,7 +32,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
+                        {{-- <div class="swiper-slide">
                             <div class="image-frame">
                                 <img src="{{Theme::asset()->url('images/business/product-intro-slide-1.jpg')}}" alt="">
                                 <div class="image-frame__overlay">
@@ -51,7 +51,7 @@
                                     </h3>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                     <div class="swiper-button-next product-intro__swiper--next">
                         <img src="{{Theme::asset()->url('images/business/next.png')}}" alt="">

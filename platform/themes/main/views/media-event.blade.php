@@ -1,5 +1,5 @@
 {!! do_shortcode('[filter-media][/filter-media]') !!}
-<div class="media-event-list container-remake">
+<div class="media-event-list container-remake overflow-x-hidden">
     @php
         // if(get_field($page, 'type_news')!=1){
             // $posts = get_posts_by_category(16, 3);

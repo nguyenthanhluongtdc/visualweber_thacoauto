@@ -20,7 +20,6 @@
     </div> --}}
 </div>
 
-
 <div class="section-news-home container-remake">
     <h2 class="font-pri-bold font60 fontmb-large color-gray">{{ __('TIN TỨC VÀ SỰ KIỆN') }}</h2>
     <div class="content">
@@ -79,9 +78,11 @@
         </div>
         <div class="left left-mobile">
             @if (!empty($postMobile))
-            <div class="item-img-main">
-                <a href="{{$postMobile[0]->url}}"><img src="{{ get_object_image($postMobile[0]->image, 'post-large') }}" alt=""></a>
-            </div>
+                @if($postMobile->first())
+                    <div class="item-img-main">
+                        <a href="{{$postMobile->first()->url}}"><img src="{{ get_object_image($postMobile->first()->image, 'post-large') }}" alt=""></a>
+                    </div>
+                @endif
                 @foreach ($postMobile as $post)
                     <div class="item">
                         <div class="item-content">
@@ -994,14 +995,16 @@
 <div class="section-partner-home container-remake" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out">
     <h2 class="font-pri-bold font60 color-gray fontmb-large text-uppercase">{{get_field($page, 'homepage_partner_title')}}</h2>
     <div class="partner-home-carousel owl-carousel">
-        @forelse (get_field($page, 'homepage_slide_partner') as $item)
-        <div class="item">
-            <div class="logo">
-                <a href="{{get_sub_field($item, 'logo')}}"><img src="{{ get_image_url(get_sub_field($item, 'logo')) }}" alt="{{__('Partner logo')}}"></a>
-            </div>
-        </div>
-        @empty
-            {{__('No data to show')}}
-        @endforelse
+        @if(has_field($page, 'homepage_slide_partner'))
+            @forelse (get_field($page, 'homepage_slide_partner') as $item)
+                <div class="item">
+                    <div class="logo">
+                        <a href="{{get_sub_field($item, 'logo')}}"><img src="{{ get_image_url(get_sub_field($item, 'logo')) }}" alt="{{__('Partner logo')}}"></a>
+                    </div>
+                </div>
+            @empty
+                {{__('No data to show')}}
+            @endforelse
+        @endif
     </div>
 </div>

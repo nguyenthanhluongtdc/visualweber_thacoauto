@@ -39,4 +39,23 @@ return [
         'flag'        => 'showroom.destroy',
         'parent_flag' => 'showroom.index',
     ],
+    [
+        'name' => 'Showroom brands',
+        'flag' => 'showroom-brand.index',
+    ],
+    [
+        'name'        => 'Create',
+        'flag'        => 'showroom-brand.create',
+        'parent_flag' => 'showroom-brand.index',
+    ],
+    [
+        'name'        => 'Edit',
+        'flag'        => 'showroom-brand.edit',
+        'parent_flag' => 'showroom-brand.index',
+    ],
+    [
+        'name'        => 'Delete',
+        'flag'        => 'showroom-brand.destroy',
+        'parent_flag' => 'showroom-brand.index',
+    ],
 ];

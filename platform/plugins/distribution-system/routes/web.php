@@ -23,6 +23,15 @@ Route::group(['namespace' => 'Platform\DistributionSystem\Http\Controllers', 'mi
                 'permission' => 'showroom.destroy',
             ]);
         });
+
+        Route::group(['prefix' => 'showroom-brands', 'as' => 'showroom-brand.'], function () {
+            Route::resource('', 'ShowroomBrandController')->parameters(['' => 'showroom-brand']);
+            Route::delete('items/destroy', [
+                'as'         => 'deletes',
+                'uses'       => 'ShowroomBrandController@deletes',
+                'permission' => 'showroom-brand.destroy',
+            ]);
+        });
     });
 
 });

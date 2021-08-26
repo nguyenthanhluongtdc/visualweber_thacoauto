@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Event;
 use Platform\Base\Traits\LoadAndPublishDataTrait;
 use Illuminate\Routing\Events\RouteMatched;
 use Platform\DistributionSystem\Models\Showroom;
+use Platform\DistributionSystem\Models\ShowroomBrand;
 use Platform\DistributionSystem\Repositories\Interfaces\ShowroomInterface;
 
 class DistributionSystemServiceProvider extends ServiceProvider
@@ -27,6 +28,12 @@ class DistributionSystemServiceProvider extends ServiceProvider
         $this->app->bind(\Platform\DistributionSystem\Repositories\Interfaces\ShowroomInterface::class, function () {
             return new \Platform\DistributionSystem\Repositories\Caches\ShowroomCacheDecorator(
                 new \Platform\DistributionSystem\Repositories\Eloquent\ShowroomRepository(new \Platform\DistributionSystem\Models\Showroom)
+            );
+        });
+
+        $this->app->bind(\Platform\DistributionSystem\Repositories\Interfaces\ShowroomBrandInterface::class, function () {
+            return new \Platform\DistributionSystem\Repositories\Caches\ShowroomBrandCacheDecorator(
+                new \Platform\DistributionSystem\Repositories\Eloquent\ShowroomBrandRepository(new \Platform\DistributionSystem\Models\ShowroomBrand)
             );
         });
 
@@ -75,9 +82,19 @@ class DistributionSystemServiceProvider extends ServiceProvider
                 'url'         => route('showroom.index'),
                 'permissions' => ['showroom.index'],
             ]);
+
+            dashboard_menu()->registerItem([
+                'id'          => 'cms-plugins-showroom-brand',
+                'priority'    => 0,
+                'parent_id'   => 'cms-plugins-distribution-system',
+                'name'        => 'plugins/distribution-system::showroom-brand.name',
+                'icon'        => null,
+                'url'         => route('showroom-brand.index'),
+                'permissions' => ['showroom-brand.index'],
+            ]);
         });
 
-        $modules = [DistributionSystem::class, Showroom::class];
+        $modules = [DistributionSystem::class, Showroom::class, ShowroomBrand::class];
         if (defined('LANGUAGE_MODULE_SCREEN_NAME')) {
             \Language::registerModule($modules);
         }

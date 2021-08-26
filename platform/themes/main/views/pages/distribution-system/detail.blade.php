@@ -35,7 +35,7 @@
         </div>
         <div class="business-activities mt-85">
             <div class="container-remake">
-                <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 fontmb-large">hoạt động kinh doanh</h1>
+                <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 fontmb-large">{{ __('hoạt động kinh doanh') }}</h1>
                 <div class="vehicle-category__wrap" data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-duration="1000">
                     <div class="vehicle-category__item">
                         <h3 class="title font25 fontmb-medium">Xe du lịch</h3>
@@ -86,116 +86,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="showroom-wrap mt-40">
-                    <div class="showroom-item">
-                        <div class="left">
-                            <div class="img-container">
-                                <div class="skewed">
-                                    <img src="{{Theme::asset()->url('images/distribution/picture2.png')}}" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="right">
-                            <h2 class="showroom-name font30">mazda quảng ngãi</h2>
-                            <ul class="showroom-info">
-                                <li>
-                                    <p class="font20"><span>Địa chỉ: </span>07 Đinh tiên Hoàng, Hàn Văn Chánh, Tp. Quảng Ngãi</p>
-                                </li>
-                                <li>
-                                    <p class="font20"><span>Hotline: </span>0938 807 061</p>
-                                </li>
-                                <li>
-                                    <p class="font20"><span>Website: </span>http://mazdaquangngai.vn</p>
-                                </li>
-                            </ul>
-                            <div class="logo-container">
-                                <img src="{{Theme::asset()->url('images/distribution/logo2.png')}}" alt="">
-                            </div>
-                            <div class="category-container">
-                                <ul>
-                                    <li>
-                                        <img src="{{Theme::asset()->url('images/distribution/icon_phutung.png')}}" alt="">
-                                        <p class="font20">Phụ tùng</p>
-                                    </li>
-                                    <li>
-                                        <img src="{{Theme::asset()->url('images/distribution/icon_dichvu.png')}}" alt="">
-                                        <p class="font20">Dịch vụ</p>
-                                    </li>
-                                    <li>
-                                        <img src="{{Theme::asset()->url('images/distribution/icon_showroom.png')}}" alt="">
-                                        <p class="font20">Showroom</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="showroom-item">
-                        <div class="left">
-                            <div class="img-container">
-                                <div class="skewed">
-                                    <img src="{{Theme::asset()->url('images/distribution/picture2.png')}}" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="right">
-                            <h2 class="showroom-name font30">mazda quảng ngãi</h2>
-                            <ul class="showroom-info">
-                                <li>
-                                    <p class="font20"><span>Địa chỉ: </span>07 Đinh tiên Hoàng, Hàn Văn Chánh, Tp. Quảng Ngãi</p>
-                                </li>
-                                <li>
-                                    <p class="font20"><span>Hotline Dịch vụ MAZDA: </span>0938 807 061</p>
-                                </li>
-                            </ul>
-                            <button class="online-service-booking font20">đặt hẹn dịch vụ online</button>
-                            <div class="logo-container">
-                                <img src="{{Theme::asset()->url('images/distribution/logo2.png')}}" alt="">
-                            </div>
-                            <div class="category-container">
-                                <ul>
-                                    <li>
-                                        <img src="{{Theme::asset()->url('images/distribution/icon_dichvu.png')}}" alt="">
-                                        <p class="font20">Dịch vụ</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="showroom-item">
-                        <div class="left">
-                            <div class="img-container">
-                                <div class="skewed">
-                                    <img src="{{Theme::asset()->url('images/distribution/picture3.png')}}" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="right">
-                            <h2 class="showroom-name font30">mazda quảng ngãi</h2>
-                            <ul class="showroom-info">
-                                <li>
-                                    <p class="font20"><span>Địa chỉ: </span>07 Đinh tiên Hoàng, Hàn Văn Chánh, Tp. Quảng Ngãi</p>
-                                </li>
-                                <li>
-                                    <p class="font20"><span>Hotline: </span>0938 807 061</p>
-                                </li>
-                                <li>
-                                    <p class="font20"><span>Website: </span>http://mazdaquangngai.vn</p>
-                                </li>
-                            </ul>
-                            <div class="logo-container">
-                                <img src="{{Theme::asset()->url('images/distribution/logo2.png')}}" alt="">
-                            </div>
-                            <div class="category-container">
-                                <ul>
-                                    <li>
-                                        <img src="{{Theme::asset()->url('images/distribution/icon_phutung.png')}}" alt="">
-                                        <p class="font20">Phụ tùng</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {!! Theme::partial('templates.showroom', ['showrooms' =>  $data->showrooms]) !!}
             </div>
         </div>
         @php
@@ -204,7 +95,7 @@
         @endphp
         <div class="event-news mt-55 mb-155">
             <div class="container-remake">
-                <h1 class="title font60 fontmb-large mb-0">tin tức & sự kiện</h1>
+                <h1 class="title font60 fontmb-large mb-0">{{ ('tin tức & sự kiện') }}</h1>
             </div>
             <div class="event-news__wrap mt-40">
                 <div class="container-remake">

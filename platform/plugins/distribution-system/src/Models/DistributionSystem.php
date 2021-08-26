@@ -2,6 +2,7 @@
 
 namespace Platform\DistributionSystem\Models;
 
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Platform\Base\Traits\EnumCastable;
 use Platform\Base\Enums\BaseStatusEnum;
 use Platform\Base\Models\BaseModel;
@@ -33,4 +34,9 @@ class DistributionSystem extends BaseModel
     protected $casts = [
         'status' => BaseStatusEnum::class,
     ];
+
+    public function showrooms(): HasMany
+    {
+        return $this->hasMany(Showroom::class);
+    }
 }

@@ -4,11 +4,19 @@
             <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 fontmb-large">{{ __("Công ty tỉnh thành") }}</h1>
             <div data-aos="fade-left" data-aos-duration="1500" class="description desktop font20 mt-20">{!! $page->content !!}</div>
             <div data-aos="zoom-in-up" data-aos-duration="2000" class="select-list mt-40 mb-40">
-                <form action="">
-                    <select class="ui search selection dropdown city w-100" name="" id="">
+                @php
+                    $citys = get_cities();
+                    foreach($citys as $key => $value) {
+                        $cityIdFirst = $key;
+                    }
+                    $distributionSystems = get_distribution_systems(!empty($_GET['city']) ? $_GET['city'] : $cityIdFirst);
+                @endphp
+                <form action="" id="distribution-system-form">
+                    @csrf
+                    <select class="ui search selection dropdown city w-100" name="city_id" id="city_id">
                         <option value="">{{ __("Tỉnh/Thành phố") }}</option>
-                        @foreach (get_cities() as $key => $item)
-                            <option value="{{ $key }}">{{ $item }}</option>
+                        @foreach ($citys as $key => $item)
+                            <option value="{{ $key }}" {{ !empty($_GET['city']) && $_GET['city'] == $key ? 'selected' : '' }}>{{ $item }}</option>
                         @endforeach
                     </select>
                     <button type="submit" class="font20 fontmb-small">{{ __("Approval") }}</button>
@@ -19,7 +27,7 @@
                     alt="">
                 <div class="branch-background-blur"></div>
                 <div class="left">
-                    <div class="branch-overflow">
+                    <div class="branch-overflow" id="branch-list">
                         <div class="branch-item mb-20">
                             <p class="branch-name font30 mb-20">Chi Nhánh An Lạc - Công Ty CP Ô Tô Trường Hải</p>
                             <p class="branch-address font20 mb-20">36C11, QL1A, Tân Kiên, Bình Chánh, Thành phố Hồ Chí
@@ -402,6 +410,31 @@
     }
 </style>
 <script>
+    $(document).ready(function() {
+        $("#distribution-system-form").submit(function(e) {
+            e.preventDefault();
+            $.ajax({
+                    headers: {
+                        "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr(
+                            "content"
+                        )
+                    },
+                    url: "{{route('public.ajax.distribution-system')}}",
+                    method: "GET",
+                    data: {
+                        city: $('#city_id').val()
+                    },
+                    dataType: "json",
+                    success: function(result, status, xhr) {
+                        $('#branch-list')[0].innerHTML = result.html_list;
+                    },
+                    error: function(xhr, status, error) {
+                    },
+            });
+
+        });
+    })
+
     if($('.city').length){
         var ignoreDiacritics = true;
         $('.ui.dropdown.city').dropdown({
@@ -535,6 +568,6 @@
         }, 300)
     }
     $(document).ready(function() {
-        initMap()
+        initMap();
     })
 </script>

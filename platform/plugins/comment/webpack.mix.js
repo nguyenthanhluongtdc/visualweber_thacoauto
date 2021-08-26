@@ -8,6 +8,17 @@ const dist = 'public/vendor/core/plugins/' + directory;
 
 const filterCss = [];
 
+
+mix.webpackConfig({
+    resolve: {
+        extensions: [".js", ".vue", ".json"],
+        alias: {
+            "@": source + '/resources/assets/js'
+        }
+    }
+});
+
+
 if (mix.inProduction()) {
     filterCss.push(
         purgeCss({
@@ -23,14 +34,13 @@ if (mix.inProduction()) {
                 /down/,
                 /loading/,
                 /^bb-dialog/
-
             ]
         })
     )
 }
 
 mix
-    .js(source + '/resources/assets/js/comment.js', dist + '/js')
+    .js(source + '/resources/assets/js/comment.js', dist + '/js').vue()
     .sass(source + '/resources/assets/sass/comment.scss', dist + '/css', {}, filterCss)
 
     .js(source + '/resources/assets/js/comment-setting.js', dist + '/js')

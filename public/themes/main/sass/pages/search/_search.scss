@@ -273,10 +273,11 @@
             .content {
                 display: flex;
                 flex-wrap: wrap;
-
+               
                 a, p{
                     flex: 0 0 100%;
                     max-width: 100%;
+                    text-align: justify;
                 }
     
                 h3{
@@ -288,6 +289,10 @@
                     opacity: 75%;
                     align-self: flex-end;
                 }
+                .desc{
+                   @include split_str(3);
+                    
+                }
             }
             .date{
                 // position: absolute;
@@ -296,11 +301,13 @@
                 align-self: flex-end;
                 position: absolute;
                 bottom: 0;
+               
             }
             @media (max-width: 767px) {
                 .content {
                     background-color: #f1f1f1;
                     padding: 15px;
+                 
                 }
             }
         }

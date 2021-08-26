@@ -56,7 +56,7 @@
                         <p class="news-description font20">{{Str::words($posts[0]->description,40)}}</p>
                         <div class="news-info">
                             <div class="news-info__item font15">
-                                <p>{{ \MetaBox::getMetaData($posts[0], 'region_post', true) ?? '--' }}</p>
+                                <p>{{ $posts[0]->city->name ?? '--' }}</p>
                             </div>
                             <div class="news-info__item font15">
                                 <p>{{date_format($posts[0]->created_at,"d-m-Y")}}</p>
@@ -72,7 +72,7 @@
                         <p class="news-description">{{Str::words($posts[1]->description,40)}}</p>
                         <div class="news-info">
                             <div class="news-info__item font15">
-                                <p>{{ \MetaBox::getMetaData($posts[1], 'region_post', true) ?? '--' }}</p>
+                                <p>{{ $posts[1]->city->name ?? '--' }}</p>
                             </div>
                             <div class="news-info__item font15">
                                 <p>{{date_format($posts[1]->created_at,"d-m-Y")}}</p>
@@ -93,7 +93,7 @@
                             <a class="news-title font25" href="{{$posts[2]->url}}">{{$posts[2]->name}}</a>
                             <div class="news-info">
                                 <div class="news-info__item font15">
-                                    <p>{{ \MetaBox::getMetaData($posts[2], 'region_post', true) ?? '--' }}</p>
+                                    <p>{{ $posts[2]->city->name ?? '--' }}</p>
                                 </div>
                                 <div class="news-info__item font15">
                                     <p>{{date_format($posts[2]->created_at,"d-m-Y")}}</p>
@@ -117,7 +117,7 @@
                         <p class="news-description fontmb-little">{{Str::words($posts[3]->description,40)}}</p>
                         <div class="news-info">
                             <div class="news-info__item font15">
-                                <p>{{ \MetaBox::getMetaData($posts[3], 'region_post', true) ?? '--' }}</p>
+                                <p>{{ $posts[3]->city->name ?? '--' }}</p>
                             </div>
                             <div class="news-info__item font15">
                                 <p>{{date_format($posts[3]->created_at,"d-m-Y")}}</p>
@@ -149,7 +149,7 @@
                     <p class="news-description fontmb-small">{{Str::words($posts[0]->description,40)}}</p>
                     <div class="news-info">
                         <div class="news-info__item fontmb-little">
-                            <p>{{ \MetaBox::getMetaData($posts[0], 'region_post', true) ?? '--' }}</p>
+                            <p>{{ $posts[0]->city->name ?? '--' }}</p>
                         </div>
                         <div class="news-info__item fontmb-little">
                             <p>{{date_format($posts[0]->created_at,"d-m-Y")}}</p>
@@ -173,7 +173,7 @@
                     <p class="news-description fontmb-small">{{Str::words($posts[1]->description,40)}}</p>
                     <div class="news-info">
                         <div class="news-info__item fontmb-little">
-                            <p>{{ \MetaBox::getMetaData($posts[1], 'region_post', true) ?? '--' }}</p>
+                            <p>{{ $posts[1]->city->name ?? '--' }}</p>
                         </div>
                         <div class="news-info__item  fontmb-little">
                             <p>{{date_format($posts[1]->created_at,"d-m-Y")}}</p>
@@ -197,7 +197,7 @@
                     <p class="news-description fontmb-small">{{Str::words($posts[2]->description,40)}}</p>
                     <div class="news-info">
                         <div class="news-info__item  fontmb-little">
-                            <p>{{ \MetaBox::getMetaData($posts[2], 'region_post', true) ?? '--' }}</p>
+                            <p>{{ $posts[2]->city->name ?? '--' }}</p>
                         </div>
                         <div class="news-info__item fontmb-little">
                             <p>{{date_format($posts[2]->created_at,"d-m-Y")}}</p>
@@ -210,61 +210,13 @@
              @if(!empty($posts))
                 {{ $posts->links('vendor.pagination.custom-distribution') }}
             @endif
-            {{-- <ul class="nav-pagination font18 mb-0">
-                <li class="page-item active">
-                    <a href="" title="" class="page-link">
-                        1
-                    </a>
-                </li>
-                <li class="page-item">
-                    <a href="" title="" class="page-link">
-                        2
-                    </a>
-                </li>
-                <li class="page-item">
-                    <a href="" title="" class="page-link">
-                        3
-                    </a>
-                </li>
-                <li class="page-item">
-                    <a href="" title="" class="page-link">
-                        4
-                    </a>
-                </li>
-                <li class="page-item">
-                    <a href="" title="" class="page-link">
-                        5
-                    </a>
-                </li>
-                <li class="page-item">
-                    <a href="" title="" class="page-link">
-                        6
-                    </a>
-                </li>
-                <li class="page-item">
-                    <a href="" title="" class="page-link">
-                        7
-                    </a>
-                </li>
-                <li class="page-item">
-                    <a href="" title="" class="page-link">
-                        >
-                    </a>
-                </li>
-                <li class="page-item">
-                    <a href="" title="" class="page-link">
-                        >>
-                    </a>
-                </li>
-            </ul> --}}
         </div>
     </div>
 
     <div class="library mb-60">
         <div class="container-remake">
             <div class="library-header">
-                <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 fontmb-middle">thư
-                    viện</h1>
+                <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 fontmb-middle">{{ __("thư viện") }}</h1>
                 <div class="library-button">
                     <img class="customPrevBtn" src="{{Theme::asset()->url('images/distribution/icon_left.png')}}"
                         alt="">

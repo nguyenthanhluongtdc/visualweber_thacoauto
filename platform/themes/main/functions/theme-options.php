@@ -100,6 +100,19 @@ app()->booted(function () {
             ],
         ])
         ->setField([
+            'id'         => 'facebook_icon',
+            'section_id' => 'opt-text-subsection-social',
+            'type'       => 'mediaImage',
+            'label'      => 'Facebook Icon',
+            'attributes' => [
+                'name'    => 'facebook_icon',
+                'value'   => null,
+                'options' => [
+                    'class'       => 'form-control',
+                ],
+            ],
+        ])
+        ->setField([
             'id'         => 'linkedin',
             'section_id' => 'opt-text-subsection-social',
             'type'       => 'text',
@@ -114,6 +127,19 @@ app()->booted(function () {
             ],
         ])
         ->setField([
+            'id'         => 'linkedin_icon',
+            'section_id' => 'opt-text-subsection-social',
+            'type'       => 'mediaImage',
+            'label'      => 'Linkedin Icon',
+            'attributes' => [
+                'name'    => 'linkedin_icon',
+                'value'   => null,
+                'options' => [
+                    'class'       => 'form-control',
+                ],
+            ],
+        ])
+        ->setField([
             'id'         => 'youtube',
             'section_id' => 'opt-text-subsection-social',
             'type'       => 'text',
@@ -124,6 +150,19 @@ app()->booted(function () {
                 'options' => [
                     'class'       => 'form-control',
                     'placeholder' => 'https://youtube.com/@channel-url',
+                ],
+            ],
+        ])
+        ->setField([
+            'id'         => 'youtube_icon',
+            'section_id' => 'opt-text-subsection-social',
+            'type'       => 'mediaImage',
+            'label'      => 'Youtube Icon',
+            'attributes' => [
+                'name'    => 'youtube_icon',
+                'value'   => null,
+                'options' => [
+                    'class'       => 'form-control',
                 ],
             ],
         ])

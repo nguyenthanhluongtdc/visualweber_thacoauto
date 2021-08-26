@@ -21,12 +21,24 @@
 
             <div class="footer-left-bottom">
                 <a class="img-bct d-inline-block" href="#" title="">
-                    <img src="{{ Theme::asset()->url('images/main/bct.png') }}" alt="Bộ công thương">
+                    <img src="{{ get_image_url(theme_option('logo_bct')) }}" alt="{!! __('Bộ công thương') !!}">
                 </a>
                 <ul class="list-media">
-                    <li><a href="{{ theme_option('facebook') }}" target="_blank"><img src="{{ Theme::asset()->url('images/main/iconfb.png') }}" alt="facebook"></a></li>
-                    <li><a href="{{ theme_option('linkedin') }}" target="_blank"><img src="{{ Theme::asset()->url('images/main/iconin.png') }}" alt="in"></a></li>
-                    <li><a href="{{ theme_option('youtube') }}" target="_blank"><img src="{{ Theme::asset()->url('images/main/iconyt.png') }}" alt="youtube"></a></li>
+                    <li>
+                        <a href="{{ theme_option('facebook') }}" target="_blank">
+                            <img src="{{ get_image_url(theme_option('facebook_icon')) }}" alt="facebook">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ theme_option('linkedin') }}" target="_blank">
+                            <img src="{{ get_image_url(theme_option('linkedin_icon')) }}" alt="in">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ theme_option('youtube') }}" target="_blank">
+                            <img src="{{ get_image_url(theme_option('youtube_icon')) }}" alt="youtube">
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -76,7 +88,7 @@
     <div class="item-button">
         <a href="tel:{{ theme_option('hotline-contact') }}"><img src="{{ Theme::asset()->url('images/main/phone.png') }}" alt="phone"></a>
     </div>
-    <div class="item-button">
+    <div class="item-button btn-mes">
         <a href="#"><img src="{{ Theme::asset()->url('images/main/mess.png') }}" alt="phone"></a>
     </div>
 </div>
@@ -106,10 +118,16 @@
             js = d.createElement(s); js.id = id;
             js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
             fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
+        }(document, 'script', 'facebook-jssdk'));
+        
+        $('.btn-mes').click(function(e) {
+            e.preventDefault();
+            FB.CustomerChat.show();
+        })
+        </script>
 
     @if (theme_option('facebook_chat_enabled', 'yes') == 'yes' && theme_option('facebook_page_id'))
-        <div class="fb-customerchat"
+        <div class="fb-customer-chat"
              attribution="install_email"
              page_id="{{ theme_option('facebook_page_id') }}"
              theme_color="{{ theme_option('primary_color', '#ff2b4a') }}">

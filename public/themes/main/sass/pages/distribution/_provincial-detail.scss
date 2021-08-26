@@ -248,6 +248,7 @@
                     }
                 }
                 .online-service-booking {
+                    display: block;
                     background-color: #1e5499;
                     color: #ffffff;
                     text-transform: uppercase;
@@ -267,6 +268,9 @@
                         max-width: 200px;
                         padding: 0.8rem 0px;
                         bottom: 7%;
+                    }
+                    @media (max-width: 480px){
+                        position: unset;
                     }
                 }
                 .logo-container {
@@ -314,6 +318,10 @@
                     position: absolute;
                     bottom: 0%;
                     right: 5%;
+                    @media (max-width: 480px){
+                        margin-top: 15px;
+                        position: unset;
+                    }
                     ul {
                         display: flex;
                         align-items: flex-end;

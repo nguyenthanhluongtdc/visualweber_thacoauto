@@ -113,6 +113,12 @@ class ThacoController extends PublicController
             if ($view == 'post' || $view == 'page') {
                 Theme::asset()->usePath()->add('reset_css', 'css/non-reset.css');
             }
+            if (request('select_category') && Arr::get($result, 'default_view', '') == 'plugins/blog::themes.category') {
+                return redirect()->route('public.single', array_merge(
+                    request()->except('select_category'),
+                    ['slug' => request('select_category')]
+                ));
+            }
             return Theme::scope($view, $result['data'], Arr::get($result, 'default_view'))->render();
         }
         abort(404);
@@ -159,11 +165,12 @@ class ThacoController extends PublicController
         }
 
         return $response
-            ->setError()    
+            ->setError()
             ->setMessage(__('No results found, please try with different keywords.'));
     }
 
-    public function getResultSearch(Request $request, PostInterface $postRepository) {
+    public function getResultSearch(Request $request, PostInterface $postRepository)
+    {
         // if($request->ajax() && $request->has('cate')) {
         //     $data = get_posts_by_category($request->input('cate'), 5);
         //     return view("theme.main::views.components.result-search", compact('data'))->render();
@@ -171,9 +178,9 @@ class ThacoController extends PublicController
 
         $query = $request->input('keyword');
 
-        if(!$query) {
+        if (!$query) {
             return Theme::scope('search')
-            ->render();
+                ->render();
         }
 
         $title = __('Search result for: ":query"', compact('query'));
@@ -187,10 +194,10 @@ class ThacoController extends PublicController
         //     ->add(__('Home'), route('public.index'))
         //     ->add($title, route('public.search'));
 
-        $comment = $posts->total().__('kết quả được tìm thấy').
-        "<strong class='text-uppercase color-pri font20'> $query </strong>";
+        $comment = $posts->total() . __('kết quả được tìm thấy') .
+            "<strong class='text-uppercase color-pri font20'> $query </strong>";
 
-        return Theme::scope('search', compact(['posts','comment']))
+        return Theme::scope('search', compact(['posts', 'comment']))
             ->render();
     }
 

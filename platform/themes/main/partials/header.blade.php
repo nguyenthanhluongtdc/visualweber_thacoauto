@@ -124,11 +124,30 @@
                     </div>
                 </div>
                 <div class="zeynep">
+                    <div class="box-search-mobile">
+                        <form action="{{route('public.search')}}" method="GET">
+                            <input type="text" placeholder="{!! __('Tìm kiếm') !!}"
+                            name="keyword" value="{{ request()->get('keyword') }}">
+                            <button type="submit">  <ion-icon name="search-outline" class="font25"></ion-icon> </button>
+                        </form>
+                    </div>
+
                     {!!
                         Menu::renderMenuLocation('main-menu', [
                             'view' => 'menu-mobile',
                         ])
                     !!}
+
+                    <div class="nav-lang-mobile d-flex">
+                        @foreach($supportedLocales as $name => $language)
+                        <span class="nav-item-mobile lang-vi text-uppercase {{$name==$currentLanguage?'active':''}}">
+                            <a class="nav-link-mobile font-pri-bold font18" rel="alternate" hreflang="{{$name}}"
+                                href="{{$showRelated ? Language::getLocalizedURL($name) : url($name)}}">
+                                {!! $name !!}
+                            </a>
+                        </span>
+                        @endforeach
+                    </div>
                 </div>
                 <div class="zeynep-overlay"></div>
             </div>

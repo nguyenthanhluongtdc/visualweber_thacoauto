@@ -41,10 +41,10 @@ alt="{{ $post->name }}"><a href="{{ $post->url }}" class="post__overlay"></a>
 Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
 @endphp
 <div class="search-page">
-    <form action="{{route('public.search')}}" class="form-search">
+    <form action="{{route('public.search')}}" class="form-search" method="GET">
         <div class="container-remake">
             <div class="search-intro">
-                <h1 class="font-pri-bold font60 text-uppercase text-center mt-md-5 mt-3"> 
+                <h1 class="font-pri-bold font60 fontmb-large text-uppercase text-center mt-md-5 mt-3"> 
                     {!! __('kết quả tìm kiếm') !!} 
                 </h1>
             </div>
@@ -57,8 +57,7 @@ Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
                             <input type="text" class="form-control font20" id="search-bar" placeholder="{!! __('Tìm kiếm') !!}"
                                 name="keyword" value="{{ request()->get('keyword') }}">
                         </div>
-                        <div class="col-1 input-group-append ">
-
+                        <div class="col-1 input-group-append">
                             <button id="button-addon5" type="submit" class="btn">
                                 <ion-icon name="search-outline" class="font20"></ion-icon>
                             </button>
@@ -123,14 +122,14 @@ Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
                             <div class="col-lg-9 col-md-7 result-content">
                                 <div class="content">
                                     <a href="#">
-                                        <h3 class="font-pri-bold font30  color-gray">
+                                        <h3 class="font-pri-bold font30 fontmb-middle color-gray">
                                             {!! $post->name !!}
                                         </h3>
                                     </a>
-                                    <p class="font-pri my-3 font15">
+                                    <p class="font-pri my-3 font15 fontmb-small">
                                         {!! empty($post->description) ? $post->name : $post->description !!}
                                     </p>
-                                    <p class="font-pri date font15">
+                                    <p class="font-pri date font15 ">
                                         {{$post->created_at->format('d-m-y')}}
                                     </p>
                                 </div>
@@ -173,7 +172,7 @@ Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
 
             @isset($posts)
                 <div class="container-remake">
-                    {{ $posts->links('vendor.pagination.custom') }}
+                    {{ $posts->withQueryString()->links('vendor.pagination.custom') }}
                 </div>
             @endisset
         </div>

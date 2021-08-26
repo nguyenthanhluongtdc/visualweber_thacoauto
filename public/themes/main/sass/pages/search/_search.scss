@@ -1,6 +1,10 @@
 .search-page{
    padding-bottom: 30px;
     .search-input{
+        @media (max-width: 575px) {
+            margin-left: 0;
+            margin-right: 0;
+        }
         .search{
             border-top: none;
             border-left: none;

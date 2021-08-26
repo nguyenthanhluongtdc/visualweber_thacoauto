@@ -10,15 +10,19 @@ use SlugHelper;
 use Illuminate\Support\Arr;
 use Illuminate\Http\Request;
 use Platform\Page\Models\Page;
-use Platform\Page\Services\PageService;
-use Platform\Theme\Events\RenderingSingleEvent;
+use Illuminate\Support\Facades\Log;
+use Platform\Base\Enums\BaseStatusEnum;
 // use Platform\Partner\Models\Partner;
 // use Platform\Services\Models\Services;
-use Platform\Base\Http\Responses\BaseHttpResponse;
+use Platform\Page\Services\PageService;
 // use Response;
+use Symfony\Component\HttpFoundation\Response;
+use Platform\Theme\Events\RenderingSingleEvent;
+use Platform\Base\Http\Responses\BaseHttpResponse;
 use Platform\Theme\Http\Controllers\PublicController;
 use Platform\Blog\Repositories\Interfaces\PostInterface;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
+use Platform\DistributionSystem\Repositories\Interfaces\DistributionSystemInterface;
 use Platform\Kernel\Repositories\Interfaces\PostInterface as InterfacesPostInterface;
 
 class ThacoController extends PublicController
@@ -209,5 +213,26 @@ class ThacoController extends PublicController
             "data" => Theme::partial('templates/post', $data),
             "disable" => $data['posts']->count() == 0
         ], 200);
+    }
+
+    public function getDistributionSystem(Request $request, DistributionSystemInterface $distributionSystemInterface) {
+        try {
+            Log::info("======== Lấy danh sách chi nhánh theo Tỉnh/Thành phố: {$request->city} =========");
+            $distributionSystems = $distributionSystemInterface->advancedGet(['condition' => [
+                'status' => BaseStatusEnum::PUBLISHED,
+                'city_id' => $request->city
+            ]]);
+            $html_list = view('theme.main::views.pages.distribution-system.ajax.list', compact('distributionSystems'))->render();
+            return response()->json([
+                'type' => 'success',
+                'html_list' => $html_list,
+            ])->setStatusCode(Response::HTTP_OK);
+        } catch (\Throwable $th) {
+            Log::error("Lỗi lấy danh sách chi nhánh theo Tỉnh/Thành phố", [$th->getMessage(), $th->getFile(), $th->getLine()]);
+            return response()->json([
+                'type' => 'error',
+                'message' => 'Rất tiếc đã xảy ra lỗi khi lấy danh sách chi nhánh theo Tỉnh/Thành phố'
+            ])->setStatusCode(Response::HTTP_INTERNAL_SERVER_ERROR);
+        }
     }
 }

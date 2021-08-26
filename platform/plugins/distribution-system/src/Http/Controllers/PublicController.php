@@ -3,28 +3,30 @@
 namespace Platform\DistributionSystem\Http\Controllers;
 
 use Theme;
-use Platform\Base\Http\Controllers\BaseController;
 use Platform\Service\Models\Service;
-use Platform\Service\Repositories\Interfaces\ServiceInterface;
+use Platform\Base\Http\Controllers\BaseController;
 use Platform\Slug\Repositories\Interfaces\SlugInterface;
+use Platform\DistributionSystem\Models\DistributionSystem;
+use Platform\Service\Repositories\Interfaces\ServiceInterface;
+use Platform\DistributionSystem\Repositories\Interfaces\DistributionSystemInterface;
 
 class PublicController extends BaseController
 {
-    protected $serviceRepository;
+    protected $repository;
 
-    public function __construct(ServiceInterface $serviceRepository)
+    public function __construct(DistributionSystemInterface $repository)
     {
         Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
-        $this->serviceRepository = $serviceRepository;
+        $this->repository = $repository;
     }
 
     public function getBySlug($slug, SlugInterface $slugRepository)
     {
-        $slug = $slugRepository->getFirstBy(['key' => $slug, 'reference_type' => Service::class]);
+        $slug = $slugRepository->getFirstBy(['key' => $slug, 'reference_type' => DistributionSystem::class]);
         if (!$slug) {
             abort(404);
         }
-        $data = $this->serviceRepository->getFirstBy(['id' => $slug->reference_id]);
+        $data = $this->repository->getFirstBy(['id' => $slug->reference_id]);
 
         if (!$data) {
             abort(404);

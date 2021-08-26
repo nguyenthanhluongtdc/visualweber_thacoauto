@@ -37,15 +37,16 @@
             <div class="tags-name">
                 <span class="font18 font-mi-bold">{{ __("Tags") }}: </span>
             </div>
-            
-            @if (!$post->tags->isEmpty()) 
-            <div class="post__tags font-pri font15 mt-2 fontmb-little">
-                    <i class="ion-pricetags"></i>
+
+            @if (!$post->tags->isEmpty())
+                <div class="post__tags-list">
                     @foreach ($post->tags as $tag)
-                        <a href="{{ $tag->url }}">{{ $tag->name }}</a>
+                        <a href="{{ $tag->url }}" class="post__tags font-pri font15">
+                            <i class="ion-pricetags"></i>
+                            <span>{{ $tag->name }}</span>
+                        </a>
                     @endforeach
-            </div>
-            
+                </div>
              @endif
         </div>
         {{-- @if (theme_option('facebook_comment_enabled_in_post', 'yes') == 'yes') --}}

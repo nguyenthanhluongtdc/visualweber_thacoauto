@@ -32,7 +32,7 @@
                     <div class="w-100 h-100" id="map"></div>
                 </div>
             </div>
-            <div data-aos="fade-left" data-aos-duration="1500" class="description mobile font20">{{ $page->content }}</div>
+            <div data-aos="fade-left" data-aos-duration="1500" class="description mobile font20">{!! $page->content !!}</div>
         </div>
     </div>
     <div class="activity-news-desktop">

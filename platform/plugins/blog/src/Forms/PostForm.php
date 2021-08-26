@@ -9,6 +9,7 @@ use Platform\Blog\Forms\Fields\CategoryMultiField;
 use Platform\Blog\Http\Requests\PostRequest;
 use Platform\Blog\Models\Post;
 use Platform\Blog\Repositories\Interfaces\CategoryInterface;
+use Platform\Location\Repositories\Interfaces\CityInterface;
 
 class PostForm extends FormAbstract
 {
@@ -47,6 +48,10 @@ class PostForm extends FormAbstract
         if (!$this->formHelper->hasCustomField('categoryMulti')) {
             $this->formHelper->addCustomField('categoryMulti', CategoryMultiField::class);
         }
+
+        $regions = is_plugin_active('location') ? get_cities() : [];
+
+        $regions = ['' =>  __("Chọn khu vực")] + $regions;
 
         $this
             ->setupModel(new Post)
@@ -107,6 +112,14 @@ class PostForm extends FormAbstract
                     'placeholder' => trans('plugins/blog::base.write_some_tags'),
                     'data-url'    => route('tags.all'),
                 ],
+            ])
+            ->add('city_id', 'customSelect', [
+                'label'      => __('Khu vực'),
+                'label_attr' => ['class' => 'control-label required'],
+                'choices' => $regions,
+                'attr'       => [
+                    'class' => 'form-control select-search-full',
+                ]
             ])
             ->setBreakFieldPoint('status');
 

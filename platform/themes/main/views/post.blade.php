@@ -12,10 +12,10 @@
             <div class="left d-flex align-content-center">
                 <ul class="p-0 statistical font18 MyriadPro-Regular mb-0 mt-2">
                     @if(!empty(get_field($post, 'author')))
-                    <li><span class="author font20 font-mi-bold">{{ get_field($post, 'author') }}</span></li>
+                    <li class="li__author"><span class="author font20 font-mi-bold">{{ get_field($post, 'author') }}</span></li>
                     @endif
                     <li><span class="icon"><i class="far fa-clock"></i></span>{{ $post->created_at->format('d/m/Y') }}</li>
-                    <li><span>{{ __("Comment") }}: </span><span>23</span></li>
+                    <li><span>{{ __("Comment") }}: </span><span>{{ get_comment_count($post) ?? 0 }}</span></li>
                     <li><span>{{ __("View") }}: </span><span>{{ $post->views ?? __("chưa cập nhật") }}</span></li>
                 </ul>
             </div>
@@ -37,15 +37,16 @@
             <div class="tags-name">
                 <span class="font18 font-mi-bold">{{ __("Tags") }}: </span>
             </div>
-            
-            @if (!$post->tags->isEmpty()) 
-            <div class="post__tags font-pri font15 mt-2 fontmb-little">
-                    <i class="ion-pricetags"></i>
+
+            @if (!$post->tags->isEmpty())
+                <div class="post__tags-list">
                     @foreach ($post->tags as $tag)
-                        <a href="{{ $tag->url }}">{{ $tag->name }}</a>
+                        <a href="{{ $tag->url }}" class="post__tags font-pri font15">
+                            <i class="ion-pricetags"></i>
+                            <span>{{ $tag->name }}</span>
+                        </a>
                     @endforeach
-            </div>
-            
+                </div>
              @endif
         </div>
         {{-- @if (theme_option('facebook_comment_enabled_in_post', 'yes') == 'yes') --}}
@@ -112,7 +113,7 @@
                             </a>
                         </div>
                         <p class="city-day font-pri font15">
-                            <span class="city">{{ \MetaBox::getMetaData($post, 'region_post', true) ?? '--' }}</span>
+                            <span class="city">{{ $post->city->name ?? '--' }}</span>
                             <span class="time"> {{ $relatedItem->created_at->format('d/m/Y') }}</span>
                         </p>
                         <header class="post__header">

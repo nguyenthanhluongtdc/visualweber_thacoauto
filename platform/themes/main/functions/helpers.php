@@ -68,16 +68,38 @@ if (!function_exists('render_media_gallery')) {
 }
 
 if (!function_exists('get_first_video_post')) {
+    /**
+     * Get first video post function
+     *
+     * @return void
+     */
     function get_first_video_post()
     {
         return app(PostInterface::class)->getFirstVideoPost() ?? collect();
     }
 }
 
-if (!function_exists('get_current_url_with_lang')) {
-    function get_current_url_with_lang()
+if (!function_exists('get_comment_count')) {
+    /**
+     * Get comment count function
+     *
+     * @param [type] $reference
+     * @return void
+     */
+    function get_comment_count($reference)
     {
-        $url = URL::current();
-        // $lang = Language::÷
+        if(is_plugin_active('comment')) {
+            $count = app(Platform\Comment\Repositories\Interfaces\CommentInterface::class)
+                ->advancedGet([
+                    'condition' => [
+                        'reference_type' => get_class($reference),
+                        'reference_id' => $reference->id
+                    ],
+                    'select' => ['id']
+                ])->count() ?? 0;
+
+            return $count;
+        }
+        return 0;
     }
 }

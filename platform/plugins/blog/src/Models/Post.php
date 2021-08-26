@@ -10,6 +10,9 @@ use Platform\Base\Models\BaseModel;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
+use Platform\Location\Models\City;
+use Platform\Location\Models\State;
+use Platform\Member\Models\Member;
 
 class Post extends BaseModel
 {
@@ -71,6 +74,7 @@ class Post extends BaseModel
         'status',
         'author_id',
         'author_type',
+        'city_id'
     ];
 
     /**
@@ -129,5 +133,10 @@ class Post extends BaseModel
             $post->categories()->detach();
             $post->tags()->detach();
         });
+    }
+
+    public function city(): BelongsTo
+    {
+        return $this->belongsTo(State::class, 'city_id', 'id');
     }
 }

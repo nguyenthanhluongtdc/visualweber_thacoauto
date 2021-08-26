@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddFieldCityIdToAppDistributionSystems extends Migration
+class AddFieldCityIdToPosts extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class AddFieldCityIdToAppDistributionSystems extends Migration
      */
     public function up()
     {
-        Schema::table('app_distribution_systems', function (Blueprint $table) {
+        Schema::table('posts', function (Blueprint $table) {
             $table->unsignedBigInteger('city_id')->nullable();
         });
     }
@@ -25,7 +25,7 @@ class AddFieldCityIdToAppDistributionSystems extends Migration
      */
     public function down()
     {
-        Schema::table('app_distribution_systems', function (Blueprint $table) {
+        Schema::table('posts', function (Blueprint $table) {
             $table->dropColumn('city_id');
         });
     }

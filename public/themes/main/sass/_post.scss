@@ -1,6 +1,8 @@
 .post-container {
   padding: 75px 0;
+
   .post-primary {
+
     // h2 {
     //   text-transform: uppercase;
     //   text-align: center;
@@ -9,18 +11,23 @@
       margin-top: 35px;
       width: 100%;
       position: relative;
+
       @media (max-width: 1680px) {
         margin-top: 30px;
       }
+
       @media (max-width: 1440px) {
         margin-top: 25px;
       }
+
       @media (max-width: 1366px) {
         margin-top: 20px;
       }
+
       @media (max-width: 1199px) {
         margin-top: 15px;
       }
+
       .like-share {
         position: absolute;
         right: 0;
@@ -32,20 +39,25 @@
           }
         }
       }
+
       .left {
         display: flex;
         align-items: center;
         text-align: center;
         justify-content: center;
+
         ul {
           display: flex;
           align-items: center;
           list-style: disc;
+
           li {
             margin-left: 40px;
+
             span.icon {
               margin-right: 10px;
             }
+
             &:first-child {
               list-style: none;
               margin-left: 0;
@@ -54,6 +66,7 @@
         }
       }
     }
+
     // p.desc {
     //   margin: 95px auto;
     //   @media (max-width: 1680px) {
@@ -76,19 +89,24 @@
       align-items: center;
       justify-content: space-between;
       font-size: 25px !important;
+
       @media (max-width: 1080px) {
         font-size: 18px !important;
       }
     }
+
     .post__content {
-      &.font-pri.font18 > p,
+
+      &.font-pri.font18>p,
       strong {
         font-size: 16px !important;
         line-height: 1.5 !important;
+
         @include maxWidth(991) {
           font-size: 14px !important;
         }
       }
+
       ol,
       ul {
         padding-left: 25px;
@@ -153,25 +171,32 @@
           }
         }
       }
+
       img {
         max-width: 100%;
       }
     }
+
     .tags {
       display: flex;
       align-items: center;
       margin-top: 20px;
+
       @media (max-width: 1680px) {
         margin-top: 17px;
       }
+
       @media (max-width: 1440px) {
         margin-top: 15px;
       }
+
       @media (max-width: 995px) {
         margin-top: 13px;
       }
+
       .post__tags {
         margin-left: 20px;
+
         a {
           padding: 7px 10px 5px 10px;
           background: #ebedf2;
@@ -182,90 +207,115 @@
       }
     }
   }
+
   .fb-like-bottom {
     margin-left: -10px;
     margin-bottom: 10px;
   }
+
   .top-comment {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+
     .left {
       width: 6%;
+
       img {
         width: 100%;
       }
     }
+
     .right {
       width: 93%;
       background: #ebedf2;
       padding: 20px 30px;
       color: #878c94;
       min-height: 220px;
+
       @media (max-width: 1680px) {
         min-height: 180px;
       }
+
       @media (max-width: 1440px) {
         min-height: 150px;
       }
+
       @media (max-width: 1366px) {
         min-height: 130px;
       }
+
       @media (max-width: 1199px) {
         min-height: 120px;
       }
+
       span {
         color: #1777f2;
       }
     }
   }
+
   .comment-post {
     margin-top: 10px;
+
     .item-comment {
       display: flex;
       justify-content: space-between;
       margin-top: 15px;
+
       .left {
         width: 6%;
+
         img {
           width: 100%;
         }
       }
+
       .right {
         width: 93%;
         background: #ebedf2;
         padding: 20px 30px;
+
         @media (max-width: 1680px) {
           padding: 15px 25px;
         }
+
         @media (max-width: 1440px) {
           padding: 13px 22px;
         }
+
         @media (max-width: 1366px) {
           padding: 10px 15px;
         }
+
         @media (max-width: 1199px) {
           padding: 8px 14px;
         }
+
         .name-wrap {
           display: flex;
           justify-content: space-between;
+
           .menu-name {
             color: #8794ad;
           }
         }
+
         p.cmt {
           color: #363636;
           margin-top: 15px;
         }
+
         .like-time {
           display: flex;
           align-items: center;
           margin-top: 15px;
           color: #848484;
+
           .time {
             margin-left: 40px;
           }
+
           span {
             margin-right: 10px;
           }
@@ -279,82 +329,147 @@
   margin-top: 40px;
   padding-top: 40px;
   border-top: 1px solid #b7b7b7;
+
   @media (max-width: 1680px) {
     margin-top: 35px;
     padding-top: 35px;
   }
+
   @media (max-width: 1440px) {
     margin-top: 30px;
     padding-top: 30px;
   }
+
   @media (max-width: 1366px) {
     margin-top: 25px;
     padding-top: 25px;
   }
+
   @media (max-width: 1199px) {
     margin-top: 20px;
     padding-top: 20px;
   }
+
   h2 {
     margin-bottom: 45px;
     text-transform: uppercase;
+
     @media (max-width: 1680px) {
       margin-bottom: 35px;
     }
+
     @media (max-width: 1440px) {
       margin-bottom: 30px;
     }
+
     @media (max-width: 1366px) {
       margin-bottom: 25px;
     }
+
     @media (max-width: 1199px) {
       margin-bottom: 20px;
     }
   }
+
   .city-day {
     margin: 20px 0;
+
     @media (max-width: 1680px) {
       margin: 17px 0;
     }
+
     @media (max-width: 1440px) {
       margin: 15px 0;
     }
+
     @media (max-width: 1366px) {
       margin: 12px 0;
     }
+
     @media (max-width: 1199px) {
       margin: 10px 0;
     }
   }
+
   .post__header {
     h5 {
+      @include split_str(2);
+
       a {
         color: #454343;
       }
     }
+
     .post__desc {
       margin-top: 20px;
+      @include split_str(3);
+
       @media (max-width: 1680px) {
         margin-top: 17px;
       }
+
       @media (max-width: 1440px) {
         margin-top: 15px;
       }
+
       @media (max-width: 1366px) {
         margin-top: 12px;
       }
+
       @media (max-width: 1199px) {
         margin-top: 10px;
       }
+
       text-align: justify;
     }
   }
 }
+
 #bb-comment {
   &.bb-comment-wrapper {
     padding: 1.5rem 0;
+
     .bb-comment {
       max-width: 100%;
+
+      .bb-comment-box {
+        .bb-avatar {
+          border-radius: 50%;
+
+          img {
+            border-radius: 50%;
+          }
+        }
+      }
+
+      .bb-comment-list {
+        .bb-comment-item {
+          .bb-comment-content {
+            background: #ebedf2;
+            border-radius: 0.1rem;
+            padding: 1rem;
+            .bb-comment-content-user {
+              .bb-comment-item-user_name{
+                a{
+                  color: $color-primary;
+                }
+              }
+            }
+
+            .bb-comment-content-actions {
+
+            }
+          }
+
+          .bb-avatar {
+            border-radius: 50%;
+
+            img {
+              border-radius: 50%;
+            }
+          }
+        }
+      }
     }
   }
 }

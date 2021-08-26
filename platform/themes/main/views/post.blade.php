@@ -2,7 +2,7 @@
 @if(in_array($post->format_type, ['gallery', 'video']))
 {!!render_media_gallery($post)!!}
 @else
-{!! do_shortcode('[filter-media category="' . $category->id . '"][/filter-media]') !!}
+{!! do_shortcode('[filter-media category="' . $category->id ?? '' . '"][/filter-media]') !!}
 <div class="post-container container-remake Lineheight-Regular overflow-x-hidden">
     <div class="post-primary">
         <h2 class="title font-pri-bold font50 p-0 text-uppercase text-center fontmb-large">

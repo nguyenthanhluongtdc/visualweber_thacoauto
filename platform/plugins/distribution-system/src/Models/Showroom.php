@@ -22,6 +22,7 @@ class Showroom extends BaseModel
      */
     protected $fillable = [
         'name',
+        'distribution_system_id',
         'status',
     ];
 

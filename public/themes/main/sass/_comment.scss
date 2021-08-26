@@ -35,6 +35,9 @@ $color-red: #dc3545;
                     .bb-like {
                         height: 45px;
                         width: 45px;
+                        position: relative;
+                        top: 1px;
+                        left: -6px;
                     }
                 }
                 .bb-comment-item-user_name {

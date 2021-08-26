@@ -1,5 +1,7 @@
 <?php
 
+use Platform\DistributionSystem\Models\DistributionSystem;
+
 Route::group(['namespace' => 'Platform\DistributionSystem\Http\Controllers', 'middleware' => ['web', 'core']], function () {
 
     Route::group(['prefix' => BaseHelper::getAdminPrefix(), 'middleware' => 'auth'], function () {
@@ -24,3 +26,15 @@ Route::group(['namespace' => 'Platform\DistributionSystem\Http\Controllers', 'mi
     });
 
 });
+
+Route::group(
+    ['namespace' => 'Platform\DistributionSystem\Http\Controllers', 'middleware' => ['web', 'core']],
+    function () {
+        Route::group(apply_filters(BASE_FILTER_GROUP_PUBLIC_ROUTE, []), function () {
+            Route::get(\SlugHelper::getPrefix(DistributionSystem::class, 'he-thong-phan-phoi') . '/{slug}', [
+                'uses' => 'PublicController@getBySlug',
+            ]);
+        });
+    }
+);
+

@@ -26,112 +26,10 @@
                     alt="">
                 <div class="branch-background-blur"></div>
                 <div class="left">
-                    <div class="branch-overflow" id="branch-list">
-                        <div class="branch-item mb-20">
-                            <p class="branch-name font30 mb-20">Chi Nhánh An Lạc - Công Ty CP Ô Tô Trường Hải</p>
-                            <p class="branch-address font20 mb-20">36C11, QL1A, Tân Kiên, Bình Chánh, Thành phố Hồ Chí
-                                Minh 700000</p>
-                            <div class="logo-wrap mb-20">
-                                <div class="logo-wrap__left">
-                                    <div class="logo-item">
-                                        <img src="{{Theme::asset()->url('images/distribution/foton.png')}}" alt="">
-                                    </div>
-                                    <div class="logo-item">
-                                        <img src="{{Theme::asset()->url('images/distribution/fuso.png')}}" alt="">
-                                    </div>
-                                    <div class="logo-item">
-                                        <img src="{{Theme::asset()->url('images/distribution/frontier.png')}}" alt="">
-                                    </div>
-                                    <div class="logo-item">
-                                        <img src="{{Theme::asset()->url('images/distribution/thacobus.png')}}" alt="">
-                                    </div>
-                                </div>
-                                <div class="logo-wrap__right font17 font-pri font-17">
-                                    <a href="/he-thong-phan-phoi-chi-tiet">Xem chi tiết <i class="fa fa-arrow-right"
-                                            aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="branch-item mb-20">
-                            <p class="branch-name font30 mb-20">Chi Nhánh An Lạc - Công Ty CP Ô Tô Trường Hải</p>
-                            <p class="branch-address font20 mb-20">36C11, QL1A, Tân Kiên, Bình Chánh, Thành phố Hồ Chí
-                                Minh 700000</p>
-                            <div class="logo-wrap mb-20">
-                                <div class="logo-wrap__left">
-                                    <div class="logo-item">
-                                        <img src="{{Theme::asset()->url('images/distribution/foton.png')}}" alt="">
-                                    </div>
-                                    <div class="logo-item">
-                                        <img src="{{Theme::asset()->url('images/distribution/fuso.png')}}" alt="">
-                                    </div>
-                                    <div class="logo-item">
-                                        <img src="{{Theme::asset()->url('images/distribution/frontier.png')}}" alt="">
-                                    </div>
-                                    <div class="logo-item">
-                                        <img src="{{Theme::asset()->url('images/distribution/thacobus.png')}}" alt="">
-                                    </div>
-                                </div>
-                                <div class="logo-wrap__right font17 font-pri font-17">
-                                    <a href="/he-thong-phan-phoi-chi-tiet">Xem chi tiết <i class="fa fa-arrow-right"
-                                            aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="branch-item mb-20">
-                            <p class="branch-name font30 mb-20">Chi Nhánh An Lạc - Công Ty CP Ô Tô Trường Hải</p>
-                            <p class="branch-address font20 mb-20">36C11, QL1A, Tân Kiên, Bình Chánh, Thành phố Hồ Chí
-                                Minh 700000</p>
-                            <div class="logo-wrap mb-20">
-                                <div class="logo-wrap__left">
-                                    <div class="logo-item">
-                                        <img src="{{Theme::asset()->url('images/distribution/foton.png')}}" alt="">
-                                    </div>
-                                    <div class="logo-item">
-                                        <img src="{{Theme::asset()->url('images/distribution/fuso.png')}}" alt="">
-                                    </div>
-                                    <div class="logo-item">
-                                        <img src="{{Theme::asset()->url('images/distribution/frontier.png')}}" alt="">
-                                    </div>
-                                    <div class="logo-item">
-                                        <img src="{{Theme::asset()->url('images/distribution/thacobus.png')}}" alt="">
-                                    </div>
-                                </div>
-                                <div class="logo-wrap__right font17 font-pri font-17">
-                                    <a href="/he-thong-phan-phoi-chi-tiet">Xem chi tiết <i class="fa fa-arrow-right"
-                                            aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="branch-item mb-20">
-                            <p class="branch-name font30 mb-20">Chi Nhánh An Lạc - Công Ty CP Ô Tô Trường Hải</p>
-                            <p class="branch-address font20 mb-20">36C11, QL1A, Tân Kiên, Bình Chánh, Thành phố Hồ Chí
-                                Minh 700000</p>
-                            <div class="logo-wrap mb-20">
-                                <div class="logo-wrap__left">
-                                    <div class="logo-item">
-                                        <img src="{{Theme::asset()->url('images/distribution/foton.png')}}" alt="">
-                                    </div>
-                                    <div class="logo-item">
-                                        <img src="{{Theme::asset()->url('images/distribution/fuso.png')}}" alt="">
-                                    </div>
-                                    <div class="logo-item">
-                                        <img src="{{Theme::asset()->url('images/distribution/frontier.png')}}" alt="">
-                                    </div>
-                                    <div class="logo-item">
-                                        <img src="{{Theme::asset()->url('images/distribution/thacobus.png')}}" alt="">
-                                    </div>
-                                </div>
-                                <div class="logo-wrap__right font17 font-pri font-17">
-                                    <a href="/he-thong-phan-phoi-chi-tiet">Xem chi tiết <i class="fa fa-arrow-right"
-                                            aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="branch-overflow" id="branch-list"></div>
                 </div>
                 <div class="right">
                     <div class="w-100 h-100" id="map"></div>
-                    <!-- <img src="{{Theme::asset()->url('images/distribution/mapitem.png')}}" alt=""> -->
                 </div>
             </div>
             <div data-aos="fade-left" data-aos-duration="1500" class="description mobile font20">{{ $page->content }}</div>
@@ -235,7 +133,7 @@
     <div class="activity-news-mobile font-pri">
         <div class="container-remake">
             <h2 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 mb-20 text-uppercase fontmb-large font-pri-bold">
-                tin tức hoạt động
+                {{ __("tin tức hoạt động") }}
             </h2>
             @if (!empty($posts[0]))
             <div class="news-item">
@@ -400,6 +298,12 @@
         </div>
     </div>
 </div>
+
+<script>
+    window.__distribution = {
+        ajax: "{{ Language::getLocalizedURL(Language::getCurrentLocale(), route('public.ajax.distribution-system')) }}"
+    }
+</script>
 <style>
     #map {
         background: transparent
@@ -409,39 +313,62 @@
     }
 </style>
 <script>
+    const Distribution = {
+        initSearchState: function() {
+            if(!$('.city')) return
+
+            $('.ui.dropdown.city').dropdown({
+                ignoreDiacritics: true,
+                sortSelect: true,
+                fullTextSearch:'exact',
+            });
+        },
+        getTemplateDistrubition: function() {
+            $.ajax({
+                headers: {
+                    "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content")
+                },
+                url: window.__distribution.ajax,
+                method: "GET",
+                data: {
+                    city: $('#city_id').val()
+                },
+                dataType: "json",
+                success: function(result, status, xhr) {
+                    const { data, template } = result.data
+                    if($('#branch-list')) {
+                        $('#branch-list').html(template)
+                    }
+
+                    window.__distribution = {
+                        ...window.__distribution,
+                        data
+                    }
+                },
+            });
+        }
+    }
+
+
     $(document).ready(function() {
+        Distribution.getTemplateDistrubition()
         $("#distribution-system-form").submit(function(e) {
             e.preventDefault();
-            $.ajax({
-                    headers: {
-                        "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr(
-                            "content"
-                        )
-                    },
-                    url: "{{route('public.ajax.distribution-system')}}",
-                    method: "GET",
-                    data: {
-                        city: $('#city_id').val()
-                    },
-                    dataType: "json",
-                    success: function(result, status, xhr) {
-                        $('#branch-list')[0].innerHTML = result.html_list;
-                    },
-                    error: function(xhr, status, error) {
-                    },
-            });
-
+            Distribution.getTemplateDistrubition()
         });
+
     })
+        Distribution.initSearchState()
 
-    if($('.city').length){
-        var ignoreDiacritics = true;
-        $('.ui.dropdown.city').dropdown({
-            ignoreDiacritics: ignoreDiacritics,
-            sortSelect: true,
-            fullTextSearch:'exact',
-        });
-    };
+
+    // if($('.city').length){
+    //     var ignoreDiacritics = true;
+    //     $('.ui.dropdown.city').dropdown({
+    //         ignoreDiacritics: ignoreDiacritics,
+    //         sortSelect: true,
+    //         fullTextSearch:'exact',
+    //     });
+    // };
     var owl = $('.owl-carousel');
     owl.owlCarousel({
         loop: false,

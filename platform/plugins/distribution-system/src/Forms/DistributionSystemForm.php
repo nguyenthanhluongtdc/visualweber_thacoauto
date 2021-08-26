@@ -37,6 +37,10 @@ class DistributionSystemForm extends FormAbstract
                 ],
                 'choices'    => BaseStatusEnum::labels(),
             ])
+            ->add('image', 'mediaImage', [
+                'label'      => trans('core/base::forms.image') . ' (810x445)',
+                'label_attr' => ['class' => 'control-label'],
+            ])
             ->add('state_id', 'customSelect', [
                 'label'      => __('Khu vực'),
                 'label_attr' => ['class' => 'control-label required'],

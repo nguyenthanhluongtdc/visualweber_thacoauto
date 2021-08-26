@@ -333,7 +333,7 @@ var Helper = {
                 zeynep.open()
             }
         })
-    }
+    },
 };
 
 let globalConfig = {

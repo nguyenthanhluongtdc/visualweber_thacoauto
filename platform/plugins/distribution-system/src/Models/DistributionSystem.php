@@ -22,6 +22,8 @@ class DistributionSystem extends BaseModel
      */
     protected $fillable = [
         'name',
+        'state_id',
+        'image',
         'status',
     ];
 

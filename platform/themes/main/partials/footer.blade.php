@@ -4,11 +4,8 @@
 <footer class="footer" id="footer">
     <div class="footer-wrap container-remake">
         <div class="footer-left">
-            <a class="img-bct-mobile" href="#" title="">
-                <img src="{{ Theme::asset()->url('images/main/bct.png') }}" alt="Bộ công thương">
-            </a>
             <a href="{{ route('public.single') }}" class="logo-bottom">
-                <img src="{{ Theme::asset()->url('images/main/logobt.png') }}" alt="THACO AUTO" height="34">
+                <img src="{{ get_image_url(theme_option('logo_footer')) }}" alt="{!! __('THACO AUTO') !!}" height="34">
             </a>
             <div class="thaco-contact">
                 <h2 class="name-company font-pri-bold color-pri font32">{!! theme_option('name-company') !!}</h2>
@@ -65,6 +62,12 @@
                         <li><a href="{{ theme_option('linkedin') }}" target="_blank"><img src="{{ Theme::asset()->url('images/main/iconin.png') }}" alt="in"></a></li>
                         <li><a href="{{ theme_option('youtube') }}" target="_blank"><img src="{{ Theme::asset()->url('images/main/iconyt.png') }}" alt="youtube"></a></li>
                     </ul>
+                </div>
+
+                <div class="img-bct-mobile">
+                    <a href="#" title="">
+                        <img src="{{ get_image_url(theme_option('logo_bct')) }}" alt="{!! __('Bộ công thương') !!}">
+                    </a>
                 </div>
         </div>
     </div>

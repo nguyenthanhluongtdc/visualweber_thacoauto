@@ -322,6 +322,11 @@
                             &:last-child {
                                 margin-right: unset;
                             }
+                            img {
+                                max-width: 60px;
+                                max-height: 50px;
+                                object-fit: cover;
+                            }
                             p {
                                 margin-top: 5px;
                                 font-family: $font-primary-bold;

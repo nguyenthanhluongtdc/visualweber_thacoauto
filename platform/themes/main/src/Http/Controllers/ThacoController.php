@@ -182,7 +182,7 @@ class ThacoController extends PublicController
         //     ->add(__('Home'), route('public.index'))
         //     ->add($title, route('public.search'));
 
-        $comment = count($posts).__('kết quả được tìm thấy').
+        $comment = $posts->total().__('kết quả được tìm thấy').
         "<strong class='text-uppercase color-pri font20'> $query </strong>";
 
         return Theme::scope('search', compact(['posts','comment']))

@@ -41,7 +41,7 @@ alt="{{ $post->name }}"><a href="{{ $post->url }}" class="post__overlay"></a>
 Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
 @endphp
 <div class="search-page">
-    <form action="/search" class="form-search">
+    <form action="{{route('public.search')}}" class="form-search">
         <div class="container-remake">
             <div class="search-intro">
                 <h1 class="font-pri-bold font60 text-uppercase text-center mt-md-5 mt-3"> 

@@ -408,38 +408,40 @@
             }
         }
         .list-image {
-            @media only screen and (max-width: 1080px){
-                display: none;      
-                       
-            }
-            margin-left: -15px;
-            margin-right: -15px;
-
-            img {
-                max-width: 100%;
-            }
-
-            >div {
-                padding-left: 15px;
-                padding-right: 15px;
-            }
-
+           
             .swiper-container {
+                @media only screen and (max-width: 1080px){
+                    display: none;      
+                           
+                }
+                margin-left: -15px;
+                margin-right: -15px;
+    
+                img {
+                    max-width: 100%;
+                }
+    
+                >div {
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
+    
                 padding-bottom: 20px;
                 margin-left: -100px;
                 margin-right: -100px;
                 width: calc(100% + 200px);
-            }
-            .swiper-scrollbar {
-                width: calc(80% - 185px);
-                left: 50%;
-                transform: translateX(-50%);
-                position: relative !important;
-                top: 5%;
-                .swiper-scrollbar-drag {
-                    background-color: #2e3a41;
+                .swiper-scrollbar {
+                    width: calc(80% - 185px);
+                    left: 50%;
+                    transform: translateX(-50%);
+                    position: relative;
+                    .swiper-scrollbar-drag {
+                        background-color: #2e3a41;
+                        
+                    }
                 }
             }
+            
         }
         .rnd-news-mobile{
             display: none;

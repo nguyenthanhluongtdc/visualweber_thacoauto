@@ -9,7 +9,6 @@
                     foreach($citys as $key => $value) {
                         $cityIdFirst = $key;
                     }
-                    $distributionSystems = get_distribution_systems(!empty($_GET['city']) ? $_GET['city'] : $cityIdFirst);
                 @endphp
                 <form action="" id="distribution-system-form">
                     @csrf

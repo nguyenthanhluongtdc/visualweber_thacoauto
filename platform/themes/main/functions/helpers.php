@@ -15,6 +15,19 @@ if (!function_exists('get_featured_posts_by_category')) {
         return app(PostInterface::class)->getFeaturedByCategory($categoryId, $limit, $with);
     }
 }
+
+if (!function_exists('get_all_with_featured')) {
+    /**
+     * @param int $limit
+     * @param array $with
+     * @return \Illuminate\Support\Collection
+     */
+    function get_all_with_featured($limit, array $with = [])
+    {
+        return app(PostInterface::class)->getAllWithFeatured($limit, $with);
+    }
+}
+
 if (!function_exists('get_only_featured_posts_by_category')) {
     /**
      * @param array $categoryId

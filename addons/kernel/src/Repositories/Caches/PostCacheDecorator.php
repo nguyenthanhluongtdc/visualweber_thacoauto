@@ -37,4 +37,14 @@ class PostCacheDecorator extends BlogPostCacheDecorator
     {
         return $this->getDataIfExistCache(__FUNCTION__, func_get_args());
     }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getAllWithFeatured(int $limit = 5, array $with = [])
+    {
+        return $this->getDataIfExistCache(__FUNCTION__, func_get_args());
+    }
+
+    
 }

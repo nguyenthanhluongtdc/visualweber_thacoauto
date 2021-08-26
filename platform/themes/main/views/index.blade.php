@@ -25,8 +25,8 @@
     <div class="content">
         <div class="left left-desktop" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
             @php
-                $postDesktop = get_featured_posts(4);
-                $postMobile = get_featured_posts(2);
+                $postDesktop = get_all_with_featured(4);
+                $postMobile = get_all_with_featured(2);
             @endphp
             @if (!empty($postDesktop))
                 @foreach ($postDesktop as $post)
@@ -126,23 +126,48 @@
                 </p>
 
                 <div class="scollbar-wrap-home">
+                    @php
+                        $postsHot = get_all_with_featured(10);
+                    @endphp
                     <div id="hours">
-                        <img class="logo-frame flag-1" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
-                        <img class="logo-frame flag-2" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
-                        <img class="logo-frame flag-3" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
-                        <img class="logo-frame flag-4" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
-                        <img class="logo-frame flag-5" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
-                        <img class="logo-frame flag-6" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
-                        <img class="logo-frame flag-7" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
+                        @if (!empty($postsHot))
+                            @foreach ($postsHot as $post)
+                            {{-- @dd(has_field($post, 'hot_news')) --}}
+                            @if($loop->first && has_field($post, 'hot_news') != 1)
+
+                            @elseif(has_field($post, 'hot_news') == 1)
+                            <img class="logo-frame flag-1" src="{{ get_image_url(has_field($post, 'hot_news_image')) }}" alt="{{$post->name}}">
+                            @endif
+                            @endforeach
+                        @endif
+                        {{-- <img class="logo-frame flag-1" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt=""> --}}
                     </div>
                     <div id="cells">
-                        <div class="cell-item flag-1">
+                        
+                        @if (!empty($postsHot))
+                            @foreach ($postsHot as $post)
+                            {{-- @dd(has_field($post, 'hot_news')) --}}
+                            @if($loop->first && has_field($post, 'hot_news') != 1)
+                                {{__('Chưa có điểm tin')}}
+                            @elseif(has_field($post, 'hot_news') == 1)
+                            <div class="cell-item flag-1">
+                                <div class="frame">
+                                    <img src="{{ get_image_url(has_field($post, 'hot_news_image')) }}" alt="{{$post->name}}">
+                                </div>
+                                <span class="font-pri-bold fontmb-small">
+                                    <a href="{{$post->url}}">{{$post->name}}</a>
+                                </span>
+                            </div>
+                            @endif
+                            @endforeach
+                        @endif
+                        {{-- <div class="cell-item flag-1">
                             <img src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
                             <span class="font-pri-bold fontmb-small">
                                 <a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
                             </span>
-                        </div>
-                        <div class="cell-item flag-2">
+                        </div> --}}
+                        {{-- <div class="cell-item flag-2">
                             <img src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
                             <span class="font-pri-bold fontmb-small">
                                 <a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
@@ -177,7 +202,7 @@
                             <span class="font-pri-bold fontmb-small">
                                 <a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
                             </span>
-                        </div>
+                        </div> --}}
                         </h5>
                     </div>
                 </div>

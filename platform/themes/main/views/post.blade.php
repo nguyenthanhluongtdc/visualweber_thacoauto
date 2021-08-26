@@ -36,7 +36,7 @@
         <div class="tags">
             <span class="font18 font-mi-bold">{{ __("Tags") }}: </span>
             @if (!$post->tags->isEmpty()) 
-            <span class="post__tags font-pri font15 mt-5"><i class="ion-pricetags"></i>
+            <span class="post__tags font-pri font15 mt-2"><i class="ion-pricetags"></i>
                 @foreach ($post->tags as $tag)
                     <a href="{{ $tag->url }}">{{ $tag->name }}</a>
                 @endforeach

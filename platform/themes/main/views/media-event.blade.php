@@ -1,4 +1,4 @@
-{!! do_shortcode('[filter-media][/filter-media]') !!}
+{!! do_shortcode('[filter-media category="' . $category->id . '"][/filter-media]') !!}
 <div class="media-event-list container-remake overflow-x-hidden">
     @php
         // if(get_field($page, 'type_news')!=1){

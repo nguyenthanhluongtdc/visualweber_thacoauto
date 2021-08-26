@@ -12,7 +12,7 @@
                 class="font20 font-mi-cond js-example-disabled-results">
                 <option selected disabled>{{ __("Thể loại") }}</option>
                 @foreach (is_plugin_active('blog') ? get_categories() : collect() as $item)
-                    <option {{ intval(request('selectmedia', -1)) == $item->id ? 'selected' : '' }} value="{{ $item->id }}">{{ $item->name }}</option>
+                    <option {{ intval(request('selectmedia', -1)) == $item->id || $category_id == $item->id ? 'selected' : '' }} value="{{ $item->id }}">{{ $item->name }}</option>
                 @endforeach
             </select>
             <select name="selectyear" id="selectyear" name="selectyear"

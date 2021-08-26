@@ -1,4 +1,4 @@
-{!! do_shortcode('[filter-media][/filter-media]') !!}
+{!! do_shortcode('[filter-media category="' . $category->id . '"][/filter-media]') !!}
 
 @php
     $posts = get_featured_posts_by_category($category->id, 1000);

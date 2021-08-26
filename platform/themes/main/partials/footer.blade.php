@@ -122,10 +122,7 @@
         
         let buttonMes = $('.messenger');
         buttonMes.on('click', function(e) {
-            buttonMes.on("click", function() {
-                console.log('sf')
-                FB.CustomerChat.show();
-            });
+            FB.CustomerChat.show();
         });
 
         </script>

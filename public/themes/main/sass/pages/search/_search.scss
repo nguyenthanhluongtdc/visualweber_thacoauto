@@ -273,17 +273,19 @@
                 h3{
                     text-transform: uppercase;
                 }
-                .date{
-                    // position: absolute;
-                    // bottom: 0;
-                    opacity: 75%;
-                    align-self: flex-end;
-                }
+               
                 p{
                     
                 }
             }
-
+            .date{
+                // position: absolute;
+                // bottom: 0;
+                opacity: 75%;
+                align-self: flex-end;
+                position: absolute;
+                bottom: 0;
+            }
             @media (max-width: 767px) {
                 .content {
                     background-color: #f1f1f1;

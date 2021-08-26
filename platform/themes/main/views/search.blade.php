@@ -120,17 +120,18 @@ Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
                         <div class="col-lg-9 col-md-7 result-content">
                             <div class="content">
                                 <a href="#">
-                                    <h3 class="font-pri-bold font30  color-gray">
+                                    <h3 class="font-pri-bold font30 fontmb-middle color-gray">
                                         {!! $post['name'] !!}
                                     </h3>
                                 </a>
-                                <p class="font-pri my-3 font15">
+                                <p class="font-pri my-3 font15 fontmb-small">
                                     {!! $post['description'] !!}
                                 </p>
-                                <p class="font-pri date font15">
-                                    {{\Carbon\Carbon::parse($post['created_at'])->format('d-m-Y');}}
-                                </p>
+                                
                             </div>
+                            <p class="font-pri date font15 fontmb-little ">
+                                {{\Carbon\Carbon::parse($post['created_at'])->format('d-m-Y');}}
+                            </p>
                         </div>
                     </div>
                     

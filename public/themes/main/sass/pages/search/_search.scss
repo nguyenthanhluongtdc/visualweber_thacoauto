@@ -47,7 +47,8 @@
                     right: 0;
                     
                     ion-icon{
-
+                        transform: translateY(-1.5px);
+                        margin-left: -4.7px;
                         color: #fff;
                        @media(max-width : 1400px){ 
                         transform: translateY(-0.5px);

@@ -12,10 +12,10 @@
             <div class="left d-flex align-content-center">
                 <ul class="p-0 statistical font18 MyriadPro-Regular mb-0 mt-2">
                     @if(!empty(get_field($post, 'author')))
-                    <li><span class="author font20 font-mi-bold">{{ get_field($post, 'author') }}</span></li>
+                    <li class="li__author"><span class="author font20 font-mi-bold">{{ get_field($post, 'author') }}</span></li>
                     @endif
                     <li><span class="icon"><i class="far fa-clock"></i></span>{{ $post->created_at->format('d/m/Y') }}</li>
-                    <li><span>{{ __("Comment") }}: </span><span>23</span></li>
+                    <li><span>{{ __("Comment") }}: </span><span>{{ get_comment_count($post) ?? 0 }}</span></li>
                     <li><span>{{ __("View") }}: </span><span>{{ $post->views ?? __("chưa cập nhật") }}</span></li>
                 </ul>
             </div>

@@ -28,6 +28,20 @@
         margin-top: 15px;
       }
 
+      .statistical {
+        @include maxWidth(991) {
+          display: grid !important;
+          grid-template-columns: repeat(3,1fr);
+          li {
+            padding: .5rem;
+            margin-left: unset !important;
+            &.li__author {
+              grid-column: 1/4;
+            }
+          }
+        }
+      }
+
       .like-share {
         position: absolute;
         right: 0;
@@ -203,6 +217,9 @@
       .tags-name{
         line-height: 33px;
         margin-right: 1rem;
+        @include maxWidth(991) {
+          line-height: 30px;
+        }
         // margin-top: 7px;
         //   @media (max-width: 1720px) {
         //     margin-top: 8px;

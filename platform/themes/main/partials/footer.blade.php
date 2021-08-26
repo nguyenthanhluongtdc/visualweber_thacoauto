@@ -88,8 +88,8 @@
     <div class="item-button">
         <a href="tel:{{ theme_option('hotline-contact') }}"><img src="{{ Theme::asset()->url('images/main/phone.png') }}" alt="phone"></a>
     </div>
-    <div class="item-button">
-        <a href="#"><img src="{{ Theme::asset()->url('images/main/mess.png') }}" alt="phone"></a>
+    <div class="item-button ">
+        <button class="btn-mes"><img src="{{ Theme::asset()->url('images/main/mess.png') }}"></button>
     </div>
 </div>
 <div class="end-web" style="background: url('{{ Theme::asset()->url('images/main/end.jpg') }}')">
@@ -118,13 +118,19 @@
             js = d.createElement(s); js.id = id;
             js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
             fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
+        }(document, 'script', 'facebook-jssdk'));
+        
+        $('.btn-mes').click(function() {
+            FB.FB.CustomerChat.show();
+        })
+
+        </script>
 
     @if (theme_option('facebook_chat_enabled', 'yes') == 'yes' && theme_option('facebook_page_id'))
         <div class="fb-customerchat"
              attribution="install_email"
              page_id="{{ theme_option('facebook_page_id') }}"
-             theme_color="{{ theme_option('primary_color', '#ff2b4a') }}">
+             theme_color="{{ theme_option('primary_color', '#01498b') }}">
         </div>
     @endif
 @endif

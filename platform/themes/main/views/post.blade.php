@@ -34,13 +34,18 @@
             <div class="fb-like fb-like-bottom" data-href="{{ Request::url() }}" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
         </div>
         <div class="tags">
-            <span class="font18 font-mi-bold">{{ __("Tags") }}: </span>
+            <div class="tags-name">
+                <span class="font18 font-mi-bold">{{ __("Tags") }}: </span>
+            </div>
+            
             @if (!$post->tags->isEmpty()) 
-            <span class="post__tags font-pri font15 mt-2"><i class="ion-pricetags"></i>
-                @foreach ($post->tags as $tag)
-                    <a href="{{ $tag->url }}">{{ $tag->name }}</a>
-                @endforeach
-            </span>
+            <div class="post__tags font-pri font15 mt-2 fontmb-little">
+                    <i class="ion-pricetags"></i>
+                    @foreach ($post->tags as $tag)
+                        <a href="{{ $tag->url }}">{{ $tag->name }}</a>
+                    @endforeach
+            </div>
+            
              @endif
         </div>
         {{-- @if (theme_option('facebook_comment_enabled_in_post', 'yes') == 'yes') --}}

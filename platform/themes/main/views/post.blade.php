@@ -2,7 +2,7 @@
 @if(in_array($post->format_type, ['gallery', 'video']))
 {!!render_media_gallery($post)!!}
 @else
-{!! do_shortcode('[filter-media category="' . $category->id . '"][/filter-media]') !!}
+{!! do_shortcode('[filter-media category="' . $category->id ?? '' . '"][/filter-media]') !!}
 <div class="post-container container-remake Lineheight-Regular overflow-x-hidden">
     <div class="post-primary">
         <h2 class="title font-pri-bold font50 p-0 text-uppercase text-center fontmb-large">
@@ -35,13 +35,13 @@
         </div>
         <div class="tags">
             <span class="font18 font-mi-bold">{{ __("Tags") }}: </span>
-            @if (!$post->tags->isEmpty())
+            @if (!$post->tags->isEmpty()) 
             <span class="post__tags font-pri font15 mt-5"><i class="ion-pricetags"></i>
                 @foreach ($post->tags as $tag)
                     <a href="{{ $tag->url }}">{{ $tag->name }}</a>
                 @endforeach
             </span>
-        @endif
+             @endif
         </div>
         {{-- @if (theme_option('facebook_comment_enabled_in_post', 'yes') == 'yes') --}}
         {{-- {!! apply_filters(BASE_FILTER_PUBLIC_COMMENT_AREA, Theme::partial('comments')) !!} --}}

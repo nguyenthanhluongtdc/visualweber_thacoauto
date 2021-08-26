@@ -343,7 +343,7 @@
                             <p>
                                 <span>
                                     {!! __('Sinh năm') !!}
-                                </span>
+                                </span> 
                                 <span>
                                     :
                                 </span>

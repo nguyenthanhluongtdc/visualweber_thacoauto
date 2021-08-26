@@ -364,7 +364,7 @@
                 }
                
                 @media (max-width: 600px){
-                    font-size: 12px;
+                    font-size: 14px;
                 }
                 @media (max-width: 400px){
                     font-size: 10px;
@@ -625,7 +625,9 @@
                         height: 50px;
                         display: flex;
                         @media only screen and (max-width: 767px){height: 42px;}
-                        @media only screen and (max-width: 400px){height: 30px; margin-left: 5px;}
+                        @media only screen and (max-width: 430px){height: 50px; margin-left: 5px;}
+                        @media only screen and (max-width: 380px){height: 42px;}
+
                         
                         ion-icon{
                             width: 30%;
@@ -641,13 +643,13 @@
                             margin-left: 5%;
                             
                             @media only screen and (max-width: 767px){font-size: 20px;}
-                            @media only screen and (max-width: 400px){font-size: 12px; margin-top: 3px;}
+                            @media only screen and (max-width: 400px){font-size: 14px; margin-top: 3px;}
                         }
                     }
                     .location{
                         height: 50px;
                         @media only screen and (max-width: 767px){height: 50px;}
-                        @media only screen and (max-width: 400px){height: 30px;}
+                        @media only screen and (max-width: 400px){height: 50px;}
                     }
                 }
                 .right{
@@ -656,19 +658,20 @@
                         height: 50px;
                        
                         @media only screen and (max-width: 767px){height: 40px;}
-                        @media only screen and (max-width: 400px){height: 28px;}
+                        @media only screen and (max-width: 430px){height: 48px;}
+                        @media only screen and (max-width: 380px){height: 40px;}
                         p{
                             font-size: 20px;
                             margin-top: 2px;
                             @media only screen and (max-width: 767px){font-size: 17px;}
-                            @media only screen and (max-width: 400px){font-size: 11px;}
+                            @media only screen and (max-width: 400px){font-size: 14px;}
                             
                         }
                     }
                     .location{
                         height: 50px;
                         @media only screen and (max-width: 767px){height: 50px;}
-                        @media only screen and (max-width: 400px){height: 30px;}
+                        @media only screen and (max-width: 400px){height: 50px;}
                     }
                 }
 
@@ -691,9 +694,9 @@
         height: 80px;
     }
 }
-@media(max-width : 400px){
+@media(max-width : 430px){
     .contact-info-bottom-mobile .detail-contact:last-child .detail-content-wrap .right .location,
     .contact-info-bottom-mobile .detail-contact:last-child .content-contact .detail-content-wrap .left .location{
-        height: 30px;
+        height: 50px;
     }
 }

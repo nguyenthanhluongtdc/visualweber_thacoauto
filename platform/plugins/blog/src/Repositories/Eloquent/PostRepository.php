@@ -99,12 +99,12 @@ class PostRepository extends RepositoriesAbstract implements PostInterface
             ->with('slugable')
             ->orderBy('posts.created_at', 'desc');
 
-        if (request('selectyear')) {
-            $data->whereYear('posts.created_at', intval(request('selectyear')));
+        if (request('select_year')) {
+            $data->whereYear('posts.created_at', intval(request('select_year')));
         }
 
-        if (request('selectmonth')) {
-            $data->whereYear('posts.created_at', intval(request('selectmonth')));
+        if (request('select_month')) {
+            $data->whereMonth('posts.created_at', intval(request('select_month')));
         }
 
         if ($paginate != 0) {

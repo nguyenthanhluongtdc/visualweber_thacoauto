@@ -163,7 +163,7 @@ Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
                         <p class="font-pri date font15">20-12-20201</p>
                     </div>
                 </div>
-            </div> --}}
+            </div> --}} 
             
             @if(!isset($posts) || $posts->isEmpty())
                 <p class="text-center font25">

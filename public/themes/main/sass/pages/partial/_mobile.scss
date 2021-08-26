@@ -388,7 +388,7 @@
       > a {
         color: inherit;
         display: block;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: bold;
         padding: 18px 20px;
         text-decoration: none;
@@ -472,6 +472,7 @@
 
 .box-search-mobile {
   padding-left: 20px;
+  padding-right: 20px;
   box-shadow: 0 0 13px rgb(0 0 0 / 12%);
   margin-bottom: 15px;
   form {
@@ -487,7 +488,8 @@
 
     input {
       flex-grow: 1;
-      font-size: 14px;
+      padding-right: 0;
+      font-size: 16px;
     }
 
     button {

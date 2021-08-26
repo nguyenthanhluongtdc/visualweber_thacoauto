@@ -26,7 +26,7 @@
         <div class="desc font30 MyriadPro-BoldCond px-0 mx-0 w-100 my-5 text-center fontmb-small">
             {{$post->description}}
         </div>
-        <div class="post__content font-pri font18">
+        <div class="post__content text-justify font-pri font18 fontmb-small">
             @if (defined('GALLERY_MODULE_SCREEN_NAME') && !empty($galleries = gallery_meta_data($post)))
                 {!! render_object_gallery($galleries, ($post->first_category ? $post->first_category->name : __('Uncategorized'))) !!}
             @endif

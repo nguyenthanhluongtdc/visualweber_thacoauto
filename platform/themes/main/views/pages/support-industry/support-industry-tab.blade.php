@@ -52,13 +52,15 @@
                                 <div id="{{Str::Slug(has_sub_field($item, 'title_one'), '_').$key}}" class="tabcontents">
                                     <img src="{{ Storage::disk('public')->exists(has_sub_field($item, 'image')) ? get_image_url(has_sub_field($item, 'image')) : RvMedia::getDefaultImage()}}" alt=""
                                         class="mb-2" />
-                                    <div class="content-bottom p-2">
-                                        <h4 class="font20 mb-2 text-uppercase fontmb-middle">
-                                            {!! has_sub_field($item, 'title_two') !!}
-                                        </h4>
-                                        <p class="font-pri font15 mb-2 fontmb-little">
-                                            {!! has_sub_field($item, 'description') !!}
-                                        </p>
+                                    <div class="content-bottom">
+                                        <div class="top">
+                                            <h4 class="font20 mb-2 text-uppercase fontmb-middle">
+                                                {!! has_sub_field($item, 'title_two') !!}
+                                            </h4>
+                                            <div class="font-pri description font15 mb-2 fontmb-little">
+                                                {!! has_sub_field($item, 'description') !!}
+                                            </div>
+                                        </div>
                                         <div class="read-more font18"><a href="{{has_sub_field($item, 'link')}}"> {!! __('Readmore') !!} </a></div>
                                     </div>
                                 </div>

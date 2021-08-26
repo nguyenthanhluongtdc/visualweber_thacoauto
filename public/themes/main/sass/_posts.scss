@@ -339,7 +339,7 @@
     }
   }
   .media-top-item:nth-child(1n + 2) {
-    width: 33.33333336%;
+    width: 25%;
 
     @include paddingX(15);
     @include marginBottom(40, "+");
@@ -373,7 +373,7 @@
         flex: 0 0 100%;
 
         a {
-          @include split_str(3);
+          @include split_str(2);
         }
       }
       p.desc {
@@ -502,6 +502,7 @@
           a {
             color: #303030;
             text-align: justify;
+            @include split_str(3);
           }
         }
       }

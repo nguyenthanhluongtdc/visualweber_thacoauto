@@ -38,7 +38,7 @@
     <div class="activity-news-desktop">
         <div class="container-remake">
             @php
-                $posts = get_posts_by_category(15, 4);
+                $posts = get_posts_by_category(theme_option('default_category_news'), 4);
             @endphp
             <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 mb-20 fontmb-large">{{ __("tin tức hoạt động") }}</h1>
             <div class="activity-news-desktop__wrap">
@@ -226,7 +226,7 @@
             </div>
         </div>
         @php
-            $librarys = get_posts_by_category(20, 10);
+            $librarys = get_posts_by_category(theme_option('default_category_gallery'), 10);
         @endphp
         <div class="container-library" data-aos="fade-up" data-aos-duration="1500"
             data-aos-anchor-placement="center-bottom">

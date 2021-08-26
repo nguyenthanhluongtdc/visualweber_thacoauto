@@ -134,7 +134,8 @@ export default {
     },
     computed: {
         hasRating() {
-            return this.reactive.rating;
+            if(!this.reactive) return false
+            return this.reactive.rating ? this.reactive.rating : false;
         }
     },
     methods: {

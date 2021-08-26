@@ -4,36 +4,35 @@
             <avatar :user="comment.user"></avatar>
 
             <div class="bb-comment-content w-100">
-                <div class="bb-comment-content-user">
-                    <user-name :user="comment.user"></user-name>
-                    <span class="badge badge-warning" v-if="comment.isAuthor">{{ __('Author') }}</span>
-                    <span class="px-1">•</span>
-                    <span class="time">{{ !comment.isSending ? comment.time : 'sending...' }}</span>
-                    <span class="px-1" v-if="comment.user.rating && comment.user.rating.rating">•</span>
-                    <div class="d-inline-block" v-if="rated > 0">
-                        <star-rating
-                            :rating="rated"
-                            :read-only="true"
-                            :animate="false"
-                            :star-size="15"
-                        />
-                    </div>
-                </div>
-
-                <div v-show="!showEdit">
-                    <p v-html="linkify(comment.comment)"></p>
-
-                    <div class="bb-comment-content-actions d-flex flex-wrap align-center">
-                        <a class="reply" @click="replyIt" href="javascript:">{{ __('Reply') }}</a>
-                        <span>•</span>
-                        <a class="bb-like" :class="{'ok': comment.liked}" href="javascript:" @click="onLike">
-
-                        </a>
-                        <span>{{ comment.like_count }}</span>
+                <div class="bb-content-custom">
+                    <div class="bb-comment-content-user">
+                        <user-name :user="comment.user"></user-name>
+                        <span class="badge badge-warning" v-if="comment.isAuthor">{{ __('Author') }}</span>
+                        <!-- <span class="px-1">•</span> -->
+                        <span class="px-1" v-if="comment.user.rating && comment.user.rating.rating">•</span>
+                        <div class="d-inline-block" v-if="rated > 0">
+                            <star-rating
+                                :rating="rated"
+                                :read-only="true"
+                                :animate="false"
+                                :star-size="15"
+                            />
+                        </div>
                     </div>
 
-                    <div class="mt-3 mb-4" v-if="showReply">
-                        <comment-box :parent-id="comment.id" :on-success="onPostCommentSuccess" auto-focus="true" />
+                    <div v-show="!showEdit">
+                        <p v-html="linkify(comment.comment)"></p>
+
+                        <div class="bb-comment-content-actions d-flex flex-wrap align-center">
+                            <!-- <a cla ss="reply" @click="replyIt" href="javascript:">{{ __('Reply') }}</a> -->
+                            <a class="bb-like" :class="{'ok': comment.liked}" href="javascript:" @click="onLike"></a>
+                            <!-- <span>{{ comment.like_count }}</span> -->
+                            <span class="time">{{ !comment.isSending ? comment.time : 'sending...' }}</span>
+                        </div>
+
+                        <div class="mt-3 mb-4" v-if="showReply">
+                            <comment-box :parent-id="comment.id" :on-success="onPostCommentSuccess" auto-focus="true" />
+                        </div>
                     </div>
                 </div>
 

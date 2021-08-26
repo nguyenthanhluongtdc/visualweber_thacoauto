@@ -352,13 +352,12 @@
 
     $(document).ready(function() {
         Distribution.getTemplateDistrubition()
-        $("#distribution-system-form").submit(function(e) {
-            e.preventDefault();
+        $("#city_id").change(function(e) {
             Distribution.getTemplateDistrubition()
         });
 
     })
-        Distribution.initSearchState()
+    Distribution.initSearchState()
 
 
     // if($('.city').length){

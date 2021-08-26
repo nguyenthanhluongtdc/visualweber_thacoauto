@@ -34,14 +34,6 @@ class AccessoryForm extends FormAbstract
                     'placeholder'  => trans('core/base::forms.name_placeholder'),
                 ],
             ])
-            ->add('car_id', 'customSelect', [
-                'label'      => trans('Car'),
-                'label_attr' => ['class' => 'control-label'],
-                'attr'       => [
-                    'class' => 'form-control select-full',
-                ],
-                'choices'    => \Platform\Car\Models\Car::pluck('name','id')->toArray(),
-            ])
             ->add('status', 'customSelect', [
                 'label'      => trans('core/base::tables.status'),
                 'label_attr' => ['class' => 'control-label required'],
@@ -49,6 +41,14 @@ class AccessoryForm extends FormAbstract
                     'class' => 'form-control select-full',
                 ],
                 'choices'    => BaseStatusEnum::labels(),
+            ])
+            ->add('car_id', 'customSelect', [
+                'label'      => trans('Car'),
+                'label_attr' => ['class' => 'control-label'],
+                'attr'       => [
+                    'class' => 'form-control select-full',
+                ],
+                'choices'    => \Platform\Car\Models\Car::pluck('name','id')->toArray(),
             ])
             ->add('image', 'mediaImage', [
                 'label'      => __('Image'),

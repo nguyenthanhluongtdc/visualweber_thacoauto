@@ -99,10 +99,7 @@ class CarForm extends FormAbstract
                 'attr'       => [
                     'class' => 'form-control select-full',
                 ],
-                'choices'    => array_merge(
-                    \Platform\Vehicle\Models\Vehicle::pluck('name','id')->toArray(),
-                    [null => 'Null']
-                ),
+                'choices'    => \Platform\Vehicle\Models\Vehicle::pluck('name','id')->put('','NULL')->toArray(),
             ])
             ->add('parent_id', 'customSelect', [
                 'label'      => trans('Parent'),
@@ -110,9 +107,7 @@ class CarForm extends FormAbstract
                 'attr'       => [
                     'class' => 'form-control select-full',
                 ],
-                'choices'    => array_merge(\Platform\Car\Models\Car::whereNull('parent_id')->pluck('name','id')->toArray(),[
-                    '' => 'Null'
-                ]),
+                'choices'    => \Platform\Car\Models\Car::whereNull('parent_id')->pluck('name','id')->put('','NULL')->toArray(),
             ])
             ->add('image', 'mediaImage', [
                 'label'      => __('Image'),

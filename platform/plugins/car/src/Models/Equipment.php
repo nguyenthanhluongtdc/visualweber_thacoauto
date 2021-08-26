@@ -24,6 +24,7 @@ class Equipment extends BaseModel
         'name',
         'description',
         'slug',
+        'image',
         'status',
     ];
 

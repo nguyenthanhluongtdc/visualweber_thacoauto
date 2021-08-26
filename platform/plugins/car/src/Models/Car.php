@@ -41,4 +41,8 @@ class Car extends BaseModel
     protected $casts = [
         'status' => BaseStatusEnum::class,
     ];
+
+    public function parent(){
+        return $this->belongsTo(\Platform\Car\Models\Car::class,'parent_id');
+    }
 }

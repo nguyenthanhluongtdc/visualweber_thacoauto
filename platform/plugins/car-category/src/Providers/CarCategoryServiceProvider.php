@@ -41,18 +41,18 @@ class CarCategoryServiceProvider extends ServiceProvider
 
             dashboard_menu()
             ->registerItem([
-                'id'          => 'cms-plugins-car-menu',
+                'id'          => 'cms-plugins-cars-menu',
                 'priority'    => 3,
                 'parent_id'   => null,
-                'name'        => 'Cars',
-                'icon'        => 'fa fa-car',
-                'url'         => route('posts.index'),
-                'permissions' => ['posts.index'],
+                'name'        => 'Car Category',
+                'icon'        => 'fas fa-truck-moving',
+                'url'         => route('car-category.index'),
+                'permissions' => ['car-category.index'],
             ])
             ->registerItem([
                 'id'          => 'cms-plugins-car-category',
                 'priority'    => 5,
-                'parent_id'   => 'cms-plugins-car-menu',
+                'parent_id'   => 'cms-plugins-cars-menu',
                 'name'        => 'plugins/car-category::car-category.name',
                 'icon'        => 'fa fa-list',
                 'url'         => route('car-category.index'),

@@ -41,8 +41,8 @@ class VehicleServiceProvider extends ServiceProvider
 
             dashboard_menu()->registerItem([
                 'id'          => 'cms-plugins-vehicle',
-                'priority'    => 5,
-                'parent_id'   => 'cms-plugins-car-menu',
+                'priority'    => 7,
+                'parent_id'   => 'cms-plugins-cars-menu',
                 'name'        => 'plugins/vehicle::vehicle.name',
                 'icon'        => 'fa fa-list',
                 'url'         => route('vehicle.index'),

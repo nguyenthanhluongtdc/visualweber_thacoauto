@@ -41,8 +41,8 @@ class BrandServiceProvider extends ServiceProvider
 
             dashboard_menu()->registerItem([
                 'id'          => 'cms-plugins-brand',
-                'priority'    => 5,
-                'parent_id'   => 'cms-plugins-car-menu',
+                'priority'    => 6,
+                'parent_id'   => 'cms-plugins-cars-menu',
                 'name'        => 'plugins/brand::brand.name',
                 'icon'        => 'fa fa-list',
                 'url'         => route('brand.index'),

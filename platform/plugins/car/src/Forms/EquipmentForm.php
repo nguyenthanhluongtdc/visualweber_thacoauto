@@ -56,6 +56,10 @@ class EquipmentForm extends FormAbstract
                 'choices'    => \Platform\Car\Models\Car::get(),
                 'value'      => old('cars', $selectedCategories),
             ])
+            ->add('image', 'mediaImage', [
+                'label'      => __('Image'),
+                'label_attr' => ['class' => 'control-label'],
+            ])
             ->setBreakFieldPoint('status');
     }
 }

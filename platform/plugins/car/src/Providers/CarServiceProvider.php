@@ -61,7 +61,17 @@ class CarServiceProvider extends ServiceProvider
             // }
 
 
-            dashboard_menu()->registerItem([
+            dashboard_menu()
+            ->registerItem([
+                'id'          => 'cms-plugins-car-menu',
+                'priority'    => 4,
+                'parent_id'   => null,
+                'name'        => 'Cars',
+                'icon'        => 'fa fa-car',
+                'url'         => route('car.index'),
+                'permissions' => ['car.index'],
+            ])
+            ->registerItem([
                 'id'          => 'cms-plugins-car',
                 'priority'    => 5,
                 'parent_id'   => 'cms-plugins-car-menu',
@@ -73,7 +83,7 @@ class CarServiceProvider extends ServiceProvider
 
             dashboard_menu()->registerItem([
                 'id'          => 'cms-plugins-color',
-                'priority'    => 0,
+                'priority'    => 6,
                 'parent_id'   => 'cms-plugins-car-menu',
                 'name'        => 'plugins/car::color.name',
                 'icon'        => 'fa fa-list',
@@ -83,7 +93,7 @@ class CarServiceProvider extends ServiceProvider
 
             dashboard_menu()->registerItem([
                 'id'          => 'cms-plugins-accessory',
-                'priority'    => 0,
+                'priority'    => 7,
                 'parent_id'   => 'cms-plugins-car-menu',
                 'name'        => 'plugins/car::accessory.name',
                 'icon'        => 'fa fa-list',
@@ -93,7 +103,7 @@ class CarServiceProvider extends ServiceProvider
 
             dashboard_menu()->registerItem([
                 'id'          => 'cms-plugins-equipment',
-                'priority'    => 0,
+                'priority'    => 8,
                 'parent_id'   => 'cms-plugins-car-menu',
                 'name'        => 'plugins/car::equipment.name',
                 'icon'        => 'fa fa-list',

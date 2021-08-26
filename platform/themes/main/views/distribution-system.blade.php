@@ -1,5 +1,4 @@
 <div class="distribution">
-    @dd($page,get_field($page, 'danh_sach_thuong_hieu_he_thong_phan_phoi'))
     <div class="provincial-company">
         <div class="container-remake">
             <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 fontmb-large">{{ __("Công ty tỉnh thành") }}</h1>

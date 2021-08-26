@@ -128,11 +128,11 @@ Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
                                         </h3>
                                     </a>
                                     <a href="{{$post->url}}">
-                                    <p class="font-pri my-3 font15 fontmb-small text-dark">
+                                    <p class="font-pri my-3 font20 fontmb-small text-dark desc">
                                         {!! empty($post->description) ? $post->name : $post->description !!}
                                     </p>
                                     </a>
-                                    <p class="font-pri date font15 fontmb-small">
+                                    <p class="font-pri date font15 fontmb-little">
                                         {{$post->created_at->format('d-m-y')}}
                                     </p>
                                 </div>

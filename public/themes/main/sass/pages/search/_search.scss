@@ -289,6 +289,10 @@
                     opacity: 75%;
                     align-self: flex-end;
                 }
+                .desc{
+                   @include split_str(3);
+                    
+                }
             }
             .date{
                 // position: absolute;
@@ -297,6 +301,7 @@
                 align-self: flex-end;
                 position: absolute;
                 bottom: 0;
+               
             }
             @media (max-width: 767px) {
                 .content {

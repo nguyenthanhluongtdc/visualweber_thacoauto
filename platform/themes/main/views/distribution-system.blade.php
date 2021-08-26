@@ -1,24 +1,17 @@
 <div class="distribution">
     <div class="provincial-company">
         <div class="container-remake">
-            <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 fontmb-large">công ty
-                tỉnh thành</h1>
-            <p data-aos="fade-left" data-aos-duration="1500" class="description desktop font20 mt-20">THACO là doanh nghiệp hàng
-                đầu và có quy mô lớn nhất tại Việt Nam về lĩnh vực sản xuất lắp ráp ô tô, với chuỗi giá trị từ nghiên
-                cứu phát triển sản phẩm (R&D), sản xuất linh kiện phụ tùng, lắp ráp ô tô, đến giao nhận vận chuyển và
-                phân phối, bán lẻ. Sản phẩm có đầy đủ các chủng loại: xe tải, xe bus, xe du lịch, xe chuyên dụng và đầy
-                đủ phân khúc từ trung cấp đến cao cấp với doanh số và thị phần luôn dẫn đầu thị trường Việt Nam trong
-                nhiều năm qua.</p>
+            <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 fontmb-large">{{ __("Công ty tỉnh thành") }}</h1>
+            <div data-aos="fade-left" data-aos-duration="1500" class="description desktop font20 mt-20">{!! $page->content !!}</div>
             <div data-aos="zoom-in-up" data-aos-duration="2000" class="select-list mt-40 mb-40">
                 <form action="">
                     <select class="ui search selection dropdown city w-100" name="" id="">
-                        <option value="">Tỉnh/Thành phố</option>
-                        <option value="1">TP.HỒ CHÍ MINH</option>
-                        <option value="2">TP.HỒ CHÍ MINH</option>
-                        <option value="3">TP.HỒ CHÍ MINH</option>
-                        <option value="4">TP.HỒ CHÍ MINH</option>
+                        <option value="">{{ __("Tỉnh/Thành phố") }}</option>
+                        @foreach (get_cities() as $key => $item)
+                            <option value="{{ $key }}">{{ $item }}</option>
+                        @endforeach
                     </select>
-                    <button type="submit" class="font20 fontmb-small">xác nhận</button>
+                    <button type="submit" class="font20 fontmb-small">{{ __("Approval") }}</button>
                 </form>
             </div>
             <div data-aos="zoom-in" data-aos-duration="2500" class="branch-wrap">
@@ -134,12 +127,7 @@
                     <!-- <img src="{{Theme::asset()->url('images/distribution/mapitem.png')}}" alt=""> -->
                 </div>
             </div>
-            <p data-aos="fade-left" data-aos-duration="1500" class="description mobile font20">THACO là doanh nghiệp hàng
-                đầu và có quy mô lớn nhất tại Việt Nam về lĩnh vực sản xuất lắp ráp ô tô, với chuỗi giá trị từ nghiên
-                cứu phát triển sản phẩm (R&D), sản xuất linh kiện phụ tùng, lắp ráp ô tô, đến giao nhận vận chuyển và
-                phân phối, bán lẻ. Sản phẩm có đầy đủ các chủng loại: xe tải, xe bus, xe du lịch, xe chuyên dụng và đầy
-                đủ phân khúc từ trung cấp đến cao cấp với doanh số và thị phần luôn dẫn đầu thị trường Việt Nam trong
-                nhiều năm qua.</p>
+            <div data-aos="fade-left" data-aos-duration="1500" class="description mobile font20">{{ $page->content }}</div>
         </div>
     </div>
     <div class="activity-news-desktop">
@@ -147,8 +135,7 @@
             @php
                 $posts = get_posts_by_category(15, 4);
             @endphp
-            <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 mb-20 fontmb-large">tin
-                tức hoạt động</h1>
+            <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 mb-20 fontmb-large">{{ __("tin tức hoạt động") }}</h1>
             <div class="activity-news-desktop__wrap">
                 @if (!empty($posts[0]))
                 <div data-aos="fade-right" data-aos-duration="1500" class="activity-news-desktop__item">
@@ -515,11 +502,32 @@
             popupAnchor:  [-3, -25] // point from which the popup should open relative to the iconAnchor
         });
 
-        let marker = L.marker(new L.LatLng(-630.8, 254), {icon: greenIcon}).addTo(map).bindPopup('<h5>This is the Transamerica Pyramid</h5>')
-        L.marker(new L.LatLng(-640.8, 300), {icon: greenIcon}).addTo(map).bindPopup('<h5>This is the Transamerica Pyramid</h5>')
-        L.marker(new L.LatLng(-660.8, 200), {icon: greenIcon}).addTo(map).bindPopup('<h5>This is the Transamerica Pyramid</h5>')
-        L.marker(new L.LatLng(-650.8, 240), {icon: greenIcon}).addTo(map).bindPopup('<h5>This is the Transamerica Pyramid</h5>')
-        L.marker(new L.LatLng(-620.8, 240), {icon: greenIcon}).addTo(map).bindPopup('<h5>This is the Transamerica Pyramid</h5>')
+        let popup = `<div class="branch-popup">
+                        <h2 class="branch-name font20">thaco an sương</h2>
+                        <div class="branch-body">
+                            <div class="branch-body-item">
+                                <p class="info-number font30">70</p>
+                                <p class="info-text font15">Lorem Isum</p>
+                            </div>
+                            <div class="branch-body-item">
+                                <p class="info-number font30">1000</p>
+                                <p class="info-text font15">Lorem Isum</p>
+                            </div>
+                            <div class="branch-body-item">
+                                <p class="info-number font30">99%</p>
+                                <p class="info-text font15">Lorem Isum</p>
+                            </div>
+                        </div>
+                        <div class="branch-footer">
+                            <a href="#"><button>xem thêm</button></a>
+                        </div>
+                    </div>`
+
+        let marker = L.marker(new L.LatLng(-630.8, 254), {icon: greenIcon}).addTo(map).bindPopup(popup)
+        L.marker(new L.LatLng(-640.8, 300), {icon: greenIcon}).addTo(map).bindPopup(popup)
+        L.marker(new L.LatLng(-660.8, 200), {icon: greenIcon}).addTo(map).bindPopup(popup)
+        L.marker(new L.LatLng(-650.8, 240), {icon: greenIcon}).addTo(map).bindPopup(popup)
+        L.marker(new L.LatLng(-620.8, 240), {icon: greenIcon}).addTo(map).bindPopup(popup)
 
         setTimeout(() => {
             window.__map.setView(new L.LatLng(-630.8, 254), 2)

@@ -35,61 +35,65 @@
             }
         }
         &--right{
+            
             max-width: 53.82%;
             flex: 1 53.82%;
             .product-intro__swiper{
                 width: 100%;
-                .swiper-slide{
-                    width: 100%;
-                    height: 0;
-                    padding-bottom: 47%;
-                    position: relative;
-                    .image-frame{
-                        position: absolute;
+                .swiper-wrapper{
+                    .swiper-slide{
                         width: 100%;
-                        height: 100%;
-                        cursor: pointer;
-                        img{
-                            width: 100%;
-                            height: 100%;
-                            &:hover .image-frame__overlay{
-                        
-                            opacity: 0.5;
-                            height: 100%;
-                        
-                            }
-                        }
-                        &__overlay{
+                        height: 0;
+                        padding-bottom: 47%;
+                        position: relative;
+                        .image-frame{
                             position: absolute;
                             width: 100%;
-                            height: 33%;
-                            z-index: 20;
-                            opacity: 0;
-                            inset: 0;
-                            background-color: rgba(1, 73, 139, 0.5);
-                            transition: 0.3s;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            .image-frame__title{
-                                border: 2px solid #ccc;
-                                padding: 2% 3%;
-                                color: white;
+                            height: 100%;
+                            cursor: pointer;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                &:hover .image-frame__overlay{
+                            
+                                opacity: 0.5;
+                                height: 100%;
+                            
+                                }
+                            }
+                            &__overlay{
+                                position: absolute;
+                                width: 100%;
+                                height: 33%;
+                                z-index: 20;
+                                opacity: 0;
+                                inset: 0;
+                                background-color: rgba(1, 73, 139, 0.5);
+                                transition: 0.3s;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                .image-frame__title{
+                                    border: 2px solid #ccc;
+                                    padding: 2% 3%;
+                                    color: white;
+                                }
                             }
                         }
-                    }
-                    .image-frame:hover .image-frame__overlay
-                    {
-                        opacity: 1;
-                        height: 100%;
-                        .image-frame__title{
-                            opacity: 1 !important;
+                        .image-frame:hover .image-frame__overlay
+                        {
+                            opacity: 1;
+                            height: 100%;
+                            .image-frame__title{
+                                opacity: 1 !important;
+                            }
                         }
                     }
                 }
+                
                 &--next, &--prev{
                     height: 0;
-                    width: 6%;
+                    width: 6% ;
                     padding-bottom: 11%;
                     top: 46%;
                 }

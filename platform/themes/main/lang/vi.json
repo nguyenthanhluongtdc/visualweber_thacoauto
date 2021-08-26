@@ -63,7 +63,7 @@
     "Primary color": "Primary color",
     "Primary font": "Primary font",
     "Processing. Please wait...": "Processing. Please wait...",
-    "Read more": "Read more",
+    "Read more": "Xem thêm",
     "Recent posts": "Recent posts",
     "Recent posts widget.": "Recent posts widget.",
     "Register": "Register",
@@ -118,7 +118,7 @@
     "Related news" : "Related news",
     "Provincial company": "Công ty tỉnh thành",
     "Send to" : "NƠI GỬI ĐẾN",
-    "Full name" : "HỌ TÊN",
+    "Full name" : "HỌ TÊN",
     "Content" : "NỘI DUNG",
     "First name" : "Tên",
     "Surname" : "Họ",
@@ -157,5 +157,9 @@
     "chưa cập nhật" : "Nội dung chưa được cập nhật",
     "News": "Tin tức",
     "Comment": "Bình luận",
-    "View": "Lượt xem"
+    "View": "Lượt xem",
+    "Approval": "Xác nhận",
+    "Tỉnh/Thành phố": "Tỉnh/Thành phố",
+    "Công ty tỉnh thành": "Công ty tỉnh thành",
+    "tin tức hoạt động": "Tin tức hoạt động"
 }

@@ -6,6 +6,7 @@ use Platform\Base\Forms\FormAbstract;
 use Platform\Base\Enums\BaseStatusEnum;
 use Platform\DistributionSystem\Http\Requests\DistributionSystemRequest;
 use Platform\DistributionSystem\Models\DistributionSystem;
+use Platform\Location\Repositories\Interfaces\CityInterface;
 
 class DistributionSystemForm extends FormAbstract
 {
@@ -15,6 +16,8 @@ class DistributionSystemForm extends FormAbstract
      */
     public function buildForm()
     {
+        $regions = ['' => '-- Chọn khu vực --'] + get_cities();
+
         $this
             ->setupModel(new DistributionSystem)
             ->setValidatorClass(DistributionSystemRequest::class)
@@ -27,6 +30,15 @@ class DistributionSystemForm extends FormAbstract
                     'data-counter' => 120,
                 ],
             ])
+            ->add('description', 'textarea', [
+                'label'      => trans('core/base::forms.description'),
+                'label_attr' => ['class' => 'control-label'],
+                'attr'       => [
+                    'rows'         => 4,
+                    'placeholder'  => trans('core/base::forms.description_placeholder'),
+                    'data-counter' => 400,
+                ],
+            ])
             ->add('status', 'customSelect', [
                 'label'      => trans('core/base::tables.status'),
                 'label_attr' => ['class' => 'control-label required'],
@@ -34,6 +46,14 @@ class DistributionSystemForm extends FormAbstract
                     'class' => 'form-control select-full',
                 ],
                 'choices'    => BaseStatusEnum::labels(),
+            ])
+            ->add('city_id', 'customSelect', [
+                'label'      => __('Khu vực'),
+                'label_attr' => ['class' => 'control-label required'],
+                'choices' => $regions,
+                'attr'       => [
+                    'class' => 'form-control select-search-full',
+                ]
             ])
             ->setBreakFieldPoint('status');
     }

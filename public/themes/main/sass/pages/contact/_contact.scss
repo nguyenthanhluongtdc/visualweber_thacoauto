@@ -679,3 +679,21 @@
         }
     }
 }
+
+@media(max-width : 1024px){
+    .section-info-contact-mobile .info-contact .contact-input input, .section-info-contact-mobile .info-contact .contact-input textarea{
+        padding: 10px;
+    }
+}
+@media(max-width : 480px){
+    .contact-info-bottom-mobile .detail-contact:last-child .detail-content-wrap .right .location,
+    .contact-info-bottom-mobile .detail-contact:last-child .content-contact .detail-content-wrap .left .location{
+        height: 80px;
+    }
+}
+@media(max-width : 400px){
+    .contact-info-bottom-mobile .detail-contact:last-child .detail-content-wrap .right .location,
+    .contact-info-bottom-mobile .detail-contact:last-child .content-contact .detail-content-wrap .left .location{
+        height: 30px;
+    }
+}

@@ -58,6 +58,9 @@ class DistributionSystemTable extends TableAbstract
             ->editColumn('checkbox', function ($item) {
                 return $this->getCheckbox($item->id);
             })
+            ->editColumn('city_id', function ($item) {
+                return $this->city->name ?? '';
+            })
             ->editColumn('created_at', function ($item) {
                 return BaseHelper::formatDate($item->created_at);
             })
@@ -78,11 +81,13 @@ class DistributionSystemTable extends TableAbstract
     {
         $query = $this->repository->getModel()
             ->select([
-               'id',
-               'name',
-               'created_at',
-               'status',
-           ]);
+                'id',
+                'name',
+                'description',
+                'city_id',
+                'created_at',
+                'status',
+            ]);
 
         return $this->applyScopes($query);
     }
@@ -99,6 +104,10 @@ class DistributionSystemTable extends TableAbstract
             ],
             'name' => [
                 'title' => trans('core/base::tables.name'),
+                'class' => 'text-left',
+            ],
+            'city_id' => [
+                'title' => trans('Khu vực'),
                 'class' => 'text-left',
             ],
             'created_at' => [

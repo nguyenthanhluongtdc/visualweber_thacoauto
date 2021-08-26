@@ -56,6 +56,7 @@ return [
             $theme->asset()->add('alert', '//cdn.jsdelivr.net/alertifyjs/1.10.0/css/alertify.min.css');
             $theme->asset()->add('alert_bootstrap', '//cdn.jsdelivr.net/alertifyjs/1.10.0/css/themes/default.min.css');
             $theme->asset()->add('swiper', '//unpkg.com/swiper/swiper-bundle.min.css');
+            $theme->asset()->add('alert_bootstrap', '//cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.css');
             $theme->asset()->usePath()->add('semantic_ui_style', 'semantic-ui/semantic.min.css');
             $theme->asset()->add('transition', '//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/transition.min.css');
             $theme->asset()->add('dropdown', '//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/dropdown.min.css');
@@ -83,7 +84,7 @@ return [
             $theme->asset()->container('footer')->add('validate', '//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js');
             $theme->asset()->container('footer')->add('validate-method', '//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/additional-methods.min.js');
             $theme->asset()->container('footer')->add('script_alert', '//cdn.jsdelivr.net/alertifyjs/1.10.0/alertify.min.js');
-            $theme->asset()->container('footer')->add('script_alert', '//unpkg.com/swiper/swiper-bundle.min.js');
+            $theme->asset()->container('footer')->add('script_alert', '//cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js');
             $theme->asset()->container('footer')->add('zeynep_js', '//raw.githack.com/hsynlms/zeynepjs/master/dist/zeynep.min.js');
             $theme->asset()->container('footer')->usePath()->add('semantic_ui_js', 'semantic-ui/semantic.min.js');
             $theme->asset()->container('header')->usePath()->add('semantic', 'js/semantic/semantic.min.js');

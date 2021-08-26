@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'name'   => 'Hệ thống phân phố',
+    'name'   => 'Chi nhánh',
     'create' => 'Tạo mới',
     'edit'   => 'Chỉnh sửa',
 ];

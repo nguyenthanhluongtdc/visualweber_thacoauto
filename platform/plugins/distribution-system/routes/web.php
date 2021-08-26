@@ -1,7 +1,5 @@
 <?php
 
-use Platform\DistributionSystem\Models\DistributionSystem;
-
 Route::group(['namespace' => 'Platform\DistributionSystem\Http\Controllers', 'middleware' => ['web', 'core']], function () {
 
     Route::group(['prefix' => BaseHelper::getAdminPrefix(), 'middleware' => 'auth'], function () {
@@ -14,16 +12,24 @@ Route::group(['namespace' => 'Platform\DistributionSystem\Http\Controllers', 'mi
                 'permission' => 'distribution-system.destroy',
             ]);
         });
-    });
-});
 
-Route::group(
-    ['namespace' => 'Platform\DistributionSystem\Http\Controllers', 'middleware' => ['web', 'core']],
-    function () {
-        Route::group(apply_filters(BASE_FILTER_GROUP_PUBLIC_ROUTE, []), function () {
-            Route::get(\SlugHelper::getPrefix(DistributionSystem::class, 'he-thong-phan-phoi') . '/{slug}', [
-                'uses' => 'PublicController@getBySlug',
+        Route::group(['prefix' => 'city-provinces', 'as' => 'city-province.'], function () {
+            Route::resource('', 'CityProvinceController')->parameters(['' => 'city-province']);
+            Route::delete('items/destroy', [
+                'as'         => 'deletes',
+                'uses'       => 'CityProvinceController@deletes',
+                'permission' => 'city-province.destroy',
             ]);
         });
-    }
-);
+
+        Route::group(['prefix' => 'branches', 'as' => 'branch.'], function () {
+            Route::resource('', 'BranchController')->parameters(['' => 'branch']);
+            Route::delete('items/destroy', [
+                'as'         => 'deletes',
+                'uses'       => 'BranchController@deletes',
+                'permission' => 'branch.destroy',
+            ]);
+        });
+    });
+
+});

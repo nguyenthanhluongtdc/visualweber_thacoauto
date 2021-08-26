@@ -10,5 +10,7 @@ class Plugin extends PluginOperationAbstract
     public static function remove()
     {
         Schema::dropIfExists('app_distribution_systems');
+        Schema::dropIfExists('app_city_provinces');
+        Schema::dropIfExists('app_branches');
     }
 }

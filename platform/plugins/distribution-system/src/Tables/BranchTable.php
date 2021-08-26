@@ -5,13 +5,13 @@ namespace Platform\DistributionSystem\Tables;
 use Illuminate\Support\Facades\Auth;
 use BaseHelper;
 use Platform\Base\Enums\BaseStatusEnum;
-use Platform\DistributionSystem\Repositories\Interfaces\DistributionSystemInterface;
+use Platform\DistributionSystem\Repositories\Interfaces\BranchInterface;
 use Platform\Table\Abstracts\TableAbstract;
 use Illuminate\Contracts\Routing\UrlGenerator;
 use Yajra\DataTables\DataTables;
 use Html;
 
-class DistributionSystemTable extends TableAbstract
+class BranchTable extends TableAbstract
 {
 
     /**
@@ -25,18 +25,18 @@ class DistributionSystemTable extends TableAbstract
     protected $hasFilter = true;
 
     /**
-     * DistributionSystemTable constructor.
+     * BranchTable constructor.
      * @param DataTables $table
      * @param UrlGenerator $urlGenerator
-     * @param DistributionSystemInterface $distributionSystemRepository
+     * @param BranchInterface $branchRepository
      */
-    public function __construct(DataTables $table, UrlGenerator $urlGenerator, DistributionSystemInterface $distributionSystemRepository)
+    public function __construct(DataTables $table, UrlGenerator $urlGenerator, BranchInterface $branchRepository)
     {
         parent::__construct($table, $urlGenerator);
 
-        $this->repository = $distributionSystemRepository;
+        $this->repository = $branchRepository;
 
-        if (!Auth::user()->hasAnyPermission(['distribution-system.edit', 'distribution-system.destroy'])) {
+        if (!Auth::user()->hasAnyPermission(['branch.edit', 'branch.destroy'])) {
             $this->hasOperations = false;
             $this->hasActions = false;
         }
@@ -50,10 +50,10 @@ class DistributionSystemTable extends TableAbstract
         $data = $this->table
             ->eloquent($this->query())
             ->editColumn('name', function ($item) {
-                if (!Auth::user()->hasPermission('distribution-system.edit')) {
+                if (!Auth::user()->hasPermission('branch.edit')) {
                     return $item->name;
                 }
-                return Html::link(route('distribution-system.edit', $item->id), $item->name);
+                return Html::link(route('branch.edit', $item->id), $item->name);
             })
             ->editColumn('checkbox', function ($item) {
                 return $this->getCheckbox($item->id);
@@ -65,7 +65,7 @@ class DistributionSystemTable extends TableAbstract
                 return $item->status->toHtml();
             })
             ->addColumn('operations', function ($item) {
-                return $this->getOperations('distribution-system.edit', 'distribution-system.destroy', $item);
+                return $this->getOperations('branch.edit', 'branch.destroy', $item);
             });
 
         return $this->toJson($data);
@@ -117,7 +117,7 @@ class DistributionSystemTable extends TableAbstract
      */
     public function buttons()
     {
-        return $this->addCreateButton(route('distribution-system.create'), 'distribution-system.create');
+        return $this->addCreateButton(route('branch.create'), 'branch.create');
     }
 
     /**
@@ -125,7 +125,7 @@ class DistributionSystemTable extends TableAbstract
      */
     public function bulkActions(): array
     {
-        return $this->addDeleteAction(route('distribution-system.deletes'), 'distribution-system.destroy', parent::bulkActions());
+        return $this->addDeleteAction(route('branch.deletes'), 'branch.destroy', parent::bulkActions());
     }
 
     /**

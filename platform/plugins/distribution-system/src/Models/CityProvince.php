@@ -6,7 +6,7 @@ use Platform\Base\Traits\EnumCastable;
 use Platform\Base\Enums\BaseStatusEnum;
 use Platform\Base\Models\BaseModel;
 
-class DistributionSystem extends BaseModel
+class CityProvince extends BaseModel
 {
     use EnumCastable;
 
@@ -15,7 +15,7 @@ class DistributionSystem extends BaseModel
      *
      * @var string
      */
-    protected $table = 'app_distribution_systems';
+    protected $table = 'app_city_provinces';
 
     /**
      * @var array

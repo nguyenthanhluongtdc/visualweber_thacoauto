@@ -4,10 +4,10 @@ namespace Platform\DistributionSystem\Forms;
 
 use Platform\Base\Forms\FormAbstract;
 use Platform\Base\Enums\BaseStatusEnum;
-use Platform\DistributionSystem\Http\Requests\DistributionSystemRequest;
-use Platform\DistributionSystem\Models\DistributionSystem;
+use Platform\DistributionSystem\Http\Requests\CityProvinceRequest;
+use Platform\DistributionSystem\Models\CityProvince;
 
-class DistributionSystemForm extends FormAbstract
+class CityProvinceForm extends FormAbstract
 {
 
     /**
@@ -16,8 +16,8 @@ class DistributionSystemForm extends FormAbstract
     public function buildForm()
     {
         $this
-            ->setupModel(new DistributionSystem)
-            ->setValidatorClass(DistributionSystemRequest::class)
+            ->setupModel(new CityProvince)
+            ->setValidatorClass(CityProvinceRequest::class)
             ->withCustomFields()
             ->add('name', 'text', [
                 'label'      => trans('core/base::forms.name'),

@@ -4,10 +4,10 @@ namespace Platform\DistributionSystem\Forms;
 
 use Platform\Base\Forms\FormAbstract;
 use Platform\Base\Enums\BaseStatusEnum;
-use Platform\DistributionSystem\Http\Requests\DistributionSystemRequest;
-use Platform\DistributionSystem\Models\DistributionSystem;
+use Platform\DistributionSystem\Http\Requests\BranchRequest;
+use Platform\DistributionSystem\Models\Branch;
 
-class DistributionSystemForm extends FormAbstract
+class BranchForm extends FormAbstract
 {
 
     /**
@@ -16,8 +16,8 @@ class DistributionSystemForm extends FormAbstract
     public function buildForm()
     {
         $this
-            ->setupModel(new DistributionSystem)
-            ->setValidatorClass(DistributionSystemRequest::class)
+            ->setupModel(new Branch)
+            ->setValidatorClass(BranchRequest::class)
             ->withCustomFields()
             ->add('name', 'text', [
                 'label'      => trans('core/base::forms.name'),

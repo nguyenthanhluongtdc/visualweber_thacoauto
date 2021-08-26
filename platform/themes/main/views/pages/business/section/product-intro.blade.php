@@ -8,10 +8,13 @@
                     'tittle_product_intro') !!}  </h2>
                 @endif
                 @if(has_field($page, 'desc_product_intro'))
-                <p class="product-intro--left__content font-pri font20 fontmb-small mb-5">
-                    {!! has_field($page,
-                        'desc_product_intro') !!}  
-                </p>
+                <div class="product-intro--left__content font-pri font20 fontmb-small">
+                    <p>
+                        {!! has_field($page,
+                            'desc_product_intro') !!}  
+                    </p>
+                </div>
+               
                 @endif
                 <a href="#" class="product-intro--left__button font-pri font18 fontmb-small">{{ __("Readmore") }}</a>
             </div>
@@ -83,10 +86,13 @@
                     'tittle_product_intro2') !!}  </h2>
                 @endif
                 @if(has_field($page, 'desc_product_intro2'))
-                <p class="product-intro--left__content font-pri font20 fontmb-small mb-5">
-                    {!! has_field($page,
-                        'desc_product_intro2') !!}  
-                </p>
+                <div class="product-intro--left__content font-pri font20 fontmb-small">
+                    <p>
+                        {!! has_field($page,
+                            'desc_product_intro2') !!}  
+                    </p>
+                </div>
+               
                 @endif
                 <a href="#" class="product-intro--left__button font-pri font18 fontmb-small ">{{ __("Readmore") }}</a>
             </div>
@@ -157,10 +163,13 @@
                     'tittle_product_intro3') !!}  </h2>
                 @endif
                 @if(has_field($page, 'desc_product_intro3'))
-                <p class="product-intro--left__content font-pri font20 fontmb-small mb-5">
-                    {!! has_field($page,
-                        'desc_product_intro3') !!}  
-                </p>
+                <div class="product-intro--left__content font-pri font20 fontmb-small">
+                    <p>
+                        {!! has_field($page,
+                            'desc_product_intro3') !!}  
+                    </p>
+                </div>
+                
                 @endif
                 <a href="#" class="product-intro--left__button font-pri font18 fontmb-small">{{ __("Readmore") }}</a>
             </div>

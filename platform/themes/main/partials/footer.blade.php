@@ -89,7 +89,7 @@
         <a href="tel:{{ theme_option('hotline-contact') }}"><img src="{{ Theme::asset()->url('images/main/phone.png') }}" alt="phone"></a>
     </div>
     <div class="item-button ">
-        <button class="btn-mes"><img src="{{ Theme::asset()->url('images/main/mess.png') }}"></button>
+        <button class="fb-customerchat messenger"><img src="{{ Theme::asset()->url('images/main/mess.png') }}"></button>
     </div>
 </div>
 <div class="end-web" style="background: url('{{ Theme::asset()->url('images/main/end.jpg') }}')">
@@ -120,9 +120,13 @@
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
         
-        $('.btn-mes').click(function() {
-            FB.FB.CustomerChat.show();
-        })
+        let buttonMes = $('.messenger');
+        buttonMes.on('click', function(e) {
+            buttonMes.on("click", function() {
+                console.log('sf')
+                FB.CustomerChat.show();
+            });
+        });
 
         </script>
 

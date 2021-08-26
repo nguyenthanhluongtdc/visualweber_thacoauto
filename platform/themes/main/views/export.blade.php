@@ -144,20 +144,7 @@
                                 <div class="read-more"><a href="">Xem chi tiết</a></div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu4.jpg')}}" alt="" class="image"/>
-                            <div class="overlay">
-                                <div class="text text-uppercase font30 font-pri-bold">thaco xuất khẩu ô tô qua thái lan</div>
-                                <div class="read-more"><a href="">Xem chi tiết</a></div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu4.jpg')}}" alt="" class="image"/>
-                            <div class="overlay">
-                                <div class="text text-uppercase font30 font-pri-bold">thaco xuất khẩu ô tô qua thái lan</div>
-                                <div class="read-more"><a href="">Xem chi tiết</a></div>
-                            </div>
-                        </div>
+              
                         <div class="swiper-slide">
                             <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/duantieubieu1.png')}}" alt="" class="image"/>
                             <div class="overlay">

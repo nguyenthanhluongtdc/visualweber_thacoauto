@@ -73,3 +73,11 @@ if (!function_exists('get_first_video_post')) {
         return app(PostInterface::class)->getFirstVideoPost() ?? collect();
     }
 }
+
+if (!function_exists('get_current_url_with_lang')) {
+    function get_current_url_with_lang()
+    {
+        $url = URL::current();
+        // $lang = Language::÷
+    }
+}

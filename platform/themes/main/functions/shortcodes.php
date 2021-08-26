@@ -35,13 +35,19 @@ app()->booted(function () {
 
         shortcode()->setAdminConfig('recent-posts', Theme::partial('shortcodes.recent-posts-admin-config'));
 
-        add_shortcode('featured-categories-posts', __('Featured categories posts'), __('Featured categories posts'),
+        add_shortcode(
+            'featured-categories-posts',
+            __('Featured categories posts'),
+            __('Featured categories posts'),
             function ($shortCode) {
                 return Theme::partial('shortcodes.featured-categories-posts', ['title' => $shortCode->title]);
-            });
+            }
+        );
 
-        shortcode()->setAdminConfig('featured-categories-posts',
-            Theme::partial('shortcodes.featured-categories-posts-admin-config'));
+        shortcode()->setAdminConfig(
+            'featured-categories-posts',
+            Theme::partial('shortcodes.featured-categories-posts-admin-config')
+        );
     }
 
     if (is_plugin_active('gallery')) {
@@ -53,7 +59,9 @@ app()->booted(function () {
     }
 
 
-    add_shortcode('filter-media', __('Filter Media'), __('Filter Media'), function () {
-        return Theme::partial('shortcodes.filter-media');
+    add_shortcode('filter-media', __('Filter Media'), __('Filter Media'), function ($shortCode) {
+        return Theme::partial('shortcodes.filter-media', [
+            'category_id' => $shortCode->category ?? -1
+        ]);
     });
 });

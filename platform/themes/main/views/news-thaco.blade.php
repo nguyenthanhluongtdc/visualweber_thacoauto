@@ -1,4 +1,4 @@
-{!! do_shortcode('[filter-media][/filter-media]') !!}
+{!! do_shortcode('[filter-media category="' . $category->id . '"][/filter-media]') !!}
 <div class="news-thaco-content container-remake overflow-x-hidden">
     <div class="news-thaco-top">
         @php

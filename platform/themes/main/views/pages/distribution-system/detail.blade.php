@@ -68,21 +68,21 @@
             <div class="js-showroom-content container-remake"></div>
         </div>
         @php
-            $posts = get_posts_by_category(15, 4);
-            $pictures = get_posts_by_category(20, 4);
+            $posts = get_posts_by_category(theme_option('default_category_news'), 4);
+            $pictures = get_posts_by_category(theme_option('default_category_gallery'), 4);
         @endphp
         <div class="event-news mt-55 mb-155">
             <div class="container-remake">
-                <h1 class="title font60 fontmb-large mb-0">{{ ('tin tức & sự kiện') }}</h1>
+                <h1 class="title font60 fontmb-large mb-0">{{ __('tin tức & sự kiện') }}</h1>
             </div>
             <div class="event-news__wrap mt-40">
                 <div class="container-remake">
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active font30" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">tin tức & sự kiện</a>
+                            <a class="nav-link active font30" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">{{ __('tin tức & sự kiện') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link font30" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">video & hình ảnh</a>
+                            <a class="nav-link font30" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">{{ __('video & hình ảnh') }}</a>
                         </li>
                     </ul>
                     <div class="tab-content" id="myTabContent">

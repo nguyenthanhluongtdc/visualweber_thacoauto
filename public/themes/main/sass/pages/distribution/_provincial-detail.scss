@@ -135,6 +135,11 @@
                     align-items: center;
                     min-width: 160px;
                     position: relative;
+                    img {
+                        max-width: 150px;
+                        max-height: 100px;
+                        object-fit: cover;
+                    }
                     @media (max-width: 1080px){
                         min-width: 20%;
                         display: flex;
@@ -300,7 +305,9 @@
                         }
                     }
                     img {
-                        max-width: 90px;
+                        max-width: 150px;
+                        max-height: 100px;
+                        object-fit: cover;
                     }
                 }
                 .category-container {

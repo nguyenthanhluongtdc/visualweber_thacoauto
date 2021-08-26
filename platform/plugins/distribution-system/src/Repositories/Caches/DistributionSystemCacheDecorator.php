@@ -7,5 +7,4 @@ use Platform\DistributionSystem\Repositories\Interfaces\DistributionSystemInterf
 
 class DistributionSystemCacheDecorator extends CacheAbstractDecorator implements DistributionSystemInterface
 {
-
 }

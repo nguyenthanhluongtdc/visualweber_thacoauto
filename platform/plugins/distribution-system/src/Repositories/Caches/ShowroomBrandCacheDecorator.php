@@ -7,5 +7,11 @@ use Platform\DistributionSystem\Repositories\Interfaces\ShowroomBrandInterface;
 
 class ShowroomBrandCacheDecorator extends CacheAbstractDecorator implements ShowroomBrandInterface
 {
-
+    /**
+     * {@inheritDoc}
+     */
+    public function getBrandGroupByCategory($ids)
+    {
+        return $this->getDataIfExistCache(__FUNCTION__, func_get_args());
+    }
 }

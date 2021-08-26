@@ -37,54 +37,22 @@
             <div class="container-remake">
                 <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 fontmb-large">{{ __('hoạt động kinh doanh') }}</h1>
                 <div class="vehicle-category__wrap" data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-duration="1000">
-                    <div class="vehicle-category__item">
-                        <h3 class="title font25 fontmb-medium">Xe du lịch</h3>
-                        <ul>
-                            <li>
-                                <a href="#"><img src="{{Theme::asset()->url('images/distribution/logo1.png')}}" alt=""></a>
-                            </li>
-                            <li>
-                                <a href="#"><img src="{{Theme::asset()->url('images/distribution/logo2.png')}}" alt=""></a>
-                            </li>
-                            <li>
-                                <a href="#"><img src="{{Theme::asset()->url('images/distribution/logo3.png')}}" alt=""></a>
-                            </li>
-                            <li>
-                                <a href="#"><img src="{{Theme::asset()->url('images/distribution/logo4.png')}}" alt=""></a>
-                            </li>
-                            <li>
-                                <a href="#"><img src="{{Theme::asset()->url('images/distribution/logo5.png')}}" alt=""></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="vehicle-category__item">
-                        <h3 class="title font25 fontmb-medium">Xe bus/ chuyên dụng</h3>
-                        <ul>
-                            <li>
-                                <a href="#"><img src="{{Theme::asset()->url('images/distribution/logo6.png')}}" alt=""></a>
-                            </li>
-                            <li>
-                                <a href="#"><img src="{{Theme::asset()->url('images/distribution/logo7.png')}}" alt=""></a>
-                            </li>
-                            <li>
-                                <a href="#"><img src="{{Theme::asset()->url('images/distribution/logo8.png')}}" alt=""></a>
-                            </li>
-                            <li>
-                                <a href="#"><img src="{{Theme::asset()->url('images/distribution/logo9.png')}}" alt=""></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="vehicle-category__item">
-                        <h3 class="title font25">Xe moto/ 2 bánh</h3>
-                        <ul>
-                            <li>
-                                <a href="#"><img src="{{Theme::asset()->url('images/distribution/logo3.png')}}" alt=""></a>
-                            </li>
-                            <li>
-                                <a href="#"><img src="{{Theme::asset()->url('images/distribution/logo4.png')}}" alt=""></a>
-                            </li>
-                        </ul>
-                    </div>
+                    @forelse (get_brand_of_distribution($data->id) ?? collect() as $key => $item)
+                        <div class="vehicle-category__item">
+                            <h3 class="title font25">{{ $key }}</h3>
+                            <ul>
+                                @foreach ($item as $child)
+                                    <li>
+                                        <a class="js-showroom-showlist" href="javascript:;" data-brand-id="{{ $child->brand_id }}" data-category-id="{{ $child->category_id }}">
+                                            <img class="img-fluid" width="70" src="{{ isset($child->brand->image) && !blank($child->brand->image) ? get_image_url($child->brand->image) : '' }}" alt="{{ $child->brand->name ?? '' }}">
+                                        </a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @empty
+                        {!! Theme::partial('templates.no-content') !!}
+                    @endforelse
                 </div>
                 {!! Theme::partial('templates.showroom', ['showrooms' =>  $data->showrooms]) !!}
             </div>

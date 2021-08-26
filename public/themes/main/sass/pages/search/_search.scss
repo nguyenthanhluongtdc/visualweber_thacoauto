@@ -273,10 +273,11 @@
             .content {
                 display: flex;
                 flex-wrap: wrap;
-
+               
                 a, p{
                     flex: 0 0 100%;
                     max-width: 100%;
+                    text-align: justify;
                 }
     
                 h3{
@@ -301,6 +302,7 @@
                 .content {
                     background-color: #f1f1f1;
                     padding: 15px;
+                 
                 }
             }
         }

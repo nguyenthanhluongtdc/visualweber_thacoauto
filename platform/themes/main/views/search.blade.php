@@ -129,7 +129,7 @@ Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
                                     <p class="font-pri my-3 font15 fontmb-small">
                                         {!! empty($post->description) ? $post->name : $post->description !!}
                                     </p>
-                                    <p class="font-pri date font15 ">
+                                    <p class="font-pri date font15 fontmb-small">
                                         {{$post->created_at->format('d-m-y')}}
                                     </p>
                                 </div>

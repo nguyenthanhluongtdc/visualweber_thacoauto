@@ -220,23 +220,22 @@
                     margin-left: 1em;
                     width: 45%;
                     li {
-                        display: inline-flex;
                         margin-bottom: 10px;
-                        &::before {
-                            content: "\2022";
-                            color: #1e5499;
-                            display: inline-block; 
-                            width: 1.5rem;
-                            margin-left: -1rem;
-                            margin-top: 0.3rem;
-                            @media (max-width: 1080px) {
-                                width: auto;
-                                margin-right: 2%;
-                            }
-                        }
                         p {
                             font-family: $font-primary;
                             color: #1e5499;
+                            position: relative;
+                            &::before {
+                                content: "\2022";
+                                color: #1e5499;
+                                display: inline-block; 
+                                position: absolute;
+                                left: -1rem;
+                                @media (max-width: 1080px) {
+                                    width: auto;
+                                    margin-right: 2%;
+                                }
+                            }
                             span {
                                 font-family: $font-my-bold;
                             }

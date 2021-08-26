@@ -2,7 +2,6 @@
 
 namespace Platform\Car\Models;
 
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Platform\Base\Traits\EnumCastable;
 use Platform\Base\Enums\BaseStatusEnum;
 use Platform\Base\Models\BaseModel;
@@ -23,14 +22,16 @@ class Car extends BaseModel
      */
     protected $fillable = [
         'name',
-        'parent_id',
         'description',
-        'content',
-        'feature_image',
-        'author_id',
-        'author_type',
-        'order',
-        'car_line_id',
+        'horse_power',
+        'fuel_type',
+        'gear',
+        'fee',
+        'fee_license_plate',
+        'vehicle_id',
+        'parent_id',
+        'image',
+        'brochure',
         'status',
     ];
 
@@ -41,27 +42,7 @@ class Car extends BaseModel
         'status' => BaseStatusEnum::class,
     ];
 
-    /**
-     * @return BelongsTo
-     */
-    public function parent(): BelongsTo
-    {
-        return $this->belongsTo(CarCategory::class, 'parent_id')->withDefault();
-    }
-
-    /**
-     * @return HasMany
-     */
-    public function children(): HasMany
-    {
-        return $this->hasMany(CarCategory::class, 'parent_id');
-    }
-
-    /**
-     * @return BelongsToMany
-     */
-    public function carlines(): BelongsTo
-    {
-        return $this->belongsTo(CarLine::class);
+    public function parent(){
+        return $this->belongsTo(\Platform\Car\Models\Car::class,'parent_id');
     }
 }

@@ -55,6 +55,9 @@ class CarTable extends TableAbstract
                 }
                 return Html::link(route('car.edit', $item->id), $item->name);
             })
+            ->editColumn('parent_id', function ($item) {
+                return $item->parent ? Html::link(route('car.edit', $item->parent_id), $item->parent->name ?? '') : '';
+            })
             ->editColumn('checkbox', function ($item) {
                 return $this->getCheckbox($item->id);
             })
@@ -80,9 +83,10 @@ class CarTable extends TableAbstract
             ->select([
                'id',
                'name',
+               'parent_id',
                'created_at',
                'status',
-           ]);
+           ])->with('parent');
 
         return $this->applyScopes($query);
     }
@@ -99,6 +103,10 @@ class CarTable extends TableAbstract
             ],
             'name' => [
                 'title' => trans('core/base::tables.name'),
+                'class' => 'text-left',
+            ],
+            'parent_id' => [
+                'title' => trans('Parent'),
                 'class' => 'text-left',
             ],
             'created_at' => [

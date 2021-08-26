@@ -48,11 +48,15 @@ class PostForm extends FormAbstract
         if (!$this->formHelper->hasCustomField('categoryMulti')) {
             $this->formHelper->addCustomField('categoryMulti', CategoryMultiField::class);
         }
+<<<<<<< HEAD
 
         $regions = is_plugin_active('location') ? get_cities() : [];
 
         $regions = ['' =>  __("Chọn khu vực")] + $regions;
 
+=======
+        dd(get_categories_with_children());
+>>>>>>> cms_car
         $this
             ->setupModel(new Post)
             ->setValidatorClass(PostRequest::class)

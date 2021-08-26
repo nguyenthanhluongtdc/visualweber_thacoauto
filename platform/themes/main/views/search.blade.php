@@ -65,7 +65,9 @@ Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
                         </div>
                     </div>
                     <p class="font-pri mt-2"> 
-                        {!! $comment !!} 
+                        @isset($comment)
+                            {!! $comment !!}
+                        @endisset
                     </p>
                 </div>
             </div>
@@ -108,38 +110,37 @@ Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
             </div> --}}
 
             <div class="section-content pt-5">
-                @forelse($posts as $post)
-                    <div class="search-result row mb-md-4 mb-5" data-aos="fade-up" data-aos-duration="1000"
-                        data-aos-easing="ease-in-out">
-                        <div class="col-lg-3 col-md-5 result-img">
-                            <a class="image h-100" href="#" title="">
-                                <img src="{{ Storage::disk('public')->exists($post['image']) ? get_image_url($post['image']) : RvMedia::getDefaultImage() }}" alt="img-detail"
-                                    class="w-100 h-100 object-fit-cover">
-                            </a>
-                        </div>
-                        <div class="col-lg-9 col-md-7 result-content">
-                            <div class="content">
-                                <a href="#">
-                                    <h3 class="font-pri-bold font30  color-gray">
-                                        {!! $post['name'] !!}
-                                    </h3>
+                @isset($posts)
+                    @forelse($posts as $post)
+                        <div class="search-result row mb-md-4 mb-5" data-aos="fade-up" data-aos-duration="1000"
+                            data-aos-easing="ease-in-out">
+                            <div class="col-lg-3 col-md-5 result-img">
+                                <a class="image h-100" href="#" title="">
+                                    <img src="{{ Storage::disk('public')->exists($post['image']) ? get_image_url($post['image']) : RvMedia::getDefaultImage() }}" alt="img-detail"
+                                        class="w-100 h-100 object-fit-cover">
                                 </a>
-                                <p class="font-pri my-3 font15">
-                                    {!! $post['description'] !!}
-                                </p>
-                                <p class="font-pri date font15">
-                                    {{\Carbon\Carbon::parse($post['created_at'])->format('d-m-Y');}}
-                                </p>
+                            </div>
+                            <div class="col-lg-9 col-md-7 result-content">
+                                <div class="content">
+                                    <a href="#">
+                                        <h3 class="font-pri-bold font30  color-gray">
+                                            {!! $post->name !!}
+                                        </h3>
+                                    </a>
+                                    <p class="font-pri my-3 font15">
+                                        {!! empty($post->description) ? $post->name : $post->description !!}
+                                    </p>
+                                    <p class="font-pri date font15">
+                                        {{$post->created_at->format('d-m-y')}}
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    
-                    @empty
-                    <i class="fal fa-empty-set"></i>
-                    <p class="text-center font25">
-                        {!! __('Không tìm thấy kết quả nào') !!}
-                    </p>
-                @endforelse
+                        
+                        @empty
+                        <i class="fal fa-empty-set"></i>
+                    @endforelse
+                @endisset
             </div>
             {{-- <div class="search-result row mb-md-4 mb-5" data-aos="fade-up" data-aos-duration="1000"
                 data-aos-easing="ease-in-out">
@@ -163,10 +164,18 @@ Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
                     </div>
                 </div>
             </div> --}}
+            
+            @if(!isset($posts) || $posts->isEmpty())
+                <p class="text-center font25">
+                    {!! __('Không tìm thấy kết quả nào') !!}
+                </p>
+            @endif
 
-            <div class="container-remake">
-                {{ $posts->links('vendor.pagination.custom') }}
-            </div>
+            @isset($posts)
+                <div class="container-remake">
+                    {{ $posts->links('vendor.pagination.custom') }}
+                </div>
+            @endisset
         </div>
     </form>
 </div>

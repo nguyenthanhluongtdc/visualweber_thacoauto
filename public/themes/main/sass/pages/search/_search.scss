@@ -49,10 +49,9 @@
                     ion-icon{
 
                         color: #fff;
-                       transform: translateX(-7.7px);
                        @media(max-width : 1400px){ 
-                        transform: translateY(-2.5px);
-                        margin-left: -4.7px;
+                        transform: translateY(-0.5px);
+                        margin-left: -2.7px;
                      }
                         
                      
@@ -269,6 +268,11 @@
             .content {
                 display: flex;
                 flex-wrap: wrap;
+
+                a, p{
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                }
     
                 h3{
                     text-transform: uppercase;
@@ -278,9 +282,6 @@
                     // bottom: 0;
                     opacity: 75%;
                     align-self: flex-end;
-                }
-                p{
-                    
                 }
             }
 

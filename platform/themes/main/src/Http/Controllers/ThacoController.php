@@ -171,6 +171,11 @@ class ThacoController extends PublicController
 
         $query = $request->input('keyword');
 
+        if(!$query) {
+            return Theme::scope('search')
+            ->render();
+        }
+
         $title = __('Search result for: ":query"', compact('query'));
 
         SeoHelper::setTitle($title)

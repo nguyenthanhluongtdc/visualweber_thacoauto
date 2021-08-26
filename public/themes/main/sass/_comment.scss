@@ -78,6 +78,9 @@ $color-red: #dc3545;
                 .post-btn {
                     border-radius: unset;
                     background-color: $color-primary;
+                    &.cancel-btn {
+                        background-color: transparent;
+                    }
                 }
             }
         }

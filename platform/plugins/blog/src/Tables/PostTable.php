@@ -230,6 +230,12 @@ class PostTable extends TableAbstract
                 'validate' => 'required',
                 'callback' => 'getCategories',
             ],
+            'city_id'     => [
+                'title'    => __("Khu vực"),
+                'type'     => 'select',
+                'choices'  => is_plugin_active('location') ? get_cities() : [],
+                // 'validate' => 'required|in:' . implode(',', BaseStatusEnum::values()),
+            ],
             'created_at' => [
                 'title'    => trans('core/base::tables.created_at'),
                 'type'     => 'date',

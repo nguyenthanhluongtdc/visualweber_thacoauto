@@ -1,7 +1,7 @@
 <div class="fitter-media">
     <div class="fitter-media-wrap container-remake">
         <form action="{{ URL::current() }}" method="GET" class="form-filter">
-            <select disabled name="select_city" id="select_city" name="select_city"
+            <select name="select_city" id="select_city" name="select_city"
                 class="font20 font-mi-cond js-example-disabled-results">
                 <option selected disabled>{{ __("Công ty tỉnh thành") }}</option>
                 @foreach (is_plugin_active('location') ? get_cities() : collect() as $key => $item)

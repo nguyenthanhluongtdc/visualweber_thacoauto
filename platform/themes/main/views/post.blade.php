@@ -113,7 +113,7 @@
                             </a>
                         </div>
                         <p class="city-day font-pri font15">
-                            <span class="city">{{ \MetaBox::getMetaData($post, 'region_post', true) ?? '--' }}</span>
+                            <span class="city">{{ $post->city->name ?? '--' }}</span>
                             <span class="time"> {{ $relatedItem->created_at->format('d/m/Y') }}</span>
                         </p>
                         <header class="post__header">

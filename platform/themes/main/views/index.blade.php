@@ -46,7 +46,7 @@
                                         {{Str::words($post->description,30)}}
                                     </p>
                                     <div class="city-day font-pri font18 fontmb-small">
-                                        <span class="city">{{ \MetaBox::getMetaData($post, 'region_post', true) ?? '--' }}</span>
+                                        <span class="city">{{ $post->city->name ?? '--' }}</span>
                                         <span class="day">{{date_format($post->created_at,"d-m-Y")}}</span>
                                     </div>
                                 </div>
@@ -63,7 +63,7 @@
                                 {{Str::words($post->description,25)}}
                             </p>
                             <div class="city-day font-pri font18 fontmb-small">
-                                <span class="city">{{ \MetaBox::getMetaData($post, 'region_post', true) ?? '--' }}</span>
+                                <span class="city">{{ $post->city->name ?? '--' }}</span>
                                 <span class="day">{{date_format($post->created_at,"d-m-Y")}}</span>
                             </div>
                         </div>
@@ -93,7 +93,7 @@
                                 {{Str::words($post->description,20)}}
                             </p>
                             <div class="city-day font-pri font18">
-                                <span class="city">{{ \MetaBox::getMetaData($post, 'region_post', true) ?? '--' }}</span>
+                                <span class="city">{{ $post->city->name ?? '--' }}</span>
                                 <span class="day">{{date_format($post->created_at,"d-m-Y")}}</span>
                             </div>
                         </div>
@@ -107,7 +107,7 @@
                     $post = is_plugin_active('blog') ? get_first_video_post() : collect();
                 @endphp
 
-                @if(isset(get_field($post, 'video_gallery')[0]))
+                @if(!blank($post) && isset(get_field($post, 'video_gallery')[0]))
                     <div class="img-item">
                         <a data-fancybox href="https://www.youtube.com/watch?v={{get_sub_field(get_field($post, 'video_gallery')[0], 'youtube_code')}}">
                             <div class="play"></div>

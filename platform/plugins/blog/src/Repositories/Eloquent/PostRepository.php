@@ -103,6 +103,10 @@ class PostRepository extends RepositoriesAbstract implements PostInterface
             $data->whereYear('posts.created_at', intval(request('select_year')));
         }
 
+        if (request('select_city')) {
+            $data->where('posts.city_id', intval(request('select_city')));
+        }
+
         if (request('select_month')) {
             $data->whereMonth('posts.created_at', intval(request('select_month')));
         }

@@ -23,6 +23,8 @@ use Platform\Theme\Http\Controllers\PublicController;
 use Platform\Blog\Repositories\Interfaces\PostInterface;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Platform\DistributionSystem\Repositories\Interfaces\DistributionSystemInterface;
+use Platform\DistributionSystem\Repositories\Interfaces\ShowroomBrandInterface;
+use Platform\DistributionSystem\Repositories\Interfaces\ShowroomInterface;
 use Platform\Kernel\Repositories\Interfaces\PostInterface as InterfacesPostInterface;
 
 class ThacoController extends PublicController
@@ -235,10 +237,38 @@ class ThacoController extends PublicController
                 'data' => $distributionSystems
             ])
         ]);
-        // $html_list = view('theme.main::views.pages.distribution-system.ajax.list', compact('distributionSystems'))->render();
-        // return response()->json([
-        //     'type' => 'success',
-        //     'html_list' => $html_list,
-        // ])->setStatusCode(Response::HTTP_OK);
+    }
+
+    public function getShowroomByBrand(BaseHttpResponse $response, ShowroomInterface $showroomInterface, ShowroomBrandInterface $showroomBrandInterface)
+    {
+        $showroomIDs = $showroomBrandInterface->advancedGet([
+            "condition" => [
+                "status" => BaseStatusEnum::PUBLISHED,
+                "brand_id" => request('brand'),
+                "category_id" => request('category')
+            ],
+            'select' => ['showroom_id']
+        ])->pluck('showroom_id')->toArray() ?? [];
+
+        $condition = [
+            "status" => BaseStatusEnum::PUBLISHED,
+            ['id', 'IN', $showroomIDs]
+        ];
+
+        if(blank(request('category')) && blank(request('brand'))) {
+            $condition = [
+                "status" => BaseStatusEnum::PUBLISHED,
+            ];
+        }
+
+        $data['showrooms'] = $showroomInterface->advancedGet([
+            "condition" => $condition,
+            'select' => ['*']
+        ]);
+
+        return $response
+            ->setData([
+                "template" => \Theme::partial('templates.showroom', $data)
+            ]);
     }
 }

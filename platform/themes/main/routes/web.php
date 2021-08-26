@@ -60,12 +60,13 @@ Route::group(['namespace' => 'Theme\Thaco\Http\Controllers', 'middleware' => ['w
 
         /* ===================== */
         Route::group(['prefix' => 'ajax'], function () {
+            Route::get('search', 'ThacoController@getSearch')->name('public.ajax.search');
             Route::get('get-new-posts', 'ThacoController@getNewPosts');
+            Route::get('showroom-by-brand', 'ThacoController@getShowroomByBrand')->name('public.ajax.showroom');
             Route::get('get-distribution-systems', 'ThacoController@getDistributionSystem')->name('public.ajax.distribution-system');
         });
         /* ===================== */
 
-        Route::get('ajax/search', 'ThacoController@getSearch')->name('public.ajax.search');
 
         Route::get('/search', 'ThacoController@getResultSearch')->name('public.search');
     });

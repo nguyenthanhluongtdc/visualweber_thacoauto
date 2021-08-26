@@ -1,3 +1,12 @@
+<script>
+    window.__distribution = {
+        ajax: "{{ Language::getLocalizedURL(Language::getCurrentLocale(), route('public.ajax.showroom')) }}"
+    }
+</script>
+@php
+    Theme::asset()->container('footer')->usePath()->add('distribution', 'js/distribution.js', [], [], time());
+@endphp
+
 @if (isset($data) && !blank($data))
     <div class="distribution-detail overflow-x-hidden">
         <div class="thacoauto-provincial">
@@ -54,8 +63,9 @@
                         {!! Theme::partial('templates.no-content') !!}
                     @endforelse
                 </div>
-                {!! Theme::partial('templates.showroom', ['showrooms' =>  $data->showrooms]) !!}
             </div>
+            {!! Theme::partial('templates.loading') !!}
+            <div class="js-showroom-content container-remake"></div>
         </div>
         @php
             $posts = get_posts_by_category(15, 4);

@@ -88,7 +88,7 @@
                         <img src="{{Theme::asset()->url('images/media/loading.gif')}}" alt="">
                     </div>
                     <div class="view-all-news font15 font-mi-bold ">
-                        <a id="posts-load-more" data-category="{{ $category->id ?? 15 }}" href="javascript:;">{{ __("Readmore") }}<span><i class="fas fa-arrow-right font15"></i></span></a>
+                        <a id="posts-load-more" data-category="{{ $category->id ?? 15 }}" href="javascript:;">{{ __("Read more") }}<span><i class="fas fa-arrow-right font15"></i></span></a>
                     </div>
                 </div>
             </div>

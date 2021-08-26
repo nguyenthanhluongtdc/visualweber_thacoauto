@@ -55,6 +55,7 @@ return [
             $theme->asset()->add('select2', '//cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css');
             $theme->asset()->add('alert', '//cdn.jsdelivr.net/alertifyjs/1.10.0/css/alertify.min.css');
             $theme->asset()->add('alert_bootstrap', '//cdn.jsdelivr.net/alertifyjs/1.10.0/css/themes/default.min.css');
+            $theme->asset()->add('swiper', '//unpkg.com/swiper/swiper-bundle.min.css');
             $theme->asset()->add('alert_bootstrap', '//cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.css');
             $theme->asset()->usePath()->add('semantic_ui_style', 'semantic-ui/semantic.min.css');
             $theme->asset()->add('transition', '//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/transition.min.css');

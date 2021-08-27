@@ -135,6 +135,7 @@
 
                     .col-right {
                         display: flex;
+                        flex-grow: 1;
                         flex-wrap: wrap;
                         background-color: white;
 
@@ -145,7 +146,11 @@
                             border: 2px solid #e6eef5;
 
                             .box-center {
-                                @include paddingX(120);
+                                width: 70%;
+
+                                @media (max-width: 576px) {
+                                    width: 90%;
+                                }
                                 .symbol {
                                     text-align: center;
                                     @include marginBottom(30, "+");
@@ -177,6 +182,7 @@
                         .col-right__item {
                             flex: 0 0 50%;
                             max-width: 50%;
+                            @include mobilePaddingY(40);
 
                             @media(min-width: 1081) {
                                 &:nth-child(odd) {
@@ -199,7 +205,6 @@
 
                             //mobile 
                             @media (max-width: 1080px) {
-                                @include mobileHeight(260);
                                 border: 2px solid #e6eef5;
 
                                 .symbol {
@@ -236,25 +241,25 @@
                         .col-right__item {
                             flex: 0 0 50%;
                             max-width: 50%;
+
+                            @include mobilePaddingY(40);
                             
                                 &:nth-child(1),&:nth-child(2),&:nth-child(3) {
                                     flex: 0 0 33.333333%;
                                     max-width: 33.333333%;
     
                                     .box-center {
-                                        @include paddingLeft(90);
-                                        @include paddingRight(90);
 
                                         //mobile
-                                        @media (max-width: 1080px) {
-                                            @include mobilePaddingX(40);
-
                                             .symbol {
-                                                width: 70%;
+                                                width: 50%;
                                                 margin-left: auto;
                                                 margin-right: auto;
+
+                                                // @media (max-width: 768px) {
+                                                //     width: 100%;
+                                                // }
                                             }
-                                        } 
                                     }
                                 }
                                 &:nth-child(1), &:nth-child(4) {
@@ -281,11 +286,6 @@
                                         } 
                                     }
                                 }
-
-                            //mobile 
-                            @media (max-width: 1080px) {
-                                @include mobileHeight(191);
-                            }
 
                             .symbol {
                                

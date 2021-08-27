@@ -315,7 +315,7 @@
                 </li>
             </ul>
             <div class="link-views-all font-pri-bold font18 color-gray">
-                <a href="" class="color-gray">
+                <a href="#" class="color-gray">
                     Xem tất cả <span><i class="fas fa-arrow-right font15"></i></span>
                 </a>
             </div>

@@ -95,7 +95,7 @@
                 <div class="search-main">
                     <div class="search-inner">
                     <form action="{{route('public.search')}}">
-                        <input autocomplete="off" class="font17 search-bar" type="text" input-id="1" id="inputSearch" name="keyword" placeholder="">
+                        <input autocomplete="off" class="font17 search-bar" type="text" input-id="1" id="inputSearch" name="keyword" placeholder="" value="{{ request()->get('keyword') }}">
                         <span class="search-info font16">{{__('Hit enter to search or ESC to close')}}</span>
                     </form>
                   

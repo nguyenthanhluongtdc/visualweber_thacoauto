@@ -178,7 +178,7 @@
             </div>
             <div class="product-intro--right">
                 <div class="product-intro__image">
-                    <img loading="lazy" src="{{Storage::disk('public')->exists(get_field($page,'image')) ? get_image_url(get_field($page,'image')) : RvMedia::getDefaultImage()}}" alt="">     
+                    <img loading="lazy" src="{{get_image_url(has_sub_field($item,'image'))}}" alt="">     
                 </div>
             </div>
         </div>

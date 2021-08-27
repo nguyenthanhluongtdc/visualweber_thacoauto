@@ -3,20 +3,20 @@
         <div class="car-selection-content row">
             <div class="car-selection-content__left col-sm-12 col-md-12">
                 <div class="frame">
-                    <img src="{{Theme::asset()->url('images/business/brand-detail/car-detail.png')}}" alt="">
+                    <img src="{{ RvMedia::getImageUrl($car->image, null, false, RvMedia::getDefaultImage()) }}" alt="{{ $car->name }}">
                 </div>
                 <ul class="info-equip">
                     <li class="info-equip__item font15 font-pri">
                         <img src="{{Theme::asset()->url('images/business/brand-detail/chon-xe-1.png')}}" alt="filter icon">
-                        <span>270 kW (367 HP)</span>
+                        <span>{{ number_format($car->horse_power * 0.7457, 2, '.', ',') }} kW ({{ $car->horse_power }} HP)</span>
                     </li>
                     <li class="info-equip__item font15 font-pri">
                         <img src="{{Theme::asset()->url('images/business/brand-detail/chon-xe-2.png')}}" alt="filter icon">
-                        <span>Xăng</span>
+                        <span>{{ __($car->fuel_type) }}</span>
                     </li>
                     <li class="info-equip__item font15 font-pri">
                         <img src="{{Theme::asset()->url('images/business/brand-detail/chon-xe-3.png')}}" alt="filter icon">
-                        <span>Tự động</span>
+                        <span>{{ __($car->gear) }}</span>
                     </li>
                 </ul>
                 <div class="button">
@@ -177,7 +177,6 @@
                     </div>
                 </div>
                 <a class="select-button font18 font-pri fontmb-small d-inline-block"  type="button" href="">Tiếp theo</a>
-
             </div>
             <button class="btn-back mt-4">
                 Quay lại

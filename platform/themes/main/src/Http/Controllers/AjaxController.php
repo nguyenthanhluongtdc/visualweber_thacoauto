@@ -3,9 +3,10 @@
 namespace Theme\Main\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Platform\Theme\Http\Controllers\PublicController;
+use Platform\Base\Http\Controllers\BaseController;
+use Platform\Base\Http\Responses\BaseHttpResponse;
 
-class AjaxController extends PublicController
+class AjaxController extends BaseController
 {
     public function getNewPosts(Request $request)
     {

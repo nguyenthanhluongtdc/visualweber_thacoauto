@@ -235,4 +235,12 @@ class ThacoController extends PublicController
             ])->setStatusCode(Response::HTTP_INTERNAL_SERVER_ERROR);
         }
     }
+
+    public function getFirstStepCarSelection(BaseHttpResponse $response)
+    {
+        return $response
+            ->setData([
+                "template" => \Theme::partial('templates.car-selection.step-first')
+            ]);
+    }
 }

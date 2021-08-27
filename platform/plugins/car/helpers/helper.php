@@ -1,4 +1,7 @@
-<?php 
+<?php
+
+use Illuminate\Database\Eloquent\Collection;
+use Platform\Car\Repositories\Interfaces\CarInterface;
 
 if(!function_exists('get_car_lines')){
    function get_vehicles($brand = null){
@@ -48,5 +51,20 @@ if(!function_exists('get_car_by_slug')){
           return $carInterface->getFirstBy(['id' => $slug->reference_id]);
       }
       return null;
+   }
+}
+
+if (!function_exists('get_car_by_id')) {
+   /**
+    * Get car by id function
+    *
+    * @param [type] $id
+    * @return Collection
+    */
+   function get_car_by_id($id)
+   {
+      return app(CarInterface::class)->getFirstBy([
+         "id" => $id
+      ]);
    }
 }

@@ -3,7 +3,7 @@
     <div class="news-thaco-top">
         @php
         $posts = get_posts_by_category($category->id ?? 19, 999);
-        $postsFeatures = get_featured_posts_by_category($category->id ?? 19, 1);
+        $postsFeatures = get_featured_posts_by_category($category->id ?? 19, 2);
         
         @endphp
         @if (!empty($postsFeatures))

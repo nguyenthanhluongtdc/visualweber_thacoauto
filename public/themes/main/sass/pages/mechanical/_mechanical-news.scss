@@ -23,8 +23,6 @@
                 }
               
                 .read-more {
-                 
-                    margin-top: 1.5rem;
                     
                     img{
                         width: 3.1%;
@@ -93,11 +91,15 @@
                         padding-left: 0;
                         @include width(336);
                         @include height(226);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
                         @media (max-width: 768px) {
                             width: max-content;
                         }
                         img {
                             height: 100%;
+                            object-fit: contain;
                             @media (min-width: 769px) {
                                 width: 100%;
                                 min-width: 100%;
@@ -110,7 +112,7 @@
                     }
                 }
                 &__right {
-                   
+                    @include height(226);
                     display: flex;
                     flex-wrap: wrap;
                     align-content: space-between;
@@ -130,7 +132,7 @@
                     .title a {
                         font-family: $font-primary;
                         color: #01498b;
-                        @include split_str(2);
+                        @include split_str(1);
                         @include marginBottom(12, "+");
                     }
                     .description {
@@ -157,8 +159,6 @@
         width: 4.3%;
         margin-top: -6.5px;
         margin-left: 5px;
-        
-        
     }
     &:hover{
         img{

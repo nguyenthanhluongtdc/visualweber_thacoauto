@@ -4,6 +4,7 @@ $('.partner-home-carousel').owlCarousel({
     loop: true,
     autoplay: true,
     nav: true,
+    dots: false,
     navText: [
         // "<div class='nav-btn prev-slide'><i class='fal fa-chevron-left'></i></div>",
         "<div class='nav-btn prev-slide'><img src='themes/main/images/main/left.png' alt='left'></" +

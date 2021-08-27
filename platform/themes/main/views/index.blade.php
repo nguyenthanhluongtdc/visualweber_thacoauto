@@ -301,16 +301,16 @@
         <h2 class="font-pri-bold font60 color-gray fontmb-large">Quan hệ cổ đông</h2>
         <div class="menu-tab-right font25 fontmb-small">
             <ul class="nav nav-pills font-pri-bold color-gray hidden-scrollbar" role="tablist">
-                <li class="nav-item">
+                <li class="nav-item" role="tab">
                     <a class="nav-link active" data-toggle="pill" href="#shareholder1">Công bố thông tin</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" role="tab">
                     <a class="nav-link" data-toggle="pill" href="#shareholder2">Thông tin cổ đông</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" role="tab">
                     <a class="nav-link" data-toggle="pill" href="#shareholder3">Báo cáo thường nhiên</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" role="tab">
                     <a class="nav-link" data-toggle="pill" href="#shareholder4">Báo cáo tài chính</a>
                 </li>
             </ul>

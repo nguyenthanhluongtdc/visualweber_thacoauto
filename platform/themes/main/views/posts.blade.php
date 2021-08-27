@@ -62,10 +62,10 @@
                     {{ $posts->links('vendor.pagination.custom') }}
                 @endif
             </div>
-            <div class="list-post-new">
+            <div class="list-post-new" data-aos="fade-left" data-aos-duration="500" data-aos-delay="50" class="aos-init aos-animate">
                 <div class="wrap">
                     <h2 class="font-mi-bold font30 fontmb-middle">{{ __("Latest News") }}</h2>
-                    <ul id="new-posts" class="">
+                    <ul id="new-posts" class=""  data-aos="flip-left" data-aos-duration="1200" data-aos-delay="50" class="aos-init aos-animate">
                         @if (!empty($postsFeatures))
                             @foreach ($postsFeatures as $post)
                             <div class="post-new-item">

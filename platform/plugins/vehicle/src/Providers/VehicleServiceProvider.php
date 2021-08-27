@@ -35,9 +35,9 @@ class VehicleServiceProvider extends ServiceProvider
             ->loadRoutes(['web']);
 
         Event::listen(RouteMatched::class, function () {
-            // if (defined('LANGUAGE_MODULE_SCREEN_NAME')) {
-            //    \Language::registerModule([Vehicle::class]);
-            // }
+            if (defined('LANGUAGE_MODULE_SCREEN_NAME')) {
+               \Language::registerModule([Vehicle::class]);
+            }
 
             dashboard_menu()->registerItem([
                 'id'          => 'cms-plugins-vehicle',
@@ -49,5 +49,7 @@ class VehicleServiceProvider extends ServiceProvider
                 'permissions' => ['vehicle.index'],
             ]);
         });
+        \SlugHelper::registerModule(Vehicle::class);
+        \SlugHelper::setPrefix(Vehicle::class, 'vehicles');
     }
 }

@@ -1,3 +1,4 @@
+@dd(get_cars($slug->key,request()->get('vehicle')),request()->get('vehicle'));
 <section class="section-car-filter-content">
     <div class="container-remake">
         <div class="list-car-mobile row">

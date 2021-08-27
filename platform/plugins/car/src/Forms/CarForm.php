@@ -93,6 +93,11 @@ class CarForm extends FormAbstract
                 ],
                 'choices'    => BaseStatusEnum::labels(),
             ])
+            ->add('brand_id', 'customSelect', [
+                'label'      => trans('Brands'),
+                'label_attr' => ['class' => 'control-label'],
+                'choices'    => get_brands(),
+            ])
             ->add('vehicle_id', 'customSelect', [
                 'label'      => trans('Vehicle'),
                 'label_attr' => ['class' => 'control-label'],

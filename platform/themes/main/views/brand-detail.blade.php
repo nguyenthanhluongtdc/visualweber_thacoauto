@@ -39,5 +39,5 @@
         </ul>
     </div>
 </section>
-{!! Theme::partial('brands/filter') !!}
-{!! Theme::partial('brands/content') !!}
+{!! Theme::partial('brands/filter',['slug'=>$slug ?? '']) !!}
+{!! Theme::partial('brands/content',['slug'=>$slug ?? '']) !!}

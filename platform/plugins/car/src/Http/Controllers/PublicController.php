@@ -47,7 +47,7 @@ class PublicController extends BaseController
 
         do_action(BASE_ACTION_PUBLIC_RENDER_SINGLE, BRAND_MODULE_SCREEN_NAME, $data);
 
-        return \Theme::scope('brand-detail', compact('data'))->render();
+        return \Theme::scope('brand-detail', compact('data','slug'))->render();
     }
     public function getCarCategoryBySlug($slug, SlugInterface $slugRepository)
     {

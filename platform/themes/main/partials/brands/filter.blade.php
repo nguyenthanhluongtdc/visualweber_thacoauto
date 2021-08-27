@@ -7,9 +7,12 @@
             <li class="car-model__item {{ request('car_line', '') == '' ? 'active' : ''  }}">
                 <span>{{ __('Tất cả') }}</span>
             </li>
-            @foreach (get_car_vehicles() ?? collect() as $item)
+            @foreach (get_vehicles($slug ? $slug->key : null) ?? collect() as $item)
                 <li class="car-model__item" {{ request('car_line', '') == $item->id ? 'active' : ''  }}>
-                    <span class="text-uppercase">{{ $item->name }}</span>
+                    <a href="{{route('public.brand.index',[
+                        'slug' => $slug->key,
+                        'vehicle'=>$item->slug
+                    ])}}" class="text-uppercase">{{ $item->name }}</a>
                 </li>
             @endforeach
         </ul>
@@ -25,9 +28,12 @@
                     <li class="car-model__item {{ request('car_line', '') == '' ? 'active' : ''  }}">
                         <span>{{ __('Tất cả') }}</span>
                     </li>
-                    @foreach (get_car_vehicles() ?? collect() as $item)
+                    @foreach (get_vehicles($slug ? $slug->key : null) ?? collect() as $item)
                         <li class="car-model__item" {{ request('car_line', '') == $item->id ? 'active' : ''  }}>
-                            <span class="text-uppercase">{{ $item->name }}</span>
+                            <a href="{{route('public.brand.index',[
+                                'slug' => $slug->key,
+                                'vehicle'=>$item->slug
+                            ])}}" class="text-uppercase">{{ $item->name }}</a>
                         </li>
                     @endforeach
                 </ul>

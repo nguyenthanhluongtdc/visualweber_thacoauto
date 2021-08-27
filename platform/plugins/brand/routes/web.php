@@ -17,9 +17,9 @@ Route::group(['namespace' => 'Platform\Brand\Http\Controllers', 'middleware' => 
 });
 
 Route::group(['namespace' => 'Platform\Car\Http\Controllers', 'middleware' => ['web']], function () {
-    Route::group(apply_filters(BASE_FILTER_GROUP_PUBLIC_ROUTE, []), function () {
+    Route::group(apply_filters(BASE_FILTER_GROUP_PUBLIC_ROUTE, ['as'=>'public.']), function () {
         Route::get(\SlugHelper::getPrefix(Service::class, 'brands') . '/{slug}', [
-            'uses' => 'PublicController@getBrandBySlug',
-        ]);
+            'uses' => 'PublicController@getBrandBySlug'
+        ])->name('brand.index');
     });
 });

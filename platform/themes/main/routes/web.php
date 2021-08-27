@@ -6,7 +6,7 @@ Route::domain('danang.thacoauto.dev.gistensal.com')->group(function () {
         'middleware' => ['web', InitializeTenancyByDomain::class]
     ], static function () {
         #region sub domain
-        Route::get('/', 'RippleController@getIndex')->name('public.index');
+        // Route::get('/', 'RippleController@getIndex')->name('public.index');
         #endregion
     });
 });
@@ -18,7 +18,7 @@ Route::domain('binhduong.thacoauto.dev.gistensal.com')->group(function () {
         'middleware' => ['web', InitializeTenancyByDomain::class]
     ], static function () {
         #region sub domain
-        Route::get('/', 'RippleController@getIndex')->name('public.index');
+        // Route::get('/', 'RippleController@getIndex')->name('public.index');
         #endregion
     });
 });

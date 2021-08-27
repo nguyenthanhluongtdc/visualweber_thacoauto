@@ -33,6 +33,7 @@ class Car extends BaseModel
         'image',
         'brochure',
         'status',
+        'brand_id'
     ];
 
     /**
@@ -44,5 +45,11 @@ class Car extends BaseModel
 
     public function parent(){
         return $this->belongsTo(\Platform\Car\Models\Car::class,'parent_id');
+    }
+    public function vehicle(){
+        return $this->belongsTo(\Platform\Vehicle\Models\Vehicle::class,'vehicle_id');
+    }
+    public function brand(){
+        return $this->belongsTo(\Platform\Brand\Models\Brand::class,'brand_id');
     }
 }

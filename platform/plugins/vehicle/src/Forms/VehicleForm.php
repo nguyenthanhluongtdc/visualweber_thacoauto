@@ -53,7 +53,7 @@ class VehicleForm extends FormAbstract
             ->add('brands[]', 'categoryMulti', [
                 'label'      => trans('Brands'),
                 'label_attr' => ['class' => 'control-label'],
-                'choices'    => \Platform\Brand\Models\Brand::all(),
+                'choices'    => get_brands(),
                 'value'      => old('brands', $brands),
             ])
             ->add('image', 'mediaImage', [

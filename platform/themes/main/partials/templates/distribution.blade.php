@@ -4,6 +4,7 @@
             'popup_info' => [
                 'name' => has_field($item, 'ten_popup_he_thong_phan_phoi') ? get_field($item, 'ten_popup_he_thong_phan_phoi') : '',
                 'content' => has_field($item, 'mo_ta_he_thong_phan_phoi') ? get_field($item, 'mo_ta_he_thong_phan_phoi') : '',
+                'seemore' => $item->url
             ],
             'location' => has_field($item, 'lat_lng_he_thong_phan_phoi') ? get_field($item, 'lat_lng_he_thong_phan_phoi') : ''
         ]

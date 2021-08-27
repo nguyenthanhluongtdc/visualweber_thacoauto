@@ -4,17 +4,11 @@
             <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 fontmb-large">{{ __("Công ty tỉnh thành") }}</h1>
             <div data-aos="fade-left" data-aos-duration="1500" class="description desktop font20 mt-20">{!! $page->content !!}</div>
             <div data-aos="zoom-in-up" data-aos-duration="2000" class="select-list mt-40 mb-40">
-                @php
-                    $citys = get_cities();
-                    foreach($citys as $key => $value) {
-                        $cityIdFirst = $key;
-                    }
-                @endphp
                 <form action="" id="distribution-system-form">
                     @csrf
                     <select class="ui search selection dropdown city w-100" name="city_id" id="city_id">
                         <option value="">{{ __("Tỉnh/Thành phố") }}</option>
-                        @foreach ($citys as $key => $item)
+                        @foreach (get_cities() as $key => $item)
                             <option value="{{ $key }}" {{ !empty($_GET['city']) && $_GET['city'] == $key ? 'selected' : '' }}>{{ $item }}</option>
                         @endforeach
                     </select>
@@ -261,7 +255,8 @@
 
 <script>
     window.__distribution = {
-        ajax: "{{ Language::getLocalizedURL(Language::getCurrentLocale(), route('public.ajax.distribution-system')) }}"
+        ajax: "{{ Language::getLocalizedURL(Language::getCurrentLocale(), route('public.ajax.distribution-system')) }}",
+        readmore: "{!! __('Readmore') !!}"
     }
 </script>
 <style>

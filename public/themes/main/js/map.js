@@ -206,7 +206,7 @@ const Distribution = {
                                 + popupDetailWrap +
                                 `</div>
                                 <div class="branch-footer">
-                                    <a href="#"><button>{!! __('Readmore') !!}</button></a>
+                                    <a href="#"><button>${window.__distribution ? window.__distribution.readmore : ''}</button></a>
                                 </div>
                             </div>`
         

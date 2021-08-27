@@ -247,6 +247,8 @@ class ThacoController extends PublicController
         //     return view("theme.main::views.components.result-search", compact('data'))->render();
         // }
 
+        //dd('sdf');
+
         $query = $request->input('keyword');
 
         if (!$query) {
@@ -286,7 +288,7 @@ class ThacoController extends PublicController
                 return "";
             }
 
-            $posts = $postRepository->getSearch($query);
+            $posts = $postRepository->getSearch($query, 0, 5);
             return view("theme.main::views.components.result-search", compact('posts'))->render();
         }
     }

@@ -24,7 +24,7 @@
                 </div>
             </div>
 
-            <div class="car-selection-content__right  col-sm-12 col-md-12">
+            <div class="car-selection-content__right d-flex flex-column col-sm-12 col-md-12">
                 <div class="car-version">
                     <div id="car-version-select" class="car-version__select font15 font-pri">
                         @if($car->childrents)
@@ -52,7 +52,7 @@
                     </ul>
                 @endif
                 <div class="gray-line"></div>
-                <div class="option__car">
+                <div class="option__car flex-grow-1">
                     {!! Theme::partial('templates.car-selection.options', ['car' => $car]) !!}
                 </div>
                 <a class="select-button font18 font-pri fontmb-small d-inline-block"  type="button" href="">Tiếp theo</a>

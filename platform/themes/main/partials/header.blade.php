@@ -94,7 +94,7 @@
               <a class="close" href="#close"></a>
               <div class="search-main">
                 <div class="search-inner">
-                  <form action="/search">
+                  <form action="{{route('public.search')}}">
                     <input class="font17" type="text" id="inputSearch" name="keyword" placeholder="">
                     <span class="search-info font16">{{__('Hit enter to search or ESC to close')}}</span>
                   </form>

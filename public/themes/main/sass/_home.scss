@@ -1172,7 +1172,7 @@
   .shareholder-home-top {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
 
     //mobile
     @media (max-width: 1080px) {
@@ -1187,9 +1187,8 @@
 
     h2 {
       text-transform: uppercase;
-      @media (max-width: 1080px) {
-        margin-bottom: 0;
-      }
+      line-height: inherit;
+      margin-bottom: 0;
     }
     .menu-tab-right {
       display: flex;

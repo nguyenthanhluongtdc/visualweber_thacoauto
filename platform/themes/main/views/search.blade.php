@@ -163,3 +163,7 @@ Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
         </div>
     </form>
 </div>
+
+<script>
+    window.URL_SEARCH = "{{route('public.api.search')}}";
+</script>

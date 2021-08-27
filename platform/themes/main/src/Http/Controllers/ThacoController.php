@@ -247,6 +247,8 @@ class ThacoController extends PublicController
         //     return view("theme.main::views.components.result-search", compact('data'))->render();
         // }
 
+        //dd('sdf');
+
         $query = $request->input('keyword');
 
         if (!$query) {

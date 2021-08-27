@@ -54,7 +54,7 @@
         {{-- <div class="comment-post">
             <div class="top-comment">
                 <div class="left">
-                    <img src="{{ Theme::asset()->url('images/media/avatar.png') }}" alt="">
+                    <img loading="lazy" src="{{ Theme::asset()->url('images/media/avatar.png') }}" alt="">
                 </div>
                 <div class="right font18 font-pri">
                     Vui lòng điền <span class="font-mi-bold">Email</span> trước khi bình luận
@@ -63,7 +63,7 @@
             <div class="list-comment">
                 <div class="item-comment">
                     <div class="left">
-                        <img src="{{ Theme::asset()->url('images/media/avatar.png') }}" alt="">
+                        <img loading="lazy" src="{{ Theme::asset()->url('images/media/avatar.png') }}" alt="">
                     </div>
                     <div class="right font20 font-pri">
                         <div class="name-wrap">
@@ -79,7 +79,7 @@
                 </div>
                 <div class="item-comment">
                     <div class="left">
-                        <img src="{{ Theme::asset()->url('images/media/avatar.png') }}" alt="">
+                        <img loading="lazy" src="{{ Theme::asset()->url('images/media/avatar.png') }}" alt="">
                     </div>
                     <div class="right font20 font-pri">
                         <div class="name-wrap">
@@ -109,7 +109,7 @@
                     <div class="post-relate-item">
                         <div class="post-thumbnail">
                             <a href="{{ $relatedItem->url }}" class="post__overlay">
-                                <img src="{{ RvMedia::getImageUrl($relatedItem->image, 'post-related') }}" alt="{{ $relatedItem->name }}">
+                                <img loading="lazy" src="{{ RvMedia::getImageUrl($relatedItem->image, 'post-related') }}" alt="{{ $relatedItem->name }}">
                             </a>
                         </div>
                         <p class="city-day font-pri font15">

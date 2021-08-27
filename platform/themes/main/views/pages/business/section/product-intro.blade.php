@@ -3,7 +3,7 @@
         <div class="product-intro">
             <div class="product-intro--left">
                 @if(has_field($page, 'tittle_product_intro'))
-                <h2 class="product-intro--left__title font-mi-bold font40 fontmb-middle"> 
+                <h2 class="product-intro--left__title font-mi-bold font40 fontmb-middle">
                     {!! has_field($page,
                     'tittle_product_intro') !!}  </h2>
                 @endif
@@ -11,10 +11,10 @@
                 <div class="product-intro--left__content font-pri font20 fontmb-small">
                     <p>
                         {!! has_field($page,
-                            'desc_product_intro') !!}  
+                            'desc_product_intro') !!}
                     </p>
                 </div>
-               
+
                 @endif
                 <a href="#" class="product-intro--left__button font-pri font18 fontmb-small">{{ __("Readmore") }}</a>
             </div>
@@ -25,7 +25,7 @@
                         @foreach(has_field($page, 'repeater_slide_product_intro') as $item)
                         <div class="swiper-slide">
                             <div class="image-frame">
-                                <img src="{{get_image_url(has_sub_field($item,'image_slide_product_intro'))}}" alt="">
+                                <img loading="lazy" src="{{get_image_url(has_sub_field($item,'image_slide_product_intro'))}}" alt="">
                                 <div class="image-frame__overlay">
                                     <h3 class="image-frame__title font40 fontmb-middle font-mi-bold text-uppercase">
                                         {!! has_sub_field($item, 'title_slide_product_intro') ? has_sub_field($item, 'title_slide_product_intro') : '' !!}
@@ -37,7 +37,7 @@
                         @endif
                         {{-- <div class="swiper-slide">
                             <div class="image-frame">
-                                <img src="{{Theme::asset()->url('images/business/product-intro-slide-2.jpg')}}" alt="">
+                                <img loading="lazy" src="{{Theme::asset()->url('images/business/product-intro-slide-2.jpg')}}" alt="">
                                 <div class="image-frame__overlay">
 
                                     <h3 class="image-frame__title font40 font-mi-bold fontmb-middle">
@@ -48,7 +48,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="image-frame">
-                                <img src="{{Theme::asset()->url('images/business/product-intro-slide-1.jpg')}}" alt="">
+                                <img loading="lazy" src="{{Theme::asset()->url('images/business/product-intro-slide-1.jpg')}}" alt="">
                                 <div class="image-frame__overlay">
                                     <h3 class="image-frame__title font40 font-mi-bold fontmb-middle">
                                         DỊCH VỤ
@@ -58,7 +58,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="image-frame">
-                                <img src="{{Theme::asset()->url('images/business/product-intro-slide-1.jpg')}}" alt="">
+                                <img loading="lazy" src="{{Theme::asset()->url('images/business/product-intro-slide-1.jpg')}}" alt="">
                                 <div class="image-frame__overlay">
                                     <h3 class="image-frame__title font40 font-mi-bold fontmb-middle">
                                         DỊCH VỤ
@@ -66,12 +66,12 @@
                                 </div>
                             </div>
                         </div>--}}
-                    </div> 
+                    </div>
                     <div class="swiper-button-next product-intro__swiper--next">
-                        <img src="{{Theme::asset()->url('images/business/next.png')}}" alt="">
+                        <img loading="lazy" src="{{Theme::asset()->url('images/business/next.png')}}" alt="">
                     </div>
                     <div class="swiper-button-prev product-intro__swiper--prev">
-                        <img src="{{Theme::asset()->url('images/business/prev.png')}}" alt="">
+                        <img loading="lazy" src="{{Theme::asset()->url('images/business/prev.png')}}" alt="">
                     </div>
                     <div class="swiper-pagination product-intro__swiper--pagination"></div>
 
@@ -81,7 +81,7 @@
         <div class="product-intro">
             <div class="product-intro--left">
                 @if(has_field($page, 'tittle_product_intro2'))
-                <h2 class="product-intro--left__title font-mi-bold font40 fontmb-middle"> 
+                <h2 class="product-intro--left__title font-mi-bold font40 fontmb-middle">
                     {!! has_field($page,
                     'tittle_product_intro2') !!}  </h2>
                 @endif
@@ -89,10 +89,10 @@
                 <div class="product-intro--left__content font-pri font20 fontmb-small">
                     <p>
                         {!! has_field($page,
-                            'desc_product_intro2') !!}  
+                            'desc_product_intro2') !!}
                     </p>
                 </div>
-               
+
                 @endif
                 <a href="#" class="product-intro--left__button font-pri font18 fontmb-small ">{{ __("Readmore") }}</a>
             </div>
@@ -103,7 +103,7 @@
                         @foreach(has_field($page, 'repeater_slide_product_intro2') as $item)
                         <div class="swiper-slide">
                             <div class="image-frame">
-                                <img src="{{get_image_url(has_sub_field($item,'image_slide_product_intro2'))}}" alt="">
+                                <img loading="lazy" src="{{get_image_url(has_sub_field($item,'image_slide_product_intro2'))}}" alt="">
                                 <div class="image-frame__overlay">
                                     <h3 class="image-frame__title font40 fontmb-middle font-mi-bold text-uppercase">
                                         {!! has_sub_field($item, 'tittle_slide_product_intro2') ? has_sub_field($item, 'tittle_slide_product_intro2') : '' !!}
@@ -113,10 +113,10 @@
                         </div>
                         @endforeach
                         @endif
-                       
+
                         {{-- <div class="swiper-slide">
                             <div class="image-frame">
-                                <img src="{{Theme::asset()->url('images/business/product-intro-slide-1.jpg')}}" alt="">
+                                <img loading="lazy" src="{{Theme::asset()->url('images/business/product-intro-slide-1.jpg')}}" alt="">
                                 <div class="image-frame__overlay">
                                     <h3 class="image-frame__title font40 font-mi-bold fontmb-middle">
                                         DỊCH VỤ
@@ -126,7 +126,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="image-frame">
-                                <img src="{{Theme::asset()->url('images/business/product-intro-slide-3.jpg')}}" alt="">
+                                <img loading="lazy" src="{{Theme::asset()->url('images/business/product-intro-slide-3.jpg')}}" alt="">
                                 <div class="image-frame__overlay">
                                     <h3 class="image-frame__title font40 font-mi-bold fontmb-middle">
                                         DỊCH VỤ
@@ -136,7 +136,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="image-frame">
-                                <img src="{{Theme::asset()->url('images/business/product-intro-slide-1.jpg')}}" alt="">
+                                <img loading="lazy" src="{{Theme::asset()->url('images/business/product-intro-slide-1.jpg')}}" alt="">
                                 <div class="image-frame__overlay">
                                     <h3 class="image-frame__title font40 font-mi-bold fontmb-middle">
                                         DỊCH VỤ
@@ -146,10 +146,10 @@
                         </div> --}}
                     </div>
                     <div class="swiper-button-next product-intro__swiper--next">
-                        <img src="{{Theme::asset()->url('images/business/next.png')}}" alt="">
+                        <img loading="lazy" src="{{Theme::asset()->url('images/business/next.png')}}" alt="">
                     </div>
                     <div class="swiper-button-prev product-intro__swiper--prev">
-                        <img src="{{Theme::asset()->url('images/business/prev.png')}}" alt="">
+                        <img loading="lazy" src="{{Theme::asset()->url('images/business/prev.png')}}" alt="">
                     </div>
                     <div class="swiper-pagination product-intro__swiper--pagination"></div>
                 </div>
@@ -158,7 +158,7 @@
         <div class="product-intro">
             <div class="product-intro--left">
                 @if(has_field($page, 'tittle_product_intro3'))
-                <h2 class="product-intro--left__title font-mi-bold font40 fontmb-middle"> 
+                <h2 class="product-intro--left__title font-mi-bold font40 fontmb-middle">
                     {!! has_field($page,
                     'tittle_product_intro3') !!}  </h2>
                 @endif
@@ -166,17 +166,17 @@
                 <div class="product-intro--left__content font-pri font20 fontmb-small">
                     <p>
                         {!! has_field($page,
-                            'desc_product_intro3') !!}  
+                            'desc_product_intro3') !!}
                     </p>
                 </div>
-                
+
                 @endif
                 <a href="#" class="product-intro--left__button font-pri font18 fontmb-small">{{ __("Readmore") }}</a>
             </div>
             <div class="product-intro--right">
                 <div class="product-intro__image">
                     @if(has_field($page, 'img_product_intro3'))
-                    <img src="{{Storage::disk('public')->exists(get_field($page,'img_product_intro3')) ? get_image_url(get_field($page,'img_product_intro3')) : RvMedia::getDefaultImage()}}" alt="">
+                    <img loading="lazy" src="{{Storage::disk('public')->exists(get_field($page,'img_product_intro3')) ? get_image_url(get_field($page,'img_product_intro3')) : RvMedia::getDefaultImage()}}" alt="">
                     @endif
                 </div>
             </div>

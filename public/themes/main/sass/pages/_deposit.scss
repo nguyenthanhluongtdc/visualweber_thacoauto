@@ -79,14 +79,7 @@
       }
   }
 }
-.deposit-wrapper{
-  h2{
-  
-  }
-  p{
-   
-  }
-}
+
 .deposit {
   &__form {
     display: grid;
@@ -172,9 +165,7 @@
     }
 
     .custom-control {
-      label{
-       
-      }
+  
       .custom-control-label {
         margin-left: 0.5rem;
         line-height: 1.5;
@@ -234,10 +225,6 @@
     }
     &-total {
       padding: 2rem;
-      
-      h4{
-        
-      }
     }
 
     .text-danger {

@@ -9,12 +9,12 @@
             display: flex;
             flex-wrap: wrap;
             
-            // height: 215px;
+          
             .item{
                 height: 190px;
                 position: relative;
                 .text{
-                    // background-color: aqua;
+                   
                     height: 40%;
                     position: absolute;
                     bottom: 0;
@@ -90,7 +90,7 @@
                     height: 190px;
                     position: relative;
                     .text{
-                        // background-color: aqua;
+                        
                         height: 40%;
                         position: absolute;
                         bottom: 0;
@@ -140,12 +140,7 @@
         display: block;       
     
     .mechandical-overview {
-        &__title{
-           
-        }
-        &__desc{
-           
-        }
+       
 
         &__boxfield {
            

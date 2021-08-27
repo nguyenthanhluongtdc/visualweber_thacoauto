@@ -22,21 +22,21 @@
                 <h2 class="font18 MyriadPro-BoldCond text-uppercase mb-3 mt-4">Chương trình khuyến mãi</h2>
                 <div class="promotion__list">
                     <div class="promotion__item">
-                        <img src="{{ Theme::asset()->url('images/promotion/1.png') }}" width="160" height="117" class="img-fluid" />
+                        <img loading="lazy" src="{{ Theme::asset()->url('images/promotion/1.png') }}" width="160" height="117" class="img-fluid" />
                         <div class="custom-control mt-2 span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
                             <input type="checkbox" class="custom-control-input" id="customControlInline1">
                             <label class="custom-control-label" for="customControlInline1">Lorem ipsum</label>
                         </div>
                     </div>
                     <div class="promotion__item">
-                        <img src="{{ Theme::asset()->url('images/promotion/2.png') }}" width="160" height="117" class="img-fluid" />
+                        <img loading="lazy" src="{{ Theme::asset()->url('images/promotion/2.png') }}" width="160" height="117" class="img-fluid" />
                         <div class="custom-control mt-2 span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
                             <input type="checkbox" class="custom-control-input" id="customControlInline2">
                             <label class="custom-control-label" for="customControlInline2">Lorem ipsum</label>
                         </div>
                     </div>
                     <div class="promotion__item">
-                        <img src="{{ Theme::asset()->url('images/promotion/3.png') }}" width="160" height="117" class="img-fluid" />
+                        <img loading="lazy" src="{{ Theme::asset()->url('images/promotion/3.png') }}" width="160" height="117" class="img-fluid" />
                         <div class="custom-control mt-2 span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
                             <input type="checkbox" class="custom-control-input" id="customControlInline3">
                             <label class="custom-control-label" for="customControlInline3">Lorem ipsum</label>
@@ -182,7 +182,7 @@
         <div class="col-sm-12 col-md-4 mb-4">
             <div class="deposit__info">
                 <div class="deposit__info-imagereview">
-                    <img src="{{ Theme::asset()->url('images/car.png') }}" width="376" height="280" class="img-fluid" />
+                    <img loading="lazy" src="{{ Theme::asset()->url('images/car.png') }}" width="376" height="280" class="img-fluid" />
                 </div>
                 <div class="deposit__detail MyriadPro-Regular font15" id="accordion">
                     <div class="card">

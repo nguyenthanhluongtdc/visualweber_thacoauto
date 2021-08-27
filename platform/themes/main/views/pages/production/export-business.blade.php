@@ -8,12 +8,12 @@
             </div>
             <div class="export-business__image">
                 <div class="frame">
-                    <img src="{{Theme::asset()->url('images/production/business-1.jpg')}}" alt="">
+                    <img loading="lazy" src="{{Theme::asset()->url('images/production/business-1.jpg')}}" alt="">
                 </div>
                 <div class="frame">
-                    <img src="{{Theme::asset()->url('images/production/business-2.jpg')}}" alt="">
+                    <img loading="lazy" src="{{Theme::asset()->url('images/production/business-2.jpg')}}" alt="">
                 </div>
-                
+
             </div>
         </div>
     </div>

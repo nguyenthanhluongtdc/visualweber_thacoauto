@@ -19,7 +19,7 @@
                     </form>
                 </div>
                 <div data-aos="zoom-in" data-aos-duration="2500" class="branch-wrap">
-                    <img class="branch-background-image" src="{{Theme::asset()->url('images/distribution/background.jpg')}}" alt="">
+                    <img loading="lazy" class="branch-background-image" src="{{Theme::asset()->url('images/distribution/background.jpg')}}" alt="">
                     <div class="branch-background-blur"></div>
                     <div class="left">
                         <div class="branch-overflow">
@@ -29,39 +29,16 @@
                                 <div class="logo-wrap mb-20">
                                     <div class="logo-wrap__left">
                                         <div class="logo-item">
-                                            <img src="{{Theme::asset()->url('images/distribution/foton.png')}}" alt="">
+                                            <img loading="lazy" src="{{Theme::asset()->url('images/distribution/foton.png')}}" alt="">
                                         </div>
                                         <div class="logo-item">
-                                            <img src="{{Theme::asset()->url('images/distribution/fuso.png')}}" alt="">
+                                            <img loading="lazy" src="{{Theme::asset()->url('images/distribution/fuso.png')}}" alt="">
                                         </div>
                                         <div class="logo-item">
-                                            <img src="{{Theme::asset()->url('images/distribution/frontier.png')}}" alt="">
+                                            <img loading="lazy" src="{{Theme::asset()->url('images/distribution/frontier.png')}}" alt="">
                                         </div>
                                         <div class="logo-item">
-                                            <img src="{{Theme::asset()->url('images/distribution/thacobus.png')}}" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="logo-wrap__right">
-                                        <a href="/he-thong-phan-phoi-chi-tiet">Xem chi tiết <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="branch-item mb-20">
-                                <p class="branch-name font30 mb-20">Chi Nhánh An Lạc - Công Ty CP Ô Tô Trường Hải</p>
-                                <p class="branch-address font20 mb-20">36C11, QL1A, Tân Kiên, Bình Chánh, Thành phố Hồ Chí Minh 700000</p>
-                                <div class="logo-wrap mb-20">
-                                    <div class="logo-wrap__left">
-                                        <div class="logo-item">
-                                            <img src="{{Theme::asset()->url('images/distribution/foton.png')}}" alt="">
-                                        </div>
-                                        <div class="logo-item">
-                                            <img src="{{Theme::asset()->url('images/distribution/fuso.png')}}" alt="">
-                                        </div>
-                                        <div class="logo-item">
-                                            <img src="{{Theme::asset()->url('images/distribution/frontier.png')}}" alt="">
-                                        </div>
-                                        <div class="logo-item">
-                                            <img src="{{Theme::asset()->url('images/distribution/thacobus.png')}}" alt="">
+                                            <img loading="lazy" src="{{Theme::asset()->url('images/distribution/thacobus.png')}}" alt="">
                                         </div>
                                     </div>
                                     <div class="logo-wrap__right">
@@ -75,16 +52,16 @@
                                 <div class="logo-wrap mb-20">
                                     <div class="logo-wrap__left">
                                         <div class="logo-item">
-                                            <img src="{{Theme::asset()->url('images/distribution/foton.png')}}" alt="">
+                                            <img loading="lazy" src="{{Theme::asset()->url('images/distribution/foton.png')}}" alt="">
                                         </div>
                                         <div class="logo-item">
-                                            <img src="{{Theme::asset()->url('images/distribution/fuso.png')}}" alt="">
+                                            <img loading="lazy" src="{{Theme::asset()->url('images/distribution/fuso.png')}}" alt="">
                                         </div>
                                         <div class="logo-item">
-                                            <img src="{{Theme::asset()->url('images/distribution/frontier.png')}}" alt="">
+                                            <img loading="lazy" src="{{Theme::asset()->url('images/distribution/frontier.png')}}" alt="">
                                         </div>
                                         <div class="logo-item">
-                                            <img src="{{Theme::asset()->url('images/distribution/thacobus.png')}}" alt="">
+                                            <img loading="lazy" src="{{Theme::asset()->url('images/distribution/thacobus.png')}}" alt="">
                                         </div>
                                     </div>
                                     <div class="logo-wrap__right">
@@ -98,16 +75,39 @@
                                 <div class="logo-wrap mb-20">
                                     <div class="logo-wrap__left">
                                         <div class="logo-item">
-                                            <img src="{{Theme::asset()->url('images/distribution/foton.png')}}" alt="">
+                                            <img loading="lazy" src="{{Theme::asset()->url('images/distribution/foton.png')}}" alt="">
                                         </div>
                                         <div class="logo-item">
-                                            <img src="{{Theme::asset()->url('images/distribution/fuso.png')}}" alt="">
+                                            <img loading="lazy" src="{{Theme::asset()->url('images/distribution/fuso.png')}}" alt="">
                                         </div>
                                         <div class="logo-item">
-                                            <img src="{{Theme::asset()->url('images/distribution/frontier.png')}}" alt="">
+                                            <img loading="lazy" src="{{Theme::asset()->url('images/distribution/frontier.png')}}" alt="">
                                         </div>
                                         <div class="logo-item">
-                                            <img src="{{Theme::asset()->url('images/distribution/thacobus.png')}}" alt="">
+                                            <img loading="lazy" src="{{Theme::asset()->url('images/distribution/thacobus.png')}}" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="logo-wrap__right">
+                                        <a href="/he-thong-phan-phoi-chi-tiet">Xem chi tiết <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="branch-item mb-20">
+                                <p class="branch-name font30 mb-20">Chi Nhánh An Lạc - Công Ty CP Ô Tô Trường Hải</p>
+                                <p class="branch-address font20 mb-20">36C11, QL1A, Tân Kiên, Bình Chánh, Thành phố Hồ Chí Minh 700000</p>
+                                <div class="logo-wrap mb-20">
+                                    <div class="logo-wrap__left">
+                                        <div class="logo-item">
+                                            <img loading="lazy" src="{{Theme::asset()->url('images/distribution/foton.png')}}" alt="">
+                                        </div>
+                                        <div class="logo-item">
+                                            <img loading="lazy" src="{{Theme::asset()->url('images/distribution/fuso.png')}}" alt="">
+                                        </div>
+                                        <div class="logo-item">
+                                            <img loading="lazy" src="{{Theme::asset()->url('images/distribution/frontier.png')}}" alt="">
+                                        </div>
+                                        <div class="logo-item">
+                                            <img loading="lazy" src="{{Theme::asset()->url('images/distribution/thacobus.png')}}" alt="">
                                         </div>
                                     </div>
                                     <div class="logo-wrap__right">
@@ -118,7 +118,7 @@
                         </div>
                     </div>
                     <div class="right">
-                        <img src="{{Theme::asset()->url('images/distribution/mapitem.png')}}" alt="">
+                        <img loading="lazy" src="{{Theme::asset()->url('images/distribution/mapitem.png')}}" alt="">
                     </div>
                 </div>
             </div>

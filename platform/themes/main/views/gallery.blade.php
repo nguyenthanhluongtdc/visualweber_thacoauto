@@ -12,7 +12,7 @@
                         <div class="photo-item">
                             <div class="thumb">
                                 <a href="{{ RvMedia::getImageUrl(Arr::get($image, 'img')) }}">
-                                    <img src="{{ RvMedia::getImageUrl(Arr::get($image, 'img')) }}" alt="{{ clean(Arr::get($image, 'description')) }}">
+                                    <img loading="lazy" src="{{ RvMedia::getImageUrl(Arr::get($image, 'img')) }}" alt="{{ clean(Arr::get($image, 'description')) }}">
                                 </a>
                             </div>
                         </div>

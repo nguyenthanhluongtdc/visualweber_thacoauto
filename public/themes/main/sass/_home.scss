@@ -100,10 +100,14 @@
   height: 120px;
   
   #hours {
+    appearance: none;
+    -webkit-appearance: none;
+    opacity: 1;
+    -moz-appearance: none;
     position: absolute;
     top: 0;
     height: 180%;
-    left: 20%;
+    left: 16%;
     z-index: 2;
     display: block;
     width: 5px;
@@ -111,7 +115,9 @@
     font-size: 20px;
     overflow-y: auto;
     overflow-x: hidden;
-    
+    @media (max-width: 1680px) {left: 17%;}
+    @media (max-width: 1440px) {left: 20%;}
+    @media (max-width: 1300px) {left: 20%;}
     .logo-frame {
       width: 1px;
       height: 42px;
@@ -573,20 +579,20 @@
           }
           align-items: inherit;
           #hours {
-            width: 25%;
+            width: 20%;
             height: 100%;
-            left: -7%;
-            @media (max-width: 786px) {
-              left: -5%;
-            }
+            left: 0;
+            // @media (max-width: 786px) {
+            //   left: -5%;
+            // }
             @media (max-width: 660px) {
-              left: -1.5%;
+              left: 4%;
             }
-            @media (max-width: 420px) {
-              left: 3%;
+            @media (max-width: 480px) {
+              left: 7%;
             }
             @media (max-width: 350px) {
-              left: 6.5%;
+              left: 11%;
             }
             @include maxWidth(1080) {
               &::-webkit-scrollbar {

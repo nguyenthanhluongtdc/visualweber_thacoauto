@@ -220,27 +220,9 @@
         @include maxWidth(991) {
           line-height: 30px;
         }
-        // margin-top: 7px;
-        //   @media (max-width: 1720px) {
-        //     margin-top: 8px;
-        //   }
-        //   @media (max-width: 1680px) {
-        //     margin-top: 10px;
-        //   }
-        //   @media (max-width: 1440px) {
-        //     margin-top: 11px;
-        //   }
-        //   @media (max-width: 1300px) {
-        //     margin-top: 12px;
-        //   }
+        
       }
       .post__tags {
-        // margin-left: 20px;
-        // display: flex;
-        // flex-wrap: wrap;
-        // align-items: flex-end;
-        // flex: 1;
-
         display: block;
         padding: 8px 1rem;
         max-height: 34px;
@@ -250,7 +232,7 @@
         border-radius: 2px;
 
         margin-right: 0.75rem;
-    margin-bottom: .75rem;
+        margin-bottom: .75rem;
 
         &-list {
           flex: 1;

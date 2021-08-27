@@ -11,7 +11,7 @@
                     <div class="media-top-item">
                         <div class="item-image">
                             <a href="{{$post->url}}" >
-                                <img src="{{ Storage::disk('public')->exists($post->image) ? get_object_image($post->image, 'post-large') : RvMedia::getDefaultImage()}}" alt="">
+                                <img loading="lazy" src="{{ Storage::disk('public')->exists($post->image) ? get_object_image($post->image, 'post-large') : RvMedia::getDefaultImage()}}" alt="">
                             </a>
                         </div>
                         <div class="item-content flex-fill">
@@ -41,7 +41,7 @@
                             <div class="post-thumbnail-wrap">
                                 <div class="post-thumbnail fontmb-medium">
                                     <a href="{{$post->url}}">
-                                        <img src="{{ Storage::disk('public')->exists($post->image) ? get_object_image($post->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Tin tức">
+                                        <img loading="lazy" src="{{ Storage::disk('public')->exists($post->image) ? get_object_image($post->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Tin tức">
                                     </a>
                                 </div>
                             </div>
@@ -71,7 +71,7 @@
                             <div class="post-new-item">
                                 <div class="post-thumbnail-wrap">
                                     <div class="post-thumbnail">
-                                        <a href="{{$post->url}}"><img src="{{ Storage::disk('public')->exists($post->image) ? get_object_image($post->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="{{$post->name}}"></a>
+                                        <a href="{{$post->url}}"><img loading="lazy" src="{{ Storage::disk('public')->exists($post->image) ? get_object_image($post->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="{{$post->name}}"></a>
                                     </div>
                                 </div>
                                 <h5 class="title font-mi-bold font20 fontmb-middle">
@@ -85,7 +85,7 @@
                         @endif
                     </ul>
                     <div class="loading d-none">
-                        <img src="{{Theme::asset()->url('images/media/loading.gif')}}" alt="">
+                        <img loading="lazy" src="{{Theme::asset()->url('images/media/loading.gif')}}" alt="">
                     </div>
                     <div class="view-all-news font15 font-mi-bold ">
                         <a id="posts-load-more" data-category="{{ $category->id ?? 15 }}" href="javascript:;">{{ __("Read more") }}<span><i class="fas fa-arrow-right font15"></i></span></a>

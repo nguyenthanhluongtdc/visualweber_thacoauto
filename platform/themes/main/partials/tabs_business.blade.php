@@ -32,7 +32,7 @@
                 $manufacturing = get_manufacturing_by_id($item->reference_id);
             @endphp
             <div id="{{Str::Slug($item->name, '_')}}" class="tabcontents">
-                <img src="{{ Storage::disk('public')->exists($manufacturing->image) ? get_image_url($manufacturing->image) : RvMedia::getDefaultImage()}}" alt=""
+                <img loading="lazy" src="{{ Storage::disk('public')->exists($manufacturing->image) ? get_image_url($manufacturing->image) : RvMedia::getDefaultImage()}}" alt=""
                     class="mb-2">
                 <div class="content-bottom p-2">
                     <h4 class="font20 mb-2 text-uppercase fontmb-middle">

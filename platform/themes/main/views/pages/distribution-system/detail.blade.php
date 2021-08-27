@@ -18,15 +18,15 @@
                         <p class="description font20">{{ has_field($data, 'mo_ta_he_thong_phan_phoi_16299906705') ? get_field($data, 'mo_ta_he_thong_phan_phoi_16299906705') : '' }}</p>
                         <ul>
                             <li>
-                                <img src="{{Theme::asset()->url('images/distribution/icon_address.png')}}" alt="">
+                                <img loading="lazy" src="{{Theme::asset()->url('images/distribution/icon_address.png')}}" alt="">
                                 <p class="font20">{{ has_field($data, 'dia_chi_he_thong_phan_phoi') ? get_field($data, 'dia_chi_he_thong_phan_phoi') : '' }}</p>
                             </li>
                             <li>
-                                <img src="{{Theme::asset()->url('images/distribution/icon_email.png')}}" alt="">
+                                <img loading="lazy" src="{{Theme::asset()->url('images/distribution/icon_email.png')}}" alt="">
                                 <p class="font20">{{ has_field($data, 'email_he_thong_phan_phoi') ? get_field($data, 'email_he_thong_phan_phoi') : '' }}</p>
                             </li>
                             <li>
-                                <img src="{{Theme::asset()->url('images/distribution/icon_phone.png')}}" alt="">
+                                <img loading="lazy" src="{{Theme::asset()->url('images/distribution/icon_phone.png')}}" alt="">
                                 <p class="font20">{{ has_field($data, 'phone_he_thong_phan_phoi') ? get_field($data, 'phone_he_thong_phan_phoi') : '' }}</p>
                             </li>
                         </ul>
@@ -35,7 +35,7 @@
                         <h3 class="title fontmb-medium font25 ">{{ __("Trụ sở chính") }}</h3>
                         <div class="img-container">
                             <div class="skewed">
-                                <img src="{{ $data->image ? get_image_url($data->image) : '' }}" alt="{{ $data->name }}">
+                                <img loading="lazy" src="{{ $data->image ? get_image_url($data->image) : '' }}" alt="{{ $data->name }}">
                             </div>
                         </div>
                     </div>
@@ -53,7 +53,7 @@
                                 @foreach ($item as $child)
                                     <li>
                                         <a class="js-showroom-showlist" href="javascript:;" data-brand-id="{{ $child->brand_id }}" data-category-id="{{ $child->category_id }}">
-                                            <img class="img-fluid" width="70" src="{{ isset($child->brand->image) && !blank($child->brand->image) ? get_image_url($child->brand->image) : '' }}" alt="{{ $child->brand->name ?? '' }}">
+                                            <img loading="lazy" class="img-fluid" width="70" src="{{ isset($child->brand->image) && !blank($child->brand->image) ? get_image_url($child->brand->image) : '' }}" alt="{{ $child->brand->name ?? '' }}">
                                         </a>
                                     </li>
                                 @endforeach
@@ -93,7 +93,7 @@
                                     <div class="left">
                                         <div class="img-container">
                                             <div class="skewed">
-                                                <img src="{{ Storage::disk('public')->exists($post->image) ? get_object_image($post->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="tin tức & sự kiện">
+                                                <img loading="lazy" src="{{ Storage::disk('public')->exists($post->image) ? get_object_image($post->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="tin tức & sự kiện">
                                             </div>
                                         </div>
                                     </div>
@@ -116,7 +116,7 @@
                                     <div class="left">
                                         <div class="img-container">
                                             <div class="skewed">
-                                                <img src="{{ Storage::disk('public')->exists($picture->image) ? get_object_image($picture->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="video & hình ảnh">
+                                                <img loading="lazy" src="{{ Storage::disk('public')->exists($picture->image) ? get_object_image($picture->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="video & hình ảnh">
                                             </div>
                                         </div>
                                     </div>

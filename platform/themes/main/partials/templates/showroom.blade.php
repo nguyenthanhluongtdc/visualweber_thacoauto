@@ -6,7 +6,7 @@
                 <div class="left">
                     <div class="img-container">
                         <div class="skewed">
-                            <img src="{{ has_field($item, "hinh_anh_showroom") ? get_image_url(get_field($item, 'hinh_anh_showroom')) : "" }}" alt="{{ $item->name }}">
+                            <img loading="lazy" src="{{ has_field($item, "hinh_anh_showroom") ? get_image_url(get_field($item, 'hinh_anh_showroom')) : "" }}" alt="{{ $item->name }}">
                         </div>
                     </div>
                 </div>
@@ -27,14 +27,14 @@
                         <a href="{{ get_field($item, 'link_dat_hen_online_showroom') }}" class="online-service-booking font20">{{ __("đặt hẹn dịch vụ online") }}</a>
                     @endif
                     <div class="logo-container">
-                        <img class="img-fluid" src="{{ has_field($item, "logo_showroom") ? get_image_url(get_field($item, 'logo_showroom')) : "" }}" alt="{{ $item->name }}">
+                        <img loading="lazy" class="img-fluid" src="{{ has_field($item, "logo_showroom") ? get_image_url(get_field($item, 'logo_showroom')) : "" }}" alt="{{ $item->name }}">
                     </div>
                     @if(has_field($item, 'danh_sach_dich_vu_show_room'))
                         <div class="category-container">
                             <ul>
                                 @foreach (get_field($item, 'danh_sach_dich_vu_show_room') as $child)
                                     <li>
-                                        <img src="{{ has_sub_field($child, 'icon') ? get_image_url(get_sub_field($child, 'icon')) : ''  }}" alt="{{ has_sub_field($child, 'icon') ? get_sub_field($child, 'icon') : ''  }}">
+                                        <img loading="lazy" src="{{ has_sub_field($child, 'icon') ? get_image_url(get_sub_field($child, 'icon')) : ''  }}" alt="{{ has_sub_field($child, 'icon') ? get_sub_field($child, 'icon') : ''  }}">
                                         <p class="font20 font-pri">{{ has_sub_field($child, 'ten_dich_vu') ? get_sub_field($child, 'ten_dich_vu') : ''  }}</p>
                                     </li>
                                 @endforeach

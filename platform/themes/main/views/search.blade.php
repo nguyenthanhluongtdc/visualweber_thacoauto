@@ -4,7 +4,7 @@
     @foreach ($posts as $post)
         <article class="post post__horizontal mb-40 clearfix">
             <div class="post__thumbnail">
-                <img src="{{ RvMedia::getImageUrl($post->image, 'medium', false, RvMedia::getDefaultImage()) }}"
+                <img loading="lazy" src="{{ RvMedia::getImageUrl($post->image, 'medium', false, RvMedia::getDefaultImage()) }}"
 alt="{{ $post->name }}"><a href="{{ $post->url }}" class="post__overlay"></a>
 </div>
 <div class="post__content-wrap">
@@ -44,8 +44,8 @@ Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
     <form action="{{route('public.search')}}" class="form-search" method="GET">
         <div class="container-remake">
             <div class="search-intro">
-                <h1 class="font-pri-bold font60 fontmb-large text-uppercase text-center mt-md-5 mt-3"> 
-                    {!! __('kết quả tìm kiếm') !!} 
+                <h1 class="font-pri-bold font60 fontmb-large text-uppercase text-center mt-md-5 mt-3">
+                    {!! __('kết quả tìm kiếm') !!}
                 </h1>
             </div>
             <div class="search-input row mt-md-5 mt-3 mb-5">
@@ -63,7 +63,7 @@ Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
                             </button>
                         </div>
                     </div>
-                    <p class="font-pri mt-2"> 
+                    <p class="font-pri mt-2">
                         @isset($comment)
                             {!! $comment !!}
                         @endisset
@@ -119,12 +119,12 @@ Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
                             data-aos-easing="ease-in-out">
                             <div class="col-lg-3 col-md-5 result-img">
                                 <a class="image h-100" href="{{$post->url}}" title="">
-                                    <img src="{{ Storage::disk('public')->exists($post['image']) ? get_image_url($post['image']) : RvMedia::getDefaultImage() }}" alt="img-detail"
+                                    <img loading="lazy" src="{{ Storage::disk('public')->exists($post['image']) ? get_image_url($post['image']) : RvMedia::getDefaultImage() }}" alt="img-detail"
                                         class="w-100 h-100 object-fit-cover">
                                 </a>
                             </div>
                             <div class="col-lg-9 col-md-7 result-content">
-                                
+
                                 <div class="content">
                                     <a href="{{$post->url}}">
                                         <h3 class="font-pri-bold font30 fontmb-middle color-gray">
@@ -142,7 +142,7 @@ Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
                                 </div>
                             </div>
                         </div>
-                        
+
                         @empty
                         <i class="fal fa-empty-set"></i>
                     @endforelse

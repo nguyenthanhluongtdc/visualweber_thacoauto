@@ -22,7 +22,7 @@
                                     <div class="year"> {{ $post->created_at->format('Y') }} </div>
                                 </div>
                                 <div class="sub-right">
-                                    <img width="" height="" src="{{Storage::disk('public')->exists($post->image) ? get_image_url($post->image) : RvMedia::getDefaultImage()}}" alt="" />
+                                    <img loading="lazy" width="" height="" src="{{Storage::disk('public')->exists($post->image) ? get_image_url($post->image) : RvMedia::getDefaultImage()}}" alt="" />
                                 </div>
                             </div>
                             <div class="content">
@@ -45,7 +45,7 @@
                                 <div class="year"> 2021 </div>
                             </div>
                             <div class="sub-right">
-                                <img width="" height="" src="{{Theme::asset()->url('images/mechandical/news.png')}}"
+                                <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/mechandical/news.png')}}"
                                     alt="" />
                             </div>
                         </div>
@@ -67,7 +67,7 @@
                                 <div class="year"> 2021 </div>
                             </div>
                             <div class="sub-right">
-                                <img width="" height="" src="{{Theme::asset()->url('images/mechandical/news.png')}}"
+                                <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/mechandical/news.png')}}"
                                     alt="" />
                             </div>
                         </div>

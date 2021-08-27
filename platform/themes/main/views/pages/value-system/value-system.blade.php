@@ -17,42 +17,42 @@
                 <h3 class="value-system__title font30 font-pri-bold font-middle">ĐỊNH HƯỚNG CHẾN LƯỢC</h3>
                 <div class="value-system__content font20 font-small font-pri">
                     Tham gia chuỗi giá trị toàn cầu sản xuất kinh doanh ô tô và linh kiện phụ tùng.
-                    <br>Sản xuất - kinh doanh đa dạng chủng loại SẢN PHẨM: xe du lịch, xe bus, xe tải và xe chuyên dụng thông qua liên kết với các thương hiệu Ô tô quốc tế & phát triển thương hiệu THACO AUTO. 
+                    <br>Sản xuất - kinh doanh đa dạng chủng loại SẢN PHẨM: xe du lịch, xe bus, xe tải và xe chuyên dụng thông qua liên kết với các thương hiệu Ô tô quốc tế & phát triển thương hiệu THACO AUTO.
                 </div>
             </div>
             <div class="section-value-system__content--right">
-                <img src="{{Theme::asset()->url('images/value-system/he-gia-tri.jpg')}}" alt="" class="value-system__image">
+                <img loading="lazy" src="{{Theme::asset()->url('images/value-system/he-gia-tri.jpg')}}" alt="" class="value-system__image">
             </div>
         </div>
         <div class="section-value-system__car-block">
             <div class="car-block">
                 <div class="car-block__parent">
-                    <img class="car-block__image_left" src="{{Theme::asset()->url('images/value-system/xe-du-lich.png')}}" alt="">
-                    <img class="car-block__image" src="{{Theme::asset()->url('images/value-system/xe-du-lich.png')}}" alt="">
+                    <img loading="lazy" class="car-block__image_left" src="{{Theme::asset()->url('images/value-system/xe-du-lich.png')}}" alt="">
+                    <img loading="lazy" class="car-block__image" src="{{Theme::asset()->url('images/value-system/xe-du-lich.png')}}" alt="">
                     <a class="car-block__name font25 font-mi-bold font-middle" href="#">XE DU LỊCH</a>
                 </div>
             </div>
             <div class="car-block">
                 <div class="car-block__parent">
-                    <img class="car-block__image_left" src="{{Theme::asset()->url('images/value-system/xe-bus.png')}}" alt="">
-                    <img class="car-block__image" src="{{Theme::asset()->url('images/value-system/xe-bus.png')}}" alt="">
+                    <img loading="lazy" class="car-block__image_left" src="{{Theme::asset()->url('images/value-system/xe-bus.png')}}" alt="">
+                    <img loading="lazy" class="car-block__image" src="{{Theme::asset()->url('images/value-system/xe-bus.png')}}" alt="">
                     <a class="car-block__name font25 font-mi-bold font-middle" href="#">XE BUS</a>
                 </div>
             </div>
             <div class="car-block">
                 <div class="car-block__parent">
-                    <img class="car-block__image_left" src="{{Theme::asset()->url('images/value-system/xe-tai.png')}}" alt="">
-                    <img class="car-block__image" src="{{Theme::asset()->url('images/value-system/xe-tai.png')}}" alt="">
+                    <img loading="lazy" class="car-block__image_left" src="{{Theme::asset()->url('images/value-system/xe-tai.png')}}" alt="">
+                    <img loading="lazy" class="car-block__image" src="{{Theme::asset()->url('images/value-system/xe-tai.png')}}" alt="">
                     <a class="car-block__name font25 font-mi-bold font-middle" href="#">XE TẢI</a>
                 </div>
             </div>
             <div class="car-block">
                 <div class="car-block__parent">
-                    <img class="car-block__image_left" src="{{Theme::asset()->url('images/value-system/xe-chuyen-dung.png')}}" alt="">
-                    <img class="car-block__image" src="{{Theme::asset()->url('images/value-system/xe-chuyen-dung.png')}}" alt="">
+                    <img loading="lazy" class="car-block__image_left" src="{{Theme::asset()->url('images/value-system/xe-chuyen-dung.png')}}" alt="">
+                    <img loading="lazy" class="car-block__image" src="{{Theme::asset()->url('images/value-system/xe-chuyen-dung.png')}}" alt="">
                     <a class="car-block__name font25 font-mi-bold font-middle" href="#">XE CHUYÊN DỤNG</a>
                 </div>
-            </div>   
+            </div>
         </div>
     </div>
 </section>

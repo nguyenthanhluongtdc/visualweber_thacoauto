@@ -15,8 +15,8 @@
     <meta name="theme-color" content="#01498b">
     <link rel="manifest" href="{{Theme::asset()->url('manifest/manifest.json')}}">
     <!-- Fonts-->
-    <link href="https://fonts.googleapis.com/css?family={{ urlencode(theme_option('primary_font', 'Roboto')) }}"
-        rel="stylesheet" type="text/css">
+    {{-- <link href="https://fonts.googleapis.com/css?family={{ urlencode(theme_option('primary_font', 'Roboto')) }}"
+        rel="stylesheet" type="text/css"> --}}
     <!-- CSS Library-->
 
     <style>

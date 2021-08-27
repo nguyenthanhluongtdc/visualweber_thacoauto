@@ -11,7 +11,7 @@
                 <h2 class="name-company font-pri-bold color-pri font32">{!! theme_option('name-company') !!}</h2>
                 <p class="address font-pri font18">
                     <span>{{__('Address')}}:</span>
-                    <span>{!! theme_option('address-company') !!} <a href="{!! theme_option('map-company') !!}" target="_blank">( {{__("Find location") }} )</a></span>
+                    <span>{!! theme_option('address-company') !!} <a href="{!! theme_option('map-company') !!}" target="_blank" `rel="noopener>( {{__("Find location") }} )</a></span>
                 </p>
                 <p class="tax-code font-pri font18">
                     <span>{{__('Tax Code')}}:</span>
@@ -25,17 +25,17 @@
                 </a>
                 <ul class="list-media">
                     <li>
-                        <a href="{{ theme_option('facebook') }}" target="_blank">
+                        <a href="{{ theme_option('facebook') }}" target="_blank" `rel="noopener>
                             <img loading="lazy" src="{{ get_image_url(theme_option('facebook_icon')) }}" alt="facebook">
                         </a>
                     </li>
                     <li>
-                        <a href="{{ theme_option('linkedin') }}" target="_blank">
+                        <a href="{{ theme_option('linkedin') }}" target="_blank" `rel="noopener>
                             <img loading="lazy" src="{{ get_image_url(theme_option('linkedin_icon')) }}" alt="in">
                         </a>
                     </li>
                     <li>
-                        <a href="{{ theme_option('youtube') }}" target="_blank">
+                        <a href="{{ theme_option('youtube') }}" target="_blank" `rel="noopener>
                             <img loading="lazy" src="{{ get_image_url(theme_option('youtube_icon')) }}" alt="youtube">
                         </a>
                     </li>
@@ -70,9 +70,9 @@
                 <div class="item list-media-mobile font-pri">
                     <p>{{__('connect with us')}}</p>
                     <ul class="list-media">
-                        <li><a href="{{ theme_option('facebook') }}" target="_blank"><img loading="lazy" src="{{ Theme::asset()->url('images/main/iconfb.png') }}" alt="facebook"></a></li>
-                        <li><a href="{{ theme_option('linkedin') }}" target="_blank"><img loading="lazy" src="{{ Theme::asset()->url('images/main/iconin.png') }}" alt="in"></a></li>
-                        <li><a href="{{ theme_option('youtube') }}" target="_blank"><img loading="lazy" src="{{ Theme::asset()->url('images/main/iconyt.png') }}" alt="youtube"></a></li>
+                        <li><a href="{{ theme_option('facebook') }}" target="_blank" `rel="noopener><img loading="lazy" src="{{ Theme::asset()->url('images/main/iconfb.png') }}" alt="facebook"></a></li>
+                        <li><a href="{{ theme_option('linkedin') }}" target="_blank" `rel="noopener><img loading="lazy" src="{{ Theme::asset()->url('images/main/iconin.png') }}" alt="in"></a></li>
+                        <li><a href="{{ theme_option('youtube') }}" target="_blank" `rel="noopener><img loading="lazy" src="{{ Theme::asset()->url('images/main/iconyt.png') }}" alt="youtube"></a></li>
                     </ul>
                     <div class="img-bct-mobile">
                         <a href="{{theme_option('link_bct')}}" title="">

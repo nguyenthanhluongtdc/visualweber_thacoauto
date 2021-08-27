@@ -256,7 +256,9 @@
   display: flex;
   flex-wrap: wrap;
   // justify-content: space-between;
+ 
   .media-top-item {
+    
     h4 {
       a {
         color: #444444;
@@ -409,6 +411,7 @@
   justify-content: space-between;
   .list-all-post {
     width: 65%;
+    
     .all-post-item {
       display: flex;
       justify-content: space-between;
@@ -479,6 +482,7 @@
   .list-post-new {
     width: 33%;
     margin-bottom: 7%;
+    
     .wrap {
       @include paddingX(40);
       background: #f3f3f3;
@@ -786,12 +790,19 @@
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;
-
+    &:hover {
+      // filter: drop-shadow(2px 3px 4px #ccc);
+      box-shadow: 0 7px 10px 1px #3333;
+      transition: box-shadow .5s;
+      cursor: pointer;
+      a {
+          color: #0F4685;
+      }
+    }
     .row__top {
       width: 100%;
       @include marginBottom(30, "+");
-      .desc {
-      }
+      
       h5.title a {
         color: #2e3a41;
       }
@@ -910,7 +921,7 @@
       }
     }
   }
-
+  
   @media (max-width: 1080px) {
     .item-newspaper {
       width: 100%;

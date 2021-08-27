@@ -6,9 +6,9 @@ $('.partner-home-carousel').owlCarousel({
     nav: true,
     navText: [
         // "<div class='nav-btn prev-slide'><i class='fal fa-chevron-left'></i></div>",
-        "<div class='nav-btn prev-slide'><img src='themes/main/images/main/left.png'></" +
+        "<div class='nav-btn prev-slide'><img src='themes/main/images/main/left.png' alt='left'></" +
         "div>",
-        "<div class='nav-btn prev-slide'><img src='themes/main/images/main/right.png'><" +
+        "<div class='nav-btn prev-slide'><img src='themes/main/images/main/right.png' alt='right'><" +
         "/div>"
     ],
     responsive: {

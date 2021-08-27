@@ -88,7 +88,7 @@
         <a href="tel:{{ theme_option('hotline-contact') }}"><img loading="lazy" src="{{ Theme::asset()->url('images/main/phone.png') }}" alt="phone"></a>
     </div>
     <div class="item-button ">
-        <button class="fb-customerchat messenger"><img loading="lazy" src="{{ Theme::asset()->url('images/main/mess.png') }}"></button>
+        <button class="fb-customerchat messenger"><img loading="lazy" src="{{ Theme::asset()->url('images/main/mess.png') }}" alt="Messenger"></button>
     </div>
 </div>
 <div class="end-web" style="background: url('{{ Theme::asset()->url('images/main/end.jpg') }}')">

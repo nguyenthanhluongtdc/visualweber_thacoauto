@@ -1,0 +1,8 @@
+{
+    "short_name": "Thaco Auto",
+    "name": "Thaco Auto",
+    "start_url": "/",
+    "background_color": "#01498b",
+    "display": "standalone",
+    "theme_color": "#01498b"
+  }

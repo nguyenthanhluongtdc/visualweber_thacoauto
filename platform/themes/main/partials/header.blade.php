@@ -12,7 +12,8 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="csrf-token" content="{{ csrf_token() }}" />
-
+    <meta name="theme-color" content="#01498b">
+    <link rel="manifest" href="{{Theme::asset()->url('manifest/manifest.json')}}">
     <!-- Fonts-->
     <link href="https://fonts.googleapis.com/css?family={{ urlencode(theme_option('primary_font', 'Roboto')) }}"
         rel="stylesheet" type="text/css">
@@ -20,7 +21,7 @@
 
     <style>
         :root {
-            --color-1st: {{ theme_option('primary_color', '#bead8e') }}
+            --color-1st: {{ theme_option('primary_color', '#01498b') }}
 
             ;
             /* --primary-font: '{{ theme_option('primary_font', 'Roboto') }}', */

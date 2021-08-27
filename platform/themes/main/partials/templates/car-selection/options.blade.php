@@ -8,7 +8,7 @@
             @endforeach
         </ul>
     @else
-        <span class="font-pri font15 w-100 text-center py-4">{{ __("chưa cập nhật") }}</span>
+        <span class="font-pri font15 w-100 text-center py-4 text-danger">{{ __("chưa cập nhật") }}</span>
     @endif
 </div>
 <div class="select-equip">
@@ -28,7 +28,7 @@
                 </div>
             </div>
         @empty
-            <span class="font-pri font15 w-100 text-center py-4">{{ __("chưa cập nhật") }}</span>
+            <span class="font-pri font15 w-100 text-center py-4 text-danger">{{ __("chưa cập nhật") }}</span>
         @endforelse
     </div>
 </div>
@@ -49,7 +49,7 @@
                 </div>
             </div>
         @empty
-            <span class="font-pri font15 w-100 text-center py-4">{{ __("chưa cập nhật") }}</span>
+            <span class="font-pri font15 w-100 text-center py-4 text-danger">{{ __("chưa cập nhật") }}</span>
         @endforelse
     </div>
 </div>

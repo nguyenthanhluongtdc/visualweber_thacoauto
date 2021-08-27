@@ -228,23 +228,23 @@
                 <div class="top-right">
                     <div class="top-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
                         <img loading="lazy" src="{{ get_image_url(get_field($page,'homepage_production_block_1_logo')) }}" alt="{{get_field($page, 'homepage_production_block_1')}}">
-                        <p class="top-right-item-title font-pri-bold font30 fontmb-small"><a href="" class="link-item-home">
+                        <p class="top-right-item-title font-pri-bold font30 fontmb-small"><a href="{{get_field($page, 'homepage_production_block_1_link')}}" class="link-item-home">
                             {!!get_field($page, 'homepage_production_block_1')!!}</a></p>
                     </div>
                     <div class="top-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
                         <img loading="lazy" src="{{ get_image_url(get_field($page,'homepage_production_block_2_logo')) }}" alt="{{get_field($page, 'homepage_production_block_2')}}">
-                        <p class="top-right-item-title font-pri-bold font30 fontmb-small"><a href="" class="link-item-home">
+                        <p class="top-right-item-title font-pri-bold font30 fontmb-small"><a href="{{get_field($page, 'homepage_production_block_2_link')}}" class="link-item-home">
                             {!!get_field($page, 'homepage_production_block_2')!!}</a></p>
                     </div>
                     <div class="top-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
                         <img loading="lazy" src="{{ get_image_url(get_field($page,'homepage_production_block_3_logo')) }}" alt="{{get_field($page, 'homepage_production_block_3')}}">
-                        <p class="top-right-item-title font-pri-bold font30 fontmb-small"><a href="" class="link-item-home">
+                        <p class="top-right-item-title font-pri-bold font30 fontmb-small"><a href="{{get_field($page, 'homepage_production_block_3_link')}}" class="link-item-home">
                             {!!get_field($page, 'homepage_production_block_3')!!}</a></p>
                     </div>
 
                     <div class="top-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
                         <img loading="lazy" src="{{ get_image_url(get_field($page,'homepage_production_block_4_logo')) }}" alt="{{get_field($page, 'homepage_production_block_4')}}">
-                        <p class="top-right-item-title font-pri-bold font30 fontmb-small"><a href="" class="link-item-home">
+                        <p class="top-right-item-title font-pri-bold font30 fontmb-small"><a href="{{get_field($page, 'homepage_production_block_4_link')}}" class="link-item-home">
                             {!!get_field($page, 'homepage_production_block_4')!!}</a></p>
                     </div>
                 </div>
@@ -261,33 +261,33 @@
                         <div class="symbol">
                             <img loading="lazy" src="{{ get_image_url(get_field($page,'homepage_business_block_1_logo')) }}" alt="{{get_field($page, 'homepage_business_block_1')}}">
                         </div>
-                        <p class="bottom-right-item-title font-pri-bold font30 fontmb-small"><a href="" class="link-item-home">{!!get_field($page, 'homepage_business_block_1')!!}</a></p>
+                        <p class="bottom-right-item-title font-pri-bold font30 fontmb-small"><a href="{{get_field($page, 'homepage_business_block_1_link')}}" class="link-item-home">{!!get_field($page, 'homepage_business_block_1')!!}</a></p>
                     </div>
                     <div class="bottom-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
                         <div class="symbol">
                             <img loading="lazy" src="{{ get_image_url(get_field($page,'homepage_business_block_2_logo')) }}" alt="{{get_field($page, 'homepage_business_block_2')}}">
                         </div>
-                        <p class="bottom-right-item-title font-pri-bold font30 fontmb-small"><a href="" class="link-item-home">{!!get_field($page, 'homepage_business_block_2')!!}
+                        <p class="bottom-right-item-title font-pri-bold font30 fontmb-small"><a href="{{get_field($page, 'homepage_business_block_2_link')}}" class="link-item-home">{!!get_field($page, 'homepage_business_block_2')!!}
                             </a></p>
                     </div>
                     <div class="bottom-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
                         <div class="symbol">
                             <img loading="lazy" src="{{ get_image_url(get_field($page,'homepage_business_block_3_logo')) }}" alt="{{get_field($page, 'homepage_business_block_3')}}">
                         </div>
-                        <p class="bottom-right-item-title font-pri-bold font30 fontmb-small"><a href="" class="link-item-home">{!!get_field($page, 'homepage_business_block_3')!!}</a></p>
+                        <p class="bottom-right-item-title font-pri-bold font30 fontmb-small"><a href="{{get_field($page, 'homepage_business_block_3_link')}}" class="link-item-home">{!!get_field($page, 'homepage_business_block_3')!!}</a></p>
                     </div>
                     <div class="bottom-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
                         <div class="symbol">
                             <img loading="lazy" src="{{ get_image_url(get_field($page,'homepage_business_block_4_logo')) }}" alt="{{get_field($page, 'homepage_business_block_4')}}">
                         </div>
-                        <p class="bottom-right-item-title font-pri-bold font30 fontmb-small"><a href="" class="link-item-home">{!!get_field($page, 'homepage_business_block_4')!!}</a></p>
+                        <p class="bottom-right-item-title font-pri-bold font30 fontmb-small"><a href="{{get_field($page, 'homepage_business_block_4_link')}}" class="link-item-home">{!!get_field($page, 'homepage_business_block_4')!!}</a></p>
                     </div>
 
                     <div class="bottom-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
                         <div class="symbol">
                             <img loading="lazy" src="{{ get_image_url(get_field($page,'homepage_business_block_5_logo')) }}" alt="{{get_field($page, 'homepage_business_block_5')}}">
                         </div>
-                        <p class="bottom-right-item-title font-pri-bold font30 fontmb-small"><a href="" class="link-item-home">{!!get_field($page, 'homepage_business_block_5')!!}</a></p>
+                        <p class="bottom-right-item-title font-pri-bold font30 fontmb-small"><a href="{{get_field($page, 'homepage_business_block_5_link')}}" class="link-item-home">{!!get_field($page, 'homepage_business_block_5')!!}</a></p>
                     </div>
                 </div>
             </div>

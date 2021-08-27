@@ -242,13 +242,14 @@
                 <div class="library-item">
                     <div class="img-container">
                         <div class="skewed">
-                            <a href="{{$library->url}}">
-                                <img src="{{ Storage::disk('public')->exists($library->image) ? get_object_image($library->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Thư viện ảnh">
+                            <a data-fancybox data-type="ajax" data-src="{{$library->url}}" data-filter="#gallery" href="javascript:;">
+                                <img src="{{ Storage::disk('public')->exists($library->image) ? get_object_image($library->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="{{$library->name}}">
                             </a>
                         </div>
                     </div>
                     <div class="library-item__content">
-                        <a href="{{$library->url}}" class="library-title font25 fontmb-medium">{{$library->name}}</a>
+                        <a  class="library-title font25 fontmb-medium" data-fancybox data-type="ajax" data-src="{{$library->url}}" data-filter="#gallery" href="javascript:;">{{$library->name}}</a>
+                        {{-- <a href="{{$library->url}}" class="library-title font25 fontmb-medium">{{$library->name}}</a> --}}
                         <p class="library-description font20 fontmb-little">{{Str::words($library->description,40)}}</p>
                     </div>
                 </div>

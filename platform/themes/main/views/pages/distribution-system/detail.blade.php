@@ -121,10 +121,10 @@
                                         </div>
                                     </div>
                                     <div class="right">
-                                        <h2 class="event-news__item--name font30"><a href="{{$picture->url}}">{{$picture->name}}</a></h2>
+                                        <h2 class="event-news__item--name font30"><a data-fancybox data-type="ajax" data-src="{{$picture->url}}" data-filter="#gallery" href="javascript:;">{{$picture->name}}</a></h2>
                                         <p class="event-news__item--date font20">{{date_format($picture->created_at,"d-m-Y")}}</p>
                                         <p class="event-news__item--description font20">{{Str::words($picture->description,40)}}</p>
-                                        <a href="{{$picture->url}}">
+                                        <a data-fancybox data-type="ajax" data-src="{{$picture->url}}" data-filter="#gallery" href="javascript:;">
                                             <button class="event-news__item--more font15">{{ __("Readmore") }}</button>
                                         </a>
                                     </div>

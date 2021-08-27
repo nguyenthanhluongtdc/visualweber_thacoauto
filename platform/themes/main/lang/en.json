@@ -166,5 +166,9 @@
     "gasoline": "Gasoline",
     "petroleum": "Petroleum",
     "automatic_transmission": "Automatic transmission",
-    "manual_transmission": "Manual transmission"
+    "manual_transmission": "Manual transmission",
+    "Chọn phiên bản xe": "Choose the version car",
+    "Lựa chọn màu": "Color selection",
+    "Phụ kiện": "Accessory",
+    "Trang bị thêm": "Retrofit"
 }

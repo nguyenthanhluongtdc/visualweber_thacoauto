@@ -1,5 +1,14 @@
 @forelse ($data as $item)
-    <div class="branch-item mb-20" data-item="{{ json_encode(has_field($item, 'lat_lng_he_thong_phan_phoi') ? get_field($item, 'lat_lng_he_thong_phan_phoi') : '') }}">
+    @php
+        $popupData = [
+            'popup_info' => [
+                'name' => has_field($item, 'ten_popup_he_thong_phan_phoi') ? get_field($item, 'ten_popup_he_thong_phan_phoi') : '',
+                'content' => has_field($item, 'mo_ta_he_thong_phan_phoi') ? get_field($item, 'mo_ta_he_thong_phan_phoi') : '',
+            ],
+            'location' => has_field($item, 'lat_lng_he_thong_phan_phoi') ? get_field($item, 'lat_lng_he_thong_phan_phoi') : ''
+        ]
+    @endphp
+    <div class="branch-item mb-20 locate_item" data-item="{{ json_encode($popupData) }}">
         <p class="branch-name font30 mb-20">{{ $item->name }}</p>
         <p class="branch-address font20 mb-20">{{ has_field($item, 'dia_chi_he_thong_phan_phoi') ? get_field($item, 'dia_chi_he_thong_phan_phoi') : '' }}</p>
         <div class="logo-wrap mb-20">

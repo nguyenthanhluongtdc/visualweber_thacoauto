@@ -214,7 +214,7 @@
 {{-- lĩnh vực hoạt động --}}
 <div class="section-field-home">
     <div class="section-field-home-wrap container-remake">
-        <h2 class="font-pri-bold font60 fontmb-large color-gray" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out">
+        <h2 class="font-pri-bold font60 fontmb-large color-gray text-uppercase" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out">
             {{get_field($page, 'homepage_production_business_title')}}
         </h2>
         <div class="field-home-content">

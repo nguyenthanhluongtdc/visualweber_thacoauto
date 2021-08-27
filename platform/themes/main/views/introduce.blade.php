@@ -1,6 +1,6 @@
-<div id="introduce-page" class="font-pri overflow-x-hidden">
+<div id="introduce-page" class="font-pri">
     <div class="navbar-menu font20">
-        <div class="container-remake">
+        <div class="container-remake overflow-x-hidden">
             <ul class="nav font-pri-bold">
                 @if(has_field($page, 'title_module_aboutus_introduce'))
                 <li class="nav-item" data-aos="fade-down">
@@ -66,7 +66,7 @@
     <div class="section-production-business-wrapper" id="section_two">
         <div class="container-remake">
             <div class="section-production-business">
-                <h2 class="section-production-business__title font-pri-bold font60 fontmb-large" data-aos="fade-right">
+                <h2 class="section-production-business__title font-pri-bold font60 fontmb-large  text-uppercase" data-aos="fade-right">
                     {!!get_field($page, 'homepage_production_business_title')!!}
                 </h2>
 
@@ -90,7 +90,7 @@
                             </div>
                         </div>
 
-                        <div class="col-right col-top font-pri-bold fontmb-medium">
+                        <div class="col-right col-top font-pri-bold fontmb-medium ">
                             <div class="col-right__item" data-aos="zoom-in" data-aos-delay="400">
                                 <div class="box-center">
                                     <div class="symbol">
@@ -113,8 +113,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-right__item" data-aos="zoom-in" data-aos-delay="400">
-                                <div class="box-center">
+                            <div class="col-right__item" data-aos="zoom-in" data-aos-delay="400" >
+                                <div class="box-center ">
                                     <div class="symbol">
                                         <img loading="lazy" src="{{Storage::disk('public')->exists(get_field($page,'homepage_production_block_3_logo')) ? get_image_url(get_field($page,'homepage_production_block_3_logo')) : RvMedia::getDefaultImage()}}"
                                             alt="">
@@ -125,7 +125,7 @@
                                 </div>
                             </div>
                             <div class="col-right__item" data-aos="zoom-in" data-aos-delay="400">
-                                <div class="box-center">
+                                <div class="box-center ">
                                     <div class="symbol">
                                         <img loading="lazy" src="{{Storage::disk('public')->exists(get_field($page,'homepage_production_block_4_logo')) ? get_image_url(get_field($page,'homepage_production_block_4_logo')) : RvMedia::getDefaultImage()}}"
                                             alt="">

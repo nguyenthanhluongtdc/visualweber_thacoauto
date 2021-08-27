@@ -536,7 +536,7 @@
         flex-direction: inherit;
         flex: 1 100%;
         @include mobileMarginTop(75, "+");
-        // @include mobileMarginX(20, "-");
+       
         h3 {
           margin-top: 3%;
         }

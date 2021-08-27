@@ -121,35 +121,31 @@
             </div>
 
             <div class="bottom" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="50">
-                <p class="title font-pri-bold font20 fontmb-middle">
-                    {{ __("Điểm tin") }}
-                </p>
+                <div class="summary">
+                    <p class="title font-pri-bold font20 fontmb-middle">
+                        {{ __("Điểm tin") }}
+                    </p>
+                    <a class="font-pri-bold font20 fontmb-middle" href="{{get_category_by_id(theme_option('default_category_news_summary'))->url}}">Xem thêm</a>
+                </div>
 
                 <div class="scollbar-wrap-home">
                     @php
-                        $postsHot = get_all_with_featured(10);
+                        $postsHot = get_posts_by_category(theme_option('default_category_news_summary'), 10)
+                        
                     @endphp
                     <div id="hours">
                         @if (!empty($postsHot))
                             @foreach ($postsHot as $post)
-                            {{-- @dd(has_field($post, 'hot_news')) --}}
-                            @if($loop->first && has_field($post, 'hot_news') != 1)
-
-                            @elseif(has_field($post, 'hot_news') == 1)
                             <img loading="lazy" class="logo-frame flag-1" src="{{ get_image_url(has_field($post, 'hot_news_image')) }}" alt="{{$post->name}}">
-                            @endif
                             @endforeach
+                        @else
+                            
                         @endif
-                        {{-- <img loading="lazy" class="logo-frame flag-1" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt=""> --}}
                     </div>
                     <div id="cells">
 
                         @if (!empty($postsHot))
                             @foreach ($postsHot as $post)
-                            {{-- @dd(has_field($post, 'hot_news')) --}}
-                            @if($loop->first && has_field($post, 'hot_news') != 1)
-                                {{__('Chưa có điểm tin')}}
-                            @elseif(has_field($post, 'hot_news') == 1)
                             <div class="cell-item flag-1">
                                 <div class="frame">
                                     <img loading="lazy" src="{{ get_image_url(has_field($post, 'hot_news_image')) }}" alt="{{$post->name}}">
@@ -158,51 +154,10 @@
                                     <a href="{{$post->url}}">{{$post->name}}</a>
                                 </span>
                             </div>
-                            @endif
                             @endforeach
+                        @else
+                            {{__('No data to show')}}
                         @endif
-                        {{-- <div class="cell-item flag-1">
-                            <img loading="lazy" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
-                            <span class="font-pri-bold fontmb-small">
-                                <a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
-                            </span>
-                        </div> --}}
-                        {{-- <div class="cell-item flag-2">
-                            <img loading="lazy" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
-                            <span class="font-pri-bold fontmb-small">
-                                <a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
-                            </span>
-                        </div>
-                        <div class="cell-item flag-3">
-                            <img loading="lazy" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
-                            <span class="font-pri-bold fontmb-small">
-                                <a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
-                            </span>
-                        </div>
-                        <div class="cell-item flag-4">
-                            <img loading="lazy" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
-                            <span class="font-pri-bold fontmb-small">
-                                <a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
-                            </span>
-                        </div>
-                        <div class="cell-item flag-5">
-                            <img loading="lazy" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
-                            <span class="font-pri-bold fontmb-small">
-                                <a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
-                            </span>
-                        </div>
-                        <div class="cell-item flag-6">
-                            <img loading="lazy" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
-                            <span class="font-pri-bold fontmb-small">
-                                <a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
-                            </span>
-                        </div>
-                        <div class="cell-item flag-7">
-                            <img loading="lazy" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
-                            <span class="font-pri-bold fontmb-small">
-                                <a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
-                            </span>
-                        </div> --}}
                         </h5>
                     </div>
                 </div>

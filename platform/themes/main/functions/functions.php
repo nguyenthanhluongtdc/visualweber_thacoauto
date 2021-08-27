@@ -36,6 +36,7 @@ register_page_template([
     'cost-estimates' => "Cost Estimates",
     'pre-order' => "Pre-order",
     'distribution-system' => 'Distribution system',
+    'news-summary' => 'News summary',
 ]);
 
 Menu::addMenuLocation('menu-tabs-support-industry', 'Tabs - Công nghiệp hỗ trợ');

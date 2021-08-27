@@ -481,6 +481,20 @@ app()->booted(function () {
                     'class' => 'form-control select-full-search',
                 ],
             ],
+        ])
+        ->setField([
+            'id' => 'default_category_news_summary',
+            'section_id' => 'opt-text-subsection-config',
+            'type' => 'select', // select or customSelect
+            'label' => __('Loại điểm tin mặc định'),
+            'attributes' => [
+                'name' => 'default_category_news_summary',
+                'data' => ["" => "Chọn loại"] + (is_plugin_active('blog') ? get_all_categories()->pluck('name', 'id')->toArray() ?? [] : []),
+                'value' => null, // default value
+                'options' => [
+                    'class' => 'form-control select-full-search',
+                ],
+            ],
         ]);
 
 });

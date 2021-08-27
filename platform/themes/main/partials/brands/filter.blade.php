@@ -7,7 +7,7 @@
             <li class="car-model__item {{ request('car_line', '') == '' ? 'active' : ''  }}">
                 <span>{{ __('Tất cả') }}</span>
             </li>
-            @foreach (get_car_lines() ?? collect() as $item)
+            @foreach (get_car_vehicles() ?? collect() as $item)
                 <li class="car-model__item" {{ request('car_line', '') == $item->id ? 'active' : ''  }}>
                     <span class="text-uppercase">{{ $item->name }}</span>
                 </li>
@@ -25,7 +25,7 @@
                     <li class="car-model__item {{ request('car_line', '') == '' ? 'active' : ''  }}">
                         <span>{{ __('Tất cả') }}</span>
                     </li>
-                    @foreach (get_car_lines() ?? collect() as $item)
+                    @foreach (get_car_vehicles() ?? collect() as $item)
                         <li class="car-model__item" {{ request('car_line', '') == $item->id ? 'active' : ''  }}>
                             <span class="text-uppercase">{{ $item->name }}</span>
                         </li>

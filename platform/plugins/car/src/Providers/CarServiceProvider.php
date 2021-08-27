@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Event;
 use Illuminate\Routing\Events\RouteMatched;
 use Platform\Car\Providers\HookServiceProvider;
 use Platform\Base\Traits\LoadAndPublishDataTrait;
-use Platform\Car\Repositories\Interfaces\BrandInterface;
+use Platform\Brand\Repositories\Interfaces\BrandInterface;
 use Platform\Car\Repositories\Interfaces\CarCategoryInterface;
 
 class CarServiceProvider extends ServiceProvider

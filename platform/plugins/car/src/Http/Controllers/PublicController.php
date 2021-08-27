@@ -2,12 +2,12 @@
 
 namespace Platform\Car\Http\Controllers;
 
-use Platform\Car\Models\Brand;
-use Platform\Car\Models\CarCategory;
+use Platform\Brand\Models\Brand;
+use Platform\CarCategory\Models\CarCategory;
 use Platform\Base\Http\Controllers\BaseController;
-use Platform\Car\Repositories\Interfaces\BrandInterface;
+use Platform\Brand\Repositories\Interfaces\BrandInterface;
 use Platform\Slug\Repositories\Interfaces\SlugInterface;
-use Platform\Car\Repositories\Interfaces\CarCategoryInterface;
+use Platform\CarCategory\Repositories\Interfaces\CarCategoryInterface;
 
 
 class PublicController extends BaseController

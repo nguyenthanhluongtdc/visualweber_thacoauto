@@ -35,9 +35,9 @@ class BrandServiceProvider extends ServiceProvider
             ->loadRoutes(['web']);
 
         Event::listen(RouteMatched::class, function () {
-            // if (defined('LANGUAGE_MODULE_SCREEN_NAME')) {
-            //    \Language::registerModule([Brand::class]);
-            // }
+            if (defined('LANGUAGE_MODULE_SCREEN_NAME')) {
+               \Language::registerModule([Brand::class]);
+            }
 
             dashboard_menu()->registerItem([
                 'id'          => 'cms-plugins-brand',
@@ -49,5 +49,7 @@ class BrandServiceProvider extends ServiceProvider
                 'permissions' => ['brand.index'],
             ]);
         });
+        \SlugHelper::registerModule(Brand::class);
+        \SlugHelper::setPrefix(Brand::class, 'brands');
     }
 }

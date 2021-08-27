@@ -33,4 +33,14 @@ class CarCategory extends BaseModel
     protected $casts = [
         'status' => BaseStatusEnum::class,
     ];
+
+    public function parent(){
+        return $this->belongsTo(get_class($this),'parent_id');
+    }
+    public function childrens(){
+        return $this->hasMany(get_class($this),'parent_id');
+    }
+    public function brands(){
+        return $this->belongsToMany(\Platform\Brand\Models\Brand::class,'app_brand_categories','category_id','brand_id');
+    }
 }

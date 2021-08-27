@@ -4,7 +4,7 @@
             <h2 class="product-detail__title font-mi-bold font60 fontmb-large">
                 XE MÁY
             </h2>
-            <img loading="lazy" src="{{Theme::asset()->url('images/services/xemay.png')}}" alt="" class="product-detail__banner">
+            <img loading="lazy" src="{{Theme::asset()->url('images/services/xemay.png')}}" alt="Banner xe máy" class="product-detail__banner">
             <h2 class="product-detail__title font-mi-bold font60 fontmb-large">
                 THÔNG TIN CHI TIẾT
             </h2>
@@ -16,13 +16,13 @@
                     <div class="swiper-container detail-slide">
                         <div class="swiper-wrapper">
                           <div class="swiper-slide">
-                              <img loading="lazy" src="{{Theme::asset()->url('images/services/slide-xemay.png')}}" alt="">
+                              <img loading="lazy" src="{{Theme::asset()->url('images/services/slide-xemay.png')}}" alt="Ảnh slide xe máy">
                           </div>
                           <div class="swiper-slide">
-                            <img loading="lazy" src="{{Theme::asset()->url('images/services/slide-cham-soc-xe-2.jpg')}}" alt="">
+                            <img loading="lazy" src="{{Theme::asset()->url('images/services/slide-cham-soc-xe-2.jpg')}}" alt="Ảnh slide xe máy"">
                         </div>
                         <div class="swiper-slide">
-                            <img loading="lazy" src="{{Theme::asset()->url('images/services/slide-cham-soc-xe-3.jpg')}}" alt="">
+                            <img loading="lazy" src="{{Theme::asset()->url('images/services/slide-cham-soc-xe-3.jpg')}}" alt="Ảnh slide xe máy"">
                         </div>
                         </div>
                         <div class="swiper-pagination"></div>
@@ -31,7 +31,7 @@
                         <div class="detail-info--frame">
                             <div class="text font15 font-pri fontmb-small">
                                 <div class="logo mb-4 ml-4">
-                                    <img loading="lazy" src="{{Theme::asset()->url('images/services/logo-peugeot.png')}}" alt="">
+                                    <img loading="lazy" src="{{Theme::asset()->url('images/services/logo-peugeot.png')}}" alt="Ảnh thông tin chi tiết">
                                 </div>
                                 <div class="position-relative">
                                     <input type="checkbox" id="expanded">
@@ -49,7 +49,7 @@
                 <div class="product-detail__card">
                     <div class="product-detail__card-image">
                         <div class="product-detail__card-frame">
-                            <img loading="lazy" src="{{Theme::asset()->url('images/services/Layer-779.png')}}" alt="">
+                            <img loading="lazy" src="{{Theme::asset()->url('images/services/Layer-779.png')}}" alt="Ảnh tỉnh năng">
 
                         </div>
                     </div>
@@ -61,7 +61,7 @@
                 <div class="product-detail__card">
                     <div class="product-detail__card-image">
                         <div class="product-detail__card-frame">
-                            <img loading="lazy" src="{{Theme::asset()->url('images/services/Layer-780.png')}}" alt="">
+                            <img loading="lazy" src="{{Theme::asset()->url('images/services/Layer-780.png')}}" alt="Ảnh tính năng">
 
                         </div>
                     </div>
@@ -73,7 +73,7 @@
                 <div class="product-detail__card">
                     <div class="product-detail__card-image">
                         <div class="product-detail__card-frame">
-                            <img loading="lazy" src="{{Theme::asset()->url('images/services/Layer-781.png')}}" alt="">
+                            <img loading="lazy" src="{{Theme::asset()->url('images/services/Layer-781.png')}}" alt="Ảnh tính năng">
 
                         </div>
                     </div>
@@ -93,7 +93,7 @@
                     <div class="item mt-2">
                         <div class="car-frame">
                             <div class="car-img">
-                                <img loading="lazy" src="{{Theme::asset()->url('images/services/django.png')}}" alt="">
+                                <img loading="lazy" src="{{Theme::asset()->url('images/services/django.png')}}" alt="Ảnh xe">
                             </div>
 
                             <div class="d-flex align-content-between flex-wrap car-content">
@@ -113,7 +113,7 @@
                         </div>
                         <div class="car-frame">
                             <div class="car-img">
-                                <img loading="lazy" src="{{Theme::asset()->url('images/services/django.png')}}" alt="">
+                                <img loading="lazy" src="{{Theme::asset()->url('images/services/django.png')}}" alt="Ảnh xe">
                             </div>
 
                             <div class="d-flex align-content-between flex-wrap car-content">
@@ -133,7 +133,7 @@
                         </div>
                         <div class="car-frame">
                             <div class="car-img">
-                                <img loading="lazy" src="{{Theme::asset()->url('images/services/django.png')}}" alt="">
+                                <img loading="lazy" src="{{Theme::asset()->url('images/services/django.png')}}" alt="Ảnh xe">
                             </div>
 
                             <div class="d-flex align-content-between flex-wrap car-content">
@@ -153,7 +153,7 @@
                         </div>
                         <div class="car-frame">
                             <div class="car-img">
-                                <img loading="lazy" src="{{Theme::asset()->url('images/services/django.png')}}" alt="">
+                                <img loading="lazy" src="{{Theme::asset()->url('images/services/django.png')}}" alt="Ảnh xe">
                             </div>
 
                             <div class="d-flex align-content-between flex-wrap car-content">

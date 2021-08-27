@@ -11,7 +11,7 @@
                 </div>
             </div>
             <div class="cultural-behavior__image">
-                <img loading="lazy" src="{{Theme::asset()->url('images/cultural/cultural-behavior.jpg')}}" alt="">
+                <img loading="lazy" src="{{Theme::asset()->url('images/cultural/cultural-behavior.jpg')}}" alt="Ảnh văn hóa ứng xử">
             </div>
         </div>
     </div>

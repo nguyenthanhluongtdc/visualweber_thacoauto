@@ -47,7 +47,7 @@
                             <a href="{{$post->url}}" title="{!!__('Readmore')!!}" class="read-more text-dark font20 font-pri">
                                 {!!__('Readmore')!!} <img loading="lazy" width="" height=""
                                     src="{{Theme::asset()->url('images/mechandical/chevron-double-right.svg')}}"
-                                    alt="" /></a>
+                                    alt=" {!! $post->name !!}" /></a>
                         </div>
                     </div>
                 @endforeach

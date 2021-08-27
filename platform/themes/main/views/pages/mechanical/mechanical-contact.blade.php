@@ -35,7 +35,7 @@
                         </div>
                         {{-- <div class="col-1"></div> --}}
                         <div class="right col-7">
-                            <img loading="lazy" src="{{Storage::disk('public')->exists(theme_option('image_contact')) ? get_image_url(theme_option('image_contact')) : RvMedia::getDefaultImage()}}" alt="">
+                            <img loading="lazy" src="{{Storage::disk('public')->exists(theme_option('image_contact')) ? get_image_url(theme_option('image_contact')) : RvMedia::getDefaultImage()}}" alt="Ảnh liên hệ">
                         </div>
 
                     </div>

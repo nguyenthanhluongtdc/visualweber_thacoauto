@@ -24,7 +24,7 @@
             <div class="image-content">
                 <div class="image">
                     <div class="post-thumbnail">
-                        <a href="{{$post->url}}"><img loading="lazy" src="{{ get_object_image($post->image) }}" alt=""></a>
+                        <a href="{{$post->url}}"><img loading="lazy" src="{{ get_object_image($post->image) }}" alt="{{$post->name}}"></a>
                     </div>
                 </div>
                 <div class="content">

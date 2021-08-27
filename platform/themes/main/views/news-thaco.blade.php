@@ -44,8 +44,8 @@
             <div class="item-shareholder">
                 <div class="item-wrap">
                     <div class="left">
-                        <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="" class="up-show">
-                        <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="" class="down-hide">
+                        <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="{{$post->name}}" class="up-show">
+                        <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="{{$post->name}}" class="down-hide">
                     </div>
                     <div class="mid">
                         <h5 class="title font-pri-bold font25 color-gray">

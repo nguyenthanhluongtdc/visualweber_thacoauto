@@ -42,7 +42,7 @@
     <div class="section-aboutus-wrapper">
         @if(has_field($page, 'image_module_aboutus_introduce'))
         <div class="section-aboutus__picture" data-aos="fade-right">
-            <img loading="lazy" class="mw-100" src="{{get_image_url(has_field($page, 'image_module_aboutus_introduce'))}}" alt="">
+            <img loading="lazy" class="mw-100" src="{{get_image_url(has_field($page, 'image_module_aboutus_introduce'))}}" alt="Ảnh giới thiệu">
         </div>
         @endif
         <div class="container-remake">
@@ -95,7 +95,7 @@
                                 <div class="box-center">
                                     <div class="symbol">
                                         <img loading="lazy" src="{{Storage::disk('public')->exists(get_field($page,'homepage_production_block_1_logo')) ? get_image_url(get_field($page,'homepage_production_block_1_logo')) : RvMedia::getDefaultImage()}}"
-                                            alt="">
+                                            alt="Icon R&D">
                                     </div>
                                     <div class="name font20 fontmb-small">
                                         {!! get_field($page, 'homepage_production_block_1') !!}
@@ -106,7 +106,7 @@
                                 <div class="box-center">
                                     <div class="symbol">
                                         <img loading="lazy" src="{{Storage::disk('public')->exists(get_field($page,'homepage_production_block_2_logo')) ? get_image_url(get_field($page,'homepage_production_block_2_logo')) : RvMedia::getDefaultImage()}}"
-                                            alt="">
+                                            alt="Icon sản xuất lắp ráp">
                                     </div>
                                     <div class="name font20 fontmb-small">
                                         {!! get_field($page, 'homepage_production_block_2') !!}
@@ -117,7 +117,7 @@
                                 <div class="box-center ">
                                     <div class="symbol">
                                         <img loading="lazy" src="{{Storage::disk('public')->exists(get_field($page,'homepage_production_block_3_logo')) ? get_image_url(get_field($page,'homepage_production_block_3_logo')) : RvMedia::getDefaultImage()}}"
-                                            alt="">
+                                            alt="Icon công nghiệp hỗ trợ & cơ khí">
                                     </div>
                                     <div class="name font20 fontmb-small">
                                         {!! get_field($page, 'homepage_production_block_3') !!}
@@ -128,7 +128,7 @@
                                 <div class="box-center ">
                                     <div class="symbol">
                                         <img loading="lazy" src="{{Storage::disk('public')->exists(get_field($page,'homepage_production_block_4_logo')) ? get_image_url(get_field($page,'homepage_production_block_4_logo')) : RvMedia::getDefaultImage()}}"
-                                            alt="">
+                                            alt="Icon xuất khẩu">
                                     </div>
                                     <div class="name font20 fontmb-small">
                                         {!! get_field($page, 'homepage_production_block_4') !!}
@@ -142,7 +142,7 @@
                             <div class="box-main font20">
                                 <div class="symbol">
                                     <img loading="lazy" src="{{Storage::disk('public')->exists(get_field($page,'homepage_business_logo')) ? get_image_url(get_field($page,'homepage_business_logo')) : RvMedia::getDefaultImage()}}"
-                                        alt="">
+                                        alt="{!! get_field($page, 'homepage_production_title') !!}">
                                 </div>
                                 <div class="company-name font17 font-pri-bold fontmb-small">
                                     {!!__('THACO AUTO')!!}
@@ -161,7 +161,7 @@
                                 <div class="box-center">
                                     <div class="symbol">
                                         <img loading="lazy" src="{{ Storage::disk('public')->exists(get_field($page,'homepage_business_block_1_logo')) ? get_image_url(get_field($page,'homepage_business_block_1_logo')) : RvMedia::getDefaultImage()}}"
-                                            alt="">
+                                            alt="Icon du lịch">
                                     </div>
                                     <div class="name font20 fontmb-small">
                                         {!! get_field($page, 'homepage_business_block_1') !!}
@@ -172,7 +172,7 @@
                                 <div class="box-center">
                                     <div class="symbol">
                                         <img loading="lazy" src="{{ Storage::disk('public')->exists(get_field($page,'homepage_business_block_2_logo')) ? get_image_url(get_field($page,'homepage_business_block_2_logo')) : RvMedia::getDefaultImage()}}"
-                                            alt="">
+                                            alt="Icon ô tô & xe máy">
                                     </div>
                                     <div class="name font20 fontmb-small">
                                         {!! get_field($page, 'homepage_business_block_2') !!}
@@ -183,7 +183,7 @@
                                 <div class="box-center">
                                     <div class="symbol">
                                         <img loading="lazy" src="{{ Storage::disk('public')->exists(get_field($page,'homepage_business_block_3_logo')) ? get_image_url(get_field($page,'homepage_business_block_3_logo')) : RvMedia::getDefaultImage()}}"
-                                            alt="">
+                                            alt="Icon xe tải">
                                     </div>
                                     <div class="name font20 fontmb-small">
                                         {!! get_field($page, 'homepage_business_block_3') !!}
@@ -194,7 +194,7 @@
                                 <div class="box-center">
                                     <div class="symbol">
                                         <img loading="lazy" src="{{ Storage::disk('public')->exists(get_field($page,'homepage_business_block_4_logo')) ? get_image_url(get_field($page,'homepage_business_block_4_logo')) : RvMedia::getDefaultImage()}}"
-                                            alt="">
+                                            alt="Icon xe bus">
                                     </div>
                                     <div class="name font20 fontmb-small">
                                         {!! get_field($page, 'homepage_business_block_4') !!}
@@ -205,7 +205,7 @@
                                 <div class="box-center">
                                     <div class="symbol">
                                         <img loading="lazy" src="{{ Storage::disk('public')->exists(get_field($page,'homepage_business_block_5_logo')) ? get_image_url(get_field($page,'homepage_business_block_5_logo')) : RvMedia::getDefaultImage()}}"
-                                            alt="">
+                                            alt="Icon dịch vụ phụ tùng">
                                     </div>
                                     <div class="name font20 fontmb-small">
                                         {!! get_field($page, 'homepage_business_block_5') !!}
@@ -267,7 +267,7 @@
                     @if(has_field($page, 'image_module_value_introduce'))
                     <div class="section-system-value__content__right" data-aos="fade-right">
                         <img loading="lazy" src="{{ Storage::disk('public')->exists(has_field($page, 'image_module_value_introduce')) ? get_image_url(has_field($page, 'image_module_value_introduce')) : RvMedia::getDefaultImage()}}"
-                            alt="">
+                            alt="Ảnh hệ giá trị">
                     </div>
                     @endif
                 </div>
@@ -275,14 +275,14 @@
                 @if(has_field($page, 'repeat_business_module_value_introduce'))
                 @if(!empty(has_field($page, 'repeat_business_module_value_introduce')))
                 <div class="services-mobile font-pri-bold">
-                    <div class="row">
+                    <div class="row"> 
                         @foreach(has_field($page, 'repeat_business_module_value_introduce') as $row)
                         <div class="col-3">
                             <div class="d-flex justify-content-center align-items-center h-100">
                                 <div class="box">
                                     <div class="symbol">
                                         <img loading="lazy" src="{{Storage::disk('public')->exists(has_sub_field($row, 'symbol')) ? get_image_url(has_sub_field($row, 'symbol')) : RvMedia::getDefaultImage()}}"
-                                            alt="">
+                                            alt=" {!! has_sub_field($row, 'name') !!}">
                                     </div>
                                     <div class="name font20 fontmb-small">
                                         {!! has_sub_field($row, 'name') !!}
@@ -319,7 +319,7 @@
                         data-aos-delay="300">
                         <div class="avatar">
                             <img loading="lazy" src="{{ Storage::disk('public')->exists(has_sub_field($sub_item,'avatar')) ? get_image_url(has_sub_field($sub_item,'avatar')) : RvMedia::getDefaultImage()}}"
-                                alt="">
+                                alt="Avata ban lãnh đạo">
                         </div>
                         <div class="header-profile">
                             <strong class="name font25 fontmb-medium">
@@ -401,7 +401,7 @@
                     </h2> --}}
                     @if(has_field($page, 'image_module_behave_introduce'))
                     <img loading="lazy" src="{{Storage::disk('public')->exists(has_field($page,'image_module_behave_introduce')) ? get_image_url(has_field($page, 'image_module_behave_introduce')) : RvMedia::getDefaultImage()}}"
-                        alt="">
+                        alt="Ảnh văn hóa ứng xử">
                     @endif
                 </div>
             </div>
@@ -440,10 +440,10 @@
                     <div class="section-criteria__content__box" data-aos="fade-up">
                         <div class="box-center-bark">
                             <img loading="lazy" src="{{Storage::disk('public')->exists(has_sub_field($row, 'image')) ? get_image_url(has_sub_field($row, 'image')) : RvMedia::getDefaultImage()}}"
-                                alt="">
+                                alt="Icon tiêu chí 8T">
                             <div class="defect-shape">
                                 <div class="box-center">
-                                    <img loading="lazy" src="{{get_image_url(has_sub_field($row, 'symbol'))}}" alt="">
+                                    <img loading="lazy" src="{{get_image_url(has_sub_field($row, 'symbol'))}}" alt=" {!! has_sub_field($row, 'title') !!}">
                                     <div class="name font20">
                                         {!! has_sub_field($row, 'title') !!}
                                     </div>
@@ -464,10 +464,10 @@
                     @for ($i = 4; $i < $count; $i++) <div class="section-criteria__content__box" data-aos="fade-up">
                         <div class="box-center-bark">
                             <img loading="lazy" src="{{Storage::disk('public')->exists(has_sub_field($criteria[$i], 'image')) ? get_image_url(has_sub_field($criteria[$i], 'image')) : RvMedia::getDefaultImage()}}"
-                                alt="">
+                                alt="Icon tiêu chí 8T">
                             <div class="defect-shape">
                                 <div class="box-center">
-                                    <img loading="lazy" src="{{get_image_url(has_sub_field($criteria[$i], 'symbol'))}}" alt="">
+                                    <img loading="lazy" src="{{get_image_url(has_sub_field($criteria[$i], 'symbol'))}}" alt=" {!! has_sub_field($criteria[$i], 'title') !!}">
                                     <div class="name font20">
                                         {!! has_sub_field($criteria[$i], 'title') !!}
                                     </div>
@@ -510,10 +510,10 @@
                         <div class="section-criteria__content__box" data-aos="fade-up">
                             <div class="box-center-bark">
                                 <img loading="lazy" src="{{Storage::disk('public')->exists(has_sub_field($row, 'image')) ? get_image_url(has_sub_field($row, 'image')) : RvMedia::getDefaultImage()}}"
-                                    alt="">
+                                    alt="Ảnh tiêu chí 8T">
                                 <div class="defect-shape">
                                     <div class="box-center">
-                                        <img loading="lazy" src="{{get_image_url(has_sub_field($row, 'symbol'))}}" alt="">
+                                        <img loading="lazy" src="{{get_image_url(has_sub_field($row, 'symbol'))}}" alt="Ảnh tiêu chí 8T">
                                         <div class="name font20 fontmb-medium">
                                             {!! has_sub_field($row, 'title') !!}
                                         </div>
@@ -542,10 +542,10 @@
             @foreach(has_field($page, 'repeater_module_video_introduce') as $row)
             <li class="splide__slide">
                 <a data-fancybox href="{{has_sub_field($row, 'link_video_youtube')}}">
-                    <img loading="lazy" src="{{Storage::disk('public')->exists(has_sub_field($row, 'image')) ? get_image_url(has_sub_field($row, 'image')) : RvMedia::getDefaultImage()}}"
-                        alt="">
+                        <img loading="lazy" src="{{Storage::disk('public')->exists(has_sub_field($row, 'image')) ? get_image_url(has_sub_field($row, 'image')) : RvMedia::getDefaultImage()}}"
+                            alt="Video giới thiêu">
                     <div class="btn-play">
-                        <img loading="lazy" class="img-fluid" src="{{Theme::asset()->url('images/introduce/btn-play.png')}}" alt="">
+                        <img loading="lazy" class="img-fluid" src="{{Theme::asset()->url('images/introduce/btn-play.png')}}" alt="Button Play">
                     </div>
                     <div class="header_video">
                         <div class="name font30 font-pri-bold">

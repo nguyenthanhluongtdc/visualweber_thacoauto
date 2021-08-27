@@ -6,7 +6,7 @@
                     <div class="row row__main">
                         <div class="top-menu-mobile mb-5">
                             <div class="box-picture-mobile mb-3">
-                                <img loading="lazy" src="{{Theme::asset()->url('images/cars/car1.png')}}" alt="">
+                                <img loading="lazy" src="{{Theme::asset()->url('images/cars/car1.png')}}" alt="ẢNh xe">
                             </div>
                             <p class="font-pri text-uppercase font30">kia optima 2.0 gat luxury</p>
                         </div>
@@ -308,7 +308,7 @@
                             </div>
                         </div>
                         <div class="box-picture">
-                            <img loading="lazy" src="{{Theme::asset()->url('images/cars/car1.png')}}" alt="">
+                            <img loading="lazy" src="{{Theme::asset()->url('images/cars/car1.png')}}" alt="Ảnh xe">
                         </div>
                     </div>
 

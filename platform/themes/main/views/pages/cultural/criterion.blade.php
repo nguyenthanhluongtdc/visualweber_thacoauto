@@ -9,7 +9,7 @@
             </div>
             <div class="criterion__shape-text">
                 <div class="block-shape">
-                    <img loading="lazy" src="{{Theme::asset()->url('images/cultural/tan-tam.png')}}" alt="">
+                    <img loading="lazy" src="{{Theme::asset()->url('images/cultural/tan-tam.png')}}" alt="Ảnh tiêu chí 8T">
                     <p>Lorem ipsum dolor sit amet, consectetur. </p>
 
                 </div>

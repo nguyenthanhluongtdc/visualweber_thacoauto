@@ -103,10 +103,10 @@
     position: absolute;
     top: 0;
     height: 180%;
-    left: 18%;
+    left: 20%;
     z-index: 2;
     display: block;
-    width: 10px;
+    width: 5px;
     text-align: right;
     font-size: 20px;
     overflow-y: auto;
@@ -575,7 +575,19 @@
           #hours {
             width: 25%;
             height: 100%;
-            left: -2%;
+            left: -7%;
+            @media (max-width: 786px) {
+              left: -5%;
+            }
+            @media (max-width: 660px) {
+              left: -1.5%;
+            }
+            @media (max-width: 420px) {
+              left: 3%;
+            }
+            @media (max-width: 350px) {
+              left: 6.5%;
+            }
             @include maxWidth(1080) {
               &::-webkit-scrollbar {
                 width: 10px;

@@ -1,5 +1,5 @@
-@foreach ($data as $item)
-    <div class="branch-item mb-20">
+@forelse ($data as $item)
+    <div class="branch-item mb-20" data-item="{{ json_encode(has_field($item, 'lat_lng_he_thong_phan_phoi') ? get_field($item, 'lat_lng_he_thong_phan_phoi') : '') }}">
         <p class="branch-name font30 mb-20">{{ $item->name }}</p>
         <p class="branch-address font20 mb-20">{{ has_field($item, 'dia_chi_he_thong_phan_phoi') ? get_field($item, 'dia_chi_he_thong_phan_phoi') : '' }}</p>
         <div class="logo-wrap mb-20">
@@ -12,6 +12,8 @@
                     @empty
                         <span class="font-pri font20">{{ __("Nội dung đang được cập nhật") }}</span>
                     @endforelse
+                @else
+                    <span class="font-pri font20">{{ __("Nội dung đang được cập nhật") }}</span>
                 @endif
             </div>
             <div class="logo-wrap__right font17 font-pri font-17">
@@ -20,4 +22,6 @@
             </div>
         </div>
     </div>
-@endforeach
+@empty
+    <span class="font-pri font20" style="color: white;">{{ __("Nội dung đang được cập nhật") }}</span>
+@endforelse

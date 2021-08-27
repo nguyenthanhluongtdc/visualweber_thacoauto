@@ -27,6 +27,13 @@
                 <div class="branch-background-blur"></div>
                 <div class="left">
                     <div class="branch-overflow" id="branch-list"></div>
+                    <div class="center pt-3 loading d-none w-100 h-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: none; display: block; shape-rendering: auto;" width="48px" height="48px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                            <circle cx="50" cy="50" r="44" stroke-width="7" stroke="#01498b" stroke-dasharray="69.11503837897544 69.11503837897544" fill="none" stroke-linecap="round">
+                                <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="0.5952380952380952s" keyTimes="0;1" values="0 50 50;360 50 50"></animateTransform>
+                            </circle>
+                        </svg>
+                    </div>
                 </div>
                 <div class="right">
                     <div class="w-100 h-100" id="map"></div>
@@ -265,61 +272,11 @@
     }
 </style>
 <script>
-    const Distribution = {
-        initSearchState: function() {
-            if(!$('.city')) return
-
-            $('.ui.dropdown.city').dropdown({
-                ignoreDiacritics: true,
-                sortSelect: true,
-                fullTextSearch:'exact',
-            });
-        },
-        getTemplateDistrubition: function() {
-            $.ajax({
-                headers: {
-                    "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content")
-                },
-                url: window.__distribution.ajax,
-                method: "GET",
-                data: {
-                    city: $('#city_id').val()
-                },
-                dataType: "json",
-                success: function(result, status, xhr) {
-                    const { data, template } = result.data
-                    if($('#branch-list')) {
-                        $('#branch-list').html(template)
-                    }
-
-                    window.__distribution = {
-                        ...window.__distribution,
-                        data
-                    }
-                },
-            });
-        }
-    }
-
-
-    $(document).ready(function() {
-        Distribution.getTemplateDistrubition()
-        $("#city_id").change(function(e) {
-            Distribution.getTemplateDistrubition()
-        });
-
-    })
-    Distribution.initSearchState()
-
-
-    // if($('.city').length){
-    //     var ignoreDiacritics = true;
-    //     $('.ui.dropdown.city').dropdown({
-    //         ignoreDiacritics: ignoreDiacritics,
-    //         sortSelect: true,
-    //         fullTextSearch:'exact',
-    //     });
-    // };
+    $('.ui.dropdown.city').dropdown({
+        ignoreDiacritics: true,
+        sortSelect: true,
+        fullTextSearch:'exact',
+    });
     var owl = $('.owl-carousel');
     owl.owlCarousel({
         loop: false,
@@ -345,106 +302,4 @@
     $('.customPrevBtn').click(function() {
         owl.trigger('prev.owl.carousel', [300]);
     });
-    //Map
-    const initMap = () => {
-        // var map = L.map('map', {
-        //     maxZoom: 3,
-        //     minZoom: 1,
-        //     crs: L.CRS.Simple
-        // }).setView([0, 0], 1);
-
-        // map.setMaxBounds(new L.LatLngBounds([0,500], [500,0]));
-
-        // var imageUrl = "{{ Theme::asset()->url('images/distribution/map.png') }}"
-        // var imageBounds = [[250,0], [0,250]];
-
-        // L.imageOverlay(imageUrl, imageBounds).addTo(map);
-        // var map = L.map('map', {
-        //     crs: L.CRS.Simple
-        // });
-        // // var bounds = [[0,0], [1000,1000]];
-        // L.imageOverlay("{{ Theme::asset()->url('images/distribution/map.png') }}").addTo(map);
-        // map.fitBounds(bounds);
-
-        // var map = L.map('map').setView([51.505, -0.09], 13);
-
-        // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        //     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        // }).addTo(map);
-
-        // L.marker([51.5, -0.09]).addTo(map)
-        //     .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-        //     .openPopup();
-        // };
-        var map = L.map('map', {
-            minZoom: 1,
-            maxZoom: 3,
-            center: [0, 0],
-            zoom: 1,
-            crs: L.CRS.Simple
-        });
-        var w = 2049;
-        var h = 3185;
-        var url = "{{ Theme::asset()->url('images/distribution/map.png') }}";
-        var southWest = map.unproject([ 0, h], map.getMaxZoom()-1);
-        var northEast = map.unproject([ w, 0], map.getMaxZoom()-1);
-        var bounds = new L.LatLngBounds( southWest, northEast);
-        window.__map = map
-
-        L.imageOverlay( url, bounds).addTo(map);
-
-        map.setMaxBounds(bounds);
-
-        var yx = L.latLng;
-
-        var xy = function(x, y) {
-            if (L.Util.isArray(x)) {    // When doing xy([x, y]);
-                return yx(x[1], x[0]);
-            }
-            return yx(y, x);  // When doing xy(x, y);
-        };
-
-        var greenIcon = L.icon({
-            iconUrl: "{{ Theme::asset()->url('images/distribution/marker.png') }}",
-
-            iconSize:     [30, 30], // size of the icon
-            iconAnchor:   [20, 20], // point of the icon which will correspond to marker's location
-            popupAnchor:  [-3, -25] // point from which the popup should open relative to the iconAnchor
-        });
-
-        let popup = `<div class="branch-popup">
-                        <h2 class="branch-name font20">thaco an sương</h2>
-                        <div class="branch-body">
-                            <div class="branch-body-item">
-                                <p class="info-number font30">70</p>
-                                <p class="info-text font15">Lorem Isum</p>
-                            </div>
-                            <div class="branch-body-item">
-                                <p class="info-number font30">1000</p>
-                                <p class="info-text font15">Lorem Isum</p>
-                            </div>
-                            <div class="branch-body-item">
-                                <p class="info-number font30">99%</p>
-                                <p class="info-text font15">Lorem Isum</p>
-                            </div>
-                        </div>
-                        <div class="branch-footer">
-                            <a href="#"><button>{!! __('Readmore') !!}</button></a>
-                        </div>
-                    </div>`
-
-        let marker = L.marker(new L.LatLng(-630.8, 254), {icon: greenIcon}).addTo(map).bindPopup(popup)
-        L.marker(new L.LatLng(-640.8, 300), {icon: greenIcon}).addTo(map).bindPopup(popup)
-        L.marker(new L.LatLng(-660.8, 200), {icon: greenIcon}).addTo(map).bindPopup(popup)
-        L.marker(new L.LatLng(-650.8, 240), {icon: greenIcon}).addTo(map).bindPopup(popup)
-        L.marker(new L.LatLng(-620.8, 240), {icon: greenIcon}).addTo(map).bindPopup(popup)
-
-        setTimeout(() => {
-            window.__map.setView(new L.LatLng(-630.8, 254), 2)
-            // marker.openPopup()
-        }, 300)
-    }
-    $(document).ready(function() {
-        initMap();
-    })
 </script>

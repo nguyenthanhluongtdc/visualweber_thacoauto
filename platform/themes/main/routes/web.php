@@ -69,6 +69,7 @@ Route::group(['namespace' => 'Theme\Thaco\Http\Controllers', 'middleware' => ['w
 
 
         Route::get('/search', 'ThacoController@getResultSearch')->name('public.search');
+        Route::get('/api/search', 'ThacoController@getApiSearch')->name('public.api.search');
     });
 });
 

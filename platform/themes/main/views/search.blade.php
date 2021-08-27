@@ -54,7 +54,7 @@ Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
                 <div class="col-sm-6 search-bar mb-4">
                     <div class="row search">
                         <div class="col-10">
-                            <input type="text" class="form-control font20" id="search-bar" placeholder="{!! __('Tìm kiếm') !!}"
+                            <input type="text" autocomplete="off" class="form-control font20" id="search-bar" placeholder="{!! __('Tìm kiếm') !!}"
                                 name="keyword" value="{{ request()->get('keyword') }}">
                         </div>
                         <div class="col-1 input-group-append">
@@ -68,6 +68,10 @@ Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
                             {!! $comment !!}
                         @endisset
                     </p>
+
+                    <div class="box-popover">
+                        
+                    </div>
                 </div>
             </div>
 
@@ -144,28 +148,6 @@ Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
                     @endforelse
                 @endisset
             </div>
-            {{-- <div class="search-result row mb-md-4 mb-5" data-aos="fade-up" data-aos-duration="1000"
-                data-aos-easing="ease-in-out">
-                <div class="col-lg-3 col-md-5 result-img">
-                    <a class="image h-100" href="#" title="">
-                        <img src="{{ Theme::asset()->url('images/search/search-4.png') }}" alt="img-detail"
-                            class="w-100 h-100 object-fit-cover">
-                    </a>
-                </div>
-                <div class="col-lg-9 col-md-7 result-content">
-                    <div class="content">
-                        <a href="#">
-                            <h3 class="font-pri-bold font30  color-gray">Lorem ipsum dolor sit amet, consectetur adipisicing
-                                elit. Dolore, perspiciatis? Cupiditate eligen dol optio placeat.</h3>
-                        </a>
-                        <p class="font-pri my-3 font15">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda
-                            laborum officiis nisi omnis! Illum, quibusdam. Lorem ipsum dolor, sit amet consectetur
-                            adipisicing elit. Unde eligendi deleniti quam amet earum laudantium.
-                        </p>
-                        <p class="font-pri date font15">20-12-20201</p>
-                    </div>
-                </div>
-            </div> --}} 
             
             @if(!isset($posts) || $posts->isEmpty())
                 <p class="text-center font25">
@@ -180,5 +162,4 @@ Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
             @endisset
         </div>
     </form>
-</div>
 </div>

@@ -175,38 +175,6 @@ class ThacoController extends PublicController
             ->setMessage(__('No results found, please try with different keywords.'));
     }
 
-    public function getResultSearch(Request $request, PostInterface $postRepository)
-    {
-        // if($request->ajax() && $request->has('cate')) {
-        //     $data = get_posts_by_category($request->input('cate'), 5);
-        //     return view("theme.main::views.components.result-search", compact('data'))->render();
-        // }
-
-        $query = $request->input('keyword');
-
-        if (!$query) {
-            return Theme::scope('search')
-                ->render();
-        }
-
-        $title = __('Search result for: ":query"', compact('query'));
-
-        SeoHelper::setTitle($title)
-            ->setDescription($title);
-
-        $posts = $postRepository->getSearch($query, 0, 5);
-
-        // Theme::breadcrumb()
-        //     ->add(__('Home'), route('public.index'))
-        //     ->add($title, route('public.search'));
-
-        $comment = $posts->total() . __('kết quả được tìm thấy') .
-            "<strong class='text-uppercase color-pri font20'> $query </strong>";
-
-        return Theme::scope('search', compact(['posts', 'comment']))
-            ->render();
-    }
-
     public function getNewPosts()
     {
         $data['posts'] = $this->postInterface->getOnlyFeaturedByCategoryCreated(15, request('limit', 5));
@@ -270,5 +238,56 @@ class ThacoController extends PublicController
             ->setData([
                 "template" => \Theme::partial('templates.showroom', $data)
             ]);
+    }
+
+    public function getResultSearch(Request $request, PostInterface $postRepository)
+    {
+        // if($request->ajax() && $request->has('cate')) {
+        //     $data = get_posts_by_category($request->input('cate'), 5);
+        //     return view("theme.main::views.components.result-search", compact('data'))->render();
+        // }
+
+        $query = $request->input('keyword');
+
+        if (!$query) {
+            return Theme::scope('search')
+                ->render();
+        }
+
+        $title = __('Search result for: ":query"', compact('query'));
+
+        SeoHelper::setTitle($title)
+            ->setDescription($title);
+
+        $posts = $postRepository->getSearch($query, 0, 5);
+
+        // Theme::breadcrumb()
+        //     ->add(__('Home'), route('public.index'))
+        //     ->add($title, route('public.search'));
+
+        $comment = $posts->total() . __('kết quả được tìm thấy') .
+            "<strong class='text-uppercase color-pri font20'> $query </strong>";
+
+        return Theme::scope('search', compact(['posts', 'comment']))
+            ->render();
+    }
+
+    public function getApiSearch(Request $request, PostInterface $postRepository)
+    {
+        // if($request->ajax() && $request->has('cate')) {
+        //     $data = get_posts_by_category($request->input('cate'), 5);
+        //     return view("theme.main::views.components.result-search", compact('data'))->render();
+        // }
+
+        if($request->ajax()) {
+            $query = $request->input('keyword');
+
+            if (!$query) {
+                return "";
+            }
+
+            $posts = $postRepository->getSearch($query, 0, 5);
+            return view("theme.main::views.components.result-search", compact('posts'))->render();
+        }
     }
 }

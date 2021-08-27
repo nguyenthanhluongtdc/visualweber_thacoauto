@@ -483,29 +483,67 @@ $(document).ready(function () {
         });
     }
 
-    if ($('.form-search').length) {
-        $('input[name=cate]').change(function () {
-            if ($(this).val().length !== 0) {
-                filter_data($(this).val());
-            }
-        });
+    // if ($('.form-search').length) {
+    //     $('input[name=cate]').change(function () {
+    //         if ($(this).val().length !== 0) {
+    //             filter_data($(this).val());
+    //         }
+    //     });
 
-        $('.trigger').trigger('change');
-    }
+    //     $('.trigger').trigger('change');
+    // }
 
-    function filter_data($value) {
-        // $('.filter_data').html('<div id="loading"></div>');
-        let cate = $value;
-        $.ajax({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            },
-            url: '/api/search',
-            type: 'get',
-            data: { cate: cate },
-            success: function (data) {
-                $('.section-content').html(data)
-            }
+    // function filter_data($value) {
+    //     // $('.filter_data').html('<div id="loading"></div>');
+    //     let cate = $value;
+    //     $.ajax({
+    //         headers: {
+    //             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    //         },
+    //         url: '/api/search',
+    //         type: 'get',
+    //         data: { cate: cate },
+    //         success: function (data) {
+    //             $('.section-content').html(data)
+    //         }
+    //     });
+    // }
+});
+
+$(document).ready(function () {
+     
+    $("#search-bar").focus(function() {
+        $('.search-input .box-popover').css('display','block');
+
+        $(this).on('keyup',function() {
+            var query = $(this).val(); 
+            $.ajax({
+               
+                url:"/api/search",
+          
+                type:"GET",
+               
+                data:{'keyword':query},
+               
+                success:function (data) {
+                    $('.search-input .box-popover').html(data)
+                }
+            })
+            // end of ajax call
         });
-    }
-})
+    })
+
+    $("#search-bar").focusout(function() {
+        setTimeout(() => {
+            $('.search-input .box-popover').css('display', 'none');
+        }, 500);
+    })
+
+    
+    $(document).on('click', 'li', function(){
+      
+        var value = $(this).text();
+        $('#country').val(value);
+        $('#country_list').html("");
+    });
+});

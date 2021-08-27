@@ -1,7 +1,5 @@
 .section-support-industry-overview {
-    // @media only screen and (max-width: 1080px){
-    //     display: none;                
-    // }
+    
     .mechandical-overview {
         
         &__boxfield {
@@ -12,12 +10,12 @@
                 margin-right: -15px;
             }
             
-            // height: 215px;
+            
             .item{
-                // height: 190px;
+                
                 position: relative;
                 .text{
-                    // background-color: aqua;
+                   
                     height: 40%;
                     position: absolute;
                     bottom: 0;
@@ -28,27 +26,7 @@
                    }
                 }
                 
-                // @media(max-width : 1720px){
-                //     height: 180px;
-                   
-                // }   
-                // @media(max-width : 1600px){
-                //     height: 160px;
-                    
-                // } 
-                // @media(max-width : 1400px){
-                //     height: 150px;
-                   
-                // } 
-                // @media(max-width : 1300px){
-                //     height: 135px;
-                   
-                // } 
-              
-                // @media(max-width : 1100px){
-                //     height: 120px;
-                   
-                // }
+         
             }
             .boxfield-item {
                 display: flex;
@@ -167,12 +145,7 @@
     @media only screen and (max-width: 1080px){
         display: block;
     .mechandical-overview {
-            &__title{
-               
-            }
-            &__desc{
-               
-            }
+           
             &__boxfield {
                 
                 .item{

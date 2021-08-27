@@ -55,6 +55,9 @@ class DistributionSystemTable extends TableAbstract
                 }
                 return Html::link(route('distribution-system.edit', $item->id), $item->name);
             })
+            ->editColumn('image', function ($item) {
+                return $this->displayThumbnail($item->image);
+            })
             ->editColumn('checkbox', function ($item) {
                 return $this->getCheckbox($item->id);
             })
@@ -80,6 +83,7 @@ class DistributionSystemTable extends TableAbstract
             ->select([
                'id',
                'name',
+               'image',
                'created_at',
                'status',
            ]);
@@ -96,6 +100,10 @@ class DistributionSystemTable extends TableAbstract
             'id' => [
                 'title' => trans('core/base::tables.id'),
                 'width' => '20px',
+            ],
+            'image'      => [
+                'title' => trans('core/base::tables.image'),
+                'width' => '70px',
             ],
             'name' => [
                 'title' => trans('core/base::tables.name'),

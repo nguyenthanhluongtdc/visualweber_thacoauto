@@ -28,10 +28,14 @@
                     
                     img{
                         width: 3.1%;
-                        margin-left: 1.7%;
-                        transform: translateY(-3.9px);
+                        margin-left: 1.65%;
+                        transform: translateY(-4.4px);
+                        @media (max-width: 1680px) {
+                            width: 2.45%;
+                            transform: translateY(-3px);
+                        }
                         @media (max-width: 1440px) {
-                            width: 2.7%;
+                            width: 2.55%;
                             transform: translateY(-3px);
                         }
                         @media (max-width: 1340px) {
@@ -155,10 +159,15 @@
     text-transform: uppercase;
     img{
         width: 4.3%;
-        margin-top: -6.5px;
+        margin-top: -8.5px;
         margin-left: 5px;
-        
-        
+        @media (max-width: 1440px) {
+            margin-top: -6.5px;
+        }
+        @media (max-width: 1440px) {
+            margin-top: -5.5px;
+            width: 4.5%;
+        }
     }
     &:hover{
         img{

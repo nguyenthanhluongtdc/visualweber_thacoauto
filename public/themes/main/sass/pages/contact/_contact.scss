@@ -512,6 +512,7 @@
                 .item{
                     display: flex;
                     margin-top: 10px;
+                   
                     @media(max-width : 1720px){
                         margin-top: 8px;
                     }
@@ -531,6 +532,7 @@
                         }
                     }
                     ion-icon{
+                       
                        font-size: 15px;
                         color: #0054a0;
                         margin-top: 5px;
@@ -538,7 +540,12 @@
                             margin-top: 7px;
                         }
                     }
-                    
+                    p{
+                        margin-top: 4px;
+                        @media(max-width : 1680px){margin-top: 3px;}
+                        @media(max-width : 1440px){margin-top: 2px;}
+                    }
+                  
                 }
             
                 

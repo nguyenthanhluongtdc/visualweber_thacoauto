@@ -58,12 +58,12 @@ class CarServiceProvider extends ServiceProvider
             ->loadRoutes(['web']);
 
         Event::listen(RouteMatched::class, function () {
-            // if (defined('LANGUAGE_MODULE_SCREEN_NAME')) {
-            //    \Language::registerModule([Car::class]);
-                    // \Language::registerModule([\Platform\Car\Models\Color::class]);
-                    // \Language::registerModule([\Platform\Car\Models\Accessory::class]);
-                    // \Language::registerModule([\Platform\Car\Models\Equipment::class]);
-            // }
+            if (defined('LANGUAGE_MODULE_SCREEN_NAME')) {
+               \Language::registerModule([Car::class]);
+                \Language::registerModule([\Platform\Car\Models\Color::class]);
+                \Language::registerModule([\Platform\Car\Models\Accessory::class]);
+                \Language::registerModule([\Platform\Car\Models\Equipment::class]);
+            }
 
 
             dashboard_menu()
@@ -140,5 +140,16 @@ class CarServiceProvider extends ServiceProvider
             }
             \Gallery::registerModule([\Platform\Car\Models\Color::class]);
         });
+        \SlugHelper::registerModule(Car::class);
+        \SlugHelper::setPrefix(Car::class, 'cars');
+
+        \SlugHelper::registerModule(\Platform\Car\Models\Color::class);
+        \SlugHelper::setPrefix(\Platform\Car\Models\Color::class, 'colors');
+
+        \SlugHelper::registerModule(\Platform\Car\Models\Accessory::class);
+        \SlugHelper::setPrefix(\Platform\Car\Models\Accessory::class, 'accessories');
+
+        \SlugHelper::registerModule(\Platform\Car\Models\Equipment::class);
+        \SlugHelper::setPrefix(\Platform\Car\Models\Equipment::class, 'equipments');
     }
 }

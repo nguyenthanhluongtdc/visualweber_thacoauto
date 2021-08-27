@@ -5,10 +5,11 @@ namespace Platform\Car\Models;
 use Platform\Base\Traits\EnumCastable;
 use Platform\Base\Enums\BaseStatusEnum;
 use Platform\Base\Models\BaseModel;
+use \Platform\Slug\Traits\SlugTrait;
 
 class Car extends BaseModel
 {
-    use EnumCastable;
+    use EnumCastable,SlugTrait;
 
     /**
      * The database table used by the model.
@@ -51,5 +52,17 @@ class Car extends BaseModel
     }
     public function brand(){
         return $this->belongsTo(\Platform\Brand\Models\Brand::class,'brand_id');
+    }
+    public function colors(){
+        return $this->hasMany(\Platform\Car\Models\Color::class,'car_id');
+    }
+    public function accessories(){
+        return $this->hasMany(\Platform\Car\Models\Accessory::class,'car_id');
+    }
+    public function equipments(){
+        return $this->belongsToMany('app_car_equipments',\Platform\Car\Models\Equipment::class,'car_id','equipment_id');
+    }
+    public function childrens(){
+        return $this->hasMany(\Platform\Car\Models\Car::class,'parent_id');
     }
 }

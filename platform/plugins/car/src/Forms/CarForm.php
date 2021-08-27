@@ -48,10 +48,7 @@ class CarForm extends FormAbstract
                 'attr'       => [
                     'class' => 'form-control select-full',
                 ],
-                'choices'    => [
-                    'gasoline' => trans('Xăng'),
-                    'petroleum' => trans('Dầu'),
-                ],
+                'choices'    => config('base.fuel_types',[]),
             ])
             ->add('gear', 'customSelect', [
                 'label'      => trans('Gear type'),
@@ -59,10 +56,7 @@ class CarForm extends FormAbstract
                 'attr'       => [
                     'class' => 'form-control select-full',
                 ],
-                'choices'    => [
-                    'automatic_transmission' => trans('Tự động'),
-                    'manual_transmission' => trans('Số sàn'),
-                ],
+                'choices'    => config('base.gears',[]),
             ])
             ->add('fee', 'number', [
                 'label'      => trans('Fee'),
@@ -96,7 +90,7 @@ class CarForm extends FormAbstract
             ->add('brand_id', 'customSelect', [
                 'label'      => trans('Brands'),
                 'label_attr' => ['class' => 'control-label'],
-                'choices'    => get_brands(),
+                'choices'    => get_brands()->pluck('name','id')->prepend('NULL','')->toArray(),
             ])
             ->add('vehicle_id', 'customSelect', [
                 'label'      => trans('Vehicle'),
@@ -104,7 +98,7 @@ class CarForm extends FormAbstract
                 'attr'       => [
                     'class' => 'form-control select-full',
                 ],
-                'choices'    => \Platform\Vehicle\Models\Vehicle::pluck('name','id')->put('','NULL')->toArray(),
+                'choices'    => \Platform\Vehicle\Models\Vehicle::pluck('name','id')->prepend('NULL','')->toArray(),
             ])
             ->add('parent_id', 'customSelect', [
                 'label'      => trans('Parent'),
@@ -112,7 +106,7 @@ class CarForm extends FormAbstract
                 'attr'       => [
                     'class' => 'form-control select-full',
                 ],
-                'choices'    => \Platform\Car\Models\Car::whereNull('parent_id')->pluck('name','id')->put('','NULL')->toArray(),
+                'choices'    => \Platform\Car\Models\Car::whereNull('parent_id')->pluck('name','id')->prepend('NULL','')->toArray(),
             ])
             ->add('image', 'mediaImage', [
                 'label'      => __('Image'),

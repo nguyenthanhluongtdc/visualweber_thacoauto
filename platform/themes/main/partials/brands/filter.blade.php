@@ -6,6 +6,9 @@
         <ul class="car-model font18 font-pri ">
             <li class="car-model__item {{ request('car_line', '') == '' ? 'active' : ''  }}">
                 <span>{{ __('Tất cả') }}</span>
+                <a href="{{route('public.brand.index',[
+                        'slug' => $slug->key,
+                    ])}}" class="text-uppercase">{{ __('Tất cả') }}</a>
             </li>
             @foreach (get_vehicles($slug ? $slug->key : null) ?? collect() as $item)
                 <li class="car-model__item" {{ request('car_line', '') == $item->id ? 'active' : ''  }}>
@@ -26,7 +29,10 @@
             <div class="car-filter--top">
                 <ul class="car-model font18 font-pri car-model">
                     <li class="car-model__item {{ request('car_line', '') == '' ? 'active' : ''  }}">
-                        <span>{{ __('Tất cả') }}</span>
+                        <a href="{{route('public.brand.index',[
+                        'slug' => $slug->key,
+                        'vehicle'=>$item->slug
+                        ])}}" class="text-uppercase">{{ $item->name }}</a>
                     </li>
                     @foreach (get_vehicles($slug ? $slug->key : null) ?? collect() as $item)
                         <li class="car-model__item" {{ request('car_line', '') == $item->id ? 'active' : ''  }}>

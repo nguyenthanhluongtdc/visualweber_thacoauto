@@ -65,6 +65,6 @@ if (!function_exists('get_car_by_id')) {
    {
       return app(CarInterface::class)->getFirstBy([
          "id" => $id
-      ]);
+      ], ['*'], ['childrens', 'brand', 'colors', 'accessories', 'equipments']);
    }
 }

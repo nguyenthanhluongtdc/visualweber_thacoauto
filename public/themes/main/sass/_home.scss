@@ -98,7 +98,7 @@
   justify-content: space-between;
   position: relative;
   height: 120px;
-  
+ 
   #hours {
     appearance: none;
     -webkit-appearance: none;
@@ -110,12 +110,13 @@
     left: 16%;
     z-index: 2;
     display: block;
-    width: 5px;
+    width: 10px;
     text-align: right;
     font-size: 20px;
     overflow-y: auto;
     overflow-x: hidden;
-    @media (max-width: 1680px) {left: 17%;}
+    border-radius: 5px;
+    @media (max-width: 1680px) {left: 17%; height: 185%;}
     @media (max-width: 1440px) {left: 20%;}
     @media (max-width: 1300px) {left: 20%;}
     .logo-frame {
@@ -138,6 +139,7 @@
     font-size: 20px;
     overflow-x: clip;
     position: absolute;
+   
     .cell-item {
       display: flex;
       align-items: center;
@@ -572,10 +574,10 @@
             height: calc(75%);
           }
           @include maxWidth(768) {
-            height: calc(70%);
+            height: calc(80%);
           }
           @include maxWidth(600) {
-            height: calc(62%);
+            height: calc(72%);
           }
           align-items: inherit;
           #hours {
@@ -588,11 +590,14 @@
             @media (max-width: 660px) {
               left: 4%;
             }
-            @media (max-width: 480px) {
+            @media (max-width: 500px) {
               left: 7%;
             }
+            @media (max-width: 400px) {
+              left: 1%;
+            }
             @media (max-width: 350px) {
-              left: 11%;
+              left: 5%;
             }
             @include maxWidth(1080) {
               &::-webkit-scrollbar {
@@ -660,7 +665,7 @@
                   // line-height: 1.25;
                 }
                 @include maxWidth(400) {
-                  width: 2.7rem;
+                  width: 2rem;
                  }
               }
               span{

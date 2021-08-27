@@ -1,3 +1,7 @@
+
+<h2 class=" mt-2 title font-pri-bold font50 fontmb-medium p-0 text-uppercase text-center fontmb-large">
+    {{ $post->name }}
+</h2>
 <div class="gallery-detail" id="gallery">
     <div class="gallery">
         @if (!empty($galleries = gallery_meta_data($post)))
@@ -21,24 +25,7 @@
 
                 @endforeach
         @endif
-    {{-- <div class="swiper-container gallery-swiper">
-        <div class="swiper-wrapper">
-            @if (!empty($galleries = gallery_meta_data($post)))
-                @foreach ($galleries as $gallery)
-                <div class="swiper-slide">
-                    <a href="{{ RvMedia::getImageUrl(Arr::get($gallery, 'img')) }}" data-fancybox="images">
-                        <img loading="lazy" src="{{ RvMedia::getImageUrl(Arr::get($gallery, 'img')) }}" />
-                    </a>
-                </div>
-                @endforeach
-            @endif
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
-    </div> --}}
 </div>
-
 <script>
     var swiper = new Swiper(".gallery-swiper", {
       pagination: {

@@ -1,6 +1,7 @@
 
 @if(in_array($post->format_type, ['gallery', 'video']))
-{!!render_media_gallery($post)!!}
+{{-- {!!render_media_gallery($post)!!} --}}
+@includeIf("theme.main::views.gallery-detail")
 @else
 {!! do_shortcode('[filter-media category="' . isset($category) ? ($category->id ?? '') : '' . '"][/filter-media]') !!}
 <div class="post-container container-remake Lineheight-Regular overflow-x-hidden">

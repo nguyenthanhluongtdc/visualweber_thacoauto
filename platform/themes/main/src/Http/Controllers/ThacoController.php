@@ -286,7 +286,7 @@ class ThacoController extends PublicController
                 return "";
             }
 
-            $posts = $postRepository->getSearch($query, 0, 5);
+            $posts = $postRepository->getSearch($query);
             return view("theme.main::views.components.result-search", compact('posts'))->render();
         }
     }

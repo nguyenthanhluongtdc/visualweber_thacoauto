@@ -5,8 +5,10 @@
                 <h2 class="title font-pri-bold font60 text-uppercase">
                     {{ __("News") }}
                 </h2>
-
-                <a href="{{ url('truyen-thong') }}" title="{!!__('Readmore')!!}" class="read-moree text-dark font20 font-pri"> {!!__('Readmore')!!} <img width="" height=""
+                @php
+                    $categoryNews = get_category_by_id(theme_option('default_category_news'));
+                @endphp
+                <a href="{{ is_plugin_active('blog') ? ($categoryNews ? $categoryNews->url : '') : '' }}" title="{!!__('Readmore')!!}" class="read-moree text-dark font20 font-pri"> {!!__('Readmore')!!} <img width="" height=""
                         src="{{Theme::asset()->url('images/mechandical/chevron-double-right.svg')}}" alt="" /></a>
             </div>
 

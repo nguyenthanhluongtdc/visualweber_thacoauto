@@ -581,18 +581,18 @@
           #hours {
             width: 20%;
             height: 100%;
-            left: -7%;
-            @media (max-width: 786px) {
-              left: -5%;
-            }
+            left: 0;
+            // @media (max-width: 786px) {
+            //   left: -5%;
+            // }
             @media (max-width: 660px) {
-              left: -1.5%;
+              left: 2%;
             }
-            @media (max-width: 420px) {
-              left: 3%;
+            @media (max-width: 480px) {
+              left: 5%;
             }
             @media (max-width: 350px) {
-              left: 6.5%;
+              left: 11%;
             }
             @include maxWidth(1080) {
               &::-webkit-scrollbar {

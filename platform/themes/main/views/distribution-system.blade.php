@@ -22,7 +22,7 @@
                 </form>
             </div>
             <div data-aos="zoom-in" data-aos-duration="2500" class="branch-wrap">
-                <img class="branch-background-image" src="{{Theme::asset()->url('images/distribution/background.jpg')}}"
+                <img loading="lazy" class="branch-background-image" src="{{Theme::asset()->url('images/distribution/background.jpg')}}"
                     alt="">
                 <div class="branch-background-blur"></div>
                 <div class="left">
@@ -54,7 +54,7 @@
                     <div class="img-container">
                         <div class="skewed">
                             <a href="{{$posts[0]->url}}">
-                                <img src="{{ Storage::disk('public')->exists($posts[0]->image) ? get_object_image($posts[0]->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Tin tức">
+                                <img loading="lazy" src="{{ Storage::disk('public')->exists($posts[0]->image) ? get_object_image($posts[0]->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Tin tức">
                             </a>
                         </div>
                     </div>
@@ -92,7 +92,7 @@
                         <div class="img-container">
                             <div class="skewed">
                                 <a href="{{$posts[2]->url}}">
-                                    <img src="{{ Storage::disk('public')->exists($posts[2]->image) ? get_object_image($posts[2]->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Tin tức">
+                                    <img loading="lazy" src="{{ Storage::disk('public')->exists($posts[2]->image) ? get_object_image($posts[2]->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Tin tức">
                                 </a>
                             </div>
                         </div>
@@ -115,7 +115,7 @@
                     <div class="img-container">
                         <div class="skewed">
                             <a href="{{$posts[3]->url}}">
-                                <img src="{{ Storage::disk('public')->exists($posts[3]->image) ? get_object_image($posts[3]->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Tin tức">
+                                <img loading="lazy" src="{{ Storage::disk('public')->exists($posts[3]->image) ? get_object_image($posts[3]->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Tin tức">
                             </a>
                         </div>
                     </div>
@@ -147,7 +147,7 @@
                 <div class="img-container">
                     <div class="skewed">
                         <a href="{{$posts[0]->url}}">
-                            <img src="{{ Storage::disk('public')->exists($posts[0]->image) ? get_object_image($posts[0]->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Tin tức">
+                            <img loading="lazy" src="{{ Storage::disk('public')->exists($posts[0]->image) ? get_object_image($posts[0]->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Tin tức">
                         </a>
                     </div>
                 </div>
@@ -171,7 +171,7 @@
                 <div class="img-container">
                     <div class="skewed">
                         <a href="{{$posts[1]->url}}">
-                            <img src="{{ Storage::disk('public')->exists($posts[1]->image) ? get_object_image($posts[1]->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Tin tức">
+                            <img loading="lazy" src="{{ Storage::disk('public')->exists($posts[1]->image) ? get_object_image($posts[1]->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Tin tức">
                         </a>
                     </div>
                 </div>
@@ -195,7 +195,7 @@
                 <div class="img-container">
                     <div class="skewed">
                         <a href="{{$posts[2]->url}}">
-                            <img src="{{ Storage::disk('public')->exists($posts[2]->image) ? get_object_image($posts[2]->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Tin tức">
+                            <img loading="lazy" src="{{ Storage::disk('public')->exists($posts[2]->image) ? get_object_image($posts[2]->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Tin tức">
                         </a>
                     </div>
                 </div>
@@ -225,9 +225,9 @@
             <div class="library-header">
                 <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 fontmb-middle">{{ __("thư viện") }}</h1>
                 <div class="library-button">
-                    <img class="customPrevBtn" src="{{Theme::asset()->url('images/distribution/icon_left.png')}}"
+                    <img loading="lazy" class="customPrevBtn" src="{{Theme::asset()->url('images/distribution/icon_left.png')}}"
                         alt="">
-                    <img class="customNextBtn" src="{{Theme::asset()->url('images/distribution/icon_right.png')}}"
+                    <img loading="lazy" class="customNextBtn" src="{{Theme::asset()->url('images/distribution/icon_right.png')}}"
                         alt="">
                 </div>
             </div>
@@ -243,7 +243,7 @@
                     <div class="img-container">
                         <div class="skewed">
                             <a data-fancybox data-type="ajax" data-src="{{$library->url}}" data-filter="#gallery" href="javascript:;">
-                                <img src="{{ Storage::disk('public')->exists($library->image) ? get_object_image($library->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="{{$library->name}}">
+                                <img loading="lazy" src="{{ Storage::disk('public')->exists($library->image) ? get_object_image($library->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="{{$library->name}}">
                             </a>
                         </div>
                     </div>

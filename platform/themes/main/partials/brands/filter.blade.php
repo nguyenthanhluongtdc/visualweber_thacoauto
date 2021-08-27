@@ -57,7 +57,7 @@
             <div class="car-filter--bottom position-relative">
                 <button type="button" class="modal-button btn-join">
                     <span class="frame text-uppercase">
-                        <img src="{{Theme::asset()->url('images/business/brand-detail/filter.png')}}" alt="filter icon">
+                        <img loading="lazy" src="{{Theme::asset()->url('images/business/brand-detail/filter.png')}}" alt="filter icon">
                         {{ __("BỘ LỌC NÂNG CAO") }}
                     </span>
                 </button>
@@ -72,7 +72,7 @@
                                 <div class="col-sm-4 col-6 item">
                                     <a href="" class="col-filter">
                                         <div class="symbol">
-                                            <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
+                                            <img loading="lazy" src="{{Theme::asset()->url('images/setting.png')}}" alt="">
                                         </div>
                                         <div class="name font25">
                                             86Hp
@@ -82,7 +82,7 @@
                                 <div class="col-sm-4 col-6 item">
                                     <a href="" class="col-filter">
                                         <div class="symbol">
-                                            <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
+                                            <img loading="lazy" src="{{Theme::asset()->url('images/setting.png')}}" alt="">
                                         </div>
                                         <div class="name font25">
                                             90Hp
@@ -92,7 +92,7 @@
                                 <div class="col-sm-4 col-6 item">
                                     <a href="" class="col-filter">
                                         <div class="symbol">
-                                            <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
+                                            <img loading="lazy" src="{{Theme::asset()->url('images/setting.png')}}" alt="">
                                         </div>
                                         <div class="name font25">
                                             100Hp
@@ -102,7 +102,7 @@
                                 <div class="col-sm-4 col-6 item">
                                     <a href="" class="col-filter">
                                         <div class="symbol">
-                                            <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
+                                            <img loading="lazy" src="{{Theme::asset()->url('images/setting.png')}}" alt="">
                                         </div>
                                         <div class="name font25">
                                             110Hp
@@ -112,7 +112,7 @@
                                 <div class="col-sm-4 col-6 item">
                                     <a href="" class="col-filter">
                                         <div class="symbol">
-                                            <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
+                                            <img loading="lazy" src="{{Theme::asset()->url('images/setting.png')}}" alt="">
                                         </div>
                                         <div class="name font25">
                                             120Hp
@@ -122,7 +122,7 @@
                                 <div class="col-sm-4 col-6 item">
                                     <a href="" class="col-filter">
                                         <div class="symbol">
-                                            <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
+                                            <img loading="lazy" src="{{Theme::asset()->url('images/setting.png')}}" alt="">
                                         </div>
                                         <div class="name font25">
                                             130Hp
@@ -140,7 +140,7 @@
                             <div class="col-sm-4 col-6 item">
                                 <a href="" class="col-filter">
                                     <div class="symbol">
-                                        <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
+                                        <img loading="lazy" src="{{Theme::asset()->url('images/setting.png')}}" alt="">
                                     </div>
                                     <div class="name2 font25">
                                         Đèn pha tự động
@@ -150,7 +150,7 @@
                             <div class="col-sm-4 col-6 item">
                                 <a href="" class="col-filter">
                                     <div class="symbol">
-                                        <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
+                                        <img loading="lazy" src="{{Theme::asset()->url('images/setting.png')}}" alt="">
                                     </div>
                                     <div class="name2 font25">
                                         Đèn cửa kính mạ Crom
@@ -160,7 +160,7 @@
                             <div class="col-sm-4 col-6 item">
                                 <a href="" class="col-filter">
                                     <div class="symbol">
-                                        <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
+                                        <img loading="lazy" src="{{Theme::asset()->url('images/setting.png')}}" alt="">
                                     </div>
                                     <div class="name2 font25">
                                         Gạt mưa tự động
@@ -170,7 +170,7 @@
                             <div class="col-sm-4 col-6 item">
                                 <a href="" class="col-filter">
                                     <div class="symbol">
-                                        <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
+                                        <img loading="lazy" src="{{Theme::asset()->url('images/setting.png')}}" alt="">
                                     </div>
                                     <div class="name2 font25">
                                         Đèn chào
@@ -180,7 +180,7 @@
                             <div class="col-sm-4 col-6 item">
                                 <a href="" class="col-filter">
                                     <div class="symbol">
-                                        <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
+                                        <img loading="lazy" src="{{Theme::asset()->url('images/setting.png')}}" alt="">
                                     </div>
                                     <div class="name2 font25">
                                         Hệ thống chống trộm
@@ -190,7 +190,7 @@
                             <div class="col-sm-4 col-6 item">
                                 <a href="" class="col-filter">
                                     <div class="symbol">
-                                        <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
+                                        <img loading="lazy" src="{{Theme::asset()->url('images/setting.png')}}" alt="">
                                     </div>
                                     <div class="name2 font25">
                                         Túi khí
@@ -209,7 +209,7 @@
                             <div class="col-sm-4 col-6 item">
                                 <a href="" class="col-filter">
                                     <div class="symbol">
-                                        <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
+                                        <img loading="lazy" src="{{Theme::asset()->url('images/setting.png')}}" alt="">
                                     </div>
                                     <div class="name font25">
                                         Đen
@@ -219,7 +219,7 @@
                             <div class="col-sm-4 col-6 item">
                                 <a href="" class="col-filter active">
                                     <div class="symbol">
-                                        <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
+                                        <img loading="lazy" src="{{Theme::asset()->url('images/setting.png')}}" alt="">
                                     </div>
                                     <div class="name font25">
                                         Trắng
@@ -229,7 +229,7 @@
                             <div class="col-sm-4 col-6 item">
                                 <a href="" class="col-filter">
                                     <div class="symbol">
-                                        <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
+                                        <img loading="lazy" src="{{Theme::asset()->url('images/setting.png')}}" alt="">
                                     </div>
                                     <div class="name font25">
                                         Xám
@@ -248,7 +248,7 @@
                             <div class="col-sm-4 col-6 item">
                                 <a href="" class="col-filter">
                                     <div class="symbol">
-                                        <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
+                                        <img loading="lazy" src="{{Theme::asset()->url('images/setting.png')}}" alt="">
                                     </div>
                                     <div class="name font25">
                                         1.8
@@ -258,7 +258,7 @@
                             <div class="col-sm-4 col-6 item">
                                 <a href="" class="col-filter active">
                                     <div class="symbol">
-                                        <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
+                                        <img loading="lazy" src="{{Theme::asset()->url('images/setting.png')}}" alt="">
                                     </div>
                                     <div class="name font25">
                                         2.4
@@ -268,7 +268,7 @@
                             <div class="col-sm-4 col-6 item">
                                 <a href="" class="col-filter">
                                     <div class="symbol">
-                                        <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
+                                        <img loading="lazy" src="{{Theme::asset()->url('images/setting.png')}}" alt="">
                                     </div>
                                     <div class="name font25">
                                         3.0
@@ -287,7 +287,7 @@
                             <div class="col-sm-4 col-6 item">
                                 <a href="" class="col-filter active">
                                     <div class="symbol">
-                                        <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
+                                        <img loading="lazy" src="{{Theme::asset()->url('images/setting.png')}}" alt="">
                                     </div>
                                     <div class="name font25">
                                         Xăng
@@ -297,7 +297,7 @@
                             <div class="col-sm-4 col-6 item">
                                 <a href="" class="col-filter">
                                     <div class="symbol">
-                                        <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
+                                        <img loading="lazy" src="{{Theme::asset()->url('images/setting.png')}}" alt="">
                                     </div>
                                     <div class="name font25">
                                         Dầu
@@ -316,7 +316,7 @@
                             <div class="col-sm-4 col-6 item">
                                 <a href="" class="col-filter active">
                                     <div class="symbol">
-                                        <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
+                                        <img loading="lazy" src="{{Theme::asset()->url('images/setting.png')}}" alt="">
                                     </div>
                                     <div class="name font25">
                                         Số sàn
@@ -326,7 +326,7 @@
                             <div class="col-sm-4 col-6 item">
                                 <a href="" class="col-filter">
                                     <div class="symbol">
-                                        <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
+                                        <img loading="lazy" src="{{Theme::asset()->url('images/setting.png')}}" alt="">
                                     </div>
                                     <div class="name font25">
                                         Tự động

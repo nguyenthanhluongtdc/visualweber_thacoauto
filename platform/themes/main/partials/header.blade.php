@@ -46,7 +46,7 @@
             <div class="logo">
                 <a href="{{ route('public.single') }}" class="page-logo d-flex">
                     @if (theme_option('logo'))
-                    <img src="{{ RvMedia::getImageUrl(theme_option('logo')) }}" alt="{{ theme_option('site_title') }}"
+                    <img loading="lazy" src="{{ RvMedia::getImageUrl(theme_option('logo')) }}" alt="{{ theme_option('site_title') }}"
                         height="17">
                     @endif
                 </a>
@@ -68,7 +68,7 @@
             @endphp
             <div class="search-language">
                 <div class="search">
-                    <a href="#search"><img src="{{ Theme::asset()->url('images/main/search.png') }}" alt=""></a>
+                    <a href="#search"><img loading="lazy" src="{{ Theme::asset()->url('images/main/search.png') }}" alt=""></a>
                 </div>
                 <div class="language">
                     <ul class="nav-lang">
@@ -109,7 +109,7 @@
                 <div class="logo">
                     <a href="{{ route('public.single') }}" class="page-logo">
                         @if (theme_option('logo'))
-                        <img src="{{ RvMedia::getImageUrl(theme_option('logo')) }}"
+                        <img loading="lazy" src="{{ RvMedia::getImageUrl(theme_option('logo')) }}"
                             alt="{{ theme_option('site_title') }}" height="17">
                         @endif
                     </a>
@@ -155,7 +155,7 @@
     </div>
 
     <script>
-       
+
     </script>
 
     <div id="row__empty"></div>

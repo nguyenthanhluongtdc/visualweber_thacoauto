@@ -11,7 +11,7 @@
                     <div class="section-card__row row">
                         <div class="section-card__row__picture col-lg-8">
                             <a href="#" title="">
-                                <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/assemble/assemble1.jpg')}}" alt="" />
+                                <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/manufacturing/assemble/assemble1.jpg')}}" alt="" />
                             </a>
                         </div>
 
@@ -48,7 +48,7 @@
                     <div class="section-card__row row">
                         <div class="section-card__row__picture col-lg-8">
                             <a href="#" title="">
-                                <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/assemble/assemble2.jpg')}}" alt="" />
+                                <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/manufacturing/assemble/assemble2.jpg')}}" alt="" />
                             </a>
                         </div>
 
@@ -84,7 +84,7 @@
                     <div class="section-card__row row">
                         <div class="section-card__row__picture col-lg-8">
                             <a href="#" title="">
-                                <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/assemble/assemble3.jpg')}}" alt="" />
+                                <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/manufacturing/assemble/assemble3.jpg')}}" alt="" />
                             </a>
                         </div>
 
@@ -120,7 +120,7 @@
                     <div class="section-card__row row">
                         <div class="section-card__row__picture col-lg-8">
                             <a href="#" title="">
-                                <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/assemble/assemble4.jpg')}}" alt="" />
+                                <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/manufacturing/assemble/assemble4.jpg')}}" alt="" />
                             </a>
                         </div>
 
@@ -156,7 +156,7 @@
                     <div class="section-card__row row">
                         <div class="section-card__row__picture col-lg-8">
                             <a href="#" title="">
-                                <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/assemble/assemble5.jpg')}}" alt="" />
+                                <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/manufacturing/assemble/assemble5.jpg')}}" alt="" />
                             </a>
                         </div>
 
@@ -192,7 +192,7 @@
                     <div class="section-card__row row">
                         <div class="section-card__row__picture col-lg-8">
                             <a href="#" title="">
-                                <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/assemble/assemble4.jpg')}}" alt="" />
+                                <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/manufacturing/assemble/assemble4.jpg')}}" alt="" />
                             </a>
                         </div>
 
@@ -231,7 +231,7 @@
     <div class="box-node-left">
         <div class="row item">
             <div class="box-symbol">
-                <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/nodelefttwo.png')}}" alt="" />
+                <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/manufacturing/nodelefttwo.png')}}" alt="" />
             </div>
 
             <div class="box-text font25 font-pri-bold">
@@ -240,7 +240,7 @@
         </div>
         <div class="row item">
             <div class="box-symbol">
-                <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/nodeleftone.png')}}" alt="" />
+                <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/manufacturing/nodeleftone.png')}}" alt="" />
             </div>
 
             <div class="box-text font25 font-pri-bold ">

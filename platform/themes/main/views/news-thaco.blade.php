@@ -10,7 +10,7 @@
         <div class="item">
             <div class="item-img">
                 <div class="post-thumbnail">
-                    <a href=""><img src="{{ get_object_image($post->image) }}" alt="Bản tin Thaco"></a>
+                    <a href=""><img loading="lazy" src="{{ get_object_image($post->image) }}" alt="Bản tin Thaco"></a>
                 </div>
             </div>
             <div class="item-content">
@@ -43,8 +43,8 @@
             <div class="item-shareholder">
                 <div class="item-wrap">
                     <div class="left">
-                        <img src="{{ Theme::asset()->url('images/main/up.png') }}" alt="" class="up-show">
-                        <img src="{{ Theme::asset()->url('images/main/down.png') }}" alt="" class="down-hide">
+                        <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="" class="up-show">
+                        <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="" class="down-hide">
                     </div>
                     <div class="mid">
                         <h5 class="title font-pri-bold font25 color-gray">

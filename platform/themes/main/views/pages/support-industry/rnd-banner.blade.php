@@ -22,27 +22,27 @@
             @foreach(has_field($page, 'repeater_banner_research_development') as $item)
             <li class="item">
                 <div class="symbol">
-                   <img src="{{get_image_url(has_sub_field($item,'icon_counter_banner_research_development'))}}" alt="">
+                   <img loading="lazy" src="{{get_image_url(has_sub_field($item,'icon_counter_banner_research_development'))}}" alt="">
                 </div>
 
                 <div class="description counter">
-                   
+
                     <strong class="number counter-value"data-count="{!! has_sub_field($item, 'number_counter_banner_research_development') ? has_sub_field($item, 'number_counter_banner_research_development') : '' !!}" data-speed="500">
                         0
                     </strong>
 
-                   
+
                     <span class="text">
                         {!! has_sub_field($item, 'text_counter_banner_research_development') ? has_sub_field($item, 'text_counter_banner_research_development') : '' !!}
                     </span>
-            
+
                 </div>
             </li>
             @endforeach
             @endif
             {{-- <li class="item">
                 <div class="symbol">
-                    <img src="{{Theme::asset()->url('images/mechandical/country.png')}}" alt="">
+                    <img loading="lazy" src="{{Theme::asset()->url('images/mechandical/country.png')}}" alt="">
                 </div>
 
                 <div class="description counter">
@@ -61,7 +61,7 @@
 
             {{-- <li class="item">
                 <div class="symbol">
-                    <img src="{{Theme::asset()->url('images/mechandical/staff.png')}}" alt="">
+                    <img loading="lazy" src="{{Theme::asset()->url('images/mechandical/staff.png')}}" alt="">
                 </div>
 
                 <div class="description counter">
@@ -77,10 +77,10 @@
                     @endif
                 </div>
             </li> --}}
-{{-- 
+{{--
             <li class="item">
                 <div class="symbol">
-                    <img src="{{Theme::asset()->url('images/mechandical/factory.png')}}" alt="">
+                    <img loading="lazy" src="{{Theme::asset()->url('images/mechandical/factory.png')}}" alt="">
                 </div>
 
                 <div class="description counter">
@@ -97,7 +97,7 @@
                 </div>
             </li> --}}
         </ul>
-        
+
     </div>
 </div>
 
@@ -126,7 +126,7 @@
             @foreach(has_field($page, 'repeater_banner_research_development') as $item)
             <li class="item">
                 <div class="symbol">
-                    <img src="{{get_image_url(has_sub_field($item,'icon_counter_banner_research_development'))}}" alt="">
+                    <img loading="lazy" src="{{get_image_url(has_sub_field($item,'icon_counter_banner_research_development'))}}" alt="">
                 </div>
 
                 <div class="description counter">
@@ -147,7 +147,7 @@
             @endif
             {{-- <li class="item">
                 <div class="symbol">
-                    <img src="{{Theme::asset()->url('images/mechandical/country.png')}}" alt="">
+                    <img loading="lazy" src="{{Theme::asset()->url('images/mechandical/country.png')}}" alt="">
                 </div>
 
                 <div class="description counter">
@@ -166,7 +166,7 @@
 
             <li class="item">
                 <div class="symbol">
-                    <img src="{{Theme::asset()->url('images/mechandical/staff.png')}}" alt="">
+                    <img loading="lazy" src="{{Theme::asset()->url('images/mechandical/staff.png')}}" alt="">
                 </div>
 
                 <div class="description counter">
@@ -185,7 +185,7 @@
 
             <li class="item">
                 <div class="symbol">
-                    <img src="{{Theme::asset()->url('images/mechandical/factory.png')}}" alt="">
+                    <img loading="lazy" src="{{Theme::asset()->url('images/mechandical/factory.png')}}" alt="">
                 </div>
 
                 <div class="description counter">
@@ -202,6 +202,6 @@
                 </div>
             </li> --}}
         </ul>
-        
+
     </div>
 </div>

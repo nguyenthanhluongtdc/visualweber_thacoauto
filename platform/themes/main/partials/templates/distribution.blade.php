@@ -7,7 +7,7 @@
                 @if (has_field($item, 'danh_sach_thuong_hieu_he_thong_phan_phoi'))
                     @forelse (get_field($item, 'danh_sach_thuong_hieu_he_thong_phan_phoi') as $child)
                         <div class="logo-item">
-                            <img src="{{ has_sub_field($child, 'hinh_anh') ? get_image_url(get_sub_field($child, 'hinh_anh')) : '' }}" alt="{{ has_sub_field($child, 'ten') ? get_sub_field($child, 'ten') : '' }}">
+                            <img loading="lazy" src="{{ has_sub_field($child, 'hinh_anh') ? get_image_url(get_sub_field($child, 'hinh_anh')) : '' }}" alt="{{ has_sub_field($child, 'ten') ? get_sub_field($child, 'ten') : '' }}">
                         </div>
                     @empty
                         <span class="font-pri font20">{{ __("Nội dung đang được cập nhật") }}</span>

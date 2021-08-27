@@ -42,7 +42,7 @@
                                         @foreach (get_field($page, 'send_to_list') as $key => $item)
                                         <option value="{{ get_sub_field($item, 'send_to_item') }}">{{ get_sub_field($item, 'send_to_item') }}</option>
                                         @endforeach
-                                        
+
                                         @endif
                                     </select>
                                 </div>
@@ -101,16 +101,16 @@
 
                             </div>
 
-                           
+
                             {!! Form::close() !!}
 
                         </div>
-                       
+
                     </div>
 
                     <div class="col-md-6 pl-0">
                         <div class="img-form">
-                            <img src="{{ RvMedia::getImageUrl(get_field($page, 'img_contact_top'))}}" alt="contact-img">
+                            <img loading="lazy" src="{{ RvMedia::getImageUrl(get_field($page, 'img_contact_top'))}}" alt="contact-img">
                         </div>
                     </div>
                 </div>
@@ -227,7 +227,7 @@
                 <div class="image">
                     <div class="post-thumbnail">
                         @if (has_sub_field($item, 'img_contact_office'))
-                        <a href=""><img src="{{ RvMedia::getImageUrl(get_sub_field($item, 'img_contact_office'))}}"
+                        <a href=""><img loading="lazy" src="{{ RvMedia::getImageUrl(get_sub_field($item, 'img_contact_office'))}}"
                                 alt="img-detail"></a>
                         @endif
                     </div>
@@ -286,7 +286,7 @@
             <div class="col-md-4 img-detail">
                 <div class="image">
                     <div class="post-thumbnail">
-                        <a href=""> <img src="{{ Theme::asset()->url('images/contact/detail-contact2.png') }}"
+                        <a href=""> <img loading="lazy" src="{{ Theme::asset()->url('images/contact/detail-contact2.png') }}"
                                 alt="img-detail"></a>
                     </div>
                 </div>
@@ -325,7 +325,7 @@
             <div class="col-md-4 img-detail">
                 <div class="image">
                     <div class="post-thumbnail">
-                        <a href=""><img src="{{ Theme::asset()->url('images/contact/detail-contcact1.png') }}"
+                        <a href=""><img loading="lazy" src="{{ Theme::asset()->url('images/contact/detail-contcact1.png') }}"
                                 alt="img-detail"></a>
                     </div>
                 </div>
@@ -362,7 +362,7 @@
                 <div class="image">
                     <div class="post-thumbnail">
 
-                        <a href=""><img src="{{ Theme::asset()->url('images/contact/detail-contcact1.png') }}"
+                        <a href=""><img loading="lazy" src="{{ Theme::asset()->url('images/contact/detail-contcact1.png') }}"
                                 alt="img-detail"></a>
                     </div>
                 </div>
@@ -404,7 +404,7 @@
             <div class="col-md-4 img-detail">
                 <div class="image">
                     <div class="post-thumbnail">
-                        <a href=""> <img src="{{ Theme::asset()->url('images/contact/detail-contact2.png') }}"
+                        <a href=""> <img loading="lazy" src="{{ Theme::asset()->url('images/contact/detail-contact2.png') }}"
                                 alt="img-detail"></a>
                     </div>
                 </div>
@@ -443,7 +443,7 @@
             <div class="col-md-4 img-detail">
                 <div class="image">
                     <div class="post-thumbnail">
-                        <a href=""><img src="{{ Theme::asset()->url('images/contact/detail-contcact1.png') }}"
+                        <a href=""><img loading="lazy" src="{{ Theme::asset()->url('images/contact/detail-contcact1.png') }}"
                                 alt="img-detail"></a>
                     </div>
                 </div>

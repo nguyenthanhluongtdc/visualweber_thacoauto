@@ -5,42 +5,42 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <a class="list-car__link" href="#">
-                            <img src="{{Theme::asset()->url('images/business/brand-detail/car-item-1.png')}}" alt="" class="list-car__img">
+                            <img loading="lazy" src="{{Theme::asset()->url('images/business/brand-detail/car-item-1.png')}}" alt="" class="list-car__img">
                             <h3 class="list-car__title font-pri font18"><span>KIA Soluto</span></h3>
                             <div class="bottom-line"></div>
                         </a>
                     </div>
                     <div class="swiper-slide active">
                         <a class="list-car__link" href="#">
-                            <img src="{{Theme::asset()->url('images/business/brand-detail/car-item-2.png')}}" alt="" class="list-car__img">
+                            <img loading="lazy" src="{{Theme::asset()->url('images/business/brand-detail/car-item-2.png')}}" alt="" class="list-car__img">
                             <h3 class="list-car__title font-pri font18"><span>KIA All-New Cerato</span></h3>
                             <div class="bottom-line active"></div>
                         </a>
                     </div>
                     <div class="swiper-slide">
                         <a class="list-car__link" href="#">
-                            <img src="{{Theme::asset()->url('images/business/brand-detail/car-item-3.png')}}" alt="" class="list-car__img">
+                            <img loading="lazy" src="{{Theme::asset()->url('images/business/brand-detail/car-item-3.png')}}" alt="" class="list-car__img">
                             <h3 class="list-car__title font-pri font18 active"><span>KIA Optima</span></h3>
                             <div class="bottom-line"></div>
                         </a>
                     </div>
                      <div class="swiper-slide">
                         <a class="list-car__link" href="#">
-                            <img src="{{Theme::asset()->url('images/business/brand-detail/car-item-4.png')}}" alt="" class="list-car__img">
+                            <img loading="lazy" src="{{Theme::asset()->url('images/business/brand-detail/car-item-4.png')}}" alt="" class="list-car__img">
                             <h3 class="list-car__title font-pri font18"><span>KIA Quoris</span></h3>
                             <div class="bottom-line"></div>
                         </a>
                     </div>
                     <div class="swiper-slide">
                         <a class="list-car__link" href="#">
-                            <img src="{{Theme::asset()->url('images/business/brand-detail/car-item-1.png')}}" alt="" class="list-car__img">
+                            <img loading="lazy" src="{{Theme::asset()->url('images/business/brand-detail/car-item-1.png')}}" alt="" class="list-car__img">
                             <h3 class="list-car__title font-pri font18"><span>KIA Soluto</span></h3>
                             <div class="bottom-line"></div>
                         </a>
                     </div>
                     <div class="swiper-slide">
                         <a class="list-car__link" href="#">
-                            <img src="{{Theme::asset()->url('images/business/brand-detail/car-item-2.png')}}" alt="" class="list-car__img">
+                            <img loading="lazy" src="{{Theme::asset()->url('images/business/brand-detail/car-item-2.png')}}" alt="" class="list-car__img">
                             <h3 class="list-car__title font-pri font18"><span>KIA All-New Cerato</span></h3>
                             <div class="bottom-line"></div>
                         </a>
@@ -53,25 +53,25 @@
         <ul class="list-car">
             <li class="list-car__item">
                 <a class="list-car__link" href="#">
-                    <img src="{{Theme::asset()->url('images/business/brand-detail/car-item-1.png')}}" alt="" class="list-car__img">
+                    <img loading="lazy" src="{{Theme::asset()->url('images/business/brand-detail/car-item-1.png')}}" alt="" class="list-car__img">
                     <h3 class="list-car__title font-pri font18">KIA Soluto</h3>
                 </a>
             </li>
             <li class="list-car__item">
                 <a class="list-car__link" href="#">
-                    <img src="{{Theme::asset()->url('images/business/brand-detail/car-item-2.png')}}" alt="" class="list-car__img">
+                    <img loading="lazy" src="{{Theme::asset()->url('images/business/brand-detail/car-item-2.png')}}" alt="" class="list-car__img">
                     <h3 class="list-car__title font-pri font18">KIA All-New Cerato</h3>
                 </a>
             </li>
             <li class="list-car__item active">
                 <a class="list-car__link" href="#">
-                    <img src="{{Theme::asset()->url('images/business/brand-detail/car-item-3.png')}}" alt="" class="list-car__img">
+                    <img loading="lazy" src="{{Theme::asset()->url('images/business/brand-detail/car-item-3.png')}}" alt="" class="list-car__img">
                     <h3 class="list-car__title font-pri font18">KIA Optima</h3>
                 </a>
             </li>
             <li class="list-car__item">
                 <a class="list-car__link" href="#">
-                    <img src="{{Theme::asset()->url('images/business/brand-detail/car-item-4.png')}}" alt="" class="list-car__img">
+                    <img loading="lazy" src="{{Theme::asset()->url('images/business/brand-detail/car-item-4.png')}}" alt="" class="list-car__img">
                     <h3 class="list-car__title font-pri font18">KIA Quoris</h3>
                 </a>
             </li>
@@ -81,7 +81,7 @@
             <div class="car-detail__image col-sm-12 col-md-12">
                 <div class="car-detail__background"></div>
                 <div class="car-detail__frame">
-                    <img src="{{Theme::asset()->url('images/business/brand-detail/car-detail.png')}}" alt="">
+                    <img loading="lazy" src="{{Theme::asset()->url('images/business/brand-detail/car-detail.png')}}" alt="">
                 </div>
 
             </div>
@@ -89,15 +89,15 @@
                 <h3 class="info-title font30 font-mi-bold">KIA Optima</h3>
                 <ul class="info-equip">
                     <li class="info-equip__item font18 font-pri">
-                        <img src="{{Theme::asset()->url('images/business/brand-detail/chon-xe-1.png')}}" alt="filter icon">
+                        <img loading="lazy" src="{{Theme::asset()->url('images/business/brand-detail/chon-xe-1.png')}}" alt="filter icon">
                         <span>270 kW (367 HP)</span>
                     </li>
                     <li class="info-equip__item font18 font-pri">
-                        <img src="{{Theme::asset()->url('images/business/brand-detail/chon-xe-2.png')}}" alt="filter icon">
+                        <img loading="lazy" src="{{Theme::asset()->url('images/business/brand-detail/chon-xe-2.png')}}" alt="filter icon">
                         <span>Xăng</span>
                     </li>
                     <li class="info-equip__item font18 font-pri">
-                        <img src="{{Theme::asset()->url('images/business/brand-detail/chon-xe-3.png')}}" alt="filter icon">
+                        <img loading="lazy" src="{{Theme::asset()->url('images/business/brand-detail/chon-xe-3.png')}}" alt="filter icon">
                         <span>Tự động</span>
                     </li>
                 </ul>

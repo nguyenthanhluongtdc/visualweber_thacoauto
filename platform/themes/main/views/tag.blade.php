@@ -4,7 +4,7 @@
     @foreach ($posts as $post)
         <article class="post post__horizontal mb-40 clearfix">
             <div class="post__thumbnail">
-                <img src="{{ RvMedia::getImageUrl($post->image, 'medium', false, RvMedia::getDefaultImage()) }}" alt="{{ $post->name }}"><a href="{{ $post->url }}" class="post__overlay"></a>
+                <img loading="lazy" src="{{ RvMedia::getImageUrl($post->image, 'medium', false, RvMedia::getDefaultImage()) }}" alt="{{ $post->name }}"><a href="{{ $post->url }}" class="post__overlay"></a>
             </div>
             <div class="post__content-wrap">
                 <header class="post__header">

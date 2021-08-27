@@ -15,7 +15,7 @@
                                             @if ($loop->first)
                                                 <article class="post post__vertical post__vertical--single post__vertical--simple">
                                                     <div class="post__thumbnail">
-                                                        <img src="{{ RvMedia::getImageUrl($post->image, 'medium', false, RvMedia::getDefaultImage()) }}" alt="{{ $post->name }}">
+                                                        <img loading="lazy" src="{{ RvMedia::getImageUrl($post->image, 'medium', false, RvMedia::getDefaultImage()) }}" alt="{{ $post->name }}">
                                                         <a href="{{ $post->url }}" class="post__overlay"></a>
                                                     </div>
                                                     <div class="post__content-wrap">
@@ -35,7 +35,7 @@
                                             @else
                                                 <article class="post post__horizontal post__horizontal--single mb-20 clearfix">
                                                     <div class="post__thumbnail">
-                                                        <img src="{{ RvMedia::getImageUrl($post->image, 'medium', false, RvMedia::getDefaultImage()) }}" alt="{{ $post->name }}">
+                                                        <img loading="lazy" src="{{ RvMedia::getImageUrl($post->image, 'medium', false, RvMedia::getDefaultImage()) }}" alt="{{ $post->name }}">
                                                         <a href="{{ $post->url }}" class="post__overlay"></a>
                                                     </div>
                                                     <div class="post__content-wrap">

@@ -19,7 +19,7 @@ class AjaxController extends PublicController
                         <div class="post-new-item">
                         <div class="post-thumbnail-wrap">
                             <div class="post-thumbnail">
-                                <a href="' . $post->url . '"><img src="' . $postImage . '" alt="{{$post->name}}"></a>
+                                <a href="' . $post->url . '"><img loading="lazy" src="' . $postImage . '" alt="{{$post->name}}"></a>
                             </div>
                         </div>
                             <h5 class="title font-mi-bold font20">

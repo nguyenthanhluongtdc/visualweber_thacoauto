@@ -16,7 +16,7 @@
                         <div class="swiper-slide">
                             <div class="slide-container">
                                 <div class="block">
-                                    <img src="{{Theme::asset()->url('images/production/logo/logo-thaco-bus.png')}}" alt="">
+                                    <img loading="lazy" src="{{Theme::asset()->url('images/production/logo/logo-thaco-bus.png')}}" alt="">
                                     <a class="slide-container__button font18 font-mi-bold" href="#">{{ __("Readmore") }}</a>
                                 </div>
                             </div>
@@ -24,7 +24,7 @@
                         <div class="swiper-slide">
                             <div class="slide-container">
                                 <div class="block">
-                                    <img src="{{Theme::asset()->url('images/production/logo/logo-bmw.png')}}" alt="">
+                                    <img loading="lazy" src="{{Theme::asset()->url('images/production/logo/logo-bmw.png')}}" alt="">
                                     <a class="slide-container__button font18 font-mi-bold" href="#">{{ __("Readmore") }}</a>
                                 </div>
                             </div>
@@ -32,7 +32,7 @@
                         <div class="swiper-slide">
                             <div class="slide-container">
                                 <div class="block">
-                                    <img src="{{Theme::asset()->url('images/production/logo/logo-peugeot.png')}}" alt="">
+                                    <img loading="lazy" src="{{Theme::asset()->url('images/production/logo/logo-peugeot.png')}}" alt="">
                                     <a class="slide-container__button font18 font-mi-bold" href="#">{{ __("Readmore") }}</a>
                                 </div>
                             </div>
@@ -40,7 +40,7 @@
                         <div class="swiper-slide">
                             <div class="slide-container">
                                 <div class="block">
-                                    <img src="{{Theme::asset()->url('images/production/logo/logo-kia.png')}}" alt="">
+                                    <img loading="lazy" src="{{Theme::asset()->url('images/production/logo/logo-kia.png')}}" alt="">
                                     <a class="slide-container__button font18 font-mi-bold" href="#">{{ __("Readmore") }}</a>
                                 </div>
                             </div>
@@ -52,10 +52,10 @@
             <div class="distribution-slide__right">
                 <div class="swiper-container distribution-slide-right">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><div class="slide-container"><img src="{{Theme::asset()->url('images/production/logo/logo-thaco-bus.png')}}" alt=""></div></div>
-                        <div class="swiper-slide"><div class="slide-container"><img src="{{Theme::asset()->url('images/production/logo/logo-bmw.png')}}" alt=""></div></div>
-                        <div class="swiper-slide"><div class="slide-container"><img src="{{Theme::asset()->url('images/production/logo/logo-peugeot.png')}}" alt=""></div></div>
-                        <div class="swiper-slide"><div class="slide-container"><img src="{{Theme::asset()->url('images/production/logo/logo-kia.png')}}" alt=""></div></div>
+                        <div class="swiper-slide"><div class="slide-container"><img loading="lazy" src="{{Theme::asset()->url('images/production/logo/logo-thaco-bus.png')}}" alt=""></div></div>
+                        <div class="swiper-slide"><div class="slide-container"><img loading="lazy" src="{{Theme::asset()->url('images/production/logo/logo-bmw.png')}}" alt=""></div></div>
+                        <div class="swiper-slide"><div class="slide-container"><img loading="lazy" src="{{Theme::asset()->url('images/production/logo/logo-peugeot.png')}}" alt=""></div></div>
+                        <div class="swiper-slide"><div class="slide-container"><img loading="lazy" src="{{Theme::asset()->url('images/production/logo/logo-kia.png')}}" alt=""></div></div>
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>

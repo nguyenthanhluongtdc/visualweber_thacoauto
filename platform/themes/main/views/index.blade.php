@@ -223,7 +223,7 @@
                     <img loading="lazy" src="{{ get_image_url(get_field($page,'homepage_production_logo')) }}" alt="{{get_field($page, 'homepage_production_title')}}">
                     <p class="name-img font-pri-bold font18 color-pri fontmb-small">THACO AUTO</p>
                     <p class="title font-pri-bold font40 fontmb-middle color-gray">{{get_field($page, 'homepage_production_title')}}</p>
-                    <P class="desc font-pri font20 color-gray">{{get_field($page, 'homepage_production_descrtiption')}}</P>
+                    <P class="desc font-pri font20 color-gray">{{get_field($page, 'homepage_production_descrtiption')}}</>
                 </div>
                 <div class="top-right">
                     <div class="top-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
@@ -349,7 +349,7 @@
                                                 phan.pdf</div>
                                             <div class="desc-right">
                                                 <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                                <a href="#" class="font-pri">DOWNLOAD</a>
                                             </div>
                                         </div>
                                     </div>
@@ -376,7 +376,7 @@
                                                 phan.pdf</div>
                                             <div class="desc-right">
                                                 <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                                #
                                             </div>
                                         </div>
                                     </div>
@@ -403,7 +403,7 @@
                                                 phan.pdf</div>
                                             <div class="desc-right">
                                                 <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                                #
                                             </div>
                                         </div>
                                     </div>
@@ -430,7 +430,7 @@
                                                 phan.pdf</div>
                                             <div class="desc-right">
                                                 <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                                #
                                             </div>
                                         </div>
                                     </div>
@@ -457,7 +457,7 @@
                                                 phan.pdf</div>
                                             <div class="desc-right">
                                                 <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                                #
                                             </div>
                                         </div>
                                     </div>
@@ -483,7 +483,7 @@
                                                 phan.pdf</div>
                                             <div class="desc-right">
                                                 <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                                #
                                             </div>
                                         </div>
                                     </div>
@@ -521,7 +521,7 @@
                                                 phan.pdf</div>
                                             <div class="desc-right">
                                                 <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                                #
                                             </div>
                                         </div>
                                     </div>
@@ -548,7 +548,7 @@
                                                 phan.pdf</div>
                                             <div class="desc-right">
                                                 <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                                #
                                             </div>
                                         </div>
                                     </div>
@@ -575,7 +575,7 @@
                                                 phan.pdf</div>
                                             <div class="desc-right">
                                                 <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                                #
                                             </div>
                                         </div>
                                     </div>
@@ -602,7 +602,7 @@
                                                 phan.pdf</div>
                                             <div class="desc-right">
                                                 <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                                #
                                             </div>
                                         </div>
                                     </div>
@@ -629,7 +629,7 @@
                                                 phan.pdf</div>
                                             <div class="desc-right">
                                                 <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                                #
                                             </div>
                                         </div>
                                     </div>
@@ -655,7 +655,7 @@
                                                 phan.pdf</div>
                                             <div class="desc-right">
                                                 <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                                #
                                             </div>
                                         </div>
                                     </div>
@@ -693,7 +693,7 @@
                                                 phan.pdf</div>
                                             <div class="desc-right">
                                                 <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                                #
                                             </div>
                                         </div>
                                     </div>
@@ -720,7 +720,7 @@
                                                 phan.pdf</div>
                                             <div class="desc-right">
                                                 <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                                #
                                             </div>
                                         </div>
                                     </div>
@@ -747,7 +747,7 @@
                                                 phan.pdf</div>
                                             <div class="desc-right">
                                                 <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                                #
                                             </div>
                                         </div>
                                     </div>
@@ -774,7 +774,7 @@
                                                 phan.pdf</div>
                                             <div class="desc-right">
                                                 <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                                #
                                             </div>
                                         </div>
                                     </div>
@@ -801,7 +801,7 @@
                                                 phan.pdf</div>
                                             <div class="desc-right">
                                                 <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                                #
                                             </div>
                                         </div>
                                     </div>
@@ -827,7 +827,7 @@
                                                 phan.pdf</div>
                                             <div class="desc-right">
                                                 <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                                #
                                             </div>
                                         </div>
                                     </div>
@@ -865,7 +865,7 @@
                                                 phan.pdf</div>
                                             <div class="desc-right">
                                                 <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                                #
                                             </div>
                                         </div>
                                     </div>
@@ -892,7 +892,7 @@
                                                 phan.pdf</div>
                                             <div class="desc-right">
                                                 <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                                #
                                             </div>
                                         </div>
                                     </div>
@@ -919,7 +919,7 @@
                                                 phan.pdf</div>
                                             <div class="desc-right">
                                                 <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                                #
                                             </div>
                                         </div>
                                     </div>
@@ -946,7 +946,7 @@
                                                 phan.pdf</div>
                                             <div class="desc-right">
                                                 <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                                #
                                             </div>
                                         </div>
                                     </div>
@@ -973,7 +973,7 @@
                                                 phan.pdf</div>
                                             <div class="desc-right">
                                                 <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                                #
                                             </div>
                                         </div>
                                     </div>
@@ -999,7 +999,7 @@
                                                 phan.pdf</div>
                                             <div class="desc-right">
                                                 <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                <a href="" class="font-pri">DOWNLOAD</a>
+                                                #
                                             </div>
                                         </div>
                                     </div>

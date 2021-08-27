@@ -725,6 +725,7 @@
                                 color: white;
                                 // font-size: 20px;
                                 line-height: 26px;
+                                @include marginTop(15, "+");
                                 @include mobileMarginTop(15, "+");
                                 @include mobileMarginBottom(20, "+");
                                 // @media(max-width: 1680px) {

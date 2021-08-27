@@ -131,7 +131,9 @@
         <div class="fb-customerchat"
              attribution="install_email"
              page_id="{{ theme_option('facebook_page_id') }}"
-             theme_color="{{ theme_option('primary_color', '#01498b') }}">
+             theme_color="{{ theme_option('primary_color', '#01498b') }}"
+             greeting_dialog_display="fade"
+             greeting_dialog_delay="10">
         </div>
     @endif
 @endif

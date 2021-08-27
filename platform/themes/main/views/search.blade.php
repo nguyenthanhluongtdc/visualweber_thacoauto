@@ -48,13 +48,13 @@ Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
                     {!! __('kết quả tìm kiếm') !!}
                 </h1>
             </div>
-            <div class="search-input row mt-md-5 mt-3 mb-5">
+            <div class="form-search row mt-md-5 mt-3 mb-5">
                 <div class="col-sm-3">
                 </div>
                 <div class="col-sm-6 search-bar mb-4">
                     <div class="row search">
                         <div class="col-10">
-                            <input type="text" autocomplete="off" class="form-control font20" id="search-bar" placeholder="{!! __('Tìm kiếm') !!}"
+                            <input type="text" autocomplete="off" class="form-control font20 search-bar" input-id="2" placeholder="{!! __('Tìm kiếm') !!}"
                                 name="keyword" value="{{ request()->get('keyword') }}">
                         </div>
                         <div class="col-1 input-group-append">
@@ -69,7 +69,7 @@ Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
                         @endisset
                     </p>
 
-                    <div class="box-popover">
+                    <div class="box-popover-2 popover-search">
                         
                     </div>
                 </div>
@@ -163,7 +163,3 @@ Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
         </div>
     </form>
 </div>
-
-<script>
-    window.URL_SEARCH = "{{route('public.api.search')}}";
-</script>

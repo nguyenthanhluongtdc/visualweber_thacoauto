@@ -89,15 +89,19 @@
                 </div>
             </div>
         </div>
-        <div id="search-box">
-            <div class="container">
-              <a class="close" href="#close"></a>
-              <div class="search-main">
-                <div class="search-inner">
-                  <form action="{{route('public.search')}}">
-                    <input class="font17" type="text" id="inputSearch" name="keyword" placeholder="">
-                    <span class="search-info font16">{{__('Hit enter to search or ESC to close')}}</span>
-                  </form>
+        <div id="search-box" class="form-search">
+                <div class="container">
+                <a class="close" href="#close"></a>
+                <div class="search-main">
+                    <div class="search-inner">
+                    <form action="{{route('public.search')}}">
+                        <input autocomplete="off" class="font17 search-bar" type="text" input-id="1" id="inputSearch" name="keyword" placeholder="">
+                        <span class="search-info font16">{{__('Hit enter to search or ESC to close')}}</span>
+                    </form>
+                  
+                    <div class="box-popover-1 popover-search">
+                       
+                    </div>
                 </div>
               </div>
             </div>
@@ -156,7 +160,7 @@
     </div>
 
     <script>
-
+        window.URL_SEARCH = "{{route('public.api.search')}}";
     </script>
 
     <div id="row__empty"></div>

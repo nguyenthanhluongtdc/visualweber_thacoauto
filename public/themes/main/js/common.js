@@ -545,10 +545,12 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     if(window.URL_SEARCH) {
-        console.log('search')
-        $("#search-bar").focus(function() {
-            $('.search-input .box-popover').css('display','block');
-    
+        let input_id = 0;
+        $(".search-bar").focus(function() {
+            input_id = $(this).attr('input-id');
+
+            $(`.form-search .box-popover-${input_id}`).css('display','block');
+
             $(this).on('keyup',function() {
                 var query = $(this).val(); 
                 $.ajax({
@@ -560,16 +562,16 @@ $(document).ready(function () {
                     data:{'keyword':query},
                    
                     success:function (data) {
-                        $('.search-input .box-popover').html(data)
+                        $(`.form-search .box-popover-${input_id}`).html(data)
                     }
                 })
                 // end of ajax call
             });
         })
     
-        $("#search-bar").focusout(function() {
+        $(`.search-bar`).focusout(function() {
             setTimeout(() => {
-                $('.search-input .box-popover').css('display', 'none');
+                $(`.box-popover-${input_id}`).css('display', 'none');
             }, 500);
         })
     }

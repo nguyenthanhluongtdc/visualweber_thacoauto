@@ -285,7 +285,8 @@ class ThacoController extends PublicController
             $query = $request->input('keyword');
 
             if (!$query) {
-                return "";
+                $posts = [];
+                return view("theme.main::views.components.result-search", compact('posts'))->render();
             }
 
             $posts = $postRepository->getSearch($query, 0, 5);

@@ -984,6 +984,20 @@
 
 // bản tin thaco auto
 .news-thaco-content {
+  
+  &.show-mobile {
+    display: none;
+  }
+
+  @media(max-width: 1080px) {
+    &.show-desktop {
+      display: none;
+    }
+    &.show-mobile {
+      display: block;
+    }
+  }
+
   @include paddingTop(60);
   @include paddingBottom(100);
   @media (max-width: 1080px) {

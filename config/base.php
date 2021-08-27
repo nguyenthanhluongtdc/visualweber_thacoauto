@@ -1,11 +1,11 @@
-<?php 
+<?php
 return [
    'fuel_types' => [
-      'gasoline' => trans('Xăng'),
-      'petroleum' => trans('Dầu'),
+      'gasoline' => 'gasoline',
+      'petroleum' => 'petroleum',
    ],
    'gears' => [
-      'automatic_transmission' => trans('Tự động'),
-      'manual_transmission' => trans('Số sàn'),
+      'automatic_transmission' => 'automatic_transmission',
+      'manual_transmission' => 'manual_transmission',
    ]
 ];

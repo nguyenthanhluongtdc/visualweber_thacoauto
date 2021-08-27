@@ -96,6 +96,9 @@ class PostTable extends TableAbstract
 
                 return rtrim($categories, ', ');
             })
+            ->editColumn('order', function ($item) {
+                return $item->order;
+            })
             ->editColumn('author_id', function ($item) {
                 return $item->author ? $item->author->name : null;
             })
@@ -134,6 +137,7 @@ class PostTable extends TableAbstract
                 'updated_at',
                 'author_id',
                 'author_type',
+                'order'
             ]);
 
         return $this->applyScopes($query);
@@ -162,6 +166,11 @@ class PostTable extends TableAbstract
                 'width'     => '150px',
                 'class'     => 'no-sort text-center',
                 'orderable' => false,
+            ],
+            'order' => [
+                'title'     => trans('core/base::forms.order'),
+                'width'     => '100px',
+                'class'     => 'text-center',
             ],
             'author_id'  => [
                 'title'     => trans('plugins/blog::posts.author'),

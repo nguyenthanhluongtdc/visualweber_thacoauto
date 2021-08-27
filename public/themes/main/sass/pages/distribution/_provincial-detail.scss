@@ -135,6 +135,11 @@
                     align-items: center;
                     min-width: 160px;
                     position: relative;
+                    img {
+                        max-width: 150px;
+                        max-height: 100px; 
+                        object-fit: cover;
+                    }
                     @media (max-width: 1080px){
                         min-width: 20%;
                         display: flex;
@@ -220,23 +225,22 @@
                     margin-left: 1em;
                     width: 45%;
                     li {
-                        display: inline-flex;
                         margin-bottom: 10px;
-                        &::before {
-                            content: "\2022";
-                            color: #1e5499;
-                            display: inline-block; 
-                            width: 1.5rem;
-                            margin-left: -1rem;
-                            margin-top: 0.3rem;
-                            @media (max-width: 1080px) {
-                                width: auto;
-                                margin-right: 2%;
-                            }
-                        }
                         p {
                             font-family: $font-primary;
                             color: #1e5499;
+                            position: relative;
+                            &::before {
+                                content: "\2022";
+                                color: #1e5499;
+                                display: inline-block; 
+                                position: absolute;
+                                left: -1rem;
+                                @media (max-width: 1080px) {
+                                    width: auto;
+                                    margin-right: 2%;
+                                }
+                            }
                             span {
                                 font-family: $font-my-bold;
                             }
@@ -244,6 +248,7 @@
                     }
                 }
                 .online-service-booking {
+                    display: block;
                     background-color: #1e5499;
                     color: #ffffff;
                     text-transform: uppercase;
@@ -263,6 +268,9 @@
                         max-width: 200px;
                         padding: 0.8rem 0px;
                         bottom: 7%;
+                    }
+                    @media (max-width: 480px){
+                        position: unset;
                     }
                 }
                 .logo-container {
@@ -300,11 +308,20 @@
                             left: 100%;
                         }
                     }
+                    img {
+                        max-width: 150px;
+                        max-height: 100px;
+                        object-fit: cover;
+                    }
                 }
                 .category-container {
                     position: absolute;
                     bottom: 0%;
                     right: 5%;
+                    @media (max-width: 480px){
+                        margin-top: 15px;
+                        position: unset;
+                    }
                     ul {
                         display: flex;
                         align-items: flex-end;
@@ -312,6 +329,11 @@
                             margin-right: 50px;
                             &:last-child {
                                 margin-right: unset;
+                            }
+                            img {
+                                max-width: 60px;
+                                max-height: 50px;
+                                object-fit: cover;
                             }
                             p {
                                 margin-top: 5px;

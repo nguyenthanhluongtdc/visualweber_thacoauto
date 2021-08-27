@@ -121,6 +121,14 @@ class PostForm extends FormAbstract
                     'class' => 'form-control select-search-full',
                 ]
             ])
+            ->add('order', 'number', [
+                'label'         => trans('core/base::forms.order'),
+                'label_attr'    => ['class' => 'control-label'],
+                'attr'          => [
+                    'placeholder' => trans('core/base::forms.order_by_placeholder'),
+                ],
+                'default_value' => 0,
+            ])
             ->setBreakFieldPoint('status');
 
         $postFormats = get_post_formats(true);

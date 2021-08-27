@@ -23,6 +23,8 @@ use Platform\Theme\Http\Controllers\PublicController;
 use Platform\Blog\Repositories\Interfaces\PostInterface;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Platform\DistributionSystem\Repositories\Interfaces\DistributionSystemInterface;
+use Platform\DistributionSystem\Repositories\Interfaces\ShowroomBrandInterface;
+use Platform\DistributionSystem\Repositories\Interfaces\ShowroomInterface;
 use Platform\Kernel\Repositories\Interfaces\PostInterface as InterfacesPostInterface;
 
 class ThacoController extends PublicController
@@ -215,24 +217,58 @@ class ThacoController extends PublicController
         ], 200);
     }
 
-    public function getDistributionSystem(Request $request, DistributionSystemInterface $distributionSystemInterface) {
-        try {
-            Log::info("======== Lấy danh sách chi nhánh theo Tỉnh/Thành phố: {$request->city} =========");
-            $distributionSystems = $distributionSystemInterface->advancedGet(['condition' => [
-                'status' => BaseStatusEnum::PUBLISHED,
-                'city_id' => $request->city
-            ]]);
-            $html_list = view('theme.main::views.pages.distribution-system.ajax.list', compact('distributionSystems'))->render();
-            return response()->json([
-                'type' => 'success',
-                'html_list' => $html_list,
-            ])->setStatusCode(Response::HTTP_OK);
-        } catch (\Throwable $th) {
-            Log::error("Lỗi lấy danh sách chi nhánh theo Tỉnh/Thành phố", [$th->getMessage(), $th->getFile(), $th->getLine()]);
-            return response()->json([
-                'type' => 'error',
-                'message' => 'Rất tiếc đã xảy ra lỗi khi lấy danh sách chi nhánh theo Tỉnh/Thành phố'
-            ])->setStatusCode(Response::HTTP_INTERNAL_SERVER_ERROR);
+    public function getDistributionSystem(Request $request, DistributionSystemInterface $distributionSystemInterface, BaseHttpResponse $response) {
+        Log::info("======== Lấy danh sách chi nhánh theo Tỉnh/Thành phố: {$request->city} =========");
+        $condition = [
+            "status" => BaseStatusEnum::PUBLISHED
+        ];
+
+        if(request('city')) {
+            $condition['state_id'] = request('city');
         }
+
+        $distributionSystems = $distributionSystemInterface->advancedGet(
+            ['condition' => $condition]
+        );
+
+        return $response->setData([
+            "data" => $distributionSystems,
+            "template" => \Theme::partial('templates.distribution', [
+                'data' => $distributionSystems
+            ])
+        ]);
+    }
+
+    public function getShowroomByBrand(BaseHttpResponse $response, ShowroomInterface $showroomInterface, ShowroomBrandInterface $showroomBrandInterface)
+    {
+        $showroomIDs = $showroomBrandInterface->advancedGet([
+            "condition" => [
+                "status" => BaseStatusEnum::PUBLISHED,
+                "brand_id" => request('brand'),
+                "category_id" => request('category')
+            ],
+            'select' => ['showroom_id']
+        ])->pluck('showroom_id')->toArray() ?? [];
+
+        $condition = [
+            "status" => BaseStatusEnum::PUBLISHED,
+            ['id', 'IN', $showroomIDs]
+        ];
+
+        if(blank(request('category')) && blank(request('brand'))) {
+            $condition = [
+                "status" => BaseStatusEnum::PUBLISHED,
+            ];
+        }
+
+        $data['showrooms'] = $showroomInterface->advancedGet([
+            "condition" => $condition,
+            'select' => ['*']
+        ]);
+
+        return $response
+            ->setData([
+                "template" => \Theme::partial('templates.showroom', $data)
+            ]);
     }
 }

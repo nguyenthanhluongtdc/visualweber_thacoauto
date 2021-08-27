@@ -357,82 +357,117 @@ app()->booted(function () {
             ],
         ])
         ->setSection([ // Set section with no field
-                'title' => __('Contact'),
-                'desc' => __('Contact'),
-                'id' => 'opt-text-subsection-contact-form',
-                'subsection' => true,
-                'icon' => 'fa fa-home',
-                'fields' => [
-                    [
-                        'id' => 'image_contact',
-                        'type' => 'mediaImage',
-                        'label' => __('Ảnh'),
-                        'attributes' => [
-                            'name' => 'image_contact',
-                            'value' => null,
-                            'options' => [
-                                'class'        => 'form-control',
-                            ],
-                        ],
-                    ],
-                    [
-                        'id' => 'address_contact',
-                        'type' => 'textarea',
-                        'label' => __('Address'),
-                        'attributes' => [
-                            'name' => 'address_contact',
-                            'value' => null,
-                            'options' => [
-                                'class'        => 'form-control',
-                                'data-counter' => 255,
-                                'rows'         => 2,
-                            ],
-                        ],
-                    ],
-                    [
-                        'id' => 'phone_contact',
-                        'type' => 'text',
-                        'label' => __('số điện thoại'),
-                        'attributes' => [
-                            'name' => 'phone_contact',
-                            'value' => null,
-                            'options' => [
-                                'class'        => 'form-control',
-                            ],
-                        ],
-                    ],
-                    [
-                        'id' => 'email_contact',
-                        'type' => 'text',
-                        'label' => __('Email'),
-                        'attributes' => [
-                            'name' => 'email_contact',
-                            'value' => null,
-                            'options' => [
-                                'class'        => 'form-control',
-                            ],
+            'title' => __('Contact'),
+            'desc' => __('Contact'),
+            'id' => 'opt-text-subsection-contact-form',
+            'subsection' => true,
+            'icon' => 'fa fa-home',
+            'fields' => [
+                [
+                    'id' => 'image_contact',
+                    'type' => 'mediaImage',
+                    'label' => __('Ảnh'),
+                    'attributes' => [
+                        'name' => 'image_contact',
+                        'value' => null,
+                        'options' => [
+                            'class'        => 'form-control',
                         ],
                     ],
                 ],
-            ])->setField([
-                    'id'         => 'logo_footer',
-                    'section_id' => 'opt-text-subsection-logo',
-                    'type'       => 'mediaImage',
-                    'label'      => __('Logo footer'),
+                [
+                    'id' => 'address_contact',
+                    'type' => 'textarea',
+                    'label' => __('Address'),
                     'attributes' => [
-                        'name'    => 'logo_footer',
-                        'value'   => null,
+                        'name' => 'address_contact',
+                        'value' => null,
+                        'options' => [
+                            'class'        => 'form-control',
+                            'data-counter' => 255,
+                            'rows'         => 2,
+                        ],
                     ],
-            ])
-            ->setField([
-                'id'         => 'logo_bct',
+                ],
+                [
+                    'id' => 'phone_contact',
+                    'type' => 'text',
+                    'label' => __('số điện thoại'),
+                    'attributes' => [
+                        'name' => 'phone_contact',
+                        'value' => null,
+                        'options' => [
+                            'class'        => 'form-control',
+                        ],
+                    ],
+                ],
+                [
+                    'id' => 'email_contact',
+                    'type' => 'text',
+                    'label' => __('Email'),
+                    'attributes' => [
+                        'name' => 'email_contact',
+                        'value' => null,
+                        'options' => [
+                            'class'        => 'form-control',
+                        ],
+                    ],
+                ],
+            ],
+        ])->setField([
+                'id'         => 'logo_footer',
                 'section_id' => 'opt-text-subsection-logo',
                 'type'       => 'mediaImage',
-                'label'      => __('Logo bộ công thương'),
+                'label'      => __('Logo footer'),
                 'attributes' => [
-                    'name'    => 'logo_bct',
+                    'name'    => 'logo_footer',
                     'value'   => null,
                 ],
-            ]);
-        
+        ])
+        ->setField([
+            'id'         => 'logo_bct',
+            'section_id' => 'opt-text-subsection-logo',
+            'type'       => 'mediaImage',
+            'label'      => __('Logo bộ công thương'),
+            'attributes' => [
+                'name'    => 'logo_bct',
+                'value'   => null,
+            ],
+        ])
+        ->setSection([ // Set section with no field
+            'title' => __('Config default'),
+            'desc' => __('Config defaults'),
+            'id' => 'opt-text-subsection-config',
+            'subsection' => true,
+            'icon' => 'fa fa-wrench',
+        ])
+        ->setField([
+            'id' => 'default_category_news',
+            'section_id' => 'opt-text-subsection-config',
+            'type' => 'select', // select or customSelect
+            'label' => __('Loại tin tức mặc định'),
+            'attributes' => [
+                'name' => 'default_category_news',
+                'data' => ["" => "Chọn loại"] + (is_plugin_active('blog') ? get_all_categories()->pluck('name', 'id')->toArray() ?? [] : []),
+                'value' => null, // default value
+                'options' => [
+                    'class' => 'form-control select-full-search',
+                ],
+            ],
+        ])
+        ->setField([
+            'id' => 'default_category_gallery',
+            'section_id' => 'opt-text-subsection-config',
+            'type' => 'select', // select or customSelect
+            'label' => __('Loại video hình ảnh mặc định'),
+            'attributes' => [
+                'name' => 'default_category_gallery',
+                'data' => ["" => "Chọn loại"] + (is_plugin_active('blog') ? get_all_categories()->pluck('name', 'id')->toArray() ?? [] : []),
+                'value' => null, // default value
+                'options' => [
+                    'class' => 'form-control select-full-search',
+                ],
+            ],
+        ]);
+
 });

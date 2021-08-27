@@ -39,7 +39,7 @@ class PostTable extends TableAbstract
     /**
      * @var int
      */
-    protected $defaultSortColumn = 6;
+    protected $defaultSortColumn = 1;
 
     /**
      * PostTable constructor.

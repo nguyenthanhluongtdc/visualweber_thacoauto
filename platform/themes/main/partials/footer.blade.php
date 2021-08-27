@@ -20,7 +20,7 @@
             </div>
 
             <div class="footer-left-bottom">
-                <a class="img-bct d-inline-block" href="#" title="">
+                <a class="img-bct d-inline-block" href="{{theme_option('link_bct')}}" title="">
                     <img src="{{ get_image_url(theme_option('logo_bct')) }}" alt="{!! __('Bộ công thương') !!}">
                 </a>
                 <ul class="list-media">
@@ -74,12 +74,11 @@
                         <li><a href="{{ theme_option('linkedin') }}" target="_blank"><img src="{{ Theme::asset()->url('images/main/iconin.png') }}" alt="in"></a></li>
                         <li><a href="{{ theme_option('youtube') }}" target="_blank"><img src="{{ Theme::asset()->url('images/main/iconyt.png') }}" alt="youtube"></a></li>
                     </ul>
-                </div>
-
-                <div class="img-bct-mobile">
-                    <a href="#" title="">
-                        <img src="{{ get_image_url(theme_option('logo_bct')) }}" alt="{!! __('Bộ công thương') !!}">
-                    </a>
+                    <div class="img-bct-mobile">
+                        <a href="{{theme_option('link_bct')}}" title="">
+                            <img src="{{ get_image_url(theme_option('logo_bct')) }}" alt="{!! __('Bộ công thương') !!}">
+                        </a>
+                    </div>
                 </div>
         </div>
     </div>

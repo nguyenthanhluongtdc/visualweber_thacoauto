@@ -426,12 +426,25 @@ app()->booted(function () {
         ])
         ->setField([
             'id'         => 'logo_bct',
-            'section_id' => 'opt-text-subsection-logo',
+            'section_id' => 'opt-text-subsection-social',
             'type'       => 'mediaImage',
             'label'      => __('Logo bộ công thương'),
             'attributes' => [
                 'name'    => 'logo_bct',
                 'value'   => null,
+            ],
+        ])
+        ->setField([
+            'id'         => 'link_bct',
+            'section_id' => 'opt-text-subsection-social',
+            'type'       => 'text',
+            'label'      => __('Liên kết bộ công thương'),
+            'attributes' => [
+                'name'    => 'link_bct',
+                'value'   => null,
+                'option'=> [
+                    'class' => 'form-control'
+                ]
             ],
         ])
         ->setSection([ // Set section with no field

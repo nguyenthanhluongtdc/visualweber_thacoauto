@@ -96,7 +96,7 @@ const Distribution = {
                 });
 
                 if (!!item) {
-                    Distribution.addMarkerAndContentPopup(map, item)
+                    Distribution.addMarkerAndContentPopup(map, item, 'hover')
                 }
 
             })
@@ -104,7 +104,7 @@ const Distribution = {
                 $(this).removeClass('active')
             });
     },
-    addMarkerAndContentPopup: function (map, item) {
+    addMarkerAndContentPopup: function (map, item, status = '') {
         const { location, popup_info } = item
         if(location) {
             lat = location.split('/')[0]
@@ -115,10 +115,10 @@ const Distribution = {
             map.fitBounds([
                 [lat, lng]
             ], { maxZoom: 8 });
-            Distribution.createMarketPoint(map, { popup_info, lat, lng })
+            Distribution.createMarketPoint(map, { popup_info, lat, lng }, status)
         }
     },
-    createMarketPoint: function (map, { popup_info, lat, lng }) {
+    createMarketPoint: function (map, { popup_info, lat, lng }, status = '') {
         let popupDetailWrap = '';
         popup_info.content.forEach(element => {
             let popupDetailItem = `<div class="branch-body-item">`
@@ -152,8 +152,10 @@ const Distribution = {
             popupAnchor:  [-3, -25] // point from which the popup should open relative to the iconAnchor
         });
 
-        var marker =  L.marker(new L.LatLng(lat, lng), {icon: greenIcon}).addTo(map).bindPopup(popupContent, {closeOnClick: false, autoClose: false})
-        marker.openPopup()
+        var marker =  L.marker(new L.LatLng(lat, lng), {icon: greenIcon}).addTo(map).bindPopup(popupContent)
+        if(status == 'hover') {
+            marker.openPopup()
+        }
     },
 }
 $(document).ready(function() {

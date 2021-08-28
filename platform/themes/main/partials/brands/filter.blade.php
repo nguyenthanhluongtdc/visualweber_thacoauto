@@ -29,7 +29,6 @@
         <a href="#" class="font18 font-pri pre-order desktop">{{ __("PRE-ORDER") }}</a>
     </div>
     <div class="container-remake">
-        <form action="">
             <div class="car-filter">
                 <h2 class="car-filter__title font30 font-mi-bold text-uppercase">{{ __("Kiểu dáng xe") }}</h2>
             </div>
@@ -53,21 +52,28 @@
             </div>
 
             <div class="car-filter--center">
-                <select class="provinces-select2 font18 font-pri" name="" id="">
-                    <option value="">TP. HỒ CHÍ MINH</option>
-                    <option value="">HÀ NỘI</option>
-                </select>
-                <div class="slider-range">
-                    <div class="slider-range__value font18 font-pri">
-                        <span>Đến: </span>
-                        <span class="filter-value"></span>đ
+                <form id="formPrice" class="d-flex" method="GET" action="{{route('public.brand.index',['slug'=>$slug->key])}}">
+                    @if(request()->all())
+                        @forelse(request()->all() as $key=>$input)
+                            <input type="hidden" name="{{$key}}" value="{{$input}}">
+                        @empty
+                        @endforelse
+                    @endif
+                    <select class="provinces-select2 font18 font-pri" name="country" id="">
+                        <option value="hcm">TP. HỒ CHÍ MINH</option>
+                        <option value="ha-noi">HÀ NỘI</option>
+                    </select>
+                    <div class="slider-range">
+                        <div class="slider-range__value font18 font-pri">
+                            <span>Đến: </span>
+                            <span class="filter-value"></span>đ
+                        </div>
+                        <div class="slider-range__frame">
+                            <span class="slider-range__line"></span>
+                            <input name="price" type="range" min="100000000" max="20000000000" step="50000000" value="{{request()->get('price')}}" class="slider" id="myRange" onchange="submitFormPrice(this)">
+                        </div>
                     </div>
-                    <div class="slider-range__frame">
-                        <span class="slider-range__line"></span>
-                        <input type="range" min="100000000" max="20000000000" step="50000000" value="50000000" class="slider" id="myRange">
-                    </div>
-                </div>
-
+            </form>
             </div>
             <div class="row_pre-order mobile">
                 <a href="#" class="font18 font-pri pre-order ml-auto text-uppercase">{{ __("PRE-ORDER") }}</a>
@@ -280,12 +286,16 @@
                     </div>
                 </div>
             </div>
-        </form>
     </div>
 </section>
 
 
 <script>
+    function submitFormPrice(){
+        if(document.getElementById('formPrice')){
+            $('#formPrice').submit();
+        }
+    }
     $(document).ready(function() {
         // Array.from(document.getElementsByClassName('col-filter')).forEach(function(element){
         //     element.onclick =(e)=> {

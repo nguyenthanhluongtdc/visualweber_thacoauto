@@ -56,6 +56,9 @@ if(!function_exists('get_cars')){
          if($request->get('gear')){
             $carModel = $carModel->where('gear',$request->get('gear'));
          }
+         if($request->get('price')){
+            $carModel = $carModel->where('price','<=',$request->get('price'));
+         }
       }
       //  
       if($brand){

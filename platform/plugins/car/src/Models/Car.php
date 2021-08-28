@@ -38,7 +38,8 @@ class Car extends BaseModel
         'brochure',
         'status',
         'brand_id',
-        'engine'
+        'engine',
+        'price'
     ];
 
     /**

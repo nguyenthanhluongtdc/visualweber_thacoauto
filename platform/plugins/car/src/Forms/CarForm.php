@@ -86,6 +86,13 @@ class CarForm extends FormAbstract
                     'placeholder'  => trans('core/base::forms.name_placeholder'),
                 ],
             ])
+            ->add('price', 'number', [
+                'label'      => trans('Price'),
+                'label_attr' => ['class' => 'control-label'],
+                'attr'       => [
+                    'placeholder'  => trans('core/base::forms.name_placeholder'),
+                ],
+            ])
             ->add('status', 'customSelect', [
                 'label'      => trans('core/base::tables.status'),
                 'label_attr' => ['class' => 'control-label required'],

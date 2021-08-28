@@ -1,3 +1,11 @@
+@php
+    $request = request()->all();
+    $indexCarInRequest = array_search('car',array_keys($request));
+    if($indexCarInRequest){
+        $requestUnsetCar = array_splice($request,$indexCarInRequest,1);
+    }
+    $request = array_merge($request,['slug' => $slug->key]);
+@endphp
 <section class="section-car-filter">
     <div class="car-filter container-remake">
         <h2 class="car-filter__title-mobile font30 font-mi-bold">{{ __("Kiểu dáng xe") }}</h2>
@@ -5,7 +13,6 @@
     <div class="car-filter--top-mobile">
         <ul class="car-model font18 font-pri ">
             <li class="car-model__item {{ request('car_line', '') == '' ? 'active' : ''  }}">
-                <span>{{ __('Tất cả') }}</span>
                 <a href="{{route('public.brand.index',[
                         'slug' => $slug->key,
                     ])}}" class="text-uppercase">{{ __('Tất cả') }}</a>
@@ -31,8 +38,7 @@
                     <li class="car-model__item {{ request('car_line', '') == '' ? 'active' : ''  }}">
                         <a href="{{route('public.brand.index',[
                         'slug' => $slug->key,
-                        'vehicle'=>$item->slug
-                        ])}}" class="text-uppercase">{{ $item->name }}</a>
+                        ])}}" class="text-uppercase">{{ __('Tất cả') }}</a>
                     </li>
                     @foreach (get_vehicles($slug ? $slug->key : null) ?? collect() as $item)
                         <li class="car-model__item" {{ request('car_line', '') == $item->id ? 'active' : ''  }}>
@@ -81,66 +87,31 @@
                             Công suất
                         </div>
                         <div class="row-filter__content row">
+                            @forelse(get_horse_power_by_brand_and_vehicle($slug->key,request()->get('vehicle')) as $key=>$value)
+                                @php
+                                    $request_merge = $request;
+                                    if(array_search($value,$request_merge)){
+                                        $index = array_search('horse_power',array_keys($request_merge));
+                                        if($index !== false){
+                                            array_splice($request_merge,$index,1);
+                                        }
+                                    }else{
+                                        $request_merge = array_merge($request_merge,['horse_power'=>$value]);
+                                    }
+                                @endphp
                                 <div class="col-sm-4 col-6 item">
-                                    <a href="" class="col-filter">
+                                    <a href="{{
+                                        route('public.brand.index',$request_merge)}}" class="col-filter {{array_search($value,$request) ? 'active' : ''}}">
                                         <div class="symbol">
                                             <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
                                         </div>
                                         <div class="name font25">
-                                            86Hp
+                                            {{$value}}HP
                                         </div>
                                     </a>
                                 </div>
-                                <div class="col-sm-4 col-6 item">
-                                    <a href="" class="col-filter">
-                                        <div class="symbol">
-                                            <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
-                                        </div>
-                                        <div class="name font25">
-                                            90Hp
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-sm-4 col-6 item">
-                                    <a href="" class="col-filter">
-                                        <div class="symbol">
-                                            <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
-                                        </div>
-                                        <div class="name font25">
-                                            100Hp
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-sm-4 col-6 item">
-                                    <a href="" class="col-filter">
-                                        <div class="symbol">
-                                            <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
-                                        </div>
-                                        <div class="name font25">
-                                            110Hp
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-sm-4 col-6 item">
-                                    <a href="" class="col-filter">
-                                        <div class="symbol">
-                                            <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
-                                        </div>
-                                        <div class="name font25">
-                                            120Hp
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-sm-4 col-6 item">
-                                    <a href="" class="col-filter">
-                                        <div class="symbol">
-                                            <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
-                                        </div>
-                                        <div class="name font25">
-                                            130Hp
-                                        </div>
-                                    </a>
-                                </div>
+                            @empty
+                            @endforelse
                         </div>
                     </div>
                     <div class="row-filter">
@@ -149,66 +120,31 @@
                         Trang bị
                         </div>
                         <div class="row-filter__content row">
-                            <div class="col-sm-4 col-6 item">
-                                <a href="" class="col-filter">
-                                    <div class="symbol">
-                                        <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
-                                    </div>
-                                    <div class="name2 font25">
-                                        Đèn pha tự động
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-sm-4 col-6 item">
-                                <a href="" class="col-filter">
-                                    <div class="symbol">
-                                        <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
-                                    </div>
-                                    <div class="name2 font25">
-                                        Đèn cửa kính mạ Crom
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-sm-4 col-6 item">
-                                <a href="" class="col-filter">
-                                    <div class="symbol">
-                                        <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
-                                    </div>
-                                    <div class="name2 font25">
-                                        Gạt mưa tự động
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-sm-4 col-6 item">
-                                <a href="" class="col-filter">
-                                    <div class="symbol">
-                                        <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
-                                    </div>
-                                    <div class="name2 font25">
-                                        Đèn chào
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-sm-4 col-6 item">
-                                <a href="" class="col-filter">
-                                    <div class="symbol">
-                                        <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
-                                    </div>
-                                    <div class="name2 font25">
-                                        Hệ thống chống trộm
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-sm-4 col-6 item">
-                                <a href="" class="col-filter">
-                                    <div class="symbol">
-                                        <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
-                                    </div>
-                                    <div class="name2 font25">
-                                        Túi khí
-                                    </div>
-                                </a>
-                            </div>
+                            @forelse(get_equipment_by_brand_and_vehicle($slug->key,request()->get('vehicle')) as $key=>$value)
+                                @php
+                                    $request_merge = $request;
+                                    if(array_search($value->slug,$request_merge)){
+                                        $index = array_search('vehicle',array_keys($request_merge));
+                                        if($index !== false){
+                                            array_splice($request_merge,$index,1);
+                                        }
+                                    }else{
+                                        $request_merge = array_merge($request_merge,['vehicle'=>$value->slug]);
+                                    }
+                                @endphp
+                                <div class="col-sm-4 col-6 item">
+                                    <a href="{{
+                                        route('public.brand.index',$request_merge)}}" class="col-filter {{array_search($value->slug,$request) ? 'active' : ''}}">
+                                        <div class="symbol">
+                                            <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
+                                        </div>
+                                        <div class="name font25">
+                                            {{$value->name}}
+                                        </div>
+                                    </a>
+                                </div>
+                            @empty
+                            @endforelse
                         </div>
                     </div>
                     <div class="row-filter">
@@ -217,37 +153,31 @@
                         Màu sơn
                         </div>
                         <div class="row-filter__content row">
-
+                            @forelse(get_color_by_brand_and_vehicle($slug->key,request()->get('color')) as $key=>$value)
+                            @php
+                                $request_merge = $request;
+                                if(array_search($value->code,$request_merge)){
+                                    $index = array_search('color',array_keys($request_merge));
+                                    if($index !== false){
+                                        array_splice($request_merge,$index,1);
+                                    }
+                                }else{
+                                    $request_merge = array_merge($request_merge,['color'=>$value->code]);
+                                }
+                            @endphp
                             <div class="col-sm-4 col-6 item">
-                                <a href="" class="col-filter">
+                                <a href="{{
+                                    route('public.brand.index',$request_merge)}}" class="col-filter {{array_search($value->code,$request) ? 'active' : ''}}">
                                     <div class="symbol">
                                         <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
                                     </div>
                                     <div class="name font25">
-                                        Đen
+                                        {{$value->name}}
                                     </div>
                                 </a>
                             </div>
-                            <div class="col-sm-4 col-6 item">
-                                <a href="" class="col-filter active">
-                                    <div class="symbol">
-                                        <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
-                                    </div>
-                                    <div class="name font25">
-                                        Trắng
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-sm-4 col-6 item">
-                                <a href="" class="col-filter">
-                                    <div class="symbol">
-                                        <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
-                                    </div>
-                                    <div class="name font25">
-                                        Xám
-                                    </div>
-                                </a>
-                            </div>
+                        @empty
+                        @endforelse
                         </div>
                     </div>
                     <div class="row-filter">
@@ -256,37 +186,31 @@
                         Động cơ
                         </div>
                         <div class="row-filter__content row">
-
-                            <div class="col-sm-4 col-6 item">
-                                <a href="" class="col-filter">
-                                    <div class="symbol">
-                                        <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
-                                    </div>
-                                    <div class="name font25">
-                                        1.8
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-sm-4 col-6 item">
-                                <a href="" class="col-filter active">
-                                    <div class="symbol">
-                                        <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
-                                    </div>
-                                    <div class="name font25">
-                                        2.4
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-sm-4 col-6 item">
-                                <a href="" class="col-filter">
-                                    <div class="symbol">
-                                        <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
-                                    </div>
-                                    <div class="name font25">
-                                        3.0
-                                    </div>
-                                </a>
-                            </div>
+                            @forelse(get_engine_by_brand_and_vehicle($slug->key,request()->get('engine')) as $key=>$value)
+                                @php
+                                    $request_merge = $request;
+                                    if(array_search($value,$request_merge)){
+                                        $index = array_search('engine',array_keys($request_merge));
+                                        if($index !== false){
+                                            array_splice($request_merge,$index,1);
+                                        }
+                                    }else{
+                                        $request_merge = array_merge($request_merge,['engine'=>$value]);
+                                    }
+                                @endphp
+                                <div class="col-sm-4 col-6 item">
+                                    <a href="{{
+                                        route('public.brand.index',$request_merge)}}" class="col-filter {{array_search($value,$request) ? 'active' : ''}}">
+                                        <div class="symbol">
+                                            <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
+                                        </div>
+                                        <div class="name font25">
+                                            {{$value}}
+                                        </div>
+                                    </a>
+                                </div>
+                            @empty
+                            @endforelse
                         </div>
                     </div>
                     <div class="row-filter">
@@ -295,27 +219,30 @@
                         Nhiên liệu
                         </div>
                         <div class="row-filter__content row">
-
-                            <div class="col-sm-4 col-6 item">
-                                <a href="" class="col-filter active">
-                                    <div class="symbol">
-                                        <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
-                                    </div>
-                                    <div class="name font25">
-                                        Xăng
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-sm-4 col-6 item">
-                                <a href="" class="col-filter">
-                                    <div class="symbol">
-                                        <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
-                                    </div>
-                                    <div class="name font25">
-                                        Dầu
-                                    </div>
-                                </a>
-                            </div>
+                            @forelse(config('base.fuel_types') as $key=>$gear)
+                                @php
+                                    $request_merge = $request;
+                                    if(array_search($key,$request_merge)){
+                                        $index = array_search('fuel_type',array_keys($request_merge));
+                                        if($index !== false){
+                                            array_splice($request_merge,$index,1);
+                                        }
+                                    }else{
+                                        $request_merge = array_merge($request_merge,['fuel_type'=>$key]);
+                                    }
+                                @endphp
+                                <div class="col-sm-4 col-6 item">
+                                    <a href="{{route('public.brand.index',$request_merge)}}" class="col-filter {{array_search($key,$request) ? 'active' : ''}}">
+                                        <div class="symbol">
+                                            <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
+                                        </div>
+                                        <div class="name font25">
+                                            {{trans($gear)}}
+                                        </div>
+                                    </a>
+                                </div>
+                            @empty
+                            @endforelse
                         </div>
                     </div>
                     <div class="row-filter">
@@ -324,27 +251,31 @@
                         Hộp số
                         </div>
                         <div class="row-filter__content row">
-
-                            <div class="col-sm-4 col-6 item">
-                                <a href="" class="col-filter active">
-                                    <div class="symbol">
-                                        <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
-                                    </div>
-                                    <div class="name font25">
-                                        Số sàn
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-sm-4 col-6 item">
-                                <a href="" class="col-filter">
-                                    <div class="symbol">
-                                        <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
-                                    </div>
-                                    <div class="name font25">
-                                        Tự động
-                                    </div>
-                                </a>
-                            </div>
+                            @forelse(config('base.gears') as $key=>$gear)
+                                @php
+                                        $request_merge = $request;
+                                        if(array_search($key,$request_merge)){
+                                            $index = array_search('gear',array_keys($request_merge));
+                                            if($index !== false){
+                                                array_splice($request_merge,$index,1);
+                                            }
+                                        }else{
+                                            $request_merge = array_merge($request_merge,['gear'=>$key]);
+                                        }
+                                    @endphp
+                                <div class="col-sm-4 col-6 item">
+                                    <a href="{{
+                                        route('public.brand.index',$request_merge)}}" class="col-filter {{array_search($key,$request) ? 'active' : ''}}">
+                                        <div class="symbol">
+                                            <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
+                                        </div>
+                                        <div class="name font25">
+                                            {{trans($gear)}}
+                                        </div>
+                                    </a>
+                                </div>
+                            @empty
+                            @endforelse
                         </div>
                     </div>
                 </div>
@@ -356,12 +287,12 @@
 
 <script>
     $(document).ready(function() {
-        Array.from(document.getElementsByClassName('col-filter')).forEach(function(element){
-            element.onclick =(e)=> {
-                e.preventDefault();
-                element.classList.toggle('active');
-            }
-        })
+        // Array.from(document.getElementsByClassName('col-filter')).forEach(function(element){
+        //     element.onclick =(e)=> {
+        //         e.preventDefault();
+        //         element.classList.toggle('active');
+        //     }
+        // })
 
         const button = document.querySelector(".btn-join");
         const modal = document.querySelector(".overlay");

@@ -22,10 +22,42 @@ if(!function_exists('get_car_lines')){
    }
 }
 if(!function_exists('get_cars')){
-   function get_cars($brand = null, $vehicle = null){
+   function get_cars($brand = null, $vehicle = null, $request = null){
       $carInterface = resolve('Platform\Car\Repositories\Interfaces\CarInterface');
       $slugRepository = resolve('Platform\Slug\Repositories\Interfaces\SlugInterface');
       $carModel = new \Platform\Car\Models\Car;
+      /**
+       * 
+       */
+      if($request instanceof \Illuminate\Http\Request){
+         $slugRepository = resolve('Platform\Slug\Repositories\Interfaces\SlugInterface');
+         if($request->get('horse_power')){
+            $carModel = $carModel->where('horse_power',$request->get('horse_power'));
+         }
+         if($request->get('vehicle')){
+            $slug = $slugRepository->getFirstBy(['key' => $request->get('vehicle'), 'reference_type' => \Platform\Vehicle\Models\Vehicle::class]);
+            if($slug){
+               $carModel = $carModel->whereHas('vehicle',function($q) use ($slug){
+                  return $q->whereIn('id',$slug->reference_id);
+               });
+            }
+         }
+         if($request->get('engine')){
+            $carModel = $carModel->where('engine',$request->get('engine'));
+         }
+         if($request->get('color')){
+            $carModel = $carModel->whereHas('colors',function($q) use ($request){
+               return $q->where('code',$request->get('color'));
+            });
+         }
+         if($request->get('fuel_type')){
+            $carModel = $carModel->where('fuel_type',$request->get('fuel_type'));
+         }
+         if($request->get('gear')){
+            $carModel = $carModel->where('gear',$request->get('gear'));
+         }
+      }
+      //  
       if($brand){
          $slug = $slugRepository->getFirstBy(['key' => $brand, 'reference_type' => \Platform\Brand\Models\Brand::class]);
          if($slug){
@@ -71,7 +103,7 @@ if (!function_exists('get_car_by_id')) {
 
 if(!function_exists('get_horse_power_by_brand_and_vehicle')){
    function get_horse_power_by_brand_and_vehicle($brand = null,$vehicle = null){
-      $cars = get_cars($brand,$vehicle);
+      $cars = get_cars($brand,$vehicle, null);
       if(count($cars)){
          return $cars->pluck('horse_power')->toArray();
       }
@@ -81,7 +113,7 @@ if(!function_exists('get_horse_power_by_brand_and_vehicle')){
 
 if(!function_exists('get_equipment_by_brand_and_vehicle')){
    function get_equipment_by_brand_and_vehicle($brand = null,$vehicle = null){
-      $cars = get_cars($brand,$vehicle);
+      $cars = get_cars($brand,$vehicle, null);
       if(count($cars)){
          $equipmentIds = [];
          foreach($cars as $car){
@@ -98,7 +130,7 @@ if(!function_exists('get_equipment_by_brand_and_vehicle')){
 
 if(!function_exists('get_color_by_brand_and_vehicle')){
    function get_color_by_brand_and_vehicle($brand = null,$vehicle = null){
-      $cars = get_cars($brand,$vehicle);
+      $cars = get_cars($brand,$vehicle, null);
       if(count($cars)){
          $ids = [];
          foreach($cars as $car){
@@ -115,7 +147,7 @@ if(!function_exists('get_color_by_brand_and_vehicle')){
 
 if(!function_exists('get_engine_by_brand_and_vehicle')){
    function get_engine_by_brand_and_vehicle($brand = null,$vehicle = null){
-      $cars = get_cars($brand,$vehicle);
+      $cars = get_cars($brand,$vehicle, null);
       if(count($cars)){
          return $cars->pluck('engine')->toArray();
       }

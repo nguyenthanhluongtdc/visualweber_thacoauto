@@ -275,7 +275,7 @@
     });
     var owl = $('.owl-carousel');
     owl.owlCarousel({
-        loop: false,
+        loop: true,
         items: 2.5,
         margin: 25,
         dots: false,
@@ -283,7 +283,7 @@
         responsiveClass: true,
         responsive:{
             0:{
-                items: 1.3,
+                items: 1.5,
             },
             1081:{
                 items:2.5,

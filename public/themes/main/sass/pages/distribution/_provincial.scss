@@ -130,6 +130,7 @@
                     width: 100%;
                     height: 50%;
                     padding: 15px;
+                    padding-right: 5px;
                 }
 
                 .branch-overflow {
@@ -137,9 +138,6 @@
                     overflow-y: auto;
                     height: 100%;
                     padding-right: 15px;
-                    @media (max-width: 768px) {
-                        padding-right: 0px;
-                    }
                     &::-webkit-scrollbar-track {
                         -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
                         background-color: #707070;
@@ -192,7 +190,7 @@
                                         width: 50%;
                                         text-align: center;
                                         img {
-                                            scale: 0.8;
+                                            transform: scale(0.8);
                                         }
                                     }
                                 }

@@ -66,11 +66,11 @@
                     </li>
                     <li class="info-equip__item font18 font-pri">
                         <img src="{{Theme::asset()->url('images/business/brand-detail/chon-xe-2.png')}}" alt="filter icon">
-                        <span>{{config("base.fuel_types.".$carFeature->fuel_type,'')}}</span>
+                        <span>{{ __($carFeature->fuel_type) }}</span>
                     </li>
                     <li class="info-equip__item font18 font-pri">
                         <img src="{{Theme::asset()->url('images/business/brand-detail/chon-xe-3.png')}}" alt="filter icon">
-                        <span>{{config("base.gears.".$carFeature->gear,'')}}</span>
+                        <span>{{ __($carFeature->gear) }}</span>
                     </li>
                 </ul>
                 @if(count($carFeature->colors))
@@ -106,7 +106,7 @@
                 @endif
                 <ul class="info-other">
                     <li class="info-other__item">
-                        <a class="font18 font-pri" href="/dang-ky-lai-thu">{{trans('Đăng ký lái thử')}}</a>
+                        <a class="font18 font-pri" href="{{ route('public.brand.test-drive', [$carFeature->slug]) }}">{{trans('Đăng ký lái thử')}}</a>
                     </li>
                     @if($carFeature->brochure)
                         <li class="info-other__item">
@@ -117,9 +117,9 @@
                 <a href="{{ route('public.brand.car-selection',[
                     'car' => $carFeature->slug,
                     'showroom' => request()->get('showroom')
-                ]) }}" class="text-center info-button font18 font-pri d-inline-block">Tiếp theo</a>
+                ]) }}" class="text-center info-button font18 font-pri d-inline-block">{{ __('Tiếp theo') }}</a>
 
-                <div class="info-hotline font18 font-pri">HOTLINE - 1900 54 55 91</div>
+                <div class="info-hotline font18 font-pri">{{ __("HOTLINE") }} - {{ theme_option('hotline-contact') }}</div>
             </div>
         </div>
         @endif

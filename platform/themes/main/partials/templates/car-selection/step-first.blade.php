@@ -24,7 +24,7 @@
                 </div>
             </div>
 
-            <div class="car-selection-content__right d-flex flex-column col-sm-12 col-md-12">
+            <form action="{{ URL::current() }}" method="GET" class="car-selection-content__right d-flex flex-column col-sm-12 col-md-12">
                 <div class="car-version">
                     <div id="car-version-select" class="car-version__select font15 font-pri">
                         <h3 class="font15 font-pri mb-0">{{ __("Chọn phiên bản xe") }}</h3>
@@ -52,12 +52,11 @@
                 <div class="option__car flex-grow-1">
                     {!! Theme::partial('templates.car-selection.options', ['car' => $car]) !!}
                 </div>
-                <a class="select-button font18 font-pri fontmb-small d-inline-block"  type="button" href="">{{ __("Tiếp theo") }}</a>
-            </div>
+                <button type="submit" class="select-button font18 font-pri fontmb-small d-inline-block">{{ __("Tiếp theo") }}</button>
+            </form>
             <button class="btn-back mt-4">
                 {{ __("Quay lại") }}
             </button>
         </div>
-
     </div>
 </section>

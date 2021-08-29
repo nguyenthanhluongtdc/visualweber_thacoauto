@@ -2,9 +2,10 @@
 <div class="select-color">
     <h3 class="select-color__title font15 font-pri">{{ __('Lựa chọn màu') }}</h3>
     @if($car->colors->count() > 0)
+        <input name="color" class="d-none" value="{{ $car->colors->first()->id ?? '' }}" id="picker-color" />
         <ul class="info-color">
             @foreach ($car->colors ?? collect() as $key => $item)
-                <li class="info-color__item {{ $key == 0 ? 'active' : '' }}" style="background-color: {{ $item->code }}"></li>
+                <li data-value="{{ $item->id }}" class="info-color__item {{ $key == 0 ? 'active' : '' }}" style="background-color: {{ $item->code }}"></li>
             @endforeach
         </ul>
     @else
@@ -28,7 +29,7 @@
                 </div>
             </div>
         @empty
-            <span class="font-pri font15 w-100 text-center py-4 text-danger">{{ __("chưa cập nhật") }}</span>
+            <button class="font-pri font15 w-100 text-center py-4 text-danger">{{ __("chưa cập nhật") }}</button>
         @endforelse
     </div>
 </div>
@@ -53,3 +54,14 @@
         @endforelse
     </div>
 </div>
+
+<script>
+    $(document).ready(function() {
+        $(document).on('click', '.info-color__item', function() {
+            $('.info-color__item').removeClass('active')
+            $(this).addClass('active')
+            const value = $(this).data('value')
+            $('#picker-color').val(value)
+        })
+    })
+</script>

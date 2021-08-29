@@ -8,7 +8,10 @@ use Platform\CarCategory\Models\CarCategory;
 use Platform\Base\Http\Controllers\BaseController;
 use Platform\Base\Http\Responses\BaseHttpResponse;
 use Platform\Brand\Repositories\Interfaces\BrandInterface;
+use Platform\Car\Repositories\Interfaces\AccessoryInterface;
 use Platform\Car\Repositories\Interfaces\CarInterface;
+use Platform\Car\Repositories\Interfaces\ColorInterface;
+use Platform\Car\Repositories\Interfaces\EquipmentInterface;
 use Platform\Slug\Repositories\Interfaces\SlugInterface;
 use Platform\CarCategory\Repositories\Interfaces\CarCategoryInterface;
 use Platform\MoreConsultancy\Repositories\Interfaces\MoreConsultancyInterface;
@@ -114,8 +117,14 @@ class PublicController extends BaseController
         return \Theme::scope('car-selection', $data)->render();
     }
 
-    public function getCostEstimate($car, PromotionsInterface $promotionsInterface, MoreConsultancyInterface $moreConsultancyInterface)
-    {
+    public function getCostEstimate(
+        $car,
+        PromotionsInterface $promotionsInterface,
+        MoreConsultancyInterface $moreConsultancyInterface,
+        ColorInterface $colorInterface,
+        AccessoryInterface $accessoryInterface,
+        EquipmentInterface $equipmentInterface
+    ) {
         $data['car'] = $this->getCar($car);
 
         $dataPromotions = $promotionsInterface->getModel()
@@ -137,6 +146,28 @@ class PublicController extends BaseController
                 "created_at" => "desc"
             ]
         ]);
+
+        if (request('color')) {
+            $data['color'] = $colorInterface->getFirstBy(['id' => request('color')]);
+        }
+
+        if (request('accessories') && is_array(request('accessories'))) {
+            $data['accessories'] = $accessoryInterface->advancedGet([
+                "condition" => [
+                    ["id", "IN", request('accessories')]
+                ],
+                "select" => ["*"]
+            ]);
+        }
+
+        if (request('equipments') && is_array('equipments')) {
+            $data['equipments'] = $equipmentInterface->advancedGet([
+                "condition" => [
+                    ["id", 'IN', request('equipments')]
+                ],
+                'select' => ["*"]
+            ]);
+        }
 
         return \Theme::scope('cost-estimates', $data)->render();
     }

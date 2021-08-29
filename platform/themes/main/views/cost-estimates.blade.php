@@ -20,69 +20,71 @@
                     </div>
                 </div>
                 <h2 class="font18 MyriadPro-BoldCond text-uppercase mb-3 mt-4">{{ __('Chương trình khuyến mãi') }}</h2>
-                <div class="promotion__list">
                     @if(isset($promotions) && !blank($promotions))
-                        @foreach ($promotions as $item)
-                            <div class="promotion__item">
-                                <img loading="lazy" src="{{ RvMedia::getImageUrl($item->image, null, false, RvMedia::getDefaultImage()) }}"  alt="{{ $item->name }}" width="160" height="117" class="img-fluid" />
-                                <div class="custom-control mt-2 span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
-                                    <input type="checkbox" name="promotions[]" value="{{ $item->id }}" class="custom-control-input" id="customControlInline_{{ $item->id }}_promotions">
-                                    <label class="custom-control-label" for="customControlInline_{{ $item->id }}_promotions">{{ $item->name }}</label>
+                        <div class="promotion__list">
+                            @foreach ($promotions as $item)
+                                <div class="promotion__item">
+                                    <img loading="lazy" src="{{ RvMedia::getImageUrl($item->image, null, false, RvMedia::getDefaultImage()) }}"  alt="{{ $item->name }}" width="160" height="117" class="img-fluid" />
+                                    <div class="custom-control mt-2 span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
+                                        <input type="checkbox" name="promotions[]" value="{{ $item->id }}" class="custom-control-input" id="customControlInline_{{ $item->id }}_promotions">
+                                        <label class="custom-control-label" for="customControlInline_{{ $item->id }}_promotions">{{ $item->name }}</label>
+                                    </div>
                                 </div>
-                            </div>
-                        @endforeach
+                            @endforeach
+                        </div>
                     @else
-                        {!! Theme::partial('templates.no-content') !!}
+                        <div class="w-100">
+                            {!! Theme::partial('templates.no-content') !!}
+                        </div>
                     @endif
-                </div>
                 <h2 class="font18 MyriadPro-BoldCond text-uppercase mb-3 mt-4">{{ __('Yêu cầu tư vấn Thêm') }}</h2>
-                <div class="custom-control mt-2 span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
-                    <input type="checkbox" class="custom-control-input" id="customControlInline4">
-                    <label class="custom-control-label" for="customControlInline4">Gói gian hạn bảo hành</label>
-                </div>
-                <div class="custom-control mt-2 span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
-                    <input type="checkbox" class="custom-control-input" id="customControlInline5">
-                    <label class="custom-control-label" for="customControlInline5">Gói bảo hiểm ô tô</label>
-                </div>
-                <div class="custom-control mt-2 span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
-                    <input type="checkbox" class="custom-control-input" id="customControlInline6">
-                    <label class="custom-control-label" for="customControlInline6">Gói bảo dưỡng</label>
-                </div>
-                <h2 class="font18 MyriadPro-BoldCond text-uppercase mb-3 mt-4">Phương thức thanh toán</h2>
+                @if(isset($consultancies) && !blank($consultancies))
+                    @foreach ($consultancies as $item)
+                        <div class="custom-control mt-2 span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
+                            <input type="checkbox" class="custom-control-input" name="consultancies[]" value="{{ $item->id }}" id="customControlInline_{{ $item->id }}_consultancies">
+                            <label class="custom-control-label" for="customControlInline_{{ $item->id }}_consultancies">{{ $item->name }}</label>
+                        </div>
+                    @endforeach
+                @else
+                    <div class="w-100">
+                        {!! Theme::partial('templates.no-content') !!}
+                    </div>
+                @endif
+                <h2 class="font18 MyriadPro-BoldCond text-uppercase mb-3 mt-4">{{ __("Phương thức thanh toán") }}</h2>
                 <div class="custom-control mt-2 span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
                     <input type="checkbox" class="custom-control-input" id="customControlInline7">
-                    <label class="custom-control-label" for="customControlInline7">Thanh toán tại đại lý</label>
+                    <label class="custom-control-label" for="customControlInline7">{{ __("Thanh toán tại đại lý") }}</label>
                 </div>
                 <div class="custom-control span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
                     <input type="checkbox" class="custom-control-input" id="customControlInline8">
-                    <label class="custom-control-label" for="customControlInline8">Vai trả góp ngân hàng <a data-fancybox data-src="#installment-modal" href="javascript:;" class="d-inline-block ml-2"><u>Chi tiết chi phí</u></a></label>
+                    <label class="custom-control-label" for="customControlInline8">{{ __("Vai trả góp ngân hàng") }} <a data-fancybox data-src="#installment-modal" href="javascript:;" class="d-inline-block ml-2"><u>{{ __("Chi tiết chi phí") }}</u></a></label>
                 </div>
             </div>
             <div style="display: none;" class="MyriadPro-Regular font15" id="installment-modal">
                 <div class="deposit__form deposit__form-gray">
                     <div class="form-group">
-                        <label class="required MyriadPro-Regular font17 mb-2 d-inline-block">Số tiền muốn vay</label>
+                        <label class="required MyriadPro-Regular font17 mb-2 d-inline-block">{{ __("Số tiền muốn vay") }}</label>
                         <div class="mb-3 ui fluid selection dropdown">
                             <input type="hidden" name="country">
                             <i class="dropdown icon"></i>
                             <div class="default text MyriadPro-Regular font15 d-flex justify-content-between align-items-center">
-                                <span>Chọn số tiền vay</span>
-                                <span class="text-secondary">triệu đồng</span>
+                                <span>{{ __("Chọn số tiền vay") }}</span>
+                                <span class="text-secondary">{{ __("triệu đồng") }}</span>
                             </div>
                             <div class="menu">
                                 <div class="item d-flex justify-content-between align-items-center" data-value="af">
                                     <span>500</span>
-                                    <span class="text-secondary">triệu đồng</span>
+                                    <span class="text-secondary">{{ __("triệu đồng") }}</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="required MyriadPro-Regular font17 mb-2 d-inline-block">Chỗ ở hiện nay</label>
+                        <label class="required MyriadPro-Regular font17 mb-2 d-inline-block">{{ __("Chỗ ở hiện nay") }}</label>
                         <div class="mb-3 ui fluid selection dropdown">
                             <input type="hidden" name="country">
                             <i class="dropdown icon"></i>
-                            <div class="default text MyriadPro-Regular font15">Chọn chỗ ở hiện tại</div>
+                            <div class="default text MyriadPro-Regular font15">{{ __("Chọn chỗ ở hiện tại") }}</div>
                             <div class="menu">
                                 <div class="item" data-value="af">Afghanistan</div>
                                 <div class="item" data-value="ax">Aland Islands</div>
@@ -93,36 +95,36 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="required MyriadPro-Regular font17 mb-2 d-inline-block">Thời gian vay</label>
+                        <label class="required MyriadPro-Regular font17 mb-2 d-inline-block">{{ __('Thời gian vay') }}</label>
                         <div class="mb-3 ui fluid selection dropdown">
                             <input type="hidden" name="country">
                             <i class="dropdown icon"></i>
                             <div class="default text MyriadPro-Regular font15 d-flex justify-content-between align-items-center">
-                                <span>Chọn thời gian vay</span>
-                                <span class="text-secondary">năm</span>
+                                <span>{{ __("Chọn thời gian vay") }}</span>
+                                <span class="text-secondary">{{ __("Year") }}</span>
                             </div>
                             <div class="menu">
                                 <div class="item d-flex justify-content-between align-items-center" data-value="af">
                                     <span>5</span>
-                                    <span class="text-secondary">năm</span>
+                                    <span class="text-secondary">{{ __("Year") }}</span>
                                 </div>
                                 <div class="item d-flex justify-content-between align-items-center" data-value="af">
                                     <span>4</span>
-                                    <span class="text-secondary">năm</span>
+                                    <span class="text-secondary">{{ __("Year") }}</span>
                                 </div>
                                 <div class="item d-flex justify-content-between align-items-center" data-value="af">
                                     <span>3</span>
-                                    <span class="text-secondary">năm</span>
+                                    <span class="text-secondary">{{ __("Year") }}</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="required MyriadPro-Regular font17 mb-2 d-inline-block">Thời gian cố định lãi xuất</label>
+                        <label class="required MyriadPro-Regular font17 mb-2 d-inline-block">{{ __("Thời gian cố định lãi xuất") }}</label>
                         <div class="mb-3 ui fluid selection dropdown">
                             <input type="hidden" name="country">
                             <i class="dropdown icon"></i>
-                            <div class="default text MyriadPro-Regular font15">Chọn thời gian</div>
+                            <div class="default text MyriadPro-Regular font15">{{ __("Chọn thời gian") }}</div>
                             <div class="menu">
                                 <div class="item" data-value="af">Afghanistan</div>
                                 <div class="item" data-value="ax">Aland Islands</div>
@@ -133,11 +135,11 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="required MyriadPro-Regular font17 mb-2 d-inline-block">Ngân hàng</label>
+                        <label class="required MyriadPro-Regular font17 mb-2 d-inline-block">{{ __("Ngân hàng") }}</label>
                         <div class="mb-3 ui fluid selection dropdown">
                             <input type="hidden" name="country">
                             <i class="dropdown icon"></i>
-                            <div class="default text MyriadPro-Regular font15">Chọn ngân hàng</div>
+                            <div class="default text MyriadPro-Regular font15">{{ __("Chọn ngân hàng") }}</div>
                             <div class="menu">
                                 <div class="item" data-value="af">Afghanistan</div>
                                 <div class="item" data-value="ax">Aland Islands</div>
@@ -148,22 +150,22 @@
                         </div>
                     </div>
                     <div class="form-group span-2">
-                        <label class="required MyriadPro-Regular font17 mb-2 d-inline-block">Ước tính</label>
+                        <label class="required MyriadPro-Regular font17 mb-2 d-inline-block">{{ __("Ước tính") }}</label>
                         <div class="MyriadPro-Regular installment-estimate">
                             <div class="installment-estimate__item">
-                                <p class="font15 d-inline-block mb-3">Số tiền phải trả hàng tháng</p>
+                                <p class="font15 d-inline-block mb-3">{{ __("Số tiền phải trả hàng tháng") }}</p>
                                 <p class="font17">10 triệu đồng</p>
                             </div>
                             <div class="installment-estimate__item">
-                                <p class="font15 d-inline-block mb-3">Số tháng</p>
+                                <p class="font15 d-inline-block mb-3">{{ __("Số tháng") }}</p>
                                 <p class="font17">36</p>
                             </div>
                             <div class="installment-estimate__item">
-                                <p class="font15 d-inline-block mb-3">Ngân hàng</p>
+                                <p class="font15 d-inline-block mb-3">{{ __("Ngân hàng") }}</p>
                                 <p class="font17">Vietcombank</p>
                             </div>
                             <div class="installment-estimate__item">
-                                <p class="font15 d-inline-block mb-3">Tổng tiền</p>
+                                <p class="font15 d-inline-block mb-3">{{ __("Tổng tiền") }}</p>
                                 <p class="font17">800 triệu đồng</p>
                             </div>
                         </div>

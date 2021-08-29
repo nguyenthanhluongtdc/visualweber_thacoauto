@@ -9,6 +9,7 @@ use Platform\Base\Http\Controllers\BaseController;
 use Platform\Brand\Repositories\Interfaces\BrandInterface;
 use Platform\Slug\Repositories\Interfaces\SlugInterface;
 use Platform\CarCategory\Repositories\Interfaces\CarCategoryInterface;
+use Platform\MoreConsultancy\Repositories\Interfaces\MoreConsultancyInterface;
 use Platform\Promotions\Repositories\Interfaces\PromotionsInterface;
 
 class PublicController extends BaseController
@@ -111,7 +112,7 @@ class PublicController extends BaseController
         return \Theme::scope('car-selection', $data)->render();
     }
 
-    public function getCostEstimate($car, PromotionsInterface $promotionsInterface)
+    public function getCostEstimate($car, PromotionsInterface $promotionsInterface, MoreConsultancyInterface $moreConsultancyInterface)
     {
         $data['car'] = $this->getCar($car);
 
@@ -124,6 +125,16 @@ class PublicController extends BaseController
             ->orderBy('created_at', 'desc');
 
         $data['promotions'] = $promotionsInterface->applyBeforeExecuteQuery($dataPromotions)->get();
+        $data['consultancies'] = $moreConsultancyInterface->advancedGet([
+            "condition" => [
+                "status" => BaseStatusEnum::PUBLISHED
+            ],
+            "select" => ['*'],
+            "order_by" => [
+                "order" => "desc",
+                "created_at" => "desc"
+            ]
+        ]);
 
         return \Theme::scope('cost-estimates', $data)->render();
     }

@@ -106,13 +106,19 @@
                 @endif
                 <ul class="info-other">
                     <li class="info-other__item">
-                        <a class="font18 font-pri" href="">Đăng ký lái thử</a>
+                        <a class="font18 font-pri" href="/dang-ky-lai-thu">{{trans('Đăng ký lái thử')}}</a>
                     </li>
-                    <li class="info-other__item">
-                        <a class="font18 font-pri" href="">Xem brochure</a>
-                    </li>
+                    @if($carFeature->brochure)
+                        <li class="info-other__item">
+                            <a class="font18 font-pri" target="_blank" href="{{get_object_image($carFeature->brochure)}}">{{trans('Xem brochure')}}</a>
+                        </li>
+                    @endif
                 </ul>
-                <a href="{{ url('car-selection') }}" class="text-center info-button font18 font-pri d-inline-block">Tiếp theo</a>
+                <a href="{{ route('public.brand.car-selection',[
+                    'slug' => $slug->key,
+                    'car' => $carFeature->slug,
+                    'showroom' => request()->get('showroom')
+                ]) }}" class="text-center info-button font18 font-pri d-inline-block">Tiếp theo</a>
 
                 <div class="info-hotline font18 font-pri">HOTLINE - 1900 54 55 91</div>
             </div>

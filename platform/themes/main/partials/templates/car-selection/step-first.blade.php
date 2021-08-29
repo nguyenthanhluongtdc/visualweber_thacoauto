@@ -35,8 +35,6 @@
 
                     <a href="" class="car-version__viewdetail font15 font-pri">{{ __("Xem chi tiết phiên bản") }}</a>
                 </div>
-                <input name="car_version" class="d-none car_version_input" value="{{ isset($request['car_version']) && !blank($request['car_version']) ? $request['car_version'] : $car->id }}" />
-
                 @if($car->childrens)
                     <ul id="car-version-list" class="car-version__list active">
                         @foreach ($car->childrens as $item)

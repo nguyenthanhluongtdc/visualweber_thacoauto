@@ -1,4 +1,4 @@
-@includeIf("theme.main::views.pages.business.car-selection.section.menu")
+{!! Theme::partial('templates.car-selection-menu', ['car' => $car]) !!}
 
 <div class="my-5 container-remake MyriadPro-Regular font15">
     <form action="" method="POST" class="row">

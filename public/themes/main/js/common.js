@@ -393,8 +393,6 @@ var Ajax = {
             const carID = $(this).data('car_id')
             option_car.empty()
 
-            $(".car_version_input").val(carID)
-
             Helper.handleToggleLoading()
             const response = await $.get(window.__urlAjax, {
                 car_id: carID

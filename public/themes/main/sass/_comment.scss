@@ -1,0 +1,88 @@
+$background-color-comment: #ebedf2;
+$color-red: #dc3545;
+
+#bb-comment {
+    &.bb-comment-wrapper {
+        padding: unset;
+        font-family: $font-primary;
+        .bb-comment {
+            max-width: 100%;
+        }
+        & p,a, strong, span, li {
+            font-size: 15px;
+            font-family: $font-primary;
+        }
+        .bb-avatar {
+            border-radius: 100%;
+            overflow: hidden;
+            border: unset;
+            flex-shrink: 0;
+        }
+        .bb-comment-header {
+            .bb-comment-header-top {
+                justify-content: flex-end;
+                margin-bottom: 1.5rem;
+                border-width: 1px;
+            }
+        }
+        .bb-comment-content {
+            .bb-content-custom {
+                background-color: $background-color-comment;
+                padding: 1rem 1.3rem;
+                .bb-comment-content-actions {
+                    height: 25px;
+                    & + .mt-3.mb-4 {
+                        margin-bottom: unset !important;
+                        .bb-comment-box {
+                            margin-bottom: unset;
+                        }
+                    }
+                    .bb-like {
+                        height: 45px;
+                        width: 45px;
+                        position: relative;
+                        top: 1px;
+                        left: -6px;
+                    }
+                }
+                .bb-comment-item-user_name {
+                    & > a > strong  {
+                        color: $color-primary;
+                        font-family: $font-my-bold;
+                    }
+                    &-info {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .bb-comment-item-actions {
+            .fa-edit {
+                color: $color-primary;
+            }
+            .fa-trash-alt {
+                color: $color-red;
+            }
+        }
+        .bb-comment-box {
+            .bb-textarea {
+                .bb-textarea-footer,textarea {
+                    border-radius: unset;
+                    background-color: $background-color-comment;
+                    border: unset;
+                    resize: none;
+                }
+                textarea:focus, textarea.focused, textarea {
+                    min-height: 100px;
+                }
+                .post-btn {
+                    border-radius: unset;
+                    background-color: $color-primary;
+                    &.cancel-btn {
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+}

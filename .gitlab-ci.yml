@@ -1,0 +1,79 @@
+before_script:
+  #- yum install which -y
+  # install ssh-agent if not already installed, it is required by docker
+  - 'which ssh-agent || ( yum install openssh-clients -y )'
+  # run ssh-agent (inside the build environment)
+  - eval $(ssh-agent -s)
+  # add the ssh key stored in SSH_PRIVATE_KEY variable to the agent store
+  #- ssh-add <(echo "$SSH_PRIVATE_KEY")
+  # for docker builds disable host key checking although this can lead to
+  # mitm attacks; only use this in docker or it will overwrite the host
+  # ssh config!
+  #- mkdir -p ~/.ssh
+  #- '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+  - whoami
+  - pwd
+after_script:
+  - whoami
+  - pwd
+stages:
+  - develop
+  - preprod
+  - prod
+  - master
+develop:
+  stage: develop
+  only:
+    # This build will run only when something is pushed to the develop branch.
+    - develop
+  script:
+    - pwd && su dev && whoami
+    - cd /home/dev/htdocs/thacoauto/
+    - git pull
+    - bootstrap="$(git log -1 --pretty=%B | grep bootstrap)" && ([[ $bootstrap ]] && bash bin/bootstrap.sh -e d)
+    - sass="$(git log -1 --pretty=%B | grep sass)" && ([[ $sass ]] && sass public/themes/main/sass/common.scss:public/themes/main/css/common.css --style compressed)
+    - npm="$(git log -1 --pretty=%B | grep npm)" && ([[ $npm ]] && npm install n -g && n stable && n latest && npm install && npm update && npm run dev)
+    - migrate="$(git log -1 --pretty=%B | grep migrate)" && ([[ $migrate ]] && yes | php artisan migrate)    
+    - delivery="$(git log -1 --pretty=%B | grep delivery)" && ([[ $delivery ]] && bash bin/delivery.sh -e p)
+    - php artisan config:clear
+    - php artisan cache:clear
+    - php artisan view:clear
+    - chown -R dev:dev /home/dev/htdocs/thacoauto/
+    - pwd
+preprod:
+  stage: preprod
+  only:
+    # This build will run only when something is pushed to the develop branch.
+    - preprod
+  script:
+    - pwd && whoami
+    - ssh -tt user@your-domain.com "cd /home/user/domains/your-domain.com/public_html;git pull --no-edit;"
+    # - bootstrap="$(git log -1 --pretty=%B | grep bootstrap)" && ([[ $bootstrap ]] && bash bin/bootstrap.sh -e d)
+    - pwd && whoami
+prod:
+  stage: prod
+  only:
+    # This build will run only when something is pushed to the develop branch.
+    - master
+  script:
+    - whoami
+    - ssh -tt user@your-domain.com "cd /home/user/domains/your-domain.com/public_html;git pull --no-edit;"
+    # - bootstrap="$(git log -1 --pretty=%B | grep bootstrap)" && ([[ $bootstrap ]] && bash bin/bootstrap.sh -e d)
+    - pwd
+    - whoami
+master:
+  stage: master
+  only:
+    # This build will run only when something is pushed to the develop branch.
+    - master
+  script:
+    - pwd && whoami
+    - ssh -tt username@27.0.12.72 "cd /home/username/public_html/;git pull --no-edit;"
+    - bootstrap="$(git log -1 --pretty=%B | grep bootstrap)" && ([[ $bootstrap ]] && ssh -tt username@27.0.12.72 "cd /home/username/public_html/;yes | bash bin/bootstrap.sh -e d")
+    - sass="$(git log -1 --pretty=%B | grep sass)" && ([[ $sass ]] && ssh -tt username@27.0.12.72 "cd /home/username/public_html/;sass public/themes/main/sass/common.scss:public/themes/main/css/common.css --style compressed")
+    - migrate="$(git log -1 --pretty=%B | grep migrate)" && ([[ $migrate ]] && ssh -tt username@27.0.12.72 "cd /home/username/public_html/;yes | php artisan migrate")
+    - npm="$(git log -1 --pretty=%B | grep npm)" && ([[ $npm ]] && ssh -tt username@27.0.12.72 "cd /home/username/public_html/;npm install n -g && n stable && n latest && npm install && npm update && npm run dev")
+    - ssh -tt username@27.0.12.72 "cd /home/username/public_html/;php artisan config:clear"
+    - ssh -tt username@27.0.12.72 "cd /home/username/public_html/;php artisan cache:clear"
+    - ssh -tt username@27.0.12.72 "cd /home/username/public_html/;php artisan view:clear"
+    - pwd && whoami

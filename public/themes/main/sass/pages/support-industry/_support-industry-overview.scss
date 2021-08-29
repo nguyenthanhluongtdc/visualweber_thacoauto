@@ -1,0 +1,200 @@
+.section-support-industry-overview {
+    
+    .mechandical-overview {
+        
+        &__boxfield {
+            display: flex;
+            flex-wrap: wrap;
+            @media (max-width: 1080px) {
+                margin-left: -15px;
+                margin-right: -15px;
+            }
+            
+            
+            .item{
+                
+                position: relative;
+                .text{
+                   
+                    height: 40%;
+                    position: absolute;
+                    bottom: 0;
+                   p{
+                       position: relative;
+                       top: 30%;
+                       
+                   }
+                }
+                
+         
+            }
+            .boxfield-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                max-width: 15%;
+                flex: 0 0 15%;
+                background-color: #F5F5F5;
+                
+                text-align: center;
+                margin-right: 2%;
+                padding: 2%;
+                max-width: 215px;
+                
+                img{
+                    margin-bottom: 5%;
+                    width: 50%;
+                }
+                .name {
+                    margin-top: 6%;
+                    line-height: 1.2;
+                }
+
+                @media (max-width: 1080px) {
+                    max-width: 50%;
+                    flex: 0 0 50%;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    margin-right: 0;
+                    height: auto;
+                    background-color: transparent;
+                    // @include mobileHeight(420);
+
+                    .content {
+                        background-color: #F5F5F5;
+                        height: 100%;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 30% 10%;
+                        img {
+                            margin-bottom: 0;
+                            width: auto;
+                            max-width: 100%;
+                        }
+                        .name {
+                            @include mobileMarginTop(26, "+");
+                        }
+
+                        @media(max-width: 576px) {
+                            padding: 20% 10%;
+                        }
+                    }
+                }
+
+                @media (max-width: 576px) {
+                    .content {
+                        padding: 20%;
+                    }
+                }
+            }
+            .boxfield-item:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    
+}
+
+
+.section-support-industry-overview {
+    
+    .support-industry-overview {
+        &__boxfield {
+            display: flex;
+            flex-wrap: wrap;
+            // height: 215px;
+            .boxfield-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 15%;
+                text-align: center;
+                margin-right: 2%;
+                padding: 1.6%;
+                max-width: 215px;
+                background-color: #f1f1f1;
+               
+                img{
+                    width: 50%;
+    
+                }
+                .name {
+                    margin-top: 25px;
+                    line-height: 1.2;
+                }
+            }
+            .boxfield-item:nth-child(1) {
+                .name {
+                    margin-top: 48px;
+                    
+                }
+            }
+            .boxfield-item:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.section-support-industry-overview-mobile {
+    display: none;
+    @media only screen and (max-width: 1080px){
+        display: block;
+    .mechandical-overview {
+           
+            &__boxfield {
+                
+                .item{
+                    height: 190px;
+                    position: relative;
+                   
+                    .text{
+                        // background-color: aqua;
+                        height: 40%;
+                        position: absolute;
+                        bottom: 0;
+                       p{
+                           position: relative;
+                           top: 30%;
+                           
+                       }
+                    }
+                    
+                    
+                }
+              
+                .boxfield-item {
+                    display: table;
+                    margin: 0 auto;
+                    text-align: center;
+                    width: 100%;
+                    
+                    padding: 0;
+                    height: auto;
+                    margin-bottom: 5%;
+                    background-color: #f1f1f1;
+                   
+                    img{
+                        margin-top: 10%;
+                        margin-bottom: 5%;
+                        width: 50%;
+                    }
+                    .name {
+                        margin-top: 6%;
+                        line-height: 1.2;
+                        margin-bottom: 5%;
+                       
+                    }
+                }
+            
+            } 
+                   
+       }
+        
+    }
+    
+}

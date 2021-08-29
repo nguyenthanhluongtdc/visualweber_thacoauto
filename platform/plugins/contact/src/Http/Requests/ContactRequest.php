@@ -1,0 +1,40 @@
+<?php
+
+namespace Platform\Contact\Http\Requests;
+
+use Platform\Support\Http\Requests\Request;
+
+class ContactRequest extends Request
+{
+    /**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array
+     *
+     * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
+     */
+     public function rules()
+    {   
+            return [
+                // 'firstname'           => 'required',
+                // 'lastname'           => 'required',
+                // 'content' => 'required',
+                'agree'                 => 'required',
+    
+            ];
+       
+    }
+
+    /**
+     * @return array
+     */
+    public function messages()
+    {
+        return [
+            // 'firstname.required'    => trans('Họ là bắt buộc'),
+            // 'lastname.required'    => trans('Tên là bắt buộc'),
+            // 'content.required' => trans('plugins/contact::contact.form.content.required'),
+            'agree.required' => trans('Vui lòng nhấn vào ô xác nhận'),
+        ];
+    }
+}

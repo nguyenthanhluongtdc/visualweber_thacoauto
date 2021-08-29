@@ -1,0 +1,15 @@
+.select2-container {
+  .select2-dropdown.select2-dropdown--below {
+    .select2-search.select2-search--dropdown {
+      .select2-search__field {
+        height: 37px;
+        font-size: 15px;
+        font-family: "MyriadPro-Regular";
+        &:focus {
+          outline: unset;
+          box-shadow: unset;
+        }
+      }
+    }
+  }
+}

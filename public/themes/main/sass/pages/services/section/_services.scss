@@ -1,0 +1,100 @@
+.services{
+    margin-top: 55px;
+    @media(max-width : 1440px){
+        margin-top: 50px;
+    }
+    @media(max-width : 1199px){
+        margin-top: 50px;
+    }
+    .services-block{
+        width: 100%;
+        padding-bottom: 36.5%;
+        position: relative;
+        margin-bottom: 65px;
+        overflow: hidden;
+
+        @media (max-width: 1080px) {
+            @include mobileHeight(460);
+        }
+        
+        &:hover .services-block__image {
+            transform: scale(1.1);
+            
+        }
+        &:hover .services-block__content{
+            left: 14%;
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+            
+        }
+        &__image{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transition: all 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            object-fit: cover;
+        }
+        &__content{
+            width: 35.5%;
+            position: absolute;
+            z-index: 2;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 12%;
+            transition: all 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+            @media (max-width: 768px) {
+                width: 50%;
+            }
+
+            @media (max-width: 576px) {
+                width: 70%;
+            }
+
+            .services-block__title{
+                h2{
+                    padding-bottom: 3%;
+                }
+            }
+            .services-block__desc{
+                text-align: justify;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 3; /* number of lines to show */
+                margin-bottom: 3.2%;
+                color: #fffefe;
+            }
+            .services-block__button{
+                background-color: white;
+                width: 87px;
+                height: 27px;
+                padding: 6px 10px;
+                line-height: 0;
+                color: $color-primary;
+                font-size: 13px;
+                transition: 0.2s;
+                @media (max-width: 768px){
+                    padding: 4px 7px;
+                    font-size: 11px;
+                }
+                @media (max-width: 360px){
+                    padding: 2px 4px;
+                }
+                &:hover{
+                    color: white;
+                    background-color: $color-primary;
+                }
+            }
+        }
+    }
+}

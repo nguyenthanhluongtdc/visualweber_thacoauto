@@ -1,0 +1,9 @@
+{
+  "name": "Post Scheduler",
+  "namespace": "Platform\\PostScheduler\\",
+  "provider": "Platform\\PostScheduler\\Providers\\PostSchedulerServiceProvider",
+  "author": "Laravel Technologies",
+  "url": "https://laravel-cms.demo.gistensal.com",
+  "version": "5.8",
+  "description": "Set published time for posts"
+}

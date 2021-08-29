@@ -1,0 +1,47 @@
+.general-manufacturing {
+    .production {
+        @media (max-width:1080px){
+            .production__title{
+                margin-bottom: 1%;
+            }
+        }
+        &__content {
+            .read-more {
+                margin: 5px 0;
+                &__link {
+                    float: right;
+                    text-transform: capitalize;
+                    color: #01498B;
+                    i{
+                        font-size: 0.8vw;
+                    }
+                }
+
+                @media (max-width: 1080px) {
+                    &.desktop {
+                        display: none;
+                    }
+                }
+            }
+        }
+        &__image {
+            padding-top: 1%;
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+    .production:last-child {
+        margin-bottom: 100px;
+        @media (max-width: 1680px) {
+            margin-bottom: #{calculatorPixel(100,1680)}px;
+        }
+        @media (max-width: 1360px) {
+            margin-bottom: #{calculatorPixel(100,1360)}px;
+        }
+        @media (max-width: 992px) {
+            margin-bottom: #{calculatorPixel(100,992)}px;
+        }
+    }
+}

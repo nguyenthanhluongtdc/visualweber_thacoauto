@@ -1,0 +1,433 @@
+@mixin font-face($font-family, $url) {
+  @font-face {
+    font-family: "#{$font-family}";
+    src: url("../#{$url}.eot");
+    src: url("../#{$url}.eot?#iefix") format("embedded-opentype"),
+      url("../#{$url}.woff") format("woff"),
+      url("../#{$url}.ttf") format("truetype"),
+      url("../#{$url}.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+@mixin minAndMaxWidth($min, $max) {
+  @media only screen and (min-width: $min+"px") and (max-width: $max + "px") {
+    @content;
+  }
+}
+
+@mixin split_str($line_number) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line_number;
+}
+
+@function calculatorPixel($size, $screen) {
+  @return ($size * $screen) / 2020;
+}
+
+@function MobilecalculatorPixel($size, $screen) {
+  @return ($size * $screen) / 1080;
+}
+
+//desktop
+
+@mixin marginLeft($size, $minus) {
+  margin-left: #{$minus}#{$size}px;
+  @media only screen and (max-width: 1680px) {
+    margin-left: #{$minus}#{calculatorPixel($size, 1680)}px;
+  }
+  @media only screen and (max-width: 1368px) {
+    margin-left: #{$minus}#{calculatorPixel($size, 1368)}px;
+  }
+}
+
+@mixin marginRight($size, $minus) {
+  margin-right: #{$minus}#{$size}px;
+  @media only screen and (max-width: 1680px) {
+    margin-right: #{$minus}#{calculatorPixel($size, 1680)}px;
+  }
+  @media only screen and (max-width: 1368px) {
+    margin-right: #{$minus}#{calculatorPixel($size, 1368)}px;
+  }
+}
+
+@mixin marginTop($size, $minus) {
+  margin-top: #{$minus}#{$size}px;
+  @media only screen and (max-width: 1680px) {
+    margin-top: #{$minus}#{calculatorPixel($size, 1680)}px;
+  }
+  @media only screen and (max-width: 1368px) {
+    margin-top: #{$minus}#{calculatorPixel($size, 1368)}px;
+  }
+}
+
+@mixin marginBottom($size, $minus) {
+  margin-bottom: #{$minus}#{$size}px;
+  @media only screen and (max-width: 1680px) {
+    margin-bottom: #{$minus}#{calculatorPixel($size, 1680)}px;
+  }
+  @media only screen and (max-width: 1368px) {
+    margin-bottom: #{$minus}#{calculatorPixel($size, 1368)}px;
+  }
+}
+
+@mixin marginX($size, $minus) {
+  margin-right: #{$minus}#{$size}px;
+  margin-left: #{$minus}#{$size}px;
+  @media only screen and (max-width: 1680px) {
+    margin-right: #{$minus}#{calculatorPixel($size, 1680)}px;
+    margin-left: #{$minus}#{calculatorPixel($size, 1680)}px;
+  }
+  @media only screen and (max-width: 1368px) {
+    margin-right: #{$minus}#{calculatorPixel($size, 1368)}px;
+    margin-left: #{$minus}#{calculatorPixel($size, 1368)}px;
+  }
+}
+
+@mixin paddingLeft($size) {
+  padding-left: #{$size}px;
+  @media only screen and (max-width: 1680px) {
+    padding-left: #{calculatorPixel($size, 1680)}px;
+  }
+  @media only screen and (max-width: 1368px) {
+    padding-left: #{calculatorPixel($size, 1368)}px;
+  }
+}
+
+@mixin paddingRight($size) {
+  padding-right: #{$size}px;
+  @media only screen and (max-width: 1680px) {
+    padding-right: #{calculatorPixel($size, 1680)}px;
+  }
+  @media only screen and (max-width: 1368px) {
+    padding-right: #{calculatorPixel($size, 1368)}px;
+  }
+}
+
+@mixin paddingTop($size) {
+  padding-top: #{$size}px;
+  @media only screen and (max-width: 1680px) {
+    padding-top: #{calculatorPixel($size, 1680)}px;
+  }
+  @media only screen and (max-width: 1368px) {
+    padding-top: #{calculatorPixel($size, 1368)}px;
+  }
+}
+
+@mixin paddingBottom($size) {
+  padding-bottom: #{$size}px;
+  @media only screen and (max-width: 1680px) {
+    padding-bottom: #{calculatorPixel($size, 1680)}px;
+  }
+  @media only screen and (max-width: 1368px) {
+    padding-bottom: #{calculatorPixel($size, 1368)}px;
+  }
+}
+
+@mixin paddingX($size) {
+  padding-right: #{$size}px;
+  padding-left: #{$size}px;
+  @media only screen and (max-width: 1680px) {
+    padding-right: #{calculatorPixel($size, 1680)}px;
+    padding-left: #{calculatorPixel($size, 1680)}px;
+  }
+  @media only screen and (max-width: 1368px) {
+    padding-right: #{calculatorPixel($size, 1368)}px;
+    padding-left: #{calculatorPixel($size, 1368)}px;
+  }
+}
+
+@mixin paddingY($size) {
+  padding-bottom: #{$size}px;
+  padding-top: #{$size}px;
+  @media only screen and (max-width: 1680px) {
+    padding-bottom: #{calculatorPixel($size, 1680)}px;
+    padding-top: #{calculatorPixel($size, 1680)}px;
+  }
+  @media only screen and (max-width: 1368px) {
+    padding-bottom: #{calculatorPixel($size, 1368)}px;
+    padding-top: #{calculatorPixel($size, 1368)}px;
+  }
+}
+
+@mixin width($size) {
+  width: #{$size}px;
+  @media only screen and (max-width: 1680px) {
+    width: #{calculatorPixel($size, 1680)}px;
+  }
+  @media only screen and (max-width: 1368px) {
+    width: #{calculatorPixel($size, 1368)}px;
+  }
+}
+
+@mixin height($size) {
+  height: #{$size}px;
+  @media only screen and (max-width: 1680px) {
+    height: #{calculatorPixel($size, 1680)}px;
+  }
+  @media only screen and (max-width: 1368px) {
+    height: #{calculatorPixel($size, 1368)}px;
+  }
+}
+
+@mixin lineHeight($size) {
+  line-height: #{$size}px;
+  @media only screen and (max-width: 1680px) {
+    line-height: #{calculatorPixel($size, 1680)}px;
+  }
+  @media only screen and (max-width: 1368px) {
+    line-height: #{calculatorPixel($size, 1368)}px;
+  }
+}
+
+@mixin flex($size) {
+  flex: 0 0 #{$size}px;
+  @media only screen and (max-width: 1680px) {
+    flex: 0 0 #{calculatorPixel($size, 1680)}px;
+  }
+  @media only screen and (max-width: 1368px) {
+    flex: 0 0 #{calculatorPixel($size, 1368)}px;
+  }
+}
+
+//mobile
+@mixin mobileMarginLeft($size, $minus) {
+  @media (max-width: 1080px) {
+    margin-left: #{$minus}#{$size}px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    margin-left: #{$minus}#{MobilecalculatorPixel($size, 768)}px;
+  }
+  @media (max-width: 576px) {
+    margin-left: #{$minus}#{MobilecalculatorPixel($size, 576)}px;
+  }
+}
+
+@mixin mobileMarginRight($size, $minus) {
+  @media (max-width: 1080px) {
+    margin-right: #{$minus}#{$size}px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    margin-right: #{$minus}#{MobilecalculatorPixel($size, 768)}px;
+  }
+  @media (max-width: 576px) {
+    margin-right: #{$minus}#{MobilecalculatorPixel($size, 576)}px;
+  }
+}
+
+@mixin mobileMarginTop($size, $minus) {
+  @media (max-width: 1080px) {
+    margin-top: #{$minus}#{$size}px;
+  }
+  @media only screen and (max-width: 768px) {
+    margin-top: #{$minus}#{MobilecalculatorPixel($size, 768)}px;
+  }
+  @media (max-width: 576px) {
+    margin-top: #{$minus}#{MobilecalculatorPixel($size, 576)}px;
+  }
+}
+
+@mixin mobileMarginBottom($size, $minus) {
+  @media (max-width: 1080px) {
+    margin-bottom: #{$minus}#{$size}px;
+  }
+  @media only screen and (max-width: 768px) {
+    margin-bottom: #{$minus}#{MobilecalculatorPixel($size, 768)}px;
+  }
+  @media (max-width: 576px) {
+    margin-bottom: #{$minus}#{MobilecalculatorPixel($size, 576)}px;
+  }
+}
+
+@mixin mobileMarginX($size, $minus) {
+  @media (max-width: 1080px) {
+    margin-right: #{$minus}#{$size}px;
+    margin-left: #{$minus}#{$size}px;
+  }
+  @media only screen and (max-width: 768px) {
+    margin-right: #{$minus}#{MobilecalculatorPixel($size, 768)}px;
+    margin-left: #{$minus}#{MobilecalculatorPixel($size, 768)}px;
+  }
+  @media (max-width: 576px) {
+    margin-right: #{$minus}#{MobilecalculatorPixel($size, 576)}px;
+    margin-left: #{$minus}#{MobilecalculatorPixel($size, 576)}px;
+  }
+}
+
+@mixin mobilePaddingLeft($size) {
+  @media (max-width: 1080px) {
+    padding-left: #{$size}px;
+  }
+  @media only screen and (max-width: 768px) {
+    padding-left: #{MobilecalculatorPixel($size, 768)}px;
+  }
+  @media (max-width: 576px) {
+    padding-left: #{MobilecalculatorPixel($size, 576)}px;
+  }
+}
+
+@mixin mobilePaddingRight($size) {
+  @media (max-width: 1080px) {
+    padding-right: #{$size}px;
+  }
+  @media only screen and (max-width: 768px) {
+    padding-right: #{MobilecalculatorPixel($size, 768)}px;
+  }
+  @media (max-width: 576px) {
+    padding-right: #{MobilecalculatorPixel($size, 576)}px;
+  }
+}
+
+@mixin mobilePaddingTop($size) {
+  @media (max-width: 1080px) {
+    padding-top: #{$size}px;
+  }
+  @media only screen and (max-width: 768px) {
+    padding-top: #{MobilecalculatorPixel($size, 768)}px;
+  }
+  @media (max-width: 576px) {
+    padding-top: #{MobilecalculatorPixel($size, 576)}px;
+  }
+}
+
+@mixin mobilePaddingBottom($size) {
+  @media (max-width: 1080px) {
+    padding-bottom: #{$size}px;
+  }
+  @media only screen and (max-width: 768px) {
+    padding-bottom: #{MobilecalculatorPixel($size, 768)}px;
+  }
+  @media (max-width: 576px) {
+    padding-bottom: #{MobilecalculatorPixel($size, 576)}px;
+  }
+}
+
+@mixin mobilePaddingX($size) {
+  @media (max-width: 1080px) {
+    padding-right: #{$size}px;
+    padding-left: #{$size}px;
+  }
+  @media only screen and (max-width: 768px) {
+    padding-right: #{MobilecalculatorPixel($size, 768)}px;
+    padding-left: #{MobilecalculatorPixel($size, 768)}px;
+  }
+  @media (max-width: 576px) {
+    padding-right: #{MobilecalculatorPixel($size, 576)}px;
+    padding-left: #{MobilecalculatorPixel($size, 576)}px;
+  }
+}
+
+@mixin mobilePaddingY($size) {
+  @media (max-width: 1080px) {
+    padding-bottom: #{$size}px;
+    padding-top: #{$size}px;
+  }
+  @media only screen and (max-width: 768px) {
+    padding-bottom: #{MobilecalculatorPixel($size, 768)}px;
+    padding-top: #{MobilecalculatorPixel($size, 768)}px;
+  }
+  @media (max-width: 576px) {
+    padding-bottom: #{MobilecalculatorPixel($size, 576)}px;
+    padding-top: #{MobilecalculatorPixel($size, 576)}px;
+  }
+}
+
+@mixin mobileWidth($size) {
+  @media (max-width: 1080px) {
+    width: #{$size}px;
+  }
+  @media (max-width: 991px) {
+    width: #{MobilecalculatorPixel($size, 991)}px;
+  }
+  @media (max-width: 768px) {
+    width: #{MobilecalculatorPixel($size, 768)}px;
+  }
+  @media (max-width: 576px) {
+    width: #{MobilecalculatorPixel($size, 576)}px;
+  }
+  @media (max-width: 480px) {
+    width: #{MobilecalculatorPixel($size, 480)}px;
+  }
+  @media (max-width: 360px) {
+    width: #{MobilecalculatorPixel($size, 360)}px;
+  }
+}
+
+@mixin mobileHeight($size) {
+  @media (max-width: 1080px) {
+    height: #{$size}px;
+  }
+  @media (max-width: 991px) {
+    height: #{MobilecalculatorPixel($size, 991)}px;
+  }
+  @media (max-width: 768px) {
+    height: #{MobilecalculatorPixel($size, 768)}px;
+  }
+  @media (max-width: 576px) {
+    height: #{MobilecalculatorPixel($size, 576)}px;
+  }
+  @media (max-width: 480px) {
+    height: #{MobilecalculatorPixel($size, 480)}px;
+  }
+  @media (max-width: 360px) {
+    height: #{MobilecalculatorPixel($size, 360)}px;
+  }
+}
+
+@mixin mobileLineHeight($size) {
+  @media (max-width: 1080px) {
+    line-height: #{$size}px;
+  }
+  @media only screen and (max-width: 768px) {
+    line-height: #{MobilecalculatorPixel($size, 768)}px;
+  }
+  @media (max-width: 576px) {
+    line-height: #{MobilecalculatorPixel($size, 576)}px;
+  }
+  @media (max-width: 480px) {
+    line-height: #{MobilecalculatorPixel($size, 480)}px;
+  }
+  @media (max-width: 360px) {
+    line-height: #{MobilecalculatorPixel($size, 360)}px;
+  }
+}
+
+@mixin mobileFlex($size) {
+  @media (max-width: 1080px) {
+    flex: 0 0 #{$size}px;
+  }
+  @media only screen and (max-width: 768px) {
+    flex: 0 0 #{MobilecalculatorPixel($size, 768)}px;
+  }
+  @media (max-width: 576px) {
+    flex: 0 0 #{MobilecalculatorPixel($size, 576)}px;
+  }
+}
+
+@mixin minWidth($breakpoint) {
+  @media only screen and (min-width: $breakpoint + "px") {
+    @content;
+  }
+}
+
+@mixin maxWidth($breakpoint) {
+  @media only screen and (max-width: $breakpoint + "px") {
+    @content;
+  }
+}
+
+@mixin heightMinus($size) {
+  height: calc(100% -  #{$size}px);
+  @media only screen and (max-width: 1680px) {
+    height: calc(100% -  #{calculatorPixel($size, 1680)}px);
+  }
+  @media only screen and (max-width: 1368px) {
+    height: calc(100% -  #{calculatorPixel($size, 1368)}px);
+  }
+}

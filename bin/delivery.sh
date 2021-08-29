@@ -170,7 +170,7 @@ WEBDAV_BASEURL="https://owncloud.visualweber.com/remote.php/webdav"
 WEBDAVLOGIN="dev@visualweber.com"
 WEBDAVPASS="Viweb@@1234"
 BACKUP_PATH_YEAR="Dev.2021"
-BACKUP_PATH_PROJECT="$(date +"%d.%m.%y")_thacoauto"
+BACKUP_PATH_PROJECT="$(date +"%d.%m.%y")_{GIT_REPOSITORY_NAME}"
 WEBDAV="$WEBDAV_BASEURL/$BACKUP_PATH_YEAR/$BACKUP_PATH_PROJECT/"
 
 if [ $HASCURL == 1 ]; then
@@ -178,8 +178,8 @@ if [ $HASCURL == 1 ]; then
   echo -e "$VERT--> Your WebDav: $WEBDAV $NORMAL"
 fi
 
-BACKUP_SOURCENAME=thacoauto_source-$(date +"%Y-%m-%d_%H.%I.%S").zip
-BACKUP_SQLNAME=thacoauto_dbs-$(date +"%Y-%m-%d_%H.%I.%S").sql
+BACKUP_SOURCENAME={GIT_REPOSITORY_NAME}_source-$(date +"%Y-%m-%d_%H.%I.%S").zip
+BACKUP_SQLNAME={GIT_REPOSITORY_NAME}_dbs-$(date +"%Y-%m-%d_%H.%I.%S").sql
 
 if [ -f "$SCRIPT_PATH/../$BACKUP_SOURCENAME" ]; then
   (cd $SCRIPT_PATH/../ && $RM -f $BACKUP_SOURCENAME \;)
@@ -293,11 +293,11 @@ fi
 (cd $SCRIPT_PATH/../ && $FIND $SCRIPT_PATH/../public/ -type f -name 'robots.txt' -exec sed -i "s/Disallow\: \//Disallow\:/g" {} \;)
 
 ################ without symlink
-(cd $SCRIPT_PATH/../ && $ZIP -r4uy $BACKUP_SOURCENAME . -x \*.buildpath/\* \*.idea/\* \*.project/\* \*nbproject/\* \*.git/\* \*.svn/\* \*.gitignore\* \*.gitattributes\* \*.md \*.MD \*.log \*.zip \*.tar.gz \*.gz \*.tar \*.rar \*.DS_Store \*.lock \*desktop.ini vhost-nginx.conf \*.tmp \*.bat bin/delivery.sh bin/remove-botble.sh readme.html composer.lock wp-config.secure.php)
+(cd $SCRIPT_PATH/../ && $ZIP -r4uy $BACKUP_SOURCENAME . -x \*.buildpath/\* \*.idea/\* \*.project/\* \*nbproject/\* \*.git/\* \*.svn/\* \*.gitignore\* \*.gitattributes\* \*.md \*.MD \*.log \*.zip \*.tar.gz \*.gz \*.tar \*.rar \*.DS_Store \*.lock \*desktop.ini vhost-nginx.conf \*.tmp \*.bat bin/delivery.sh bin/remove-botble.sh readme.html composer.lock wp-config.secure.php \*.travis.yml\* \*.rnd\* \*.editorconfig\* \*.env\* \*editorconfig\* \*.gitlab-ci.yml\* __MACOSX/\*)
 
-(cd $SCRIPT_PATH/../ && $MYSQLDUMP -uuserdb.dev.thacoauto -pQA2n14vHG8I3Spwz --default-character-set utf8 dev_thacoauto > $BACKUP_SQLNAME)
+(cd $SCRIPT_PATH/../ && $MYSQLDUMP -u{DBUSER} -p{DBPWD} --default-character-set utf8 {DBNAME} > $BACKUP_SQLNAME)
 
-## (cd $SCRIPT_PATH/../ && $CHOWN -R dev:dev .)
+## (cd $SCRIPT_PATH/../ && $CHOWN -R {HOME_USER}:{HOME_USER} .)
 
 echo "Backup Source size: $(du -h $BACKUP_SOURCENAME | awk '{printf "%s",$1}')"
 echo "Backup SQL size: $(du -h $BACKUP_SQLNAME | awk '{printf "%s",$1}')"
@@ -348,8 +348,8 @@ else
 fi
 ## End
 
-## echo -e "$VERT--> http://thacoauto.dev.gistensal.com/$BACKUP_SOURCENAME $NORMAL"
-## echo -e "$VERT--> http:/thacoauto.dev.gistensal.com/$BACKUP_SQLNAME $NORMAL"
+## echo -e "$VERT--> http://{DOMAIN_NAME}/$BACKUP_SOURCENAME $NORMAL"
+## echo -e "$VERT--> http:/{DOMAIN_NAME}/$BACKUP_SQLNAME $NORMAL"
 
 echo -e "$ROUGE--> PLEASE LOGIN TO  $WEBDAV_BASEURL THEN SHARE TO CLIENT THE LINK, MAKE SURE THAT THEY CAN ACCESS $NORMAL"
 echo -e "$VERT--> The Link is: $WEBDAV_BASEURL/index.php/apps/files/?dir=/$BACKUP_PATH_YEAR/$BACKUP_PATH_PROJECT $NORMAL"

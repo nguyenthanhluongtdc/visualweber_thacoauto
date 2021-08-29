@@ -1,5 +1,7 @@
 ################ GLOBAL INGNORE ################
 ################################################
+public/themes/main/css/common.css
+public/themes/main/css/common.css.map
 logs/
 public/phpMyAdmin
 public/phpRedisAdmin/
@@ -12,7 +14,7 @@ bin/*
 
 ############# Laravel #############
 storage/*
-public/storage/
+#public/storage/
 
 ################ GUIDE LINE ####################
 ## To gitignore every file and folder under a directory recursively:
@@ -526,7 +528,7 @@ tests/media/templates/view/*
 
 /node_modules
 /public/hot
-/public/storage
+#/public/storage
 /storage/*.key
 /vendor
 .DS_Store
@@ -560,3 +562,6 @@ public/mix-manifest.json
 
 /storage/installing
 public/docs
+
+public/themes/main/css/common.css
+public/themes/main/css/common.css.map

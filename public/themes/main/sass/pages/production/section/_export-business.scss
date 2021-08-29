@@ -1,0 +1,29 @@
+.section-export-business{
+    padding-top: 55px;
+    .export-business{
+        &__title{
+            margin-bottom: 17px;
+        }
+        &__image{
+            margin-top: 60px;
+            display: flex;
+            justify-content: space-between;
+            .frame{
+                overflow: hidden;
+                max-width: 49.5%;
+                flex: 1 49.5%;
+                height: 24.1vw;
+                max-height: 465px;
+                img{
+                    width: 100%;
+                    height: auto;
+                    transition: all 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                    &:hover{
+                        transform: scale(1.1);
+                        ;
+                    }
+                }
+            }
+        }
+    }
+}   

@@ -1,0 +1,188 @@
+.section-list-news-wrapper.mechandical {
+    @media only screen and (max-width: 1080px){
+        display: none;
+    }
+    @include marginBottom(80, "+");
+    .section-list-news {
+        
+        @include paddingTop(60);
+        .title a {
+            font-family: $font-my-bold;
+        }
+        .content { 
+            img {
+                max-width: 100%;
+            }
+            .item {
+               
+                @include paddingY(50);
+                border-bottom: 1px solid #d0d0d0;
+                display: flex;
+                @media(max-width: 768px) {
+                    flex-wrap: wrap;
+                }
+              
+                .read-more {
+                    
+                    img{
+                        width: 3.1%;
+                        margin-left: 1.65%;
+                        transform: translateY(-4.4px);
+                        @media (max-width: 1680px) {
+                            width: 2.45%;
+                            transform: translateY(-3px);
+                        }
+                        @media (max-width: 1440px) {
+                            width: 2.55%;
+                            transform: translateY(-3px);
+                        }
+                        @media (max-width: 1340px) {
+                            width: 2.35%;
+                            transform: translateY(-2.8px);
+                        }
+                        
+                        @media (max-width: 1140px) {
+                            width: 2.2%;
+                            transform: translateY(-2px);
+                        }
+                        
+                    }
+                    &:hover{
+                        
+                        img{
+                            margin-left: 5%;
+                            transition: .5s ease-in-out;
+                        }
+                      
+                    }
+                }
+                
+                &__left {
+                  
+                    display: flex;
+                    @media (max-width: 768px) {
+                        flex: 0 0 100%;
+                        max-width: 100%;
+                    }
+                    .sub--left {
+                        background-color: $color-primary;
+                        text-align: center;
+                        color: $color-white;
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-content: center;
+                        width: 230px;
+                        height: 226px;
+                        @include width(230);
+                        @include height(226);
+                        line-height: initial;
+                        
+                        >div {
+                            flex: 0 0 100%;
+                            max-width: 100%;
+                        }
+                        .day,
+                        .month {
+                            font-size: 40px;
+                            text-transform: uppercase;
+                            font-weight: bold;
+                            
+                        }
+                        .year {
+                            font-size: 20px;
+                            margin-top: -10px;
+                        }
+
+                        .month{
+                            margin-top: -15px;
+                        }
+                        
+                    }
+                    .sub--right {
+                        padding-left: 0;
+                        @include width(336);
+                        @include height(226);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        @media (max-width: 768px) {
+                            width: max-content;
+                        }
+                        img {
+                            height: 100%;
+                            object-fit: contain;
+                            @media (min-width: 769px) {
+                                width: 100%;
+                                min-width: 100%;
+                            }
+                        }
+                        @media (max-width: 992px) {
+                            padding: 0;
+                            flex-grow: 1;
+                        }
+                    }
+                }
+                &__right {
+                    @include height(226);
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-content: space-between;
+                    flex-grow: 1;
+                    max-width: 47%;
+                    @include paddingLeft(55);
+                    @include paddingY(20);
+                    @media (max-width: 768px) {
+                        flex: 0 0 100%;
+                        max-width: 100%;
+                        padding-left: 0;
+                    }
+                    &__top {
+                        flex: 0 0 100%;
+                        max-width: 100%;
+                    }
+                    .title a {
+                        font-family: $font-primary;
+                        color: #01498b;
+                        @include split_str(1);
+                        @include marginBottom(12, "+");
+                    }
+                    .description {
+                        color: #01498b;
+                        font-family: $font-primary;
+                        @include split_str(3);
+                        @media (max-width: 992px) {
+                            @include split_str(2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+.read-moree{
+    position: absolute;
+    right: 0;
+    left: 85%;
+    text-transform: uppercase;
+    img{
+        width: 4.3%;
+        margin-top: -8.5px;
+        margin-left: 5px;
+        @media (max-width: 1440px) {
+            margin-top: -6.5px;
+        }
+        @media (max-width: 1440px) {
+            margin-top: -5.5px;
+            width: 4.5%;
+        }
+    }
+    &:hover{
+        img{
+            margin-left: 20px;
+            transition: .5s ease-in-out  ;
+        }
+       
+    }
+}

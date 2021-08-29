@@ -1,0 +1,9 @@
+{
+    "name": "Manufacturing",
+    "namespace": "Platform\\Manufacturing\\",
+    "provider": "Platform\\Manufacturing\\Providers\\ManufacturingServiceProvider",
+    "author": "Laravel Developer Team",
+    "url": "https://developers.laravel.com",
+    "version": "1.0",
+    "description": "The description for module manufacturing"
+}

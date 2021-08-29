@@ -126,5 +126,7 @@ class DistributionSystemServiceProvider extends ServiceProvider
                     });
             }
         });
+        \SlugHelper::registerModule(Showroom::class);
+        \SlugHelper::setPrefix(Showroom::class, 'showrooms');
     }
 }

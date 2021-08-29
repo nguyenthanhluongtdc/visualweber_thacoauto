@@ -233,8 +233,11 @@ var Helper = {
         }
     },
     RangeFilterBranddetail: function () {
-        var range = $("#myRange").attr("value");
-        $(".filter-value").html(range);
+        if(document.getElementById('myRange')){
+            var slideWidth = document.getElementById('myRange').value * 100 / 20000000000;
+            $(".slider-range__line").css("width", "calc(" + slideWidth + "% - " + slideWidth / 7.5 + "px)");
+            $(".slider-range__button").css("left", slideWidth + "%");
+        }
         $(document).on('input change', '#myRange', function () {
             $('.filter-value').html($(this).val());
             var slideWidth = $(this).val() * 100 / 20000000000;
@@ -492,8 +495,43 @@ if ($('.counter-value').length > 0) {
     });
 }
 
+// Slide
+var SlideSwiper = {
+    slideColorCar: function(){
+        var swiper = new Swiper(".mySwiperColorThumb", {
+            spaceBetween: 10,
+            // slidesPerView: $('.mySwiperColorThumb .swiper-slide').length,
+            slidesPerView: "auto",
+            freeMode: true,
+            watchSlidesProgress: true,
+          });
+          var swiper2 = new Swiper(".mySwiperColor", {
+            spaceBetween: 10,
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+            thumbs: {
+              swiper: swiper,
+            },
+          });
+    }
+}
 //search
-
+// Select 2
+var select2 = {
+    pageBrand: function(){
+        if($('.country.selectjs').length){
+            $('.country.selectjs').select2();
+        }
+        if($('.showroom.selectjs').length){
+            $('.showroom.selectjs').select2({
+                width: 'resolve' // need to override the changed default
+            });
+        }
+    }
+}
+// 
 $(document).ready(function () {
     if ($('a[href="#search"]').length) {
         $('a[href="#search"]').click(function () {
@@ -575,4 +613,12 @@ $(document).ready(function () {
             }, 500);
         })
     }
-});
+    /**
+     * Import Slide
+     */
+    SlideSwiper.slideColorCar();
+    /**
+     * Import Select
+     */
+    select2.pageBrand();
+})

@@ -9,8 +9,9 @@ class Plugin extends PluginOperationAbstract
 {
     public static function remove()
     {
-        Schema::dropIfExists('app_car_categories');
-        Schema::dropIfExists('app_brands');
-        Schema::dropIfExists('app_car_lines');
+        Schema::dropIfExists('app_cars');
+        Schema::dropIfExists('app_colors');
+        Schema::dropIfExists('app_accessories');
+        Schema::dropIfExists('app_equipment');
     }
 }

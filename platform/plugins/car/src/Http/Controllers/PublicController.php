@@ -2,13 +2,15 @@
 
 namespace Platform\Car\Http\Controllers;
 
-use Platform\Car\Models\Brand;
-use Platform\Car\Models\CarCategory;
+use Platform\Base\Enums\BaseStatusEnum;
+use Platform\Brand\Models\Brand;
+use Platform\CarCategory\Models\CarCategory;
 use Platform\Base\Http\Controllers\BaseController;
-use Platform\Car\Repositories\Interfaces\BrandInterface;
+use Platform\Brand\Repositories\Interfaces\BrandInterface;
 use Platform\Slug\Repositories\Interfaces\SlugInterface;
-use Platform\Car\Repositories\Interfaces\CarCategoryInterface;
-
+use Platform\CarCategory\Repositories\Interfaces\CarCategoryInterface;
+use Platform\MoreConsultancy\Repositories\Interfaces\MoreConsultancyInterface;
+use Platform\Promotions\Repositories\Interfaces\PromotionsInterface;
 
 class PublicController extends BaseController
 {
@@ -47,7 +49,7 @@ class PublicController extends BaseController
 
         do_action(BASE_ACTION_PUBLIC_RENDER_SINGLE, BRAND_MODULE_SCREEN_NAME, $data);
 
-        return \Theme::scope('brand-detail', compact('data'))->render();
+        return \Theme::scope('brand-detail', compact('data', 'slug'))->render();
     }
     public function getCarCategoryBySlug($slug, SlugInterface $slugRepository)
     {
@@ -76,5 +78,64 @@ class PublicController extends BaseController
         do_action(BASE_ACTION_PUBLIC_RENDER_SINGLE, BRAND_MODULE_SCREEN_NAME, $data);
 
         return \Theme::scope('pages/business/product/product-detail', compact('data'))->render();
+    }
+
+    public function getCar($car)
+    {
+        if (!$car) {
+            abort(404);
+        }
+
+        $result = get_car_by_slug($car);
+        if (blank($result)) {
+            abort(404);
+        }
+
+        $meta = \MetaBox::getMetaData($result, 'seo_meta', true);
+        \SeoHelper::setTitle(isset($meta['seo_title']) ? $meta['seo_title'] : $result->name)
+            ->setDescription((isset($meta['seo_description']) ? $meta['seo_description'] : $result->description) ?: theme_option('site_description'))
+            ->openGraph()
+            ->setImage(\RvMedia::getImageUrl(@$result->image, 'og', false, \RvMedia::getImageUrl(theme_option('seo_og_image'))))
+            ->addProperties(
+                [
+                    'image:width' => '1200',
+                    'image:height' => '630'
+                ]
+            );
+
+        return $result;
+    }
+
+    public function getCarSelection($car)
+    {
+        $data['car'] = $this->getCar($car);
+        return \Theme::scope('car-selection', $data)->render();
+    }
+
+    public function getCostEstimate($car, PromotionsInterface $promotionsInterface, MoreConsultancyInterface $moreConsultancyInterface)
+    {
+        $data['car'] = $this->getCar($car);
+
+        $dataPromotions = $promotionsInterface->getModel()
+            ->whereHas('cars', function ($q) use ($data) {
+                $q->where('app_cars.id', $data['car']->id);
+            })
+            ->where('status', BaseStatusEnum::PUBLISHED)
+            ->orderBy('order', 'desc')
+            ->orderBy('created_at', 'desc');
+
+        $data['promotions'] = $promotionsInterface->applyBeforeExecuteQuery($dataPromotions)->get();
+        $data['consultancies'] = $moreConsultancyInterface->advancedGet([
+            "condition" => [
+                "status" => BaseStatusEnum::PUBLISHED
+            ],
+            "select" => ['*'],
+            "order_by" => [
+                "order" => "desc",
+                "created_at" => "desc"
+            ]
+        ]);
+
+        return \Theme::scope('cost-estimates', $data)->render();
     }
 }

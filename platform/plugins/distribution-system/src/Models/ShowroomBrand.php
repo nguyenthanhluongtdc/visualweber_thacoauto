@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Platform\Base\Traits\EnumCastable;
 use Platform\Base\Enums\BaseStatusEnum;
 use Platform\Base\Models\BaseModel;
-use Platform\Car\Models\Brand;
-use Platform\Car\Models\CarCategory;
+use Platform\Brand\Models\Brand;
+use Platform\CarCategory\Models\CarCategory;
 
 class ShowroomBrand extends BaseModel
 {

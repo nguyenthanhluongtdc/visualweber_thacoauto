@@ -89,6 +89,18 @@ class PublicController extends BaseController
             abort(404);
         }
 
+        $meta = \MetaBox::getMetaData($data['car'], 'seo_meta', true);
+        \SeoHelper::setTitle(isset($meta['seo_title']) ? $meta['seo_title'] : $data['car']->name)
+            ->setDescription((isset($meta['seo_description']) ? $meta['seo_description'] : $data['car']->description) ?: theme_option('site_description'))
+            ->openGraph()
+            ->setImage(\RvMedia::getImageUrl(@$data['car']->image, 'og', false, \RvMedia::getImageUrl(theme_option('seo_og_image'))))
+            ->addProperties(
+                [
+                    'image:width' => '1200',
+                    'image:height' => '630'
+                ]
+            );
+
         return \Theme::scope('car-selection', $data)->render();
     }
 }

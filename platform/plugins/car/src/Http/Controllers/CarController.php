@@ -63,6 +63,12 @@ class CarController extends BaseController
     {
         $car = $this->carRepository->createOrUpdate($request->input());
 
+        // store car
+        $showrooms = $request->input('showrooms');
+        if (!empty($showrooms) && is_array($showrooms)) {
+            $car->showrooms()->sync($showrooms);
+        }
+
         event(new CreatedContentEvent(CAR_MODULE_SCREEN_NAME, $request, $car));
 
         return $response
@@ -102,6 +108,12 @@ class CarController extends BaseController
 
         $car = $this->carRepository->createOrUpdate($car);
 
+        // store car
+        $showrooms = $request->input('showrooms');
+        if (!empty($showrooms) && is_array($showrooms)) {
+            $car->showrooms()->sync($showrooms);
+        }
+        
         event(new UpdatedContentEvent(CAR_MODULE_SCREEN_NAME, $request, $car));
 
         return $response

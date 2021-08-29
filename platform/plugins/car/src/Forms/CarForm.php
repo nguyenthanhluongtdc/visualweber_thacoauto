@@ -6,6 +6,7 @@ use Platform\Base\Forms\FormAbstract;
 use Platform\Base\Enums\BaseStatusEnum;
 use Platform\Car\Http\Requests\CarRequest;
 use Platform\Car\Models\Car;
+use Platform\Blog\Forms\Fields\CategoryMultiField;
 
 class CarForm extends FormAbstract
 {
@@ -15,6 +16,13 @@ class CarForm extends FormAbstract
      */
     public function buildForm()
     {
+        $selectedShowrooms = [];
+        if ($this->getModel()) {
+            $selectedShowrooms = $this->getModel()->showrooms()->pluck('showroom_id')->all();
+        }
+        if (!$this->formHelper->hasCustomField('categoryMulti')) {
+            $this->formHelper->addCustomField('categoryMulti', CategoryMultiField::class);
+        }
         $this
             ->setupModel(new Car)
             ->setValidatorClass(CarRequest::class)
@@ -121,6 +129,12 @@ class CarForm extends FormAbstract
                     'class' => 'form-control select-full',
                 ],
                 'choices'    => \Platform\Car\Models\Car::whereNull('parent_id')->pluck('name','id')->prepend('NULL','')->toArray(),
+            ])
+            ->add('showrooms[]', 'categoryMulti', [
+                'label'      => trans('Showrooms'),
+                'label_attr' => ['class' => 'control-label'],
+                'choices'    => $this->getModel()->brand_id ? get_showroom_by_state(null,$this->getModel()->brand->slug) : [],
+                'value'      => old('showrooms', $selectedShowrooms),
             ])
             ->add('image', 'mediaImage', [
                 'label'      => __('Image'),

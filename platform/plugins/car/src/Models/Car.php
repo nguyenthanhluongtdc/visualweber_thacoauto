@@ -118,4 +118,11 @@ class Car extends BaseModel
     {
         return $this->hasMany(\Platform\Car\Models\Car::class, 'parent_id');
     }
+
+    /**
+     * 
+     */
+    public function showrooms(){
+        return $this->belongsToMany(\Platform\DistributionSystem\Models\Showroom::class,'app_car_showrooms','car_id','showroom_id');
+    }
 }

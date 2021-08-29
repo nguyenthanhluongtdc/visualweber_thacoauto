@@ -81,10 +81,10 @@
                         </div>
                         @if(request()->get('country'))
                             <div class="ml-3 w-100">
-                                <select class="font18 font-pri showroom selectjs js-example-responsive" name="showrrom" onchange="submitFormPrice(this)" style="width:100%;">
+                                <select class="font18 font-pri showroom selectjs js-example-responsive" name="showroom" onchange="submitFormPrice(this)" style="width:100%;">
                                     <option selected disabled>{{ __("Đại lý") }}</option>
                                     @foreach (get_showroom_by_state(request()->get('country'),$slug->key ?? '',request()->get('vehicle')) ?? collect() as $key => $item)
-                                        <option {{ intval(request('showrrom', -1)) == $item->slug ? 'selected' : '' }}  value="{{ $item->slug }}">{{ $item->name }}</option>
+                                        <option {{ intval(request('showroom', -1)) == $item->slug ? 'selected' : '' }}  value="{{ $item->slug }}">{{ $item->name }}</option>
                                     @endforeach
                                 </select>
                             </div>

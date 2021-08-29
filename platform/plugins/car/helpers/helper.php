@@ -61,6 +61,14 @@ if (!function_exists('get_cars')) {
          if ($request->get('price')) {
             $carModel = $carModel->where('price', '<=', $request->get('price'));
          }
+         if ($request->get('showroom')) {
+            $slug = $slugRepository->getFirstBy(['key' => $request->get('showroom'), 'reference_type' => \Platform\DistributionSystem\Models\Showroom::class]);
+            if ($slug) {
+               $carModel = $carModel->whereHas('showrooms', function ($q) use ($slug) {
+                  return $q->whereIn('showroom_id', [$slug->reference_id]);
+               });
+            }
+         }
       }
       //
       if ($brand) {

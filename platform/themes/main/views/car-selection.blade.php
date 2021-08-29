@@ -1,15 +1,4 @@
-@if(!request('car_id'))
-    @php
-        header("Location: " . url()->previous(), true, 302);
-        exit();
-    @endphp
-@endif
-
 {!! Theme::partial('templates.car-selection-menu') !!}
-
-@php
-    $car = get_car_by_id(request('car_id'));
-@endphp
 
 <div class="step-first">
     {!! Theme::partial('templates.car-selection.step-first', ['car' => $car]) !!}

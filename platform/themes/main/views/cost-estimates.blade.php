@@ -1,7 +1,7 @@
 {!! Theme::partial('templates.car-selection-menu', ['car' => $car]) !!}
 
 <div class="my-5 container-remake MyriadPro-Regular font15">
-    <form action="" method="POST" class="row">
+    <form action="{{ route('public.brand.deposit', array_merge([$car->slug], request()->all())) }}" method="GET" class="row">
         <div class="col-sm-12 col-md-8 mb-4">
             <div class="deposit__form no-grid">
                 <h2 class="font18 MyriadPro-BoldCond text-uppercase mb-3">{{ __('Chọn tỉnh thành đăng ký xem') }}</h2>

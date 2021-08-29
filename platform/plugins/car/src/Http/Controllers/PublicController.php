@@ -172,6 +172,61 @@ class PublicController extends BaseController
         return \Theme::scope('cost-estimates', $data)->render();
     }
 
+    public function getDeposit(
+        $car,
+        PromotionsInterface $promotionsInterface,
+        MoreConsultancyInterface $moreConsultancyInterface,
+        ColorInterface $colorInterface,
+        AccessoryInterface $accessoryInterface,
+        EquipmentInterface $equipmentInterface
+    ) {
+        $data['car'] = $this->getCar($car);
+
+        $dataPromotions = $promotionsInterface->getModel()
+            ->whereHas('cars', function ($q) use ($data) {
+                $q->where('app_cars.id', $data['car']->id);
+            })
+            ->where('status', BaseStatusEnum::PUBLISHED)
+            ->orderBy('order', 'desc')
+            ->orderBy('created_at', 'desc');
+
+        $data['promotions'] = $promotionsInterface->applyBeforeExecuteQuery($dataPromotions)->get();
+        $data['consultancies'] = $moreConsultancyInterface->advancedGet([
+            "condition" => [
+                "status" => BaseStatusEnum::PUBLISHED
+            ],
+            "select" => ['*'],
+            "order_by" => [
+                "order" => "desc",
+                "created_at" => "desc"
+            ]
+        ]);
+
+        if (request('color')) {
+            $data['color'] = $colorInterface->getFirstBy(['id' => request('color')]);
+        }
+
+        if (request('accessories') && is_array(request('accessories'))) {
+            $data['accessories'] = $accessoryInterface->advancedGet([
+                "condition" => [
+                    ["id", "IN", request('accessories')]
+                ],
+                "select" => ["*"]
+            ]);
+        }
+
+        if (request('equipments') && is_array('equipments')) {
+            $data['equipments'] = $equipmentInterface->advancedGet([
+                "condition" => [
+                    ["id", 'IN', request('equipments')]
+                ],
+                'select' => ["*"]
+            ]);
+        }
+
+        return \Theme::scope('deposit', $data)->render();
+    }
+
     public function getCarOptions(BaseHttpResponse $response, CarInterface $carInterface)
     {
         $car = $carInterface->getFirstBy(['id' => request('car_id')]);

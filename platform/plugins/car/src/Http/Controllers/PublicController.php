@@ -78,22 +78,22 @@ class PublicController extends BaseController
         return \Theme::scope('pages/business/product/product-detail', compact('data'))->render();
     }
 
-    public function getCarSelection($car)
+    public function getCar($car)
     {
         if (!$car) {
             abort(404);
         }
 
-        $data['car'] = get_car_by_slug($car);
-        if (blank($data)) {
+        $result = get_car_by_slug($car);
+        if (blank($result)) {
             abort(404);
         }
 
-        $meta = \MetaBox::getMetaData($data['car'], 'seo_meta', true);
-        \SeoHelper::setTitle(isset($meta['seo_title']) ? $meta['seo_title'] : $data['car']->name)
-            ->setDescription((isset($meta['seo_description']) ? $meta['seo_description'] : $data['car']->description) ?: theme_option('site_description'))
+        $meta = \MetaBox::getMetaData($result, 'seo_meta', true);
+        \SeoHelper::setTitle(isset($meta['seo_title']) ? $meta['seo_title'] : $result->name)
+            ->setDescription((isset($meta['seo_description']) ? $meta['seo_description'] : $result->description) ?: theme_option('site_description'))
             ->openGraph()
-            ->setImage(\RvMedia::getImageUrl(@$data['car']->image, 'og', false, \RvMedia::getImageUrl(theme_option('seo_og_image'))))
+            ->setImage(\RvMedia::getImageUrl(@$result->image, 'og', false, \RvMedia::getImageUrl(theme_option('seo_og_image'))))
             ->addProperties(
                 [
                     'image:width' => '1200',
@@ -101,6 +101,18 @@ class PublicController extends BaseController
                 ]
             );
 
+        return $result;
+    }
+
+    public function getCarSelection($car)
+    {
+        $data['car'] = $this->getCar($car);
         return \Theme::scope('car-selection', $data)->render();
+    }
+
+    public function getCostEstimate($car)
+    {
+        $data['car'] = $this->getCar($car);
+        return \Theme::scope('cost-estimates', $data)->render();
     }
 }

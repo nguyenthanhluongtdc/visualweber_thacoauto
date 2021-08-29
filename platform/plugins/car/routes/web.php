@@ -51,5 +51,9 @@ Route::group(['namespace' => 'Platform\Car\Http\Controllers', 'middleware' => ['
         Route::get('/{car}/car-selection', [
             'uses' => 'PublicController@getCarSelection'
         ])->name('brand.car-selection');
+
+        Route::get('/{car}/cost-estimate', [
+            'uses' => 'PublicController@getCostEstimate'
+        ])->name('brand.cost-estimate');
     });
 });

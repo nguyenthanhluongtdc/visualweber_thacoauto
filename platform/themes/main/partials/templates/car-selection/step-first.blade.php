@@ -24,7 +24,7 @@
                 </div>
             </div>
 
-            <form action="{{ URL::current() }}" method="GET" class="car-selection-content__right d-flex flex-column col-sm-12 col-md-12">
+            <form action="{{ route('public.brand.cost-estimate') }}" method="GET" class="car-selection-content__right d-flex flex-column col-sm-12 col-md-12">
                 <div class="car-version">
                     <div id="car-version-select" class="car-version__select font15 font-pri">
                         <h3 class="font15 font-pri mb-0">{{ __("Chọn phiên bản xe") }}</h3>
@@ -40,9 +40,9 @@
                     <ul id="car-version-list" class="car-version__list active">
                         @foreach ($car->childrens as $item)
                             <li class="car-version__item">
-                                <a href="">
+                                <a href="javascript:;">
                                     <div class="car-version__title font15 font-pri">{{ $item->name }}</div>
-                                    <div class="car-version__price font15 font-pri">{{ __("Giá từ") }} {{ $item->price ? number_format($item->price, 0, '.', ',') . 'đ' : '' }}</div>
+                                    <div class="car-version__price font15 font-pri">{{ __("Giá từ") }} {{ $item->price ? number_format($item->price, 0, '.', ',') . 'đ' : '0đ' }}</div>
                                 </a>
                             </li>
                         @endforeach

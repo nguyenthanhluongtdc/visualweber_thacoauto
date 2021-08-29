@@ -56,6 +56,10 @@ Route::group(['namespace' => 'Platform\Car\Http\Controllers', 'middleware' => ['
             'uses' => 'PublicController@getCostEstimate'
         ])->name('brand.cost-estimate');
 
+        Route::get('/{car}/test-drive', [
+            'uses' => 'PublicController@testDrive'
+        ])->name('brand.test-drive');
+
         Route::group(['prefix' => 'ajax'], function () {
             Route::get('get-car-opions', 'PublicController@getCarOptions')->name('ajax.car-option');
         });

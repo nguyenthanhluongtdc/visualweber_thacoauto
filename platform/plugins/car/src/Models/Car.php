@@ -39,6 +39,7 @@ class Car extends BaseModel
         'status',
         'brand_id',
         'engine',
+        'promotion',
         'price'
     ];
 
@@ -120,9 +121,10 @@ class Car extends BaseModel
     }
 
     /**
-     * 
+     *
      */
-    public function showrooms(){
-        return $this->belongsToMany(\Platform\DistributionSystem\Models\Showroom::class,'app_car_showrooms','car_id','showroom_id');
+    public function showrooms()
+    {
+        return $this->belongsToMany(\Platform\DistributionSystem\Models\Showroom::class, 'app_car_showrooms', 'car_id', 'showroom_id');
     }
 }

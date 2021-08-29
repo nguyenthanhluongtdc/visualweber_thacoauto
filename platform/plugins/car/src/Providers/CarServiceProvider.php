@@ -9,7 +9,7 @@ use Platform\Car\Repositories\Caches\CarCacheDecorator;
 use Platform\Car\Repositories\Eloquent\CarRepository;
 use Platform\Car\Repositories\Interfaces\CarInterface;
 use Platform\Base\Supports\Helper;
-use Platform\Car\Models\CarCategory;
+use Platform\CarCategory\Models\CarCategory;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Routing\Events\RouteMatched;
 use Platform\Car\Providers\HookServiceProvider;

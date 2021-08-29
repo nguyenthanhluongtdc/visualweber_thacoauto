@@ -4,8 +4,8 @@ namespace Platform\DistributionSystem\Forms;
 
 use Platform\Base\Forms\FormAbstract;
 use Platform\Base\Enums\BaseStatusEnum;
-use Platform\Car\Repositories\Interfaces\BrandInterface;
-use Platform\Car\Repositories\Interfaces\CarCategoryInterface;
+use Platform\Brand\Repositories\Interfaces\BrandInterface;
+use Platform\CarCategory\Repositories\Interfaces\CarCategoryInterface;
 use Platform\DistributionSystem\Http\Requests\ShowroomBrandRequest;
 use Platform\DistributionSystem\Models\ShowroomBrand;
 use Platform\DistributionSystem\Repositories\Interfaces\ShowroomBrandInterface;

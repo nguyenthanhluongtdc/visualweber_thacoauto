@@ -42,6 +42,13 @@ class EquipmentForm extends FormAbstract
                     'placeholder'  => trans('core/base::forms.name_placeholder'),
                 ],
             ])
+            ->add('price', 'number', [
+                'label'      => trans('Price'),
+                'label_attr' => ['class' => 'control-label'],
+                'attr'       => [
+                    'placeholder'  => trans('Price'),
+                ],
+            ])
             ->add('status', 'customSelect', [
                 'label'      => trans('core/base::tables.status'),
                 'label_attr' => ['class' => 'control-label required'],

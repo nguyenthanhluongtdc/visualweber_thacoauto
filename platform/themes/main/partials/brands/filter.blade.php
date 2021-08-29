@@ -52,20 +52,14 @@
             </div>
 
             <div class="car-filter--center">
-                <form id="formPrice" class="d-flex" method="GET" action="{{route('public.brand.index',['slug'=>$slug->key])}}">
+                <form id="formPrice" class="d-flex flex-column" method="GET" action="{{route('public.brand.index',['slug'=>$slug->key])}}">
                     @if(request()->all())
                         @forelse(request()->all() as $key=>$input)
                             <input type="hidden" name="{{$key}}" value="{{$input}}">
                         @empty
                         @endforelse
                     @endif
-                    <select class="provinces-select2 font18 font-pri" name="country" onchange="submitFormPrice(this)">
-                        @forelse(get_countries() as $country)
-                            <option {{request()->get('country') == $country->matp ? 'selected' : ''}} value="{{$country->matp}}">{{$country->name}}</option>
-                        @empty
-                        @endforelse
-                    </select>
-                    <div class="slider-range">
+                    <div class="slider-range mb-3 ml-0">
                         <div class="slider-range__value font18 font-pri">
                             <span>Đến: </span>
                             <span class="filter-value">{{request()->get('price') ? request()->get('price') : '100000000'}}</span>đ
@@ -75,6 +69,29 @@
                             <input name="price" type="range" min="100000000" max="20000000000" step="50000000" value="{{request()->get('price')}}" class="slider" id="myRange" onchange="submitFormPrice(this)">
                         </div>
                     </div>
+                    {{-- Showroom --}}
+                    <div class="d-flex">
+                        <div>
+                            <select class="font18 font-pri country selectjs d-none" name="country" onchange="submitFormPrice(this)">
+                                <option selected disabled>{{ __("Công ty tỉnh thành") }}</option>
+                                @foreach (is_plugin_active('location') ? get_cities() : collect() as $key => $item)
+                                    <option {{ intval(request('select_city', -1)) == $key ? 'selected' : '' }}  value="{{ $key }}">{{ $item }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        @if(request()->get('country'))
+                            <div class="ml-3">
+                                <select class="font18 font-pri showroom selectjs d-none" name="showrrom" onchange="submitFormPrice(this)">
+                                    <option selected disabled>{{ __"Đại lý") }}</option>
+                                    @foreach (is_plugin_active('location') ? get_cities() : collect() as $key => $item)
+                                        <option {{ intval(request('select_city', -1)) == $key ? 'selected' : '' }}  value="{{ $key }}">{{ $item }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        @endif
+                    </div>
+                    {{-- End --}}
+
             </form>
             </div>
             <div class="row_pre-order mobile">

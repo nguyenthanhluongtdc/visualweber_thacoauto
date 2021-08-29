@@ -518,7 +518,18 @@ var SlideSwiper = {
     }
 }
 //search
-
+// Select 2
+var select2 = {
+    pageBrand: function(){
+        if($('.country.selectjs').length){
+            $('.country.selectjs').select2();
+        }
+        if($('.showroom.selectjs').length){
+            $('.showroom.selectjs').select2();
+        }
+    }
+}
+// 
 $(document).ready(function () {
     if ($('a[href="#search"]').length) {
         $('a[href="#search"]').click(function () {
@@ -604,4 +615,8 @@ $(document).ready(function () {
      * Import Slide
      */
     SlideSwiper.slideColorCar();
+    /**
+     * Import Select
+     */
+    select2.pageBrand();
 })

@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Database\Eloquent\Collection;
+use Platform\Base\Enums\BaseStatusEnum;
+use Platform\Base\Supports\SortItemsWithChildrenHelper;
 use Platform\Car\Repositories\Interfaces\CarInterface;
 
 if (!function_exists('get_car_lines')) {
@@ -194,5 +196,28 @@ if (!function_exists('get_countries')) {
    function get_countries()
    {
       return \Illuminate\Support\Facades\DB::table('tinhthanhpho')->get();
+   }
+}
+
+if (!function_exists('get_cars_with_children')) {
+   /**
+    * @return \Illuminate\Support\Collection
+    * @throws Exception
+    */
+   function get_cars_with_children()
+   {
+      $interface = app(CarInterface::class);
+
+      $data = $interface->getModel()
+         ->where(['status' => BaseStatusEnum::PUBLISHED], [], ['id', 'name', 'parent_id'])
+         ->with([])
+         ->select(['*']);
+
+      $cars = $interface->applyBeforeExecuteQuery($data)->get();
+
+      return app(SortItemsWithChildrenHelper::class)
+         ->setChildrenProperty('childrents')
+         ->setItems($cars)
+         ->sort();
    }
 }

@@ -20,7 +20,7 @@ class CarCategoryCreateAppCarCategoryTable extends Migration
             $table->unsignedBigInteger('parent_id')->nullable();
             $table->timestamps();
 
-            $table->references('id')->on('app_car_categories')->onDelete('cascade');
+            // $table->reference('id')->on('app_car_categories')->onDelete('cascade');
         });
     }
 

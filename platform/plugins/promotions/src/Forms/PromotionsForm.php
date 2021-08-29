@@ -4,6 +4,7 @@ namespace Platform\Promotions\Forms;
 
 use Platform\Base\Forms\FormAbstract;
 use Platform\Base\Enums\BaseStatusEnum;
+use Platform\Promotions\Forms\Fields\CarMultiField;
 use Platform\Promotions\Http\Requests\PromotionsRequest;
 use Platform\Promotions\Models\Promotions;
 
@@ -15,6 +16,10 @@ class PromotionsForm extends FormAbstract
      */
     public function buildForm()
     {
+        if (!$this->formHelper->hasCustomField('carMulti')) {
+            $this->formHelper->addCustomField('carMulti', CarMultiField::class);
+        }
+
         $this
             ->setupModel(new Promotions)
             ->setValidatorClass(PromotionsRequest::class)
@@ -43,6 +48,12 @@ class PromotionsForm extends FormAbstract
                     'placeholder' => trans('core/base::forms.order_by_placeholder'),
                 ],
                 'default_value' => 0,
+            ])
+            ->add('cars[]', 'carMulti', [
+                'label'      => 'Dòng xe',
+                'label_attr' => ['class' => 'control-label required'],
+                'choices'    => get_cars_with_children(),
+                'value'      => old('cars', []),
             ])
             ->add('status', 'customSelect', [
                 'label'      => trans('core/base::tables.status'),

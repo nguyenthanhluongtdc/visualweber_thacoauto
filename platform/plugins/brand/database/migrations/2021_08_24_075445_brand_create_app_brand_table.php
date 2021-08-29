@@ -16,17 +16,17 @@ class BrandCreateAppBrandTable extends Migration
             $table->id();
             $table->string('name', 255);
             $table->text('description')->nullable();
-            $table->string('image',255)->nullable();
+            $table->string('image', 255)->nullable();
 
-            $table->string('tenant_id',191)->nullable();
+            $table->string('tenant_id', 191)->nullable();
 
             $table->string('status', 60)->default('published');
             $table->timestamps();
         });
 
         Schema::create('app_brand_categories', function (Blueprint $table) {
-            $table->unsignedBigInteger('category_id')->references('id')->on('app_car_categories')->onDelete('cascade');
-            $table->unsignedBigInteger('brand_id')->references('id')->on('app_brands')->onDelete('cascade');;
+            $table->unsignedBigInteger('category_id')->reference('id')->on('app_car_categories')->onDelete('cascade');
+            $table->unsignedBigInteger('brand_id')->reference('id')->on('app_brands')->onDelete('cascade');;
         });
     }
 

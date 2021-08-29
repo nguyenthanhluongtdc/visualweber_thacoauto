@@ -7,7 +7,7 @@ use Platform\SeoHelper\SeoOpenGraph;
 use Eloquent;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
-use Platform\Car\Models\CarCategory;
+use Platform\CarCategory\Models\CarCategory;
 use Platform\Car\Repositories\Interfaces\CarCategoryInterface;
 use RvMedia;
 use SeoHelper;

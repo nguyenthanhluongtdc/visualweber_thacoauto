@@ -15,3 +15,10 @@ Route::group(['namespace' => 'Platform\Deposit\Http\Controllers', 'middleware' =
     });
 
 });
+Route::group(['namespace' => 'Platform\Deposit\Http\Controllers', 'middleware' => ['web']], function () {
+    Route::group(apply_filters(BASE_FILTER_GROUP_PUBLIC_ROUTE, ['as' => 'public.']), function () {
+        Route::post('deposits', [
+            'uses' => 'PublicController@store'
+        ])->name('deppsit.post');
+    });
+});

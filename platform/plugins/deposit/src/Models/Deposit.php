@@ -23,6 +23,16 @@ class Deposit extends BaseModel
     protected $fillable = [
         'name',
         'status',
+        "phone",
+        "email",
+        "note",
+        "showroom_id",
+        "car_id",
+        "color_id",
+        "price",
+        "fee",
+        "fee_license_plate",
+        "promotion",
     ];
 
     /**

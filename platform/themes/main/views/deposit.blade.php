@@ -1,7 +1,23 @@
 {!! Theme::partial('templates.car-selection-menu', ['car' => $car]) !!}
 
 <div class="my-3 container-remake MyriadPro-Regular font15 deposit-wrapper">
-    <form action="" method="POST" class="row">
+    <form action="{{route('public.deppsit.post')}}" method="POST" class="row">
+        @csrf
+        <input type="hidden" name="car_id" value="{{$car->id ?? ''}}">
+        <input type="hidden" name="color_id" value="{{$color->id ?? ''}}">
+        @if(request()->all())
+            @forelse(request()->all() as $key=>$value)
+                @if(is_array($value))
+                    @forelse($value as $subValue)
+                            <input type="hidden" name="{{$key}}[]" value="{{$subValue}}">
+                    @empty
+                    @endforelse
+                @else
+                    <input type="hidden" name="{{$key}}" value="{{$value}}">
+                @endif
+            @empty
+            @endforelse
+        @endif
         <div class="col-sm-12 col-md-12 col-xl-8 mb-4">
             <h2 class="font20 MyriadPro-BoldCond text-uppercase mb-3 fontmb-middle">thông tin khách hàng</h2>
             <p class="mb-4 fontmb-small">Thông tin khách hàng sẽ được đưa vào thoả thuận hợp đồng. Quý khách vui lòng nhập chính xác các nội dung dưới đây</p>

@@ -196,5 +196,28 @@ $(function () {
         $("html, body").animate({scrollTop: 0}, 600);
     });
     </script>
+    @if(Session::get('type') == 'success')
+        <script>
+            Swal.fire({
+                title: "{!!Session::get('message')!!}",
+                showClass: {
+                    popup: 'animate__animated animate__fadeInDown'
+                },
+                hideClass: {
+                    popup: 'animate__animated animate__fadeOutUp'
+                }
+            })
+        </script>
+    @endif
+
+    @if(Session::get('type') == 'error')
+        <script>
+            Swal.fire({
+            icon: 'error',
+            title: trans('Có lỗi xảy ra'),
+            text: "{!!Session::get('message')!!}",
+            })
+        </script>
+    @endif
 </body>
 </html>

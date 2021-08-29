@@ -65,6 +65,8 @@ class PromotionsController extends BaseController
 
         event(new CreatedContentEvent(PROMOTIONS_MODULE_SCREEN_NAME, $request, $promotions));
 
+        $promotions->cars()->sync(request('cars', []));
+
         return $response
             ->setPreviousUrl(route('promotions.index'))
             ->setNextUrl(route('promotions.edit', $promotions->id))
@@ -85,6 +87,7 @@ class PromotionsController extends BaseController
 
         page_title()->setTitle(trans('plugins/promotions::promotions.edit') . ' "' . $promotions->name . '"');
 
+
         return $formBuilder->create(PromotionsForm::class, ['model' => $promotions])->renderForm();
     }
 
@@ -103,6 +106,8 @@ class PromotionsController extends BaseController
         $promotions = $this->promotionsRepository->createOrUpdate($promotions);
 
         event(new UpdatedContentEvent(PROMOTIONS_MODULE_SCREEN_NAME, $request, $promotions));
+
+        $promotions->cars()->sync(request('cars', []));
 
         return $response
             ->setPreviousUrl(route('promotions.index'))

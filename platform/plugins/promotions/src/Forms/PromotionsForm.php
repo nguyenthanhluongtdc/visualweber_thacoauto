@@ -20,6 +20,11 @@ class PromotionsForm extends FormAbstract
             $this->formHelper->addCustomField('carMulti', CarMultiField::class);
         }
 
+        $selectedCars = [];
+        if ($this->getModel()) {
+            $selectedCars = $this->getModel()->cars()->pluck('app_cars.id')->all();
+        }
+
         $this
             ->setupModel(new Promotions)
             ->setValidatorClass(PromotionsRequest::class)
@@ -53,7 +58,7 @@ class PromotionsForm extends FormAbstract
                 'label'      => 'Dòng xe',
                 'label_attr' => ['class' => 'control-label required'],
                 'choices'    => get_cars_with_children(),
-                'value'      => old('cars', []),
+                'value'      => old('cars', $selectedCars),
             ])
             ->add('status', 'customSelect', [
                 'label'      => trans('core/base::tables.status'),

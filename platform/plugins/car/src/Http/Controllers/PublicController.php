@@ -2,12 +2,12 @@
 
 namespace Platform\Car\Http\Controllers;
 
-use Platform\Car\Models\Brand;
-use Platform\Car\Models\CarCategory;
+use Platform\Brand\Models\Brand;
+use Platform\CarCategory\Models\CarCategory;
 use Platform\Base\Http\Controllers\BaseController;
-use Platform\Car\Repositories\Interfaces\BrandInterface;
+use Platform\Brand\Repositories\Interfaces\BrandInterface;
 use Platform\Slug\Repositories\Interfaces\SlugInterface;
-use Platform\Car\Repositories\Interfaces\CarCategoryInterface;
+use Platform\CarCategory\Repositories\Interfaces\CarCategoryInterface;
 
 
 class PublicController extends BaseController
@@ -47,7 +47,7 @@ class PublicController extends BaseController
 
         do_action(BASE_ACTION_PUBLIC_RENDER_SINGLE, BRAND_MODULE_SCREEN_NAME, $data);
 
-        return \Theme::scope('brand-detail', compact('data'))->render();
+        return \Theme::scope('brand-detail', compact('data', 'slug'))->render();
     }
     public function getCarCategoryBySlug($slug, SlugInterface $slugRepository)
     {
@@ -76,5 +76,19 @@ class PublicController extends BaseController
         do_action(BASE_ACTION_PUBLIC_RENDER_SINGLE, BRAND_MODULE_SCREEN_NAME, $data);
 
         return \Theme::scope('pages/business/product/product-detail', compact('data'))->render();
+    }
+
+    public function getCarSelection($car)
+    {
+        if (!$car) {
+            abort(404);
+        }
+
+        $data['car'] = get_car_by_slug($car);
+        if (blank($data)) {
+            abort(404);
+        }
+
+        return \Theme::scope('car-selection', $data)->render();
     }
 }

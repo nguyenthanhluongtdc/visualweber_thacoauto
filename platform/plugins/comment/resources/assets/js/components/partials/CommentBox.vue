@@ -4,7 +4,7 @@
         <form class="bb-textarea" @submit="this.postComment">
             <comment-rating v-if="hasRating" :rating="data.rating ? data.rating.rated : 0" />
 
-            <textarea class="form-control" rows="1" name="comment" placeholder="Share your thoughts about that" @change="onChange" :value="value" />
+            <textarea class="form-control" rows="1" name="comment" :placeholder="__('Share your thoughts about that')" @change="onChange" :value="value" />
             <div class="bb-textarea-error alert alert-danger m-0" v-if="error">
                 <span>{{ error }}</span>
             </div>

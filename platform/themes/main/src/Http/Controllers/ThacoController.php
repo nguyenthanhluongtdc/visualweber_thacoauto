@@ -293,4 +293,12 @@ class ThacoController extends PublicController
             return view("theme.main::views.components.result-search", compact('posts'))->render();
         }
     }
+
+    public function getFirstStepCarSelection(BaseHttpResponse $response)
+    {
+        return $response
+            ->setData([
+                "template" => \Theme::partial('templates.car-selection.step-first')
+            ]);
+    }
 }

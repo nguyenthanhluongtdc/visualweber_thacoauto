@@ -233,8 +233,11 @@ var Helper = {
         }
     },
     RangeFilterBranddetail: function () {
-        var range = $("#myRange").attr("value");
-        $(".filter-value").html(range);
+        if(document.getElementById('myRange')){
+            var slideWidth = document.getElementById('myRange').value * 100 / 20000000000;
+            $(".slider-range__line").css("width", "calc(" + slideWidth + "% - " + slideWidth / 7.5 + "px)");
+            $(".slider-range__button").css("left", slideWidth + "%");
+        }
         $(document).on('input change', '#myRange', function () {
             $('.filter-value').html($(this).val());
             var slideWidth = $(this).val() * 100 / 20000000000;
@@ -492,6 +495,28 @@ if ($('.counter-value').length > 0) {
     });
 }
 
+// Slide
+var SlideSwiper = {
+    slideColorCar: function(){
+        var swiper = new Swiper(".mySwiperColorThumb", {
+            spaceBetween: 10,
+            // slidesPerView: $('.mySwiperColorThumb .swiper-slide').length,
+            slidesPerView: "auto",
+            freeMode: true,
+            watchSlidesProgress: true,
+          });
+          var swiper2 = new Swiper(".mySwiperColor", {
+            spaceBetween: 10,
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+            thumbs: {
+              swiper: swiper,
+            },
+          });
+    }
+}
 //search
 
 $(document).ready(function () {
@@ -575,4 +600,8 @@ $(document).ready(function () {
             }, 500);
         })
     }
-});
+    /**
+     * Import Slide
+     */
+    SlideSwiper.slideColorCar();
+})

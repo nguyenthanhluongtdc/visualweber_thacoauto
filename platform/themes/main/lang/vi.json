@@ -154,7 +154,7 @@
     "Sinh năm": "Sinh năm",
     "Nơi sinh": "Nơi sinh",
     "Trình độ": "Trình độ",
-    "chưa cập nhật" : "Nội dung chưa được cập nhật",
+    "chưa cập nhật" : "Nội dung đang được cập nhật",
     "News": "Tin tức",
     "Comment": "Bình luận",
     "View": "Lượt xem",
@@ -164,6 +164,17 @@
     "tin tức hoạt động": "Tin tức hoạt động",
     "Tháng": "Tháng",
     "Năm": "Năm",
+    "gasoline": "Xăng",
+    "petroleum": "Dầu",
+    "automatic_transmission": "Tự động",
+    "manual_transmission": "Số sàn",
+    "Chọn phiên bản xe": "Chọn phiên bản xe",
+    "Lựa chọn màu": "Lựa chọn màu",
+    "Phụ kiện": "Phụ kiện",
+    "Trang bị thêm": "Trang bị thêm",
+    "1. LỰA CHỌN XE": "1. LỰA CHỌN XE",
+    "3. ĐẶT CỌC ĐĂNG KÝ": "3. ĐẶT CỌC ĐĂNG KÝ",
+    "2. DỰ TOÁN CHI PHÍ": "2. DỰ TOÁN CHI PHÍ",
     "thaco auto tỉnh thành": "thaco auto tỉnh thành",
     "Trụ sở chính": "Trụ sở chính",
     "đặt hẹn dịch vụ online": "Đặt hẹn dịch vụ online",
@@ -180,5 +191,4 @@
     "Confirm Password": "Xác nhận lại mật khẩu",
     "Back to login" : "Trở lại đăng nhập",
     "Sign Up" : "Đăng ký"
-
 }

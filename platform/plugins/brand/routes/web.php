@@ -20,9 +20,5 @@ Route::group(['namespace' => 'Platform\Car\Http\Controllers', 'middleware' => ['
         Route::get(\SlugHelper::getPrefix(Service::class, 'brands') . '/{slug}', [
             'uses' => 'PublicController@getBrandBySlug'
         ])->name('brand.index');
-
-        Route::get(\SlugHelper::getPrefix(Service::class, 'brands') . '/{slug}/car-selection', [
-            'uses' => 'PublicController@getCarSelection'
-        ])->name('brand.car-selection');
     });
 });

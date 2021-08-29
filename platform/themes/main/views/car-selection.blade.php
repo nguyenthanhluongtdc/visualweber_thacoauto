@@ -1,4 +1,4 @@
-{!! Theme::partial('templates.car-selection-menu', ['brand' => $brand]) !!}
+{!! Theme::partial('templates.car-selection-menu') !!}
 
 <div class="step-first">
     {!! Theme::partial('templates.car-selection.step-first', ['car' => $car]) !!}

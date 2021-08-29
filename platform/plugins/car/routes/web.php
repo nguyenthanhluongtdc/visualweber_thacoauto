@@ -44,3 +44,12 @@ Route::group(['namespace' => 'Platform\Car\Http\Controllers', 'middleware' => ['
         // ]);
     });
 });
+
+
+Route::group(['namespace' => 'Platform\Car\Http\Controllers', 'middleware' => ['web']], function () {
+    Route::group(apply_filters(BASE_FILTER_GROUP_PUBLIC_ROUTE, ['as' => 'public.']), function () {
+        Route::get('car-selection', [
+            'uses' => 'PublicController@getCarSelection'
+        ])->name('brand.car-selection');
+    });
+});

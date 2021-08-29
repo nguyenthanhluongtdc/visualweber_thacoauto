@@ -58,7 +58,7 @@ class PublicController extends BaseController{
                   return redirect()->route('public.index')->with(
                      [
                          'type' => 'success',
-                         'message' => 'Bạn đã đăng ký thành công, xin cảm ơn!'
+                         'message' => trans('Bạn đã đăng ký thành công, xin cảm ơn!')
                      ]
                  );
                }

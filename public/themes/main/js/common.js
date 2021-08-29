@@ -525,7 +525,9 @@ var select2 = {
             $('.country.selectjs').select2();
         }
         if($('.showroom.selectjs').length){
-            $('.showroom.selectjs').select2();
+            $('.showroom.selectjs').select2({
+                width: 'resolve' // need to override the changed default
+            });
         }
     }
 }

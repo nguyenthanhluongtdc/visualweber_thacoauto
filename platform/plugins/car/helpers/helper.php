@@ -40,7 +40,7 @@ if (!function_exists('get_cars')) {
             $slug = $slugRepository->getFirstBy(['key' => $request->get('vehicle'), 'reference_type' => \Platform\Vehicle\Models\Vehicle::class]);
             if ($slug) {
                $carModel = $carModel->whereHas('vehicle', function ($q) use ($slug) {
-                  return $q->whereIn('id', $slug->reference_id);
+                  return $q->whereIn('id', [$slug->reference_id]);
                });
             }
          }

@@ -72,19 +72,19 @@
                     {{-- Showroom --}}
                     <div class="d-flex">
                         <div>
-                            <select class="font18 font-pri country selectjs d-none" name="country" onchange="submitFormPrice(this)">
+                            <select class="font18 font-pri country selectjs d-none" name="country" onchange="submitFormPrice(this)"style="width:200px;">
                                 <option selected disabled>{{ __("Công ty tỉnh thành") }}</option>
                                 @foreach (is_plugin_active('location') ? get_cities() : collect() as $key => $item)
-                                    <option {{ intval(request('select_city', -1)) == $key ? 'selected' : '' }}  value="{{ $key }}">{{ $item }}</option>
+                                    <option {{ intval(request('country', -1)) == $key ? 'selected' : '' }}  value="{{ $key }}">{{ $item }}</option>
                                 @endforeach
                             </select>
                         </div>
                         @if(request()->get('country'))
-                            <div class="ml-3">
-                                <select class="font18 font-pri showroom selectjs d-none" name="showrrom" onchange="submitFormPrice(this)">
-                                    <option selected disabled>{{ __"Đại lý") }}</option>
-                                    @foreach (is_plugin_active('location') ? get_cities() : collect() as $key => $item)
-                                        <option {{ intval(request('select_city', -1)) == $key ? 'selected' : '' }}  value="{{ $key }}">{{ $item }}</option>
+                            <div class="ml-3 w-100">
+                                <select class="font18 font-pri showroom selectjs js-example-responsive" name="showrrom" onchange="submitFormPrice(this)" style="width:100%;">
+                                    <option selected disabled>{{ __("Đại lý") }}</option>
+                                    @foreach (get_showroom_by_state(request()->get('country'),$slug->key ?? '',request()->get('vehicle')) ?? collect() as $key => $item)
+                                        <option {{ intval(request('showrrom', -1)) == $item->slug ? 'selected' : '' }}  value="{{ $item->slug }}">{{ $item->name }}</option>
                                     @endforeach
                                 </select>
                             </div>

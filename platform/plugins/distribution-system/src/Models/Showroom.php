@@ -32,4 +32,13 @@ class Showroom extends BaseModel
     protected $casts = [
         'status' => BaseStatusEnum::class,
     ];
+
+    public function distributionSystem(){
+        return $this->belongsTo(\Platform\DistributionSystem\Models\DistributionSystem::class,'distribution_system_id');
+    }
+
+    public function showroomBrands(){
+        return $this->hasMany(\Platform\DistributionSystem\Models\ShowroomBrand::class,'showroom_id');
+    }
+    
 }

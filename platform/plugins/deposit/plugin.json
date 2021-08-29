@@ -1,0 +1,9 @@
+{
+    "name": "Deposit",
+    "namespace": "Platform\\Deposit\\",
+    "provider": "Platform\\Deposit\\Providers\\DepositServiceProvider",
+    "author": "Laravel Developer Team",
+    "url": "https://developers.laravel.com",
+    "version": "1.0",
+    "description": "The description for module deposit"
+}

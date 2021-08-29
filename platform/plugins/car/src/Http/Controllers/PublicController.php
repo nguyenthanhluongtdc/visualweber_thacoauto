@@ -6,7 +6,9 @@ use Platform\Base\Enums\BaseStatusEnum;
 use Platform\Brand\Models\Brand;
 use Platform\CarCategory\Models\CarCategory;
 use Platform\Base\Http\Controllers\BaseController;
+use Platform\Base\Http\Responses\BaseHttpResponse;
 use Platform\Brand\Repositories\Interfaces\BrandInterface;
+use Platform\Car\Repositories\Interfaces\CarInterface;
 use Platform\Slug\Repositories\Interfaces\SlugInterface;
 use Platform\CarCategory\Repositories\Interfaces\CarCategoryInterface;
 use Platform\MoreConsultancy\Repositories\Interfaces\MoreConsultancyInterface;
@@ -137,5 +139,22 @@ class PublicController extends BaseController
         ]);
 
         return \Theme::scope('cost-estimates', $data)->render();
+    }
+
+    public function getCarOptions(BaseHttpResponse $response, CarInterface $carInterface)
+    {
+        $car = $carInterface->getFirstBy(['id' => request('car_id')]);
+        if (!$car) {
+            return $response->setData([
+                "template" => \Theme::partial('templates.no-content')
+            ]);
+        }
+
+        $template = \Theme::partial('templates.car-selection.step-first', ['car' => $car, 'request' => request()]);
+
+        return $response->setData([
+            "template" => $template,
+            "data" => $car
+        ]);
     }
 }

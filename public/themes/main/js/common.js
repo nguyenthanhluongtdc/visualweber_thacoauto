@@ -233,7 +233,7 @@ var Helper = {
         }
     },
     RangeFilterBranddetail: function () {
-        if(document.getElementById('myRange')){
+        if (document.getElementById('myRange')) {
             var slideWidth = document.getElementById('myRange').value * 100 / 20000000000;
             $(".slider-range__line").css("width", "calc(" + slideWidth + "% - " + slideWidth / 7.5 + "px)");
             $(".slider-range__button").css("left", slideWidth + "%");
@@ -271,25 +271,6 @@ var Helper = {
                 $(".header").removeClass("header-fixed");
             }
         }); //missing );
-    },
-    dropdownCarVersions: function () {
-        if ($('#car-version-select').length > 0) {
-            $('#car-version-select').on('click', function () {
-                $(this).toggleClass('active')
-                if ($(this).hasClass('active')) {
-                    $(this).parent().parent().find('#car-version-list').css({
-                        'height': 'auto',
-                        'transition': "0.2s",
-                    })
-                }
-                else {
-                    $(this).parent().parent().find('#car-version-list').css({
-                        'height': '0',
-                        'transition': "0.2s",
-                    })
-                }
-            });
-        }
     },
     scrollNewsHomepage: () => {
         if ($('#hours .logo-frame').length > 0) {
@@ -338,6 +319,12 @@ var Helper = {
             }
         })
     },
+    handleToggleLoading: function (enable = true) {
+        const loading = $('.js-loading')
+        if (!loading) return
+
+        enable ? loading.removeClass('d-none') : loading.addClass('d-none')
+    }
 };
 
 let globalConfig = {
@@ -393,7 +380,32 @@ var Ajax = {
             })
         }
     },
+    handleLoadCarOption: () => {
+        const result = $('.step-first')
+        if (!result) return
 
+        $(document).on('click', '.car-version__item-link', async function (e) {
+            e.preventDefault()
+
+            const option_car = $('.option__car')
+            if (!option_car) return
+
+            const carID = $(this).data('car_id')
+            option_car.empty()
+
+            $(".car_version_input").val(carID)
+
+            Helper.handleToggleLoading()
+            const response = await $.get(window.__urlAjax, {
+                car_id: carID
+            })
+            Helper.handleToggleLoading(false)
+
+            const { template } = response.data
+
+            result.html(template)
+        })
+    }
 }
 
 $(document).ready(function () {
@@ -435,11 +447,10 @@ $(document).ready(function () {
     Helper.transitionHeaderFixed();
     Helper.addSelect2toCarFilterProvinces();
     Helper.RangeFilterBranddetail();
-    Helper.dropdownCarVersions();
     Helper.scrollNewsHomepage();
     Helper.zeynepInit();
+    Ajax.handleLoadCarOption();
 });
-
 
 $(document).ready(function () {
     var docEl = $(document),
@@ -497,41 +508,41 @@ if ($('.counter-value').length > 0) {
 
 // Slide
 var SlideSwiper = {
-    slideColorCar: function(){
+    slideColorCar: function () {
         var swiper = new Swiper(".mySwiperColorThumb", {
             spaceBetween: 10,
             // slidesPerView: $('.mySwiperColorThumb .swiper-slide').length,
             slidesPerView: "auto",
             freeMode: true,
             watchSlidesProgress: true,
-          });
-          var swiper2 = new Swiper(".mySwiperColor", {
+        });
+        var swiper2 = new Swiper(".mySwiperColor", {
             spaceBetween: 10,
             navigation: {
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev",
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
             },
             thumbs: {
-              swiper: swiper,
+                swiper: swiper,
             },
-          });
+        });
     }
 }
 //search
 // Select 2
 var select2 = {
-    pageBrand: function(){
-        if($('.country.selectjs').length){
+    pageBrand: function () {
+        if ($('.country.selectjs').length) {
             $('.country.selectjs').select2();
         }
-        if($('.showroom.selectjs').length){
+        if ($('.showroom.selectjs').length) {
             $('.showroom.selectjs').select2({
                 width: 'resolve' // need to override the changed default
             });
         }
     }
 }
-// 
+//
 $(document).ready(function () {
     if ($('a[href="#search"]').length) {
         $('a[href="#search"]').click(function () {
@@ -582,32 +593,32 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-    if(window.URL_SEARCH) {
+    if (window.URL_SEARCH) {
         let input_id = 0;
-        $(".search-bar").focus(function() {
+        $(".search-bar").focus(function () {
             input_id = $(this).attr('input-id');
 
-            $(`.form-search .box-popover-${input_id}`).css('display','block');
+            $(`.form-search .box-popover-${input_id}`).css('display', 'block');
 
-            $(this).on('keyup',function() {
-                var query = $(this).val(); 
+            $(this).on('keyup', function () {
+                var query = $(this).val();
                 $.ajax({
-                   
+
                     url: window.URL_SEARCH,
-              
-                    type:"GET",
-                   
-                    data:{'keyword':query},
-                   
-                    success:function (data) {
+
+                    type: "GET",
+
+                    data: { 'keyword': query },
+
+                    success: function (data) {
                         $(`.form-search .box-popover-${input_id}`).html(data)
                     }
                 })
                 // end of ajax call
             });
         })
-    
-        $(`.search-bar`).focusout(function() {
+
+        $(`.search-bar`).focusout(function () {
             setTimeout(() => {
                 $(`.box-popover-${input_id}`).css('display', 'none');
             }, 500);

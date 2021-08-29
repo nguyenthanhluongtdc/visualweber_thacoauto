@@ -2,13 +2,14 @@
 
 namespace Platform\Car\Http\Controllers;
 
+use Platform\Base\Enums\BaseStatusEnum;
 use Platform\Brand\Models\Brand;
 use Platform\CarCategory\Models\CarCategory;
 use Platform\Base\Http\Controllers\BaseController;
 use Platform\Brand\Repositories\Interfaces\BrandInterface;
 use Platform\Slug\Repositories\Interfaces\SlugInterface;
 use Platform\CarCategory\Repositories\Interfaces\CarCategoryInterface;
-
+use Platform\Promotions\Repositories\Interfaces\PromotionsInterface;
 
 class PublicController extends BaseController
 {
@@ -110,9 +111,20 @@ class PublicController extends BaseController
         return \Theme::scope('car-selection', $data)->render();
     }
 
-    public function getCostEstimate($car)
+    public function getCostEstimate($car, PromotionsInterface $promotionsInterface)
     {
         $data['car'] = $this->getCar($car);
+
+        $dataPromotions = $promotionsInterface->getModel()
+            ->whereHas('cars', function ($q) use ($data) {
+                $q->where('app_cars.id', $data['car']->id);
+            })
+            ->where('status', BaseStatusEnum::PUBLISHED)
+            ->orderBy('order', 'desc')
+            ->orderBy('created_at', 'desc');
+
+        $data['promotions'] = $promotionsInterface->applyBeforeExecuteQuery($dataPromotions)->get();
+
         return \Theme::scope('cost-estimates', $data)->render();
     }
 }

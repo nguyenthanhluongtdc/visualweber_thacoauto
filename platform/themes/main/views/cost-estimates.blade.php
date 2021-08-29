@@ -4,12 +4,12 @@
     <form action="" method="POST" class="row">
         <div class="col-sm-12 col-md-8 mb-4">
             <div class="deposit__form no-grid">
-                <h2 class="font18 MyriadPro-BoldCond text-uppercase mb-3">Chọn tỉnh thành đăng ký xem</h2>
+                <h2 class="font18 MyriadPro-BoldCond text-uppercase mb-3">{{ __('Chọn tỉnh thành đăng ký xem') }}</h2>
                 <div class="form-group max-w-4">
                     <div class="mb-3 ui fluid selection dropdown">
                         <input type="hidden" name="country">
                         <i class="dropdown icon"></i>
-                        <div class="default text MyriadPro-Regular font15">Chọn tỉnh thành</div>
+                        <div class="default text MyriadPro-Regular font15">{{ __('Tỉnh/Thành phố') }}</div>
                         <div class="menu">
                             <div class="item" data-value="af">Afghanistan</div>
                             <div class="item" data-value="ax">Aland Islands</div>
@@ -19,31 +19,23 @@
                         </div>
                     </div>
                 </div>
-                <h2 class="font18 MyriadPro-BoldCond text-uppercase mb-3 mt-4">Chương trình khuyến mãi</h2>
+                <h2 class="font18 MyriadPro-BoldCond text-uppercase mb-3 mt-4">{{ __('Chương trình khuyến mãi') }}</h2>
                 <div class="promotion__list">
-                    <div class="promotion__item">
-                        <img loading="lazy" src="{{ Theme::asset()->url('images/promotion/1.png') }}" width="160" height="117" class="img-fluid" />
-                        <div class="custom-control mt-2 span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
-                            <input type="checkbox" class="custom-control-input" id="customControlInline1">
-                            <label class="custom-control-label" for="customControlInline1">Lorem ipsum</label>
-                        </div>
-                    </div>
-                    <div class="promotion__item">
-                        <img loading="lazy" src="{{ Theme::asset()->url('images/promotion/2.png') }}" width="160" height="117" class="img-fluid" />
-                        <div class="custom-control mt-2 span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
-                            <input type="checkbox" class="custom-control-input" id="customControlInline2">
-                            <label class="custom-control-label" for="customControlInline2">Lorem ipsum</label>
-                        </div>
-                    </div>
-                    <div class="promotion__item">
-                        <img loading="lazy" src="{{ Theme::asset()->url('images/promotion/3.png') }}" width="160" height="117" class="img-fluid" />
-                        <div class="custom-control mt-2 span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
-                            <input type="checkbox" class="custom-control-input" id="customControlInline3">
-                            <label class="custom-control-label" for="customControlInline3">Lorem ipsum</label>
-                        </div>
-                    </div>
+                    @if(isset($promotions) && !blank($promotions))
+                        @foreach ($promotions as $item)
+                            <div class="promotion__item">
+                                <img loading="lazy" src="{{ RvMedia::getImageUrl($item->image, null, false, RvMedia::getDefaultImage()) }}"  alt="{{ $item->name }}" width="160" height="117" class="img-fluid" />
+                                <div class="custom-control mt-2 span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
+                                    <input type="checkbox" name="promotions[]" value="{{ $item->id }}" class="custom-control-input" id="customControlInline_{{ $item->id }}_promotions">
+                                    <label class="custom-control-label" for="customControlInline_{{ $item->id }}_promotions">{{ $item->name }}</label>
+                                </div>
+                            </div>
+                        @endforeach
+                    @else
+                        {!! Theme::partial('templates.no-content') !!}
+                    @endif
                 </div>
-                <h2 class="font18 MyriadPro-BoldCond text-uppercase mb-3 mt-4">Yêu cầu tư vấn Thêm</h2>
+                <h2 class="font18 MyriadPro-BoldCond text-uppercase mb-3 mt-4">{{ __('Yêu cầu tư vấn Thêm') }}</h2>
                 <div class="custom-control mt-2 span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
                     <input type="checkbox" class="custom-control-input" id="customControlInline4">
                     <label class="custom-control-label" for="customControlInline4">Gói gian hạn bảo hành</label>

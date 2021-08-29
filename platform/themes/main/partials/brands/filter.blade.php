@@ -55,7 +55,9 @@
                 <form id="formPrice" class="d-flex flex-column" method="GET" action="{{route('public.brand.index',['slug'=>$slug->key])}}">
                     @if(request()->all())
                         @forelse(request()->all() as $key=>$input)
-                            <input type="hidden" name="{{$key}}" value="{{$input}}">
+                            @if(!in_array($key,['price','country']))
+                                <input type="hidden" name="{{$key}}" value="{{$input}}">
+                            @endif
                         @empty
                         @endforelse
                     @endif

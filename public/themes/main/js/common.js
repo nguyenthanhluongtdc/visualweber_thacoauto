@@ -459,6 +459,28 @@ if ($('.counter-value').length > 0) {
     });
 }
 
+// Slide
+var SlideSwiper = {
+    slideColorCar: function(){
+        var swiper = new Swiper(".mySwiperColorThumb", {
+            spaceBetween: 10,
+            // slidesPerView: $('.mySwiperColorThumb .swiper-slide').length,
+            slidesPerView: "auto",
+            freeMode: true,
+            watchSlidesProgress: true,
+          });
+          var swiper2 = new Swiper(".mySwiperColor", {
+            spaceBetween: 10,
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+            thumbs: {
+              swiper: swiper,
+            },
+          });
+    }
+}
 //search
 
 $(document).ready(function () {
@@ -508,4 +530,8 @@ $(document).ready(function () {
             }
         });
     }
+    /**
+     * Import Slide
+     */
+    SlideSwiper.slideColorCar();
 })

@@ -44,8 +44,17 @@
         <div class="car-detail row">
             <div class="car-detail__image col-sm-12 col-md-12">
                 <div class="car-detail__background"></div>
-                <div class="car-detail__frame">
-                    <img src="{{get_object_image($carFeature->image)}}" alt="">
+                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"class="swiper mySwiperColor">
+                    <div class="swiper-wrapper">
+                        @forelse($carFeature->colors as $color)
+                            <div class="swiper-slide">
+                                <div class="car-detail__frame">
+                                    <img class="img-fluid" src="{{get_object_image($color->image)}}" alt="">
+                                </div>
+                            </div>
+                        @empty
+                        @endforelse
+                    </div>
                 </div>
             </div>
             <div class="car-detail__info col-sm-12 col-md-12">
@@ -65,13 +74,17 @@
                     </li>
                 </ul>
                 @if(count($carFeature->colors))
-                <ul class="info-color">
-                    @forelse($carFeature->colors as $color)
-                        <li class="info-color__item" style="background-color: {{$color->code}}">
-                        </li>
-                    @empty
-                    @endforelse
-                </ul>
+                <div thumbsSlider="" class="swiper mySwiperColorThumb">
+                    <div class="swiper-wrapper info-color">
+                        @forelse($carFeature->colors as $color)
+                            <div class="swiper-slide ">
+                                <li class="info-color__item" style="background-color: {{$color->code}}">
+                                </li>
+                            </div>
+                        @empty
+                        @endforelse
+                    </div>
+                </div>
                 @endif
 
                 @if(count($carFeature->childrens))

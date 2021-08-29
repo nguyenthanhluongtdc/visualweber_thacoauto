@@ -55,6 +55,9 @@ class ColorTable extends TableAbstract
                 }
                 return Html::link(route('color.edit', $item->id), $item->name);
             })
+            ->editColumn('car_id', function ($item) {
+                return $item->car && $item->car->id ? Html::link(route('car.edit', $item->car->id), $item->car->name ?? '') : '';
+            })
             ->editColumn('checkbox', function ($item) {
                 return $this->getCheckbox($item->id);
             })
@@ -80,6 +83,7 @@ class ColorTable extends TableAbstract
             ->select([
                'id',
                'name',
+               'car_id',
                'created_at',
                'status',
            ]);
@@ -99,6 +103,10 @@ class ColorTable extends TableAbstract
             ],
             'name' => [
                 'title' => trans('core/base::tables.name'),
+                'class' => 'text-left',
+            ],
+            'car_id' => [
+                'title' => trans('Car'),
                 'class' => 'text-left',
             ],
             'created_at' => [

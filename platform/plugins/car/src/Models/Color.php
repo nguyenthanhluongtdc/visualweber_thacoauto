@@ -26,6 +26,7 @@ class Color extends BaseModel
         'code',
         'car_id',
         'status',
+        'image'
     ];
 
     /**
@@ -34,4 +35,8 @@ class Color extends BaseModel
     protected $casts = [
         'status' => BaseStatusEnum::class,
     ];
+
+    public function car(){
+        return $this->belongsTo(\Platform\Car\Models\Car::class,'car_id');
+    }
 }

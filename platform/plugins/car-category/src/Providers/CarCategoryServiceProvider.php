@@ -35,9 +35,9 @@ class CarCategoryServiceProvider extends ServiceProvider
             ->loadRoutes(['web']);
 
         Event::listen(RouteMatched::class, function () {
-            // if (defined('LANGUAGE_MODULE_SCREEN_NAME')) {
-            //    \Language::registerModule([CarCategory::class]);
-            // }
+            if (defined('LANGUAGE_MODULE_SCREEN_NAME')) {
+               \Language::registerModule([CarCategory::class]);
+            }
 
             dashboard_menu()
             ->registerItem([
@@ -59,5 +59,7 @@ class CarCategoryServiceProvider extends ServiceProvider
                 'permissions' => ['car-category.index'],
             ]);
         });
+        \SlugHelper::registerModule(CarCategory::class);
+        \SlugHelper::setPrefix(CarCategory::class, 'car-categories');
     }
 }

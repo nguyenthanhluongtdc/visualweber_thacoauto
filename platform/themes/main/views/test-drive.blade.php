@@ -28,12 +28,12 @@
                                         </button>
                                     </li>
                                 </ul>
-                                <input name="type_register" value="at_showroom" class="d-none" id="type-register-input" />
+                                <input required name="type_register" value="at_showroom" class="d-none" id="type-register-input" />
                                 <div class="tab-content font-pri content" id="myTabContent">
                                     <div id="at_showroom" class="container tab-pane active">
                                         <div class="form__select">
                                             <span class="title">{{ __("Xưng hô") }}</span>
-                                            <select id="vocative" name="vocative"
+                                            <select id="vocative" required name="vocative"
                                                 class="font20 font-mi-cond js-example-disabled-results">
                                                 <option selected disabled>{{ __("Vui lòng chọn") }}</option>
                                                 <option value="male">{{ __('Anh') }}</option>
@@ -43,22 +43,22 @@
 
                                         <div class="form__text">
                                             <span class="title">{{ __('Họ & tên') }}</span>
-                                            <input type="text" name="name" placeholder="{{ __('Điền họ & tên') }}">
+                                            <input type="text" required name="name" placeholder="{{ __('Điền họ & tên') }}">
                                         </div>
 
                                         <div class="form__text">
                                             <span class="title">{{ __("Số ĐT") }}</span>
-                                            <input type="text" name="phone" placeholder="{{ __("Điền số điện thoại") }}">
+                                            <input type="text" required name="phone" placeholder="{{ __("Điền số điện thoại") }}">
                                         </div>
 
                                         <div class="form__text">
                                             <span class="title">{{ __("Email") }}</span>
-                                            <input type="text" name="email" placeholder="{{ __("Điền email") }}">
+                                            <input type="text" required name="email" placeholder="{{ __("Điền email") }}">
                                         </div>
 
                                         <div class="form__select">
                                             <span class="title">{{ __("Tỉnh/Thành phố") }}</span>
-                                            <select id="province" name="province_id"
+                                            <select id="province" required name="province_id"
                                                 class="font20 font-mi-cond js-example-disabled-results">
                                                 <option selected disabled>{{ __("Tỉnh/Thành phố") }}</option>
                                                 @foreach (is_plugin_active('location') ? get_cities() : collect() as $key => $item)
@@ -69,7 +69,7 @@
 
                                         <div class="form__select">
                                             <span class="title">{{ __("Quận/ Huyện") }}</span>
-                                            <select id="district" name="district_id"
+                                            <select id="district" required name="district_id"
                                                 class="font20 font-mi-cond js-example-disabled-results">
                                                 <option selected disabled>{{ __("Quận/ Huyện") }}</option>
                                                 {{-- @foreach (is_plugin_active('location') ? get_cities() : collect() as $key => $item)
@@ -80,7 +80,7 @@
 
                                         <div class="form__select">
                                             <span class="title">{{ __("Showroom") }}</span>
-                                            <select id="showroom" name="showroom_id"
+                                            <select id="showroom" required name="showroom_id"
                                                 class="font20 font-mi-cond js-example-disabled-results">
                                                 <option selected disabled>{{ __("Showroom") }}</option>
                                                 {{-- @foreach (collect() as $key => $item)
@@ -91,7 +91,7 @@
 
                                         <div class="form__select">
                                             <span class="title">{{ __("Xe đang sở hữu") }}</span>
-                                            <select id="brand" name="brand_id"
+                                            <select id="brand" required name="brand_id"
                                                 class="font20 font-mi-cond js-example-disabled-results">
                                                 <option selected disabled>{{ __("Vui lòng chọn") }}</option>
                                                 @foreach (get_brands() ?? collect() as $item)
@@ -102,7 +102,7 @@
 
                                         <div class="form__select">
                                             <span class="title">{{ __("Quý khách đã sở hữu xe trong bao lâu") }}</span>
-                                            <select id="time" name="time"
+                                            <select id="time" required name="time"
                                                 class="font20 font-mi-cond js-example-disabled-results">
                                                 <option selected disabled>{{ __("Vui lòng chọn") }}</option>
                                                 <option value="1">{{ '1 '. __('Year') }}</option>
@@ -136,19 +136,19 @@
                         </div>
 
                         <div class="form-group form-check font15 font-pri reminder">
-                            <input type="checkbox" checked id="html">
+                            <input type="checkbox" required checked id="html">
                             <label for="html">
                                 {{ __("Tôi trên 18 tuổi và tôi có bằng lái xe B2 hợp lệ. *") }}
                             </label>
                         </div>
                         <div class="form-group form-check font15 font-pri">
-                            <input type="checkbox" checked id="css">
+                            <input type="checkbox" required checked id="css">
                             <label for="css">
                                 {{ __("Tôi theo đây đồng ý để THACO (và các công ty liên kết, đối tác của THACO) thu thập, sử dụng, hiệu chỉnh, lưu trữ, sao chép thông tin của tôi, cung cấp thông tin trên cho bên thứ ba có liên quan (bao gồm nhưng không giới hạn các công ty thuộc Tập đoàn BMW) nhằm mục đích chăm sóc khách hàng, gửi thiệp mời đến các sự kiện, các hoạt động tiếp thị, nghiên cứu và các mục đích thống kê khác giữa các đối tác hoặc công ty thành viên của tập đoàn BMW. Tôi cũng biết rằng thông tin cá nhân của tôi sẽ được sử dụng dựa trên luật bảo vệ sự riêng tư hiện hành.") }}
                             </label>
                         </div>
                         <div class="form-group form-check font15 font-pri">
-                            <input type="checkbox" checked id="javascript">
+                            <input type="checkbox" required checked id="javascript">
                             <label for="javascript">
                                 {{ __("Tôi cũng đồng ý để THACO (và các công ty liên kết, đối tác của THACO) liên hệ với tôi nhằm mục đích thực hiện chương trình quảng cáo chăm sóc khách hàng qua số điện thoại/ email và thông tin liên hệ khác mà tôi đã đăng ký (dù tôi đã đăng ký danh sách không quảng cáo hay không)") }}
                             </label>

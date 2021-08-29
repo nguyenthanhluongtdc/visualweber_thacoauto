@@ -2,6 +2,7 @@
 
 namespace Platform\TestDrive\Forms;
 
+use Assets;
 use Platform\Base\Forms\FormAbstract;
 use Platform\Base\Enums\BaseStatusEnum;
 use Platform\TestDrive\Http\Requests\TestDriveRequest;
@@ -15,18 +16,13 @@ class TestDriveForm extends FormAbstract
      */
     public function buildForm()
     {
+        Assets::addScriptsDirectly('vendor/core/plugins/contact/js/contact.js')
+            ->addStylesDirectly('vendor/core/plugins/contact/css/contact.css');
+
         $this
             ->setupModel(new TestDrive)
             ->setValidatorClass(TestDriveRequest::class)
             ->withCustomFields()
-            ->add('name', 'text', [
-                'label'      => trans('core/base::forms.name'),
-                'label_attr' => ['class' => 'control-label required'],
-                'attr'       => [
-                    'placeholder'  => trans('core/base::forms.name_placeholder'),
-                    'data-counter' => 120,
-                ],
-            ])
             ->add('status', 'customSelect', [
                 'label'      => trans('core/base::tables.status'),
                 'label_attr' => ['class' => 'control-label required'],
@@ -35,6 +31,15 @@ class TestDriveForm extends FormAbstract
                 ],
                 'choices'    => BaseStatusEnum::labels(),
             ])
-            ->setBreakFieldPoint('status');
+            ->setBreakFieldPoint('status')
+            ->addMetaBoxes([
+                'information' => [
+                    'title'      => trans('plugins/contact::contact.contact_information'),
+                    'content'    => view('plugins/test-drive::contact-info', ['contact' => $this->getModel()])->render(),
+                    'attributes' => [
+                        'style' => 'margin-top: 0',
+                    ],
+                ],
+            ]);
     }
 }

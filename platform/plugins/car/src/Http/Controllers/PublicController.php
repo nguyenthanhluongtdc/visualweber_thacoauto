@@ -160,7 +160,7 @@ class PublicController extends BaseController
             ]);
         }
 
-        if (request('equipments') && is_array('equipments')) {
+        if (request('equipments') && is_array(request('equipments'))) {
             $data['equipments'] = $equipmentInterface->advancedGet([
                 "condition" => [
                     ["id", 'IN', request('equipments')]
@@ -215,7 +215,7 @@ class PublicController extends BaseController
             ]);
         }
 
-        if (request('equipments') && is_array('equipments')) {
+        if (request('equipments') && is_array(request('equipments'))) {
             $data['equipments'] = $equipmentInterface->advancedGet([
                 "condition" => [
                     ["id", 'IN', request('equipments')]

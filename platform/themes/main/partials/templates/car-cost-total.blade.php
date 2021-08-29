@@ -23,7 +23,7 @@
                 <div class="card">
                     <div class="card-header" id="heading_accessory">
                         @php
-                            $accessories_price = isset($accessories) ? $accessories->sum('price') ?? 0 : 0
+                            $accessories_price = isset($accessories) ? ( $accessories->sum('price') ?? 0) : 0;
                         @endphp
                         <div class="d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#collapse_accessory" aria-expanded="true" aria-controls="collapse_accessory">
                             <h5 class="mb-0 plus">{{ __('Phụ kiện') }}</h5>

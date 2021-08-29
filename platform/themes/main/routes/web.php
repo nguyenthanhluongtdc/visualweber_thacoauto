@@ -32,14 +32,14 @@ Route::group(['namespace' => 'Theme\Thaco\Http\Controllers', 'middleware' => ['w
         //     Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
         //     return Theme::scope('pages/services/service-detail')->render();
         // });
-        Route::get('/product-detail-1', function () {
-            Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
-            return Theme::scope('pages/business/product/product-detail-1')->render();
-        });
-        Route::get('/product-detail', function () {
-            Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
-            return Theme::scope('pages/business/product/product-detail')->render();
-        });
+        // Route::get('/product-detail-1', function () {
+        //     Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
+        //     return Theme::scope('pages/business/product/product-detail-1')->render();
+        // });
+        // Route::get('/product-detail', function () {
+        //     Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
+        //     return Theme::scope('pages/business/product/product-detail')->render();
+        // });
 
         // Route::get('/brand-detail', function () {
         //     Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
@@ -51,24 +51,26 @@ Route::group(['namespace' => 'Theme\Thaco\Http\Controllers', 'middleware' => ['w
         //     return Theme::scope('pages/business/car-selection/index')->render();
         // });
 
-        Route::get('/he-thong-phan-phoi-chi-tiet', function () {
-            Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
-            return Theme::scope('pages/distribution-system/detail')->render();
-        });
+        // Route::get('/he-thong-phan-phoi-chi-tiet', function () {
+        //     Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
+        //     return Theme::scope('pages/distribution-system/detail')->render();
+        // });
 
         //end demo
 
         /* ===================== */
         Route::group(['prefix' => 'ajax'], function () {
+            Route::get('search', 'ThacoController@getSearch')->name('public.ajax.search');
             Route::get('get-new-posts', 'ThacoController@getNewPosts');
-            Route::get('get-distribution-systems', 'ThacoController@getDistributionSystem')->name('public.ajax.distribution-system');
             Route::get('get-car-selection', 'ThacoController@getFirstStepCarSelection')->name('public.ajax.car-selection');
+            Route::get('showroom-by-brand', 'ThacoController@getShowroomByBrand')->name('public.ajax.showroom');
+            Route::get('get-distribution-systems', 'ThacoController@getDistributionSystem')->name('public.ajax.distribution-system');
         });
         /* ===================== */
 
-        Route::get('ajax/search', 'ThacoController@getSearch')->name('public.ajax.search');
 
         Route::get('/search', 'ThacoController@getResultSearch')->name('public.search');
+        Route::get('/api/search', 'ThacoController@getApiSearch')->name('public.api.search');
     });
 });
 

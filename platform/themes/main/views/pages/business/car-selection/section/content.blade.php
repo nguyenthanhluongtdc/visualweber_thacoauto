@@ -3,24 +3,24 @@
         <div class="car-selection-content row">
             <div class="car-selection-content__left col-sm-12 col-md-12">
                 <div class="frame">
-                    <img src="{{Theme::asset()->url('images/business/brand-detail/car-detail.png')}}" alt="">
+                    <img loading="lazy" src="{{Theme::asset()->url('images/business/brand-detail/car-detail.png')}}" alt="">
                 </div>
                 <ul class="info-equip">
                     <li class="info-equip__item font15 font-pri">
-                        <img src="{{Theme::asset()->url('images/business/brand-detail/chon-xe-1.png')}}" alt="filter icon">
+                        <img loading="lazy" src="{{Theme::asset()->url('images/business/brand-detail/chon-xe-1.png')}}" alt="filter icon">
                         <span>270 kW (367 HP)</span>
                     </li>
                     <li class="info-equip__item font15 font-pri">
-                        <img src="{{Theme::asset()->url('images/business/brand-detail/chon-xe-2.png')}}" alt="filter icon">
+                        <img loading="lazy" src="{{Theme::asset()->url('images/business/brand-detail/chon-xe-2.png')}}" alt="filter icon">
                         <span>Xăng</span>
                     </li>
                     <li class="info-equip__item font15 font-pri">
-                        <img src="{{Theme::asset()->url('images/business/brand-detail/chon-xe-3.png')}}" alt="filter icon">
+                        <img loading="lazy" src="{{Theme::asset()->url('images/business/brand-detail/chon-xe-3.png')}}" alt="filter icon">
                         <span>Tự động</span>
                     </li>
                 </ul>
                 <div class="button">
-                    <img src="{{Theme::asset()->url('images/business/brand-detail/360.png')}}" alt="">
+                    <img loading="lazy" src="{{Theme::asset()->url('images/business/brand-detail/360.png')}}" alt="">
                 </div>
             </div>
             <div class="car-selection-content__right  col-sm-12 col-md-12">
@@ -75,7 +75,7 @@
                     <div class="select-equip__list">
                         <div class="select-equip__item active">
                             <div class="frame">
-                                <img src="{{Theme::asset()->url('images/business/brand-detail/phu-kien-1.jpg')}}" alt="">
+                                <img loading="lazy" src="{{Theme::asset()->url('images/business/brand-detail/phu-kien-1.jpg')}}" alt="">
                             </div>
                             <div class="checkbox-frame">
                                 <div class="cframe">
@@ -87,7 +87,7 @@
                         </div>
                         <div class="select-equip__item">
                             <div class="frame">
-                                <img src="{{Theme::asset()->url('images/business/brand-detail/phu-kien-2.jpg')}}" alt="">
+                                <img loading="lazy" src="{{Theme::asset()->url('images/business/brand-detail/phu-kien-2.jpg')}}" alt="">
                             </div>
                             <div class="checkbox-frame">
                                 <div class="cframe">
@@ -99,7 +99,7 @@
                         </div>
                         <div class="select-equip__item">
                             <div class="frame">
-                                <img src="{{Theme::asset()->url('images/business/brand-detail/phu-kien-3.jpg')}}" alt="">
+                                <img loading="lazy" src="{{Theme::asset()->url('images/business/brand-detail/phu-kien-3.jpg')}}" alt="">
                             </div>
                             <div class="checkbox-frame">
                                 <div class="cframe">
@@ -111,7 +111,7 @@
                         </div>
                         <div class="select-equip__item">
                             <div class="frame">
-                                <img src="{{Theme::asset()->url('images/business/brand-detail/phu-kien-4.jpg')}}" alt="">
+                                <img loading="lazy" src="{{Theme::asset()->url('images/business/brand-detail/phu-kien-4.jpg')}}" alt="">
                             </div>
                             <div class="checkbox-frame">
                                 <div class="cframe">
@@ -128,7 +128,7 @@
                     <div class="select-equip__list">
                         <div class="select-equip__item active">
                             <div class="frame">
-                                <img src="{{Theme::asset()->url('images/business/brand-detail/phu-kien-5.jpg')}}" alt="">
+                                <img loading="lazy" src="{{Theme::asset()->url('images/business/brand-detail/phu-kien-5.jpg')}}" alt="">
                             </div>
                             <div class="checkbox-frame">
                                 <div class="cframe">
@@ -140,7 +140,7 @@
                         </div>
                         <div class="select-equip__item">
                             <div class="frame">
-                                <img src="{{Theme::asset()->url('images/business/brand-detail/phu-kien-6.jpg')}}" alt="">
+                                <img loading="lazy" src="{{Theme::asset()->url('images/business/brand-detail/phu-kien-6.jpg')}}" alt="">
                             </div>
                             <div class="checkbox-frame">
                                 <div class="cframe">
@@ -152,7 +152,7 @@
                         </div>
                         <div class="select-equip__item">
                             <div class="frame">
-                                <img src="{{Theme::asset()->url('images/business/brand-detail/phu-kien-7.jpg')}}" alt="">
+                                <img loading="lazy" src="{{Theme::asset()->url('images/business/brand-detail/phu-kien-7.jpg')}}" alt="">
                             </div>
                             <div class="checkbox-frame">
                                 <div class="cframe">
@@ -164,7 +164,7 @@
                         </div>
                         <div class="select-equip__item">
                             <div class="frame">
-                                <img src="{{Theme::asset()->url('images/business/brand-detail/phu-kien-8.jpg')}}" alt="">
+                                <img loading="lazy" src="{{Theme::asset()->url('images/business/brand-detail/phu-kien-8.jpg')}}" alt="">
                             </div>
                             <div class="checkbox-frame">
                                 <div class="cframe">

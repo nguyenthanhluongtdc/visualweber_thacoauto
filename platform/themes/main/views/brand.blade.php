@@ -14,7 +14,7 @@
                                 @foreach ($children->brands ?? collect() as $brand)
                                     <div class="logo-img">
                                         <a href="{{ $brand->url }}">
-                                            <img src="{{ get_image_url($brand->image) }}" alt="{{ $brand->name }}" >
+                                            <img loading="lazy" src="{{ get_image_url($brand->image) }}" alt="{{ $brand->name }}" >
                                         </a>
                                     </div>
                                 @endforeach
@@ -22,7 +22,7 @@
                         </div>
                     @endforeach
                 </div>
-            </div> 
+            </div>
         @empty
             {!! Theme::partial('templates/no-content') !!}
         @endforelse

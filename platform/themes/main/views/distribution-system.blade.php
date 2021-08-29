@@ -1,22 +1,14 @@
 <div class="distribution">
-    @dd($page,get_field($page, 'danh_sach_thuong_hieu_he_thong_phan_phoi'))
     <div class="provincial-company">
         <div class="container-remake">
             <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 fontmb-large">{{ __("Công ty tỉnh thành") }}</h1>
             <div data-aos="fade-left" data-aos-duration="1500" class="description desktop font20 mt-20">{!! $page->content !!}</div>
             <div data-aos="zoom-in-up" data-aos-duration="2000" class="select-list mt-40 mb-40">
-                @php
-                    $citys = get_cities();
-                    foreach($citys as $key => $value) {
-                        $cityIdFirst = $key;
-                    }
-                    $distributionSystems = get_distribution_systems(!empty($_GET['city']) ? $_GET['city'] : $cityIdFirst);
-                @endphp
                 <form action="" id="distribution-system-form">
                     @csrf
                     <select class="ui search selection dropdown city w-100" name="city_id" id="city_id">
                         <option value="">{{ __("Tỉnh/Thành phố") }}</option>
-                        @foreach ($citys as $key => $item)
+                        @foreach (get_cities() as $key => $item)
                             <option value="{{ $key }}" {{ !empty($_GET['city']) && $_GET['city'] == $key ? 'selected' : '' }}>{{ $item }}</option>
                         @endforeach
                     </select>
@@ -24,125 +16,30 @@
                 </form>
             </div>
             <div data-aos="zoom-in" data-aos-duration="2500" class="branch-wrap">
-                <img class="branch-background-image" src="{{Theme::asset()->url('images/distribution/background.jpg')}}"
-                    alt="">
+                <img loading="lazy" class="branch-background-image" src="{{Theme::asset()->url('images/distribution/background.jpg')}}"
+                    alt="Background công ty tỉnh thành">
                 <div class="branch-background-blur"></div>
                 <div class="left">
-                    <div class="branch-overflow" id="branch-list">
-                        <div class="branch-item mb-20">
-                            <p class="branch-name font30 mb-20">Chi Nhánh An Lạc - Công Ty CP Ô Tô Trường Hải</p>
-                            <p class="branch-address font20 mb-20">36C11, QL1A, Tân Kiên, Bình Chánh, Thành phố Hồ Chí
-                                Minh 700000</p>
-                            <div class="logo-wrap mb-20">
-                                <div class="logo-wrap__left">
-                                    <div class="logo-item">
-                                        <img src="{{Theme::asset()->url('images/distribution/foton.png')}}" alt="">
-                                    </div>
-                                    <div class="logo-item">
-                                        <img src="{{Theme::asset()->url('images/distribution/fuso.png')}}" alt="">
-                                    </div>
-                                    <div class="logo-item">
-                                        <img src="{{Theme::asset()->url('images/distribution/frontier.png')}}" alt="">
-                                    </div>
-                                    <div class="logo-item">
-                                        <img src="{{Theme::asset()->url('images/distribution/thacobus.png')}}" alt="">
-                                    </div>
-                                </div>
-                                <div class="logo-wrap__right font17 font-pri font-17">
-                                    <a href="/he-thong-phan-phoi-chi-tiet">Xem chi tiết <i class="fa fa-arrow-right"
-                                            aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="branch-item mb-20">
-                            <p class="branch-name font30 mb-20">Chi Nhánh An Lạc - Công Ty CP Ô Tô Trường Hải</p>
-                            <p class="branch-address font20 mb-20">36C11, QL1A, Tân Kiên, Bình Chánh, Thành phố Hồ Chí
-                                Minh 700000</p>
-                            <div class="logo-wrap mb-20">
-                                <div class="logo-wrap__left">
-                                    <div class="logo-item">
-                                        <img src="{{Theme::asset()->url('images/distribution/foton.png')}}" alt="">
-                                    </div>
-                                    <div class="logo-item">
-                                        <img src="{{Theme::asset()->url('images/distribution/fuso.png')}}" alt="">
-                                    </div>
-                                    <div class="logo-item">
-                                        <img src="{{Theme::asset()->url('images/distribution/frontier.png')}}" alt="">
-                                    </div>
-                                    <div class="logo-item">
-                                        <img src="{{Theme::asset()->url('images/distribution/thacobus.png')}}" alt="">
-                                    </div>
-                                </div>
-                                <div class="logo-wrap__right font17 font-pri font-17">
-                                    <a href="/he-thong-phan-phoi-chi-tiet">Xem chi tiết <i class="fa fa-arrow-right"
-                                            aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="branch-item mb-20">
-                            <p class="branch-name font30 mb-20">Chi Nhánh An Lạc - Công Ty CP Ô Tô Trường Hải</p>
-                            <p class="branch-address font20 mb-20">36C11, QL1A, Tân Kiên, Bình Chánh, Thành phố Hồ Chí
-                                Minh 700000</p>
-                            <div class="logo-wrap mb-20">
-                                <div class="logo-wrap__left">
-                                    <div class="logo-item">
-                                        <img src="{{Theme::asset()->url('images/distribution/foton.png')}}" alt="">
-                                    </div>
-                                    <div class="logo-item">
-                                        <img src="{{Theme::asset()->url('images/distribution/fuso.png')}}" alt="">
-                                    </div>
-                                    <div class="logo-item">
-                                        <img src="{{Theme::asset()->url('images/distribution/frontier.png')}}" alt="">
-                                    </div>
-                                    <div class="logo-item">
-                                        <img src="{{Theme::asset()->url('images/distribution/thacobus.png')}}" alt="">
-                                    </div>
-                                </div>
-                                <div class="logo-wrap__right font17 font-pri font-17">
-                                    <a href="/he-thong-phan-phoi-chi-tiet">Xem chi tiết <i class="fa fa-arrow-right"
-                                            aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="branch-item mb-20">
-                            <p class="branch-name font30 mb-20">Chi Nhánh An Lạc - Công Ty CP Ô Tô Trường Hải</p>
-                            <p class="branch-address font20 mb-20">36C11, QL1A, Tân Kiên, Bình Chánh, Thành phố Hồ Chí
-                                Minh 700000</p>
-                            <div class="logo-wrap mb-20">
-                                <div class="logo-wrap__left">
-                                    <div class="logo-item">
-                                        <img src="{{Theme::asset()->url('images/distribution/foton.png')}}" alt="">
-                                    </div>
-                                    <div class="logo-item">
-                                        <img src="{{Theme::asset()->url('images/distribution/fuso.png')}}" alt="">
-                                    </div>
-                                    <div class="logo-item">
-                                        <img src="{{Theme::asset()->url('images/distribution/frontier.png')}}" alt="">
-                                    </div>
-                                    <div class="logo-item">
-                                        <img src="{{Theme::asset()->url('images/distribution/thacobus.png')}}" alt="">
-                                    </div>
-                                </div>
-                                <div class="logo-wrap__right font17 font-pri font-17">
-                                    <a href="/he-thong-phan-phoi-chi-tiet">Xem chi tiết <i class="fa fa-arrow-right"
-                                            aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="branch-overflow" id="branch-list"></div>
+                    <div class="center pt-3 loading d-none w-100 h-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: none; display: block; shape-rendering: auto;" width="48px" height="48px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                            <circle cx="50" cy="50" r="44" stroke-width="7" stroke="#01498b" stroke-dasharray="69.11503837897544 69.11503837897544" fill="none" stroke-linecap="round">
+                                <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="0.5952380952380952s" keyTimes="0;1" values="0 50 50;360 50 50"></animateTransform>
+                            </circle>
+                        </svg>
                     </div>
                 </div>
                 <div class="right">
                     <div class="w-100 h-100" id="map"></div>
-                    <!-- <img src="{{Theme::asset()->url('images/distribution/mapitem.png')}}" alt=""> -->
                 </div>
             </div>
-            <div data-aos="fade-left" data-aos-duration="1500" class="description mobile font20">{{ $page->content }}</div>
+            <div data-aos="fade-left" data-aos-duration="1500" class="description mobile font20">{!! $page->content !!}</div>
         </div>
     </div>
     <div class="activity-news-desktop">
         <div class="container-remake">
             @php
-                $posts = get_posts_by_category(15, 4);
+                $posts = get_posts_by_category(theme_option('default_category_news'), 4);
             @endphp
             <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 mb-20 fontmb-large">{{ __("tin tức hoạt động") }}</h1>
             <div class="activity-news-desktop__wrap">
@@ -151,7 +48,7 @@
                     <div class="img-container">
                         <div class="skewed">
                             <a href="{{$posts[0]->url}}">
-                                <img src="{{ Storage::disk('public')->exists($posts[0]->image) ? get_object_image($posts[0]->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Tin tức">
+                                <img loading="lazy" src="{{ Storage::disk('public')->exists($posts[0]->image) ? get_object_image($posts[0]->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Tin tức">
                             </a>
                         </div>
                     </div>
@@ -160,7 +57,7 @@
                         <p class="news-description font20">{{Str::words($posts[0]->description,40)}}</p>
                         <div class="news-info">
                             <div class="news-info__item font15">
-                                <p>{{ \MetaBox::getMetaData($posts[0], 'region_post', true) ?? '--' }}</p>
+                                <p>{{ $posts[0]->city->name ?? '--' }}</p>
                             </div>
                             <div class="news-info__item font15">
                                 <p>{{date_format($posts[0]->created_at,"d-m-Y")}}</p>
@@ -176,7 +73,7 @@
                         <p class="news-description">{{Str::words($posts[1]->description,40)}}</p>
                         <div class="news-info">
                             <div class="news-info__item font15">
-                                <p>{{ \MetaBox::getMetaData($posts[1], 'region_post', true) ?? '--' }}</p>
+                                <p>{{ $posts[1]->city->name ?? '--' }}</p>
                             </div>
                             <div class="news-info__item font15">
                                 <p>{{date_format($posts[1]->created_at,"d-m-Y")}}</p>
@@ -189,7 +86,7 @@
                         <div class="img-container">
                             <div class="skewed">
                                 <a href="{{$posts[2]->url}}">
-                                    <img src="{{ Storage::disk('public')->exists($posts[2]->image) ? get_object_image($posts[2]->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Tin tức">
+                                    <img loading="lazy" src="{{ Storage::disk('public')->exists($posts[2]->image) ? get_object_image($posts[2]->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Tin tức">
                                 </a>
                             </div>
                         </div>
@@ -197,7 +94,7 @@
                             <a class="news-title font25" href="{{$posts[2]->url}}">{{$posts[2]->name}}</a>
                             <div class="news-info">
                                 <div class="news-info__item font15">
-                                    <p>{{ \MetaBox::getMetaData($posts[2], 'region_post', true) ?? '--' }}</p>
+                                    <p>{{ $posts[2]->city->name ?? '--' }}</p>
                                 </div>
                                 <div class="news-info__item font15">
                                     <p>{{date_format($posts[2]->created_at,"d-m-Y")}}</p>
@@ -212,7 +109,7 @@
                     <div class="img-container">
                         <div class="skewed">
                             <a href="{{$posts[3]->url}}">
-                                <img src="{{ Storage::disk('public')->exists($posts[3]->image) ? get_object_image($posts[3]->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Tin tức">
+                                <img loading="lazy" src="{{ Storage::disk('public')->exists($posts[3]->image) ? get_object_image($posts[3]->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Tin tức">
                             </a>
                         </div>
                     </div>
@@ -221,7 +118,7 @@
                         <p class="news-description fontmb-little">{{Str::words($posts[3]->description,40)}}</p>
                         <div class="news-info">
                             <div class="news-info__item font15">
-                                <p>{{ \MetaBox::getMetaData($posts[3], 'region_post', true) ?? '--' }}</p>
+                                <p>{{ $posts[3]->city->name ?? '--' }}</p>
                             </div>
                             <div class="news-info__item font15">
                                 <p>{{date_format($posts[3]->created_at,"d-m-Y")}}</p>
@@ -237,14 +134,14 @@
     <div class="activity-news-mobile font-pri">
         <div class="container-remake">
             <h2 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 mb-20 text-uppercase fontmb-large font-pri-bold">
-                tin tức hoạt động
+                {{ __("tin tức hoạt động") }}
             </h2>
             @if (!empty($posts[0]))
             <div class="news-item">
                 <div class="img-container">
                     <div class="skewed">
                         <a href="{{$posts[0]->url}}">
-                            <img src="{{ Storage::disk('public')->exists($posts[0]->image) ? get_object_image($posts[0]->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Tin tức">
+                            <img loading="lazy" src="{{ Storage::disk('public')->exists($posts[0]->image) ? get_object_image($posts[0]->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Tin tức">
                         </a>
                     </div>
                 </div>
@@ -253,7 +150,7 @@
                     <p class="news-description fontmb-small">{{Str::words($posts[0]->description,40)}}</p>
                     <div class="news-info">
                         <div class="news-info__item fontmb-little">
-                            <p>{{ \MetaBox::getMetaData($posts[0], 'region_post', true) ?? '--' }}</p>
+                            <p>{{ $posts[0]->city->name ?? '--' }}</p>
                         </div>
                         <div class="news-info__item fontmb-little">
                             <p>{{date_format($posts[0]->created_at,"d-m-Y")}}</p>
@@ -268,7 +165,7 @@
                 <div class="img-container">
                     <div class="skewed">
                         <a href="{{$posts[1]->url}}">
-                            <img src="{{ Storage::disk('public')->exists($posts[1]->image) ? get_object_image($posts[1]->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Tin tức">
+                            <img loading="lazy" src="{{ Storage::disk('public')->exists($posts[1]->image) ? get_object_image($posts[1]->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Tin tức">
                         </a>
                     </div>
                 </div>
@@ -277,7 +174,7 @@
                     <p class="news-description fontmb-small">{{Str::words($posts[1]->description,40)}}</p>
                     <div class="news-info">
                         <div class="news-info__item fontmb-little">
-                            <p>{{ \MetaBox::getMetaData($posts[1], 'region_post', true) ?? '--' }}</p>
+                            <p>{{ $posts[1]->city->name ?? '--' }}</p>
                         </div>
                         <div class="news-info__item  fontmb-little">
                             <p>{{date_format($posts[1]->created_at,"d-m-Y")}}</p>
@@ -292,7 +189,7 @@
                 <div class="img-container">
                     <div class="skewed">
                         <a href="{{$posts[2]->url}}">
-                            <img src="{{ Storage::disk('public')->exists($posts[2]->image) ? get_object_image($posts[2]->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Tin tức">
+                            <img loading="lazy" src="{{ Storage::disk('public')->exists($posts[2]->image) ? get_object_image($posts[2]->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Tin tức">
                         </a>
                     </div>
                 </div>
@@ -301,7 +198,7 @@
                     <p class="news-description fontmb-small">{{Str::words($posts[2]->description,40)}}</p>
                     <div class="news-info">
                         <div class="news-info__item  fontmb-little">
-                            <p>{{ \MetaBox::getMetaData($posts[2], 'region_post', true) ?? '--' }}</p>
+                            <p>{{ $posts[2]->city->name ?? '--' }}</p>
                         </div>
                         <div class="news-info__item fontmb-little">
                             <p>{{date_format($posts[2]->created_at,"d-m-Y")}}</p>
@@ -314,71 +211,23 @@
              @if(!empty($posts))
                 {{ $posts->links('vendor.pagination.custom-distribution') }}
             @endif
-            {{-- <ul class="nav-pagination font18 mb-0">
-                <li class="page-item active">
-                    <a href="" title="" class="page-link">
-                        1
-                    </a>
-                </li>
-                <li class="page-item">
-                    <a href="" title="" class="page-link">
-                        2
-                    </a>
-                </li>
-                <li class="page-item">
-                    <a href="" title="" class="page-link">
-                        3
-                    </a>
-                </li>
-                <li class="page-item">
-                    <a href="" title="" class="page-link">
-                        4
-                    </a>
-                </li>
-                <li class="page-item">
-                    <a href="" title="" class="page-link">
-                        5
-                    </a>
-                </li>
-                <li class="page-item">
-                    <a href="" title="" class="page-link">
-                        6
-                    </a>
-                </li>
-                <li class="page-item">
-                    <a href="" title="" class="page-link">
-                        7
-                    </a>
-                </li>
-                <li class="page-item">
-                    <a href="" title="" class="page-link">
-                        >
-                    </a>
-                </li>
-                <li class="page-item">
-                    <a href="" title="" class="page-link">
-                        >>
-                    </a>
-                </li>
-            </ul> --}}
         </div>
     </div>
 
     <div class="library mb-60">
         <div class="container-remake">
             <div class="library-header">
-                <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 fontmb-middle">thư
-                    viện</h1>
+                <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 fontmb-middle">{{ __("thư viện") }}</h1>
                 <div class="library-button">
-                    <img class="customPrevBtn" src="{{Theme::asset()->url('images/distribution/icon_left.png')}}"
-                        alt="">
-                    <img class="customNextBtn" src="{{Theme::asset()->url('images/distribution/icon_right.png')}}"
-                        alt="">
+                    <img loading="lazy" class="customPrevBtn" src="{{Theme::asset()->url('images/distribution/icon_left.png')}}"
+                        alt="Button Previous">
+                    <img loading="lazy" class="customNextBtn" src="{{Theme::asset()->url('images/distribution/icon_right.png')}}"
+                        alt="Button Next">
                 </div>
             </div>
         </div>
         @php
-            $librarys = get_posts_by_category(20, 10);
+            $librarys = get_posts_by_category(theme_option('default_category_gallery'), 10);
         @endphp
         <div class="container-library" data-aos="fade-up" data-aos-duration="1500"
             data-aos-anchor-placement="center-bottom">
@@ -387,13 +236,14 @@
                 <div class="library-item">
                     <div class="img-container">
                         <div class="skewed">
-                            <a href="{{$library->url}}">
-                                <img src="{{ Storage::disk('public')->exists($library->image) ? get_object_image($library->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Thư viện ảnh">
+                            <a data-fancybox data-type="ajax" data-src="{{$library->url}}" data-filter="#gallery" href="javascript:;">
+                                <img loading="lazy" src="{{ Storage::disk('public')->exists($library->image) ? get_object_image($library->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="{{$library->name}}">
                             </a>
                         </div>
                     </div>
                     <div class="library-item__content">
-                        <a href="{{$library->url}}" class="library-title font25 fontmb-medium">{{$library->name}}</a>
+                        <a  class="library-title font25 fontmb-medium" data-fancybox data-type="ajax" data-src="{{$library->url}}" data-filter="#gallery" href="javascript:;">{{$library->name}}</a>
+                        {{-- <a href="{{$library->url}}" class="library-title font25 fontmb-medium">{{$library->name}}</a> --}}
                         <p class="library-description font20 fontmb-little">{{Str::words($library->description,40)}}</p>
                     </div>
                 </div>
@@ -402,6 +252,13 @@
         </div>
     </div>
 </div>
+
+<script>
+    window.__distribution = {
+        ajax: "{{ Language::getLocalizedURL(Language::getCurrentLocale(), route('public.ajax.distribution-system')) }}",
+        readmore: "{!! __('Readmore') !!}"
+    }
+</script>
 <style>
     #map {
         background: transparent
@@ -411,42 +268,14 @@
     }
 </style>
 <script>
-    $(document).ready(function() {
-        $("#distribution-system-form").submit(function(e) {
-            e.preventDefault();
-            $.ajax({
-                    headers: {
-                        "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr(
-                            "content"
-                        )
-                    },
-                    url: "{{route('public.ajax.distribution-system')}}",
-                    method: "GET",
-                    data: {
-                        city: $('#city_id').val()
-                    },
-                    dataType: "json",
-                    success: function(result, status, xhr) {
-                        $('#branch-list')[0].innerHTML = result.html_list;
-                    },
-                    error: function(xhr, status, error) {
-                    },
-            });
-
-        });
-    })
-
-    if($('.city').length){
-        var ignoreDiacritics = true;
-        $('.ui.dropdown.city').dropdown({
-            ignoreDiacritics: ignoreDiacritics,
-            sortSelect: true,
-            fullTextSearch:'exact',
-        });
-    };
+    $('.ui.dropdown.city').dropdown({
+        ignoreDiacritics: true,
+        sortSelect: true,
+        fullTextSearch:'exact',
+    });
     var owl = $('.owl-carousel');
     owl.owlCarousel({
-        loop: false,
+        loop: true,
         items: 2.5,
         margin: 25,
         dots: false,
@@ -454,7 +283,7 @@
         responsiveClass: true,
         responsive:{
             0:{
-                items: 1.3,
+                items: 1.5,
             },
             1081:{
                 items:2.5,
@@ -469,106 +298,4 @@
     $('.customPrevBtn').click(function() {
         owl.trigger('prev.owl.carousel', [300]);
     });
-    //Map
-    const initMap = () => {
-        // var map = L.map('map', {
-        //     maxZoom: 3,
-        //     minZoom: 1,
-        //     crs: L.CRS.Simple
-        // }).setView([0, 0], 1);
-
-        // map.setMaxBounds(new L.LatLngBounds([0,500], [500,0]));
-
-        // var imageUrl = "{{ Theme::asset()->url('images/distribution/map.png') }}"
-        // var imageBounds = [[250,0], [0,250]];
-
-        // L.imageOverlay(imageUrl, imageBounds).addTo(map);
-        // var map = L.map('map', {
-        //     crs: L.CRS.Simple
-        // });
-        // // var bounds = [[0,0], [1000,1000]];
-        // L.imageOverlay("{{ Theme::asset()->url('images/distribution/map.png') }}").addTo(map);
-        // map.fitBounds(bounds);
-
-        // var map = L.map('map').setView([51.505, -0.09], 13);
-
-        // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        //     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        // }).addTo(map);
-
-        // L.marker([51.5, -0.09]).addTo(map)
-        //     .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-        //     .openPopup();
-        // };
-        var map = L.map('map', {
-            minZoom: 1,
-            maxZoom: 3,
-            center: [0, 0],
-            zoom: 1,
-            crs: L.CRS.Simple
-        });
-        var w = 2049;
-        var h = 3185;
-        var url = "{{ Theme::asset()->url('images/distribution/map.png') }}";
-        var southWest = map.unproject([ 0, h], map.getMaxZoom()-1);
-        var northEast = map.unproject([ w, 0], map.getMaxZoom()-1);
-        var bounds = new L.LatLngBounds( southWest, northEast);
-        window.__map = map
-
-        L.imageOverlay( url, bounds).addTo(map);
-
-        map.setMaxBounds(bounds);
-
-        var yx = L.latLng;
-
-        var xy = function(x, y) {
-            if (L.Util.isArray(x)) {    // When doing xy([x, y]);
-                return yx(x[1], x[0]);
-            }
-            return yx(y, x);  // When doing xy(x, y);
-        };
-
-        var greenIcon = L.icon({
-            iconUrl: "{{ Theme::asset()->url('images/distribution/marker.png') }}",
-
-            iconSize:     [30, 30], // size of the icon
-            iconAnchor:   [20, 20], // point of the icon which will correspond to marker's location
-            popupAnchor:  [-3, -25] // point from which the popup should open relative to the iconAnchor
-        });
-
-        let popup = `<div class="branch-popup">
-                        <h2 class="branch-name font20">thaco an sương</h2>
-                        <div class="branch-body">
-                            <div class="branch-body-item">
-                                <p class="info-number font30">70</p>
-                                <p class="info-text font15">Lorem Isum</p>
-                            </div>
-                            <div class="branch-body-item">
-                                <p class="info-number font30">1000</p>
-                                <p class="info-text font15">Lorem Isum</p>
-                            </div>
-                            <div class="branch-body-item">
-                                <p class="info-number font30">99%</p>
-                                <p class="info-text font15">Lorem Isum</p>
-                            </div>
-                        </div>
-                        <div class="branch-footer">
-                            <a href="#"><button>{!! __('Readmore') !!}</button></a>
-                        </div>
-                    </div>`
-
-        let marker = L.marker(new L.LatLng(-630.8, 254), {icon: greenIcon}).addTo(map).bindPopup(popup)
-        L.marker(new L.LatLng(-640.8, 300), {icon: greenIcon}).addTo(map).bindPopup(popup)
-        L.marker(new L.LatLng(-660.8, 200), {icon: greenIcon}).addTo(map).bindPopup(popup)
-        L.marker(new L.LatLng(-650.8, 240), {icon: greenIcon}).addTo(map).bindPopup(popup)
-        L.marker(new L.LatLng(-620.8, 240), {icon: greenIcon}).addTo(map).bindPopup(popup)
-
-        setTimeout(() => {
-            window.__map.setView(new L.LatLng(-630.8, 254), 2)
-            // marker.openPopup()
-        }, 300)
-    }
-    $(document).ready(function() {
-        initMap();
-    })
 </script>

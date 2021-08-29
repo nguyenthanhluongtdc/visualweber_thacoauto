@@ -13,7 +13,7 @@
         <div class="event-item">
             <div class="title">
                 <div class="icon-title">
-                    <img src="{{ Theme::asset()->url('images/media/event.png') }}" class="img-fluid" alt="Icon title">
+                    <img loading="lazy" src="{{ Theme::asset()->url('images/media/event.png') }}" class="img-fluid" alt="Icon title">
                 </div>
                 <div class="title-wrap">
                     <h5 class="font30 font-pri-bold color-gray mb-0"><a href="{{$post->url}}">{{$post->name}}
@@ -24,7 +24,7 @@
             <div class="image-content">
                 <div class="image">
                     <div class="post-thumbnail">
-                        <a href="{{$post->url}}"><img src="{{ get_object_image($post->image) }}" alt=""></a>
+                        <a href="{{$post->url}}"><img loading="lazy" src="{{ get_object_image($post->image) }}" alt="{{$post->name}}"></a>
                     </div>
                 </div>
                 <div class="content">

@@ -15,6 +15,19 @@ if (!function_exists('get_featured_posts_by_category')) {
         return app(PostInterface::class)->getFeaturedByCategory($categoryId, $limit, $with);
     }
 }
+
+if (!function_exists('get_all_with_featured')) {
+    /**
+     * @param int $limit
+     * @param array $with
+     * @return \Illuminate\Support\Collection
+     */
+    function get_all_with_featured($limit, array $with = [])
+    {
+        return app(PostInterface::class)->getAllWithFeatured($limit, $with);
+    }
+}
+
 if (!function_exists('get_only_featured_posts_by_category')) {
     /**
      * @param array $categoryId
@@ -101,5 +114,43 @@ if (!function_exists('get_comment_count')) {
             return $count;
         }
         return 0;
+    }
+}
+
+if (!function_exists('get_result_language_file')) {
+    function get_result_language_file()
+    {
+        $group['locale'] = \Language::getCurrentLocale();
+
+        $translations = [];
+        if ($group) {
+            $jsonFile = resource_path('lang/' . $group['locale'] . '.json');
+
+            if (!File::exists($jsonFile)) {
+                $jsonFile = theme_path(\Theme::getThemeName() . '/lang/' . $group['locale'] . '.json');
+            }
+
+            if (!File::exists($jsonFile)) {
+                $languages = scan_folder(theme_path(\Theme::getThemeName() . '/lang'));
+
+                if (!empty($languages)) {
+                    $jsonFile = theme_path(\Theme::getThemeName() . '/lang/' . Arr::first($languages));
+                }
+            }
+
+            if (File::exists($jsonFile)) {
+                $translations = get_file_data($jsonFile, true);
+            }
+
+            if ($group['locale'] != 'en') {
+                $defaultEnglishFile = theme_path(\Theme::getThemeName() . '/lang/en.json');
+
+                if ($defaultEnglishFile) {
+                    $translations = array_merge(get_file_data($defaultEnglishFile, true), $translations);
+                }
+            }
+        }
+
+        return $translations;
     }
 }

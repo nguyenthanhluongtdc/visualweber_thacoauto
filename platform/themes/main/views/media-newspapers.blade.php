@@ -5,7 +5,7 @@
     @endphp
     @if (!empty($posts))
             @foreach ($posts as $post)
-            <div class="item-newspaper ">
+            <div class="item-newspaper">
                 <div class="row__top">
                     <h5 class="title font-pri-bold font30 color-gray text-uppercase ">
                         <a href="">{{$post->name}}</a>

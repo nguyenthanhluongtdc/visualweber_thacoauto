@@ -8,21 +8,21 @@
                 @endif
                 @if(has_field($page, 'description_module_research_development'))
                 <p class="rd-production__content font20 font-pri  fontmb-small"> {!! has_field($page,
-                    'description_module_research_development') !!}  
+                    'description_module_research_development') !!}
                 </p>
                 @endif
             </div>
         </div>
 
         @includeIf("theme.main::views.pages.support-industry.rnd-banner")
-        
+
         <div class="section-info-more-wrapper font-pri">
             <div class="content font20">
                 <div class="container-remake">
                     @if(has_field($page, 'tittle_module_research_development'))
                         <h2 class="title font-pri-bold font60 fontmb-large text-uppercase ">
                             {!! has_field($page,
-                                'tittle_module_research_development') !!}  
+                                'tittle_module_research_development') !!}
                         </h2>
                     @endif
                     <ul>
@@ -53,33 +53,33 @@
                         @if(has_field($page, 'repeater_slider_research_development'))
                             @foreach(has_field($page, 'repeater_slider_research_development') as $item)
                                 <div class="swiper-slide">
-                                    <img width="" height="" src="{{get_image_url(has_sub_field($item,'slider_image'))}}" alt="" />
+                                    <img loading="lazy" width="" height="" src="{{get_image_url(has_sub_field($item,'slider_image'))}}" alt="" />
                                 </div>
                             @endforeach
                         @endif
                         {{-- <div class="swiper-slide">
-                            <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu6.jpg')}}" alt="" />
+                            <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu6.jpg')}}" alt="" />
                         </div>
                         <div class="swiper-slide">
-                            <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu7.jpg')}}" alt="" />
+                            <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu7.jpg')}}" alt="" />
                         </div>
                          <div class="swiper-slide">
-                            <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu5.jpg')}}" alt="" />
+                            <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu5.jpg')}}" alt="" />
                         </div>
                         <div class="swiper-slide">
-                            <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu6.jpg')}}" alt="" />
+                            <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu6.jpg')}}" alt="" />
                         </div>
                         <div class="swiper-slide">
-                            <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu7.jpg')}}" alt="" />
+                            <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu7.jpg')}}" alt="" />
                         </div>
                          <div class="swiper-slide">
-                            <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu5.jpg')}}" alt="" />
+                            <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu5.jpg')}}" alt="" />
                         </div>
                         <div class="swiper-slide">
-                            <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu6.jpg')}}" alt="" />
+                            <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu6.jpg')}}" alt="" />
                         </div>
                         <div class="swiper-slide">
-                            <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu7.jpg')}}" alt="" />
+                            <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu7.jpg')}}" alt="" />
                         </div> --}}
                     </div>
                     <div class="swiper-scrollbar"></div>
@@ -90,20 +90,20 @@
                     @foreach(has_field($page, 'repeater_module_news_research_development') as $item)
                         <div class="rnd-news-mobile__wrapper" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="50">
                             <div class="top">
-                                <img width="" height="" src="{{get_image_url(has_sub_field($item,'image_news_research_development'))}}" alt="" />
+                                <img loading="lazy" width="" height="" src="{{get_image_url(has_sub_field($item,'image_news_research_development'))}}" alt="Ảnh tin tức" />
                             </div>
                             <div class="bottom">
                                 <div class="fontmb-small font-pri">
                                     <p> {!! has_sub_field($item, 'description_news_research_development') ? has_sub_field($item, 'description_news_research_development') : '' !!}</p>
                                 </div>
-                            
+
                             </div>
                         </div>
                     @endforeach
                 @endif
                 {{-- <div class="rnd-news-mobile__wrapper " data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="50">
                     <div class="top">
-                        <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu5.jpg')}}" alt="" />
+                        <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu5.jpg')}}" alt="" />
                     </div>
                     <div class="bottom">
                         <p class="font-pri fontmb-little">Nâng cấp sản phẩm: Chuẩn hóa và nâng cấp sản phẩm để tăng công năng sử dụng và tối ưu giá thành sản phẩm</p>
@@ -111,7 +111,7 @@
                 </div>
                 <div class="rnd-news-mobile__wrapper" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="50">
                     <div class="top">
-                        <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu6.jpg')}}" alt="" />
+                        <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu6.jpg')}}" alt="" />
                     </div>
                     <div class="bottom">
                         <p class="font-pri fontmb-little">Phát triển công nghệ: Thay đổi công nghệ mang tính đột phá để nâng cấp chất lượng sản phẩm và tối ưu chi phí sản xuất</p>

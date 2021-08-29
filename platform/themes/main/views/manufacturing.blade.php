@@ -25,7 +25,7 @@
 
                 <div class="row-full__colPicture col-xl-7 col-md-6">
                     <div class="row-full__picture">
-                        <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu1.jpg')}}" alt="" />
+                        <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu1.jpg')}}" alt="" />
                     </div>
                 </div>
             </div>
@@ -47,7 +47,7 @@
 
                 <div class="row-full__colPicture col-xl-7 col-md-6">
                     <div class="row-full__picture">
-                        <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu2.jpg')}}" alt="" />
+                        <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu2.jpg')}}" alt="" />
                     </div>
                 </div>
             </div>
@@ -69,10 +69,10 @@
 
                 <div class="row-full__colPicture col-xl-7 col-md-6">
                     <div class="play-video">
-                        <img src="{{Theme::asset()->url('images/manufacturing/play.png')}}" alt="" width="" height="" />
+                        <img loading="lazy" src="{{Theme::asset()->url('images/manufacturing/play.png')}}" alt="" width="" height="" />
                     </div>
                     <div class="row-full__picture">
-                        <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu3.jpg')}}" alt="" />
+                        <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu3.jpg')}}" alt="" />
                     </div>
                 </div>
             </div>
@@ -94,7 +94,7 @@
 
                 <div class="row-full__colPicture col-xl-7 col-md-6">
                     <div class="row-full__picture">
-                        <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu4.jpg')}}" alt="" />
+                        <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/manufacturing/manu4.jpg')}}" alt="" />
                     </div>
                 </div>
             </div>
@@ -123,7 +123,7 @@
 
                                         <div class="car-frame swiper-slide">
                                             <div class="car-img">
-                                                <img src="{{get_image_url(has_sub_field($child,'hinh_anh'))}}" alt="{{has_sub_field($child,'ten')}}">
+                                                <img loading="lazy" src="{{get_image_url(has_sub_field($child,'hinh_anh'))}}" alt="{{has_sub_field($child,'ten')}}">
                                             </div>
 
                                             <div class="d-flex align-content-between flex-wrap car-content">

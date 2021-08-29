@@ -5,8 +5,10 @@
                 <h2 class="title font-pri-bold font60 text-uppercase">
                     {{ __("News") }}
                 </h2>
-
-                <a href="{{ url('truyen-thong') }}" title="{!!__('Readmore')!!}" class="read-moree text-dark font20 font-pri"> {!!__('Readmore')!!} <img width="" height=""
+                @php
+                    $categoryNews = get_category_by_id(theme_option('default_category_news'));
+                @endphp
+                <a href="{{ is_plugin_active('blog') ? ($categoryNews ? $categoryNews->url : '') : '' }}" title="{!!__('Readmore')!!}" class="read-moree text-dark font20 font-pri"> {!!__('Readmore')!!} <img loading="lazy" width="" height=""
                         src="{{Theme::asset()->url('images/mechandical/chevron-double-right.svg')}}" alt="" /></a>
             </div>
 
@@ -23,7 +25,7 @@
 
                             <div class="sub--right">
                                 <a href="{{$post->url}}" title="{!! $post->name !!}">
-                                    <img width="" height="" src="{{Storage::disk('public')->exists($post->image) ? get_image_url($post->image) : RvMedia::getDefaultImage()}}"
+                                    <img loading="lazy" width="" height="" src="{{Storage::disk('public')->exists($post->image) ? get_image_url($post->image) : RvMedia::getDefaultImage()}}"
                                     alt="" />
                                 </a>
                             </div>
@@ -43,9 +45,9 @@
                             </div>
 
                             <a href="{{$post->url}}" title="{!!__('Readmore')!!}" class="read-more text-dark font20 font-pri">
-                                {!!__('Readmore')!!} <img width="" height=""
+                                {!!__('Readmore')!!} <img loading="lazy" width="" height=""
                                     src="{{Theme::asset()->url('images/mechandical/chevron-double-right.svg')}}"
-                                    alt="" /></a>
+                                    alt=" {!! $post->name !!}" /></a>
                         </div>
                     </div>
                 @endforeach

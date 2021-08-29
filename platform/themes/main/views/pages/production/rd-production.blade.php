@@ -23,7 +23,7 @@
                     <li class="car-production__item">Nhíp Ô tô</li>
                     <li class="car-production__item">Hoá chất</li>
                 </ul>
-                <img class="car-production__image" src="{{Theme::asset()->url('images/production/car-production.jpg')}}" alt="Car production">
+                <img loading="lazy" class="car-production__image" src="{{Theme::asset()->url('images/production/car-production.jpg')}}" alt="Car production">
             </div>
         </div>
         <div class="car-production">
@@ -47,7 +47,7 @@
                     <li class="car-production__item">Nhíp Ô tô</li>
                     <li class="car-production__item">Sản xuất khuôn</li>
                 </ul>
-                <img class="car-production__image" src="{{Theme::asset()->url('images/production/supporting-industry.jpg')}}" alt="Supporting industry">
+                <img loading="lazy" class="car-production__image" src="{{Theme::asset()->url('images/production/supporting-industry.jpg')}}" alt="Supporting industry">
             </div>
         </div>
     </div>

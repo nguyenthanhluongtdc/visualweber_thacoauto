@@ -12,15 +12,16 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="csrf-token" content="{{ csrf_token() }}" />
-
+    <meta name="theme-color" content="#01498b">
+    <link rel="manifest" href="{{Theme::asset()->url('manifest/manifest.json')}}">
     <!-- Fonts-->
-    <link href="https://fonts.googleapis.com/css?family={{ urlencode(theme_option('primary_font', 'Roboto')) }}"
-        rel="stylesheet" type="text/css">
+    {{-- <link href="https://fonts.googleapis.com/css?family={{ urlencode(theme_option('primary_font', 'Roboto')) }}"
+        rel="stylesheet" type="text/css"> --}}
     <!-- CSS Library-->
 
     <style>
         :root {
-            --color-1st: {{ theme_option('primary_color', '#bead8e') }}
+            --color-1st: {{ theme_option('primary_color', '#01498b') }}
 
             ;
             /* --primary-font: '{{ theme_option('primary_font', 'Roboto') }}', */
@@ -46,7 +47,7 @@
             <div class="logo">
                 <a href="{{ route('public.single') }}" class="page-logo d-flex">
                     @if (theme_option('logo'))
-                    <img src="{{ RvMedia::getImageUrl(theme_option('logo')) }}" alt="{{ theme_option('site_title') }}"
+                    <img loading="lazy" src="{{ RvMedia::getImageUrl(theme_option('logo')) }}" alt="{{ theme_option('site_title') }}"
                         height="17">
                     @endif
                 </a>
@@ -68,7 +69,7 @@
             @endphp
             <div class="search-language">
                 <div class="search">
-                    <a href="#search"><img src="{{ Theme::asset()->url('images/main/search.png') }}" alt=""></a>
+                    <a aria-label="Search" href="#search"><img loading="lazy" src="{{ Theme::asset()->url('images/main/search.png') }}" alt="Search"></a>
                 </div>
                 <div class="language">
                     <ul class="nav-lang">
@@ -88,15 +89,19 @@
                 </div>
             </div>
         </div>
-        <div id="search-box">
-            <div class="container">
-              <a class="close" href="#close"></a>
-              <div class="search-main">
-                <div class="search-inner">
-                  <form action="/search">
-                    <input class="font17" type="text" id="inputSearch" name="keyword" placeholder="">
-                    <span class="search-info font16">{{__('Hit enter to search or ESC to close')}}</span>
-                  </form>
+        <div id="search-box" class="form-search">
+                <div class="container">
+                <a class="close" href="#close"></a>
+                <div class="search-main">
+                    <div class="search-inner">
+                    <form action="{{route('public.search')}}">
+                        <input autocomplete="off" class="font17 search-bar" type="text" input-id="1" id="inputSearch" name="keyword" placeholder="" value="{{ request()->get('keyword') }}">
+                        <span class="search-info font16">{{__('Hit enter to search or ESC to close')}}</span>
+                    </form>
+                  
+                    <div class="box-popover-1 popover-search">
+                       
+                    </div>
                 </div>
               </div>
             </div>
@@ -109,7 +114,7 @@
                 <div class="logo">
                     <a href="{{ route('public.single') }}" class="page-logo">
                         @if (theme_option('logo'))
-                        <img src="{{ RvMedia::getImageUrl(theme_option('logo')) }}"
+                        <img loading="lazy" src="{{ RvMedia::getImageUrl(theme_option('logo')) }}"
                             alt="{{ theme_option('site_title') }}" height="17">
                         @endif
                     </a>
@@ -155,7 +160,7 @@
     </div>
 
     <script>
-       
+        window.URL_SEARCH = "{{route('public.api.search')}}";
     </script>
 
     <div id="row__empty"></div>

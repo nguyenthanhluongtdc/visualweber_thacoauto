@@ -4,7 +4,7 @@
             <h2 class="product-detail__title font-mi-bold font60 fontmb-large">
                 {{$data->name}}
             </h2>
-            <img src="{{get_image_url(get_field($data, 'car_category_banner'))}}" alt="{{$data->name}}" class="product-detail__banner">
+            <img loading="lazy" src="{{get_image_url(get_field($data, 'car_category_banner'))}}" alt="{{$data->name}}" class="product-detail__banner">
             <h2 class="product-detail__title font-mi-bold font60 fontmb-large">
                 {{get_field($data, 'car_category_detail_title')}}
             </h2>
@@ -18,7 +18,7 @@
                             @if(!blank(get_field($data, 'car_category_detail_slide')))
                             @foreach (get_field($data, 'car_category_detail_slide') as $item)
                             <div class="swiper-slide">
-                                <img src="{{get_image_url(has_sub_field($item, 'image'))}}" alt="{{$data->name}}">
+                                <img loading="lazy" src="{{get_image_url(has_sub_field($item, 'image'))}}" alt="{{$data->name}}">
                             </div>
 
                             @endforeach
@@ -31,7 +31,7 @@
 
                             <div class="text font15 fontmb-little font-pri">
                                 <div class="logo mb-4">
-                                    <img src="{{get_image_url(has_field($data, 'car_category_detail_logo'))}}" alt="{{$data->name}}">
+                                    <img loading="lazy" src="{{get_image_url(has_field($data, 'car_category_detail_logo'))}}" alt="{{$data->name}}">
                                 </div>
                                 <div class="position-relative">
                                     <input type="checkbox" id="expanded">
@@ -51,7 +51,7 @@
                     <div class="product-detail__card">
                         <div class="product-detail__card-image">
                             <div class="product-detail__card-frame">
-                                <img src="{{get_image_url(has_sub_field($item, 'image'))}}" alt="{{has_sub_field($item, 'title')}}">
+                                <img loading="lazy" src="{{get_image_url(has_sub_field($item, 'image'))}}" alt="{{has_sub_field($item, 'title')}}">
 
                             </div>
                         </div>
@@ -81,7 +81,7 @@
 
                                 <div class="car-frame swiper-slide">
                                     <div class="car-img">
-                                        <img src="{{get_image_url(has_sub_field($child,'image'))}}" alt="{{has_sub_field($child,'name')}}">
+                                        <img loading="lazy" src="{{get_image_url(has_sub_field($child,'image'))}}" alt="{{has_sub_field($child,'name')}}">
                                     </div>
 
                                     <div class="d-flex align-content-between flex-wrap car-content">

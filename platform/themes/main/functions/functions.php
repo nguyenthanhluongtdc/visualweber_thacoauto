@@ -36,7 +36,8 @@ register_page_template([
     'cost-estimates' => "Cost Estimates",
     'pre-order' => "Pre-order",
     'distribution-system' => 'Distribution system',
-    'car-selection' => "Car selection"
+    'car-selection' => "Car selection",
+    'news-summary' => 'News summary'
 ]);
 
 Menu::addMenuLocation('menu-tabs-support-industry', 'Tabs - Công nghiệp hỗ trợ');
@@ -65,44 +66,6 @@ RvMedia::addSize('featured', 565, 375)
     ->addSize('medium', 540, 360)
     ->addSize('post-related', 313, 171)
     ->addSize('post-large', 900, 485);
-
-// add_filter(BASE_FILTER_BEFORE_RENDER_FORM, function ($form, $data) {
-//     if (get_class($data) == \Platform\Blog\Models\Post::class) {
-
-//         $region = \MetaBox::getMetaData($data, 'region_post', true);
-
-//         $regions = DB::table('tinhthanhpho')->get()->pluck('name', 'name')->toArray() ?? [];
-
-//         $form
-//             ->add('region', 'customSelect', [
-//                 'label'      => __('Khu vực'),
-//                 'label_attr' => ['class' => 'control-label required'],
-//                 'choices' => $regions,
-//                 'value'      => $region,
-//                 'attr'       => [
-//                     'class' => 'form-control select-search-full',
-//                 ]
-//             ]);
-//     }
-
-//     return $form;
-// }, 120, 3);
-
-// add_action(BASE_ACTION_AFTER_CREATE_CONTENT, 'save_addition_fields', 120, 3);
-// add_action(BASE_ACTION_AFTER_UPDATE_CONTENT, 'save_addition_fields', 120, 3);
-
-// /**
-//  * @param string $screen
-//  * @param Request $request
-//  * @param Model $data
-//  */
-// function save_addition_fields($screen, $request, $data)
-// {
-//     if (get_class($data) == \Platform\Blog\Models\Post::class) {
-//         \MetaBox::saveMetaBoxData($data, 'region_post', $request->input('region'));
-//     }
-// }
-
 
 if (is_plugin_active('blog')) {
     register_post_format(

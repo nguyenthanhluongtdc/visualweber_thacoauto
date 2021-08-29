@@ -74,7 +74,8 @@ class Post extends BaseModel
         'status',
         'author_id',
         'author_type',
-        'city_id'
+        'city_id',
+        'order'
     ];
 
     /**

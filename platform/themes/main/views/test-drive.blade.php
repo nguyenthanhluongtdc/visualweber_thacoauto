@@ -6,11 +6,11 @@
                     <div class="row row__main">
                         <div class="top-menu-mobile mb-5">
                             <div class="box-picture-mobile mb-3">
-                                <img src="{{Theme::asset()->url('images/cars/car1.png')}}" alt="">
+                                <img loading="lazy" src="{{Theme::asset()->url('images/cars/car1.png')}}" alt="ẢNh xe">
                             </div>
                             <p class="font-pri text-uppercase font30">kia optima 2.0 gat luxury</p>
                         </div>
-                       
+
                         <div class="form-register">
                             <ul class="nav nav-tabs font20" id="myTab" role="tablist">
                                 <li class="nav-item" role="presentation">
@@ -308,7 +308,7 @@
                             </div>
                         </div>
                         <div class="box-picture">
-                            <img src="{{Theme::asset()->url('images/cars/car1.png')}}" alt="">
+                            <img loading="lazy" src="{{Theme::asset()->url('images/cars/car1.png')}}" alt="Ảnh xe">
                         </div>
                     </div>
 
@@ -339,7 +339,7 @@
                             Quay lại
                         </button>
                     </div>
-                    
+
                 </form>
             </div>
         </div>
@@ -371,5 +371,5 @@
     var input = '<strong>' + $(this).parents('.dropdown').find('input').val() + '</strong>',
         msg = '<span class="msg">Hidden input value: ';
     $('.msg').html(msg + input + '</span>');
-    }); 
+    });
 </script>

@@ -18,6 +18,7 @@ class BrandRequest extends Request
     {
         return [
             'name'   => 'required',
+            'image'  => 'required',
             'status' => Rule::in(BaseStatusEnum::values()),
         ];
     }

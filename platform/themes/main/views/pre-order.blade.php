@@ -36,7 +36,7 @@
                     <div class="select-promotions__list">
                         <div class="select-promotions__item">
                             <div class="frame">
-                                <img src="{{Theme::asset()->url('images/business/brand-detail/promotions-1.jpg')}}" alt="">
+                                <img loading="lazy" src="{{Theme::asset()->url('images/business/brand-detail/promotions-1.jpg')}}" alt="Ảnh chương trình khuyến mãi">
                             </div>
                             <div class="custom-control mt-1 span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
                                 <input type="checkbox" class="custom-control-input" id="customControlInline">
@@ -45,7 +45,7 @@
                         </div>
                         <div class="select-promotions__item">
                             <div class="frame">
-                                <img src="{{Theme::asset()->url('images/business/brand-detail/promotions-2.jpg')}}" alt="">
+                                <img loading="lazy" src="{{Theme::asset()->url('images/business/brand-detail/promotions-2.jpg')}}" alt="Ảnh chương trình khuyến mãi">
                             </div>
                             <div class="custom-control mt-1 span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
                                 <input type="checkbox" class="custom-control-input" id="customControlInline2">
@@ -54,7 +54,7 @@
                         </div>
                         <div class="select-promotions__item">
                             <div class="frame">
-                                <img src="{{Theme::asset()->url('images/business/brand-detail/promotions-3.jpg')}}" alt="">
+                                <img loading="lazy" src="{{Theme::asset()->url('images/business/brand-detail/promotions-3.jpg')}}" alt="Ảnh chương trình khuyến mãi">
                             </div>
                             <div class="custom-control mt-1 span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
                                 <input type="checkbox" class="custom-control-input" id="customControlInline3">
@@ -65,13 +65,13 @@
                     <div class="select-promotions__list-mobile">
                         <div class="select-promotions__item-mobile my-3">
                             <div class="frame">
-                                <img src="{{Theme::asset()->url('images/business/brand-detail/khuyenmai1.png')}}" alt="">
+                                <img loading="lazy" src="{{Theme::asset()->url('images/business/brand-detail/khuyenmai1.png')}}" alt="Ảnh chọn khuyến mãi">
                             </div>
                             <div class="content mt-2">
                                 <div class="left span-2 d-flex align-center custom-checkbox">
                                     <input type="checkbox" class="custom-control-input" id="customControlInline6">
                                     <label class="custom-control-label font40 font-cond-bold" for="customControlInline6"></label>
-                                   
+
                                 </div>
                                 <div class="right mt-2">
                                     <h3 class="select-deposit__title font40 font-cond-bold text-uppercase fontmb-medium">mua xe kia trong tháng 7 nhận ưu đãi lên đến 100 triệu đồng</h3>
@@ -81,13 +81,13 @@
                         </div>
                         <div class="select-promotions__item-mobile my-3">
                             <div class="frame">
-                                <img src="{{Theme::asset()->url('images/business/brand-detail/khuyenmai2.png')}}" alt="">
+                                <img loading="lazy" src="{{Theme::asset()->url('images/business/brand-detail/khuyenmai2.png')}}" alt="Ảnh chọn khuyến mãi">
                             </div>
                             <div class="content mt-2">
                                 <div class="left span-2 d-flex align-center custom-checkbox">
                                     <input type="checkbox" class="custom-control-input" id="customControlInline7">
                                     <label class="custom-control-label font40 font-cond-bold" for="customControlInline7"></label>
-                                   
+
                                 </div>
                                 <div class="right mt-2">
                                     <h3 class="select-deposit__title font40 font-cond-bold text-uppercase fontmb-medium">kia việt nam đồng hành cùng khách hàng, hỗ trợ lên đến 65 triệu đồng trong tháng 6/2021</h3>
@@ -97,13 +97,13 @@
                         </div>
                         <div class="select-promotions__item-mobile my-3">
                             <div class="frame">
-                                <img src="{{Theme::asset()->url('images/business/brand-detail/khuyenmai3.png')}}" alt="">
+                                <img loading="lazy" src="{{Theme::asset()->url('images/business/brand-detail/khuyenmai3.png')}}" alt="Ảnh chọn khuyến mãi">
                             </div>
                             <div class="content mt-2">
                                 <div class="left span-2 d-flex align-center custom-checkbox">
                                     <input type="checkbox" class="custom-control-input" id="customControlInline8">
                                     <label class="custom-control-label font40 font-cond-bold" for="customControlInline8"></label>
-                                   
+
                                 </div>
                                 <div class="right mt-2">
                                     <h3 class="select-deposit__title font40 font-cond-bold text-uppercase fontmb-medium">ưu đãi lớn lên đến 77 triệu đồng trong tháng 5</h3>
@@ -145,7 +145,7 @@
                 <div class="car-selected">
                     <div class="car-selected__image">
                         <div class="frame">
-                            <img src="{{Theme::asset()->url('images/business/brand-detail/car-detail.png')}}" alt="">
+                            <img loading="lazy" src="{{Theme::asset()->url('images/business/brand-detail/car-detail.png')}}" alt="Ảnh đặt cọc">
                         </div>
                     </div>
                     <h3 class="car-selected__title font15 font-pri fontmb-middle fontmb-cond-bold">KIA OPTIMA 2.0 GAT LUXURY</h3>
@@ -193,7 +193,7 @@
                     <h3 class="deposit-price__title font20 font-cond-bold fontmb-medium">ĐẶT CỌC GIÁ BÁN LẺ</h3>
                     <span class="deposit-price__price font20 font-cond-bold fontmb-medium">10,000,000đ</span>
                 </div>
-                
+
                 <a class="select-button font18 font-pri fontmb-small" type="button" href="">Tiếp theo</a>
             </div>
             <button class="btn-back fontmb-small">

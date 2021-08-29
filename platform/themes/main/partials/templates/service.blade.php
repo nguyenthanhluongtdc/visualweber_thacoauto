@@ -1,5 +1,5 @@
 <div class="services-block">
-    <img class="services-block__image" src="{{ get_image_url($service->image) }}" alt="">
+    <img loading="lazy" class="services-block__image" src="{{ get_image_url($service->image) }}" alt="">
     <div class="services-block__content">
         <div class="services-block__title">
             <h2 class=" font-mi-bold font40 fontmb-middle color-white">{{ $service->name }}</h2>

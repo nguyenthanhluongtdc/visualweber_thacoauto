@@ -42,7 +42,7 @@
                             Trụ sở chính
                         </h3>
                         <div class="section-intro__picture">
-                            <img width="" height="" class="mw-100 h-auto" src="{{Theme::asset()->url('images/province/layer1.jpg')}}" alt="" />
+                            <img loading="lazy" width="" height="" class="mw-100 h-auto" src="{{Theme::asset()->url('images/province/layer1.jpg')}}" alt="" />
                         </div>
                     </div>
                 </div>
@@ -63,19 +63,19 @@
                         </h3>
                         <ul class="list-symbol">
                             <li class="item">
-                                <img width="" height="" src="{{Theme::asset()->url('images/province/symbol7.png')}}" alt="">
+                                <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/province/symbol7.png')}}" alt="">
                             </li>
                             <li class="item">
-                                <img width="" height="" src="{{Theme::asset()->url('images/province/symbol1.png')}}" alt="">
+                                <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/province/symbol1.png')}}" alt="">
                             </li>
                             <li class="item">
-                                <img width="" height="" src="{{Theme::asset()->url('images/province/symbol12.png')}}" alt="">
+                                <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/province/symbol12.png')}}" alt="">
                             </li>
                             <li class="item">
-                                <img width="" height="" src="{{Theme::asset()->url('images/province/symbol11.png')}}" alt="">
+                                <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/province/symbol11.png')}}" alt="">
                             </li>
                             <li class="item">
-                                <img width="" height="" src="{{Theme::asset()->url('images/province/symbol10.png')}}" alt="">
+                                <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/province/symbol10.png')}}" alt="">
                             </li>
                         </ul>
                     </div>
@@ -86,19 +86,19 @@
                         </h3>
                         <ul class="list-symbol">
                             <li class="item">
-                                <img width="" height="" src="{{Theme::asset()->url('images/province/symbol4.png')}}" alt="">
+                                <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/province/symbol4.png')}}" alt="">
                             </li>
                             <li class="item">
-                                <img width="" height="" src="{{Theme::asset()->url('images/province/symbol9.png')}}" alt="">
+                                <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/province/symbol9.png')}}" alt="">
                             </li>
                             <li class="item">
-                                <img width="" height="" src="{{Theme::asset()->url('images/province/symbol8.png')}}" alt="">
+                                <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/province/symbol8.png')}}" alt="">
                             </li>
                             <li class="item">
-                                <img width="" height="" src="{{Theme::asset()->url('images/province/symbol5.png')}}" alt="">
+                                <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/province/symbol5.png')}}" alt="">
                             </li>
                             <li class="item">
-                                <img width="" height="" src="{{Theme::asset()->url('images/province/symbol10.png')}}" alt="">
+                                <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/province/symbol10.png')}}" alt="">
                             </li>
                         </ul>
                     </div>
@@ -109,10 +109,10 @@
                         </h3>
                         <ul class="list-symbol">
                             <li class="item">
-                                <img width="" height="" src="{{Theme::asset()->url('images/province/symbol12.png')}}" alt="">
+                                <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/province/symbol12.png')}}" alt="">
                             </li>
                             <li class="item">
-                                <img width="" height="" src="{{Theme::asset()->url('images/province/symbol11.png')}}" alt="">
+                                <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/province/symbol11.png')}}" alt="">
                             </li>
                         </ul>
                     </div>
@@ -120,7 +120,7 @@
 
                 <div class="section-business__rowpost">
                     <div class="__rowpost--picture">
-                        <img width="" height="" src="{{Theme::asset()->url('images/province/layer2.jpg')}}" alt="">
+                        <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/province/layer2.jpg')}}" alt="">
                     </div>
 
                     <div class="__rowpost--content">
@@ -152,7 +152,7 @@
                             </div>
 
                             <div class="avatar">
-                                <img width="" height="" src="{{Theme::asset()->url('images/province/symbol1.png')}}" alt="">
+                                <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/province/symbol1.png')}}" alt="">
                             </div>
                        </div>
 
@@ -160,7 +160,7 @@
                             <ul class="d-flex justify-content-end">
                                 <li>
                                     <div class="symbol">
-                                        <img width="" height="" src="{{Theme::asset()->url('images/province/symbol6.png')}}" alt="">
+                                        <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/province/symbol6.png')}}" alt="">
                                     </div>
                                     <div class="text font20">
                                         Phụ tùng
@@ -168,7 +168,7 @@
                                 </li>
                                 <li>
                                     <div class="symbol">
-                                        <img width="" height="" src="{{Theme::asset()->url('images/province/symbol2.png')}}" alt="">
+                                        <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/province/symbol2.png')}}" alt="">
                                     </div>
                                     <div class="text font20">
                                         Dịch vụ
@@ -176,7 +176,7 @@
                                 </li>
                                 <li>
                                     <div class="symbol">
-                                        <img width="" height="" src="{{Theme::asset()->url('images/province/symbol3.png')}}" alt="">
+                                        <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/province/symbol3.png')}}" alt="">
                                     </div>
                                     <div class="text font20">
                                         Showroom
@@ -188,7 +188,7 @@
                 </div>
                 <div class="section-business__rowpost">
                     <div class="__rowpost--picture">
-                        <img width="" height="" src="{{Theme::asset()->url('images/province/layer2.jpg')}}" alt="">
+                        <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/province/layer2.jpg')}}" alt="">
                     </div>
 
                     <div class="__rowpost--content">
@@ -214,7 +214,7 @@
                             </div>
 
                             <div class="avatar">
-                                <img width="" height="" src="{{Theme::asset()->url('images/province/symbol1.png')}}" alt="">
+                                <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/province/symbol1.png')}}" alt="">
                             </div>
                        </div>
 
@@ -225,7 +225,7 @@
                             <ul class="d-flex justify-content-end">
                                 <li>
                                     <div class="symbol">
-                                        <img width="" height="" src="{{Theme::asset()->url('images/province/symbol2.png')}}" alt="">
+                                        <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/province/symbol2.png')}}" alt="">
                                     </div>
                                     <div class="text font20">
                                         Dịch vụ
@@ -237,7 +237,7 @@
                 </div>
                 <div class="section-business__rowpost">
                     <div class="__rowpost--picture">
-                        <img width="" height="" src="{{Theme::asset()->url('images/province/layer2.jpg')}}" alt="">
+                        <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/province/layer2.jpg')}}" alt="">
                     </div>
 
                     <div class="__rowpost--content">
@@ -269,7 +269,7 @@
                             </div>
 
                             <div class="avatar">
-                                <img width="" height="" src="{{Theme::asset()->url('images/province/symbol1.png')}}" alt="">
+                                <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/province/symbol1.png')}}" alt="">
                             </div>
                        </div>
 
@@ -277,7 +277,7 @@
                             <ul class="d-flex justify-content-end">
                                 <li>
                                     <div class="symbol">
-                                        <img width="" height="" src="{{Theme::asset()->url('images/province/symbol2.png')}}" alt="">
+                                        <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/province/symbol2.png')}}" alt="">
                                     </div>
                                     <div class="text font20">
                                         Dịch vụ
@@ -315,7 +315,7 @@
                                 <div class="col-lg-6 col-post">
                                     <div class="row">
                                         <div class=" col-post__left">
-                                            <img src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
+                                            <img loading="lazy" src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
                                         </div>
                                         <div class="font20 font-pri col-post__right">
                                             <h3 class="title font-pri-bold font30">
@@ -335,7 +335,7 @@
                                 <div class="col-lg-6 col-post">
                                     <div class="row">
                                         <div class=" col-post__left">
-                                            <img src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
+                                            <img loading="lazy" src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
                                         </div>
                                         <div class="font20 font-pri col-post__right">
                                             <h3 class="title font-pri-bold font30">
@@ -355,7 +355,7 @@
                                 <div class="col-lg-6 col-post">
                                     <div class="row">
                                         <div class=" col-post__left">
-                                            <img src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
+                                            <img loading="lazy" src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
                                         </div>
                                         <div class="font20 font-pri col-post__right">
                                             <h3 class="title font-pri-bold font30">
@@ -375,7 +375,7 @@
                                 <div class="col-lg-6 col-post">
                                     <div class="row">
                                         <div class=" col-post__left">
-                                            <img src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
+                                            <img loading="lazy" src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
                                         </div>
                                         <div class="font20 font-pri col-post__right">
                                             <h3 class="title font-pri-bold font30">
@@ -395,7 +395,7 @@
                                 <div class="col-lg-6 col-post">
                                     <div class="row">
                                         <div class=" col-post__left">
-                                            <img src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
+                                            <img loading="lazy" src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
                                         </div>
                                         <div class="font20 font-pri col-post__right">
                                             <h3 class="title font-pri-bold font30">
@@ -415,7 +415,7 @@
                                 <div class="col-lg-6 col-post">
                                     <div class="row">
                                         <div class=" col-post__left">
-                                            <img src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
+                                            <img loading="lazy" src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
                                         </div>
                                         <div class="font20 font-pri col-post__right">
                                             <h3 class="title font-pri-bold font30">
@@ -440,7 +440,7 @@
                                 <div class="col-lg-6 col-post">
                                     <div class="row">
                                         <div class=" col-post__left">
-                                            <img src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
+                                            <img loading="lazy" src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
                                         </div>
                                         <div class="font20 font-pri col-post__right">
                                             <h3 class="title font-pri-bold font30">
@@ -460,7 +460,7 @@
                                 <div class="col-lg-6 col-post">
                                     <div class="row">
                                         <div class=" col-post__left">
-                                            <img src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
+                                            <img loading="lazy" src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
                                         </div>
                                         <div class="font20 font-pri col-post__right">
                                             <h3 class="title font-pri-bold font30">
@@ -480,7 +480,7 @@
                                 <div class="col-lg-6 col-post">
                                     <div class="row">
                                         <div class=" col-post__left">
-                                            <img src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
+                                            <img loading="lazy" src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
                                         </div>
                                         <div class="font20 font-pri col-post__right">
                                             <h3 class="title font-pri-bold font30">
@@ -500,7 +500,7 @@
                                 <div class="col-lg-6 col-post">
                                     <div class="row">
                                         <div class=" col-post__left">
-                                            <img src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
+                                            <img loading="lazy" src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
                                         </div>
                                         <div class="font20 font-pri col-post__right">
                                             <h3 class="title font-pri-bold font30">
@@ -520,7 +520,7 @@
                                 <div class="col-lg-6 col-post">
                                     <div class="row">
                                         <div class=" col-post__left">
-                                            <img src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
+                                            <img loading="lazy" src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
                                         </div>
                                         <div class="font20 font-pri col-post__right">
                                             <h3 class="title font-pri-bold font30">
@@ -540,7 +540,7 @@
                                 <div class="col-lg-6 col-post">
                                     <div class="row">
                                         <div class=" col-post__left">
-                                            <img src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
+                                            <img loading="lazy" src="{{Theme::asset()->url('images/province/layer5.jpg')}}" alt="" class="mw-100">
                                         </div>
                                         <div class="font20 font-pri col-post__right">
                                             <h3 class="title font-pri-bold font30">
@@ -570,21 +570,21 @@
             <li class="pagi-item active">
                 <span class="text">Thaco auto tỉnh thành </span>
                 <a href="#section_one" title="" class="icon click_scroll">
-                    <img src="{{Theme::asset()->url('images/province/node1.png')}}" alt="">
+                    <img loading="lazy" src="{{Theme::asset()->url('images/province/node1.png')}}" alt="">
                 </a>
             </li>
 
             <li class="pagi-item">
                 <span class="text"> Hoạt động kinh doanh </span>
                 <a href="#section_two" title="" class="icon click_scroll">
-                    <img src="{{Theme::asset()->url('images/province/node2.png')}}" alt="">
+                    <img loading="lazy" src="{{Theme::asset()->url('images/province/node2.png')}}" alt="">
                 </a>
             </li>
 
             <li class="pagi-item">
                 <span class="text"> Tin tức & Sự kiện </span>
                 <a href="#section_three" title="" class="icon click_scroll">
-                    <img src="{{Theme::asset()->url('images/province/node3.png')}}" alt="">
+                    <img loading="lazy" src="{{Theme::asset()->url('images/province/node3.png')}}" alt="">
                 </a>
             </li>
         </ul>

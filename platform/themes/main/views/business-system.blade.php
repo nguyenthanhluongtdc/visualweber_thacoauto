@@ -18,31 +18,31 @@
                     </nav>
                     <div class="tab-content" id="nav-tabContent">
                         <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                            <ul class="list-partner"> 
+                            <ul class="list-partner">
                                 <li class="item-partner">
-                                    <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/partner1.jpg')}}" alt="" />
+                                    <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/manufacturing/partner1.jpg')}}" alt="" />
                                 </li>
                                 <li class="item-partner">
-                                    <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/partner1.jpg')}}" alt="" />
+                                    <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/manufacturing/partner1.jpg')}}" alt="" />
                                 </li>
                                 <li class="item-partner">
-                                    <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/partner1.jpg')}}" alt="" />
+                                    <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/manufacturing/partner1.jpg')}}" alt="" />
                                 </li>
                                 <li class="item-partner">
-                                    <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/partner1.jpg')}}" alt="" />
+                                    <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/manufacturing/partner1.jpg')}}" alt="" />
                                 </li>
                                 <li class="item-partner">
-                                    <img width="" height="" src="{{Theme::asset()->url('images/manufacturing/partner1.jpg')}}" alt="" />
+                                    <img loading="lazy" width="" height="" src="{{Theme::asset()->url('images/manufacturing/partner1.jpg')}}" alt="" />
                                 </li>
                             </ul>
                         </div>
 
                         <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                        
+
                         </div>
 
                         <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                        
+
                         </div>
                     </div>
                 </div>

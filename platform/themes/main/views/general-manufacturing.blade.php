@@ -15,7 +15,7 @@
 
                     <div class="production__image">
                         <a href="{{has_sub_field($row, 'link')}}" title="">
-                            <img  src="{{ get_image_url(has_sub_field($row, 'image')) }}" alt="">
+                            <img loading="lazy"  src="{{ get_image_url(has_sub_field($row, 'image')) }}" alt=" {!! has_sub_field($row, 'name') !!}">
                         </a>
                     </div>
                 </div>

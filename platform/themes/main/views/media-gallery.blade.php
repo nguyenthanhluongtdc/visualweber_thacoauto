@@ -21,7 +21,7 @@
                     <div class="gallery-item">
                         <div class="thumbnail">
                             <a data-fancybox data-type="ajax" data-src="{{$post->url}}" data-filter="#gallery" href="javascript:;">
-                                <img src="{{get_image_url($post->image)}}" alt="{{$post->name}}">
+                                <img loading="lazy" src="{{get_image_url($post->image)}}" alt="{{$post->name}}">
                             </a>
                         </div>
                         <div class="content">
@@ -46,7 +46,7 @@
                     <div class="gallery-item">
                         <div class="thumbnail">
                             <a data-fancybox data-type="ajax" data-src="{{$post->url}}" data-filter="#gallery" href="javascript:;">
-                                <img src="{{get_image_url($post->image)}}" alt="{{$post->name}}">
+                                <img loading="lazy" src="{{get_image_url($post->image)}}" alt="{{$post->name}}">
                             </a>
                         </div>
                         <div class="content">
@@ -80,7 +80,7 @@
                     <p class="day font20 font-pri">{{date_format($post->created_at,"d-m-Y")}}</p>
                     <div class="post-thumbnail">
                         <a data-fancybox data-type="ajax" data-src="{{$post->url}}" data-filter="#gallery" href="javascript:;">
-                            <img src="{{get_image_url($post->image)}}" alt="{{$post->name}}">
+                            <img loading="lazy" src="{{get_image_url($post->image)}}" alt="{{$post->name}}">
                         </a>
                     </div>
                     <h5 class="font-cond font20">
@@ -104,7 +104,7 @@
                     <p class="day font20 font-pri">{{date_format($post->created_at,"d-m-Y")}}</p>
                     <div class="post-thumbnail">
                         <a data-fancybox data-type="ajax" data-src="{{$post->url}}" data-filter="#gallery" href="javascript:;">
-                            <img src="{{get_image_url($post->image)}}" alt="{{$post->name}}">
+                            <img loading="lazy" src="{{get_image_url($post->image)}}" alt="{{$post->name}}">
                         </a>
                     </div>
                     <h5 class="font-cond font20">

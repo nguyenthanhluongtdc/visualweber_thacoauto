@@ -4,11 +4,12 @@ $('.partner-home-carousel').owlCarousel({
     loop: true,
     autoplay: true,
     nav: true,
+    dots: false,
     navText: [
         // "<div class='nav-btn prev-slide'><i class='fal fa-chevron-left'></i></div>",
-        "<div class='nav-btn prev-slide'><img src='themes/main/images/main/left.png'></" +
+        "<div class='nav-btn prev-slide'><img src='themes/main/images/main/left.png' alt='left'></" +
         "div>",
-        "<div class='nav-btn prev-slide'><img src='themes/main/images/main/right.png'><" +
+        "<div class='nav-btn prev-slide'><img src='themes/main/images/main/right.png' alt='right'><" +
         "/div>"
     ],
     responsive: {
@@ -336,7 +337,7 @@ var Helper = {
                 zeynep.open()
             }
         })
-    }
+    },
 };
 
 let globalConfig = {
@@ -396,6 +397,38 @@ var Ajax = {
 }
 
 $(document).ready(function () {
+    // duyệt tất cả tấm ảnh cần lazy-load
+    const lazyImages = document.querySelectorAll('[lazy]');
+
+    // chờ các tấm ảnh này xuất hiện trên màn hình
+    const lazyImageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+            // tấm ảnh này đã xuất hiện trên màn hình
+            if (entry.isIntersecting) {
+                const lazyImage = entry.target;
+                const src = lazyImage.dataset.src;
+
+                lazyImage.tagName.toLowerCase() === 'img'
+                    // <img>: copy data-src sang src
+                    ? lazyImage.src = src
+
+                    // <div>: copy data-src sang background-image
+                    : lazyImage.style.backgroundImage = "url(\'" + src + "\')";
+
+                // copy xong rồi thì bỏ attribute lazy đi
+                lazyImage.removeAttribute('lazy');
+
+                // job done, không cần observe nó nữa
+                observer.unobserve(lazyImage);
+            }
+        });
+    });
+
+    // Observe từng tấm ảnh và chờ nó xuất hiện trên màn hình
+    lazyImages.forEach((lazyImage) => {
+        lazyImageObserver.observe(lazyImage);
+    });
+
     Ajax.postLoadMore();
     AOS.init();
     Helper.addSelect2toNewsFilter();
@@ -508,30 +541,64 @@ $(document).ready(function () {
         });
     }
 
-    if ($('.form-search').length) {
-        $('input[name=cate]').change(function () {
-            if ($(this).val().length !== 0) {
-                filter_data($(this).val());
-            }
-        });
+    // if ($('.form-search').length) {
+    //     $('input[name=cate]').change(function () {
+    //         if ($(this).val().length !== 0) {
+    //             filter_data($(this).val());
+    //         }
+    //     });
 
-        $('.trigger').trigger('change');
-    }
+    //     $('.trigger').trigger('change');
+    // }
 
-    function filter_data($value) {
-        // $('.filter_data').html('<div id="loading"></div>');
-        let cate = $value;
-        $.ajax({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            },
-            url: '/api/search',
-            type: 'get',
-            data: { cate: cate },
-            success: function (data) {
-                $('.section-content').html(data)
-            }
-        });
+    // function filter_data($value) {
+    //     // $('.filter_data').html('<div id="loading"></div>');
+    //     let cate = $value;
+    //     $.ajax({
+    //         headers: {
+    //             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    //         },
+    //         url: '/api/search',
+    //         type: 'get',
+    //         data: { cate: cate },
+    //         success: function (data) {
+    //             $('.section-content').html(data)
+    //         }
+    //     });
+    // }
+});
+
+$(document).ready(function () {
+    if(window.URL_SEARCH) {
+        let input_id = 0;
+        $(".search-bar").focus(function() {
+            input_id = $(this).attr('input-id');
+
+            $(`.form-search .box-popover-${input_id}`).css('display','block');
+
+            $(this).on('keyup',function() {
+                var query = $(this).val(); 
+                $.ajax({
+                   
+                    url: window.URL_SEARCH,
+              
+                    type:"GET",
+                   
+                    data:{'keyword':query},
+                   
+                    success:function (data) {
+                        $(`.form-search .box-popover-${input_id}`).html(data)
+                    }
+                })
+                // end of ajax call
+            });
+        })
+    
+        $(`.search-bar`).focusout(function() {
+            setTimeout(() => {
+                $(`.box-popover-${input_id}`).css('display', 'none');
+            }, 500);
+        })
     }
     /**
      * Import Slide

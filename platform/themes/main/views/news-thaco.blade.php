@@ -1,16 +1,17 @@
 {!! do_shortcode('[filter-media category="' . $category->id . '"][/filter-media]') !!}
-<div class="news-thaco-content container-remake overflow-x-hidden">
+<div class="news-thaco-content container-remake overflow-hidden show-desktop">
     <div class="news-thaco-top">
         @php
         $posts = get_posts_by_category($category->id ?? 19, 999);
         $postsFeatures = get_featured_posts_by_category($category->id ?? 19, 2);
+        
         @endphp
         @if (!empty($postsFeatures))
         @foreach ($postsFeatures as $post)
         <div class="item">
             <div class="item-img">
                 <div class="post-thumbnail">
-                    <a href=""><img src="{{ get_object_image($post->image) }}" alt="Bản tin Thaco"></a>
+                    <a href=""><img loading="lazy" src="{{ get_object_image($post->image) }}" alt="Bản tin Thaco"></a>
                 </div>
             </div>
             <div class="item-content">
@@ -43,8 +44,8 @@
             <div class="item-shareholder">
                 <div class="item-wrap">
                     <div class="left">
-                        <img src="{{ Theme::asset()->url('images/main/up.png') }}" alt="" class="up-show">
-                        <img src="{{ Theme::asset()->url('images/main/down.png') }}" alt="" class="down-hide">
+                        <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="{{$post->name}}" class="up-show">
+                        <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="{{$post->name}}" class="down-hide">
                     </div>
                     <div class="mid">
                         <h5 class="title font-pri-bold font25 color-gray">
@@ -82,22 +83,50 @@
 
     <div class="page-pagination hidden-desktop">
         @if(!empty($posts))
-        @includeIf("theme.main::views.components.news-pagination",['paginator'=>$posts])
+            {{ $posts->links('vendor.pagination.custom') }}
         @endif
+    </div>
+</div>
 
-        <ul class="pagination font25 font-pri-bold">
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-            <li>7</li>
-            <li>8</li>
-            <li>9</li>
-            <li>10</li>
-            <li class="color">></li>
-            <li class="color">>></li>
-        </ul>
+<div class="news-thaco-content container-remake overflow-hidden show-mobile">
+    <div class="news-thaco-top">
+        @php
+            $posts_mb = get_posts_by_category($category->id ?? 19, 3);
+        @endphp
+        @if (!empty($posts_mb))
+            @foreach ($posts_mb as $post)
+                <div class="item">
+                    <div class="item-img">
+                        <div class="post-thumbnail">
+                            <a href=""><img loading="lazy" src="{{ get_object_image($post->image) }}" alt="Bản tin Thaco"></a>
+                        </div>
+                    </div>
+                    <div class="item-content">
+                        <h5 class="title font30 font-pri-bold">
+                            <a href="">{{$post->name}}</a>
+                        </h5>
+                        <p class="day font15 font-pri color-gray">
+                            {{date_format($post->created_at,"d-m-Y")}}
+                        </p>
+                        <p class="desc font-pri font20">
+                            {{Str::words($post->description,30)}}
+                        </p>
+                        <a href="{{$post->url}}" class="view-detail font-pri font15">
+                            {{ __("Xem chi tiết") }}<span><i class="fas fa-arrow-right font15"></i></span>
+                        </a>
+
+                        <p class="size-dowload">
+                            <span class="font-pri"><a href="">{{ __("DOWNLOAD") }}</a></span>
+                        </p>
+                    </div>
+                </div>
+            @endforeach
+        @endif
+    </div>
+
+    <div class="page-pagination hidden-desktop">
+        @if(!empty($posts_mb))
+            {{ $posts_mb->links('vendor.pagination.custom') }}
+        @endif
     </div>
 </div>

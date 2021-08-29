@@ -4,7 +4,7 @@
     @foreach ($posts as $post)
         <article class="post post__horizontal mb-40 clearfix">
             <div class="post__thumbnail">
-                <img src="{{ RvMedia::getImageUrl($post->image, 'medium', false, RvMedia::getDefaultImage()) }}"
+                <img loading="lazy" src="{{ RvMedia::getImageUrl($post->image, 'medium', false, RvMedia::getDefaultImage()) }}"
 alt="{{ $post->name }}"><a href="{{ $post->url }}" class="post__overlay"></a>
 </div>
 <div class="post__content-wrap">
@@ -44,17 +44,17 @@ Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
     <form action="{{route('public.search')}}" class="form-search" method="GET">
         <div class="container-remake">
             <div class="search-intro">
-                <h1 class="font-pri-bold font60 fontmb-large text-uppercase text-center mt-md-5 mt-3"> 
-                    {!! __('kết quả tìm kiếm') !!} 
+                <h1 class="font-pri-bold font60 fontmb-large text-uppercase text-center mt-md-5 mt-3">
+                    {!! __('kết quả tìm kiếm') !!}
                 </h1>
             </div>
-            <div class="search-input row mt-md-5 mt-3 mb-5">
+            <div class="form-search row mt-md-5 mt-3 mb-5">
                 <div class="col-sm-3">
                 </div>
                 <div class="col-sm-6 search-bar mb-4">
                     <div class="row search">
                         <div class="col-10">
-                            <input type="text" class="form-control font20" id="search-bar" placeholder="{!! __('Tìm kiếm') !!}"
+                            <input type="text" autocomplete="off" class="form-control font20 search-bar" input-id="2" placeholder="{!! __('Tìm kiếm') !!}"
                                 name="keyword" value="{{ request()->get('keyword') }}">
                         </div>
                         <div class="col-1 input-group-append">
@@ -63,11 +63,15 @@ Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
                             </button>
                         </div>
                     </div>
-                    <p class="font-pri mt-2"> 
+                    <p class="font-pri mt-2">
                         @isset($comment)
                             {!! $comment !!}
                         @endisset
                     </p>
+
+                    <div class="box-popover-2 popover-search">
+                        
+                    </div>
                 </div>
             </div>
 
@@ -115,12 +119,12 @@ Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
                             data-aos-easing="ease-in-out">
                             <div class="col-lg-3 col-md-5 result-img">
                                 <a class="image h-100" href="{{$post->url}}" title="">
-                                    <img src="{{ Storage::disk('public')->exists($post['image']) ? get_image_url($post['image']) : RvMedia::getDefaultImage() }}" alt="img-detail"
+                                    <img loading="lazy" src="{{ Storage::disk('public')->exists($post['image']) ? get_image_url($post['image']) : RvMedia::getDefaultImage() }}" alt="img-detail"
                                         class="w-100 h-100 object-fit-cover">
                                 </a>
                             </div>
                             <div class="col-lg-9 col-md-7 result-content">
-                                
+
                                 <div class="content">
                                     <a href="{{$post->url}}">
                                         <h3 class="font-pri-bold font30 fontmb-middle color-gray">
@@ -138,34 +142,12 @@ Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
                                 </div>
                             </div>
                         </div>
-                        
+
                         @empty
                         <i class="fal fa-empty-set"></i>
                     @endforelse
                 @endisset
             </div>
-            {{-- <div class="search-result row mb-md-4 mb-5" data-aos="fade-up" data-aos-duration="1000"
-                data-aos-easing="ease-in-out">
-                <div class="col-lg-3 col-md-5 result-img">
-                    <a class="image h-100" href="#" title="">
-                        <img src="{{ Theme::asset()->url('images/search/search-4.png') }}" alt="img-detail"
-                            class="w-100 h-100 object-fit-cover">
-                    </a>
-                </div>
-                <div class="col-lg-9 col-md-7 result-content">
-                    <div class="content">
-                        <a href="#">
-                            <h3 class="font-pri-bold font30  color-gray">Lorem ipsum dolor sit amet, consectetur adipisicing
-                                elit. Dolore, perspiciatis? Cupiditate eligen dol optio placeat.</h3>
-                        </a>
-                        <p class="font-pri my-3 font15">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda
-                            laborum officiis nisi omnis! Illum, quibusdam. Lorem ipsum dolor, sit amet consectetur
-                            adipisicing elit. Unde eligendi deleniti quam amet earum laudantium.
-                        </p>
-                        <p class="font-pri date font15">20-12-20201</p>
-                    </div>
-                </div>
-            </div> --}} 
             
             @if(!isset($posts) || $posts->isEmpty())
                 <p class="text-center font25">
@@ -180,5 +162,4 @@ Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
             @endisset
         </div>
     </form>
-</div>
 </div>

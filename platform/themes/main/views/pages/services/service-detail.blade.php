@@ -7,7 +7,7 @@
                 </h2>
             @endif
             @if(has_field($data, 'hinh_anh_service_1'))
-                <img src="{{ get_image_url(get_field($data, 'hinh_anh_service_1')) }}" alt="" class="product-detail__banner">
+                <img loading="lazy" src="{{ get_image_url(get_field($data, 'hinh_anh_service_1')) }}" alt="" class="product-detail__banner">
             @endif
             @if(has_field($data, 'mo_ta_service_1'))
                 <div class="product-detail__desc font-pri font20">
@@ -31,14 +31,14 @@
                             @if(has_field($data, 'slides'))
                                 @foreach (get_field($data, 'slides') as $item)
                                     <div class="swiper-slide">
-                                        <img src="{{ has_sub_field($item, 'hinh_anh') ? get_image_url(get_sub_field($item, 'hinh_anh')) : "" }}" alt="">
+                                        <img loading="lazy" src="{{ has_sub_field($item, 'hinh_anh') ? get_image_url(get_sub_field($item, 'hinh_anh')) : "" }}" alt="">
                                     </div>
                                 @endforeach
                             {{-- <div class="swiper-slide">
-                                <img src="{{Theme::asset()->url('images/services/slide-cham-soc-xe-2.jpg')}}" alt="">
+                                <img loading="lazy" src="{{Theme::asset()->url('images/services/slide-cham-soc-xe-2.jpg')}}" alt="">
                             </div>
                             <div class="swiper-slide">
-                                <img src="{{Theme::asset()->url('images/services/slide-cham-soc-xe-3.jpg')}}" alt="">
+                                <img loading="lazy" src="{{Theme::asset()->url('images/services/slide-cham-soc-xe-3.jpg')}}" alt="">
                             </div> --}}
                             @endif
                         </div>
@@ -59,7 +59,7 @@
                         <div class="product-detail__card">
                             <div class="product-detail__card-image">
                                 <div class="product-detail__card-frame">
-                                    <img src="{{ has_sub_field($item, 'hinh_anh') ? get_image_url(get_sub_field($item, 'hinh_anh')) : "" }}" alt="">
+                                    <img loading="lazy" src="{{ has_sub_field($item, 'hinh_anh') ? get_image_url(get_sub_field($item, 'hinh_anh')) : "" }}" alt="">
                                 </div>
                             </div>
                             <h3 class="product-detail__card-title font30 font-mi-bold">{{ has_sub_field($item, 'tieu_de') ? get_sub_field($item, 'tieu_de') : "" }}</h3>
@@ -72,7 +72,7 @@
                 {{-- <div class="product-detail__card">
                     <div class="product-detail__card-image">
                         <div class="product-detail__card-frame">
-                            <img src="{{Theme::asset()->url('images/services/features-cham-soc-xe-2.jpg')}}" alt="">
+                            <img loading="lazy" src="{{Theme::asset()->url('images/services/features-cham-soc-xe-2.jpg')}}" alt="">
                         </div>
                     </div>
                     <h3 class="product-detail__card-title font30 font-mi-bold">TẬN TÂM</h3>
@@ -83,7 +83,7 @@
                 <div class="product-detail__card">
                     <div class="product-detail__card-image">
                         <div class="product-detail__card-frame">
-                            <img src="{{Theme::asset()->url('images/services/features-cham-soc-xe-3.jpg')}}" alt="">
+                            <img loading="lazy" src="{{Theme::asset()->url('images/services/features-cham-soc-xe-3.jpg')}}" alt="">
                         </div>
                     </div>
                     <h3 class="product-detail__card-title font30 font-mi-bold">CHUYÊN NGHIỆP</h3>

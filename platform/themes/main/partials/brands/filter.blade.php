@@ -83,7 +83,7 @@
             <div class="car-filter--bottom position-relative">
                 <button type="button" class="modal-button btn-join">
                     <span class="frame text-uppercase">
-                        <img src="{{Theme::asset()->url('images/business/brand-detail/filter.png')}}" alt="filter icon">
+                        <img loading="lazy" src="{{Theme::asset()->url('images/business/brand-detail/filter.png')}}" alt="filter icon">
                         {{ __("BỘ LỌC NÂNG CAO") }}
                     </span>
                 </button>
@@ -111,7 +111,7 @@
                                     <a href="{{
                                         route('public.brand.index',$request_merge)}}" class="col-filter {{array_search($value,$request) ? 'active' : ''}}">
                                         <div class="symbol">
-                                            <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
+                                            <img loading="lazy" src="{{Theme::asset()->url('images/setting.png')}}" alt="">
                                         </div>
                                         <div class="name font25">
                                             {{$value}}HP
@@ -177,7 +177,7 @@
                                 <a href="{{
                                     route('public.brand.index',$request_merge)}}" class="col-filter {{array_search($value->code,$request) ? 'active' : ''}}">
                                     <div class="symbol">
-                                        <img src="{{Theme::asset()->url('images/setting.png')}}" alt="">
+                                        <img loading="lazy" src="{{Theme::asset()->url('images/setting.png')}}" alt="">
                                     </div>
                                     <div class="name font25">
                                         {{$value->name}}

@@ -97,6 +97,7 @@ class PostRepository extends RepositoriesAbstract implements PostInterface
             ->select('posts.*')
             ->distinct()
             ->with('slugable')
+            ->orderBy('posts.order', 'desc')
             ->orderBy('posts.created_at', 'desc');
 
         if (request('select_year')) {
@@ -206,6 +207,7 @@ class PostRepository extends RepositoriesAbstract implements PostInterface
         if ($paginate) {
             return $this->applyBeforeExecuteQuery($data)->paginate($paginate);
         }
+        dd('sdf');
 
         return $this->applyBeforeExecuteQuery($data)->get();
     }

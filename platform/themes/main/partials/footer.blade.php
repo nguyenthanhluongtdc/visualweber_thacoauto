@@ -5,13 +5,13 @@
     <div class="footer-wrap container-remake">
         <div class="footer-left">
             <a href="{{ route('public.single') }}" class="logo-bottom">
-                <img src="{{ get_image_url(theme_option('logo_footer')) }}" alt="{!! __('THACO AUTO') !!}" height="34">
+                <img loading="lazy" src="{{ get_image_url(theme_option('logo_footer')) }}" alt="{!! __('THACO AUTO') !!}" height="34">
             </a>
             <div class="thaco-contact">
                 <h2 class="name-company font-pri-bold color-pri font32">{!! theme_option('name-company') !!}</h2>
                 <p class="address font-pri font18">
                     <span>{{__('Address')}}:</span>
-                    <span>{!! theme_option('address-company') !!} <a href="{!! theme_option('map-company') !!}" target="_blank">( {{__("Find location") }} )</a></span>
+                    <span>{!! theme_option('address-company') !!} <a href="{!! theme_option('map-company') !!}" target="_blank" `rel="noopener">( {{__("Find location") }} )</a></span>
                 </p>
                 <p class="tax-code font-pri font18">
                     <span>{{__('Tax Code')}}:</span>
@@ -20,23 +20,23 @@
             </div>
 
             <div class="footer-left-bottom">
-                <a class="img-bct d-inline-block" href="#" title="">
-                    <img src="{{ get_image_url(theme_option('logo_bct')) }}" alt="{!! __('Bộ công thương') !!}">
+                <a class="img-bct d-inline-block" href="{{theme_option('link_bct')}}" title="">
+                    <img loading="lazy" src="{{ get_image_url(theme_option('logo_bct')) }}" alt="{!! __('Bộ công thương') !!}">
                 </a>
                 <ul class="list-media">
                     <li>
-                        <a href="{{ theme_option('facebook') }}" target="_blank">
-                            <img src="{{ get_image_url(theme_option('facebook_icon')) }}" alt="facebook">
+                        <a href="{{ theme_option('facebook') }}" target="_blank" `rel="noopener">
+                            <img loading="lazy" src="{{ get_image_url(theme_option('facebook_icon')) }}" alt="facebook">
                         </a>
                     </li>
                     <li>
-                        <a href="{{ theme_option('linkedin') }}" target="_blank">
-                            <img src="{{ get_image_url(theme_option('linkedin_icon')) }}" alt="in">
+                        <a href="{{ theme_option('linkedin') }}" target="_blank" `rel="noopener">
+                            <img loading="lazy" src="{{ get_image_url(theme_option('linkedin_icon')) }}" alt="in">
                         </a>
                     </li>
                     <li>
-                        <a href="{{ theme_option('youtube') }}" target="_blank">
-                            <img src="{{ get_image_url(theme_option('youtube_icon')) }}" alt="youtube">
+                        <a href="{{ theme_option('youtube') }}" target="_blank" `rel="noopener">
+                            <img loading="lazy" src="{{ get_image_url(theme_option('youtube_icon')) }}" alt="youtube">
                         </a>
                     </li>
                 </ul>
@@ -70,26 +70,25 @@
                 <div class="item list-media-mobile font-pri">
                     <p>{{__('connect with us')}}</p>
                     <ul class="list-media">
-                        <li><a href="{{ theme_option('facebook') }}" target="_blank"><img src="{{ Theme::asset()->url('images/main/iconfb.png') }}" alt="facebook"></a></li>
-                        <li><a href="{{ theme_option('linkedin') }}" target="_blank"><img src="{{ Theme::asset()->url('images/main/iconin.png') }}" alt="in"></a></li>
-                        <li><a href="{{ theme_option('youtube') }}" target="_blank"><img src="{{ Theme::asset()->url('images/main/iconyt.png') }}" alt="youtube"></a></li>
+                        <li><a href="{{ theme_option('facebook') }}" target="_blank" `rel="noopener"><img loading="lazy" src="{{ Theme::asset()->url('images/main/iconfb.png') }}" alt="facebook"></a></li>
+                        <li><a href="{{ theme_option('linkedin') }}" target="_blank" `rel="noopener"><img loading="lazy" src="{{ Theme::asset()->url('images/main/iconin.png') }}" alt="in"></a></li>
+                        <li><a href="{{ theme_option('youtube') }}" target="_blank" `rel="noopener"><img loading="lazy" src="{{ Theme::asset()->url('images/main/iconyt.png') }}" alt="youtube"></a></li>
                     </ul>
-                </div>
-
-                <div class="img-bct-mobile">
-                    <a href="#" title="">
-                        <img src="{{ get_image_url(theme_option('logo_bct')) }}" alt="{!! __('Bộ công thương') !!}">
-                    </a>
+                    <div class="img-bct-mobile">
+                        <a href="{{theme_option('link_bct')}}" title="">
+                            <img loading="lazy" src="{{ get_image_url(theme_option('logo_bct')) }}" alt="{!! __('Bộ công thương') !!}">
+                        </a>
+                    </div>
                 </div>
         </div>
     </div>
 </footer>
 <div class="action-button">
     <div class="item-button">
-        <a href="tel:{{ theme_option('hotline-contact') }}"><img src="{{ Theme::asset()->url('images/main/phone.png') }}" alt="phone"></a>
+        <a href="tel:{{ theme_option('hotline-contact') }}"><img loading="lazy" src="{{ Theme::asset()->url('images/main/phone.png') }}" alt="phone"></a>
     </div>
     <div class="item-button ">
-        <button class="fb-customerchat messenger"><img src="{{ Theme::asset()->url('images/main/mess.png') }}"></button>
+        <button class="fb-customerchat messenger"><img loading="lazy" src="{{ Theme::asset()->url('images/main/mess.png') }}" alt="Messenger"></button>
     </div>
 </div>
 <div class="end-web" style="background: url('{{ Theme::asset()->url('images/main/end.jpg') }}')">
@@ -97,7 +96,7 @@
         <p class="font-pri color-white font20">{{__('business license')}}: {!! theme_option('tax-code-company') !!}</p>
     </div>
 </div>
-<button  id="myBtn" title="Go to top"><img src="{{ Theme::asset()->url('images/main/btt.png') }}" alt="youtube"></button>
+<button  id="myBtn" title="Go to top"><img loading="lazy" src="{{ Theme::asset()->url('images/main/btt.png') }}" alt="youtube"></button>
 
 <!-- JS Library-->
 {!! Theme::footer() !!}
@@ -119,13 +118,10 @@
             js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
-        
+
         let buttonMes = $('.messenger');
         buttonMes.on('click', function(e) {
-            buttonMes.on("click", function() {
-                console.log('sf')
-                FB.CustomerChat.show();
-            });
+            FB.CustomerChat.show();
         });
 
         </script>
@@ -134,7 +130,9 @@
         <div class="fb-customerchat"
              attribution="install_email"
              page_id="{{ theme_option('facebook_page_id') }}"
-             theme_color="{{ theme_option('primary_color', '#01498b') }}">
+             theme_color="{{ theme_option('primary_color', '#01498b') }}"
+             greeting_dialog_display="fade"
+             greeting_dialog_delay="10">
         </div>
     @endif
 @endif

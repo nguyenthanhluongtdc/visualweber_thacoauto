@@ -28,6 +28,27 @@ class PostRepository extends BlogPostRepository
             ->distinct()
             ->with(array_merge(['slugable'], $with))
             ->orderBy('posts.is_featured', 'desc')
+            ->orderBy('posts.order', 'desc')
+            ->orderBy('posts.created_at', 'desc');
+
+        return $this->applyBeforeExecuteQuery($data)->get();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getAllWithFeatured(int $limit = 5, array $with = [])
+    {
+
+        $data = $this->model
+            ->where([
+                'posts.status'      => BaseStatusEnum::PUBLISHED,
+            ])
+            ->select('posts.*')
+            ->limit($limit)
+            ->with(array_merge(['slugable'], $with))
+            ->orderBy('posts.is_featured', 'desc')
+            ->orderBy('posts.order', 'desc')
             ->orderBy('posts.created_at', 'desc');
 
         return $this->applyBeforeExecuteQuery($data)->get();

@@ -51,7 +51,7 @@
         <div class="col-sm-12 col-md-12 col-xl-4 mb-4">
             <div class="deposit__info">
                 <div class="deposit__info-imagereview">
-                    <img src="{{ Theme::asset()->url('images/car.png') }}" width="376" height="280" class="img-fluid" />
+                    <img loading="lazy" src="{{ Theme::asset()->url('images/car.png') }}" width="376" height="280" class="img-fluid" />
                 </div>
                 <div class="deposit__detail MyriadPro-Regular font15" id="accordion">
                     <div class="card">

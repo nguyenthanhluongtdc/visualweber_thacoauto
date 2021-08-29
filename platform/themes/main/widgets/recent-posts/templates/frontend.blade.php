@@ -20,7 +20,7 @@
                                                 <a href="{{ $post->url }}" data-number-line="2">{{ $post->name }}</a>
                                             @else
                                                 <article class="post post__widget clearfix">
-                                                    <div class="post__thumbnail"><img src="{{ RvMedia::getImageUrl($post->image, 'thumb', false, RvMedia::getDefaultImage()) }}" alt="{{ $post->name }}">
+                                                    <div class="post__thumbnail"><img loading="lazy" src="{{ RvMedia::getImageUrl($post->image, 'thumb', false, RvMedia::getDefaultImage()) }}" alt="{{ $post->name }}">
                                                         <a href="{{ $post->url }}" class="post__overlay"></a></div>
                                                     <header class="post__header">
                                                         <h5 class="post__title"><a href="{{ $post->url }}" data-number-line="2">{{ $post->name }}</a></h5>

@@ -66,7 +66,7 @@ return [
 
             $theme->asset()->usePath()->add('style', 'css/common.css', [], [], time());
 
-            $theme->asset()->container('footer')->add('bootstrapjsdelivr', '//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js');
+            // $theme->asset()->container('footer')->add('bootstrapjsdelivr', '//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js');
             $theme->asset()->container('footer')->add('bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js');
             $theme->asset()->container('header')->add('jquery', '//code.jquery.com/jquery-3.5.1.min.js');
             $theme->asset()->container('footer')->add('semantic', '//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js');

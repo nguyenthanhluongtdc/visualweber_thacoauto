@@ -115,7 +115,6 @@
                     @endif
                 </ul>
                 <a href="{{ route('public.brand.car-selection',[
-                    'slug' => $slug->key,
                     'car' => $carFeature->slug,
                     'showroom' => request()->get('showroom')
                 ]) }}" class="text-center info-button font18 font-pri d-inline-block">Tiếp theo</a>

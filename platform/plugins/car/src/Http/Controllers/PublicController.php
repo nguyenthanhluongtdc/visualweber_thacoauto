@@ -188,4 +188,10 @@ class PublicController extends BaseController
             "data" => $car
         ]);
     }
+
+    public function testDrive($car)
+    {
+        $data['car'] = $this->getCar($car);
+        return \Theme::scope('test-drive', $data)->render();
+    }
 }

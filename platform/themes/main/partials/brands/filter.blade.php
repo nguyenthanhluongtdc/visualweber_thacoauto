@@ -68,7 +68,7 @@
                     <div class="slider-range">
                         <div class="slider-range__value font18 font-pri">
                             <span>Đến: </span>
-                            <span class="filter-value"></span>đ
+                            <span class="filter-value">{{request()->get('price') ? request()->get('price') : '100000000'}}</span>đ
                         </div>
                         <div class="slider-range__frame">
                         <span class="slider-range__line"></span>

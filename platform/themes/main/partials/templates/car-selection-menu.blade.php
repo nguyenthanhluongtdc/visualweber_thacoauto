@@ -1,8 +1,12 @@
 <section class="section-step-menu-car-selection">
     <div class="container-remake">
         <ul class="step-menu">
-            <li class="step-menu__item item-1 {{ url('car-selection') == URL::current() ? 'active' : '' }}">
-                <a href="{{ url('car-selection') }}" class="font18 font-pri text-uppercase color-gray">
+            <li class="step-menu__item item-1 {{ route('public.brand.car-selection', [
+                    'slug' => $brand->slug
+                ] + request()->all()) == URL::current() ? 'active' : '' }}">
+                <a href="{{ route('public.brand.car-selection', [
+                    'slug' => $brand->slug
+                ] + request()->all()) }}" class="font18 font-pri text-uppercase color-gray">
                     {{ __("1. LỰA CHỌN XE") }}
                 </a>
             </li>

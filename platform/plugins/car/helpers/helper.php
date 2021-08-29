@@ -157,3 +157,20 @@ if(!function_exists('get_engine_by_brand_and_vehicle')){
       return collect();
    }
 }
+
+if(!function_exists('get_car_relations')){
+   function get_car_relations($brand = null,$limit = 4){
+      if($brand){
+         $carInterface = resolve('Platform\Car\Repositories\Interfaces\CarInterface');
+         $brandInterface = resolve('Platform\Brand\Repositories\Interfaces\BrandInterface');
+         $allBrand = $brandInterface->all();
+         $cars = [];
+         foreach($allBrand as $brand){
+            $cars = array_merge($brand->cars->pluck('id')->toArray(),$cars);
+         }
+         $carModel = \Platform\Car\Models\Car::whereIn('id',$cars);
+         return $carInterface->applyBeforeExecuteQuery($carModel)->limit($limit)->get();
+      }  
+      return collect();
+   }
+}

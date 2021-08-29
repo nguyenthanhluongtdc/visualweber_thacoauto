@@ -105,6 +105,6 @@
             </div>
         </div>
         @endif
-        {!! Theme::partial('brands/related-car') !!}
+        {!! Theme::partial('brands/related-car',['slug'=>$slug]) !!}
     </div>
 </section>

@@ -40,4 +40,7 @@ class Brand extends BaseModel
     public function categories(){
         return $this->belongsToMany(CarCategory::class,'app_brand_categories','brand_id','category_id');
     }
+    public function cars(){
+        return $this->hasMany(\Platform\Car\Models\Car::class,'brand_id');
+    }
 }

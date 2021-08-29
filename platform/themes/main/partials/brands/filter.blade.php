@@ -59,9 +59,9 @@
                         @empty
                         @endforelse
                     @endif
-                    <select class="provinces-select2 font18 font-pri" name="country" id="">
-                        <option value="hcm">TP. HỒ CHÍ MINH</option>
-                        <option value="ha-noi">HÀ NỘI</option>
+                    <select class="provinces-select2 font18 font-pri" name="country" onchange="submitFormPrice(this)">
+                        <option {{request()->get('country') == 'hcm' ? 'selected' : ''}} value="hcm">TP. HỒ CHÍ MINH</option>
+                        <option {{request()->get('country') == 'ha-noi' ? 'selected' : ''}} value="ha-noi">HÀ NỘI</option>
                     </select>
                     <div class="slider-range">
                         <div class="slider-range__value font18 font-pri">

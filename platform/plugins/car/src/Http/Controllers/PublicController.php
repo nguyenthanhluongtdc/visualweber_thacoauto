@@ -78,13 +78,13 @@ class PublicController extends BaseController
         return \Theme::scope('pages/business/product/product-detail', compact('data'))->render();
     }
 
-    public function getCarSelection()
+    public function getCarSelection($car)
     {
-        if (!request('car')) {
+        if (!$car) {
             abort(404);
         }
 
-        $data['car'] = get_car_by_slug(request('car'));
+        $data['car'] = get_car_by_slug($car);
         if (blank($data)) {
             abort(404);
         }

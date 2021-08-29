@@ -25,7 +25,7 @@
                         <input class="checkbox" name="accessories[]" value="{{ $item->id }}" type="checkbox">
                         <span class="checkmark"></span>
                     </div>
-                    <label class="font-pri font15" for="">{{ $item->name }} <span>{{ $item->price ? number_format($item->price, 0, '.', ',') . 'đ' : '' }}</span> </label>
+                    <label class="font-pri font15" for="">{{ $item->name }} <span>{{ $item->price ? number_format($item->price, 0, '.', ',') . 'đ' : '0đ' }}</span> </label>
                 </div>
             </div>
         @empty
@@ -46,7 +46,7 @@
                         <input class="checkbox" name="equipments[]" value="{{ $item->id }}" type="checkbox">
                         <span class="checkmark"></span>
                     </div>
-                    <label class="font-pri font15" for="">{{ $item->name }} <span>{{ $item->price ? number_format($item->price, 0, '.', ',') . 'đ' : '' }}</span> </label>
+                    <label class="font-pri font15" for="">{{ $item->name }} <span>{{ $item->price ? number_format($item->price, 0, '.', ',') . 'đ' : '0đ' }}</span> </label>
                 </div>
             </div>
         @empty

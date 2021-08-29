@@ -27,38 +27,35 @@
             <div class="car-selection-content__right d-flex flex-column col-sm-12 col-md-12">
                 <div class="car-version">
                     <div id="car-version-select" class="car-version__select font15 font-pri">
-                        @if($car->childrents)
-                            <h3 class="font15 font-pri mb-0">{{ __("Chọn phiên bản xe") }}</h3>
+                        <h3 class="font15 font-pri mb-0">{{ __("Chọn phiên bản xe") }}</h3>
+                        @if($car->childrens)
                             <i class="fas fa-chevron-down font12"></i>
                         @endif
                     </div>
 
-                    <a href="" class="car-version__viewdetail font15 font-pri">Xem chi tiết phiên bản</a>
+                    <a href="" class="car-version__viewdetail font15 font-pri">{{ __("Xem chi tiết phiên bản") }}</a>
                 </div>
-                @if($car->childrents)
+
+                @if($car->childrens)
                     <ul id="car-version-list" class="car-version__list active">
-                        <li class="car-version__item">
-                            <a href="">
-                                <div class="car-version__title font15 font-pri">KIA OPTIMA 2.0 GAT LUXURY</div>
-                                <div class="car-version__price font15 font-pri">Giá từ 759,000,000đ</div>
-                            </a>
-                        </li>
-                        <li class="car-version__item">
-                            <a href="">
-                                <div class="car-version__title font15 font-pri">KIA OPTIMA 2.4 GAT PREMIUM</div>
-                                <div class="car-version__price font15 font-pri">Giá từ 919,000,000đ</div>
-                            </a>
-                        </li>
+                        @foreach ($car->childrens as $item)
+                            <li class="car-version__item">
+                                <a href="">
+                                    <div class="car-version__title font15 font-pri">{{ $item->name }}</div>
+                                    <div class="car-version__price font15 font-pri">{{ __("Giá từ") }} {{ $item->price ? number_format($item->price, 0, '.', ',') . 'đ' : '' }}</div>
+                                </a>
+                            </li>
+                        @endforeach
                     </ul>
                 @endif
                 <div class="gray-line"></div>
                 <div class="option__car flex-grow-1">
                     {!! Theme::partial('templates.car-selection.options', ['car' => $car]) !!}
                 </div>
-                <a class="select-button font18 font-pri fontmb-small d-inline-block"  type="button" href="">Tiếp theo</a>
+                <a class="select-button font18 font-pri fontmb-small d-inline-block"  type="button" href="">{{ __("Tiếp theo") }}</a>
             </div>
             <button class="btn-back mt-4">
-                Quay lại
+                {{ __("Quay lại") }}
             </button>
         </div>
 

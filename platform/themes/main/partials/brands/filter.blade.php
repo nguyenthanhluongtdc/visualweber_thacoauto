@@ -60,8 +60,10 @@
                         @endforelse
                     @endif
                     <select class="provinces-select2 font18 font-pri" name="country" onchange="submitFormPrice(this)">
-                        <option {{request()->get('country') == 'hcm' ? 'selected' : ''}} value="hcm">TP. HỒ CHÍ MINH</option>
-                        <option {{request()->get('country') == 'ha-noi' ? 'selected' : ''}} value="ha-noi">HÀ NỘI</option>
+                        @forelse(get_countries() as $country)
+                            <option {{request()->get('country') == $country->matp ? 'selected' : ''}} value="{{$country->matp}}">{{$country->name}}</option>
+                        @empty
+                        @endforelse
                     </select>
                     <div class="slider-range">
                         <div class="slider-range__value font18 font-pri">
@@ -69,7 +71,7 @@
                             <span class="filter-value"></span>đ
                         </div>
                         <div class="slider-range__frame">
-                            <span class="slider-range__line"></span>
+                        <span class="slider-range__line"></span>
                             <input name="price" type="range" min="100000000" max="20000000000" step="50000000" value="{{request()->get('price')}}" class="slider" id="myRange" onchange="submitFormPrice(this)">
                         </div>
                     </div>

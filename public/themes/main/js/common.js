@@ -234,6 +234,11 @@ var Helper = {
     RangeFilterBranddetail: function () {
         var range = $("#myRange").attr("value");
         $(".filter-value").html(range);
+        if(document.getElementById('myRange')){
+            var slideWidth = document.getElementById('myRange').value * 100 / 20000000000;
+            $(".slider-range__line").css("width", "calc(" + slideWidth + "% - " + slideWidth / 7.5 + "px)");
+            $(".slider-range__button").css("left", slideWidth + "%");
+        }
         $(document).on('input change', '#myRange', function () {
             $('.filter-value').html($(this).val());
             var slideWidth = $(this).val() * 100 / 20000000000;

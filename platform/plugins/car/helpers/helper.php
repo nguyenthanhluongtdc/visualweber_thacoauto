@@ -174,3 +174,8 @@ if(!function_exists('get_car_relations')){
       return collect();
    }
 }
+if(!function_exists('get_countries')){
+   function get_countries(){
+      return \Illuminate\Support\Facades\DB::table('tinhthanhpho')->get();
+   }
+}

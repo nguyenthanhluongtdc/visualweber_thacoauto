@@ -132,7 +132,17 @@ class CarServiceProvider extends ServiceProvider
                         return [
                             CarCategory::class => trans('plugins/car::car-category.name'),
                         ];
+                    })
+                    ->registerModule(Car::class)
+                    ->registerRule('basic', trans('plugins/car::car.name'), Car::class, function () {
+                        return $this->app->make(CarInterface::class)->pluck('app_cars.name', 'app_cars.id');
+                    })
+                    ->expandRule('other', trans('plugins/custom-field::rules.model_name'), 'model_name', function () {
+                        return [
+                            Car::class => trans('plugins/car::car.name'),
+                        ];
                     });;
+
             }
             \Gallery::registerModule([\Platform\Car\Models\Color::class]);
         });

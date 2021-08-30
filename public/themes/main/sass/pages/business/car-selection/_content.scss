@@ -53,6 +53,7 @@
                         margin-top: -2%;
                     }
                     span{
+                        white-space: pre;
                         @media only screen and (max-width: 1080px){
                     
                             font-size: 20px;
@@ -70,8 +71,15 @@
                     }
                 }
 
-                @media (max-width: 1080px) {
-                    width: 100%;
+                @media (max-width: 576px) {
+                    width: 65%;
+
+                    &__item {
+                        margin-right: 4%;
+                        img {
+                            @include mobileWidth(25);
+                        }
+                    }
                 }
             }
             .button{
@@ -156,6 +164,15 @@
                        
                         font-size: 12px;
                       }
+                }
+
+                @media (max-width: 500px) {
+                    display: inline-block;
+
+                    &__select {
+                        flex: 1 100%;
+                        max-width: 100%;
+                    }
                 }
             }
             .car-version__list{

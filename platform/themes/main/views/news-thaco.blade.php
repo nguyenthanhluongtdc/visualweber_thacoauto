@@ -80,12 +80,6 @@
             <i class="fas fa-arrow-right font15"></i>
         </span>
     </div>
-
-    <div class="page-pagination hidden-desktop">
-        @if(!empty($posts))
-            {{ $posts->links('vendor.pagination.custom') }}
-        @endif
-    </div>
 </div>
 
 <div class="news-thaco-content container-remake overflow-hidden show-mobile">

@@ -54,7 +54,7 @@
                     </div>
                     <div class="news-body">
                         <a class="news-title font30" href="{{$posts[0]->url}}">{{$posts[0]->name}}</a>
-                        <p class="news-description font20">{{Str::words($posts[0]->description,40)}}</p>
+                        <p class="news-description font18">{{Str::words($posts[0]->description,40)}}</p>
                         <div class="news-info">
                             <div class="news-info__item font15">
                                 <p>{{ $posts[0]->city->name ?? '--' }}</p>
@@ -70,7 +70,7 @@
                     @if (!empty($posts[1]))
                     <div data-aos="flip-up" data-aos-duration="1500" class="item-top news-body">
                         <a class="news-title font25" href="{{$posts[1]->url}}">{{$posts[1]->name}}</a>
-                        <p class="news-description">{{Str::words($posts[1]->description,40)}}</p>
+                        <p class="news-description font15">{{Str::words($posts[1]->description,40)}}</p>
                         <div class="news-info">
                             <div class="news-info__item font15">
                                 <p>{{ $posts[1]->city->name ?? '--' }}</p>
@@ -91,7 +91,7 @@
                             </div>
                         </div>
                         <div class="news-body">
-                            <a class="news-title font25" href="{{$posts[2]->url}}">{{$posts[2]->name}}</a>
+                            <a class="news-title font30" href="{{$posts[2]->url}}">{{$posts[2]->name}}</a>
                             <div class="news-info">
                                 <div class="news-info__item font15">
                                     <p>{{ $posts[2]->city->name ?? '--' }}</p>
@@ -115,7 +115,7 @@
                     </div>
                     <div class="news-body">
                         <a class="news-title font30" href="{{$posts[3]->url}}">{{$posts[3]->name}}</a>
-                        <p class="news-description fontmb-little">{{Str::words($posts[3]->description,40)}}</p>
+                        <p class="news-description font18 fontmb-little">{{Str::words($posts[3]->description,40)}}</p>
                         <div class="news-info">
                             <div class="news-info__item font15">
                                 <p>{{ $posts[3]->city->name ?? '--' }}</p>

@@ -6,9 +6,7 @@ use Menu;
 use Illuminate\Support\Facades\Auth;
 use Platform\CarCategory\Models\CarCategory;
 use Illuminate\Support\ServiceProvider;
-use Platform\Base\Enums\BaseStatusEnum;
-use Platform\Car\Providers\CarServiceProvider;
-use Platform\Car\Services\CarCategoryService;
+use Platform\CarCategory\Services\CarCategoryService;
 
 class HookServiceProvider extends ServiceProvider
 {

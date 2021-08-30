@@ -5,7 +5,7 @@ namespace Platform\CarCategory\Http\Controllers;
 use Platform\Base\Http\Controllers\BaseController;
 use Illuminate\Http\Request;
 use Exception;
-use Platform\Car\Services\CarCategoryService;
+use Platform\CarCategory\Services\CarCategoryService;
 use Platform\CarCategory\Models\CarCategory;
 
 class CarCategoryController extends BaseController

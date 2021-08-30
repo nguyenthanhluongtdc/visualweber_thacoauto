@@ -1,4 +1,4 @@
-<div class="distribution">
+<div class="distribution overflow-x-hidden">
     <div class="provincial-company">
         <div class="container-remake">
             <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 fontmb-large">{{ __("Công ty tỉnh thành") }}</h1>

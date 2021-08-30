@@ -185,13 +185,14 @@ class ThacoController extends PublicController
         ], 200);
     }
 
-    public function getDistributionSystem(Request $request, DistributionSystemInterface $distributionSystemInterface, BaseHttpResponse $response) {
+    public function getDistributionSystem(Request $request, DistributionSystemInterface $distributionSystemInterface, BaseHttpResponse $response)
+    {
         Log::info("======== Lấy danh sách chi nhánh theo Tỉnh/Thành phố: {$request->city} =========");
         $condition = [
             "status" => BaseStatusEnum::PUBLISHED
         ];
 
-        if(request('city')) {
+        if (request('city')) {
             $condition['state_id'] = request('city');
         }
 
@@ -213,19 +214,21 @@ class ThacoController extends PublicController
             "condition" => [
                 "status" => BaseStatusEnum::PUBLISHED,
                 "brand_id" => request('brand'),
-                "category_id" => request('category')
+                "category_id" => request('category'),
             ],
             'select' => ['showroom_id']
         ])->pluck('showroom_id')->toArray() ?? [];
 
         $condition = [
             "status" => BaseStatusEnum::PUBLISHED,
-            ['id', 'IN', $showroomIDs]
+            ['id', 'IN', $showroomIDs],
+            'distribution_system_id' => request('distribution_id')
         ];
 
-        if(blank(request('category')) && blank(request('brand'))) {
+        if (blank(request('category')) && blank(request('brand'))) {
             $condition = [
                 "status" => BaseStatusEnum::PUBLISHED,
+                'distribution_system_id' => request('distribution_id')
             ];
         }
 
@@ -281,7 +284,7 @@ class ThacoController extends PublicController
         //     return view("theme.main::views.components.result-search", compact('data'))->render();
         // }
 
-        if($request->ajax()) {
+        if ($request->ajax()) {
             $query = $request->input('keyword');
 
             if (!$query) {

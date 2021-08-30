@@ -3,7 +3,8 @@
         <div class="section-main-wrapper">
             <div class="container-remake d-md-block">
                 <div class="section-main">
-                    <form action="#" class="form" method="POST">
+                    <form action="{{ route('public.test-drive.post-test-driver') }}" class="form" method="POST">
+                        @csrf
                         <div class="row row__main">
                             <div class="top-menu-mobile mb-5">
                                 <div class="box-picture-mobile mb-3">
@@ -27,279 +28,106 @@
                                         </button>
                                     </li>
                                 </ul>
-                                <input name="type_register" value="at_showroom" class="d-none" id="type-register-input" />
+                                <input required name="type_register" value="at_showroom" class="d-none" id="type-register-input" />
                                 <div class="tab-content font-pri content" id="myTabContent">
                                     <div id="at_showroom" class="container tab-pane active">
                                         <div class="form__select">
                                             <span class="title">{{ __("Xưng hô") }}</span>
-                                            <div class="dropdown">
-                                                <div class="select">
-                                                    <span>{{ __("Vui lòng chọn") }}</span>
-                                                    <i class="fa fa-chevron-down"></i>
-                                                </div>
-                                                <input type="hidden" name="vocative">
-                                                <ul class="dropdown-menu">
-                                                    <li id="male">{{ __('Anh') }}</li>
-                                                    <li id="female">{{ __('Chị') }}</li>
-                                                </ul>
-                                            </div>
+                                            <select id="vocative" required name="vocative"
+                                                class="font20 font-mi-cond js-example-disabled-results">
+                                                <option selected disabled>{{ __("Vui lòng chọn") }}</option>
+                                                <option value="male">{{ __('Anh') }}</option>
+                                                <option value="female">{{ __('Chị') }}</option>
+                                            </select>
                                         </div>
 
                                         <div class="form__text">
                                             <span class="title">{{ __('Họ & tên') }}</span>
-                                            <input type="text" name="name" placeholder="{{ __('Điền họ & tên') }}">
+                                            <input type="text" required name="name" placeholder="{{ __('Điền họ & tên') }}">
                                         </div>
 
                                         <div class="form__text">
                                             <span class="title">{{ __("Số ĐT") }}</span>
-                                            <input type="text" name="phone" placeholder="{{ __("Điền số điện thoại") }}">
+                                            <input type="text" required name="phone" placeholder="{{ __("Điền số điện thoại") }}">
                                         </div>
 
                                         <div class="form__text">
                                             <span class="title">{{ __("Email") }}</span>
-                                            <input type="text" name="email" placeholder="{{ __("Điền email") }}">
+                                            <input type="text" required name="email" placeholder="{{ __("Điền email") }}">
                                         </div>
 
                                         <div class="form__select">
                                             <span class="title">{{ __("Tỉnh/Thành phố") }}</span>
-                                            <div class="dropdown">
-                                                <select id="province" name="province"
+                                            <select id="province" required name="province_id"
                                                 class="font20 font-mi-cond js-example-disabled-results">
-                                                <option selected disabled>{{ __("Công ty tỉnh thành") }}</option>
-                                                    @foreach (is_plugin_active('location') ? get_cities() : collect() as $key => $item)
-                                                        <option {{ intval(request('select_city', -1)) == $key ? 'selected' : '' }}  value="{{ $key }}">{{ $item }}</option>
-                                                    @endforeach
-                                                </select>
-                                            </div>
+                                                <option selected disabled>{{ __("Tỉnh/Thành phố") }}</option>
+                                                @foreach (is_plugin_active('location') ? get_cities() : collect() as $key => $item)
+                                                    <option value="{{ $key }}">{{ $item }}</option>
+                                                @endforeach
+                                            </select>
                                         </div>
 
                                         <div class="form__select">
                                             <span class="title">{{ __("Quận/ Huyện") }}</span>
-                                            <div class="dropdown">
-                                                <div class="select">
-                                                    <span>{{ __("Quận/ Huyện") }}</span>
-                                                    <i class="fa fa-chevron-down"></i>
-                                                </div>
-                                                <input type="hidden" name="district">
-                                                <ul class="dropdown-menu">
-                                                    <li id="male">Male</li>
-                                                    <li id="female">Female</li>
-                                                </ul>
-                                            </div>
+                                            <select id="district" required name="district_id"
+                                                class="font20 font-mi-cond js-example-disabled-results">
+                                                <option selected disabled>{{ __("Quận/ Huyện") }}</option>
+                                                {{-- @foreach (is_plugin_active('location') ? get_cities() : collect() as $key => $item)
+                                                    <option value="{{ $key }}">{{ $item }}</option>
+                                                @endforeach --}}
+                                            </select>
                                         </div>
 
                                         <div class="form__select">
                                             <span class="title">{{ __("Showroom") }}</span>
-                                            <div class="dropdown">
-                                                <div class="select">
-                                                    <span>{{ __("Showroom") }}</span>
-                                                    <i class="fa fa-chevron-down"></i>
-                                                </div>
-                                                <input type="hidden" name="showroom">
-                                                <ul class="dropdown-menu">
-                                                    <li id="male">Male</li>
-                                                    <li id="female">Female</li>
-                                                </ul>
-                                            </div>
+                                            <select id="showroom" required name="showroom_id"
+                                                class="font20 font-mi-cond js-example-disabled-results">
+                                                <option selected disabled>{{ __("Showroom") }}</option>
+                                                {{-- @foreach (collect() as $key => $item)
+                                                    <option value="{{ $key }}">{{ $item }}</option>
+                                                @endforeach --}}
+                                            </select>
                                         </div>
 
                                         <div class="form__select">
                                             <span class="title">{{ __("Xe đang sở hữu") }}</span>
-                                            <div class="dropdown">
-                                                <div class="select">
-                                                    <span>{{ __("Vui lòng chọn") }}</span>
-                                                    <i class="fa fa-chevron-down"></i>
-                                                </div>
-                                                <input type="hidden" name="your_car">
-                                                <ul class="dropdown-menu">
-                                                    <li id="male">Male</li>
-                                                    <li id="female">Female</li>
-                                                </ul>
-                                            </div>
+                                            <select id="brand" required name="brand_id"
+                                                class="font20 font-mi-cond js-example-disabled-results">
+                                                <option selected disabled>{{ __("Vui lòng chọn") }}</option>
+                                                @foreach (get_brands() ?? collect() as $item)
+                                                    <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                                @endforeach
+                                            </select>
                                         </div>
 
                                         <div class="form__select">
                                             <span class="title">{{ __("Quý khách đã sở hữu xe trong bao lâu") }}</span>
-                                            <div class="dropdown">
-                                                <div class="select">
-                                                    <span>{{ __("Vui lòng chọn") }}</span>
-                                                    <i class="fa fa-chevron-down"></i>
-                                                </div>
-                                                <input type="hidden" name="district">
-                                                <ul class="dropdown-menu">
-                                                    <li id="male">Male</li>
-                                                    <li id="female">Female</li>
-                                                </ul>
-                                            </div>
+                                            <select id="time" required name="time"
+                                                class="font20 font-mi-cond js-example-disabled-results">
+                                                <option selected disabled>{{ __("Vui lòng chọn") }}</option>
+                                                <option value="1">{{ '1 '. __('Year') }}</option>
+                                                <option value="2">{{ '2 '.__('Year') }}</option>
+                                                <option value="5">{{ '5 '.__('Year') }}</option>
+                                                <option value="more_5">{{ __("Nhiều hơn 5 năm") }}</option>
+                                            </select>
                                         </div>
 
                                         <div class="form__select">
                                             <span class="title">{{ __("Quý khách dự định mua xe khi nào?") }}</span>
-                                            <div class="dropdown">
-                                                <div class="select">
-                                                    <span>{{ __("Vui lòng chọn") }}</span>
-                                                    <i class="fa fa-chevron-down"></i>
-                                                </div>
-                                                <input type="hidden" name="district">
-                                                <ul class="dropdown-menu">
-                                                    <li id="male">Male</li>
-                                                    <li id="female">Female</li>
-                                                </ul>
-                                            </div>
+                                            <select id="want_to_buy" name="want_to_buy_id"
+                                                class="font20 font-mi-cond js-example-disabled-results">
+                                                <option selected disabled>{{ __("Vui lòng chọn") }}</option>
+                                            </select>
                                         </div>
 
                                         <div class="form__select">
                                             <span class="title">{{ __("Quý khách muốn thử loại xe nào?") }}</span>
-                                            <div class="dropdown">
-                                                <div class="select">
-                                                    <span>{{ __("Vui lòng chọn") }}</span>
-                                                    <i class="fa fa-chevron-down"></i>
-                                                </div>
-                                                <input type="hidden" name="district">
-                                                <ul class="dropdown-menu">
-                                                    <li id="male">Male</li>
-                                                    <li id="female">Female</li>
-                                                </ul>
-                                            </div>
+                                            <select id="test_drive" name="test_drive_id"
+                                                class="font20 font-mi-cond js-example-disabled-results">
+                                                <option selected disabled>{{ __("Vui lòng chọn") }}</option>
+                                            </select>
                                         </div>
                                     </div>
-
-                                    {{-- <div  id="at_home" class="container tab-pane fade">
-                                        <div class="form__select">
-                                            <span class="title">{{ __("Xưng hô") }}</span>
-                                            <div class="dropdown">
-                                                <div class="select">
-                                                    <span>{{ __("Vui lòng chọn") }}</span>
-                                                    <i class="fa fa-chevron-down"></i>
-                                                </div>
-                                                <input type="hidden" name="vocative">
-                                                <ul class="dropdown-menu">
-                                                    <li id="male">{{ __("Anh") }}</li>
-                                                    <li id="female">{{ __("Female") }}</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-
-                                        <div class="form__text">
-                                            <span class="title">Họ & tên</span>
-                                            <input type="text" name="name" placeholder="Điền họ & tên">
-                                        </div>
-
-                                        <div class="form__text">
-                                            <span class="title">Số ĐT</span>
-                                            <input type="text" name="phone" placeholder="Điền số điện thoại">
-                                        </div>
-
-                                        <div class="form__text">
-                                            <span class="title">Email</span>
-                                            <input type="text" name="email" placeholder="Điền email">
-                                        </div>
-
-                                        <div class="form__select">
-                                            <span class="title">Tỉnh thành</span>
-                                            <div class="dropdown">
-                                                <div class="select">
-                                                    <span>Tỉnh thành</span>
-                                                    <i class="fa fa-chevron-down"></i>
-                                                </div>
-                                                <input type="hidden" name="province">
-                                                <ul class="dropdown-menu">
-                                                    <li id="male">Male</li>
-                                                    <li id="female">Female</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-
-                                        <div class="form__select">
-                                            <span class="title">Quận/ Huyện</span>
-                                            <div class="dropdown">
-                                                <div class="select">
-                                                    <span>Quận/ Huyện</span>
-                                                    <i class="fa fa-chevron-down"></i>
-                                                </div>
-                                                <input type="hidden" name="district">
-                                                <ul class="dropdown-menu">
-                                                    <li id="male">Male</li>
-                                                    <li id="female">Female</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-
-                                        <div class="form__select">
-                                            <span class="title">Showroom</span>
-                                            <div class="dropdown">
-                                                <div class="select">
-                                                    <span>Showroom</span>
-                                                    <i class="fa fa-chevron-down"></i>
-                                                </div>
-                                                <input type="hidden" name="showroom">
-                                                <ul class="dropdown-menu">
-                                                    <li id="male">Male</li>
-                                                    <li id="female">Female</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-
-                                        <div class="form__select">
-                                            <span class="title">Xe đang sở hữu</span>
-                                            <div class="dropdown">
-                                                <div class="select">
-                                                    <span>{{ __("Vui lòng chọn") }}</span>
-                                                    <i class="fa fa-chevron-down"></i>
-                                                </div>
-                                                <input type="hidden" name="your_car">
-                                                <ul class="dropdown-menu">
-                                                    <li id="male">Male</li>
-                                                    <li id="female">Female</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-
-                                        <div class="form__select">
-                                            <span class="title">Quý khách đã sở hữu xe trong bao lâu</span>
-                                            <div class="dropdown">
-                                                <div class="select">
-                                                    <span>{{ __("Vui lòng chọn") }}</span>
-                                                    <i class="fa fa-chevron-down"></i>
-                                                </div>
-                                                <input type="hidden" name="district">
-                                                <ul class="dropdown-menu">
-                                                    <li id="male">Male</li>
-                                                    <li id="female">Female</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-
-                                        <div class="form__select">
-                                            <span class="title">Quý khách dự định mua xe khi nào?</span>
-                                            <div class="dropdown">
-                                                <div class="select">
-                                                    <span>{{ __("Vui lòng chọn") }}</span>
-                                                    <i class="fa fa-chevron-down"></i>
-                                                </div>
-                                                <input type="hidden" name="district">
-                                                <ul class="dropdown-menu">
-                                                    <li id="male">Male</li>
-                                                    <li id="female">Female</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-
-                                        <div class="form__select">
-                                            <span class="title">Quý khách muốn thử loại xe nào?</span>
-                                            <div class="dropdown">
-                                                <div class="select">
-                                                    <span>{{ __("Vui lòng chọn") }}</span>
-                                                    <i class="fa fa-chevron-down"></i>
-                                                </div>
-                                                <input type="hidden" name="district">
-                                                <ul class="dropdown-menu">
-                                                    <li id="male">Male</li>
-                                                    <li id="female">Female</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div> --}}
                                 </div>
                             </div>
                             <div class="box-picture">
@@ -308,19 +136,19 @@
                         </div>
 
                         <div class="form-group form-check font15 font-pri reminder">
-                            <input type="checkbox" id="html">
+                            <input type="checkbox" required checked id="html">
                             <label for="html">
                                 {{ __("Tôi trên 18 tuổi và tôi có bằng lái xe B2 hợp lệ. *") }}
                             </label>
                         </div>
                         <div class="form-group form-check font15 font-pri">
-                            <input type="checkbox" id="css">
+                            <input type="checkbox" required checked id="css">
                             <label for="css">
                                 {{ __("Tôi theo đây đồng ý để THACO (và các công ty liên kết, đối tác của THACO) thu thập, sử dụng, hiệu chỉnh, lưu trữ, sao chép thông tin của tôi, cung cấp thông tin trên cho bên thứ ba có liên quan (bao gồm nhưng không giới hạn các công ty thuộc Tập đoàn BMW) nhằm mục đích chăm sóc khách hàng, gửi thiệp mời đến các sự kiện, các hoạt động tiếp thị, nghiên cứu và các mục đích thống kê khác giữa các đối tác hoặc công ty thành viên của tập đoàn BMW. Tôi cũng biết rằng thông tin cá nhân của tôi sẽ được sử dụng dựa trên luật bảo vệ sự riêng tư hiện hành.") }}
                             </label>
                         </div>
                         <div class="form-group form-check font15 font-pri">
-                            <input type="checkbox" id="javascript">
+                            <input type="checkbox" required checked id="javascript">
                             <label for="javascript">
                                 {{ __("Tôi cũng đồng ý để THACO (và các công ty liên kết, đối tác của THACO) liên hệ với tôi nhằm mục đích thực hiện chương trình quảng cáo chăm sóc khách hàng qua số điện thoại/ email và thông tin liên hệ khác mà tôi đã đăng ký (dù tôi đã đăng ký danh sách không quảng cáo hay không)") }}
                             </label>
@@ -339,33 +167,57 @@
 @endif
 
 <script>
-    /*Dropdown Menu*/
-    $('.dropdown').click(function () {
-        $(this).attr('tabindex', 1).focus();
-        $(this).toggleClass('active');
-        $(this).find('.dropdown-menu').slideToggle(300);
-    });
-    $('.dropdown').focusout(function () {
-        $(this).removeClass('active');
-        $(this).find('.dropdown-menu').slideUp(300);
-    });
-    $('.dropdown .dropdown-menu li').click(function () {
-        $(this).parents('.dropdown').find('span').text($(this).text());
-        $(this).parents('.dropdown').find('input').attr('value', $(this).attr('id'));
-    });
+    window.__urlAjaxDistrict = `{{ Language::getLocalizedURL(Language::getCurrentLocale(), route('public.test-drive.get-district')) }}`
+    window.__urlAjaxShowroom = `{{ Language::getLocalizedURL(Language::getCurrentLocale(), route('public.test-drive.get-showroom')) }}`
+    window.__urlAjaxCar = `{{ Language::getLocalizedURL(Language::getCurrentLocale(), route('public.test-drive.get-car')) }}`
 
-    /*End Dropdown Menu*/
-    $('.dropdown-menu li').click(function () {
-        var input = '<strong>' + $(this).parents('.dropdown').find('input').val() + '</strong>',
-            msg = '<span class="msg">Hidden input value: ';
-        $('.msg').html(msg + input + '</span>');
-    });
+    $(document).ready(function() {
+        $(document).on('change', '#province', async function() {
+            const value = $(this).val()
+            await changeDistrict(value)
+            await changeShowroom(value)
+        })
 
-    $(document).on('click', '.form-register .nav-link', function() {
-        const value = $(this).data('type')
-        const input = $('.form-register #type-register-input')
-        if(input) {
-            input.val(value)
+        async function changeDistrict(value) {
+            const response = await $.get(window.__urlAjaxDistrict, {
+                state_id: value
+            })
+
+            const { data } = response.data
+            if(data instanceof Array) {
+                let result = data.map((el, index) => `<option value="${el.id}" selected>${ el.name }</option>`)
+                $('#district').html(result.join("")).trigger('change')
+            }
+        }
+
+        $(document).on('change', '#showroom', async function() {
+            const value = $(this).val()
+            await changeCar(value)
+        })
+
+        async function changeShowroom(value) {
+            const response = await $.get(window.__urlAjaxShowroom, {
+                state_id: value
+            })
+
+            const { data } = response.data
+            if(data instanceof Array) {
+                let result = data.map((el, index) => `<option value="${el.id}" selected>${ el.name }</option>`)
+                $('#showroom').html(result.join("")).trigger('change')
+            }
+        }
+
+        async function changeCar(value) {
+            const response = await $.get(window.__urlAjaxCar, {
+                showroom_id: value
+            })
+
+            const { data } = response.data
+            if(data instanceof Array) {
+                let result = data.map((el, index) => `<option value="${el.id}" selected>${ el.name }</option>`)
+                $('#want_to_buy').html(result.join("")).trigger('change')
+                $('#test_drive').html(result.join("")).trigger('change')
+            }
         }
     })
 </script>

@@ -1,0 +1,9 @@
+{
+    "name": "TestDrive",
+    "namespace": "Platform\\TestDrive\\",
+    "provider": "Platform\\TestDrive\\Providers\\TestDriveServiceProvider",
+    "author": "Laravel Developer Team",
+    "url": "https://developers.laravel.com",
+    "version": "1.0",
+    "description": "The description for module test_drive"
+}

@@ -15,7 +15,7 @@ use Illuminate\Routing\Events\RouteMatched;
 use Platform\Car\Providers\HookServiceProvider;
 use Platform\Base\Traits\LoadAndPublishDataTrait;
 use Platform\Brand\Repositories\Interfaces\BrandInterface;
-use Platform\Car\Repositories\Interfaces\CarCategoryInterface;
+use Platform\CarCategory\Repositories\Interfaces\CarCategoryInterface;
 
 class CarServiceProvider extends ServiceProvider
 {
@@ -59,7 +59,7 @@ class CarServiceProvider extends ServiceProvider
 
         Event::listen(RouteMatched::class, function () {
             if (defined('LANGUAGE_MODULE_SCREEN_NAME')) {
-               \Language::registerModule([Car::class]);
+                \Language::registerModule([Car::class]);
                 \Language::registerModule([\Platform\Car\Models\Color::class]);
                 \Language::registerModule([\Platform\Car\Models\Accessory::class]);
                 \Language::registerModule([\Platform\Car\Models\Equipment::class]);
@@ -67,24 +67,24 @@ class CarServiceProvider extends ServiceProvider
 
 
             dashboard_menu()
-            ->registerItem([
-                'id'          => 'cms-plugins-car-menu',
-                'priority'    => 4,
-                'parent_id'   => null,
-                'name'        => 'Cars',
-                'icon'        => 'fa fa-car',
-                'url'         => route('car.index'),
-                'permissions' => ['car.index'],
-            ])
-            ->registerItem([
-                'id'          => 'cms-plugins-car',
-                'priority'    => 5,
-                'parent_id'   => 'cms-plugins-car-menu',
-                'name'        => 'plugins/car::car.name',
-                'icon'        => 'fa fa-list',
-                'url'         => route('car.index'),
-                'permissions' => ['car.index'],
-            ]);
+                ->registerItem([
+                    'id'          => 'cms-plugins-car-menu',
+                    'priority'    => 4,
+                    'parent_id'   => null,
+                    'name'        => 'Cars',
+                    'icon'        => 'fa fa-car',
+                    'url'         => route('car.index'),
+                    'permissions' => ['car.index'],
+                ])
+                ->registerItem([
+                    'id'          => 'cms-plugins-car',
+                    'priority'    => 5,
+                    'parent_id'   => 'cms-plugins-car-menu',
+                    'name'        => 'plugins/car::car.name',
+                    'icon'        => 'fa fa-list',
+                    'url'         => route('car.index'),
+                    'permissions' => ['car.index'],
+                ]);
 
             dashboard_menu()->registerItem([
                 'id'          => 'cms-plugins-color',
@@ -129,13 +129,13 @@ class CarServiceProvider extends ServiceProvider
                         ];
                     })
                     ->registerModule(CarCategory::class)
-                        ->registerRule('basic', trans('plugins/car::car-category.name'), CarCategory::class, function () {
-                            return $this->app->make(CarCategoryInterface::class)->pluck('app_car_categories.name', 'app_car_categories.id');
-                        })
-                        ->expandRule('other', trans('plugins/custom-field::rules.model_name'), 'model_name', function () {
-                            return [
-                                CarCategory::class => trans('plugins/car::car-category.name'),
-                            ];
+                    ->registerRule('basic', trans('plugins/car::car-category.name'), CarCategory::class, function () {
+                        return $this->app->make(CarCategoryInterface::class)->pluck('app_car_categories.name', 'app_car_categories.id');
+                    })
+                    ->expandRule('other', trans('plugins/custom-field::rules.model_name'), 'model_name', function () {
+                        return [
+                            CarCategory::class => trans('plugins/car::car-category.name'),
+                        ];
                     });;
             }
             \Gallery::registerModule([\Platform\Car\Models\Color::class]);

@@ -105,6 +105,7 @@
             width: 100%;
             display: none;
             background: #fff;
+            @include mobileMarginTop(15, "+");
             
             h1{
                 text-transform: uppercase;

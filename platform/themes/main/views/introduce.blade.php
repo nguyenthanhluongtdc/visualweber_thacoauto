@@ -97,7 +97,7 @@
                                         <img loading="lazy" src="{{Storage::disk('public')->exists(get_field($page,'homepage_production_block_1_logo')) ? get_image_url(get_field($page,'homepage_production_block_1_logo')) : RvMedia::getDefaultImage()}}"
                                             alt="Icon R&D">
                                     </div>
-                                    <div class="name font20 fontmb-small">
+                                    <div class="name font30 fontmb-small">
                                         {!! get_field($page, 'homepage_production_block_1') !!}
                                     </div>
                                 </div>
@@ -108,7 +108,7 @@
                                         <img loading="lazy" src="{{Storage::disk('public')->exists(get_field($page,'homepage_production_block_2_logo')) ? get_image_url(get_field($page,'homepage_production_block_2_logo')) : RvMedia::getDefaultImage()}}"
                                             alt="Icon sản xuất lắp ráp">
                                     </div>
-                                    <div class="name font20 fontmb-small">
+                                    <div class="name font30 fontmb-small">
                                         {!! get_field($page, 'homepage_production_block_2') !!}
                                     </div>
                                 </div>
@@ -119,7 +119,7 @@
                                         <img loading="lazy" src="{{Storage::disk('public')->exists(get_field($page,'homepage_production_block_3_logo')) ? get_image_url(get_field($page,'homepage_production_block_3_logo')) : RvMedia::getDefaultImage()}}"
                                             alt="Icon công nghiệp hỗ trợ & cơ khí">
                                     </div>
-                                    <div class="name font20 fontmb-small">
+                                    <div class="name font30 fontmb-small">
                                         {!! get_field($page, 'homepage_production_block_3') !!}
                                     </div>
                                 </div>
@@ -130,7 +130,7 @@
                                         <img loading="lazy" src="{{Storage::disk('public')->exists(get_field($page,'homepage_production_block_4_logo')) ? get_image_url(get_field($page,'homepage_production_block_4_logo')) : RvMedia::getDefaultImage()}}"
                                             alt="Icon xuất khẩu">
                                     </div>
-                                    <div class="name font20 fontmb-small">
+                                    <div class="name font30 fontmb-small">
                                         {!! get_field($page, 'homepage_production_block_4') !!}
                                     </div>
                                 </div>
@@ -163,7 +163,7 @@
                                         <img loading="lazy" src="{{ Storage::disk('public')->exists(get_field($page,'homepage_business_block_1_logo')) ? get_image_url(get_field($page,'homepage_business_block_1_logo')) : RvMedia::getDefaultImage()}}"
                                             alt="Icon du lịch">
                                     </div>
-                                    <div class="name font20 fontmb-small">
+                                    <div class="name font30 fontmb-small">
                                         {!! get_field($page, 'homepage_business_block_1') !!}
                                     </div>
                                 </div>
@@ -174,7 +174,7 @@
                                         <img loading="lazy" src="{{ Storage::disk('public')->exists(get_field($page,'homepage_business_block_2_logo')) ? get_image_url(get_field($page,'homepage_business_block_2_logo')) : RvMedia::getDefaultImage()}}"
                                             alt="Icon ô tô & xe máy">
                                     </div>
-                                    <div class="name font20 fontmb-small">
+                                    <div class="name font30 fontmb-small">
                                         {!! get_field($page, 'homepage_business_block_2') !!}
                                     </div>
                                 </div>
@@ -185,7 +185,7 @@
                                         <img loading="lazy" src="{{ Storage::disk('public')->exists(get_field($page,'homepage_business_block_3_logo')) ? get_image_url(get_field($page,'homepage_business_block_3_logo')) : RvMedia::getDefaultImage()}}"
                                             alt="Icon xe tải">
                                     </div>
-                                    <div class="name font20 fontmb-small">
+                                    <div class="name font30 fontmb-small">
                                         {!! get_field($page, 'homepage_business_block_3') !!}
                                     </div>
                                 </div>
@@ -196,7 +196,7 @@
                                         <img loading="lazy" src="{{ Storage::disk('public')->exists(get_field($page,'homepage_business_block_4_logo')) ? get_image_url(get_field($page,'homepage_business_block_4_logo')) : RvMedia::getDefaultImage()}}"
                                             alt="Icon xe bus">
                                     </div>
-                                    <div class="name font20 fontmb-small">
+                                    <div class="name font30 fontmb-small">
                                         {!! get_field($page, 'homepage_business_block_4') !!}
                                     </div>
                                 </div>
@@ -207,7 +207,7 @@
                                         <img loading="lazy" src="{{ Storage::disk('public')->exists(get_field($page,'homepage_business_block_5_logo')) ? get_image_url(get_field($page,'homepage_business_block_5_logo')) : RvMedia::getDefaultImage()}}"
                                             alt="Icon dịch vụ phụ tùng">
                                     </div>
-                                    <div class="name font20 fontmb-small">
+                                    <div class="name font30 fontmb-small">
                                         {!! get_field($page, 'homepage_business_block_5') !!}
                                     </div>
                                 </div>
@@ -284,7 +284,7 @@
                                         <img loading="lazy" src="{{Storage::disk('public')->exists(has_sub_field($row, 'symbol')) ? get_image_url(has_sub_field($row, 'symbol')) : RvMedia::getDefaultImage()}}"
                                             alt=" {!! has_sub_field($row, 'name') !!}">
                                     </div>
-                                    <div class="name font20 fontmb-small">
+                                    <div class="name font30 fontmb-small">
                                         {!! has_sub_field($row, 'name') !!}
                                     </div>
                                 </div>

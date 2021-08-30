@@ -44,7 +44,7 @@ class DepositServiceProvider extends ServiceProvider
                 'priority'    => 5,
                 'parent_id'   => null,
                 'name'        => 'plugins/deposit::deposit.name',
-                'icon'        => 'fa fa-list',
+                'icon'        => 'fas fa-money-check',
                 'url'         => route('deposit.index'),
                 'permissions' => ['deposit.index'],
             ]);

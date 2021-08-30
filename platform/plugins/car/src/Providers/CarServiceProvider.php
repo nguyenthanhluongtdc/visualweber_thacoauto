@@ -71,7 +71,7 @@ class CarServiceProvider extends ServiceProvider
                     'id'          => 'cms-plugins-car-menu',
                     'priority'    => 4,
                     'parent_id'   => null,
-                    'name'        => 'Cars',
+                    'name'        => 'plugins/car::car.name',
                     'icon'        => 'fa fa-car',
                     'url'         => route('car.index'),
                     'permissions' => ['car.index'],
@@ -81,7 +81,6 @@ class CarServiceProvider extends ServiceProvider
                     'priority'    => 5,
                     'parent_id'   => 'cms-plugins-car-menu',
                     'name'        => 'plugins/car::car.name',
-                    'icon'        => 'fa fa-list',
                     'url'         => route('car.index'),
                     'permissions' => ['car.index'],
                 ]);
@@ -91,7 +90,6 @@ class CarServiceProvider extends ServiceProvider
                 'priority'    => 6,
                 'parent_id'   => 'cms-plugins-car-menu',
                 'name'        => 'plugins/car::color.name',
-                'icon'        => 'fa fa-list',
                 'url'         => route('color.index'),
                 'permissions' => ['color.index'],
             ]);
@@ -101,7 +99,6 @@ class CarServiceProvider extends ServiceProvider
                 'priority'    => 7,
                 'parent_id'   => 'cms-plugins-car-menu',
                 'name'        => 'plugins/car::accessory.name',
-                'icon'        => 'fa fa-list',
                 'url'         => route('accessory.index'),
                 'permissions' => ['accessory.index'],
             ]);
@@ -111,7 +108,6 @@ class CarServiceProvider extends ServiceProvider
                 'priority'    => 8,
                 'parent_id'   => 'cms-plugins-car-menu',
                 'name'        => 'plugins/car::equipment.name',
-                'icon'        => 'fa fa-list',
                 'url'         => route('equipment.index'),
                 'permissions' => ['equipment.index'],
             ]);

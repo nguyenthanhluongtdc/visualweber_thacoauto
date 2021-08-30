@@ -8,7 +8,7 @@ use Platform\CarCategory\Models\CarCategory;
 use Illuminate\Support\ServiceProvider;
 use Platform\Base\Enums\BaseStatusEnum;
 use Platform\CarCategory\Providers\CarServiceProvider;
-use Platform\Car\Services\CarCategoryService;
+use Platform\CarCategory\Services\CarCategoryService;
 
 class HookServiceProvider extends ServiceProvider
 {

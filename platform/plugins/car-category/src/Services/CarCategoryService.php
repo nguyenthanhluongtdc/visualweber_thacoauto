@@ -1,6 +1,6 @@
 <?php
 
-namespace Platform\Car\Services;
+namespace Platform\CarCategory\Services;
 
 use Platform\Base\Enums\BaseStatusEnum;
 use Platform\SeoHelper\SeoOpenGraph;

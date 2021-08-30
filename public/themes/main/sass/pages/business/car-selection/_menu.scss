@@ -11,7 +11,7 @@
     }
     padding-top: 0;
   }
-  margin: 1.8% 0 2%;
+  margin: 0% 0 2%;
   .step-menu {
     display: flex;
     background-color: #f6f6f6;
@@ -36,16 +36,16 @@
       @media only screen and (max-width: 1080px) {
         padding: 3% 0;
         margin-left: 0%;
-        font-size: 28px;
+      
         width: 100%;
       }
       @media only screen and (max-width: 992px) {
         margin-left: -1%;
-        font-size: 25px;
+       
         padding: 4% 0;
       }
       @media only screen and (max-width: 767px) {
-        font-size: 15px;
+       
         margin-left: 2%;
       }
       @media only screen and (max-width: 600px) {

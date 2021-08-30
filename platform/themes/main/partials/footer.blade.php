@@ -11,7 +11,7 @@
                 <h2 class="name-company font-pri-bold color-pri font32">{!! theme_option('name-company') !!}</h2>
                 <p class="address font-pri font18">
                     <span>{{__('Address')}}:</span>
-                    <span>{!! theme_option('address-company') !!} <a href="{!! theme_option('map-company') !!}" target="_blank" `rel="noopener">( {{__("Find location") }} )</a></span>
+                    <span>{!! theme_option('address-company') !!} <a href="{!! theme_option('map-company') !!}" target="_blank" `rel="noopener">({{__("Find location") }})</a></span>
                 </p>
                 <p class="tax-code font-pri font18">
                     <span>{{__('Tax Code')}}:</span>

@@ -126,7 +126,6 @@ class PublicController extends BaseController
         EquipmentInterface $equipmentInterface
     ) {
         $data['car'] = $this->getCar($car);
-
         $dataPromotions = $promotionsInterface->getModel()
             ->whereHas('cars', function ($q) use ($data) {
                 $q->where('app_cars.id', $data['car']->id);
@@ -155,6 +154,15 @@ class PublicController extends BaseController
             $data['accessories'] = $accessoryInterface->advancedGet([
                 "condition" => [
                     ["id", "IN", request('accessories')]
+                ],
+                "select" => ["*"]
+            ]);
+        }
+
+        if (request('promotions') && is_array(request('promotions'))) {
+            $data['promotionsArray'] = $promotionsInterface->advancedGet([
+                "condition" => [
+                    ["id", "IN", request('promotions')]
                 ],
                 "select" => ["*"]
             ]);
@@ -210,6 +218,14 @@ class PublicController extends BaseController
             $data['accessories'] = $accessoryInterface->advancedGet([
                 "condition" => [
                     ["id", "IN", request('accessories')]
+                ],
+                "select" => ["*"]
+            ]);
+        }
+        if (request('promotions') && is_array(request('promotions'))) {
+            $data['promotionsArray'] = $promotionsInterface->advancedGet([
+                "condition" => [
+                    ["id", "IN", request('promotions')]
                 ],
                 "select" => ["*"]
             ]);

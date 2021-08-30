@@ -95,9 +95,49 @@
                         </div>
                     </div>
                 </div>
+                @php
+                    $priceDiscountTotal = 0;
+                @endphp
+                @if(isset($promotionsArray) && !blank($promotionsArray))
+                <div class="card">
+                    <div class="card-header" id="heading_accessory">
+                        @php
+                            $priceDiscountArray = [];
+                            foreach ($promotionsArray as $item){
+                                array_push($priceDiscountArray, get_discount_price($item, $car->price));
+                            }
+                            $priceDiscountTotal = array_sum($priceDiscountArray);
+                            if($priceDiscountTotal > $car->price){
+                                $priceDiscountTotal = $car->price;
+                            }
+                        @endphp
+                        <div class="d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#collapse_promotions" aria-expanded="true" aria-controls="collapse_promotions">
+                            <h5 class="mb-0 plus fontmb-small">{{ __('Chương trình khuyến mãi') }}</h5>
+                            <p class="fontmb-small">
+                                {{ '-'.number_format($priceDiscountTotal, 0, '.', ',') . 'đ' ?? '0đ' }}
+                            </p>
+                        </div>
+                    </div>
+                    <div id="collapse_promotions" class="collapse" aria-labelledby="heading_accessory" data-parent="#accordion">
+
+                            <div class="card-body">
+                                @foreach ($promotionsArray as $item)
+                                    <p class="fontmb-small">{{ $item->name }}</p>
+                                    <p class="fontmb-small">{{ get_discount_price($item, $car->price) ? '-'.number_format(get_discount_price($item, $car->price), 0, '.', ',') . 'đ' : '-0đ' }}</p>
+                                @endforeach
+                            </div>
+                    </div>
+                </div>
+                @endif
+
+                @php
+                    $promotion = 0;
+                @endphp
+
+                @if(isset($car->promotion) && $car->promotion > 0)
                 <div class="card">
                     @php
-                        $promotion = $car->promotion ?? 0;
+                        $promotion = $car->promotion;
                     @endphp
                     <div class="card-header">
                         <div class="d-flex justify-content-between align-items-center">
@@ -108,6 +148,7 @@
                         </div>
                     </div>
                 </div>
+                @endif
                 <div class="card">
                     <div class="card-header" id="headingOne">
                         <div class="pt-0 py-0"></div>
@@ -117,7 +158,7 @@
             <div class="deposit__info-total">
                 <h4 class="font18 MyriadPro-BoldCond text-uppercase mb-1 fontmb-middle">{{ __('tổng chi phí dự tính') }}</h4>
                 @php
-                    $total = $equipments_price + $accessories_price + $price + $fee + $fee_license_plate - $promotion;
+                    $total = $equipments_price + $accessories_price + $price + $fee + $fee_license_plate - $promotion - $priceDiscountTotal;
                 @endphp
                 <p class="font18 MyriadPro-BoldCond text-uppercase d-block mb-5 text-danger mb-sm-4 mb-md-5 fontmb-middle">{{ number_format($total, 0, '.', ',') . 'đ' ?? '0đ' }}</p>
                 <button class="deposit__info-button btn-block btn btn-primary MyriadPro-Regular font18 fontmb-small" type="submit">{{ __("Gửi yêu cầu báo giá") }}</button>

@@ -26,6 +26,9 @@ class Promotions extends BaseModel
         'name',
         'description',
         'order',
+        'discount_percent',
+        'max_discount',
+        'direct_discount',
         'image',
         'status',
     ];

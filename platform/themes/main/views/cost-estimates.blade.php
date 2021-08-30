@@ -11,19 +11,19 @@
                 <input type="hidden" value="{{ $item }}" name="{{ $key }}" />
             @endif
         @endforeach
-        <div class="col-sm-12 col-md-8 mb-4">
-            <div class="deposit__form no-grid">
-                <h2 class="font18 MyriadPro-BoldCond text-uppercase mb-3">{{ __('Chọn tỉnh thành đăng ký xem') }}</h2>
+        <div class="col-sm-12 col-lg-8 mb-4">
+            <div class="deposit__form no-grid"> 
+                <h2 class="font18 MyriadPro-BoldCond text-uppercase mb-3 fontmb-middle">{{ __('Chọn tỉnh thành đăng ký xem') }}</h2>
                 <div class="form-group max-w-4">
-                    <select id="select_city" value="" name="city" class="mb-3 ui fluid selection dropdown"
-                        class="font20 font-mi-cond js-example-disabled-results">
+                    <select id="select_city" value="" name="city" class="mb-3 ui fluid selection dropdown fontmb-small"
+                        class="font20 font-mi-cond js-example-disabled-results fontmb-small">
                         <option selected disabled value="">{{ __("Công ty tỉnh thành") }}</option>
                         @foreach (is_plugin_active('location') ? get_cities() : collect() as $key => $item)
                             <option value="{{ $key }}">{{ $item }}</option>
                         @endforeach
-                    </select>
+                    </select> 
                 </div>
-                <h2 class="font18 MyriadPro-BoldCond text-uppercase mb-3 mt-4">{{ __('Chương trình khuyến mãi') }}</h2>
+                <h2 class="font18 MyriadPro-BoldCond text-uppercase mb-3 mt-4 fontmb-middle">{{ __('Chương trình khuyến mãi') }}</h2>
                     @if(isset($promotions) && !blank($promotions))
                         <div class="promotion__list">
                             @foreach ($promotions as $item)
@@ -31,7 +31,7 @@
                                     <img loading="lazy" src="{{ RvMedia::getImageUrl($item->image, null, false, RvMedia::getDefaultImage()) }}"  alt="{{ $item->name }}" width="160" height="117" class="img-fluid" />
                                     <div class="custom-control mt-2 span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
                                         <input type="checkbox" name="promotions[]" value="{{ $item->id }}" class="custom-control-input" id="customControlInline_{{ $item->id }}_promotions">
-                                        <label class="custom-control-label" for="customControlInline_{{ $item->id }}_promotions">{{ $item->name }}</label>
+                                        <label class="custom-control-label fontmb-small" for="customControlInline_{{ $item->id }}_promotions">{{ $item->name }}</label>
                                     </div>
                                 </div>
                             @endforeach
@@ -41,7 +41,7 @@
                             {!! Theme::partial('templates.no-content') !!}
                         </div>
                     @endif
-                <h2 class="font18 MyriadPro-BoldCond text-uppercase mb-3 mt-4">{{ __('Yêu cầu tư vấn Thêm') }}</h2>
+                <h2 class="font18 MyriadPro-BoldCond text-uppercase mb-3 mt-4 fontmb-middle">{{ __('Yêu cầu tư vấn Thêm') }}</h2>
                 @if(isset($consultancies) && !blank($consultancies))
                     @foreach ($consultancies as $item)
                         <div class="custom-control mt-2 span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
@@ -54,14 +54,14 @@
                         {!! Theme::partial('templates.no-content') !!}
                     </div>
                 @endif
-                <h2 class="font18 MyriadPro-BoldCond text-uppercase mb-3 mt-4">{{ __("Phương thức thanh toán") }}</h2>
+                <h2 class="font18 MyriadPro-BoldCond text-uppercase mb-3 mt-4 fontmb-middle">{{ __("Phương thức thanh toán") }}</h2>
                 <div class="custom-control mt-2 span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
                     <input type="radio" name="type_payment" checked value="in_showroom" class="custom-control-input" id="customControlInline7">
-                    <label class="custom-control-label" for="customControlInline7">{{ __("Thanh toán tại đại lý") }}</label>
+                    <label class="custom-control-label fontmb-small" for="customControlInline7">{{ __("Thanh toán tại đại lý") }}</label>
                 </div>
                 <div class="custom-control span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
                     <input type="radio" name="type_payment" value="is_installment" class="custom-control-input" id="customControlInline8">
-                    <label class="custom-control-label" for="customControlInline8">{{ __("Vai trả góp ngân hàng") }} <a data-fancybox data-src="#installment-modal" href="javascript:;" class="d-none d-inline-bloc ml-2"><u>{{ __("Chi tiết chi phí") }}</u></a></label>
+                    <label class="custom-control-label fontmb-small" for="customControlInline8">{{ __("Vai trả góp ngân hàng") }} <a data-fancybox data-src="#installment-modal" href="javascript:;" class="d-none d-inline-bloc ml-2"><u>{{ __("Chi tiết chi phí") }}</u></a></label>
                 </div>
             </div>
             @includeIf('theme.main::views.pages.cost-estimate.installment')

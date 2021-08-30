@@ -19,7 +19,7 @@
       align-items: center;
       @media only screen and (max-width: 1080px){
         margin-top: -2%;
-        .item-1, .item-2{
+        .item-1, .item-3{
           display: none;
         }
       }
@@ -114,9 +114,7 @@
         outline: none;
        
       }
-      textarea{
-       
-      }
+      
       .dropdown {
         height: 41px;
         outline: none;

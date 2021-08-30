@@ -270,7 +270,7 @@
                         &:hover {
                             a {
                                 &::after {
-                                    width: 70%;
+                                    width: 60%;
                                 }
                             }
                         }
@@ -283,14 +283,14 @@
                         }
                     }
 
-                    .active {
+                    .active, &:hover {
                         a {
                             &::after {
                                 width: 60%;
                             }
                         }
                     }
-
+                    
 
                 }
 

@@ -1,5 +1,5 @@
 <div class="section-production-assemble-tab">
-    <div class="mechanical-tab-wrapper" style="background-image:url('{{ Theme::asset()->url('images/mechandical/bg-tab2.png') }}')">
+    <div class="mechanical-tab-wrapper" style="background-image:url('{{ Theme::asset()->url('images/mechandical/bg-tab2.png') }}'); background-repeat: no-repeat;">
         <div class="container-remake ">
             <div class="mechanical-tab__content product-assemble pt-60 pb-60" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease-in-out" data-aos-delay="50">
                 <div class="list-group tab-field" id="list-tab" role="tablist">
@@ -120,7 +120,7 @@
 </div>
 
 <div class="section-production-assemble-tab-mobile">
-    <div class="mechanical-tab-wrapper" style="background-image:url('{{ Theme::asset()->url('images/mechandical/bg-tab2.png') }}')">
+    <div class="mechanical-tab-wrapper" style="background-image:url('{{ Theme::asset()->url('images/mechandical/bg-tab2.png') }}'); background-repeat: no-repeat;">
         <div class="container-remake ">
             <div class="mechanical-tab__content product-assemble row pt-60 pb-60" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease-in-out" data-aos-delay="50">
 

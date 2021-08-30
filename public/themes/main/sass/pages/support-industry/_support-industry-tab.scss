@@ -1,7 +1,7 @@
 .section-support-industry-tab {
 
     .mechanical-tab-wrapper {
-       
+       background-size: cover;
         .mechanical-tab__content{
 
             @media (min-width: 1081px) {
@@ -36,14 +36,19 @@
             }
            
             .item-top {
-
+                
                 >div {
                     .content-bottom {
                         display: flex;
                         flex-wrap: wrap;
                         @include paddingX(20);
                         @include paddingY(15);
-
+                        .top{
+                            @include heightResponsiveDesktop(170);
+                            @media (max-width: 1080px){
+                                height: auto;
+                            }
+                        }
                         .read-more {
                             margin: 0;
                             padding: 0;
@@ -63,7 +68,7 @@
                         
                         }
                         .description{
-                            @include split_str(3);
+                            @include split_str(5);
                         }
                     }
                 }

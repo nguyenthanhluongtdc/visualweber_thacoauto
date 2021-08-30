@@ -431,3 +431,19 @@
     height: calc(100% -  #{calculatorPixel($size, 1368)}px);
   }
 }
+
+@mixin heightResponsiveDesktop($size) {
+  height: #{$size}px;
+  @media only screen and (max-width: 1680px) {
+    height: #{calculatorPixel($size, 1680)}px;
+  }
+  @media only screen and (max-width: 1440px) {
+    height: #{calculatorPixel($size, 1440)}px;
+  }
+  @media only screen and (max-width: 1368px) {
+    height: #{calculatorPixel($size, 1368)}px;
+  }
+  @media only screen and (max-width: 1199px) {
+    height: #{calculatorPixel($size, 1199)}px;
+  }
+}

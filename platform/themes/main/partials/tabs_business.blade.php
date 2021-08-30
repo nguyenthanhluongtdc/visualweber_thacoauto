@@ -38,10 +38,10 @@
                     <h4 class="font20 mb-2 text-uppercase fontmb-middle">
                         {!! $item->name !!}
                     </h4>
-                    <p class="font-pri font15 mb-2 fontmb-little">
+                    <p class="font-pri font15 mb-2 fontmb-little description">
                         {!! $manufacturing->description !!}
                     </p>
-                    <div class="read-more font18"><a href="{{$manufacturing->url}}"> {!! __('Readmore') !!} </a></div>
+                    <div class="read-more font18"><a href="{{$manufacturing->url}}" target="_blank"> {!! __('Readmore') !!} </a></div>
                 </div>
             </div>
         @endforeach

@@ -8,39 +8,41 @@
 @endphp
 <section class="section-car-filter overflow-x-hidden">
     <div class="car-filter container-remake">
-        <h2 class="car-filter__title-mobile font30 font-mi-bold">{{ __("Kiểu dáng xe") }}</h2>
+        <h2 class="car-filter__title text-uppercase fontmb-large font30 font-mi-bold">{{ __("Kiểu dáng xe") }}</h2>
     </div>
     <div class="car-filter--top-mobile">
-        <ul class="car-model font18 font-pri ">
-            <li class="car-model__item {{ request('car_line', '') == '' ? 'active' : ''  }}">
-                <a href="{{route('public.brand.index',[
-                        'slug' => $slug->key,
-                    ])}}" class="text-uppercase">{{ __('Tất cả') }}</a>
-            </li>
-            @foreach (get_vehicles($slug ? $slug->key : null) ?? collect() as $item)
-                <li class="car-model__item" {{ request('car_line', '') == $item->id ? 'active' : ''  }}>
+        <div class="container-remake">
+            <ul class="car-model font18 font-pri ">
+                <li class="car-model__item {{ request('vehicle', '') == '' ? 'active' : ''  }}">
                     <a href="{{route('public.brand.index',[
-                        'slug' => $slug->key,
-                        'vehicle'=>$item->slug
-                    ])}}" class="text-uppercase">{{ $item->name }}</a>
+                            'slug' => $slug->key,
+                        ])}}" class="text-uppercase">{{ __('Tất cả') }}</a>
                 </li>
-            @endforeach
-        </ul>
-        <a href="#" class="font18 font-pri pre-order desktop">{{ __("PRE-ORDER") }}</a>
+                @foreach (get_vehicles($slug ? $slug->key : null) ?? collect() as $item)
+                    <li class="car-model__item {{ request('vehicle', '') == $item->name ? 'active' : ''  }} ">
+                        <a href="{{route('public.brand.index',[
+                            'slug' => $slug->key,
+                            'vehicle'=>$item->slug
+                        ])}}" class="text-uppercase">{{ $item->name }}</a>
+                    </li>
+                @endforeach
+            </ul>
+            <a href="#" class="font18 font-pri pre-order desktop">{{ __("PRE-ORDER") }}</a>
+        </div>
     </div>
     <div class="container-remake">
-            <div class="car-filter">
+            {{-- <div class="car-filter">
                 <h2 class="car-filter__title font30 font-mi-bold text-uppercase">{{ __("Kiểu dáng xe") }}</h2>
-            </div>
+            </div> --}}
             <div class="car-filter--top">
                 <ul class="car-model font18 font-pri car-model">
-                    <li class="car-model__item {{ request('car_line', '') == '' ? 'active' : ''  }}">
+                    <li class="car-model__item {{ request('vehicle', '') == '' ? 'active' : ''  }}">
                         <a href="{{route('public.brand.index',[
                         'slug' => $slug->key,
                         ])}}" class="text-uppercase">{{ __('Tất cả') }}</a>
                     </li>
                     @foreach (get_vehicles($slug ? $slug->key : null) ?? collect() as $item)
-                        <li class="car-model__item" {{ request('car_line', '') == $item->id ? 'active' : ''  }}>
+                        <li class="car-model__item {{ request('vehicle', '') == $item->name ? 'active' : ''  }}">
                             <a href="{{route('public.brand.index',[
                                 'slug' => $slug->key,
                                 'vehicle'=>$item->slug
@@ -61,19 +63,10 @@
                         @empty
                         @endforelse
                     @endif
-                    <div class="slider-range mb-3 ml-0">
-                        <div class="slider-range__value font18 font-pri">
-                            <span>Đến: </span>
-                            <span class="filter-value">{{request()->get('price') ? request()->get('price') : '100000000'}}</span>đ
-                        </div>
-                        <div class="slider-range__frame">
-                        <span class="slider-range__line"></span>
-                            <input name="price" type="range" min="100000000" max="20000000000" step="50000000" value="{{request()->get('price')}}" class="slider" id="myRange" onchange="submitFormPrice(this)">
-                        </div>
-                    </div>
+                    
                     {{-- Showroom --}}
                     <div class="d-flex">
-                        <div>
+                        <div class="mr-5">
                             <select class="font18 font-pri country selectjs d-none" name="country" onchange="submitFormPrice(this)"style="width:200px;">
                                 <option selected disabled>{{ __("Công ty tỉnh thành") }}</option>
                                 @foreach (is_plugin_active('location') ? get_cities() : collect() as $key => $item)
@@ -81,17 +74,27 @@
                                 @endforeach
                             </select>
                         </div>
-                        @if(request()->get('country'))
-                            <div class="ml-3 w-100">
-                                <select class="font18 font-pri showroom selectjs js-example-responsive" name="showroom" onchange="submitFormPrice(this)" style="width:100%;">
-                                    <option selected disabled>{{ __("Đại lý") }}</option>
-                                    @foreach (get_showroom_by_state(request()->get('country'),$slug->key ?? '',request()->get('vehicle')) ?? collect() as $key => $item)
-                                        <option {{ intval(request('showroom', -1)) == $item->slug ? 'selected' : '' }}  value="{{ $item->slug }}">{{ $item->name }}</option>
-                                    @endforeach
-                                </select>
+                        <div class="slider-range mb-3 ml-0">
+                            <div class="slider-range__value font18 font-pri">
+                                <span>Đến: </span>
+                                <span class="filter-value">{{request()->get('price') ? request()->get('price') : '100000000'}}</span>đ
                             </div>
-                        @endif
+                            <div class="slider-range__frame">
+                            <span class="slider-range__line"></span>
+                                <input name="price" type="range" min="100000000" max="20000000000" step="50000000" value="{{request()->get('price')}}" class="slider" id="myRange" onchange="submitFormPrice(this)">
+                            </div>
+                        </div>
                     </div>
+                    @if(request()->get('country'))
+                        <div class="row__country">
+                            <select class="font18 font-pri showroom selectjs js-example-responsive" name="showroom" onchange="submitFormPrice(this)" style="width: 200px;">
+                                <option selected disabled>{{ __("Đại lý") }}</option>
+                                @foreach (get_showroom_by_state(request()->get('country'),$slug->key ?? '',request()->get('vehicle')) ?? collect() as $key => $item)
+                                    <option {{ intval(request('showroom', -1)) == $item->slug ? 'selected' : '' }}  value="{{ $item->slug }}">{{ $item->name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    @endif
                     {{-- End --}}
 
             </form>

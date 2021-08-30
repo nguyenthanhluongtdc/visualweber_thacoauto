@@ -25,27 +25,27 @@
         &__title {
             margin-bottom: 2.5%;
 
-            @media only screen and (max-width: 1080px) {
-                display: none;
-                font-size: 28px;
+            // @media only screen and (max-width: 1080px) {
+            //     display: none;
+            //     font-size: 28px;
 
-            }
+            // }
 
-            @media only screen and (max-width: 992px) {
+            // @media only screen and (max-width: 992px) {
 
-                font-size: 25px;
+            //     font-size: 25px;
 
-            }
+            // }
 
-            @media only screen and (max-width: 767px) {
+            // @media only screen and (max-width: 767px) {
 
-                font-size: 20px;
-            }
+            //     font-size: 20px;
+            // }
 
-            @media only screen and (max-width: 600px) {
+            // @media only screen and (max-width: 600px) {
 
-                font-size: 15px;
-            }
+            //     font-size: 15px;
+            // }
         }
 
         &__title-mobile {
@@ -98,6 +98,24 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
+
+                    a {
+                        color: #2E3A41;
+                        position: relative;
+                    }
+
+                    &.active {
+                        a:after {
+                            position: absolute;
+                            content: "";
+                            width: 80%;
+                            height: 2px;
+                            bottom: 0;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            background-color: $color-primary;
+                        }
+                    }
 
                     // @media only screen and (max-width: 1080px){
                     //     width: 15.5vw;
@@ -204,7 +222,7 @@
                 .car-model {
                     display: flex;
                     background-color: #f6f6f6;
-
+                    @include mobileMarginX(55, "-");
                     &__item {
                         margin-left: 4.5%;
                         margin-right: -5%;
@@ -212,16 +230,9 @@
                         justify-content: center;
                         align-items: center;
 
-                        @media only screen and (max-width: 992px) {
-                            margin-left: 3.5%;
-                            margin-right: -7.5%;
-
-                        }
-
-                        @media only screen and (max-width: 600px) {
-                            margin-left: 2.5%;
-                            margin-right: -10.5%;
-
+                        @media only screen and (max-width: 1080px) {
+                            margin-left: 0;
+                            margin-right: 0;
                         }
 
                         a {
@@ -235,7 +246,8 @@
                                 width: 0%;
                                 height: 2px;
                                 bottom: -5%;
-                                left: 0;
+                                left: 50%;
+                                transform: translateX(-50%);
                                 background-color: $color-primary;
                                 transition: all 1000ms cubic-bezier(0.19, 1, 0.22, 1);
                             }
@@ -277,16 +289,16 @@
 
                         @include mobileHeight(57);
 
+                        @include mobilePaddingX(55);
                         @media (max-width: 1080px) {
                             width: max-content;
-                            @include mobilePaddingX(55);
                         }
                     }
 
                     .active, &:hover {
                         a {
                             &::after {
-                                width: 60%;
+                                width: 100%;
                             }
                         }
                     }
@@ -302,6 +314,8 @@
             margin-bottom: 2.5%;
             display: flex;
             justify-content: start;
+
+            @include mobileMarginBottom(35, "+");
 
             .provinces-select2 {
                 width: 10.9vw;
@@ -465,24 +479,20 @@
                     }
                 }
             }
+
+            @media (max-width: 1080px) {
+                #formPrice {
+                    width: 100%;
+                }
+
+                .slider-range {
+                    flex-grow: 1;
+                }
+            }
         }
 
         &--bottom {
-            @media only screen and (max-width: 1080px) {
-                margin-top: 10%;
-            }
-
-            @media only screen and (max-width: 992px) {
-                margin-top: 11%;
-            }
-
-            @media only screen and (max-width: 768px) {
-                margin-top: 12%;
-            }
-
-            @media only screen and (max-width: 600px) {
-                margin-top: 13%;
-            }
+            @include mobileMarginTop(40, "+");
 
             .modal-button {
                 width: 100%;

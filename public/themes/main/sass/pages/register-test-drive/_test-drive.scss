@@ -73,7 +73,6 @@
         background-color: transparent;
         @include paddingX(50);
 
-        .form {
           .select2-container--default .select2-selection--single {
             border: unset;
             padding: 7px 15px;
@@ -85,6 +84,8 @@
             .select2-selection__arrow {
             height: 40px;
           }
+
+        .form {
 
           &__text,
           &__select {
@@ -121,27 +122,27 @@
               color: #292929;
               opacity: 0.5019607843137255;
             }
-
             .dropdown span,
             .dropdown i,
             .dropdown ul li,
             input[type="text"] {
               font-size: 12px !important;
-              @media (max-width: 1680px) {
-                font-size: 11px !important;
-              }
-              @media (max-width: 1264px) {
-                font-size: 10px !important;
-              }
-              @media only screen and (max-width: 1080px) {
-                font-size: 20px !important;
-              }
-              @media only screen and (max-width: 992px) {
-                font-size: 18px !important;
-              }
-              @media only screen and (max-width: 767px) {
-                font-size: 12px !important;
-              }
+            //   @media (max-width: 1680px) {
+            //     font-size: 11px !important;
+            //   }
+            //   @media (max-width: 1264px) {
+            //     font-size: 10px !important;
+            //   }
+            //   @media only screen and (max-width: 1080px) {
+            //     font-size: 20px !important;
+            //   }
+            //   @media only screen and (max-width: 992px) {
+            //     font-size: 18px !important;
+            //   }
+            //   @media only screen and (max-width: 767px) {
+            //     font-size: 12px !important;
+            //   }
+            fon
             }
           }
 

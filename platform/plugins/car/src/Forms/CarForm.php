@@ -36,14 +36,14 @@ class CarForm extends FormAbstract
                 ],
             ])
             ->add('description', 'textarea', [
-                'label'      => trans('Description'),
+                'label'      => trans('core/base::forms.description'),
                 'label_attr' => ['class' => 'control-label'],
                 'attr'       => [
                     'placeholder'  => trans('core/base::forms.name_placeholder'),
                 ],
             ])
             ->add('horse_power', 'number', [
-                'label'      => trans('Horse power - HP'),
+                'label'      => trans('plugins/car::car.horse-power-hp'),
                 'label_attr' => ['class' => 'control-label'],
                 'attr'       => [
                     'placeholder'  => trans('core/base::forms.name_placeholder'),
@@ -51,7 +51,7 @@ class CarForm extends FormAbstract
                 ],
             ])
             ->add('fuel_type', 'customSelect', [
-                'label'      => trans('Fuel type'),
+                'label'      => trans('plugins/car::car.fuel-type'),
                 'label_attr' => ['class' => 'control-label'],
                 'attr'       => [
                     'class' => 'form-control select-full',
@@ -59,7 +59,7 @@ class CarForm extends FormAbstract
                 'choices'    => config('base.fuel_types',[]),
             ])
             ->add('gear', 'customSelect', [
-                'label'      => trans('Gear type'),
+                'label'      => trans('plugins/car::car.gear-type'),
                 'label_attr' => ['class' => 'control-label'],
                 'attr'       => [
                     'class' => 'form-control select-full',
@@ -67,35 +67,35 @@ class CarForm extends FormAbstract
                 'choices'    => config('base.gears',[]),
             ])
             ->add('fee', 'number', [
-                'label'      => trans('Fee'),
+                'label'      => trans('plugins/car::car.fee'),
                 'label_attr' => ['class' => 'control-label'],
                 'attr'       => [
                     'placeholder'  => trans('core/base::forms.name_placeholder'),
                 ],
             ])
             ->add('fee_license_plate', 'number', [
-                'label'      => trans('Fee license plate'),
+                'label'      => trans('plugins/car::car.fee-license-plate'),
                 'label_attr' => ['class' => 'control-label'],
                 'attr'       => [
                     'placeholder'  => trans('core/base::forms.name_placeholder'),
                 ],
             ])
             ->add('promotion', 'number', [
-                'label'      => trans('Promotion'),
+                'label'      => trans('plugins/car::car.promotion'),
                 'label_attr' => ['class' => 'control-label'],
                 'attr'       => [
                     'placeholder'  => trans('core/base::forms.name_placeholder'),
                 ],
             ])
             ->add('engine', 'number', [
-                'label'      => trans('Engine'),
+                'label'      => trans('plugins/car::car.engine'),
                 'label_attr' => ['class' => 'control-label'],
                 'attr'       => [
                     'placeholder'  => trans('core/base::forms.name_placeholder'),
                 ],
             ])
             ->add('price', 'number', [
-                'label'      => trans('Price'),
+                'label'      => trans('plugins/car::car.price'),
                 'label_attr' => ['class' => 'control-label'],
                 'attr'       => [
                     'placeholder'  => trans('core/base::forms.name_placeholder'),
@@ -110,12 +110,12 @@ class CarForm extends FormAbstract
                 'choices'    => BaseStatusEnum::labels(),
             ])
             ->add('brand_id', 'customSelect', [
-                'label'      => trans('Brands'),
+                'label'      => trans('plugins/car::car.brands'),
                 'label_attr' => ['class' => 'control-label'],
                 'choices'    => get_brands()->pluck('name','id')->prepend('NULL','')->toArray(),
             ])
             ->add('vehicle_id', 'customSelect', [
-                'label'      => trans('Vehicle'),
+                'label'      => trans('plugins/car::car.vehicle'),
                 'label_attr' => ['class' => 'control-label'],
                 'attr'       => [
                     'class' => 'form-control select-full',
@@ -131,7 +131,7 @@ class CarForm extends FormAbstract
                 'choices'    => \Platform\Car\Models\Car::whereNull('parent_id')->pluck('name','id')->prepend('NULL','')->toArray(),
             ])
             ->add('showrooms[]', 'categoryMulti', [
-                'label'      => trans('Showrooms'),
+                'label'      => trans('plugins/car::car.showroom'),
                 'label_attr' => ['class' => 'control-label'],
                 'choices'    => $this->getModel()->brand_id ? get_showroom_by_state(null,$this->getModel()->brand->slug) : [],
                 'value'      => old('showrooms', $selectedShowrooms),

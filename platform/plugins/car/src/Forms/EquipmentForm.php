@@ -36,7 +36,7 @@ class EquipmentForm extends FormAbstract
                 ],
             ])
             ->add('description', 'textarea', [
-                'label'      => trans('Description'),
+                'label'      => trans('core/base::forms.description'),
                 'label_attr' => ['class' => 'control-label'],
                 'attr'       => [
                     'placeholder'  => trans('core/base::forms.name_placeholder'),

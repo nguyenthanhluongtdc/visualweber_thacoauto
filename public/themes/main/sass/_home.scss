@@ -344,6 +344,8 @@
             a {
               color: #444444;
 
+              @include split_str(3);
+
               &:hover {
                 color: $font-primary;
               }
@@ -375,6 +377,8 @@
       }
 
       .top {
+
+        @include marginBottom(30, "+");
         
         .img-item {
           width: 100%;
@@ -1351,6 +1355,7 @@
               }
               h5 {
                 line-height: 30px;
+                @include split_str(2);
                 @media (max-width: 1080px) {
                   line-height: normal;
                 }

@@ -36,7 +36,7 @@
                     <a href="" class="car-version__viewdetail font15 font-pri">{{ __("Xem chi tiết phiên bản") }}</a>
                 </div>
                 @if($car->childrens)
-                    <ul id="car-version-list" class="car-version__list active">
+                    <ul id="car-version-list" class="car-version__list active" style="height: auto;">
                         @foreach ($car->childrens as $item)
                             <li class="car-version__item">
                                 <a href="javascript:;" class="car-version__item-link" data-car_id="{{ $item->id }}">

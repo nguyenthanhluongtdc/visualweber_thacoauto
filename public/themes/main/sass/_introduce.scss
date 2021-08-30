@@ -145,6 +145,12 @@
                             align-items: center;
                             justify-content: center;
                             border: 2px solid #e6eef5;
+                        
+                            &:hover {
+                                .name {
+                                    color: $color-primary;
+                                }
+                            }
 
                             .box-center {
                                 width: 70%;

@@ -256,7 +256,7 @@
 <script>
     window.__distribution = {
         ajax: "{{ Language::getLocalizedURL(Language::getCurrentLocale(), route('public.ajax.distribution-system')) }}",
-        readmore: "{!! __('Readmore') !!}"
+        readmore: "{!!__('Readmore')!!}"
     }
 </script>
 <style>

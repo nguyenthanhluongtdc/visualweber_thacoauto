@@ -1,4 +1,4 @@
-<section class="section-step-menu-car-selection">
+<section class="section-step-menu-car-selection overflow-x-hidden">
     <div class="container-remake">
         <ul class="step-menu">
             <li class="step-menu__item item-1 {{ \Request::route()->getName() == 'public.brand.car-selection' ? 'active' : '' }}">

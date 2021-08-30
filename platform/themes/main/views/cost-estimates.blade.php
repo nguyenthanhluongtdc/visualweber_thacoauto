@@ -1,6 +1,6 @@
 {!! Theme::partial('templates.car-selection-menu', ['car' => $car]) !!}
 
-<div class="my-5 container-remake MyriadPro-Regular font15">
+<div class="my-5 container-remake MyriadPro-Regular font15overflow-x-hidden">
     <form action="{{ route('public.brand.deposit', [$car->slug]) }}" method="GET" class="row">
         @foreach (request()->all() as $key => $item)
             @if(is_array($item))

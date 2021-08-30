@@ -3,6 +3,25 @@
         <div class="section-main-wrapper">
             <div class="container-remake d-md-block">
                 <div class="section-main">
+                    @if(session()->has('message') || session()->has('type') || isset($errors))
+                        @if (session()->has('type') && session('type')=='success')
+                            <div class="alert alert-success font-helve-light font18 mt-2">
+                                <p>{{ session('message') }}</p>
+                            </div>
+                        @endif
+                        @if (session()->has('type') && session('type')=='error')
+                            <div class="alert alert-danger font-helve-light font18 mt-2">
+                                <p>{{ session('message') }}</p>
+                            </div>
+                        @endif
+                        @if (isset($errors) && count($errors))
+                            <div class="alert alert-danger font-helve-light font18">
+                                @foreach ($errors->all() as $error)
+                                    <span>{{ $error }}</span> <br>
+                                @endforeach
+                            </div>
+                        @endif
+                    @endif
                     <form action="{{ route('public.test-drive.post-test-driver') }}" class="form" method="POST">
                         @csrf
                         <div class="row row__main">
@@ -36,24 +55,24 @@
                                             <select id="vocative" required name="vocative"
                                                 class="font20 font-mi-cond js-example-disabled-results">
                                                 <option selected disabled>{{ __("Vui lòng chọn") }}</option>
-                                                <option value="male">{{ __('Anh') }}</option>
-                                                <option value="female">{{ __('Chị') }}</option>
+                                                <option value="male" {{ old('vocative') == "male" ? "selected" : "" }}>{{ __('Anh') }}</option>
+                                                <option value="female" {{ old('vocative') == "female" ? "selected" : "" }}>{{ __('Chị') }}</option>
                                             </select>
                                         </div>
 
                                         <div class="form__text">
                                             <span class="title">{{ __('Họ & tên') }}</span>
-                                            <input type="text" required name="name" placeholder="{{ __('Điền họ & tên') }}">
+                                            <input type="text" required name="name" value="{{ old('name') }}" placeholder="{{ __('Điền họ & tên') }}">
                                         </div>
 
                                         <div class="form__text">
                                             <span class="title">{{ __("Số ĐT") }}</span>
-                                            <input type="text" required name="phone" placeholder="{{ __("Điền số điện thoại") }}">
+                                            <input type="text" required name="phone" value="{{ old('phone') }}"  placeholder="{{ __("Điền số điện thoại") }}">
                                         </div>
 
                                         <div class="form__text">
                                             <span class="title">{{ __("Email") }}</span>
-                                            <input type="text" required name="email" placeholder="{{ __("Điền email") }}">
+                                            <input type="text" required name="email" value="{{ old('email') }}" placeholder="{{ __("Điền email") }}">
                                         </div>
 
                                         <div class="form__select">
@@ -62,7 +81,7 @@
                                                 class="font20 font-mi-cond js-example-disabled-results">
                                                 <option selected disabled>{{ __("Tỉnh/Thành phố") }}</option>
                                                 @foreach (is_plugin_active('location') ? get_cities() : collect() as $key => $item)
-                                                    <option value="{{ $key }}">{{ $item }}</option>
+                                                    <option value="{{ $key }}" {{ old('province_id') == $key ? "selected" : "" }}>{{ $item }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
@@ -95,7 +114,7 @@
                                                 class="font20 font-mi-cond js-example-disabled-results">
                                                 <option selected disabled>{{ __("Vui lòng chọn") }}</option>
                                                 @foreach (get_brands() ?? collect() as $item)
-                                                    <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                                    <option value="{{ $item->id }}" {{ old('brand_id') == $item->id ? "selected" : "" }}>{{ $item->name }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
@@ -105,10 +124,10 @@
                                             <select id="time" required name="time"
                                                 class="font20 font-mi-cond js-example-disabled-results">
                                                 <option selected disabled>{{ __("Vui lòng chọn") }}</option>
-                                                <option value="1">{{ '1 '. __('Year') }}</option>
-                                                <option value="2">{{ '2 '.__('Year') }}</option>
-                                                <option value="5">{{ '5 '.__('Year') }}</option>
-                                                <option value="more_5">{{ __("Nhiều hơn 5 năm") }}</option>
+                                                <option value="1" {{ old('time') == "1" ? "selected" : "" }}>{{ '1 '. __('Year') }}</option>
+                                                <option value="2" {{ old('time') == "2" ? "selected" : "" }}>{{ '2 '.__('Year') }}</option>
+                                                <option value="5" {{ old('time') == "5" ? "selected" : "" }}>{{ '5 '.__('Year') }}</option>
+                                                <option value="more_5" {{ old('time') == "more_5" ? "selected" : "" }}>{{ __("Nhiều hơn 5 năm") }}</option>
                                             </select>
                                         </div>
 

@@ -34,6 +34,8 @@ class CarCategoryServiceProvider extends ServiceProvider
             ->loadAndPublishViews()
             ->loadRoutes(['web']);
 
+        $this->app->register(HookServiceProvider::class);
+
         Event::listen(RouteMatched::class, function () {
             if (defined('LANGUAGE_MODULE_SCREEN_NAME')) {
                 \Language::registerModule([CarCategory::class]);

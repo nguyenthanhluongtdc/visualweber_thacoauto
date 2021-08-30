@@ -13,7 +13,7 @@ use RvMedia;
 use SeoHelper;
 use Theme;
 
-class CarService
+class CarCategoryService
 {
     /**
      * @param Eloquent $slug

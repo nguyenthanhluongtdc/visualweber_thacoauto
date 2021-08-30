@@ -76,7 +76,7 @@
                 @foreach ($postMobile as $post)
                     <div class="item">
                         <div class="item-content">
-                            <h3 class="title font-pri-bold font20 text-uppercase">
+                            <h3 class="title font-pri-bold font20 text-uppercase fontmb-medium">
                                 <a href="{{$post->url}}">{{$post->name}}</a>
                             </h3>
                             <p class="desc font-pri font18 fontmb-small">
@@ -243,7 +243,7 @@
 {{-- quan hệ cổ đông --}}
 <div class="section-shareholder-home container-remake">
     <div class="shareholder-home-top" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out">
-        <h2 class="font-pri-bold font60 color-gray fontmb-large">Quan hệ cổ đông</h2>
+        <h2 class="font-pri-bold font60 color-gray fontmb-large ">Quan hệ cổ đông</h2>
         <div class="menu-tab-right font25 fontmb-small">
             <ul class="nav nav-pills font-pri-bold color-gray hidden-scrollbar" role="tablist">
                 <li class="nav-item" role="tab">

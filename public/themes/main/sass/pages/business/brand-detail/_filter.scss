@@ -224,7 +224,7 @@
 
                         }
 
-                        span {
+                        a {
                             width: 60px;
                             transition: 0.2s;
                             position: relative;
@@ -268,7 +268,7 @@
                         }
 
                         &:hover {
-                            span {
+                            a {
                                 &::after {
                                     width: 70%;
                                 }

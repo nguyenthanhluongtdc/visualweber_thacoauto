@@ -102,18 +102,23 @@
                     a {
                         color: #2E3A41;
                         position: relative;
-                    }
 
-                    &.active {
-                        a:after {
+                        &:after {
                             position: absolute;
                             content: "";
-                            width: 80%;
+                            width: 0%;
                             height: 2px;
                             bottom: 0;
                             left: 50%;
                             transform: translateX(-50%);
                             background-color: $color-primary;
+                            transition: width 400ms;
+                        }
+                    }
+
+                    &.active, &:hover {
+                        a:after {
+                            width: 80%;
                         }
                     }
 

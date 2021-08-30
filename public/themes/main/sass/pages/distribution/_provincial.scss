@@ -547,6 +547,8 @@
                 margin-top: 20px;
                 text-align: center;
                 button {
+                    -webkit-appearance: none;
+                    appearance: none;
                     background-color: #01498b;
                     font-family: $font-primary-bold;
                     text-transform: uppercase;

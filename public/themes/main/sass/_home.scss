@@ -139,16 +139,19 @@
     font-size: 20px;
     overflow-x: clip;
     position: absolute;
-   
+    
     .cell-item {
       display: flex;
       align-items: center;
       position: relative;
+     
       // max-height: 42px;
       @include paddingBottom(15);
       span{
+       
         a{
-          @include split_str(2)
+          @include split_str(2);
+          line-height: 1.2;
         }
       }
       .frame{
@@ -163,9 +166,11 @@
       }
     }
     span {
+      
       // line-height: 30px;
       // margin-bottom: 15px;
       a {
+        
         color: #434343;
         text-transform: uppercase;
       }

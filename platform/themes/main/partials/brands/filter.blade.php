@@ -6,7 +6,7 @@
     }
     $request = array_merge($request,['slug' => $slug->key]);
 @endphp
-<section class="section-car-filter">
+<section class="section-car-filter overflow-x-hidden">
     <div class="car-filter container-remake">
         <h2 class="car-filter__title-mobile font30 font-mi-bold">{{ __("Kiểu dáng xe") }}</h2>
     </div>

@@ -35,7 +35,7 @@
                                     <p class="desc font-pri font18 fontmb-small">
                                         {{Str::words($post->description,30)}}
                                     </p>
-                                    <div class="city-day font-pri font18 fontmb-small">
+                                    <div class="city-day font-pri font18 fontmb-little">
                                         <span class="city">{{ $post->city->name ?? '--' }}</span>
                                         <span class="day">{{date_format($post->created_at,"d-m-Y")}}</span>
                                     </div>
@@ -52,7 +52,7 @@
                             <p class="desc font-pri font18 fontmb-small">
                                 {{Str::words($post->description,25)}}
                             </p>
-                            <div class="city-day font-pri font18 fontmb-small">
+                            <div class="city-day font-pri font18 fontmb-little">
                                 <span class="city">{{ $post->city->name ?? '--' }}</span>
                                 <span class="day">{{date_format($post->created_at,"d-m-Y")}}</span>
                             </div>
@@ -82,7 +82,7 @@
                             <p class="desc font-pri font18 fontmb-small">
                                 {{Str::words($post->description,20)}}
                             </p>
-                            <div class="city-day font-pri font18 fontmb-small">
+                            <div class="city-day font-pri font18 fontmb-little~">
                                 <span class="city">{{ $post->city->name ?? '--' }}</span>
                                 <span class="day">{{date_format($post->created_at,"d-m-Y")}}</span>
                             </div>

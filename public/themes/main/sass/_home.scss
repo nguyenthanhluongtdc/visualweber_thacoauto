@@ -139,16 +139,19 @@
     font-size: 20px;
     overflow-x: clip;
     position: absolute;
-   
+    
     .cell-item {
       display: flex;
       align-items: center;
       position: relative;
+     
       // max-height: 42px;
       @include paddingBottom(15);
       span{
+       
         a{
-          @include split_str(2)
+          @include split_str(2);
+          line-height: 1.2;
         }
       }
       .frame{
@@ -163,9 +166,11 @@
       }
     }
     span {
+      
       // line-height: 30px;
       // margin-bottom: 15px;
       a {
+        
         color: #434343;
         text-transform: uppercase;
       }
@@ -265,7 +270,7 @@
               position: relative;
 
               h3 {
-                height: 18%;
+                height: 30%;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 -webkit-line-clamp: 2;
@@ -274,17 +279,18 @@
                 margin-bottom: 8%;
                 text-align: justify;
 
-                @media (max-width: 1560px) {
-                  height: 19%;
-                }
+                // @media (max-width: 1560px) {
+                //   height: 19%;
+                // }
 
-                @media (max-width: 1199px) {
-                  height: 20%;
-                }
+                // @media (max-width: 1199px) {
+                //   height: 20%;
+                // }
 
                 a {
                   color: #444444;
-
+                  @include split_str(3);
+                 
                   &:hover {
                     color: $font-primary;
                   }
@@ -293,7 +299,8 @@
 
               p.desc {
                 text-align: justify;
-                color: #595858;
+                color: #595858; 
+                
               }
 
               .city-day {
@@ -324,7 +331,7 @@
           position: relative;
 
           h3 {
-            height: 20%;
+            height: 30%;
             overflow: hidden;
             text-overflow: ellipsis;
             -webkit-line-clamp: 2;
@@ -333,19 +340,18 @@
             margin-bottom: 5%;
             text-align: justify;
 
-            @media (max-width: 1680px) {
-              height: 21%;
-            }
+            // @media (max-width: 1680px) {
+            //   height: 21%;
+            // }
 
-            @media (max-width: 1366px) {
-              height: 22%;
-            }
+            // @media (max-width: 1366px) {
+            //   height: 22%;
+            // }
 
             a {
               color: #444444;
 
-              @include split_str(3);
-
+              @include split_str(2);
               &:hover {
                 color: $font-primary;
               }
@@ -354,6 +360,7 @@
 
           p.desc {
             text-align: justify;
+           
           }
 
           .city-day {
@@ -460,7 +467,6 @@
 
         a {
           color: #444444;
-
           &:hover {
             color: $font-primary;
           }

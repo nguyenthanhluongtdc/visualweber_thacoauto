@@ -444,10 +444,10 @@
                             <div class="defect-shape">
                                 <div class="box-center">
                                     <img loading="lazy" src="{{get_image_url(has_sub_field($row, 'symbol'))}}" alt=" {!! has_sub_field($row, 'title') !!}">
-                                    <div class="name font20">
+                                    <div class="name font25 fontmb-middle text-uppercase">
                                         {!! has_sub_field($row, 'title') !!}
                                     </div>
-                                    <div class="des">
+                                    <div class="des font18 fontmb-small">
                                         {!! has_sub_field($row, 'description') !!}
                                     </div>
                                 </div>
@@ -468,10 +468,10 @@
                             <div class="defect-shape">
                                 <div class="box-center">
                                     <img loading="lazy" src="{{get_image_url(has_sub_field($criteria[$i], 'symbol'))}}" alt=" {!! has_sub_field($criteria[$i], 'title') !!}">
-                                    <div class="name font20">
+                                    <div class="name font25 fontmb-middle text-uppercase">
                                         {!! has_sub_field($criteria[$i], 'title') !!}
                                     </div>
-                                    <div class="des">
+                                    <div class="des font18 fontmb-small">
                                         {!! has_sub_field($criteria[$i], 'description') !!}
                                     </div>
                                 </div>
@@ -514,7 +514,7 @@
                                 <div class="defect-shape">
                                     <div class="box-center">
                                         <img loading="lazy" src="{{get_image_url(has_sub_field($row, 'symbol'))}}" alt="Ảnh tiêu chí 8T">
-                                        <div class="name font20 fontmb-medium">
+                                        <div class="name  font25 fontmb-middle text-uppercase">
                                             {!! has_sub_field($row, 'title') !!}
                                         </div>
                                         <div class="des fontmb-small">

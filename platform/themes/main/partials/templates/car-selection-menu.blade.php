@@ -11,8 +11,8 @@
                     {{ __("2. DỰ TOÁN CHI PHÍ") }}
                 </a>
             </li>
-            <li class="step-menu__item item-3">
-                <a href="javascript:;" class="font18 fontmb-middle font-pri text-uppercase color-gray">
+            <li class="step-menu__item item-3 {{ \Request::route()->getName() == 'public.brand.deposit' ? 'active' : '' }}">
+                <a href="javascript:;" class="font18 fontmb-middle font-pri text-uppercase color-gray ">
                     {{ __("3. ĐẶT CỌC ĐĂNG KÝ") }}
                 </a>
             </li>

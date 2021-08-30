@@ -29,7 +29,7 @@
 
                             <div class="item-main">
                                 <div class="item-content">
-                                    <h3 class="title font-pri-bold font20  text-uppercase fontmb-middle">
+                                    <h3 class="title font-pri-bold font30  text-uppercase fontmb-middle">
                                         <a href="{{$post->url}}" >{{$post->name}}</a>
                                     </h3>
                                     <p class="desc font-pri font18 fontmb-small">
@@ -46,7 +46,7 @@
                     @else
                     <div class="item">
                         <div class="item-content">
-                            <h3 class="title font-pri-bold font20 fontmb-middle text-uppercase">
+                            <h3 class="title font-pri-bold font30 fontmb-middle text-uppercase">
                                 <a href="{{$post->url}}">{{$post->name}}</a>
                             </h3>
                             <p class="desc font-pri font18 fontmb-small">
@@ -82,7 +82,7 @@
                             <p class="desc font-pri font18 fontmb-small">
                                 {{Str::words($post->description,20)}}
                             </p>
-                            <div class="city-day font-pri font18 fontmb-little~">
+                            <div class="city-day font-pri font18 fontmb-little">
                                 <span class="city">{{ $post->city->name ?? '--' }}</span>
                                 <span class="day">{{date_format($post->created_at,"d-m-Y")}}</span>
                             </div>

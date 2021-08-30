@@ -15,8 +15,19 @@ class CarCategoryForm extends FormAbstract
      */
     public function buildForm()
     {
-        $rootCategory = CarCategory::whereNull('parent_id')->orWhere('parent_id',0)->pluck('name','id')->toArray();
-        $rootCategory = array_merge($rootCategory,[0=>'Null']);
+        $list = get_car_categories_parent();
+
+        $categories = [];
+        foreach ($list as $row) {
+            if ($this->getModel() && ($this->model->id === $row->id || $this->model->id === $row->parent_id)) {
+                continue;
+            }
+
+            $categories[$row->id] = $row->indent_text . ' ' . $row->name;
+        }
+        $categories = [0 => trans('plugins/blog::categories.none')] + $categories;
+
+
         $this
             ->setupModel(new CarCategory)
             ->setValidatorClass(CarCategoryRequest::class)
@@ -30,7 +41,7 @@ class CarCategoryForm extends FormAbstract
                 ],
             ])
             ->add('description', 'textarea', [
-                'label'      => trans('Description'),
+                'label'      => trans('core/base::forms.description'),
                 'label_attr' => ['class' => 'control-label'],
                 'attr'       => [
                     'placeholder'  => trans('core/base::forms.name_placeholder'),
@@ -44,10 +55,13 @@ class CarCategoryForm extends FormAbstract
                 ],
                 'choices'    => BaseStatusEnum::labels(),
             ])
-            ->add('parent_id', 'select', [ // Change "select" to "customSelect" for better UI
-                'label'      => __('Parent'),
-                'label_attr' => ['class' => 'control-label'], // Add class "required" if that is mandatory field
-                'choices'    =>$rootCategory,
+            ->add('parent_id', 'customSelect', [ // Change "select" to "customSelect" for better UI
+                'label'      => trans('core/base::forms.parent'),
+                'label_attr' => ['class' => 'control-label required'], // Add class "required" if that is mandatory field
+                'attr'       => [
+                    'class' => 'select-search-full',
+                ],
+                'choices'    =>$categories,
             ])
             ->setBreakFieldPoint('status');
     }

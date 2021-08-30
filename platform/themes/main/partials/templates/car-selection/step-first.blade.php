@@ -27,9 +27,9 @@
             <form action="{{ route('public.brand.cost-estimate', $car->slug) }}" method="GET" class="car-selection-content__right d-flex flex-column col-sm-12 col-md-12">
                 <div class="car-version">
                     <div id="car-version-select" class="car-version__select font15 font-pri">
-                        <h3 class="font15 font-pri mb-0">{{ __("Chọn phiên bản xe") }}</h3>
+                        <h3 class="title__row fontmb-medium font15 font-pri mb-0 ">{{ __("Chọn phiên bản xe") }}</h3>
                         @if($car->childrens)
-                            <i class="fas fa-chevron-down font12"></i>
+                            <i class="fas fa-chevron-down font12 fontmb-small"></i>
                         @endif
                     </div>
 
@@ -51,7 +51,7 @@
                 {!! Theme::partial('templates.loading') !!}
                 <div class="option__car flex-grow-1">
                     <div class="select-color">
-                        <h3 class="select-color__title font15 font-pri">{{ __('Lựa chọn màu') }}</h3>
+                        <h3 class="title__row select-color__title fontmb-medium font15 font-pri">{{ __('Lựa chọn màu') }}</h3>
                         @if($car->colors->count() > 0)
                             <input name="color" class="d-none" value="{{ isset($request['color']) && !blank($request['color']) ? $request['color'] : ($car->colors->first()->id ?? '') }}" id="picker-color" />
                             <ul class="info-color">
@@ -64,7 +64,7 @@
                         @endif
                     </div>
                     <div class="select-equip">
-                        <h3 class="select-equip__title font15 font-pri">{{ __("Phụ kiện") }}</h3>
+                        <h3 class="title__row select-equip__title fontmb-medium font15 font-pri">{{ __("Phụ kiện") }}</h3>
                         @if(isset($car->accessories) && !blank($car->accessories))
                         <div class="select-equip__list">
                             @php
@@ -93,7 +93,7 @@
                     @endif
                     </div>
                     <div class="select-equip">
-                        <h3 class="select-equip__title font15 font-pri">{{ __("Trang bị thêm") }}</h3>
+                        <h3 class="title__row select-equip__title fontmb-medium font15 font-pri">{{ __("Trang bị thêm") }}</h3>
                         @if(isset($car->equipments) && !blank($car->equipments))
                         <div class="select-equip__list">
                             @php

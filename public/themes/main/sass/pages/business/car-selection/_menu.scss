@@ -5,10 +5,7 @@
 }
 .section-step-menu-car-selection {
   @media only screen and (max-width: 1080px) {
-    .container-remake {
-      min-width: 100% !important;
-      max-width: 100% !important;
-    }
+    background-color: #f6f6f6;
     padding-top: 0;
   }
   margin: 1.8% 0 2%;
@@ -19,6 +16,7 @@
     align-items: center;
     @media only screen and (max-width: 1080px) {
       margin-top: -2%;
+      background-color: transparent;
       .item-2,
       .item-3 {
         display: none;

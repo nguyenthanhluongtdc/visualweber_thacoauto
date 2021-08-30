@@ -8,7 +8,7 @@ use Eloquent;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
 use Platform\CarCategory\Models\CarCategory;
-use Platform\Car\Repositories\Interfaces\CarCategoryInterface;
+use Platform\CarCategory\Repositories\Interfaces\CarCategoryInterface;
 use RvMedia;
 use SeoHelper;
 use Theme;

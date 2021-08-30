@@ -23,6 +23,8 @@ class CarCategory extends BaseModel
     protected $fillable = [
         'name',
         'description',
+        'author_id',
+        'author_type',
         'status',
         'parent_id'
     ];
@@ -34,13 +36,16 @@ class CarCategory extends BaseModel
         'status' => BaseStatusEnum::class,
     ];
 
-    public function parent(){
-        return $this->belongsTo(get_class($this),'parent_id');
+    public function parent()
+    {
+        return $this->belongsTo(get_class($this), 'parent_id');
     }
-    public function childrens(){
-        return $this->hasMany(get_class($this),'parent_id');
+    public function childrens()
+    {
+        return $this->hasMany(get_class($this), 'parent_id');
     }
-    public function brands(){
-        return $this->belongsToMany(\Platform\Brand\Models\Brand::class,'app_brand_categories','category_id','brand_id');
+    public function brands()
+    {
+        return $this->belongsToMany(\Platform\Brand\Models\Brand::class, 'app_brand_categories', 'category_id', 'brand_id');
     }
 }

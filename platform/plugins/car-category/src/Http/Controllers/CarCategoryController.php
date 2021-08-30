@@ -62,10 +62,12 @@ class CarCategoryController extends BaseController
      */
     public function store(CarCategoryRequest $request, BaseHttpResponse $response)
     {
-        $carCategory = $this->carCategoryRepository->createOrUpdate(array_merge($request->input(), [
+        $request->merge([
             'author_id'   => Auth::id(),
             'author_type' => User::class,
-        ]));
+        ]);
+
+        $carCategory = $this->carCategoryRepository->createOrUpdate($request->all());
 
         event(new CreatedContentEvent(CAR_CATEGORY_MODULE_SCREEN_NAME, $request, $carCategory));
 

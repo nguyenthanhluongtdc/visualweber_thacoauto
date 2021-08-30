@@ -53,7 +53,7 @@
                         {!! has_field($page, 'title_module_aboutus_introduce') !!}
                     </h2>
                     @endif
-                    <div class="text-justify">
+                    <div class="text-justify fontmb-small">
                         @if(has_field($page, 'content_module_aboutus_introduce'))
                         {!! has_field($page, 'content_module_aboutus_introduce') !!}
                         @endif
@@ -84,7 +84,7 @@
                                 <div class="name font40 font-pri-bold fontmb-middle">
                                     {!! get_field($page, 'homepage_production_title') !!}
                                 </div>
-                                <p class="description">
+                                <p class="description fontmb-small">
                                     {!! get_field($page, 'homepage_production_descrtiption') !!}
                                 </p>
                             </div>
@@ -150,7 +150,7 @@
                                 <div class="name font40 font-pri-bold fontmb-middle">
                                     {!! get_field($page, 'homepage_business_title') !!}
                                 </div>
-                                <p class="description">
+                                <p class="description fontmb-small">
                                     {!! get_field($page, 'homepage_business_descrtiption') !!}
                                 </p>
                             </div>
@@ -494,7 +494,7 @@
                 @endif
             </h2>
             @if(has_field($page, 'description_module_tieuchi_introduce'))
-            <p class="section-criteria__headers__des" data-aos="fade-right">
+            <p class="section-criteria__headers__des fontmb-small" data-aos="fade-right">
                 {!! has_field($page, 'description_module_tieuchi_introduce') !!}
             </p>
             @endif

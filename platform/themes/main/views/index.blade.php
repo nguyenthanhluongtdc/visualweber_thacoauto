@@ -29,8 +29,8 @@
 
                             <div class="item-main">
                                 <div class="item-content">
-                                    <h3 class="title font-pri-bold font30 fontmb-medium text-uppercase">
-                                        <a href="{{$post->url}}">{{$post->name}}</a>
+                                    <h3 class="title font-pri-bold font20  text-uppercase fontmb-middle">
+                                        <a href="{{$post->url}}" >{{$post->name}}</a>
                                     </h3>
                                     <p class="desc font-pri font18 fontmb-small">
                                         {{Str::words($post->description,30)}}
@@ -46,10 +46,10 @@
                     @else
                     <div class="item">
                         <div class="item-content">
-                            <h3 class="title font-pri-bold font20 fontmb-medium text-uppercase">
+                            <h3 class="title font-pri-bold font20 fontmb-middle text-uppercase">
                                 <a href="{{$post->url}}">{{$post->name}}</a>
                             </h3>
-                            <p class="desc font-pri font18 fontmb-little">
+                            <p class="desc font-pri font18 fontmb-small">
                                 {{Str::words($post->description,25)}}
                             </p>
                             <div class="city-day font-pri font18 fontmb-small">
@@ -76,13 +76,13 @@
                 @foreach ($postMobile as $post)
                     <div class="item">
                         <div class="item-content">
-                            <h3 class="title font-pri-bold font18 text-uppercase">
+                            <h3 class="title font-pri-bold font20 text-uppercase">
                                 <a href="{{$post->url}}">{{$post->name}}</a>
                             </h3>
-                            <p class="desc font-pri font18">
+                            <p class="desc font-pri font18 fontmb-small">
                                 {{Str::words($post->description,20)}}
                             </p>
-                            <div class="city-day font-pri font18">
+                            <div class="city-day font-pri font18 fontmb-small">
                                 <span class="city">{{ $post->city->name ?? '--' }}</span>
                                 <span class="day">{{date_format($post->created_at,"d-m-Y")}}</span>
                             </div>
@@ -112,10 +112,10 @@
 
             <div class="bottom" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="50">
                 <div class="summary">
-                    <p class="title font-pri-bold font20 fontmb-middle">
+                    <p class="title font-pri-bold font30 fontmb-middle">
                         {{ __("Điểm tin") }}
                     </p>
-                    <a class="font-pri-bold font20 fontmb-middle" href="{{get_category_by_id(theme_option('default_category_news_summary'))->url}}">Xem thêm</a>
+                    <a class="font-pri-bold font20 fontmb-small" href="{{get_category_by_id(theme_option('default_category_news_summary'))->url}}">Xem thêm</a>
                 </div>
 
                 <div class="scollbar-wrap-home">
@@ -140,7 +140,7 @@
                                 <div class="frame">
                                     <img loading="lazy" src="{{ get_image_url(has_field($post, 'hot_news_image')) }}" alt="{{$post->name}}">
                                 </div>
-                                <span class="font-pri-bold fontmb-small">
+                                <span class="font-pri-bold font25 fontmb-small">
                                     <a href="{{$post->url}}">{{$post->name}}</a>
                                 </span>
                             </div>
@@ -168,7 +168,7 @@
                     <img loading="lazy" src="{{ get_image_url(get_field($page,'homepage_production_logo')) }}" alt="{{get_field($page, 'homepage_production_title')}}">
                     <p class="name-img font-pri-bold font18 color-pri fontmb-small">THACO AUTO</p>
                     <p class="title font-pri-bold font40 fontmb-middle color-gray">{{get_field($page, 'homepage_production_title')}}</p>
-                    <P class="desc font-pri font20 color-gray">{{get_field($page, 'homepage_production_descrtiption')}}</>
+                    <P class="desc font-pri font20 color-gray fontmb-small">{{get_field($page, 'homepage_production_descrtiption')}}</>
                 </div>
                 <div class="top-right">
                     <div class="top-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
@@ -199,7 +199,7 @@
                     <img loading="lazy" src="{{ get_image_url(get_field($page,'homepage_business_logo')) }}" alt="{{get_field($page, 'homepage_business_title')}}">
                     <p class="name-img font-pri-bold font18 color-pri fontmb-small">THACO AUTO</p>
                     <p class="title font-pri-bold font40 color-gray fontmb-middle">{{get_field($page, 'homepage_business_title')}}</p>
-                    <P class="desc font-pri font20 color-gray">{{get_field($page, 'homepage_business_descrtiption')}}</P>
+                    <P class="desc font-pri font20 color-gray fontmb-small">{{get_field($page, 'homepage_business_descrtiption')}}</P>
                 </div>
                 <div class="bottom-right">
                     <div class="bottom-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">

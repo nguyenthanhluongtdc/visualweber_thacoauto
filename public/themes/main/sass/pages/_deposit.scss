@@ -5,6 +5,7 @@
 }
 .section-step-menu-deposit{
   @media only screen and (max-width: 1080px){
+    display: b;
     .container-remake{
         min-width:100% !important;
         max-width:100% !important;
@@ -20,7 +21,7 @@
       @media only screen and (max-width: 1080px){
         margin-top: -2%;
         .item-1, .item-3{
-          display: none;
+          display: none !important;
         }
       }
       @media only screen and (max-width: 992px){

@@ -32,14 +32,14 @@ Route::group(['namespace' => 'Theme\Thaco\Http\Controllers', 'middleware' => ['w
         //     Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
         //     return Theme::scope('pages/services/service-detail')->render();
         // });
-        Route::get('/product-detail-1', function () {
-            Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
-            return Theme::scope('pages/business/product/product-detail-1')->render();
-        });
-        Route::get('/product-detail', function () {
-            Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
-            return Theme::scope('pages/business/product/product-detail')->render();
-        });
+        // Route::get('/product-detail-1', function () {
+        //     Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
+        //     return Theme::scope('pages/business/product/product-detail-1')->render();
+        // });
+        // Route::get('/product-detail', function () {
+        //     Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
+        //     return Theme::scope('pages/business/product/product-detail')->render();
+        // });
 
         // Route::get('/brand-detail', function () {
         //     Theme::asset()->usePath()->add('reset_css', 'css/reset.css');

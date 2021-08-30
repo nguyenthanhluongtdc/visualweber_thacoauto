@@ -1,3 +1,6 @@
+@php
+Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
+@endphp
 <section class="section-product-detail">
     <div class="container-remake">
         <div class="product-detail">

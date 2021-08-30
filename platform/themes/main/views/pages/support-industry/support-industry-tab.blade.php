@@ -1,7 +1,7 @@
 
 <div class="section-support-industry-tab">
     <div class="mechanical-tab-wrapper"
-        style="background-image:url('{{ Theme::asset()->url('images/mechandical/bg-tab2.png') }}')">
+        style="background-image:url('{{ Theme::asset()->url('images/mechandical/bg-tab2.png') }}'); background-repeat: no-repeat;">
         <div class="container-remake mechanical-tab__content" data-aos="fade-up" data-aos-duration="1500"
             data-aos-easing="ease-in-out" data-aos-delay="50">
             <div class="py-lg-5 py-4">
@@ -61,7 +61,7 @@
                                                 {!! has_sub_field($item, 'description') !!}
                                             </div>
                                         </div>
-                                        <div class="read-more font18"><a href="{{has_sub_field($item, 'link')}}"> {!! __('Readmore') !!} </a></div>
+                                        <div class="read-more font18"><a target="_blank" href="{{has_sub_field($item, 'link')}}"> {!! __('Readmore') !!} </a></div>
                                     </div>
                                 </div>
                             @endforeach

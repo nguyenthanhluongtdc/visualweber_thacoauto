@@ -19,9 +19,11 @@
     @media only screen and (max-width: 1080px) {
       background-color: transparent;
       margin-bottom: 0;
-      .item-2,
-      .item-3 {
+      .step-menu__item{
         display: none;
+      }
+      .active{
+        display: block;
       }
     }
     &__item {

@@ -1,6 +1,6 @@
 <div class="section-mechanical-tab ">
 
-    <div class="mechanical-tab-wrapper" style="background-image:url('{{ Theme::asset()->url('images/mechandical/bg-tab2.png') }}')">
+    <div class="mechanical-tab-wrapper" style="background-image:url('{{ Theme::asset()->url('images/mechandical/bg-tab2.png') }}'); background-repeat: no-repeat;">
 
         <div class="container-remake ">
             <div class="mechanical-tab__content pt-60 pb-60" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease-in-out" data-aos-delay="50" >
@@ -102,7 +102,7 @@
 </div>
 
 <div class="section-mechanical-tab-mobile">
-    <div class="mechanical-tab-wrapper" style="background-image:url('{{ Theme::asset()->url('images/mechandical/bg-tab2.png') }}')">
+    <div class="mechanical-tab-wrapper" style="background-image:url('{{ Theme::asset()->url('images/mechandical/bg-tab2.png') }}'); background-repeat: no-repeat;">
         <div class="container-remake ">
             <div class="mechanical-tab__content row pt-60 pb-60" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease-in-out" data-aos-delay="50" >
 

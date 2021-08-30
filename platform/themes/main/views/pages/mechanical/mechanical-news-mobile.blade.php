@@ -22,7 +22,7 @@
                                     <div class="year"> {{ $post->created_at->format('Y') }} </div>
                                 </div>
                                 <div class="sub-right">
-                                    <img loading="lazy" width="" height="" src="{{Storage::disk('public')->exists($post->image) ? get_image_url($post->image) : RvMedia::getDefaultImage()}}" alt="" />
+                                    <img loading="lazy" width="" height="" src="{{Storage::disk('public')->exists($post->image) ? get_image_url($post->image) : RvMedia::getDefaultImage()}}" alt=" {!! $post->name !!}" />
                                 </div>
                             </div>
                             <div class="content">

@@ -722,10 +722,22 @@
   }
   .bottom {
     position: relative;
-    p.title {
-      text-transform: uppercase;
-      color: #434343;
-      margin-bottom: 3%;
+    .summary{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .title {
+        text-transform: uppercase;
+        color: #434343;
+        margin-bottom: 3%;
+      }
+      a{
+        color: #434343;
+        margin-bottom: 3%;
+        &:hover{
+          color: $color-primary;
+        }
+      }
     }
   }
   .scollbar-wrap {

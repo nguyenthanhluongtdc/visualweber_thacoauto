@@ -17,7 +17,7 @@
             </div>
             <div data-aos="zoom-in" data-aos-duration="2500" class="branch-wrap">
                 <img loading="lazy" class="branch-background-image" src="{{Theme::asset()->url('images/distribution/background.jpg')}}"
-                    alt="">
+                    alt="Background công ty tỉnh thành">
                 <div class="branch-background-blur"></div>
                 <div class="left">
                     <div class="branch-overflow" id="branch-list"></div>
@@ -220,9 +220,9 @@
                 <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 fontmb-middle">{{ __("thư viện") }}</h1>
                 <div class="library-button">
                     <img loading="lazy" class="customPrevBtn" src="{{Theme::asset()->url('images/distribution/icon_left.png')}}"
-                        alt="">
+                        alt="Button Previous">
                     <img loading="lazy" class="customNextBtn" src="{{Theme::asset()->url('images/distribution/icon_right.png')}}"
-                        alt="">
+                        alt="Button Next">
                 </div>
             </div>
         </div>
@@ -275,7 +275,7 @@
     });
     var owl = $('.owl-carousel');
     owl.owlCarousel({
-        loop: false,
+        loop: true,
         items: 2.5,
         margin: 25,
         dots: false,
@@ -283,7 +283,7 @@
         responsiveClass: true,
         responsive:{
             0:{
-                items: 1.3,
+                items: 1.5,
             },
             1081:{
                 items:2.5,

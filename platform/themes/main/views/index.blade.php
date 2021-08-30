@@ -8,16 +8,6 @@
     @empty
 
     @endforelse
-
-    {{-- <div class="slider-main-item">
-        <img loading="lazy" src="{{ Theme::asset()->url('images/main/slider2.jpg') }}" alt="">
-        <div class="content-slider">
-            <h2 class="font-pri-bold font60">THACO AUTO GIỚI THIỆU NEW PEUGEOT 3008</h2>
-            <P class="font-cond">Peugeot – Thương hiệu xe Châu Âu với hơn 210 năm lịch sử & 100 năm dấu ấn tại Việt Nam
-            </P>
-            <a href="" class="font-pri-bold">{{ __("Readmore") }}</a>
-        </div>
-    </div> --}}
 </div>
 
 <div class="section-news-home container-remake">
@@ -34,7 +24,7 @@
                     <div class="left-top">
                         <div class="frame">
                             <div class="item-img-main">
-                                <a href="{{$post->url}}"><img loading="lazy" src="{{ get_object_image($post->image, 'post-large') }}" alt=""></a>
+                                <a href="{{$post->url}}"><img loading="lazy" src="{{ get_object_image($post->image, 'post-large') }}" alt="{{$post->name}}"></a>
                             </div>
 
                             <div class="item-main">
@@ -80,7 +70,7 @@
             @if (!empty($postMobile))
                 @if($postMobile->first())
                     <div class="item-img-main">
-                        <a href="{{$postMobile->first()->url}}"><img loading="lazy" src="{{ get_object_image($postMobile->first()->image, 'post-large') }}" alt=""></a>
+                        <a href="{{$postMobile->first()->url}}"><img loading="lazy" src="{{ get_object_image($postMobile->first()->image, 'post-large') }}" alt="{{$post->name}}"></a>
                     </div>
                 @endif
                 @foreach ($postMobile as $post)
@@ -111,7 +101,7 @@
                     <div class="img-item">
                         <a data-fancybox href="https://www.youtube.com/watch?v={{get_sub_field(get_field($post, 'video_gallery')[0], 'youtube_code')}}">
                             <div class="play"></div>
-                            <img loading="lazy" src="{{ get_object_image($post->image) }}" alt="">
+                            <img loading="lazy" src="{{ get_object_image($post->image) }}" alt="{{$post->name}}">
                         </a>
                     </div>
                     <h3 class="title font30 fontmb-small text-uppercase">
@@ -121,35 +111,31 @@
             </div>
 
             <div class="bottom" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="50">
-                <p class="title font-pri-bold font20 fontmb-middle">
-                    {{ __("Điểm tin") }}
-                </p>
+                <div class="summary">
+                    <p class="title font-pri-bold font20 fontmb-middle">
+                        {{ __("Điểm tin") }}
+                    </p>
+                    <a class="font-pri-bold font20 fontmb-middle" href="{{get_category_by_id(theme_option('default_category_news_summary'))->url}}">Xem thêm</a>
+                </div>
 
                 <div class="scollbar-wrap-home">
                     @php
-                        $postsHot = get_all_with_featured(10);
+                        $postsHot = get_posts_by_category(theme_option('default_category_news_summary'), 10)
+                        
                     @endphp
                     <div id="hours">
                         @if (!empty($postsHot))
                             @foreach ($postsHot as $post)
-                            {{-- @dd(has_field($post, 'hot_news')) --}}
-                            @if($loop->first && has_field($post, 'hot_news') != 1)
-
-                            @elseif(has_field($post, 'hot_news') == 1)
                             <img loading="lazy" class="logo-frame flag-1" src="{{ get_image_url(has_field($post, 'hot_news_image')) }}" alt="{{$post->name}}">
-                            @endif
                             @endforeach
+                        @else
+                            
                         @endif
-                        {{-- <img loading="lazy" class="logo-frame flag-1" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt=""> --}}
                     </div>
                     <div id="cells">
 
                         @if (!empty($postsHot))
                             @foreach ($postsHot as $post)
-                            {{-- @dd(has_field($post, 'hot_news')) --}}
-                            @if($loop->first && has_field($post, 'hot_news') != 1)
-                                {{__('Chưa có điểm tin')}}
-                            @elseif(has_field($post, 'hot_news') == 1)
                             <div class="cell-item flag-1">
                                 <div class="frame">
                                     <img loading="lazy" src="{{ get_image_url(has_field($post, 'hot_news_image')) }}" alt="{{$post->name}}">
@@ -158,51 +144,10 @@
                                     <a href="{{$post->url}}">{{$post->name}}</a>
                                 </span>
                             </div>
-                            @endif
                             @endforeach
+                        @else
+                            {{__('No data to show')}}
                         @endif
-                        {{-- <div class="cell-item flag-1">
-                            <img loading="lazy" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
-                            <span class="font-pri-bold fontmb-small">
-                                <a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
-                            </span>
-                        </div> --}}
-                        {{-- <div class="cell-item flag-2">
-                            <img loading="lazy" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
-                            <span class="font-pri-bold fontmb-small">
-                                <a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
-                            </span>
-                        </div>
-                        <div class="cell-item flag-3">
-                            <img loading="lazy" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
-                            <span class="font-pri-bold fontmb-small">
-                                <a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
-                            </span>
-                        </div>
-                        <div class="cell-item flag-4">
-                            <img loading="lazy" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
-                            <span class="font-pri-bold fontmb-small">
-                                <a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
-                            </span>
-                        </div>
-                        <div class="cell-item flag-5">
-                            <img loading="lazy" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
-                            <span class="font-pri-bold fontmb-small">
-                                <a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
-                            </span>
-                        </div>
-                        <div class="cell-item flag-6">
-                            <img loading="lazy" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
-                            <span class="font-pri-bold fontmb-small">
-                                <a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
-                            </span>
-                        </div>
-                        <div class="cell-item flag-7">
-                            <img loading="lazy" src="{{ Theme::asset()->url('images/main/diemtin2.png') }}" alt="">
-                            <span class="font-pri-bold fontmb-small">
-                                <a href="#">Ưu Đãi Peugeot 3008 2021 Tháng 6 Lên Đến 73 Triệu Đồng</a>
-                            </span>
-                        </div> --}}
                         </h5>
                     </div>
                 </div>
@@ -328,15 +273,15 @@
             <div id="shareholder1" class="tab-pane active ">
                 <div class="tab-content-item">
                     <div class="tab-content-left" data-aos="fade-right" data-aos-duration="1200" data-aos-easing="ease-in-out">
-                        <img loading="lazy" src="{{ Theme::asset()->url('images/main/cthome1.jpg') }}" alt="">
+                        <img loading="lazy" src="{{ Theme::asset()->url('images/main/cthome1.jpg') }}" alt="Icon">
                     </div>
                     <div class="tab-content-right" data-aos="fade-right" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="250">
                         <div class="list-content">
                             <div class="item-shareholder">
                                 <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
                                         class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
@@ -361,9 +306,9 @@
 
                             <div class="item-shareholder">
                                 <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
                                         class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
@@ -388,9 +333,9 @@
 
                             <div class="item-shareholder">
                                 <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
                                         class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
@@ -415,9 +360,9 @@
 
                             <div class="item-shareholder">
                                 <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
                                         class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
@@ -441,9 +386,9 @@
                             </div>
                             <div class="item-shareholder">
                                 <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
                                         class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
@@ -468,9 +413,9 @@
                             </div>
                             <div class="item-shareholder">
                                 <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
                                         class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
@@ -500,15 +445,15 @@
             <div id="shareholder2" class="tab-pane fade">
                 <div class="tab-content-item">
                     <div class="tab-content-left">
-                        <img loading="lazy" src="{{ Theme::asset()->url('images/main/cthome2.jpg') }}" alt="">
+                        <img loading="lazy" src="{{ Theme::asset()->url('images/main/cthome2.jpg') }}" alt="Icon">
                     </div>
                     <div class="tab-content-right">
                         <div class="list-content">
                             <div class="item-shareholder">
                                 <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
                                         class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
@@ -533,9 +478,9 @@
 
                             <div class="item-shareholder">
                                 <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
                                         class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
@@ -560,9 +505,9 @@
 
                             <div class="item-shareholder">
                                 <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
                                         class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
@@ -587,9 +532,9 @@
 
                             <div class="item-shareholder">
                                 <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
                                         class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
@@ -613,9 +558,9 @@
                             </div>
                             <div class="item-shareholder">
                                 <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
                                         class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
@@ -640,9 +585,9 @@
                             </div>
                             <div class="item-shareholder">
                                 <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
                                         class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
@@ -672,15 +617,15 @@
             <div id="shareholder3" class="tab-pane fade">
                 <div class="tab-content-item">
                     <div class="tab-content-left">
-                        <img loading="lazy" src="{{ Theme::asset()->url('images/main/cthome3.jpg') }}" alt="">
+                        <img loading="lazy" src="{{ Theme::asset()->url('images/main/cthome3.jpg') }}" alt="Icon">
                     </div>
                     <div class="tab-content-right">
                         <div class="list-content">
                             <div class="item-shareholder">
                                 <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
                                         class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
@@ -705,9 +650,9 @@
 
                             <div class="item-shareholder">
                                 <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
                                         class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
@@ -732,9 +677,9 @@
 
                             <div class="item-shareholder">
                                 <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
                                         class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
@@ -759,9 +704,9 @@
 
                             <div class="item-shareholder">
                                 <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
                                         class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
@@ -785,9 +730,9 @@
                             </div>
                             <div class="item-shareholder">
                                 <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
                                         class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
@@ -812,9 +757,9 @@
                             </div>
                             <div class="item-shareholder">
                                 <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
                                         class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
@@ -844,15 +789,15 @@
             <div id="shareholder4" class="tab-pane fade">
                 <div class="tab-content-item">
                     <div class="tab-content-left">
-                        <img loading="lazy" src="{{ Theme::asset()->url('images/main/cthome1.jpg') }}" alt="">
+                        <img loading="lazy" src="{{ Theme::asset()->url('images/main/cthome1.jpg') }}" alt="Icon">
                     </div>
                     <div class="tab-content-right">
                         <div class="list-content">
                             <div class="item-shareholder">
                                 <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
                                         class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
@@ -877,9 +822,9 @@
 
                             <div class="item-shareholder">
                                 <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
                                         class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
@@ -904,9 +849,9 @@
 
                             <div class="item-shareholder">
                                 <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
                                         class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
@@ -931,9 +876,9 @@
 
                             <div class="item-shareholder">
                                 <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
                                         class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
@@ -957,9 +902,9 @@
                             </div>
                             <div class="item-shareholder">
                                 <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
                                         class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
                                         class="down-hide">
                                 </div>
                                 <div class="mid">
@@ -984,9 +929,9 @@
                             </div>
                             <div class="item-shareholder">
                                 <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
                                         class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt=""
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
                                         class="down-hide">
                                 </div>
                                 <div class="mid">

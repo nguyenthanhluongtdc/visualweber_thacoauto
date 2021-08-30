@@ -19,7 +19,7 @@
                 </div>
                 <div data-aos="zoom-in" data-aos-duration="2500" class="branch-wrap">
                     <img loading="lazy" class="branch-background-image" src="{{Theme::asset()->url('images/distribution/background.jpg')}}"
-                        alt="">
+                        alt="Background">
                     <div class="branch-background-blur"></div>
                     <div class="left">
                         <div class="branch-overflow" id="branch-list"></div>

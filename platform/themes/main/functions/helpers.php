@@ -116,3 +116,41 @@ if (!function_exists('get_comment_count')) {
         return 0;
     }
 }
+
+if (!function_exists('get_result_language_file')) {
+    function get_result_language_file()
+    {
+        $group['locale'] = \Language::getCurrentLocale();
+
+        $translations = [];
+        if ($group) {
+            $jsonFile = resource_path('lang/' . $group['locale'] . '.json');
+
+            if (!File::exists($jsonFile)) {
+                $jsonFile = theme_path(\Theme::getThemeName() . '/lang/' . $group['locale'] . '.json');
+            }
+
+            if (!File::exists($jsonFile)) {
+                $languages = scan_folder(theme_path(\Theme::getThemeName() . '/lang'));
+
+                if (!empty($languages)) {
+                    $jsonFile = theme_path(\Theme::getThemeName() . '/lang/' . Arr::first($languages));
+                }
+            }
+
+            if (File::exists($jsonFile)) {
+                $translations = get_file_data($jsonFile, true);
+            }
+
+            if ($group['locale'] != 'en') {
+                $defaultEnglishFile = theme_path(\Theme::getThemeName() . '/lang/en.json');
+
+                if ($defaultEnglishFile) {
+                    $translations = array_merge(get_file_data($defaultEnglishFile, true), $translations);
+                }
+            }
+        }
+
+        return $translations;
+    }
+}

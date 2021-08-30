@@ -2,6 +2,7 @@
     @php
         $popupData = [
             'popup_info' => [
+                'id' => $item->id,
                 'name' => has_field($item, 'ten_popup_he_thong_phan_phoi') ? get_field($item, 'ten_popup_he_thong_phan_phoi') : '',
                 'content' => has_field($item, 'mo_ta_he_thong_phan_phoi') ? get_field($item, 'mo_ta_he_thong_phan_phoi') : '',
                 'seemore' => $item->url

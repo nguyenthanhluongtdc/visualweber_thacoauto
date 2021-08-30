@@ -90,7 +90,7 @@
                     @foreach(has_field($page, 'repeater_module_news_research_development') as $item)
                         <div class="rnd-news-mobile__wrapper" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="50">
                             <div class="top">
-                                <img loading="lazy" width="" height="" src="{{get_image_url(has_sub_field($item,'image_news_research_development'))}}" alt="" />
+                                <img loading="lazy" width="" height="" src="{{get_image_url(has_sub_field($item,'image_news_research_development'))}}" alt="Ảnh tin tức" />
                             </div>
                             <div class="bottom">
                                 <div class="fontmb-small font-pri">

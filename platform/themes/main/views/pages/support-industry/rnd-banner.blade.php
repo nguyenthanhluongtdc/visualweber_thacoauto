@@ -22,7 +22,7 @@
             @foreach(has_field($page, 'repeater_banner_research_development') as $item)
             <li class="item">
                 <div class="symbol">
-                   <img loading="lazy" src="{{get_image_url(has_sub_field($item,'icon_counter_banner_research_development'))}}" alt="">
+                   <img loading="lazy" src="{{get_image_url(has_sub_field($item,'icon_counter_banner_research_development'))}}" alt="Icon banner">
                 </div>
 
                 <div class="description counter">
@@ -126,7 +126,7 @@
             @foreach(has_field($page, 'repeater_banner_research_development') as $item)
             <li class="item">
                 <div class="symbol">
-                    <img loading="lazy" src="{{get_image_url(has_sub_field($item,'icon_counter_banner_research_development'))}}" alt="">
+                    <img loading="lazy" src="{{get_image_url(has_sub_field($item,'icon_counter_banner_research_development'))}}" alt="Icon banner">
                 </div>
 
                 <div class="description counter">

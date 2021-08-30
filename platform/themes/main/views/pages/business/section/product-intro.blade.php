@@ -178,7 +178,7 @@
             </div>
             <div class="product-intro--right">
                 <div class="product-intro__image">
-                    <img loading="lazy" src="{{get_image_url(has_sub_field($item,'image'))}}" alt="">     
+                    <img loading="lazy" src="{{get_image_url(has_sub_field($item,'image'))}}" alt=" {!! has_sub_field($item, 'tittle') ? has_sub_field($item, 'tittle') : '' !!}">     
                 </div>
             </div>
         </div>

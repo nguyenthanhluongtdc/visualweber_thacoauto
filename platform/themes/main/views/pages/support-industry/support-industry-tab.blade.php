@@ -50,7 +50,7 @@
                         <div class="{{$count>6?'col-6':'col-7'}} item-top">
                             @foreach($menu_nodes as $key => $item)
                                 <div id="{{Str::Slug(has_sub_field($item, 'title_one'), '_').$key}}" class="tabcontents">
-                                    <img loading="lazy" src="{{ Storage::disk('public')->exists(has_sub_field($item, 'image')) ? get_image_url(has_sub_field($item, 'image')) : RvMedia::getDefaultImage()}}" alt=""
+                                    <img loading="lazy" src="{{ Storage::disk('public')->exists(has_sub_field($item, 'image')) ? get_image_url(has_sub_field($item, 'image')) : RvMedia::getDefaultImage()}}" alt=" {!! has_sub_field($item, 'title_two') !!}"
                                         class="mb-2" />
                                     <div class="content-bottom">
                                         <div class="top">

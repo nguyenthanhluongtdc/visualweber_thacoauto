@@ -69,7 +69,7 @@
             @endphp
             <div class="search-language">
                 <div class="search">
-                    <a aria-label="Search" href="#search"><img loading="lazy" src="{{ Theme::asset()->url('images/main/search.png') }}" alt=""></a>
+                    <a aria-label="Search" href="#search"><img loading="lazy" src="{{ Theme::asset()->url('images/main/search.png') }}" alt="Search"></a>
                 </div>
                 <div class="language">
                     <ul class="nav-lang">

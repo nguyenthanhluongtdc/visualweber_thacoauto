@@ -1,451 +1,432 @@
 #test-drive-page {
-    @media only screen and (max-width: 1080px){
-        .container-remake{
-            min-width:100% !important;
-            max-width:100% !important;
-        }
+  @media only screen and (max-width: 1080px) {
+    .container-remake {
+      min-width: 100% !important;
+      max-width: 100% !important;
     }
-    .section-main {
-        @include paddingBottom(190);
-        .row__main {
-            @include marginTop(75, "+");
-            @include marginBottom(55, "+");
-            margin-left: 0;
-            margin-right: 0;
+  }
+  .section-main {
+    @include paddingBottom(190);
+    .row__main {
+      @include marginTop(75, "+");
+      @include marginBottom(55, "+");
+      margin-left: 0;
+      margin-right: 0;
 
-            @media (min-width: 1080px) {
-                flex-wrap: nowrap;
-            }
+      @media (min-width: 1080px) {
+        flex-wrap: nowrap;
+      }
+    }
+    .form-register {
+      @media (min-width: 1080px) {
+        @include flex(560);
+        @include width(560);
+      }
+      flex: 0 0 100%;
+      max-width: 100%;
+
+      @include paddingBottom(25);
+      background-color: #f6f6f6;
+
+      .nav {
+        border: none;
+        margin-bottom: 15px;
+
+        &-item {
+          width: 50%;
         }
-        .form-register {
-            @media (min-width: 1080px) {
-                @include flex(560);
-                @include width(560);
-            }
-            flex: 0 0 100%;
-            max-width: 100%;
-
-            @include paddingBottom(25);
-            background-color: #F6F6F6;
-           
-            .nav {
-                border: none;
-                margin-bottom: 15px;
-                
-                &-item {
-                    width: 50%;
-                   
-                }
-                &-link {
-                    width: 100%;
-                    @include paddingY(24);
-                    border: none;
-                    outline: none;
-                    text-transform: uppercase;
-                    font-family: $font-primary-bold;
-                    background-color: #F6F6F6;
-                    color: #292929;
-                    height: 100%;
-                   
-                    
-                }
-                &-link.active {
-                    background-color: white;
-                    @media only screen and (max-width: 1080px){
-                        background-color: #F6F6F6;
-                        
-                    } 
-                    .bottom-line{
-                        display: none;
-                        @media only screen and (max-width: 1080px){
-                            display: block;
-                           
-                            border-bottom: 2px solid $color-primary;
-                            width: 70%;
-                            display: table;
-                            margin: 0 auto;
-                            
-                        }
-                        @media only screen and (max-width: 992px){
-                           width: 60%;
-                        }
-                       
-                       
-                    }
-                }
-            }
-            
-            .tab-content {
-                margin-right: 0;
-                background-color: transparent;
-                @include paddingX(50);
-               
-                .form {
-                   
-                   
-                    &__text, &__select {
-                        background-color: transparent;
-                        display: grid;
-                        align-items: center;
-                        grid-template-columns: 50% 50%;
-                        margin-bottom: 10px;
-
-                        .title {
-                            font-size: 15px;
-                            @include paddingRight(58);
-                            @media(max-width: 1680px) {
-                                font-size: 14px;
-                            }
-                            @media(max-width: 1400px) {
-                                font-size: 13px;
-                            }
-                            @media(max-width: 1264px) {
-                                font-size: 12px;
-                            }
-                            @media only screen and (max-width: 1080px){
-                    
-                                font-size: 20px;
-                  
-                              }
-                              @media only screen and (max-width: 992px){
-                              
-                                font-size: 18px;
-                  
-                              }
-                              @media only screen and (max-width: 767px){
-                               
-                                font-size: 12px;
-                              }
-                        }
-
-                        input[type=text]::placeholder { 
-                            color: #292929;
-                            opacity: 0.5019607843137255;
-                        }
-                        
-
-                        .dropdown span, .dropdown i, .dropdown ul li, input[type=text] {
-                            font-size: 12px !important;
-                            @media(max-width: 1680px) {
-                                font-size: 11px !important;
-                            }
-                            @media(max-width: 1264px) {
-                                font-size: 10px !important;
-                            }
-                            @media only screen and (max-width: 1080px){
-                                font-size: 20px !important;
-                            }
-                            @media only screen and (max-width: 992px){
-                              
-                                font-size: 18px !important;
-                  
-                            }
-                            @media only screen and (max-width: 767px){
-                            
-                                font-size: 12px !important;
-                            }
-                        }
-                    }
-
-                    &__text {
-                        input {
-                            border: none;
-                            outline: none;
-                            @include paddingY(15);
-                            @include paddingX(20);
-                            @media only screen and (max-width: 600px){
-                                @include paddingY(12);
-                                @include paddingX(20);
-                            }
-                        }
-                        
-                    }
-
-                    &__select {
-                        
-                        .dropdown {
-                           
-                            display: inline-block;
-                            background-color: #fff;
-                            // border-radius: 2px;
-                            // box-shadow: 0 0 2px rgb(204, 204, 204);
-                            transition: all .5s ease;
-                            position: relative;
-                            font-size: 14px;
-                            color: #474747;
-                            height: 100%;
-                            text-align: left;
-                            @media only screen and (max-width: 600px){
-                              font-size: 8px;
-                            }
-                            &:focus {
-                                border: none;
-                                outline: none;
-                            }
-                        }
-                        
-                        .dropdown .select {
-                            cursor: pointer;
-                            display: block;
-                            @include paddingY(15);
-                            @include paddingX(20);
-                           
-                            
-                        }
-                        .dropdown .select > i {
-                            font-size: 13px;
-                            color: #888;
-                            cursor: pointer;
-                            transition: all .3s ease-in-out;
-                            float: right;
-                            line-height: 20px;
-                            
-                        }
-                        .dropdown:hover {
-                            box-shadow: 0 0 4px rgb(204, 204, 204)
-                        }
-                        .dropdown:active {
-                            background-color: #f8f8f8
-                        }
-                        .dropdown.active:hover,
-                        .dropdown.active {
-                            box-shadow: 0 0 4px rgb(204, 204, 204);
-                            border-radius: 2px 2px 0 0;
-                            background-color: #f8f8f8
-                        }
-                        .dropdown.active .select > i {
-                            transform: rotate(-180deg)
-                        }
-                        .dropdown .dropdown-menu {
-                            position: absolute;
-                            background-color: #fff;
-                            width: 100%;
-                            left: 0;
-                            margin-top: 1px;
-                            box-shadow: 0 1px 2px rgb(204, 204, 204);
-                            border-radius: 0 1px 2px 2px;
-                            overflow: hidden;
-                            display: none;
-                            max-height: 144px;
-                            overflow-y: auto;
-                            z-index: 9;
-                           
-                        }
-                        .dropdown .dropdown-menu li {
-                            padding: 10px;
-                            transition: all .2s ease-in-out;
-                            cursor: pointer;
-                            
-                            
-                        } 
-                        .dropdown .dropdown-menu {
-                            padding: 0;
-                            list-style: none
-                        }
-                        .dropdown .dropdown-menu li:hover {
-                            background-color: #f2f2f2
-                        }
-                        .dropdown .dropdown-menu li:active {
-                            background-color: #e2e2e2
-                        }
-                    }
-                }
-            }
+        &-link {
+          width: 100%;
+          @include paddingY(24);
+          border: none;
+          outline: none;
+          text-transform: uppercase;
+          font-family: $font-primary-bold;
+          background-color: #f6f6f6;
+          color: #292929;
+          height: 100%;
         }
-
-        .box-picture {
-            transition: all 1000ms cubic-bezier(0.19, 1, 0.22, 1);
-                &:hover{
-                    transform: scale(1.1);
-                }
-            @media only screen and (max-width: 1080px){
-                display: none;       
-                       
-           }
-            @media (min-width: 992px) {
-                @include paddingLeft(120);
-            }
-            flex-grow: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            
-            @media (max-width: 991px) {
-                padding-left: 120px;
-                padding-right: 120px;
-                margin-top: 50px;
-            } 
-
-            @media (max-width: 576px) {
-                padding-left: 40px;
-                padding-right: 40px;
-                margin-top: 25px;
-            } 
-
-            img {
-                max-width: 100%;
-            }
-        }
-        .top-menu-mobile{
+        &-link.active {
+          background-color: white;
+          @media only screen and (max-width: 1080px) {
+            background-color: #f6f6f6;
+          }
+          .bottom-line {
             display: none;
-                @media only screen and (max-width: 1080px){
-                    display: block;       
-                           
-              
-            .box-picture-mobile {
-                
-                @media (min-width: 992px) {
-                    @include paddingLeft(120);
-                }
-                flex-grow: 1;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                
-                @media (max-width: 991px) {
-                    padding-left: 120px;
-                    padding-right: 120px;
-                    margin-top: 50px;
-                } 
-    
-                @media (max-width: 576px) {
-                    padding-left: 40px;
-                    padding-right: 40px;
-                    margin-top: 25px;
-                } 
-    
-                img {
-                    max-width: 100%;
-                    transition: all 1000ms cubic-bezier(0.19, 1, 0.22, 1);
-                            &:hover{
-                                transform: scale(1.1);
-                            }
-                }
+            @media only screen and (max-width: 1080px) {
+              display: block;
+
+              border-bottom: 2px solid $color-primary;
+              width: 70%;
+              display: table;
+              margin: 0 auto;
             }
-            p{
-                opacity: 80%;
-                text-align: center;
-                justify-content: center;
+            @media only screen and (max-width: 992px) {
+              width: 60%;
             }
+          }
+        }
+      }
+
+      .tab-content {
+        margin-right: 0;
+        background-color: transparent;
+        @include paddingX(50);
+
+        .select2-container--default .select2-selection--single {
+          border: unset;
+          padding: 7px 15px;
+          height: 40px;
         }
 
+        .select2-container--default
+          .select2-selection--single
+          .select2-selection__arrow {
+          height: 39px;
         }
-        
 
-        .new {
-            padding: 50px;
+        .select2-container
+          .select2-selection--single
+          .select2-selection__rendered {
+          padding-left: unset;
         }
-        
-        .form-check {
-            @media only screen and (max-width: 1080px){
-                padding: 0 7%;
-            }
-            @media only screen and (max-width: 600px){
-                padding: 0 10%;
-            }
-            display: block;
-            @include marginBottom(33, "+");
-            padding-left: 0;
 
+        .form {
+          &__text,
+          &__select {
+            background-color: transparent;
+            display: grid;
+            align-items: center;
+            grid-template-columns: 50% 50%;
+            margin-bottom: 10px;
+
+            .title {
+              font-size: 15px;
+              @include paddingRight(58);
+              //   @media (max-width: 1680px) {
+              //     font-size: 14px;
+              //   }
+              //   @media (max-width: 1400px) {
+              //     font-size: 13px;
+              //   }
+              //   @media (max-width: 1264px) {
+              //     font-size: 12px;
+              //   }
+              //   @media only screen and (max-width: 1080px) {
+              //     font-size: 20px;
+              //   }
+              //   @media only screen and (max-width: 992px) {
+              //     font-size: 18px;
+              //   }
+              //   @media only screen and (max-width: 767px) {
+              //     font-size: 12px;
+              //   }
+            }
+
+            input[type="text"]::placeholder {
+              color: #292929;
+              opacity: 0.5019607843137255;
+            }
+            .dropdown span,
+            .dropdown i,
+            .dropdown ul li,
+            input[type="text"] {
+              font-size: 13px !important;
+              //   @media (max-width: 1680px) {
+              //     font-size: 11px !important;
+              //   }
+              //   @media (max-width: 1264px) {
+              //     font-size: 10px !important;
+              //   }
+              //   @media only screen and (max-width: 1080px) {
+              //     font-size: 20px !important;
+              //   }
+              //   @media only screen and (max-width: 992px) {
+              //     font-size: 18px !important;
+              //   }
+              //   @media only screen and (max-width: 767px) {
+              //     font-size: 12px !important;
+              //   }
+              // fon
+            }
+          }
+
+          &__text {
             input {
-                padding: 0;
-                height: initial;
-                width: initial;
-                margin-bottom: 0;
-                display: none;
-                cursor: pointer;
-
-                &:checked + label:after {
-                    position: absolute;
-                    top: .25rem;
-                    left: 0;
-                    display: block;
-                    width: 1rem;
-                    height: 1rem;
-                    content: "";
-                    top: 0;
-                    background: no-repeat 80%/70% 90%;
-                    background-image: url(../images/checked.png);
-                }
+              border: none;
+              outline: none;
+              @include paddingY(15);
+              @include paddingX(20);
+              @media only screen and (max-width: 600px) {
+                @include paddingY(12);
+                @include paddingX(20);
+              }
             }
+          }
 
-            label {
-                position: relative;
-                cursor: pointer;
-                padding-left: 37px;
-                @media only screen and (max-width: 1080px){
-                    
-                    font-size: 20px;
-      
-                  }
-                  @media only screen and (max-width: 992px){
-                  
-                    font-size: 18px;
-      
-                  }
-                  @media only screen and (max-width: 767px){
-                   
-                    font-size: 12px;
-                  }
-                &:before {
-                    content:'';
-                    -webkit-appearance: none;
-                    background-color: transparent;
-                    border: 1px solid #CCCCCC;
-                    display: inline-block;
-                    position: absolute;
-                    left: 0;
-                    vertical-align: middle;
-                    cursor: pointer;
-                    margin-right: 5px;
-                    width: 17px;
-                    height: 17px;
-                }
-            }
-        }
-
-        .form-submit {
-            .btn-submit {
-                @include width(453);
-                @include height(43);
-                background-color: #01498B;
-                color: white;
+          &__select {
+            .dropdown {
+              display: inline-block;
+              background-color: #fff;
+              // border-radius: 2px;
+              // box-shadow: 0 0 2px rgb(204, 204, 204);
+              transition: all 0.5s ease;
+              position: relative;
+              font-size: 14px;
+              color: #474747;
+              height: 100%;
+              text-align: left;
+              @media only screen and (max-width: 600px) {
+                font-size: 8px;
+              }
+              &:focus {
                 border: none;
                 outline: none;
-             
-                 
-                @media only screen and (max-width: 1080px){
-                   
-                    display: table;
-                    margin: 0 auto;
-                    width: 70%;
-                    height: 40px;
-                }
-                @media only screen and (max-width: 600px){
-                    width: 300px;
-                }
+              }
             }
-            .btn-back{
-                display: none;
-               
-                 
-                @media only screen and (max-width: 1080px){
-                  
-                    display: block;
-                    display: table;
-                    margin: 0 auto;
-                    margin-top: 5%;
-                width: 50%;
-                height: 40px;
-                background-color: #01498B;
-                color: white;
-                border: none;
-                outline: none;
-                }
-                @media only screen and (max-width: 600px){
-                    width: 200px;
-                }
+
+            .dropdown .select {
+              cursor: pointer;
+              display: block;
+              @include paddingY(15);
+              @include paddingX(20);
             }
+            .dropdown .select > i {
+              font-size: 13px;
+              color: #888;
+              cursor: pointer;
+              transition: all 0.3s ease-in-out;
+              float: right;
+              line-height: 20px;
+            }
+            .dropdown:hover {
+              box-shadow: 0 0 4px rgb(204, 204, 204);
+            }
+            .dropdown:active {
+              background-color: #f8f8f8;
+            }
+            .dropdown.active:hover,
+            .dropdown.active {
+              box-shadow: 0 0 4px rgb(204, 204, 204);
+              border-radius: 2px 2px 0 0;
+              background-color: #f8f8f8;
+            }
+            .dropdown.active .select > i {
+              transform: rotate(-180deg);
+            }
+            .dropdown .dropdown-menu {
+              position: absolute;
+              background-color: #fff;
+              width: 100%;
+              left: 0;
+              margin-top: 1px;
+              box-shadow: 0 1px 2px rgb(204, 204, 204);
+              border-radius: 0 1px 2px 2px;
+              overflow: hidden;
+              display: none;
+              max-height: 144px;
+              overflow-y: auto;
+              z-index: 9;
+            }
+            .dropdown .dropdown-menu li {
+              padding: 10px;
+              transition: all 0.2s ease-in-out;
+              cursor: pointer;
+            }
+            .dropdown .dropdown-menu {
+              padding: 0;
+              list-style: none;
+            }
+            .dropdown .dropdown-menu li:hover {
+              background-color: #f2f2f2;
+            }
+            .dropdown .dropdown-menu li:active {
+              background-color: #e2e2e2;
+            }
+          }
         }
+      }
     }
+
+    .box-picture {
+      transition: all 1000ms cubic-bezier(0.19, 1, 0.22, 1);
+      &:hover {
+        transform: scale(1.1);
+      }
+      @media only screen and (max-width: 1080px) {
+        display: none;
+      }
+      @media (min-width: 992px) {
+        @include paddingLeft(120);
+      }
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media (max-width: 991px) {
+        padding-left: 120px;
+        padding-right: 120px;
+        margin-top: 50px;
+      }
+
+      @media (max-width: 576px) {
+        padding-left: 40px;
+        padding-right: 40px;
+        margin-top: 25px;
+      }
+
+      img {
+        max-width: 100%;
+      }
+    }
+    .top-menu-mobile {
+      display: none;
+      @media only screen and (max-width: 1080px) {
+        display: block;
+
+        .box-picture-mobile {
+          @media (min-width: 992px) {
+            @include paddingLeft(120);
+          }
+          flex-grow: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          @media (max-width: 991px) {
+            padding-left: 120px;
+            padding-right: 120px;
+            margin-top: 50px;
+          }
+
+          @media (max-width: 576px) {
+            padding-left: 40px;
+            padding-right: 40px;
+            margin-top: 25px;
+          }
+
+          img {
+            max-width: 100%;
+            transition: all 1000ms cubic-bezier(0.19, 1, 0.22, 1);
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+        }
+        p {
+          opacity: 80%;
+          text-align: center;
+          justify-content: center;
+        }
+      }
+    }
+
+    .new {
+      padding: 50px;
+    }
+
+    .form-check {
+      @media only screen and (max-width: 1080px) {
+        padding: 0 7%;
+      }
+      @media only screen and (max-width: 600px) {
+        padding: 0 10%;
+      }
+      display: block;
+      @include marginBottom(33, "+");
+      padding-left: 0;
+
+      input {
+        padding: 0;
+        height: initial;
+        width: initial;
+        margin-bottom: 0;
+        display: none;
+        cursor: pointer;
+
+        &:checked + label:after {
+          position: absolute;
+          top: 0.25rem;
+          left: 0;
+          display: block;
+          width: 1rem;
+          height: 1rem;
+          content: "";
+          top: 0;
+          background: no-repeat 80%/70% 90%;
+          background-image: url(../images/checked.png);
+        }
+      }
+
+      label {
+        position: relative;
+        cursor: pointer;
+        padding-left: 37px;
+        @media only screen and (max-width: 1080px) {
+          font-size: 20px;
+        }
+        @media only screen and (max-width: 992px) {
+          font-size: 18px;
+        }
+        @media only screen and (max-width: 767px) {
+          font-size: 12px;
+        }
+        &:before {
+          content: "";
+          -webkit-appearance: none;
+          background-color: transparent;
+          border: 1px solid #cccccc;
+          display: inline-block;
+          position: absolute;
+          left: 0;
+          vertical-align: middle;
+          cursor: pointer;
+          margin-right: 5px;
+          width: 17px;
+          height: 17px;
+        }
+      }
+    }
+
+    .form-submit {
+      .btn-submit {
+        @include width(453);
+        @include height(43);
+        background-color: #01498b;
+        color: white;
+        border: none;
+        outline: none;
+
+        @media only screen and (max-width: 1080px) {
+          display: table;
+          margin: 0 auto;
+          width: 70%;
+          height: 40px;
+        }
+        @media only screen and (max-width: 600px) {
+          width: 300px;
+        }
+      }
+      .btn-back {
+        display: none;
+
+        @media only screen and (max-width: 1080px) {
+          display: block;
+          display: table;
+          margin: 0 auto;
+          margin-top: 5%;
+          width: 50%;
+          height: 40px;
+          background-color: #01498b;
+          color: white;
+          border: none;
+          outline: none;
+        }
+        @media only screen and (max-width: 600px) {
+          width: 200px;
+        }
+      }
+    }
+  }
 }

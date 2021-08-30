@@ -1,0 +1,9 @@
+{
+    "name": "Brand",
+    "namespace": "Platform\\Brand\\",
+    "provider": "Platform\\Brand\\Providers\\BrandServiceProvider",
+    "author": "Laravel Developer Team",
+    "url": "https://developers.laravel.com",
+    "version": "1.0",
+    "description": "The description for module brand"
+}

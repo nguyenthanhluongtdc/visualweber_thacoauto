@@ -1,6 +1,7 @@
 <script>
     window.__distribution = {
-        ajax: "{{ Language::getLocalizedURL(Language::getCurrentLocale(), route('public.ajax.showroom')) }}"
+        ajax: "{{ Language::getLocalizedURL(Language::getCurrentLocale(), route('public.ajax.showroom')) }}",
+        id: "{{ $data->id }}"
     }
 </script>
 @php

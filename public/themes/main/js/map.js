@@ -1,12 +1,4 @@
 const Distribution = {
-    // initSearchState: function() {
-    //     if(!$('.city')) return
-    //     $('.ui.dropdown.city').dropdown({
-    //         ignoreDiacritics: true,
-    //         sortSelect: true,
-    //         fullTextSearch:'exact',
-    //     });
-    // },
     init: function () {
         // code to render map here...
         var map = L.map('map', {
@@ -38,49 +30,13 @@ const Distribution = {
             return yx(y, x);  // When doing xy(x, y);
         };
     
-        // var greenIcon = L.icon({
-        //     // iconUrl: "{{ Theme::asset()->url('images/distribution/marker.png') }}",
-        //     iconUrl: "themes/main/images/distribution/marker.png",
-    
-        //     iconSize:     [30, 30], // size of the icon
-        //     iconAnchor:   [20, 20], // point of the icon which will correspond to marker's location
-        //     popupAnchor:  [-3, -25] // point from which the popup should open relative to the iconAnchor
-        // });
         Distribution.getTemplateDistrubition(map)
-    
-        // let popup = `<div class="branch-popup">
-        //                 <h2 class="branch-name font20">thaco an sương</h2>
-        //                 <div class="branch-body">
-        //                     <div class="branch-body-item">
-        //                         <p class="info-number font30">70</p>
-        //                         <p class="info-text font15">Lorem Isum</p>
-        //                     </div>
-        //                     <div class="branch-body-item">
-        //                         <p class="info-number font30">1000</p>
-        //                         <p class="info-text font15">Lorem Isum</p>
-        //                     </div>
-        //                     <div class="branch-body-item">
-        //                         <p class="info-number font30">99%</p>
-        //                         <p class="info-text font15">Lorem Isum</p>
-        //                     </div>
-        //                 </div>
-        //                 <div class="branch-footer">
-        //                     <a href="#"><button>{!! __('Readmore') !!}</button></a>
-        //                 </div>
-        //             </div>`
-    
-        // L.marker(new L.LatLng(-630.8, 254), {icon: greenIcon}).addTo(map).bindPopup(popup)
-        // L.marker(new L.LatLng(-640.8, 300), {icon: greenIcon}).addTo(map).bindPopup(popup)
-        // L.marker(new L.LatLng(-660.8, 200), {icon: greenIcon}).addTo(map).bindPopup(popup)
-        // L.marker(new L.LatLng(-650.8, 240), {icon: greenIcon}).addTo(map).bindPopup(popup)
-        // L.marker(new L.LatLng(-620.8, 240), {icon: greenIcon}).addTo(map).bindPopup(popup)
     
         setTimeout(() => {
             window.__map.setView(new L.LatLng(-630.8, 254), 2)
         }, 300)
     },
     getTemplateDistrubition: function(map) {
-        Distribution.removeMarker()
         $.ajax({
             headers: {
                 "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content")
@@ -118,44 +74,37 @@ const Distribution = {
         const locateItem = $('.locate_item')
         if (!locateItem) return
 
-        const locationActive = $('.locate_item.active')
-        if (locationActive) {
-            const dataLocationActive = locationActive.data('item')
-            if (dataLocationActive) {
-                Distribution.addMarkerAndContentPopup(map, dataLocationActive)
+        $(".locate_item").each(function() {
+            const itemData = $(this).data('item');
+            if (!!itemData) {
+                Distribution.addMarkerAndContentPopup(map, itemData)
             }
-        }
-
+        });
+        
         locateItem
             .mouseenter(function () {
                 $('.locate_item').removeClass('active')
-                Distribution.removeMarker()
-
                 $(this).addClass('active')
-                if (!!$('.leaflet-popup')) {
-                    $('.leaflet-popup').remove();
-                }
 
                 const item = $(this).data('item')
+                const { popup_info } = item
+                $(".leaflet-popup").each(function() {
+                    const popup = $(this).find('.branch-popup').data('popup');
+                    if (!!popup && popup == popup_info.id) {
+                        $(this).remove();
+                    }
+                });
+
                 if (!!item) {
-                    Distribution.addMarkerAndContentPopup(map, item)
+                    Distribution.addMarkerAndContentPopup(map, item, 'hover')
                 }
 
             })
             .mouseleave(function () {
                 $(this).removeClass('active')
-                // Distribution.removeMarker()
             });
     },
-    removeMarker: function () {
-        if (!!$('.leaflet-popup')) {
-            $('.leaflet-popup').remove();
-        }
-    },
-    addMarkerAndContentPopup: function (map, item) {
-        if ($(".leaflet-marker-icon")) {
-            $(".leaflet-marker-icon").remove()
-        }
+    addMarkerAndContentPopup: function (map, item, status = '') {
         const { location, popup_info } = item
         if(location) {
             lat = location.split('/')[0]
@@ -166,29 +115,13 @@ const Distribution = {
             map.fitBounds([
                 [lat, lng]
             ], { maxZoom: 8 });
-            Distribution.createMarketPoint(map, { popup_info, lat, lng })
+            Distribution.createMarketPoint(map, { popup_info, lat, lng }, status)
         }
-
-        // if (!!popup_info.content && popup_info.content instanceof Array && popup_info.content.length > 0) {
-        //     popup_info.content.forEach(el => {
-        //         if (!!lat && !!lng) {
-        //             Distribution.createMarketPoint(map, {
-        //                 name: el.name,
-        //                 lat: lat,
-        //                 lng: lng,
-
-        //             })
-        //         }
-        //     })
-        //     return
-        // }
-        // Distribution.createMarketPoint(map, { popup_info.name, image, lat, lng })
-
     },
-    createMarketPoint: function (map, { popup_info, lat, lng }) {
+    createMarketPoint: function (map, { popup_info, lat, lng }, status = '') {
         let popupDetailWrap = '';
         popup_info.content.forEach(element => {
-            let popupDetailItem = '<div class="branch-body-item">'
+            let popupDetailItem = `<div class="branch-body-item">`
             element.forEach((el, index) => {
                 if(index == 0) {
                     popupDetailItem += `<p class="info-number font30">${el.value}</p>`
@@ -200,7 +133,7 @@ const Distribution = {
             popupDetailWrap += popupDetailItem
         });
 
-        let popupContent = `<div class="branch-popup">
+        let popupContent = `<div class="branch-popup" data-popup="${popup_info.id}">
                                 <h2 class="branch-name font20">${popup_info.name}</h2>
                                 <div class="branch-body">`
                                 + popupDetailWrap +
@@ -220,15 +153,9 @@ const Distribution = {
         });
 
         var marker =  L.marker(new L.LatLng(lat, lng), {icon: greenIcon}).addTo(map).bindPopup(popupContent)
-        marker.openPopup()
-        // let icon = new L.Icon.Default();
-        // icon.options.shadowSize = [0, 0];
-        // let m = L.marker([lat, lng], { icon }).addTo(map)
-
-        // let p = new L.Popup({ autoClose: false, closeOnClick: false })
-        //     .setContent(popupContent)
-        //     .setLatLng([lat, lng]);
-        // m.bindPopup(p).togglePopup();
+        if(status == 'hover') {
+            marker.openPopup()
+        }
     },
 }
 $(document).ready(function() {

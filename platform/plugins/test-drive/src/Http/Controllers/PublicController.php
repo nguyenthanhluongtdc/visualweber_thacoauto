@@ -68,7 +68,7 @@ class PublicController extends BaseController
         ]);
     }
 
-    public function postTestDrive(TestDriveInterface $testDriveInterface)
+    public function postTestDrive(TestDriveInterface $testDriveInterface, BaseHttpResponse $response)
     {
         try {
             $testDriveInterface->createOrUpdate(request()->all());
@@ -83,7 +83,7 @@ class PublicController extends BaseController
             return redirect()->back()->with(
                 [
                     'type' => 'error',
-                    'message' => __('Có lỗi trong quá trình đăng ký, vui lòng thử lại!')
+                    'message' => __('Có lỗi trong quá trình đăng ký hoặc chưa điền đủ trường. Vui lòng thử lại!')
                 ]
             );
         }

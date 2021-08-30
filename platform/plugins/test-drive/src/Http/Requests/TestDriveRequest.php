@@ -18,6 +18,17 @@ class TestDriveRequest extends Request
     {
         return [
             'name'   => 'required',
+            'type_register' => 'required',
+            'vocative' => 'required',
+            'phone' => 'required',
+            'email' => 'required|email',
+            'province_id' => 'required',
+            'district_id' => 'required',
+            'showroom_id' => 'required',
+            'brand_id' => 'required',
+            'time' => 'required',
+            'want_to_buy_id' => 'required',
+            'test_drive_id' => 'required',
             'status' => Rule::in(BaseStatusEnum::values()),
         ];
     }

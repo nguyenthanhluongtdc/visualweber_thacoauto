@@ -23,10 +23,8 @@ Route::group(['namespace' => 'Platform\CarCategory\Http\Controllers', 'middlewar
 
     Route::group(apply_filters(BASE_FILTER_GROUP_PUBLIC_ROUTE, []), function () {
 
-        if (SlugHelper::getPrefix(CarCategory::class)) {
-            Route::get(SlugHelper::getPrefix(CarCategory::class) . '/{slug}', [
-                'uses' => 'PublicController@getCategory',
-            ]);
-        }
+        Route::get(SlugHelper::getPrefix(CarCategory::class, 'car-categories') . '/{slug}', [
+            'uses' => 'PublicController@getCategory',
+        ]);
     });
 });

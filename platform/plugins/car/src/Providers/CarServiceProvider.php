@@ -116,7 +116,7 @@ class CarServiceProvider extends ServiceProvider
                 'permissions' => ['equipment.index'],
             ]);
         });
-        $this->app->register(HookServiceProvider::class);
+        // $this->app->register(HookServiceProvider::class);
         $this->app->booted(function () {
             if (defined('CUSTOM_FIELD_MODULE_SCREEN_NAME')) {
                 \CustomField::registerModule(Brand::class)

@@ -8,11 +8,11 @@ use Exception;
 use Platform\CarCategory\Services\CarCategoryService;
 use Platform\CarCategory\Models\CarCategory;
 
-class CarCategoryController extends BaseController
+class PublicController extends BaseController
 {
     public function getCategory($slug, CarCategoryService $carCategoryService)
     {
-        $slug = \SlugHelper::getSlug($slug, \SlugHelper::getPrefix(CarCategory::class));
+        $slug = \SlugHelper::getSlug($slug, \SlugHelper::getPrefix(CarCategory::class, 'car-categories'));
 
         if (!$slug) {
             abort(404);
@@ -21,7 +21,7 @@ class CarCategoryController extends BaseController
         $data = $carCategoryService->handleFrontRoutes($slug);
 
         if (isset($data['slug']) && $data['slug'] !== $slug->key) {
-            return redirect()->to(route('public.single', \SlugHelper::getPrefix(CarCategory::class) . '/' . $data['slug']));
+            return redirect()->to(route('public.single', \SlugHelper::getPrefix(CarCategory::class, 'car-categories') . '/' . $data['slug']));
         }
 
         return \Theme::scope($data['view'], $data['data'], $data['default_view'])

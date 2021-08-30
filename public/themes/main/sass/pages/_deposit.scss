@@ -19,7 +19,7 @@
       align-items: center;
       @media only screen and (max-width: 1080px){
         margin-top: -2%;
-        .item-1, .item-2{
+        .item-1, .item-3{
           display: none;
         }
       }
@@ -114,9 +114,7 @@
         outline: none;
        
       }
-      textarea{
-       
-      }
+      
       .dropdown {
         height: 41px;
         outline: none;
@@ -175,10 +173,10 @@
           border: $color-placeholder-gray solid 1px;
           border-radius: unset !important;
           top: 0;
-          left: -2rem;
+          left: -2.1rem;
         }
         &::after {
-          top: 0;
+          top: 0.15rem;
           left: -2rem;
           background: no-repeat 80%/70% 90%;
         }

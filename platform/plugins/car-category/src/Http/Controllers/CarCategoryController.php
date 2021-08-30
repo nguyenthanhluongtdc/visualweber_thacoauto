@@ -8,6 +8,7 @@ use Platform\CarCategory\Repositories\Interfaces\CarCategoryInterface;
 use Platform\Base\Http\Controllers\BaseController;
 use Illuminate\Http\Request;
 use Exception;
+use Illuminate\Support\Facades\Auth;
 use Platform\CarCategory\Tables\CarCategoryTable;
 use Platform\Base\Events\CreatedContentEvent;
 use Platform\Base\Events\DeletedContentEvent;
@@ -61,7 +62,12 @@ class CarCategoryController extends BaseController
      */
     public function store(CarCategoryRequest $request, BaseHttpResponse $response)
     {
-        $carCategory = $this->carCategoryRepository->createOrUpdate($request->input());
+        $request->merge([
+            'author_id'   => Auth::id(),
+            'author_type' => User::class,
+        ]);
+
+        $carCategory = $this->carCategoryRepository->createOrUpdate($request->all());
 
         event(new CreatedContentEvent(CAR_CATEGORY_MODULE_SCREEN_NAME, $request, $carCategory));
 

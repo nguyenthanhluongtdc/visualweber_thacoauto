@@ -5,7 +5,7 @@
         $carFeature = get_car_by_slug(request()->get('car'));
     }
 @endphp
-<section class="section-car-filter-content">
+<section class="section-car-filter-content overflow-x-hidden">
     <div class="container-remake">
         <div class="list-car-mobile row">
             <div class="swiper-container researchDevSwiper">

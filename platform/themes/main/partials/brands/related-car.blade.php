@@ -1,5 +1,5 @@
 
-<div class="related-cars pb-5">
+<div class="related-cars pb-5 overflow-x-hidden">
     <h2 class="related-cars__title font30 font-mi-bold">SẢN PHẨM ĐỀ XUẤT</h2>
     <ul class="list-related-cars">
         @forelse(get_car_relations($slug->key) as $car)

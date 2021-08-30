@@ -224,11 +224,11 @@
 
                         }
 
-                        span {
+                        a {
                             width: 60px;
                             transition: 0.2s;
                             position: relative;
-
+                            color: black;
                             &::after {
                                 content: "";
                                 position: absolute;
@@ -268,9 +268,9 @@
                         }
 
                         &:hover {
-                            span {
+                            a {
                                 &::after {
-                                    width: 70%;
+                                    width: 60%;
                                 }
                             }
                         }
@@ -283,14 +283,14 @@
                         }
                     }
 
-                    .active {
-                        span {
+                    .active, &:hover {
+                        a {
                             &::after {
                                 width: 60%;
                             }
                         }
                     }
-
+                    
 
                 }
 

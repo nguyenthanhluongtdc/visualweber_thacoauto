@@ -4,6 +4,7 @@
   }
 }
 .section-step-menu-car-selection {
+  @include paddingTop(50);
   @media only screen and (max-width: 1080px) {
     background-color: #f6f6f6;
     padding-top: 0;
@@ -16,15 +17,12 @@
     justify-content: space-between;
     align-items: center;
     @media only screen and (max-width: 1080px) {
-      margin-top: -2%;
       background-color: transparent;
+      margin-bottom: 0;
       .item-2,
       .item-3 {
         display: none;
       }
-    }
-    @media only screen and (max-width: 992px) {
-      margin-top: -2%;
     }
     &__item {
       max-width: 33.33%;

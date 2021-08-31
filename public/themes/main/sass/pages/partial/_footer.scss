@@ -37,6 +37,7 @@
         .list-media {
           width: 40%;
           display: flex;
+          margin-bottom: 0;
           align-items: center;
           @media (max-width: 1400px) {
             width: 45%;

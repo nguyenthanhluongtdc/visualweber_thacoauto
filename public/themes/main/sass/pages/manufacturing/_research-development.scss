@@ -532,9 +532,15 @@
                             @media (max-width: 768px) {
                                 width: max-content;
                             }
+
+                            a {
+                                display: inline-block;
+                                height: 100%;
+                            }
                           
                             img {
                                 height: 100%;
+                                object-fit: cover;
                                 @media (min-width: 769px) {
                                     width: 100%;
                                     min-width: 100%;

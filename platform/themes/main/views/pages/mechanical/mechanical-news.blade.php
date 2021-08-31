@@ -21,6 +21,7 @@
                                 <div class="day"> {{ $post->created_at->format('d') }} </div>
                                 <div class="month"> {{ $post->created_at->format('M') }} </div>
                                 <div class="year"> {{ $post->created_at->format('Y') }} </div>
+                              
                             </div>
 
                             <div class="sub--right">

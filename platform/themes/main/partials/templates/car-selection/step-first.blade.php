@@ -1,10 +1,31 @@
+
 <section class="section-car-selection-content">
     <div class="container-remake">
         <div class="car-selection-content row">
             <div class="car-selection-content__left col-sm-12 col-md-12">
-                <div class="frame">
+                {{-- <div class="frame">
                     <img src="{{ RvMedia::getImageUrl($car->image, null, false, RvMedia::getDefaultImage()) }}" alt="{{ $car->name }}">
+                </div> --}}
+                @if(isset($car->colors) && !blank($car->colors))
+                
+                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"class="swiper mySwiperColor">
+                   
+                    <div class="swiper-wrapper">
+                        @php
+                        $colors = $request['colors'] ?? [];
+                        @endphp
+                        @foreach ($car->colors ?? collect() as $item)
+    
+                        <div class="swiper-slide list-cars">
+                            <a class="list-items" href="#">
+                                <img class="img-fluid" src="{{get_object_image($item->image)}}" alt="">
+                            </a>
+                        </div>
+                        
+                        @endforeach
+                    </div>
                 </div>
+                @endif
                 <ul class="info-equip">
                     <li class="info-equip__item font15 font-pri">
                         <img src="{{Theme::asset()->url('images/business/brand-detail/chon-xe-1.png')}}" alt="filter icon">
@@ -51,13 +72,16 @@
 
                 {!! Theme::partial('templates.loading') !!}
                 <div class="option__car flex-grow-1">
-                    <div class="select-color  swiper mySwiperColorThumb">
+                    <div thumbsSlider="" class="select-color swiper mySwiperColorThumb">
                         <h3 class="title__row select-color__title fontmb-medium font15 font-pri">{{ __('Lựa chọn màu') }}</h3>
                         @if($car->colors->count() > 0)
                             <input name="color" class="d-none" value="{{ isset($request['color']) && !blank($request['color']) ? $request['color'] : ($car->colors->first()->id ?? '') }}" id="picker-color" />
                             <ul class="info-color swiper-wrapper">
                                 @foreach ($car->colors ?? collect() as $key => $item)
-                                    <li data-value="{{ $item->id }}" class="info-color__item  swiper-slide {{ ($key == 0 || (isset($request['color']) && !blank($request['color']) && $request['color'] == $item->id)) ? 'active' : '' }}" style="background-color: {{ $item->code }}"></li>
+                                   
+                                    <div class="swiper-slide ">
+                                       <li data-value="{{ $item->id }}" class="info-color__item  swiper-slide  {{ ($key == 0 || (isset($request['color']) && !blank($request['color']) && $request['color'] == $item->id)) ? 'active' : '' }}" style="background-color: {{ $item->code }}"></li>
+                                    </div>
                                 @endforeach
                             </ul>
                         @else
@@ -91,7 +115,7 @@
 
                             @else
                                 <span class="font-pri font15 w-100 text-center py-4 text-danger">{{ __("chưa cập nhật") }}</span>
-                    @endif
+                        @endif
                     </div>
                     <div class="select-equip">
                         <h3 class="title__row select-equip__title fontmb-medium font15 font-pri">{{ __("Trang bị thêm") }}</h3>
@@ -164,4 +188,6 @@
         app.dropdownCarVersions()
         app.handlePickerColorCar()
     })
+   
 </script>
+

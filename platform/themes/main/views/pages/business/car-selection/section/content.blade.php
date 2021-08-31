@@ -1,7 +1,7 @@
 <section class="section-car-selection-content">
     <div class="container-remake">
         <div class="car-selection-content row">
-            <div class="car-selection-content__left col-sm-12 col-md-12">
+            <div class="car-selection-content__left col-sm-12 col-md-12"> 
                 <div class="frame">
                     <img loading="lazy" src="{{Theme::asset()->url('images/business/brand-detail/car-detail.png')}}" alt="">
                 </div>

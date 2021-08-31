@@ -502,6 +502,9 @@ var SlideSwiper = {
             slidesPerView: "auto",
             freeMode: true,
             watchSlidesProgress: true,
+            thumbs: {
+                swiper: swiper,
+            },
         });
         var swiper2 = new Swiper(".mySwiperColor", {
             spaceBetween: 10,

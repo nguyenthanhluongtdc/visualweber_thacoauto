@@ -86,8 +86,7 @@
             'car' => $car,
             'color' => isset($color) ? $color : collect(),
             'accessories' => isset($accessories) ? $accessories : collect(),
-            'equipments' => isset($equipments) ? $equipments : collect(),
-            'promotionsArray' => isset($promotionsArray) ? $promotionsArray : collect(),
+            'equipments' => isset($equipments) ? $equipments : collect()
         ])!!}
     </form>
     <button class="btn-back fontmb-small">

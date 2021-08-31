@@ -188,6 +188,19 @@ class PublicController extends BaseController
         AccessoryInterface $accessoryInterface,
         EquipmentInterface $equipmentInterface
     ) {
+
+        $rules = [
+            'city'=> 'required',
+            'type_payment' => 'required',
+        ];
+
+        $customMessage = [
+            'city.required' => __('* Vui lòng chọn tỉnh thành'),
+            'type_payment.required' => __('* Vui lòng chọn phương thức thanh toán')
+        ];
+
+        $this->validate(request(), $rules, $customMessage);
+
         $data['car'] = $this->getCar($car);
 
         $dataPromotions = $promotionsInterface->getModel()

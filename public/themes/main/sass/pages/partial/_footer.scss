@@ -95,6 +95,28 @@
 
         ul {
           li {
+            position: relative;
+            padding-left: 30px;
+            &.phone, &.email, &.fax {
+              &::before {
+                position: absolute;
+                left: 0;
+                top: 0;
+                font-weight: bold;
+                font-family: "Font Awesome 5 Free";
+              }
+            }
+
+            &.phone::before {
+              content: "\f879";
+            }
+            &.email::before {
+              content: "\f0e0";
+            }
+            &.fax::before {
+              content: "\f1ac";
+            }
+
             line-height: 36px;
             a{
               color: #2e3a41;
@@ -276,6 +298,27 @@
       }
       @media (max-width: 1199px) {
         margin: 20px 0 14px 0;
+      }
+    }
+
+    .address {
+      position: relative;
+      padding-left: 30px;
+      &::before {
+        position: absolute;
+        content: "\f3c5";
+        font-family: "Font Awesome 5 Free";
+        font-weight: bold;
+        left: 0;
+        top: 0;
+        font-size: 20px;
+
+        @media (max-width: 1680px) {
+          font-size: 18px;
+        }
+        @media (max-width: 1368px) {
+          font-size: 18px;
+        }
       }
     }
 

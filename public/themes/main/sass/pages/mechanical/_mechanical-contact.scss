@@ -221,14 +221,16 @@
                 }
                 
                 .submit-btn {
-                    padding: 7px 95px;
+                    padding: 5px 36px;
                     display: inline-block;
-                    background-color:#fff;
-                    color: rgb(134, 134, 134);
-                    font-family: $font-primary-bold;
+                    background-color: $color-primary;
+                    color: #FFF;
+                    font-family: $font-primary;
                     cursor: pointer;
                     display: table;
                     margin: 0 auto;
+                    font-size: 12px;
+                    line-height: inherit;
 
                     @media (max-width: 1080px) {
                         margin: 0;
@@ -237,13 +239,6 @@
                     }
                     
                 }
-                
-                .submit-btn:hover {
-                    
-                    background-color: $color-primary;
-                    color: #FFF;
-                }
-                
                 
             }
             

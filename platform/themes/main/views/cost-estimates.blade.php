@@ -66,7 +66,7 @@
                 </div>
                 <div class="custom-control span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
                     <input type="radio" name="type_payment" value="is_installment" class="custom-control-input" id="customControlInline8">
-                    <label class="custom-control-label fontmb-small" for="customControlInline8">{{ __("Vai trả góp ngân hàng") }} <a data-fancybox data-src="#installment-modal" href="javascript:;" class="d-none d-inline-bloc ml-2"><u>{{ __("Chi tiết chi phí") }}</u></a></label>
+                    <label class="custom-control-label fontmb-small" for="customControlInline8">{{ __("Vai trả góp ngân hàng") }} <a data-fancybox data-src="#installment-modal" href="javascript:;" class="ml-2"><u>{{ __("Chi tiết chi phí") }}</u></a></label>
                 </div>
                 @error('type_payment')
                     <p class="text-danger mt-2"> {!! $message !!} </p>

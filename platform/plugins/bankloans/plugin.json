@@ -1,0 +1,9 @@
+{
+    "name": "Bankloans",
+    "namespace": "Platform\\Bankloans\\",
+    "provider": "Platform\\Bankloans\\Providers\\BankloansServiceProvider",
+    "author": "Laravel Technologies",
+    "url": "https://laravel-cms.gistensal.com",
+    "version": "1.0",
+    "description": "The description for module bankloans"
+}

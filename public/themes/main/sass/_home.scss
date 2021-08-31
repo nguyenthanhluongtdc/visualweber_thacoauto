@@ -25,8 +25,8 @@
       -moz--o-animation: 40s ease 0s normal none infinite running zoomEffect;
       position: relative;
       width: 100vw;
-      @include height(1080);
-      @include mobileHeight(750);
+      height: 50vw;
+      // @include mobileHeight(750);
       object-fit: cover;
       @media (max-width: 1080px) {
         width: 100%;

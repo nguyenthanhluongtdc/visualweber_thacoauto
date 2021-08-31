@@ -82,7 +82,7 @@
                                             <input class="checkbox" name="accessories[]" {{ in_array($item->id, $accessories) ? 'selected' : '' }} value="{{ $item->id }}" type="checkbox">
                                             <span class="checkmark"></span>
                                         </div>
-                                        <label class="font-pri font15" for="">{{ $item->name }} <span>{{ $item->price ? number_format($item->price, 0, '.', ',') . 'đ' : '0đ' }}</span> </label>
+                                        <label class="font-pri font15 fontmb-small text-center" for="">{{ $item->name }} <br> <span>{{ $item->price ? number_format($item->price, 0, '.', ',') . 'đ' : '0đ' }}</span> </label>
                                     </div>
                                 </div>
 
@@ -110,7 +110,7 @@
                                             <input class="checkbox" name="equipments[]" {{ in_array($item->id, $equipments) ? 'selected' : '' }} value="{{ $item->id }}" type="checkbox">
                                             <span class="checkmark"></span>
                                         </div>
-                                        <label class="font-pri font15" for="">{{ $item->name }} <span>{{ $item->price ? number_format($item->price, 0, '.', ',') . 'đ' : '0đ' }}</span> </label>
+                                        <label class="font-pri font15 fontmb-small text-center" for="">{{ $item->name }} <br> <span>{{ $item->price ? number_format($item->price, 0, '.', ',') . 'đ' : '0đ' }}</span> </label>
                                     </div>
                                 </div>
                             @endforeach

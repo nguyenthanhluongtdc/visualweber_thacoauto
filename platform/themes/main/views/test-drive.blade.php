@@ -3,7 +3,7 @@
         <div class="section-main-wrapper">
             <div class="container-remake d-md-block">
                 <div class="section-main">
-                    @if(session()->has('message') || session()->has('type') || isset($errors))
+                    {{-- @if(session()->has('message') || session()->has('type') || isset($errors))
                         @if (session()->has('type') && session('type')=='success')
                             <div class="alert alert-success font-helve-light font18 mt-2">
                                 <p>{{ session('message') }}</p>
@@ -21,7 +21,7 @@
                                 @endforeach
                             </div>
                         @endif
-                    @endif
+                    @endif --}}
                     <form action="{{ route('public.test-drive.post-test-driver') }}" class="form" method="POST">
                         @csrf
                         <div class="row row__main">
@@ -64,16 +64,31 @@
                                             <span class="title">{{ __('Họ & tên') }}</span>
                                             <input type="text" required name="name" value="{{ old('name') }}" placeholder="{{ __('Điền họ & tên') }}">
                                         </div>
+                                        @error('name')
+                                            <p class="text-danger">
+                                                {!! $message !!}
+                                            </p>
+                                        @enderror
 
                                         <div class="form__text">
                                             <span class="title">{{ __("Số ĐT") }}</span>
                                             <input type="text" required name="phone" value="{{ old('phone') }}"  placeholder="{{ __("Điền số điện thoại") }}">
                                         </div>
+                                        @error('phone')
+                                            <p class="text-danger">
+                                                {!! $message !!}
+                                            </p>
+                                        @enderror
 
                                         <div class="form__text">
                                             <span class="title">{{ __("Email") }}</span>
                                             <input type="text" required name="email" value="{{ old('email') }}" placeholder="{{ __("Điền email") }}">
                                         </div>
+                                        @error('email')
+                                            <p class="text-danger">
+                                                {!! $message !!}
+                                            </p>
+                                        @enderror
 
                                         <div class="form__select">
                                             <span class="title">{{ __("Tỉnh/Thành phố") }}</span>
@@ -155,23 +170,27 @@
                         </div>
 
                         <div class="form-group form-check font15 font-pri reminder">
-                            <input type="checkbox" required checked id="html">
+                            <input type="checkbox" required checked id="html" name="provision1">
                             <label for="html">
                                 {{ __("Tôi trên 18 tuổi và tôi có bằng lái xe B2 hợp lệ. *") }}
                             </label>
                         </div>
                         <div class="form-group form-check font15 font-pri">
-                            <input type="checkbox" required checked id="css">
+                            <input type="checkbox" required checked id="css" name="provision2">
                             <label for="css">
                                 {{ __("Tôi theo đây đồng ý để THACO (và các công ty liên kết, đối tác của THACO) thu thập, sử dụng, hiệu chỉnh, lưu trữ, sao chép thông tin của tôi, cung cấp thông tin trên cho bên thứ ba có liên quan (bao gồm nhưng không giới hạn các công ty thuộc Tập đoàn BMW) nhằm mục đích chăm sóc khách hàng, gửi thiệp mời đến các sự kiện, các hoạt động tiếp thị, nghiên cứu và các mục đích thống kê khác giữa các đối tác hoặc công ty thành viên của tập đoàn BMW. Tôi cũng biết rằng thông tin cá nhân của tôi sẽ được sử dụng dựa trên luật bảo vệ sự riêng tư hiện hành.") }}
                             </label>
                         </div>
                         <div class="form-group form-check font15 font-pri">
-                            <input type="checkbox" required checked id="javascript">
+                            <input type="checkbox" required checked id="javascript" name="provision3">
                             <label for="javascript">
                                 {{ __("Tôi cũng đồng ý để THACO (và các công ty liên kết, đối tác của THACO) liên hệ với tôi nhằm mục đích thực hiện chương trình quảng cáo chăm sóc khách hàng qua số điện thoại/ email và thông tin liên hệ khác mà tôi đã đăng ký (dù tôi đã đăng ký danh sách không quảng cáo hay không)") }}
                             </label>
                         </div>
+
+                        @if($errors->has('provision1') || $errors->has('provision2') || $errors->has('provision3'))
+                            <p class="text-danger mt-3"> {!! __('* Vui lòng đồng ý với các điều khoản trên để tiếp tục') !!} </p>
+                        @endif
 
                         <div class="form-submit font18">
                             <button class="btn-submit fontmb-small">

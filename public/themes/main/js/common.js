@@ -245,17 +245,6 @@ var Helper = {
             $(".slider-range__button").css("left", slideWidth + "%");
         });
     },
-    changeColorHeader: function () {
-        var url = window.location.href;
-        var originUrl = window.location.origin;
-        var enUrl = window.location.origin + '/en';
-        var viUrl = window.location.origin + '/vi';
-        var defaultUrl = window.location.origin + '/';
-
-        if (url == originUrl || url == enUrl || url == viUrl || url == defaultUrl) {
-            $('.header').css('background', 'rgba(0 ,0 , 0 , 0.5)')
-        }
-    },
     transitionHeaderFixed: function () {
         $(window).scroll(function () {
             var scroll = $(window).scrollTop();

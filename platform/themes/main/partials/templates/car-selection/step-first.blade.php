@@ -48,15 +48,16 @@
                     </ul>
                 @endif
                 <div class="gray-line"></div>
+
                 {!! Theme::partial('templates.loading') !!}
                 <div class="option__car flex-grow-1">
-                    <div class="select-color">
+                    <div class="select-color  swiper mySwiperColorThumb">
                         <h3 class="title__row select-color__title fontmb-medium font15 font-pri">{{ __('Lựa chọn màu') }}</h3>
                         @if($car->colors->count() > 0)
                             <input name="color" class="d-none" value="{{ isset($request['color']) && !blank($request['color']) ? $request['color'] : ($car->colors->first()->id ?? '') }}" id="picker-color" />
-                            <ul class="info-color">
+                            <ul class="info-color swiper-wrapper">
                                 @foreach ($car->colors ?? collect() as $key => $item)
-                                    <li data-value="{{ $item->id }}" class="info-color__item {{ ($key == 0 || (isset($request['color']) && !blank($request['color']) && $request['color'] == $item->id)) ? 'active' : '' }}" style="background-color: {{ $item->code }}"></li>
+                                    <li data-value="{{ $item->id }}" class="info-color__item  swiper-slide {{ ($key == 0 || (isset($request['color']) && !blank($request['color']) && $request['color'] == $item->id)) ? 'active' : '' }}" style="background-color: {{ $item->code }}"></li>
                                 @endforeach
                             </ul>
                         @else

@@ -158,7 +158,6 @@
                 }
                 
                 .styled-input {
-                    // float: left;
                     width: 100%;
                     margin: .5rem 0;
                     position: relative;
@@ -180,10 +179,7 @@
                     text-transform: uppercase;
                 }
                 
-                // .styled-input.wide { 
-                //     width: 101%;
-                // }
-                
+               
                 input,
                 textarea {
                     padding: 12px;
@@ -239,6 +235,13 @@
                     }
                     
                 }
+                
+                // .submit-btn:hover {
+                    
+                //     background-color: $color-primary;
+                //     color: #FFF;
+                // }
+                
                 
             }
             

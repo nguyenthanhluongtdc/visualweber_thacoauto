@@ -70,6 +70,7 @@
                         </li>
                     </ul>
                 </div>
+                
                 <div class="select-equip">
                     <h3 class="select-equip__title font15 font-pri">Phụ kiện</h3>
                     <div class="select-equip__list">

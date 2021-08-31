@@ -16,7 +16,7 @@
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
-        "kjmtrue/vietnam-zone": "^1.0",
+        "kjmtrue/vietnam-zone": "*@dev",
         "laravel/framework": "^8.12",
         "league/flysystem-aws-s3-v3": "^1.0",
         "platform/api": "*@dev",

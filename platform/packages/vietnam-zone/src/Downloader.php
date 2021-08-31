@@ -20,9 +20,13 @@ class Downloader
             'verify' => false
         ]);
 
-        $res = $client->get(self::DOWNLOAD_URL, [
-            'save_to' => public_path('storage/vietnam-zone.xls')
+        $res = $client->request('GET', self::DOWNLOAD_URL, [
+            'sink' => public_path('storage/vietnam-zone.xls')
         ]);
+
+        // $res = $client->get(self::DOWNLOAD_URL, [
+        //     'save_to' => public_path('storage/vietnam-zone.xls')
+        // ]);
 
         return $res->getStatusCode() == 200 ? public_path('storage/vietnam-zone.xls') : null;
     }

@@ -223,8 +223,8 @@
                 .submit-btn {
                     padding: 7px 95px;
                     display: inline-block;
-                    background-color:#fff;
-                    color: rgb(134, 134, 134);
+                    background-color: $color-primary;
+                    color: #FFF;
                     font-family: $font-primary-bold;
                     cursor: pointer;
                     display: table;
@@ -238,11 +238,11 @@
                     
                 }
                 
-                .submit-btn:hover {
+                // .submit-btn:hover {
                     
-                    background-color: $color-primary;
-                    color: #FFF;
-                }
+                //     background-color: $color-primary;
+                //     color: #FFF;
+                // }
                 
                 
             }

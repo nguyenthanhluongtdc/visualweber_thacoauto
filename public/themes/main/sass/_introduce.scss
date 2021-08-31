@@ -52,6 +52,7 @@
     }
 
     .section-production-business-wrapper {
+       
         @include paddingTop(70);
         @include paddingBottom(98);
         background-color: #E6EEF5;
@@ -186,6 +187,7 @@
                         border-bottom: 2px solid #e6eef5;
                     }
                     .col-top {
+                       
                         .col-right__item {
                             flex: 0 0 50%;
                             max-width: 50%;

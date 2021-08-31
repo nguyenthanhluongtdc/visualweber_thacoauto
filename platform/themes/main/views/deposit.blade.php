@@ -24,13 +24,19 @@
             <div class="deposit__form">
                 <div class="form-group span-3 ">
                     <input type="text" class="form-control MyriadPro-Regular font15 fontmb-small" required name="name" placeholder="Nhập họ và tên" />
+                    @error('name')
+                        <p class="text-danger mt-2"> {!! $message !!} </p>
+                    @enderror
                 </div>
                 <div class="form-group span-3 ">
                     <input type="text" class="form-control MyriadPro-Regular font15 fontmb-small"required name="phone" placeholder="Nhập số điện thoại" />
+                    @error('phone')
+                        <p class="text-danger mt-2"> {!! $message !!} </p>
+                    @enderror
                 </div>
                 <div class="form-group span-3">
                     <div class="ui fluid selection dropdown">
-                        <input type="hidden" name="country">
+                        <input required type="hidden" name="country">
                         <i class="dropdown icon"></i>
                         <div class="default text MyriadPro-Regular font15 fontmb-small">Chọn showroom gần bạn</div>
                         <div class="menu">
@@ -41,27 +47,39 @@
                             @endforelse
                         </div>
                     </div>
+                    @error('country')
+                        <p class="text-danger mt-2"> {!! $message !!} </p>
+                    @enderror
                     {{-- <input type="text" class="form-control MyriadPro-Regular font15" name="showroom" placeholder="Chọn showroom" /> --}}
                 </div>
                 <div class="form-group span-3 ">
                     <input type="email" class="form-control MyriadPro-Regular font15 fontmb-small" required name="email" placeholder="Nhập email" />
+                    @error('email')
+                        <p class="text-danger mt-2"> {!! $message !!} </p>
+                    @enderror
                 </div>
                 <div class="form-group span-2">
                     <textarea rows="7" class="form-control MyriadPro-Regular font15 fontmb-small" name="note" placeholder="Nhập nội dung"></textarea>
+                    @error('note')
+                        <p class="text-danger mt-2"> {!! $message !!} </p>
+                    @enderror
                 </div>
                 <div class="custom-control mt-2 span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
-                    <input required type="checkbox" class="custom-control-input" id="customControlInline">
+                    <input required type="checkbox" name="provision1" class="custom-control-input" id="customControlInline">
                     <label class="custom-control-label fontmb-small" for="customControlInline">Tôi cam kết các thông tin khách hàng cung cấp tại đây hoàn toàn chính xác</label>
                 </div>
                 <div class="custom-control span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
-                    <input required type="checkbox" class="custom-control-input" id="customControlInline2">
+                    <input required type="checkbox" name="provision2" class="custom-control-input" id="customControlInline2">
                     <label class="custom-control-label fontmb-small" for="customControlInline2">Tôi đã đọc, hiểu rõ và xác nhận đồng ý với toàn bộ nội dung <a href="#">Điều khoản</a> trong Thoả Thuận Đặt Cọc trên cũng như Chính Sách Ưu Đãi
                         áp dụng tại thời điểm đặt mua xe ô tô này trên KIA Online</label>
                 </div>
                 <div class="custom-control span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
-                    <input required type="checkbox" class="custom-control-input" id="customControlInline3">
+                    <input required type="checkbox" name="provision3" class="custom-control-input" id="customControlInline3">
                     <label class="custom-control-label fontmb-small" for="customControlInline3">Tôi đồng ý với các <a href="#">Điều kiện & Điều khoản</a> của KIA Online</label>
                 </div>
+                @if($errors->has('provision1') || $errors->has('provision2') || $errors->has('provision3'))
+                    <p class="text-danger mt-3"> {!! __('* Vui lòng đồng ý với các điều khoản trên để tiếp tục') !!} </p>
+                @endif
             </div>
         </div>
         {!! Theme::partial('templates.car-cost-total', [

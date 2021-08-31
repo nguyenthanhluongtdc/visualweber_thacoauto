@@ -247,5 +247,13 @@
     "Gửi đi": "Gửi đi",
     "Nhiều hơn 5 năm": "Nhiều hơn 5 năm",
     "at_showroom": "Đăng ký lái thử tại Showroom",
-    "at_home": "Đăng ký lái thử tại nhà"
+    "at_home": "Đăng ký lái thử tại nhà",
+    "* Vui lòng chọn showroom": "* Vui lòng chọn showroom",
+    "* Trường bắt buộc nhập": "* Trường bắt buộc nhập",
+    "* Dữ liệu phải là dãy số": "* Dữ liệu phải là dãy số",
+    "* Số điện thoại không hợp lệ (ít nhất 10 chữ số)": "* Số điện thoại không hợp lệ (ít nhất 10 chữ số)",
+    "* Số điện thoại không hợp lệ (tối đa 11 chữ số)": "* Số điện thoại không hợp lệ (tối đa 11 chữ số)",
+    "* Dữ liệu nhỏ hơn 400 ký tư": "* Dữ liệu nhỏ hơn 400 ký tư",
+    "* Email không hợp lệ": "* Email không hợp lệ",
+    "* Vui lòng đồng ý với các điều khoản trên để tiếp tục": "* Vui lòng đồng ý với các điều khoản trên để tiếp tục"
 }

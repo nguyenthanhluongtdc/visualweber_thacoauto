@@ -35,6 +35,28 @@ class TenantForm extends FormAbstract
                 ],
                 'choices'    => BaseStatusEnum::labels(),
             ])
+            ->add('brand_id', 'customSelect', [
+                'label'      => trans('Brand'),
+                'label_attr' => ['class' => 'control-label'],
+                'attr'       => [
+                    'class' => 'form-control select-full',
+                ],
+                'choices'    => get_brands()->where('parent_id',0)->where('parent_id','')->pluck('name','id')->prepend('NULL','')->toArray(),
+                'help_block' => [
+                    'text' => 'Lựa chọn nếu muốn quản lý thương hiệu xe'
+                ]
+            ])
+            ->add('country_id', 'customSelect', [
+                'label'      => trans('Country'),
+                'label_attr' => ['class' => 'control-label'],
+                'attr'       => [
+                    'class' => 'form-control select-full',
+                ],
+                'choices'    => get_countries()->pluck('name','matp')->prepend(__("Chọn khu vực"),'')->toArray(),
+                'help_block' => [
+                    'text' => 'Lựa chọn nếu muốn quản lý tin tức của tỉnh thành',
+                ]
+            ])
             ->setBreakFieldPoint('status');
     }
 }

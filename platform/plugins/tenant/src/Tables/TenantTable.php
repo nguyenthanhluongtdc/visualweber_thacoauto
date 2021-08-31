@@ -55,6 +55,12 @@ class TenantTable extends TableAbstract
                 }
                 return Html::link(route('tenant.edit', $item->id), $item->name);
             })
+            ->editColumn('brand_id', function ($item) {
+                return $item->brand ? Html::link(route('brand.edit', $item->brand->id), $item->brand->name) : '';
+            })
+            ->editColumn('country_id', function ($item) {
+                return $item->country->name ?? '';
+            })
             ->editColumn('checkbox', function ($item) {
                 return $this->getCheckbox($item->id);
             })
@@ -80,6 +86,8 @@ class TenantTable extends TableAbstract
             ->select([
                'tenants.id',
                'tenants.name',
+               'tenants.brand_id',
+               'tenants.country_id',
                'tenants.created_at',
                'tenants.status',
            ]);
@@ -99,6 +107,14 @@ class TenantTable extends TableAbstract
             ],
             'name' => [
                 'title' => trans('core/base::tables.name'),
+                'class' => 'text-left',
+            ],
+            'brand_id' => [
+                'title' => trans('Brand'),
+                'class' => 'text-left',
+            ],
+            'country_id' => [
+                'title' => trans('Country'),
                 'class' => 'text-left',
             ],
             'created_at' => [

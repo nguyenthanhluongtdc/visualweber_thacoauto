@@ -25,6 +25,8 @@ class Tenant extends BaseModel
     protected $fillable = [
         'id',
         'name',
+        'brand_id',
+        'country_id',
         'status',
     ];
 
@@ -37,5 +39,13 @@ class Tenant extends BaseModel
 
     public function domains(){
         return $this->hasMany(\Stancl\Tenancy\Database\Models\Domain::class);
+    }
+
+    public function brand(){
+        return $this->belongsTo(\Platform\Brand\Models\Brand::class,'brand_id');
+    }
+
+    public function country(){
+        return $this->belongsTo(\Platform\Location\Models\TinhThanhPho::class,'country_id','matp');
     }
 }

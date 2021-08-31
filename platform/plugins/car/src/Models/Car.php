@@ -127,4 +127,9 @@ class Car extends BaseModel
     {
         return $this->belongsToMany(\Platform\DistributionSystem\Models\Showroom::class, 'app_car_showrooms', 'car_id', 'showroom_id');
     }
+
+    public function promotions(): BelongsToMany
+    {
+        return $this->belongsToMany(Car::class, 'app__promotion_cars', 'car_id');
+    }
 }

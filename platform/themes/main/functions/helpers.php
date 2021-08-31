@@ -154,3 +154,27 @@ if (!function_exists('get_result_language_file')) {
         return $translations;
     }
 }
+
+if (!function_exists('get_discount_price')) {
+    function get_discount_price($discount, $originPrice = 0)
+    {
+        $priceDiscount = $originPrice * $discount->discount_percent / 100;
+        
+        if($discount->direct_discount == 0){
+            if($discount->max_discount == 0){
+                return $priceDiscount;
+            }
+            else{
+                if($priceDiscount >= $discount->max_discount){
+                    return $discount->max_discount;
+                }
+                else{
+                    return $priceDiscount;
+                }
+            }
+        }
+        else{
+            return $discount->direct_discount;
+        }
+    }
+}

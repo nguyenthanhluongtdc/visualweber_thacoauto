@@ -402,12 +402,18 @@
                     border: none;
                     @include mobileLineHeight(43);
                     color: #343434;
+                    @media(max-width : 500px){
+                        font-size: 11px;
+                    }
                 }
 
                 &.active {
                     .page-link {
                         background-color:  #0B5CA8;
                         color: white;
+                        @media(max-width : 500px){
+                            font-size: 11px;
+                        }
                     }
                 }
             }
@@ -540,7 +546,10 @@
             .branch-footer {
                 margin-top: 20px;
                 text-align: center;
+               
                 button {
+                    -webkit-appearance: none;
+                    appearance: none;
                     background-color: #01498b;
                     font-family: $font-primary-bold;
                     text-transform: uppercase;

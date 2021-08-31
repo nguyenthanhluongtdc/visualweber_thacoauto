@@ -1,4 +1,4 @@
-<div class="distribution">
+<div class="distribution overflow-x-hidden">
     <div class="provincial-company">
         <div class="container-remake">
             <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 fontmb-large">{{ __("Công ty tỉnh thành") }}</h1>
@@ -33,7 +33,7 @@
                     <div class="w-100 h-100" id="map"></div>
                 </div>
             </div>
-            <div data-aos="fade-left" data-aos-duration="1500" class="description mobile font20">{!! $page->content !!}</div>
+            <div data-aos="fade-left" data-aos-duration="1500" class="description mobile font20 fontmb-small">{!! $page->content !!}</div>
         </div>
     </div>
     <div class="activity-news-desktop">
@@ -256,7 +256,7 @@
 <script>
     window.__distribution = {
         ajax: "{{ Language::getLocalizedURL(Language::getCurrentLocale(), route('public.ajax.distribution-system')) }}",
-        readmore: "{!! __('Readmore') !!}"
+        readmore: "{!!__('Readmore')!!}"
     }
 </script>
 <style>

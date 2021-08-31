@@ -60,6 +60,48 @@ class PromotionsForm extends FormAbstract
                 'choices'    => get_cars_with_children(),
                 'value'      => old('cars', $selectedCars),
             ])
+            ->add('rowClose1', 'html', [
+                'html' => '</div>',
+            ]);
+            $this
+            ->add('rowOpen1', 'html', [
+                'html' => '<div class="row">',
+            ])
+            ->add('discount_percent', 'number', [
+                'label'      => trans('Giảm giá theo %'),
+                'label_attr' => ['class' => 'control-label'],
+                'wrapper'    => [
+                    'class' => 'form-group col-md-2',
+                ],
+                'attr'          => [
+                    'max' => 100,
+                    'min' => 0,
+                ],
+                'default_value' => 0,
+            ])
+            ->add('max_discount', 'number', [
+                'label'      => trans('Giảm tối đa'),
+                'label_attr' => ['class' => 'control-label'],
+                'wrapper'    => [
+                    'class' => 'form-group col-md-5',
+                ],
+                'attr'          => [
+                    'min' => 0,
+                ],
+                'default_value' => 0,
+            ])
+            ->add('direct_discount', 'number', [
+                'label'      => trans('Giảm trực tiếp'),
+                'label_attr' => ['class' => 'control-label'],
+                'wrapper'    => [
+                    'class' => 'form-group col-md-5',
+                ],
+                'attr'          => [
+                    'min' => 0,
+                ],
+                'default_value' => 0,
+            ]);
+            $this
             ->add('status', 'customSelect', [
                 'label'      => trans('core/base::tables.status'),
                 'label_attr' => ['class' => 'control-label required'],

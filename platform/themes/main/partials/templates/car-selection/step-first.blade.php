@@ -80,7 +80,7 @@
                                 @foreach ($car->colors ?? collect() as $key => $item)
                                    
                                     <div class="swiper-slide ">
-                                       <li data-value="{{ $item->id }}" class="info-color__item  swiper-slide  {{ ($key == 0 || (isset($request['color']) && !blank($request['color']) && $request['color'] == $item->id)) ? 'active' : '' }}" style="background-color: {{ $item->code }}"></li>
+                                       <li data-value="{{ $item->id }}" class="info-color__item  {{ ($key == 0 || (isset($request['color']) && !blank($request['color']) && $request['color'] == $item->id)) ? 'active' : '' }}" style="background-color: {{ $item->code }}"></li>
                                     </div>
                                 @endforeach
                             </ul>

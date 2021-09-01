@@ -495,6 +495,51 @@ app()->booted(function () {
                     'class' => 'form-control select-full-search',
                 ],
             ],
+        ])->setSection([ // Set section with some fields
+            'title' => __('Điều khoản'),
+            'desc' => __('Điều khoản'),
+            'id' => 'opt-text-subsection-provision',
+            'subsection' => true,
+            'icon' => 'fa fa-image',
+        ])->setField([
+            'id' => 'des_provision1',
+            'section_id' => 'opt-text-subsection-provision',
+            'type' => 'editor',
+            'label' => __('Mô tả điều khoản').' 1',
+            'attributes' => [
+                'name' => 'des_provision1',
+                'value' => null, // Default value
+                'options' => [ // Optional
+                    'class' => 'form-control theme-option-textarea',
+                    'row' => '5',
+                ],
+            ],
+        ])->setField([
+            'id' => 'des_provision2',
+            'section_id' => 'opt-text-subsection-provision',
+            'type' => 'editor',
+            'label' => __('Mô tả điều khoản').' 2',
+            'attributes' => [
+                'name' => 'des_provision2',
+                'value' => null, // Default value
+                'options' => [ // Optional
+                    'class' => 'form-control theme-option-textarea',
+                    'row' => '5',
+                ],
+            ],
+        ])->setField([
+            'id' => 'des_provision3',
+            'section_id' => 'opt-text-subsection-provision',
+            'type' => 'editor',
+            'label' => __('Mô tả điều khoản').' 3',
+            'attributes' => [
+                'name' => 'des_provision3',
+                'value' => null, // Default value
+                'options' => [ // Optional
+                    'class' => 'form-control theme-option-textarea',
+                    'row' => '5',
+                ],
+            ],
         ]);
 
 });

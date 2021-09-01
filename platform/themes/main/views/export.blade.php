@@ -2,12 +2,12 @@
     <div class="section-intro-wrapper overflow-x-hidden expor">
         <div class="container-remake">
             <div class="section-intro">
-                @if(has_field($page, 'intro_module_export'))
-                <h1 class="section-intro__title font-pri-bold font60 fontmb-large text-uppercase">{!! has_field($page,'intro_module_export') !!}   </h1>
+                @if(has_field($page, 'intro_module_research_development'))
+                <h1 class="section-intro__title font-pri-bold font60 fontmb-large text-uppercase">{!! has_field($page,'intro_module_research_development') !!}   </h1>
                 @endif
-                @if(has_field($page, 'description_module_export'))
+                @if(has_field($page, 'description_module_research_development'))
                 <p class="rd-production__content font20 fontmb-small font-pri">
-                    {!! has_field($page,'description_module_export') !!}
+                    {!! has_field($page,'description_module_research_development') !!}
                 </p>
                 @endif
             </div>

@@ -2,6 +2,7 @@
 
 namespace Platform\Car\Http\Controllers;
 
+use Platform\Bank\Repositories\Interfaces\BankInterface;
 use Platform\Base\Enums\BaseStatusEnum;
 use Platform\Brand\Models\Brand;
 use Platform\CarCategory\Models\CarCategory;
@@ -123,7 +124,8 @@ class PublicController extends BaseController
         MoreConsultancyInterface $moreConsultancyInterface,
         ColorInterface $colorInterface,
         AccessoryInterface $accessoryInterface,
-        EquipmentInterface $equipmentInterface
+        EquipmentInterface $equipmentInterface,
+        BankInterface $bankInterface
     ) {
         $data['car'] = $this->getCar($car);
         $dataPromotions = $promotionsInterface->getModel()
@@ -133,7 +135,6 @@ class PublicController extends BaseController
             ->where('status', BaseStatusEnum::PUBLISHED)
             ->orderBy('order', 'desc')
             ->orderBy('created_at', 'desc');
-
         $data['promotions'] = $promotionsInterface->applyBeforeExecuteQuery($dataPromotions)->get();
         $data['consultancies'] = $moreConsultancyInterface->advancedGet([
             "condition" => [
@@ -142,6 +143,16 @@ class PublicController extends BaseController
             "select" => ['*'],
             "order_by" => [
                 "order" => "desc",
+                "created_at" => "desc"
+            ]
+        ]);
+
+        $data['banks'] = $bankInterface->advancedGet([
+            "condition" => [
+                "status" => BaseStatusEnum::PUBLISHED
+            ],
+            "select" => ['*'],
+            "order_by" => [
                 "created_at" => "desc"
             ]
         ]);

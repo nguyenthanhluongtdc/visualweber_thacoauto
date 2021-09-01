@@ -110,12 +110,44 @@
       }
     }
     .form-group {
+      .money-input{
+        display: flex;
+        .money{
+          max-width: 70%;
+          flex: 1 70%;
+          input{
+            border: none;
+            width: 100%;
+            box-shadow: none;
+            padding-left: 4%;
+          }
+          input:disabled{
+            background-color: white;
+            opacity: 0.45;
+          }
+          
+          /* Chrome, Safari, Edge, Opera */
+          input::-webkit-outer-spin-button,
+          input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+          }
+
+          /* Firefox */
+          input[type=number] {
+            -moz-appearance: textfield;
+          }
+        }
+        .unit{
+          max-width: 30%;
+          flex: 1 30%;
+        }
+        
+      }
       input {
         height: 41px;
         outline: none;
        
       }
-      
       .dropdown {
         height: 41px;
         outline: none;

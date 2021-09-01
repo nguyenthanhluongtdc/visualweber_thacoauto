@@ -44,7 +44,7 @@ class MoreConsultancyServiceProvider extends ServiceProvider
                 'priority'    => 5,
                 'parent_id'   => null,
                 'name'        => 'plugins/more-consultancy::more-consultancy.name',
-                'icon'        => 'fa fa-list',
+                'icon'        => 'far fa-question-circle',
                 'url'         => route('more-consultancy.index'),
                 'permissions' => ['more-consultancy.index'],
             ]);

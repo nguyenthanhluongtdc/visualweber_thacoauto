@@ -50,8 +50,8 @@
             <div class="list-image row">
                 <div class="swiper-container researchDevSwiper">
                     <div class="swiper-wrapper">
-                        @if(has_field($page, 'repeater_slider_research_development'))
-                            @foreach(has_field($page, 'repeater_slider_research_development') as $item)
+                        @if(has_field($page, 'repeater_slider_export'))
+                        @foreach(has_field($page, 'repeater_slider_export') as $item)
                                 <div class="swiper-slide">
                                     <img loading="lazy" width="" height="" src="{{get_image_url(has_sub_field($item,'slider_image'))}}" alt="" />
                                 </div>

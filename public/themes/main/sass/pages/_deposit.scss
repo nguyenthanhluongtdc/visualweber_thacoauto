@@ -96,7 +96,9 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 1.5rem;
-    
+    @media (max-width: 768px){
+      display: unset;
+    }
     &.no-grid {
       display: block;
     }
@@ -289,7 +291,21 @@
         outline: none;
         box-shadow: unset !important;
       }
+      a{
+        color: white;
+      }
+      &:hover{
+          appearance: none;
+          -webkit-appearance: none;
+          border: 2px solid $color-primary;
+          color: $color-primary;
+          background-color: #f6f6f6;
+          a{
+              color: $color-primary;
+          }
+      }
     }
+    
   }
 
   &__detail {
@@ -363,9 +379,11 @@
 }
 .btn-back-mobile{
   display: none;
-  @include mobileMarginBottom(100, "+");
+  @include mobileMarginBottom(30, "+");
   @include mobileMarginTop(20, "+");
   @media only screen and (max-width: 1080px){
+        appearance: none;
+        -webkit-appearance: none;
         display: block;
         display: table;
         margin-left: auto;
@@ -377,7 +395,11 @@
         background-color: #01498B;
         color: white;
         border: none;
-        outline: none;
+        outline: none !important;
+       
+        a{
+          color: white;
+        }
       }
       @media only screen and (max-width: 600px){
           width: 200px;

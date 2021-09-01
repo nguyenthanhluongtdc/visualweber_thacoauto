@@ -17,9 +17,12 @@
                         <div class="item-mobile">
                             <div class="img">
                                 <div class="sub-left font-pri-bold">
-                                    <div class="day"> {{ $post->created_at->format('d') }} </div>
-                                    <div class="month"> {{ $post->created_at->format('M') }} </div>
-                                    <div class="year"> {{ $post->created_at->format('Y') }} </div>
+                                    @php
+                                    $month = $post->created_at->format('m')
+                                @endphp
+                                <div class="day"> {{ $post->created_at->format('d') }} </div>
+                                <div class="month">{{Language::getCurrentLocale() == "en" ? $post->created_at->format('M') : "Tháng ".(int)$month}}</div>
+                                <div class="year"> {{ $post->created_at->format('Y') }} </div>
                                 </div>
                                 <div class="sub-right">
                                     <img loading="lazy" width="" height="" src="{{Storage::disk('public')->exists($post->image) ? get_image_url($post->image) : RvMedia::getDefaultImage()}}" alt=" {!! $post->name !!}" />

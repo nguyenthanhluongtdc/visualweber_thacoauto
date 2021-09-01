@@ -18,8 +18,11 @@
                         data-aos-delay="50">
                         <div class="item__left">
                             <div class="sub--left font-pri-bold">
+                                @php
+                                    $month = $post->created_at->format('m')
+                                @endphp
                                 <div class="day"> {{ $post->created_at->format('d') }} </div>
-                                <div class="month"> {{ $post->created_at->format('M') }} </div>
+                                <div class="month">{{Language::getCurrentLocale() == "en" ? $post->created_at->format('M') : "Tháng ".(int)$month}}</div>
                                 <div class="year"> {{ $post->created_at->format('Y') }} </div>
                                 
                             </div>

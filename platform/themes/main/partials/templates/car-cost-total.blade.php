@@ -168,5 +168,10 @@
                 <p class="font18 MyriadPro-BoldCond text-uppercase d-block mb-5 text-danger mb-sm-4 mb-md-5 fontmb-middle">{{ number_format($total, 0, '.', ',') . 'đ' ?? '0đ' }}</p>
                 <button class="deposit__info-button btn-block btn btn-primary MyriadPro-Regular font18 fontmb-small" type="submit">{{ __("Gửi yêu cầu báo giá") }}</button>
             </div>
+           
         </div>
+        <button class="btn-back-mobile fontmb-small mt-4">
+            <a href="{{ URL::previous() }}"> {{ __("Quay lại") }}</a>
+           
+        </button>
     </div>

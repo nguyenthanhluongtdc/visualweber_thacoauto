@@ -289,7 +289,19 @@
         outline: none;
         box-shadow: unset !important;
       }
+      a{
+        color: white;
+      }
+      &:hover{
+          border: 2px solid $color-primary;
+          color: $color-primary;
+          background-color: #f6f6f6;
+          a{
+              color: $color-primary;
+          }
+      }
     }
+    
   }
 
   &__detail {
@@ -354,7 +366,7 @@
 }
 .btn-back-mobile{
   display: none;
-  @include mobileMarginBottom(100, "+");
+  @include mobileMarginBottom(30, "+");
   @include mobileMarginTop(20, "+");
   @media only screen and (max-width: 1080px){
         display: block;
@@ -368,7 +380,10 @@
         background-color: #01498B;
         color: white;
         border: none;
-        outline: none;
+        outline: none !important;
+        a{
+          color: white;
+        }
       }
       @media only screen and (max-width: 600px){
           width: 200px;

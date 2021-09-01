@@ -44,7 +44,7 @@ class PromotionsServiceProvider extends ServiceProvider
                 'priority'    => 5,
                 'parent_id'   => null,
                 'name'        => 'plugins/promotions::promotions.name',
-                'icon'        => 'fa fa-list',
+                'icon'        => 'fas fa-percent',
                 'url'         => route('promotions.index'),
                 'permissions' => ['promotions.index'],
             ]);

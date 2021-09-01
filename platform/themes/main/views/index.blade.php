@@ -62,9 +62,9 @@
                 @endforeach
             @endif
 
-            {{-- <div class="avatar-news">
+            <div class="avatar-news">
                 <img loading="lazy" src="{{ Theme::asset()->url('images/main/avt.png') }}" alt="avatar">
-            </div> --}}
+            </div>
         </div>
         <div class="left left-mobile">
             @if (!empty($postMobile))

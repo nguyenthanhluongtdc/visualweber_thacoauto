@@ -416,6 +416,12 @@ var Ajax = {
                     $('#loan-month-form').dropdown('clear');
                     $('#percent-loan-form').dropdown('clear');
                     $('#interest-rate-form').dropdown('clear');
+                    if(!$('#percent-loan-form').hasClass('disabled')){
+                        $('#percent-loan-form').addClass('disabled')
+                    }
+                    if(!$('#interest-rate-form').hasClass('disabled')){
+                        $('#interest-rate-form').addClass('disabled')
+                    }
                 },
                 success: function (data) {
                     if($('#loan-month-value').length){

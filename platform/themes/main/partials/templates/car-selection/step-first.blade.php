@@ -68,6 +68,18 @@
                         @endforeach
                     </ul>
                 @endif
+                @if($car->parent)
+                    <ul id="car-version-list" class="car-version__list active" style="height: auto;">
+
+                            <li class="car-version__item">
+                                <a href="javascript:;" class="car-version__item-link" data-car_id="{{ $car->parent->id }}">
+                                    <div class="car-version__title font15 font-pri">{{ $car->parent->name }}</div>
+                                    <div class="car-version__price font15 font-pri">{{ __("Giá từ") }} {{ $car->parent->price ? number_format($car->parent->price, 0, '.', ',') . 'đ' : '0đ' }}</div>
+                                </a>
+                            </li>
+
+                    </ul>
+                @endif
                 <div class="gray-line"></div>
 
                 {!! Theme::partial('templates.loading') !!}

@@ -57,9 +57,9 @@
                 <div class="item">
                     <h2 class="title font-pri-bold font30 color-gray fontmb-medium" id="menu-footer">{{__('Contact')}}</h2>
                     <ul class="font-pri font18 list-link">
-                        <li class="color-gray phone"><span>{{ __("Hotline") }}: </span><span><a href="tel:{{ theme_option('hotline-contact') }}" class="color-gray">{{ theme_option('hotline-contact') }}</a></span></li>
-                        <li class="color-gray email"><span>{{ __("Email") }}: </span><span><a href="mailto:{{ theme_option('email-contact') }}" class="color-gray">{{ theme_option('email-contact') }}</a></span></li>
-                        <li class="color-gray fax"><span>{{ __("Fax") }}: </span><span><a href="tel:{{ theme_option('fax-contact') }}" class="color-gray">{{ theme_option('fax-contact') }}</a></span></li>
+                        <li class="color-gray phone ct-pl"><span>{{ __("Hotline") }}: </span><span><a href="tel:{{ theme_option('hotline-contact') }}" class="color-gray">{{ theme_option('hotline-contact') }}</a></span></li>
+                        <li class="color-gray email ct-pl"><span>{{ __("Email") }}: </span><span><a href="mailto:{{ theme_option('email-contact') }}" class="color-gray">{{ theme_option('email-contact') }}</a></span></li>
+                        <li class="color-gray fax ct-pl"><span>{{ __("Fax") }}: </span><span><a href="tel:{{ theme_option('fax-contact') }}" class="color-gray">{{ theme_option('fax-contact') }}</a></span></li>
                     </ul>
                 </div>
                 <div class="item">

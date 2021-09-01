@@ -25,7 +25,7 @@
       -moz--o-animation: 40s ease 0s normal none infinite running zoomEffect;
       position: relative;
       width: 100vw;
-      height: 50vw;
+      height: 38.7vw;
       // @include mobileHeight(750);
       object-fit: cover;
       @media (max-width: 1080px) {
@@ -172,7 +172,7 @@
       a {
         
         color: #434343;
-        text-transform: uppercase;
+        // text-transform: uppercase;
       }
     }
   }
@@ -277,7 +277,7 @@
                 display: -webkit-box;
                 -webkit-box-orient: vertical;
                 margin-bottom: 8%;
-                text-align: justify;
+                // text-align: justify;
 
                 // @media (max-width: 1560px) {
                 //   height: 19%;
@@ -338,7 +338,7 @@
             display: -webkit-box;
             -webkit-box-orient: vertical;
             margin-bottom: 5%;
-            text-align: justify;
+            // text-align: justify;
 
             // @media (max-width: 1680px) {
             //   height: 21%;
@@ -380,7 +380,7 @@
 
       h3 {
         margin-top: 30px;
-        text-align: justify;
+        // text-align: justify;
       }
 
       .top {

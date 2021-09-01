@@ -16,15 +16,18 @@ use Platform\Base\Enums\BaseStatusEnum;
 // use Platform\Services\Models\Services;
 use Platform\Page\Services\PageService;
 // use Response;
+use Platform\Bankloans\Models\Bankloans;
+use Symfony\Component\Console\Input\Input;
 use Symfony\Component\HttpFoundation\Response;
 use Platform\Theme\Events\RenderingSingleEvent;
 use Platform\Base\Http\Responses\BaseHttpResponse;
 use Platform\Theme\Http\Controllers\PublicController;
 use Platform\Blog\Repositories\Interfaces\PostInterface;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
-use Platform\DistributionSystem\Repositories\Interfaces\DistributionSystemInterface;
-use Platform\DistributionSystem\Repositories\Interfaces\ShowroomBrandInterface;
+use Platform\Bankloans\Repositories\Interfaces\BankloansInterface;
 use Platform\DistributionSystem\Repositories\Interfaces\ShowroomInterface;
+use Platform\DistributionSystem\Repositories\Interfaces\ShowroomBrandInterface;
+use Platform\DistributionSystem\Repositories\Interfaces\DistributionSystemInterface;
 use Platform\Kernel\Repositories\Interfaces\PostInterface as InterfacesPostInterface;
 
 class ThacoController extends PublicController
@@ -303,5 +306,70 @@ class ThacoController extends PublicController
             ->setData([
                 "template" => \Theme::partial('templates.car-selection.step-first')
             ]);
+    }
+
+    public function getMonthsAcceptLoans(Request $request, BankloansInterface $bankloansInterface){
+        try {
+            $data = Bankloans::where('bank_id', $request->bank)->orderBy('months')->get()->unique('months');
+            $output = "";
+            if(!empty($data)){
+                foreach($data as $item){
+                    $output.='<div class="item d-flex justify-content-between align-items-center" data-value="'.$item->id.'">
+                        <span>'.$item->months.' '.trans("Month").'</span>
+                    </div>';
+                }
+            }
+            return response()->json(
+                [
+                    'month' => $output,
+                    'type' => 'success'
+                ]
+            );
+        } catch (\Throwable $th) {
+            Log::error('Có lỗi xảy ra khi lấy danh sách đại lý theo tỉnh thành', [$th->getMessage(), $th->getFile(), $th->getLine()]);
+            return response()->json(
+                [
+                    'type' => 'error',
+                    'message' => $th->getMessage(),
+
+                ]
+            )->setStatusCode(Response::HTTP_INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    public function getPercentLoans(Request $request, BankloansInterface $bankloansInterface){
+        try {
+            $totalPrice = $request->total;
+            $loanHasMonth  =Bankloans::where('id', $request->loan_id)->first();
+            $data = Bankloans::where('bank_id',$loanHasMonth->bank_id)->where('months', $loanHasMonth->months)->orderBy('interest_rate')->get();
+            $output = "";
+            if(!empty($data)){
+                foreach($data as $item){
+                    $moneyLoan = number_format($totalPrice*$item->percent_loans/100, 0, '.', ',') . 'đ';
+                    $output.='<div class="item d-flex justify-content-between align-items-center" data-value="'.$item->percent_loans.'">
+                        <span>'.$item->percent_loans.'% - '.$moneyLoan.'</span>
+                    </div>';
+                }
+            }
+            $outputInterestRate = '<div class="item d-flex justify-content-between align-items-center" data-value="'.$loanHasMonth->interest_rate.'">
+                <span>'.$loanHasMonth->months.' '.trans("Month").' - '.$loanHasMonth->interest_rate.'%</span>
+            </div>';
+            return response()->json(
+                [
+                    'percentLoan' => $output,
+                    'interestRate' => $outputInterestRate,
+                    'type' => 'success'
+                ]
+            );
+        } catch (\Throwable $th) {
+            Log::error('Có lỗi xảy ra khi lấy danh sách đại lý theo tỉnh thành', [$th->getMessage(), $th->getFile(), $th->getLine()]);
+            return response()->json(
+                [
+                    'type' => 'error',
+                    'message' => $th->getMessage(),
+
+                ]
+            )->setStatusCode(Response::HTTP_INTERNAL_SERVER_ERROR);
+        }
     }
 }

@@ -11,8 +11,8 @@
 </div>
 
 <div class="section-news-home container-remake">
-    <h2 class="font-pri-bold font60 fontmb-large color-gray">{{ __('TIN TỨC VÀ SỰ KIỆN') }}</h2>
-    <div class="content">
+    <h2 class="font-pri-bold font60 fontmb-large color-gray" data-aos-anchor=".content-news" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out">{{ __('TIN TỨC VÀ SỰ KIỆN') }}</h2>
+    <div class="content content-news">
         <div class="left left-desktop" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
             @php
                 $postDesktop = get_all_with_featured(4);
@@ -29,7 +29,7 @@
 
                             <div class="item-main">
                                 <div class="item-content">
-                                    <h3 class="title font-pri-bold font30  text-uppercase fontmb-middle">
+                                    <h3 class="title font-pri-bold font30  text-uppercase-none fontmb-middle">
                                         <a href="{{$post->url}}" >{{$post->name}}</a>
                                     </h3>
                                     <p class="desc font-pri font18 fontmb-small">
@@ -46,7 +46,7 @@
                     @else
                     <div class="item">
                         <div class="item-content">
-                            <h3 class="title font-pri-bold font30 fontmb-middle text-uppercase">
+                            <h3 class="title font-pri-bold font30 fontmb-middle text-uppercase-none">
                                 <a href="{{$post->url}}">{{$post->name}}</a>
                             </h3>
                             <p class="desc font-pri font18 fontmb-small">
@@ -62,9 +62,9 @@
                 @endforeach
             @endif
 
-            {{-- <div class="avatar-news">
+            <div class="avatar-news">
                 <img loading="lazy" src="{{ Theme::asset()->url('images/main/avt.png') }}" alt="avatar">
-            </div> --}}
+            </div>
         </div>
         <div class="left left-mobile">
             @if (!empty($postMobile))
@@ -76,7 +76,7 @@
                 @foreach ($postMobile as $post)
                     <div class="item">
                         <div class="item-content">
-                            <h3 class="title font-pri-bold font20 text-uppercase fontmb-medium">
+                            <h3 class="title font-pri-bold font20 text-uppercase-none fontmb-medium">
                                 <a href="{{$post->url}}">{{$post->name}}</a>
                             </h3>
                             <p class="desc font-pri font18 fontmb-small">
@@ -104,7 +104,7 @@
                             <img loading="lazy" src="{{ get_object_image($post->image) }}" alt="{{$post->name}}">
                         </a>
                     </div>
-                    <h3 class="title font30 fontmb-small text-uppercase">
+                    <h3 class="title font30 fontmb-small text-uppercase-none">
                         <a data-fancybox href="https://www.youtube.com/watch?v={{get_sub_field(get_field($post, 'video_gallery')[0], 'youtube_code')}}" class="font-pri-bold color-gray font30 fontmb-small">{{$post->name}}</a>
                     </h3>
                 @endif
@@ -141,7 +141,7 @@
                                     <img loading="lazy" src="{{ get_image_url(has_field($post, 'hot_news_image')) }}" alt="{{$post->name}}">
                                 </div>
                                 <span class="font-pri-bold font25 fontmb-small">
-                                    <a href="{{$post->url}}">{{$post->name}}</a>
+                                    <a href="{{$post->url}}" class="text-uppercase-none">{{$post->name}}</a>
                                 </span>
                             </div>
                             @endforeach

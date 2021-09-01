@@ -15,7 +15,7 @@
       .logo-bottom {
         width: 100%;
         img {
-          max-width: 100%;
+          max-width: 90%;
           height: auto;
         }
       }
@@ -97,7 +97,11 @@
         ul {
           li {
             position: relative;
-            padding-left: 30px;
+
+            &.ct-pl {
+              padding-left: 30px;
+            }
+
             &.phone, &.email, &.fax {
               &::before {
                 position: absolute;

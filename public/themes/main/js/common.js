@@ -321,6 +321,8 @@ let globalConfig = {
     disableLoadMoreNews: false
 }
 
+const resultBank = $('#installment-modal')
+
 var Ajax = {
     postData: () => {
         $.ajax({
@@ -392,6 +394,93 @@ var Ajax = {
 
             result.html(template)
         })
+    },
+    getMonthsAcceptLoans: () => {
+        
+        if (!resultBank) return
+        
+        $(document).on('change', '#banks', function(e){
+            
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                url: getMonthsAcceptLoans_url,
+                data: {
+                    bank: $(this).val()
+                },
+                method: "GET",
+                dataType: "json",
+                beforeSend: function() {
+                    $('.loading').removeClass('d-none')
+                    $('#loan-month-form').dropdown('clear');
+                    $('#percent-loan-form').dropdown('clear');
+                    $('#interest-rate-form').dropdown('clear');
+                    if(!$('#percent-loan-form').hasClass('disabled')){
+                        $('#percent-loan-form').addClass('disabled')
+                    }
+                    if(!$('#interest-rate-form').hasClass('disabled')){
+                        $('#interest-rate-form').addClass('disabled')
+                    }
+                },
+                success: function (data) {
+                    if($('#loan-month-value').length){
+                        $('#loan-month-value').html(data.month)
+                    }
+                    $('#loan-month-form').removeClass('disabled')
+                },
+                error: function (xhr, thrownError) {
+                    console.log(xhr.responseText);
+                    console.log(thrownError)
+                    $('.loading').addClass('d-none')
+                },
+                complete: function(xhr, status) {
+                    $('.loading').addClass('d-none')
+                }
+            })
+        })
+    },
+    getPercentLoans: () => {
+        if (!resultBank) return
+        
+        $(document).on('change', '#loan-month', function(e){
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                url: getPercentLoans_url,
+                data: {
+                    loan_id: $(this).val(),
+                    total: $('#money').val(),
+                },
+                method: "GET",
+                dataType: "json",
+                beforeSend: function() {
+                    $('.loading').removeClass('d-none')
+                    $('#percent-loan-form').dropdown('clear');
+                    $('#interest-rate-form').dropdown('clear');
+                },
+                success: function (data) {
+                    if($('#percent-loan-value').length){
+                        $('#percent-loan-value').html(data.percentLoan)
+                    }
+                    if($('#interest-rate-value').length){
+                        $('#interest-rate-value').html(data.interestRate)
+                    }
+                    console.log(data.percentLoan);
+                    $('#percent-loan-form').removeClass('disabled')
+                    $('#interest-rate-form').removeClass('disabled')
+                },
+                error: function (xhr, thrownError) {
+                    console.log(xhr.responseText);
+                    console.log(thrownError)
+                    $('.loading').addClass('d-none')
+                },
+                complete: function(xhr, status) {
+                    $('.loading').addClass('d-none')
+                }
+            })
+        })
     }
 }
 
@@ -437,6 +526,8 @@ $(document).ready(function () {
     Helper.scrollNewsHomepage();
     Helper.zeynepInit();
     Ajax.handleLoadCarOption();
+    Ajax.getMonthsAcceptLoans();
+    Ajax.getPercentLoans();
 });
 
 $(document).ready(function () {

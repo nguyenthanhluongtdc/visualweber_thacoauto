@@ -98,9 +98,9 @@
             'equipments' => isset($equipments) ? $equipments : collect()
         ])!!}
     </form>
-    <button class="btn-back fontmb-small">
+    <a class="btn-back fontmb-small" href="{{ url()->previous() }}">
         {!! __('Quay lại') !!}
-    </button>
+    </a>
 </div>
 
 <script>

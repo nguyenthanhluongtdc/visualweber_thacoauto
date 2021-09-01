@@ -11,7 +11,7 @@
             <div class="deposit__detail MyriadPro-Regular font15" id="accordion">
                 <div class="card">
                     <div class="card-header">
-                        <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex justify-content-between align-items-center collapsed">
                             <h5 class="mb-0 text-uppercase fontmb-small">{{ $car->name }}</h5>
                         </div>
                     </div>
@@ -30,7 +30,7 @@
                         @php
                             $accessories_price = isset($accessories) ? ( $accessories->sum('price') ?? 0) : 0;
                         @endphp
-                        <div class="d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#collapse_accessory" aria-expanded="true" aria-controls="collapse_accessory">
+                        <div class="d-flex justify-content-between align-items-center collapsed" data-toggle="collapse" data-target="#collapse_accessory" aria-expanded="true" aria-controls="collapse_accessory">
                             <h5 class="mb-0 plus fontmb-small">{{ __('Phụ kiện') }}</h5>
                             @if(isset($accessories) && !blank($accessories))
                                 <p class="fontmb-small">
@@ -47,6 +47,10 @@
                                     <p class="fontmb-small">{{ $item->price ? number_format($item->price, 0, '.', ',') . 'đ' : '0đ' }}</p>
                                 @endforeach
                             </div>
+                        @else 
+                            <div class="card-body d-block">
+                                {!! __("chưa cập nhật") !!}
+                            </div>
                         @endif
                     </div>
                 </div>
@@ -55,7 +59,7 @@
                         @php
                             $equipments_price = isset($equipments) ? $equipments->sum('price') ?? 0 : 0;
                         @endphp
-                        <div class="d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#collapse_retrofit" aria-expanded="true" aria-controls="collapse_retrofit">
+                        <div class="d-flex justify-content-between align-items-center collapsed" data-toggle="collapse" data-target="#collapse_retrofit" aria-expanded="true" aria-controls="collapse_retrofit">
                             <h5 class="mb-0 plus fontmb-small">{{ __('Trang bị thêm') }}</h5>
                             @if(isset($equipments) && !blank($equipments))
                                 <p class="fontmb-small">
@@ -71,6 +75,10 @@
                                     <p class=" fontmb-small">{{ $item->name }}</p>
                                     <p class="fontmb-small">{{ $item->price ? number_format($item->price, 0, '.', ',') . 'đ' : '0đ' }}</p>
                                 @endforeach
+                            </div>
+                        @else 
+                            <div class="card-body d-block">
+                                {!! __("chưa cập nhật") !!}
                             </div>
                         @endif
                     </div>

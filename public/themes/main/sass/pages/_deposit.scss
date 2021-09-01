@@ -330,14 +330,23 @@
             font-weight: lighter;
           }
         }
+
         .plus {
           &::after {
-            content: "+";
+            content: "-";
             margin-left: 0.25rem;
             position: relative;
             top: -1px;
           }
         }
+        .collapsed {
+          .plus {
+            &::after {
+              content: "+";
+            }
+          }
+        }
+       
         border: unset;
         padding: 0 1.6rem;
         & > div {

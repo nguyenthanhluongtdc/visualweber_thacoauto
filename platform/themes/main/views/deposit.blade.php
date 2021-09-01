@@ -18,7 +18,7 @@
             @empty
             @endforelse
         @endif
-        <div class="col-sm-12 col-md-12 col-xl-8 mb-4">
+        <div class="deposit-left col-8 mb-4">
             <h2 class="font20 MyriadPro-BoldCond text-uppercase mb-3 fontmb-middle">{!! __('thông tin khách hàng') !!}</h2>
             <p class="mb-4 fontmb-small">
                 {!! __('Thông tin khách hàng sẽ được đưa vào thoả thuận hợp đồng. Quý khách vui lòng nhập chính xác các nội dung dưới đây') !!}
@@ -98,7 +98,7 @@
             'equipments' => isset($equipments) ? $equipments : collect()
         ])!!}
     </form>
-    <a class="btn-back fontmb-small" href="{{ url()->previous() }}">
+    <a class="btn-back-mobile fontmb-small" href="{{ url()->previous() }}">
         {!! __('Quay lại') !!}
     </a>
 </div>

@@ -347,12 +347,12 @@ class ThacoController extends PublicController
                 foreach($data as $item){
                     $moneyLoan = number_format($totalPrice*$item->percent_loans/100, 0, '.', ',') . 'đ';
                     $output.='<div class="item d-flex justify-content-between align-items-center" data-value="'.$item->percent_loans.'">
-                        <span>'.$item->percent_loans.trans("Month").' - '.$moneyLoan.'%</span>
+                        <span>'.$item->percent_loans.'% - '.$moneyLoan.'</span>
                     </div>';
                 }
             }
             $outputInterestRate = '<div class="item d-flex justify-content-between align-items-center" data-value="'.$loanHasMonth->interest_rate.'">
-                <span>'.$loanHasMonth->months.' - '.$loanHasMonth->interest_rate.'</span>
+                <span>'.$loanHasMonth->months.' '.trans("Month").' - '.$loanHasMonth->interest_rate.'%</span>
             </div>';
             return response()->json(
                 [

@@ -1,4 +1,4 @@
-    <div class="col-sm-12  col-lg-4 mb-4 overflow-x-hidden">
+    <div class="deposit-right col-4 mb-4 overflow-x-hidden">
         <div class="deposit__info">
             <div class="deposit__info-imagereview">
                 <img loading="lazy" src="{{ RvMedia::getImageUrl($car->image, null, false, RvMedia::getDefaultImage()) }}" alt="{{ $car->name }}" width="376" height="280" class="img-fluid" />

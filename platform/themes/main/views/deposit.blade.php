@@ -1,6 +1,6 @@
 {!! Theme::partial('templates.car-selection-menu', ['car' => $car]) !!}
 
-<div class="my-3 container-remake MyriadPro-Regular font15 deposit-wrapper">
+<div class="my-3 container-remake MyriadPro-Regular font15 deposit-wrapper overflow-x-hidden">
     <form action="{{route('public.deppsit.post')}}" method="POST" class="row">
         @csrf
         <input type="hidden" name="car_id" value="{{$car->id ?? ''}}">

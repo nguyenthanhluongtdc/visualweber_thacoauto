@@ -1,4 +1,4 @@
-<section class="section-car-selection-content">
+<section class="section-car-selection-content overflow-x-hidden">
     <div class="container-remake">
         <div class="car-selection-content row">
             <div class="car-selection-content__left col-sm-12 col-md-12"> 

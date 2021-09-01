@@ -2,7 +2,9 @@
   /* Custom styling */
   max-width: 100%;
   width: 1025px;
-
+  @media (max-width: 768px){
+    max-width: 95%;
+  }
   /* Custom transition - fade from top*/
   opacity: 0;
   transform: translateY(-50px);
@@ -43,9 +45,17 @@
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       background-color: white;
       padding: 1.3rem 0.2rem;
+      @media (max-width: 768px){
+        display: unset;
+      }
       &__item {
         border-right: 1px solid $color-placeholder-gray;
         padding: 0 2rem;
+        @media (max-width: 768px){
+          border-bottom: 1px solid $color-placeholder-gray;
+          border-right: unset;
+          padding: 2rem 0 1.2rem;
+        }
         &:last-child {
           border: unset;
         }

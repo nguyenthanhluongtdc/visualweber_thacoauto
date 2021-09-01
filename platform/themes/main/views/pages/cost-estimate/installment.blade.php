@@ -8,7 +8,6 @@
       <img loading="lazy" src="{{Theme::asset()->url('images/media/loading.gif')}}" alt="Gif loading">
   </div>
    <div class="deposit__form deposit__form-gray ">
-         
          <div class="form-group">
             <label class="required MyriadPro-Regular font17 mb-2 d-inline-block">{{ __("Chỗ ở hiện nay") }}</label>
             <div class="mb-3 ui fluid selection dropdown">
@@ -109,19 +108,19 @@
             <label class="required MyriadPro-Regular font17 mb-2 d-inline-block">{{ __("Ước tính") }}</label>
             <div class="MyriadPro-Regular installment-estimate">
                   <div class="installment-estimate__item">
-                     <p class="font15 d-inline-block mb-3">{{ __("Số tiền phải trả hàng tháng") }}</p>
+                     <p class="font15 d-inline-block mb-md-3 mb-1">{{ __("Số tiền phải trả hàng tháng") }}</p>
                      <p class="font17" id="total-loan-per-month"></p>
                   </div>
                   <div class="installment-estimate__item">
-                     <p class="font15 d-inline-block mb-3">{{ __("Số tháng") }}</p>
+                     <p class="font15 d-inline-block mb-md-3 mb-1">{{ __("Số tháng") }}</p>
                      <p class="font17" id="total-month"></p>
                   </div>
                   <div class="installment-estimate__item">
-                     <p class="font15 d-inline-block mb-3">{{ __("Ngân hàng") }}</p>
+                     <p class="font15 d-inline-block mb-md-3 mb-1">{{ __("Ngân hàng") }}</p>
                      <p class="font17" id="total-bank"></p>
                   </div>
                   <div class="installment-estimate__item">
-                     <p class="font15 d-inline-block mb-3">{{ __("Tổng tiền") }}</p>
+                     <p class="font15 d-inline-block mb-md-3 mb-1">{{ __("Tổng tiền") }}</p>
                      <p class="font17" id="total-loan"></p>
                   </div>
             </div>

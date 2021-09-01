@@ -98,10 +98,10 @@
             'equipments' => isset($equipments) ? $equipments : collect()
         ])!!}
     </form>
-    <button class="btn-back-mobile fontmb-small mt-4">
+    {{-- <button class="btn-back-mobile fontmb-small mt-4">
         <a href="{{ URL::previous() }}"> {{ __("Quay lại") }}</a>
        
-    </button>
+    </button> --}}
 </div>
 
 <script>

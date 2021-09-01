@@ -189,6 +189,5 @@
         app.dropdownCarVersions()
         app.handlePickerColorCar()
     })
-   
 </script>
 

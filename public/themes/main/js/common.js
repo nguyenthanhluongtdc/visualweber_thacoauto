@@ -45,6 +45,30 @@ $('.post-relate-carousel').owlCarousel({
     }
 });
 
+var SlideSwiper = {
+    slideColorCar: function () {
+        var swiper = new Swiper(".mySwiperColorThumb", {
+            spaceBetween: 10,
+            // slidesPerView: $('.mySwiperColorThumb .swiper-slide').length,
+            slidesPerView: "auto",
+            freeMode: true,
+            watchSlidesProgress: true,
+            thumbs: {
+                swiper: swiper,
+            },
+        });
+        var swiper2 = new Swiper(".mySwiperColor", {
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            thumbs: {
+                swiper: swiper,
+            },
+        });
+    }
+}
 
 var galleryTop = new Swiper('.distribution-slide-left', {
     centeredSlides: true,
@@ -403,6 +427,9 @@ var Ajax = {
             const { template } = response.data
 
             result.html(template)
+            setTimeout(function () {
+                SlideSwiper.slideColorCar();
+            }, 500)
         })
     },
     getMonthsAcceptLoans: () => {
@@ -647,31 +674,7 @@ if ($('.counter-value').length > 0) {
     });
 }
 
-// Slide
-var SlideSwiper = {
-    slideColorCar: function () {
-        var swiper = new Swiper(".mySwiperColorThumb", {
-            spaceBetween: 10,
-            // slidesPerView: $('.mySwiperColorThumb .swiper-slide').length,
-            slidesPerView: "auto",
-            freeMode: true,
-            watchSlidesProgress: true,
-            thumbs: {
-                swiper: swiper,
-            },
-        });
-        var swiper2 = new Swiper(".mySwiperColor", {
-            spaceBetween: 10,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            thumbs: {
-                swiper: swiper,
-            },
-        });
-    }
-}
+
 //search
 // Select 2
 var select2 = {

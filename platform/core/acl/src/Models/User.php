@@ -14,6 +14,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use RvMedia;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
 
 /**
  * @mixin \Eloquent
@@ -41,6 +43,7 @@ class User extends Authenticatable
         'password',
         'avatar_id',
         'permissions',
+        'tenant_id'
     ];
 
     /**
@@ -267,5 +270,12 @@ class User extends Authenticatable
         }
 
         return parent::delete();
+    }
+
+    /**
+     * Tenant
+     */
+    public function tenant(){
+        return $this->belongsTo(\Platform\Tenant\Models\Tenant::class,'tenant_id');
     }
 }

@@ -110,19 +110,19 @@
             <div class="MyriadPro-Regular installment-estimate">
                   <div class="installment-estimate__item">
                      <p class="font15 d-inline-block mb-3">{{ __("Số tiền phải trả hàng tháng") }}</p>
-                     <p class="font17">10 triệu đồng</p>
+                     <p class="font17" id="total-loan-per-month"></p>
                   </div>
                   <div class="installment-estimate__item">
                      <p class="font15 d-inline-block mb-3">{{ __("Số tháng") }}</p>
-                     <p class="font17">36</p>
+                     <p class="font17" id="total-month"></p>
                   </div>
                   <div class="installment-estimate__item">
                      <p class="font15 d-inline-block mb-3">{{ __("Ngân hàng") }}</p>
-                     <p class="font17">Vietcombank</p>
+                     <p class="font17" id="total-bank"></p>
                   </div>
                   <div class="installment-estimate__item">
                      <p class="font15 d-inline-block mb-3">{{ __("Tổng tiền") }}</p>
-                     <p class="font17">800 triệu đồng</p>
+                     <p class="font17" id="total-loan"></p>
                   </div>
             </div>
          </div>

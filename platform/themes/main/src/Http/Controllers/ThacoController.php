@@ -24,6 +24,7 @@ use Platform\Base\Http\Responses\BaseHttpResponse;
 use Platform\Theme\Http\Controllers\PublicController;
 use Platform\Blog\Repositories\Interfaces\PostInterface;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
+use Platform\Bank\Models\Bank;
 use Platform\Bankloans\Repositories\Interfaces\BankloansInterface;
 use Platform\DistributionSystem\Repositories\Interfaces\ShowroomInterface;
 use Platform\DistributionSystem\Repositories\Interfaces\ShowroomBrandInterface;
@@ -310,6 +311,7 @@ class ThacoController extends PublicController
 
     public function getMonthsAcceptLoans(Request $request, BankloansInterface $bankloansInterface){
         try {
+            $bank = Bank::where('id', $request->bank)->first();
             $data = Bankloans::where('bank_id', $request->bank)->orderBy('months')->get()->unique('months');
             $output = "";
             if(!empty($data)){
@@ -322,7 +324,8 @@ class ThacoController extends PublicController
             return response()->json(
                 [
                     'month' => $output,
-                    'type' => 'success'
+                    'type' => 'success',
+                    'bank' => $bank->name
                 ]
             );
         } catch (\Throwable $th) {
@@ -357,8 +360,10 @@ class ThacoController extends PublicController
             return response()->json(
                 [
                     'percentLoan' => $output,
-                    'interestRate' => $outputInterestRate,
-                    'type' => 'success'
+                    'outputInterestRate' => $outputInterestRate,
+                    'type' => 'success',
+                    'month' => $loanHasMonth->months,
+                    "interestRate" => $loanHasMonth->interest_rate,
                 ]
             );
         } catch (\Throwable $th) {

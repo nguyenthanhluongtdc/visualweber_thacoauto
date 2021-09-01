@@ -23,6 +23,7 @@ class Accessory extends BaseModel
     protected $fillable = [
         'name',
         'description',
+        'price',
         'image',
         'car_id',
         'status',

@@ -1,4 +1,4 @@
-<section class="section-info-contact">
+<section class="section-info-contact overflow-x-hidden">
     <div class="container-remake">
         @if (has_field($page, 'title_contact'))
         <h2 class="contact__title font60 font-pri-bold pb-4">{!! get_field($page, 'title_contact') !!}</h2>
@@ -163,7 +163,7 @@
                     </div>
                     <div class="contact-noti">
                         <label class="fontmb-medium font-pri-bold pt-4 pb-2">{{ __('Data privacy notice') }}</label>
-                        <p class="text-noti font-pri">{!! get_field($page, 'policy_mobie_text') !!} <a href="#">{{ __('Privacy Policy') }}</a></p>
+                        <p class="text-noti font-pri fontmb-medium">{!! get_field($page, 'policy_mobie_text') !!} <a href="#">{{ __('Privacy Policy') }}</a></p>
                         <div class="checkpolicy">
                             <div class="styled-input-single">
                                 <input type="checkbox" name="agree" id="radio-example-two" />

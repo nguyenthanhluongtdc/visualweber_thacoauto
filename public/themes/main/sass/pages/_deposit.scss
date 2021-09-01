@@ -331,9 +331,6 @@
           .plus {
             &::after {
               content: "+";
-              margin-left: 0.25rem;
-              position: relative;
-              top: -1px;
             }
           }
         }

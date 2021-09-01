@@ -1,8 +1,13 @@
     <div class="col-sm-12  col-lg-4 mb-4 overflow-x-hidden">
         <div class="deposit__info">
+            @if(isset($car->colors) && !blank($car->colors))
             <div class="deposit__info-imagereview">
-                <img loading="lazy" src="{{ RvMedia::getImageUrl($car->image, null, false, RvMedia::getDefaultImage()) }}" alt="{{ $car->name }}" width="376" height="280" class="img-fluid" />
+                @php
+                $colors = $request['colors'] ?? [];
+                @endphp
+                <img class="img-fluid" src="{{get_object_image($color->image)}}" alt="">
             </div>
+            @endif
             <div class="deposit__detail MyriadPro-Regular font15" id="accordion">
                 <div class="card">
                     <div class="card-header">

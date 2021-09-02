@@ -10,7 +10,7 @@ Route::group(['namespace' => 'Platform\Blog\Http\Controllers', 'middleware' => [
 
         Route::group(['prefix' => 'posts', 'as' => 'posts.'], function () {
             Route::resource('', 'PostController')
-                ->parameters(['' => 'post']);
+                ->parameters(['' => 'post'])->middleware('blog_tenant');
 
             Route::delete('items/destroy', [
                 'as'         => 'deletes',

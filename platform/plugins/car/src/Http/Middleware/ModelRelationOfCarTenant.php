@@ -13,6 +13,7 @@ class ModelRelationOfCarTenant{
          Color::addGlobalScope(new CarTenantScope);
          Equipment::addGlobalScope(new CarTenantScope);
          Accessory::addGlobalScope(new CarTenantScope);
+         Accessory::addGlobalScope(new CarTenantScope);
         return $next($request);
     }
 }

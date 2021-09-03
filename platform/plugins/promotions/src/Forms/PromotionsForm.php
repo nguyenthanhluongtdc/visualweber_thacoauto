@@ -59,9 +59,6 @@ class PromotionsForm extends FormAbstract
                 'label_attr' => ['class' => 'control-label required'],
                 'choices'    => get_cars_with_children(),
                 'value'      => old('cars', $selectedCars),
-            ])
-            ->add('rowClose1', 'html', [
-                'html' => '</div>',
             ]);
             $this
             ->add('rowOpen1', 'html', [
@@ -100,6 +97,9 @@ class PromotionsForm extends FormAbstract
                     'min' => 0,
                 ],
                 'default_value' => 0,
+            ])
+            ->add('rowClose1', 'html', [
+                'html' => '</div>',
             ]);
             $this
             ->add('status', 'customSelect', [

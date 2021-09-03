@@ -52,7 +52,13 @@ class PostForm extends FormAbstract
         $regions = is_plugin_active('location') ? get_cities() : [];
 
         $regions = ['' =>  __("Chọn khu vực")] + $regions;
-
+        $status = BaseStatusEnum::labels();
+        if(auth()->user()->tenant->country){
+            $index = array_search('published',array_keys($status));
+            if($index !== false){
+                array_splice($status,$index,1);
+            }
+        }
         $this
             ->setupModel(new Post)
             ->setValidatorClass(PostRequest::class)
@@ -92,7 +98,7 @@ class PostForm extends FormAbstract
             ->add('status', 'customSelect', [
                 'label'      => trans('core/base::tables.status'),
                 'label_attr' => ['class' => 'control-label required'],
-                'choices'    => BaseStatusEnum::labels(),
+                'choices'    => $status ?? [],
             ])
             ->add('categories[]', 'categoryMulti', [
                 'label'      => trans('plugins/blog::posts.form.categories'),

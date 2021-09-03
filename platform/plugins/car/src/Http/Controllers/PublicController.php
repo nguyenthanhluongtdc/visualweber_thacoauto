@@ -135,6 +135,7 @@ class PublicController extends BaseController
             ->where('status', BaseStatusEnum::PUBLISHED)
             ->orderBy('order', 'desc')
             ->orderBy('created_at', 'desc');
+        
         $data['promotions'] = $promotionsInterface->applyBeforeExecuteQuery($dataPromotions)->get();
         $data['consultancies'] = $moreConsultancyInterface->advancedGet([
             "condition" => [

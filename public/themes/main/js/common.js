@@ -53,6 +53,7 @@ var SlideSwiper = {
             slidesPerView: "auto",
             freeMode: true,
             watchSlidesProgress: true,
+            
             thumbs: {
                 swiper: swiper,
             },

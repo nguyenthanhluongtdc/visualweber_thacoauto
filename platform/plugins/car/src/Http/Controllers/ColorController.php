@@ -15,6 +15,7 @@ use Platform\Base\Events\UpdatedContentEvent;
 use Platform\Base\Http\Responses\BaseHttpResponse;
 use Platform\Car\Forms\ColorForm;
 use Platform\Base\Forms\FormBuilder;
+use Illuminate\Support\Facades\Auth;
 
 class ColorController extends BaseController
 {
@@ -61,7 +62,10 @@ class ColorController extends BaseController
      */
     public function store(ColorRequest $request, BaseHttpResponse $response)
     {
-        $color = $this->colorRepository->createOrUpdate($request->input());
+        $color = $this->colorRepository->createOrUpdate(array_merge($request->input(), [
+            'author_id'   => Auth::id(),
+            'author_type' => \Platform\ACL\Models\User::class,
+        ]));
 
         event(new CreatedContentEvent(COLOR_MODULE_SCREEN_NAME, $request, $color));
 

@@ -41,10 +41,10 @@ class TenantServiceProvider extends ServiceProvider
 
             dashboard_menu()->registerItem([
                 'id'          => 'cms-plugins-tenant',
-                'priority'    => 5,
-                'parent_id'   => null,
-                'name'        => 'plugins/tenant::tenant.name',
-                'icon'        => 'fas fa-random',
+                'priority'    => 2,
+                'parent_id'   => 'cms-core-platform-administration',
+                'name'        => trans('Phân quyền đại lý'),
+                'icon'        => '',
                 'url'         => route('tenant.index'),
                 'permissions' => ['tenant.index'],
             ]);

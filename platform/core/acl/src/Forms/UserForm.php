@@ -127,12 +127,12 @@ class UserForm extends FormAbstract
                 'default_value' => $defaultRole ? $defaultRole->id : null,
             ])
             ->add('tenant_id', 'customSelect', [
-                'label'         => trans('Chi nhánh'),
+                'label'         => trans('Quyền cho thương hiệu hoặc đại lý'),
                 'label_attr'    => ['class' => 'control-label'],
                 'attr'          => [
                     'class' => 'form-control roles-list',
                 ],
-                'choices'       => ['' => trans('Lựa chọn chi nhánh')] + $tenants,
+                'choices'       => ['' => trans('Lựa chọn quyền')] + $tenants,
                 'default_value' => '',
             ])
             ->setBreakFieldPoint('role_id');

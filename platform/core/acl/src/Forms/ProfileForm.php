@@ -64,12 +64,12 @@ class ProfileForm extends FormAbstract
                 ],
             ])
             ->add('tenant_id', 'customSelect', [
-                'label'         => trans('Chi nhánh'),
+                'label'         => trans('Quyền cho thương hiệu hoặc đại lý'),
                 'label_attr'    => ['class' => 'control-label'],
                 'attr'          => [
                     'class' => 'form-control roles-list',
                 ],
-                'choices'       => ['' => trans('Lựa chọn chi nhánh')] + $tenants,
+                'choices'       => ['' => trans('Lựa chọn quyền')] + $tenants,
                 'default_value' => '',
                 'wrapper'    => [
                     'class' => $this->formHelper->getConfig('defaults.wrapper_class') . ' col-md-6',

@@ -23,13 +23,13 @@ class CarTenantScope implements Scope
             if($user && $user->tenant && $user->tenant->brand){
                 $car_ids = $user->tenant->brand->cars->pluck('id')->toArray() ?? [];
                 $equipment_ids = DB::table('app_car_equipments')->whereIn('car_id',$car_ids)->pluck('equipment_id')->toArray();
-                $builder->whereIn('id',$equipment_ids);
+                $builder->whereIn('id',$equipment_ids)->orWhere('author_id',$user->id);
             }
         }else{
             $user = auth()->user();
             if($user && $user->tenant && $user->tenant->brand){
                 $car_ids = $user->tenant->brand->cars->pluck('id')->toArray() ?? [];
-                $builder->whereIn('car_id',$car_ids);
+                $builder->whereIn('car_id',$car_ids)->orWhere('author_id',$user->id);
             }
         }
     }

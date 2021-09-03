@@ -27,6 +27,8 @@ class Accessory extends BaseModel
         'image',
         'car_id',
         'status',
+        'author_id',
+        'author_type'
     ];
 
     /**

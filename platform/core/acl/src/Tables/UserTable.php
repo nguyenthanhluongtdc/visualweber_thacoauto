@@ -85,6 +85,9 @@ class UserTable extends TableAbstract
 
                 return view('core/acl::users.partials.role', ['item' => $item])->render();
             })
+            ->editColumn('tenant_id', function ($item) {
+                return $item->tenant ? Html::link(route('tenant.edit', $item->tenant->id), $item->tenant->name) : '';
+            })
             ->editColumn('super_user', function ($item) {
                 return $item->super_user ? trans('core/base::base.yes') : trans('core/base::base.no');
             })
@@ -133,6 +136,7 @@ class UserTable extends TableAbstract
                 'users.updated_at as updated_at',
                 'users.created_at as created_at',
                 'super_user',
+                'tenant_id',
             ]);
 
         return $this->applyScopes($query);
@@ -155,6 +159,9 @@ class UserTable extends TableAbstract
             'role_name'  => [
                 'title'      => trans('core/acl::users.role'),
                 'searchable' => false,
+            ],
+            'tenant_id'  => [
+                'title'      => trans('Chi nhánh'),
             ],
             'created_at' => [
                 'title' => trans('core/base::tables.created_at'),

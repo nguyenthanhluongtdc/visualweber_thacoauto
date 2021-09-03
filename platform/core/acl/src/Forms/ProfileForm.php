@@ -13,6 +13,8 @@ class ProfileForm extends FormAbstract
      */
     public function buildForm()
     {
+        $tenants = get_tenants()->pluck('name','id')->toArray();
+
         $this
             ->setupModel(new User)
             ->setFormOption('template', 'core/base::forms.form-no-wrap')
@@ -57,6 +59,18 @@ class ProfileForm extends FormAbstract
                     'placeholder'  => trans('core/acl::users.email_placeholder'),
                     'data-counter' => 60,
                 ],
+                'wrapper'    => [
+                    'class' => $this->formHelper->getConfig('defaults.wrapper_class') . ' col-md-6',
+                ],
+            ])
+            ->add('tenant_id', 'customSelect', [
+                'label'         => trans('Quyền cho thương hiệu hoặc đại lý'),
+                'label_attr'    => ['class' => 'control-label'],
+                'attr'          => [
+                    'class' => 'form-control roles-list',
+                ],
+                'choices'       => ['' => trans('Lựa chọn quyền')] + $tenants,
+                'default_value' => '',
                 'wrapper'    => [
                     'class' => $this->formHelper->getConfig('defaults.wrapper_class') . ' col-md-6',
                 ],

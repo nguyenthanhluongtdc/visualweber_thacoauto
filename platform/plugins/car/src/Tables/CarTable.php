@@ -55,6 +55,9 @@ class CarTable extends TableAbstract
                 }
                 return Html::link(route('car.edit', $item->id), $item->name);
             })
+            ->editColumn('brand_id', function ($item) {
+                return $item->brand ? Html::link(route('brand.edit', $item->brand_id), $item->brand->name ?? '') : '';
+            })
             ->editColumn('parent_id', function ($item) {
                 return $item->parent ? Html::link(route('car.edit', $item->parent_id), $item->parent->name ?? '') : '';
             })
@@ -83,6 +86,7 @@ class CarTable extends TableAbstract
             ->select([
                'id',
                'name',
+               'brand_id',
                'parent_id',
                'created_at',
                'status',
@@ -103,6 +107,10 @@ class CarTable extends TableAbstract
             ],
             'name' => [
                 'title' => trans('core/base::tables.name'),
+                'class' => 'text-left',
+            ],
+            'brand_id' => [
+                'title' => trans('Brand'),
                 'class' => 'text-left',
             ],
             'parent_id' => [

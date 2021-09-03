@@ -15,6 +15,7 @@ use Platform\Base\Events\UpdatedContentEvent;
 use Platform\Base\Http\Responses\BaseHttpResponse;
 use Platform\Car\Forms\CarForm;
 use Platform\Base\Forms\FormBuilder;
+use Illuminate\Support\Facades\Auth;
 
 class CarController extends BaseController
 {
@@ -61,7 +62,10 @@ class CarController extends BaseController
      */
     public function store(CarRequest $request, BaseHttpResponse $response)
     {
-        $car = $this->carRepository->createOrUpdate($request->input());
+        $car = $this->carRepository->createOrUpdate(array_merge($request->input(), [
+            'author_id'   => Auth::id(),
+            'author_type' => \Platform\ACL\Models\User::class,
+        ]));
 
         // store car
         $showrooms = $request->input('showrooms');

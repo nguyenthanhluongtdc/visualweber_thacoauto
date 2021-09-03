@@ -47,6 +47,9 @@ class BlogServiceProvider extends ServiceProvider
         });
 
         Helper::autoload(__DIR__ . '/../../helpers');
+
+        $router = $this->app['router'];
+        $router->pushMiddlewareToGroup('blog_tenant', \Platform\Blog\Http\Middleware\BlogTenant::class);
     }
 
     public function boot()

@@ -40,7 +40,9 @@ class Car extends BaseModel
         'brand_id',
         'engine',
         'promotion',
-        'price'
+        'price',
+        'author_id',
+        'author_type'
     ];
 
     /**
@@ -131,5 +133,17 @@ class Car extends BaseModel
     public function promotions(): BelongsToMany
     {
         return $this->belongsToMany(Car::class, 'app__promotion_cars', 'car_id');
+    }
+
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class)->withDefault();
+    }
+     /**
+     * @return MorphTo
+     */
+    public function author(): MorphTo
+    {
+        return $this->morphTo();
     }
 }

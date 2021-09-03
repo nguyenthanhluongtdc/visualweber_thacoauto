@@ -1,0 +1,34 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+use Platform\ACL\Models\User;
+
+class AddAuthorToAppPromotionsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::table('app_promotions', function (Blueprint $table) {
+            $table->integer('author_id');
+            $table->string('author_type', 255)->default(addslashes(User::class));
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::table('app_promotions', function (Blueprint $table) {
+            //
+        });
+    }
+}

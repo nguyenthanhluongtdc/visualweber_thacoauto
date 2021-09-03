@@ -27,6 +27,8 @@ class Accessory extends BaseModel
         'image',
         'car_id',
         'status',
+        'author_id',
+        'author_type'
     ];
 
     /**
@@ -35,4 +37,7 @@ class Accessory extends BaseModel
     protected $casts = [
         'status' => BaseStatusEnum::class,
     ];
+    public function car(){
+        return $this->belongsTo(\Platform\Car\Models\Car::class,'car_id');
+    }
 }

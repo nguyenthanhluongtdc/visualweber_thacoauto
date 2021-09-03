@@ -16,6 +16,7 @@ use Platform\Base\Http\Responses\BaseHttpResponse;
 use Platform\Car\Forms\EquipmentForm;
 use Platform\Base\Forms\FormBuilder;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Auth;
 
 class EquipmentController extends BaseController
 {
@@ -68,7 +69,10 @@ class EquipmentController extends BaseController
         ]);
         $slug = $slug.'-'.time();
         $request->merge(['slug' => $slug]);
-        $equipment = $this->equipmentRepository->createOrUpdate($request->input());
+        $equipment = $this->equipmentRepository->createOrUpdate(array_merge($request->input(), [
+            'author_id'   => Auth::id(),
+            'author_type' => \Platform\ACL\Models\User::class,
+        ]));
 
         // store car
         $categories = $request->input('cars');

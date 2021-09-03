@@ -15,6 +15,7 @@ use Platform\Base\Events\UpdatedContentEvent;
 use Platform\Base\Http\Responses\BaseHttpResponse;
 use Platform\Car\Forms\AccessoryForm;
 use Platform\Base\Forms\FormBuilder;
+use Illuminate\Support\Facades\Auth;
 
 class AccessoryController extends BaseController
 {
@@ -61,7 +62,10 @@ class AccessoryController extends BaseController
      */
     public function store(AccessoryRequest $request, BaseHttpResponse $response)
     {
-        $accessory = $this->accessoryRepository->createOrUpdate($request->input());
+        $accessory = $this->accessoryRepository->createOrUpdate(array_merge($request->input(), [
+            'author_id'   => Auth::id(),
+            'author_type' => \Platform\ACL\Models\User::class,
+        ]));
 
         event(new CreatedContentEvent(ACCESSORY_MODULE_SCREEN_NAME, $request, $accessory));
 

@@ -33,6 +33,7 @@ class UserForm extends FormAbstract
 
         $defaultRole = $this->roleRepository->getFirstBy(['is_default' => 1]);
 
+        $tenants = get_tenants()->pluck('name','id')->toArray();
         $this
             ->setupModel(new User)
             ->setValidatorClass(CreateUserRequest::class)
@@ -124,6 +125,15 @@ class UserForm extends FormAbstract
                 ],
                 'choices'       => ['' => trans('core/acl::users.select_role')] + $roles,
                 'default_value' => $defaultRole ? $defaultRole->id : null,
+            ])
+            ->add('tenant_id', 'customSelect', [
+                'label'         => trans('Quyền cho thương hiệu hoặc đại lý'),
+                'label_attr'    => ['class' => 'control-label'],
+                'attr'          => [
+                    'class' => 'form-control roles-list',
+                ],
+                'choices'       => ['' => trans('Lựa chọn quyền')] + $tenants,
+                'default_value' => '',
             ])
             ->setBreakFieldPoint('role_id');
     }

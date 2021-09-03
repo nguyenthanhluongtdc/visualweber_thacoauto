@@ -31,6 +31,8 @@ class Promotions extends BaseModel
         'direct_discount',
         'image',
         'status',
+        'author_id',
+        'author_type'
     ];
 
     /**

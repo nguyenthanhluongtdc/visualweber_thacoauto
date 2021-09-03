@@ -45,6 +45,17 @@ class CarServiceProvider extends ServiceProvider
             );
         });
 
+        /**
+         * Register middleware
+         */
+        // $this->app->singleton(\Platform\Car\Http\Middleware\CarTenant::class, function ($app) {
+        //     return new \Platform\Car\Http\Middleware\CarTenant();
+        // });
+        /** @var Router $router */
+        $router = $this->app['router'];
+        $router->pushMiddlewareToGroup('car_tenant', \Platform\Car\Http\Middleware\CarTenant::class);
+        $router->pushMiddlewareToGroup('model_relation_of_car', \Platform\Car\Http\Middleware\ModelRelationOfCarTenant::class);
+
         Helper::autoload(__DIR__ . '/../../helpers');
     }
 

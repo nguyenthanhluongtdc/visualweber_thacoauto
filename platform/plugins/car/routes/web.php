@@ -2,9 +2,14 @@
 
 Route::group(['namespace' => 'Platform\Car\Http\Controllers', 'middleware' => ['web', 'core']], function () {
 
-    Route::group(['prefix' => BaseHelper::getAdminPrefix(), 'middleware' => 'auth'], function () {
+    Route::group(['prefix' => BaseHelper::getAdminPrefix(), 'middleware' => [
+        'auth']
+    ], function () {
 
-        Route::group(['prefix' => 'cars', 'as' => 'car.'], function () {
+        Route::group(['prefix' => 'cars', 'as' => 'car.',
+        'middleware' => [
+            'car_tenant',
+        ]], function () {
             Route::resource('', 'CarController')->parameters(['' => 'car']);
             Route::delete('items/destroy', [
                 'as'         => 'deletes',
@@ -15,7 +20,11 @@ Route::group(['namespace' => 'Platform\Car\Http\Controllers', 'middleware' => ['
     });
 
     // Add below this line: Route::group(['prefix' => BaseHelper::getAdminPrefix(), 'middleware' => 'auth'], function () {
-    Route::group(['prefix' => 'colors', 'as' => 'color.'], function () {
+    Route::group(['prefix' => 'colors', 'as' => 'color.',
+    'middleware' => [
+        'model_relation_of_car',
+    ]
+    ], function () {
         Route::resource('', 'ColorController')->parameters(['' => 'color']);
         Route::delete('items/destroy', [
             'as'         => 'deletes',
@@ -24,7 +33,10 @@ Route::group(['namespace' => 'Platform\Car\Http\Controllers', 'middleware' => ['
         ]);
     });
 
-    Route::group(['prefix' => 'accessories', 'as' => 'accessory.'], function () {
+    Route::group(['prefix' => 'accessories', 'as' => 'accessory.',
+    'middleware' => [
+        'model_relation_of_car',
+    ]], function () {
         Route::resource('', 'AccessoryController')->parameters(['' => 'accessory']);
         Route::delete('items/destroy', [
             'as'         => 'deletes',
@@ -32,7 +44,10 @@ Route::group(['namespace' => 'Platform\Car\Http\Controllers', 'middleware' => ['
             'permission' => 'accessory.destroy',
         ]);
     });
-    Route::group(['prefix' => 'equipment', 'as' => 'equipment.'], function () {
+    Route::group(['prefix' => 'equipment', 'as' => 'equipment.',
+    'middleware' => [
+        'model_relation_of_car',
+    ]], function () {
         Route::resource('', 'EquipmentController')->parameters(['' => 'equipment']);
         Route::delete('items/destroy', [
             'as'         => 'deletes',

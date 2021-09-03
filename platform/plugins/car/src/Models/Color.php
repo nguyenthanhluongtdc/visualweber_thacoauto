@@ -26,7 +26,9 @@ class Color extends BaseModel
         'code',
         'car_id',
         'status',
-        'image'
+        'image',
+        'author_id',
+        'author_type'
     ];
 
     /**

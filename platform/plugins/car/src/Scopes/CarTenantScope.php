@@ -25,6 +25,14 @@ class CarTenantScope implements Scope
                 $equipment_ids = DB::table('app_car_equipments')->whereIn('car_id',$car_ids)->pluck('equipment_id')->toArray();
                 $builder->whereIn('id',$equipment_ids)->orWhere('author_id',$user->id);
             }
+        }
+        elseif($model instanceof \Platform\Promotions\Models\Promotions){
+            $user = auth()->user();
+            if($user && $user->tenant && $user->tenant->brand){
+                $car_ids = $user->tenant->brand->cars->pluck('id')->toArray() ?? [];
+                $promotion_ids = DB::table('app__promotion_cars')->whereIn('car_id',$car_ids)->pluck('promotion_id')->toArray();
+                $builder->whereIn('id',$promotion_ids)->orWhere('author_id',$user->id);
+            }
         }else{
             $user = auth()->user();
             if($user && $user->tenant && $user->tenant->brand){

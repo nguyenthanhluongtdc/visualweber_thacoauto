@@ -5,7 +5,7 @@ Route::group(['namespace' => 'Platform\Promotions\Http\Controllers', 'middleware
     Route::group(['prefix' => BaseHelper::getAdminPrefix(), 'middleware' => 'auth'], function () {
 
         Route::group(['prefix' => 'promotions', 'as' => 'promotions.'], function () {
-            Route::resource('', 'PromotionsController')->parameters(['' => 'promotions']);
+            Route::resource('', 'PromotionsController')->parameters(['' => 'promotions'])->middleware('model_relation_of_car');
             Route::delete('items/destroy', [
                 'as'         => 'deletes',
                 'uses'       => 'PromotionsController@deletes',

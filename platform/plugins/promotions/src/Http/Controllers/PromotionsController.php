@@ -15,6 +15,7 @@ use Platform\Base\Events\UpdatedContentEvent;
 use Platform\Base\Http\Responses\BaseHttpResponse;
 use Platform\Promotions\Forms\PromotionsForm;
 use Platform\Base\Forms\FormBuilder;
+use Illuminate\Support\Facades\Auth;
 
 class PromotionsController extends BaseController
 {
@@ -61,7 +62,10 @@ class PromotionsController extends BaseController
      */
     public function store(PromotionsRequest $request, BaseHttpResponse $response)
     {
-        $promotions = $this->promotionsRepository->createOrUpdate($request->input());
+        $promotions = $this->promotionsRepository->createOrUpdate(array_merge($request->input(), [
+            'author_id'   => Auth::id(),
+            'author_type' => \Platform\ACL\Models\User::class,
+        ]));
 
         event(new CreatedContentEvent(PROMOTIONS_MODULE_SCREEN_NAME, $request, $promotions));
 

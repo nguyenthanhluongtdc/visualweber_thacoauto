@@ -15,8 +15,7 @@
             <div class="deposit__form no-grid"> 
                 <h2 class="font18 MyriadPro-BoldCond text-uppercase mb-3 fontmb-middle">{{ __('Chọn tỉnh thành đăng ký xem') }}</h2>
                 <div class="form-group max-w-4">
-                    <select id="select_city" value="" name="city" class="mb-3 ui fluid selection dropdown fontmb-small"
-                        class="font20 font-mi-cond js-example-disabled-results fontmb-small">
+                    <select id="select_city" value="" name="city" class="mb-3 ui fluid selection dropdown fontmb-small">
                         <option selected disabled value="">{{ __("Công ty tỉnh thành") }}</option>
                         @foreach (is_plugin_active('location') ? get_cities() : collect() as $key => $item)
                             <option value="{{ $key }}">{{ $item }}</option>

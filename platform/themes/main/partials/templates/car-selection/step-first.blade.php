@@ -1,10 +1,31 @@
-<section class="section-car-selection-content">
+
+<section class="section-car-selection-content overflow-x-hidden">
     <div class="container-remake">
         <div class="car-selection-content row">
             <div class="car-selection-content__left col-sm-12 col-md-12">
-                <div class="frame">
+                {{-- <div class="frame">
                     <img src="{{ RvMedia::getImageUrl($car->image, null, false, RvMedia::getDefaultImage()) }}" alt="{{ $car->name }}">
+                </div> --}}
+                @if(isset($car->colors) && !blank($car->colors))
+                
+                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"class="swiper mySwiperColor">
+                   
+                    <div class="swiper-wrapper">
+                        @php
+                        $colors = $request['colors'] ?? [];
+                        @endphp
+                        @foreach ($car->colors ?? collect() as $item)
+    
+                        <div class="swiper-slide list-cars">
+                            <a class="list-items" href="#">
+                                <img class="img-fluid" src="{{get_object_image($item->image)}}" alt="">
+                            </a>
+                        </div>
+                        
+                        @endforeach
+                    </div>
                 </div>
+                @endif
                 <ul class="info-equip">
                     <li class="info-equip__item font15 font-pri">
                         <img src="{{Theme::asset()->url('images/business/brand-detail/chon-xe-1.png')}}" alt="filter icon">
@@ -33,10 +54,10 @@
                         @endif
                     </div>
 
-                    <a href="" class="car-version__viewdetail font15 font-pri">{{ __("Xem chi tiết phiên bản") }}</a>
+                    <a href="{{has_field($car, 'current_version_car_link')}}" class="car-version__viewdetail font15 font-pri">{{ __("Xem chi tiết phiên bản") }}</a>
                 </div>
                 @if($car->childrens)
-                    <ul id="car-version-list" class="car-version__list active">
+                    <ul id="car-version-list" class="car-version__list active" style="height: auto;">
                         @foreach ($car->childrens as $item)
                             <li class="car-version__item">
                                 <a href="javascript:;" class="car-version__item-link" data-car_id="{{ $item->id }}">
@@ -47,16 +68,32 @@
                         @endforeach
                     </ul>
                 @endif
+                @if($car->parent)
+                    <ul id="car-version-list" class="car-version__list active" style="height: auto;">
+
+                            <li class="car-version__item">
+                                <a href="javascript:;" class="car-version__item-link" data-car_id="{{ $car->parent->id }}">
+                                    <div class="car-version__title font15 font-pri">{{ $car->parent->name }}</div>
+                                    <div class="car-version__price font15 font-pri">{{ __("Giá từ") }} {{ $car->parent->price ? number_format($car->parent->price, 0, '.', ',') . 'đ' : '0đ' }}</div>
+                                </a>
+                            </li>
+
+                    </ul>
+                @endif
                 <div class="gray-line"></div>
+
                 {!! Theme::partial('templates.loading') !!}
                 <div class="option__car flex-grow-1">
-                    <div class="select-color">
+                    <div thumbsSlider="" class="select-color swiper mySwiperColorThumb">
                         <h3 class="title__row select-color__title fontmb-medium font15 font-pri">{{ __('Lựa chọn màu') }}</h3>
                         @if($car->colors->count() > 0)
                             <input name="color" class="d-none" value="{{ isset($request['color']) && !blank($request['color']) ? $request['color'] : ($car->colors->first()->id ?? '') }}" id="picker-color" />
-                            <ul class="info-color">
+                            <ul class="info-color swiper-wrapper">
                                 @foreach ($car->colors ?? collect() as $key => $item)
-                                    <li data-value="{{ $item->id }}" class="info-color__item {{ ($key == 0 || (isset($request['color']) && !blank($request['color']) && $request['color'] == $item->id)) ? 'active' : '' }}" style="background-color: {{ $item->code }}"></li>
+                                   
+                                    <div class="swiper-slide ">
+                                       <li data-value="{{ $item->id }}" class="info-color__item  {{ ($key == 0 || (isset($request['color']) && !blank($request['color']) && $request['color'] == $item->id)) ? 'active' : '' }}" style="background-color: {{ $item->code }}"></li>
+                                    </div>
                                 @endforeach
                             </ul>
                         @else
@@ -81,7 +118,7 @@
                                             <input class="checkbox" name="accessories[]" {{ in_array($item->id, $accessories) ? 'selected' : '' }} value="{{ $item->id }}" type="checkbox">
                                             <span class="checkmark"></span>
                                         </div>
-                                        <label class="font-pri font15" for="">{{ $item->name }} <span>{{ $item->price ? number_format($item->price, 0, '.', ',') . 'đ' : '0đ' }}</span> </label>
+                                        <label class="font-pri font15 fontmb-small text-center" for="">{{ $item->name }} <br> <span>{{ $item->price ? number_format($item->price, 0, '.', ',') . 'đ' : '0đ' }}</span> </label>
                                     </div>
                                 </div>
 
@@ -90,7 +127,7 @@
 
                             @else
                                 <span class="font-pri font15 w-100 text-center py-4 text-danger">{{ __("chưa cập nhật") }}</span>
-                    @endif
+                        @endif
                     </div>
                     <div class="select-equip">
                         <h3 class="title__row select-equip__title fontmb-medium font15 font-pri">{{ __("Trang bị thêm") }}</h3>
@@ -109,7 +146,7 @@
                                             <input class="checkbox" name="equipments[]" {{ in_array($item->id, $equipments) ? 'selected' : '' }} value="{{ $item->id }}" type="checkbox">
                                             <span class="checkmark"></span>
                                         </div>
-                                        <label class="font-pri font15" for="">{{ $item->name }} <span>{{ $item->price ? number_format($item->price, 0, '.', ',') . 'đ' : '0đ' }}</span> </label>
+                                        <label class="font-pri font15 fontmb-small text-center" for="">{{ $item->name }} <br> <span>{{ $item->price ? number_format($item->price, 0, '.', ',') . 'đ' : '0đ' }}</span> </label>
                                     </div>
                                 </div>
                             @endforeach
@@ -122,8 +159,9 @@
                 </div>
                 <button type="submit" class="select-button font18 font-pri fontmb-small d-inline-block">{{ __("Tiếp theo") }}</button>
             </form>
-            <button class="btn-back mt-4">
-                {{ __("Quay lại") }}
+            <button class="btn-back-mobile fontmb-small mt-4">
+                <a href="{{ URL::previous() }}"> {{ __("Quay lại") }}</a>
+               
             </button>
         </div>
     </div>
@@ -164,3 +202,4 @@
         app.handlePickerColorCar()
     })
 </script>
+

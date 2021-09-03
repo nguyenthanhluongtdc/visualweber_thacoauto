@@ -1,12 +1,17 @@
-    <div class="col-sm-12  col-lg-4 mb-4 overflow-x-hidden">
+    <div class="deposit-right col-4 mb-4 overflow-x-hidden">
         <div class="deposit__info">
+            @if(isset($car->colors) && !blank($car->colors))
             <div class="deposit__info-imagereview">
-                <img loading="lazy" src="{{ RvMedia::getImageUrl($car->image, null, false, RvMedia::getDefaultImage()) }}" alt="{{ $car->name }}" width="376" height="280" class="img-fluid" />
+                @php
+                $colors = $request['colors'] ?? [];
+                @endphp
+                <img class="img-fluid" src="{{get_object_image($color->image)}}" alt="">
             </div>
+            @endif
             <div class="deposit__detail MyriadPro-Regular font15" id="accordion">
                 <div class="card">
                     <div class="card-header">
-                        <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex justify-content-between align-items-center collapsed">
                             <h5 class="mb-0 text-uppercase fontmb-small">{{ $car->name }}</h5>
                         </div>
                     </div>
@@ -25,7 +30,7 @@
                         @php
                             $accessories_price = isset($accessories) ? ( $accessories->sum('price') ?? 0) : 0;
                         @endphp
-                        <div class="d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#collapse_accessory" aria-expanded="true" aria-controls="collapse_accessory">
+                        <div class="d-flex justify-content-between align-items-center collapsed" data-toggle="collapse" data-target="#collapse_accessory" aria-expanded="true" aria-controls="collapse_accessory">
                             <h5 class="mb-0 plus fontmb-small">{{ __('Phụ kiện') }}</h5>
                             @if(isset($accessories) && !blank($accessories))
                                 <p class="fontmb-small">
@@ -42,6 +47,10 @@
                                     <p class="fontmb-small">{{ $item->price ? number_format($item->price, 0, '.', ',') . 'đ' : '0đ' }}</p>
                                 @endforeach
                             </div>
+                        @else 
+                            <div class="card-body d-block">
+                                {!! __("chưa cập nhật") !!}
+                            </div>
                         @endif
                     </div>
                 </div>
@@ -50,7 +59,7 @@
                         @php
                             $equipments_price = isset($equipments) ? $equipments->sum('price') ?? 0 : 0;
                         @endphp
-                        <div class="d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#collapse_retrofit" aria-expanded="true" aria-controls="collapse_retrofit">
+                        <div class="d-flex justify-content-between align-items-center collapsed" data-toggle="collapse" data-target="#collapse_retrofit" aria-expanded="true" aria-controls="collapse_retrofit">
                             <h5 class="mb-0 plus fontmb-small">{{ __('Trang bị thêm') }}</h5>
                             @if(isset($equipments) && !blank($equipments))
                                 <p class="fontmb-small">
@@ -66,6 +75,10 @@
                                     <p class=" fontmb-small">{{ $item->name }}</p>
                                     <p class="fontmb-small">{{ $item->price ? number_format($item->price, 0, '.', ',') . 'đ' : '0đ' }}</p>
                                 @endforeach
+                            </div>
+                        @else 
+                            <div class="card-body d-block">
+                                {!! __("chưa cập nhật") !!}
                             </div>
                         @endif
                     </div>
@@ -95,9 +108,49 @@
                         </div>
                     </div>
                 </div>
+                @php
+                    $priceDiscountTotal = 0;
+                @endphp
+                @if(isset($promotionsArray) && !blank($promotionsArray))
+                <div class="card">
+                    <div class="card-header" id="heading_accessory">
+                        @php
+                            $priceDiscountArray = [];
+                            foreach ($promotionsArray as $item){
+                                array_push($priceDiscountArray, get_discount_price($item, $car->price));
+                            }
+                            $priceDiscountTotal = array_sum($priceDiscountArray);
+                            if($priceDiscountTotal > $car->price){
+                                $priceDiscountTotal = $car->price;
+                            }
+                        @endphp
+                        <div class="d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#collapse_promotions" aria-expanded="true" aria-controls="collapse_promotions">
+                            <h5 class="mb-0 plus fontmb-small">{{ __('Chương trình khuyến mãi') }}</h5>
+                            <p class="fontmb-small">
+                                {{ '-'.number_format($priceDiscountTotal, 0, '.', ',') . 'đ' ?? '0đ' }}
+                            </p>
+                        </div>
+                    </div>
+                    <div id="collapse_promotions" class="collapse" aria-labelledby="heading_accessory" data-parent="#accordion">
+
+                            <div class="card-body">
+                                @foreach ($promotionsArray as $item)
+                                    <p class="fontmb-small">{{ $item->name }}</p>
+                                    <p class="fontmb-small">{{ get_discount_price($item, $car->price) ? '-'.number_format(get_discount_price($item, $car->price), 0, '.', ',') . 'đ' : '-0đ' }}</p>
+                                @endforeach
+                            </div>
+                    </div>
+                </div>
+                @endif
+
+                @php
+                    $promotion = 0;
+                @endphp
+
+                @if(isset($car->promotion) && $car->promotion > 0)
                 <div class="card">
                     @php
-                        $promotion = $car->promotion ?? 0;
+                        $promotion = $car->promotion;
                     @endphp
                     <div class="card-header">
                         <div class="d-flex justify-content-between align-items-center">
@@ -108,6 +161,7 @@
                         </div>
                     </div>
                 </div>
+                @endif
                 <div class="card">
                     <div class="card-header" id="headingOne">
                         <div class="pt-0 py-0"></div>
@@ -117,10 +171,15 @@
             <div class="deposit__info-total">
                 <h4 class="font18 MyriadPro-BoldCond text-uppercase mb-1 fontmb-middle">{{ __('tổng chi phí dự tính') }}</h4>
                 @php
-                    $total = $equipments_price + $accessories_price + $price + $fee + $fee_license_plate - $promotion;
+                    $total = $equipments_price + $accessories_price + $price + $fee + $fee_license_plate - $promotion - $priceDiscountTotal;
                 @endphp
                 <p class="font18 MyriadPro-BoldCond text-uppercase d-block mb-5 text-danger mb-sm-4 mb-md-5 fontmb-middle">{{ number_format($total, 0, '.', ',') . 'đ' ?? '0đ' }}</p>
                 <button class="deposit__info-button btn-block btn btn-primary MyriadPro-Regular font18 fontmb-small" type="submit">{{ __("Gửi yêu cầu báo giá") }}</button>
             </div>
+           
         </div>
+        <button class="btn-back-mobile fontmb-small mt-4">
+            <a href="{{ URL::previous() }}"> {{ __("Quay lại") }}</a>
+           
+        </button>
     </div>

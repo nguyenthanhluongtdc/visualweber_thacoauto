@@ -1,4 +1,4 @@
-<section class="section-info-contact">
+<section class="section-info-contact overflow-x-hidden">
     <div class="container-remake">
         @if (has_field($page, 'title_contact'))
         <h2 class="contact__title font60 font-pri-bold pb-4">{!! get_field($page, 'title_contact') !!}</h2>
@@ -132,42 +132,42 @@
                 <div id="contact-form" class="form-horizontal form-contact-us">
                     {!! Form::open(['route' => 'public.send.contact', 'method' => 'POST']) !!}
                     <div class="contact-input">
-                        <label class="fontmb-medium font-pri-bold">{{ __('Full name') }}<span>*</span></label>
+                        <label class="fontmb-medium font-pri-bold text-uppercase">{{ __('Full name') }}<span>*</span></label>
                         <input type="text" class="contact-form-input" name="name" value="{{ old('name') }}" id="contact_name"
                        placeholder="{{ __('Name') }}" required />
                         {{-- <input type="text" required /> --}}
                     </div>
                     <div class="contact-input">
-                        <label class="fontmb-medium font-pri-bold">{{ __('Phone') }}<span>*</span></label>
+                        <label class="fontmb-medium font-pri-bold text-uppercase">{{ __('Phone') }}<span>*</span></label>
                         <input type="text" class="contact-form-input" name="phone" value="{{ old('phone') }}" id="contact_phone2"
                        placeholder="{{ __('Phone') }}" required>
                         {{-- <input type="text" required /> --}}
                     </div>
                     <div class="contact-input">
-                        <label class="fontmb-medium font-pri-bold">Email<span>*</span></label>
+                        <label class="fontmb-medium font-pri-bold text-uppercase">Email<span>*</span></label>
                         <input type="email" class="contact-form-input" name="email" value="{{ old('email') }}" id="contact_email"
                        placeholder="{{ __('Email') }}" required>
                         {{-- <input type="text" required /> --}}
                     </div>
                     <div class="contact-input">
-                        <label class="fontmb-medium font-pri-bold">{{ __('Subject') }}<span>*</span></label>
+                        <label class="fontmb-medium font-pri-bold text-uppercase">{{ __('Subject') }}<span>*</span></label>
                         <input type="text" class="contact-form-input" name="subject" value="{{ old('subject') }}" id="contact_subject"
                        placeholder="{{ __('Subject') }}" required>
                         {{-- <input type="text" required /> --}}
                     </div>
                     <div class="contact-input wide">
-                        <label class="fontmb-medium font-pri-bold">{{ __('Content') }}<span>*</span></label>
+                        <label class="fontmb-medium font-pri-bold text-uppercase">{{ __('Content') }}<span>*</span></label>
                         <textarea name="content" id="contact_content2" class="contact-form-input" rows="5" placeholder="{{ __('Message') }}" required>{{ old('content') }}</textarea>
                         {{-- <textarea required></textarea> --}}
 
                     </div>
                     <div class="contact-noti">
-                        <label class="fontmb-medium font-pri-bold pt-4 pb-2">{{ __('Data privacy notice') }}</label>
-                        <p class="text-noti font-pri">{!! get_field($page, 'policy_mobie_text') !!} <a href="#">{{ __('Privacy Policy') }}</a></p>
+                        <label class="fontmb-medium font-pri-bold pt-4 pb-2 text-uppercase">{{ __('Data privacy notice') }}</label>
+                        <p class="text-noti font-pri fontmb-little">{!! get_field($page, 'policy_mobie_text') !!} <a href="#">{{ __('Privacy Policy') }}</a></p>
                         <div class="checkpolicy">
                             <div class="styled-input-single">
                                 <input type="checkbox" name="agree" id="radio-example-two" />
-                                <label for="radio-example-two" class="font28 text-noti font-pri">{{ __('I have read and understand') }} <a
+                                <label for="radio-example-two" class="font28 text-noti font-pri fontmb-medium">{{ __('I have read and understand') }} <a
                                         href="#">{{ __('Privacy Policy') }}</a></label>
                             </div>
 
@@ -197,7 +197,7 @@
                 @endif
             @endif
 
-                <button class="btn-lrg  submit-btn fontmb-medium" type="submit" value="SEND">
+                <button class="btn-lrg  submit-btn fontmb-medium text-uppercase" type="submit" value="SEND">
                     {{ __('Send') }}
                 </button>
 

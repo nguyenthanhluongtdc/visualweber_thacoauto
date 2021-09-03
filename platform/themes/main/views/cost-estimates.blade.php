@@ -1,6 +1,6 @@
 {!! Theme::partial('templates.car-selection-menu', ['car' => $car]) !!}
 
-<div class="my-5 my-sm-3 container-remake MyriadPro-Regular font15overflow-x-hidden">
+<div class="my-5 my-sm-3 container-remake MyriadPro-Regular font15 overflow-x-hidden">
     <form action="{{ route('public.brand.deposit', [$car->slug]) }}" method="GET" class="row">
         @foreach (request()->all() as $key => $item)
             @if(is_array($item))
@@ -22,6 +22,11 @@
                             <option value="{{ $key }}">{{ $item }}</option>
                         @endforeach
                     </select> 
+                    @error('city')
+                        <p class="text-danger mt-3"> 
+                            {!! $message !!}
+                        </p>
+                    @endif
                 </div>
                 <h2 class="font18 MyriadPro-BoldCond text-uppercase mb-3 mt-4 fontmb-middle">{{ __('Chương trình khuyến mãi') }}</h2>
                     @if(isset($promotions) && !blank($promotions))
@@ -61,8 +66,11 @@
                 </div>
                 <div class="custom-control span-2 d-flex align-center custom-checkbox my-1 mr-sm-2">
                     <input type="radio" name="type_payment" value="is_installment" class="custom-control-input" id="customControlInline8">
-                    <label class="custom-control-label fontmb-small" for="customControlInline8">{{ __("Vai trả góp ngân hàng") }} <a data-fancybox data-src="#installment-modal" href="javascript:;" class="d-none d-inline-bloc ml-2"><u>{{ __("Chi tiết chi phí") }}</u></a></label>
+                    <label class="custom-control-label fontmb-small" for="customControlInline8">{{ __("Vai trả góp ngân hàng") }} <a data-fancybox data-src="#installment-modal" href="javascript:;" class="ml-2"><u>{{ __("Chi tiết chi phí") }}</u></a></label>
                 </div>
+                @error('type_payment')
+                    <p class="text-danger mt-2"> {!! $message !!} </p>
+                @enderror
             </div>
             @includeIf('theme.main::views.pages.cost-estimate.installment')
         </div>

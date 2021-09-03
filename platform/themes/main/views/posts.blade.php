@@ -4,6 +4,7 @@
         @php
             $posts = get_posts_by_category($category->id ?? 15, 5);
             $postsFeatures = get_featured_posts_by_category($category->id ?? 15, 5);
+            $postsLatest = get_posts_by_category($category->id ?? 20, 10);
         @endphp
         <div class="meida-top">
             @if (!empty($postsFeatures))
@@ -66,8 +67,8 @@
                 <div class="wrap">
                     <h2 class="font-mi-bold font30 fontmb-middle">{{ __("Latest News") }}</h2>
                     <ul id="new-posts" class=""  data-aos="flip-left" data-aos-duration="1200" data-aos-delay="50" class="aos-init aos-animate">
-                        @if (!empty($postsFeatures))
-                            @foreach ($postsFeatures as $post)
+                        @if (!empty( $postsLatest))
+                            @foreach ( $postsLatest as $post)
                             <div class="post-new-item">
                                 <div class="post-thumbnail-wrap">
                                     <div class="post-thumbnail">

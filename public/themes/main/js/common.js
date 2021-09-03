@@ -45,6 +45,30 @@ $('.post-relate-carousel').owlCarousel({
     }
 });
 
+var SlideSwiper = {
+    slideColorCar: function () {
+        var swiper = new Swiper(".mySwiperColorThumb", {
+            spaceBetween: 10,
+            // slidesPerView: $('.mySwiperColorThumb .swiper-slide').length,
+            slidesPerView: "auto",
+            freeMode: true,
+            watchSlidesProgress: true,
+            thumbs: {
+                swiper: swiper,
+            },
+        });
+        var swiper2 = new Swiper(".mySwiperColor", {
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            thumbs: {
+                swiper: swiper,
+            },
+        });
+    }
+}
 
 var galleryTop = new Swiper('.distribution-slide-left', {
     centeredSlides: true,
@@ -245,17 +269,6 @@ var Helper = {
             $(".slider-range__button").css("left", slideWidth + "%");
         });
     },
-    changeColorHeader: function () {
-        var url = window.location.href;
-        var originUrl = window.location.origin;
-        var enUrl = window.location.origin + '/en';
-        var viUrl = window.location.origin + '/vi';
-        var defaultUrl = window.location.origin + '/';
-
-        if (url == originUrl || url == enUrl || url == viUrl || url == defaultUrl) {
-            $('.header').css('background', 'rgba(0 ,0 , 0 , 0.5)')
-        }
-    },
     transitionHeaderFixed: function () {
         $(window).scroll(function () {
             var scroll = $(window).scrollTop();
@@ -332,6 +345,18 @@ let globalConfig = {
     disableLoadMoreNews: false
 }
 
+const resultBank = $('#installment-modal')
+let loanAmount = {
+    bank: "",
+    total: "",
+    month: "",
+    loanMoney: "",
+    loanMoneyPerMonth: "",
+    interestRate: "",
+    interestRatePerMonth: "",
+}
+
+
 var Ajax = {
     postData: () => {
         $.ajax({
@@ -402,6 +427,147 @@ var Ajax = {
             const { template } = response.data
 
             result.html(template)
+            setTimeout(function () {
+                SlideSwiper.slideColorCar();
+            }, 500)
+        })
+    },
+    getMonthsAcceptLoans: () => {
+        
+        if (!resultBank) return
+        
+        $(document).on('change', '#banks', function(e){
+            $('#total-loan-per-month').html("")
+            $('#total-month').html("")
+            $('#total-bank').html("")
+            $('#total-loan').html("")
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                url: getMonthsAcceptLoans_url,
+                data: {
+                    bank: $(this).val()
+                },
+                method: "GET",
+                dataType: "json",
+                beforeSend: function() {
+                    $('.loading').removeClass('d-none')
+                    $('#loan-month-form').dropdown('clear');
+                    $('#percent-loan-form').dropdown('clear');
+                    $('#interest-rate-form').dropdown('clear');
+                    if(!$('#percent-loan-form').hasClass('disabled')){
+                        $('#percent-loan-form').addClass('disabled')
+                    }
+                    if(!$('#interest-rate-form').hasClass('disabled')){
+                        $('#interest-rate-form').addClass('disabled')
+                    }
+                    loanAmount.bank = ""
+                    loanAmount.month = 0
+                },
+                success: function (data) {
+                    if($('#loan-month-value').length){
+                        $('#loan-month-value').html(data.month)
+                    }
+                    $('#loan-month-form').removeClass('disabled')
+                    loanAmount.bank = data.bank
+                },
+                error: function (xhr, thrownError) {
+                    console.log(xhr.responseText);
+                    console.log(thrownError)
+                    $('.loading').addClass('d-none')
+                },
+                complete: function(xhr, status) {
+                    $('.loading').addClass('d-none')
+                }
+            })
+        })
+    },
+    getPercentLoans: () => {
+        if (!resultBank) return
+        
+        $(document).on('change', '#loan-month', function(e){
+            $('#total-loan-per-month').html("")
+            $('#total-month').html("")
+            $('#total-bank').html("")
+            $('#total-loan').html("")
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                url: getPercentLoans_url,
+                data: {
+                    loan_id: $(this).val(),
+                    total: $('#money').val(),
+                },
+                method: "GET",
+                dataType: "json",
+                beforeSend: function() {
+                    $('.loading').removeClass('d-none')
+                    $('#percent-loan-form').dropdown('clear');
+                    $('#interest-rate-form').dropdown('clear');
+                    if(!$('#interest-rate-form').hasClass('disabled')){
+                        $('#interest-rate-form').addClass('disabled')
+                    }
+                    loanAmount.month = ""
+                    loanAmount.interestRate = ""
+                    loanAmount.total = ""
+                    loanAmount.interestRatePerMonth = ""
+                },
+                success: function (data) {
+                    if($('#percent-loan-value').length){
+                        $('#percent-loan-value').html(data.percentLoan)
+                    }
+                    if($('#interest-rate-value').length){
+                        $('#interest-rate-value').html(data.outputInterestRate)
+                    }
+                    // console.log(data.percentLoan);
+                    // console.log(data.interestRate);
+                    $('#percent-loan-form').removeClass('disabled')
+                    loanAmount.total = $('#money').val()
+                    loanAmount.month = data.month
+                    loanAmount.interestRate = data.interestRate/100
+                    loanAmount.interestRatePerMonth = loanAmount.interestRate/loanAmount.month
+                },
+                error: function (xhr, thrownError) {
+                    console.log(xhr.responseText);
+                    console.log(thrownError)
+                    $('.loading').addClass('d-none')
+                },
+                complete: function(xhr, status) {
+                    $('.loading').addClass('d-none')
+                }
+            })
+        })
+    },
+    onChangePercentLoan: () => {
+        $(document).on('change', '#percent-loan', function(e){
+            $('#interest-rate-form').removeClass('disabled')
+        })
+    },
+    getTotalLoan: () => {
+        if (!resultBank) return
+        $(document).on('change', '#interest-rate', function(e){
+            percent = $('#percent-loan').val()
+            if(loanAmount.total != ""){
+                loanAmount.loanMoney = loanAmount.total*percent/100
+                loanAmount.loanMoneyPerMonth = loanAmount.loanMoney/loanAmount.month
+                var total = loanAmount.loanMoneyPerMonth+loanAmount.loanMoneyPerMonth*loanAmount.interestRatePerMonth
+                $('#total-loan-per-month').html(total.toLocaleString("it-IT", {style: "currency",currency: "VND", minimumFractionDigits: 0}))
+                
+            }
+            if(loanAmount.month != ""){
+                $('#total-month').html(loanAmount.month)
+                
+            }
+            if(loanAmount.bank != ""){
+                $('#total-bank').html(loanAmount.bank)
+                
+            }
+            if(loanAmount.loanMoney != ""){
+                var total = loanAmount.loanMoney+loanAmount.loanMoney*loanAmount.interestRate
+                $('#total-loan').html(total.toLocaleString("it-IT", {style: "currency",currency: "VND", minimumFractionDigits: 0}))
+            }
         })
     }
 }
@@ -448,6 +614,10 @@ $(document).ready(function () {
     Helper.scrollNewsHomepage();
     Helper.zeynepInit();
     Ajax.handleLoadCarOption();
+    Ajax.getMonthsAcceptLoans();
+    Ajax.getPercentLoans();
+    Ajax.onChangePercentLoan();
+    Ajax.getTotalLoan();
 });
 
 $(document).ready(function () {
@@ -504,28 +674,7 @@ if ($('.counter-value').length > 0) {
     });
 }
 
-// Slide
-var SlideSwiper = {
-    slideColorCar: function () {
-        var swiper = new Swiper(".mySwiperColorThumb", {
-            spaceBetween: 10,
-            // slidesPerView: $('.mySwiperColorThumb .swiper-slide').length,
-            slidesPerView: "auto",
-            freeMode: true,
-            watchSlidesProgress: true,
-        });
-        var swiper2 = new Swiper(".mySwiperColor", {
-            spaceBetween: 10,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            thumbs: {
-                swiper: swiper,
-            },
-        });
-    }
-}
+
 //search
 // Select 2
 var select2 = {

@@ -44,7 +44,7 @@ class TestDriveServiceProvider extends ServiceProvider
                 'priority'    => 5,
                 'parent_id'   => null,
                 'name'        => 'plugins/test-drive::test-drive.name',
-                'icon'        => 'fa fa-list',
+                'icon'        => 'fas fa-truck',
                 'url'         => route('test-drive.index'),
                 'permissions' => ['test-drive.index'],
             ]);

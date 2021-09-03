@@ -28,10 +28,18 @@ class AccessoryForm extends FormAbstract
                 ],
             ])
             ->add('description', 'textarea', [
-                'label'      => trans('Description'),
+                'label'      => trans('core/base::forms.description'),
                 'label_attr' => ['class' => 'control-label'],
                 'attr'       => [
                     'placeholder'  => trans('core/base::forms.name_placeholder'),
+                ],
+            ])
+            ->add('price', 'number', [
+                'label'      => trans('plugins/car::car.price'),
+                'label_attr' => ['class' => 'control-label'],
+                'attr'       => [
+                    'placeholder'  => trans('core/base::forms.name_placeholder'),
+                    'data-counter' => 120,
                 ],
             ])
             ->add('status', 'customSelect', [

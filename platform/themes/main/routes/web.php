@@ -65,6 +65,8 @@ Route::group(['namespace' => 'Theme\Thaco\Http\Controllers', 'middleware' => ['w
             Route::get('get-car-selection', 'ThacoController@getFirstStepCarSelection')->name('public.ajax.car-selection');
             Route::get('showroom-by-brand', 'ThacoController@getShowroomByBrand')->name('public.ajax.showroom');
             Route::get('get-distribution-systems', 'ThacoController@getDistributionSystem')->name('public.ajax.distribution-system');
+            Route::get('so-thang-vay','ThacoController@getMonthsAcceptLoans')->name('public.ajax.getMonthsAcceptLoans');
+            Route::get('phan-tram-vay','ThacoController@getPercentLoans')->name('public.ajax.getPercentLoans');
         });
         /* ===================== */
 

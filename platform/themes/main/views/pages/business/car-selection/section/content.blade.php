@@ -1,7 +1,7 @@
-<section class="section-car-selection-content">
+<section class="section-car-selection-content overflow-x-hidden">
     <div class="container-remake">
         <div class="car-selection-content row">
-            <div class="car-selection-content__left col-sm-12 col-md-12">
+            <div class="car-selection-content__left col-sm-12 col-md-12"> 
                 <div class="frame">
                     <img loading="lazy" src="{{Theme::asset()->url('images/business/brand-detail/car-detail.png')}}" alt="">
                 </div>
@@ -70,6 +70,7 @@
                         </li>
                     </ul>
                 </div>
+                
                 <div class="select-equip">
                     <h3 class="select-equip__title font15 font-pri">Phụ kiện</h3>
                     <div class="select-equip__list">
@@ -176,10 +177,10 @@
                         </div>
                     </div>
                 </div>
-                <a class="select-button font18 font-pri fontmb-small d-inline-block"  type="button" href="">Tiếp theo</a>
+                <a class="select-button font18 font-pri fontmb-small d-inline-block fontmb-small"  type="button" href="">Tiếp theo</a>
 
             </div>
-            <button class="btn-back mt-4">
+            <button class="btn-back mt-4 fontmb-small">
                 Quay lại
             </button>
         </div>

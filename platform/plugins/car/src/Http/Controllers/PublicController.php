@@ -2,6 +2,7 @@
 
 namespace Platform\Car\Http\Controllers;
 
+use Platform\Bank\Repositories\Interfaces\BankInterface;
 use Platform\Base\Enums\BaseStatusEnum;
 use Platform\Brand\Models\Brand;
 use Platform\CarCategory\Models\CarCategory;
@@ -123,8 +124,94 @@ class PublicController extends BaseController
         MoreConsultancyInterface $moreConsultancyInterface,
         ColorInterface $colorInterface,
         AccessoryInterface $accessoryInterface,
+        EquipmentInterface $equipmentInterface,
+        BankInterface $bankInterface
+    ) {
+        $data['car'] = $this->getCar($car);
+        $dataPromotions = $promotionsInterface->getModel()
+            ->whereHas('cars', function ($q) use ($data) {
+                $q->where('app_cars.id', $data['car']->id);
+            })
+            ->where('status', BaseStatusEnum::PUBLISHED)
+            ->orderBy('order', 'desc')
+            ->orderBy('created_at', 'desc');
+        $data['promotions'] = $promotionsInterface->applyBeforeExecuteQuery($dataPromotions)->get();
+        $data['consultancies'] = $moreConsultancyInterface->advancedGet([
+            "condition" => [
+                "status" => BaseStatusEnum::PUBLISHED
+            ],
+            "select" => ['*'],
+            "order_by" => [
+                "order" => "desc",
+                "created_at" => "desc"
+            ]
+        ]);
+
+        $data['banks'] = $bankInterface->advancedGet([
+            "condition" => [
+                "status" => BaseStatusEnum::PUBLISHED
+            ],
+            "select" => ['*'],
+            "order_by" => [
+                "created_at" => "desc"
+            ]
+        ]);
+
+        if (request('color')) {
+            $data['color'] = $colorInterface->getFirstBy(['id' => request('color')]);
+        }
+
+        if (request('accessories') && is_array(request('accessories'))) {
+            $data['accessories'] = $accessoryInterface->advancedGet([
+                "condition" => [
+                    ["id", "IN", request('accessories')]
+                ],
+                "select" => ["*"]
+            ]);
+        }
+
+        if (request('promotions') && is_array(request('promotions'))) {
+            $data['promotionsArray'] = $promotionsInterface->advancedGet([
+                "condition" => [
+                    ["id", "IN", request('promotions')]
+                ],
+                "select" => ["*"]
+            ]);
+        }
+
+        if (request('equipments') && is_array(request('equipments'))) {
+            $data['equipments'] = $equipmentInterface->advancedGet([
+                "condition" => [
+                    ["id", 'IN', request('equipments')]
+                ],
+                'select' => ["*"]
+            ]);
+        }
+
+        return \Theme::scope('cost-estimates', $data)->render();
+    }
+
+    public function getDeposit(
+        $car,
+        PromotionsInterface $promotionsInterface,
+        MoreConsultancyInterface $moreConsultancyInterface,
+        ColorInterface $colorInterface,
+        AccessoryInterface $accessoryInterface,
         EquipmentInterface $equipmentInterface
     ) {
+
+        $rules = [
+            'city'=> 'required',
+            'type_payment' => 'required',
+        ];
+
+        $customMessage = [
+            'city.required' => __('* Vui lòng chọn tỉnh thành'),
+            'type_payment.required' => __('* Vui lòng chọn phương thức thanh toán')
+        ];
+
+        $this->validate(request(), $rules, $customMessage);
+
         $data['car'] = $this->getCar($car);
 
         $dataPromotions = $promotionsInterface->getModel()
@@ -159,57 +246,10 @@ class PublicController extends BaseController
                 "select" => ["*"]
             ]);
         }
-
-        if (request('equipments') && is_array(request('equipments'))) {
-            $data['equipments'] = $equipmentInterface->advancedGet([
+        if (request('promotions') && is_array(request('promotions'))) {
+            $data['promotionsArray'] = $promotionsInterface->advancedGet([
                 "condition" => [
-                    ["id", 'IN', request('equipments')]
-                ],
-                'select' => ["*"]
-            ]);
-        }
-
-        return \Theme::scope('cost-estimates', $data)->render();
-    }
-
-    public function getDeposit(
-        $car,
-        PromotionsInterface $promotionsInterface,
-        MoreConsultancyInterface $moreConsultancyInterface,
-        ColorInterface $colorInterface,
-        AccessoryInterface $accessoryInterface,
-        EquipmentInterface $equipmentInterface
-    ) {
-        $data['car'] = $this->getCar($car);
-
-        $dataPromotions = $promotionsInterface->getModel()
-            ->whereHas('cars', function ($q) use ($data) {
-                $q->where('app_cars.id', $data['car']->id);
-            })
-            ->where('status', BaseStatusEnum::PUBLISHED)
-            ->orderBy('order', 'desc')
-            ->orderBy('created_at', 'desc');
-
-        $data['promotions'] = $promotionsInterface->applyBeforeExecuteQuery($dataPromotions)->get();
-        $data['consultancies'] = $moreConsultancyInterface->advancedGet([
-            "condition" => [
-                "status" => BaseStatusEnum::PUBLISHED
-            ],
-            "select" => ['*'],
-            "order_by" => [
-                "order" => "desc",
-                "created_at" => "desc"
-            ]
-        ]);
-
-        if (request('color')) {
-            $data['color'] = $colorInterface->getFirstBy(['id' => request('color')]);
-        }
-
-        if (request('accessories') && is_array(request('accessories'))) {
-            $data['accessories'] = $accessoryInterface->advancedGet([
-                "condition" => [
-                    ["id", "IN", request('accessories')]
+                    ["id", "IN", request('promotions')]
                 ],
                 "select" => ["*"]
             ]);

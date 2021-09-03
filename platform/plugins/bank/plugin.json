@@ -1,0 +1,9 @@
+{
+    "name": "Bank",
+    "namespace": "Platform\\Bank\\",
+    "provider": "Platform\\Bank\\Providers\\BankServiceProvider",
+    "author": "Laravel Technologies",
+    "url": "https://laravel-cms.gistensal.com",
+    "version": "1.0",
+    "description": "The description for module bank"
+}

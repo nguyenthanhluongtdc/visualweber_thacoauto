@@ -74,12 +74,11 @@
                     </li>
                 </ul>
                 @if(count($carFeature->colors))
-                <div thumbsSlider="" class="swiper mySwiperColorThumb">
+                <div thumbsSlider="" class="swiper mySwiperColorThumb " >
                     <div class="swiper-wrapper info-color">
                         @forelse($carFeature->colors as $color)
                             <div class="swiper-slide ">
-                                <li class="info-color__item" style="background-color: {{$color->code}}">
-                                </li>
+                                <li class="info-color__item " style="background-color: {{$color->code}}"></li>
                             </div>
                         @empty
                         @endforelse
@@ -117,7 +116,7 @@
                 <a href="{{ route('public.brand.car-selection',[
                     'car' => $carFeature->slug,
                     'showroom' => request()->get('showroom')
-                ]) }}" class="text-center info-button font18 font-pri d-inline-block">{{ __('Tiếp theo') }}</a>
+                ]) }}" class="text-center info-button font18 font-pri d-inline-block fontmb-small">{{ __('Tiếp theo') }}</a>
 
                 <div class="info-hotline font18 font-pri">{{ __("HOTLINE") }} - {{ theme_option('hotline-contact') }}</div>
             </div>
@@ -126,3 +125,24 @@
         {!! Theme::partial('brands/related-car',['slug'=>$slug]) !!}
     </div>
 </section>
+
+
+<script>
+    var app = {
+        
+        handlePickerColorCar: () => {
+            $(document).on('click', '.info-color__item', function () {
+                $('.info-color__item').removeClass('active')
+                $(this).addClass('active')
+                const value = $(this).data('value')
+                $('#picker-color').val(value)
+            })
+        }
+    }
+
+    $(document).ready(function() {
+        app.dropdownCarVersions()
+        app.handlePickerColorCar()
+    })
+   
+</script>

@@ -11,8 +11,8 @@
 </div>
 
 <div class="section-news-home container-remake">
-    <h2 class="font-pri-bold font60 fontmb-large color-gray">{{ __('TIN TỨC VÀ SỰ KIỆN') }}</h2>
-    <div class="content">
+    <h2 class="font-pri-bold font60 fontmb-large color-gray" data-aos-anchor=".content-news" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out">{{ __('TIN TỨC VÀ SỰ KIỆN') }}</h2>
+    <div class="content content-news">
         <div class="left left-desktop" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
             @php
                 $postDesktop = get_all_with_featured(4);
@@ -29,13 +29,13 @@
 
                             <div class="item-main">
                                 <div class="item-content">
-                                    <h3 class="title font-pri-bold font30 fontmb-medium text-uppercase">
-                                        <a href="{{$post->url}}">{{$post->name}}</a>
+                                    <h3 class="title font-pri-bold font30  text-uppercase-none fontmb-middle">
+                                        <a href="{{$post->url}}" >{{$post->name}}</a>
                                     </h3>
                                     <p class="desc font-pri font18 fontmb-small">
                                         {{Str::words($post->description,30)}}
                                     </p>
-                                    <div class="city-day font-pri font18 fontmb-small">
+                                    <div class="city-day font-pri font18 fontmb-little">
                                         <span class="city">{{ $post->city->name ?? '--' }}</span>
                                         <span class="day">{{date_format($post->created_at,"d-m-Y")}}</span>
                                     </div>
@@ -46,13 +46,13 @@
                     @else
                     <div class="item">
                         <div class="item-content">
-                            <h3 class="title font-pri-bold font20 fontmb-medium text-uppercase">
+                            <h3 class="title font-pri-bold font30 fontmb-middle text-uppercase-none">
                                 <a href="{{$post->url}}">{{$post->name}}</a>
                             </h3>
-                            <p class="desc font-pri font18 fontmb-little">
+                            <p class="desc font-pri font18 fontmb-small">
                                 {{Str::words($post->description,25)}}
                             </p>
-                            <div class="city-day font-pri font18 fontmb-small">
+                            <div class="city-day font-pri font18 fontmb-little">
                                 <span class="city">{{ $post->city->name ?? '--' }}</span>
                                 <span class="day">{{date_format($post->created_at,"d-m-Y")}}</span>
                             </div>
@@ -62,9 +62,9 @@
                 @endforeach
             @endif
 
-            {{-- <div class="avatar-news">
+            <div class="avatar-news">
                 <img loading="lazy" src="{{ Theme::asset()->url('images/main/avt.png') }}" alt="avatar">
-            </div> --}}
+            </div>
         </div>
         <div class="left left-mobile">
             @if (!empty($postMobile))
@@ -76,10 +76,10 @@
                 @foreach ($postMobile as $post)
                     <div class="item">
                         <div class="item-content">
-                            <h3 class="title font-pri-bold font18 text-uppercase">
+                            <h3 class="title font-pri-bold font20 text-uppercase-none fontmb-medium">
                                 <a href="{{$post->url}}">{{$post->name}}</a>
                             </h3>
-                            <p class="desc font-pri font18">
+                            <p class="desc font-pri font18 fontmb-small">
                                 {{Str::words($post->description,20)}}
                             </p>
                             <div class="city-day font-pri font18">
@@ -104,7 +104,7 @@
                             <img loading="lazy" src="{{ get_object_image($post->image) }}" alt="{{$post->name}}">
                         </a>
                     </div>
-                    <h3 class="title font30 fontmb-small text-uppercase">
+                    <h3 class="title font30 fontmb-small text-uppercase-none">
                         <a data-fancybox href="https://www.youtube.com/watch?v={{get_sub_field(get_field($post, 'video_gallery')[0], 'youtube_code')}}" class="font-pri-bold color-gray font30 fontmb-small">{{$post->name}}</a>
                     </h3>
                 @endif
@@ -112,10 +112,10 @@
 
             <div class="bottom" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="50">
                 <div class="summary">
-                    <p class="title font-pri-bold font20 fontmb-middle">
+                    <p class="title font-pri-bold font30 fontmb-middle">
                         {{ __("Điểm tin") }}
                     </p>
-                    <a class="font-pri-bold font20 fontmb-middle" href="{{get_category_by_id(theme_option('default_category_news_summary'))->url}}">Xem thêm</a>
+                    <a class="font-pri-bold font20 fontmb-small" href="{{get_category_by_id(theme_option('default_category_news_summary'))->url}}">Xem thêm</a>
                 </div>
 
                 <div class="scollbar-wrap-home">
@@ -140,8 +140,8 @@
                                 <div class="frame">
                                     <img loading="lazy" src="{{ get_image_url(has_field($post, 'hot_news_image')) }}" alt="{{$post->name}}">
                                 </div>
-                                <span class="font-pri-bold fontmb-small">
-                                    <a href="{{$post->url}}">{{$post->name}}</a>
+                                <span class="font-pri-bold font25 fontmb-small">
+                                    <a href="{{$post->url}}" class="text-uppercase-none">{{$post->name}}</a>
                                 </span>
                             </div>
                             @endforeach
@@ -168,7 +168,7 @@
                     <img loading="lazy" src="{{ get_image_url(get_field($page,'homepage_production_logo')) }}" alt="{{get_field($page, 'homepage_production_title')}}">
                     <p class="name-img font-pri-bold font18 color-pri fontmb-small">THACO AUTO</p>
                     <p class="title font-pri-bold font40 fontmb-middle color-gray">{{get_field($page, 'homepage_production_title')}}</p>
-                    <P class="desc font-pri font20 color-gray">{{get_field($page, 'homepage_production_descrtiption')}}</>
+                    <P class="desc font-pri font20 color-gray fontmb-small">{{get_field($page, 'homepage_production_descrtiption')}}</>
                 </div>
                 <div class="top-right">
                     <div class="top-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
@@ -199,7 +199,7 @@
                     <img loading="lazy" src="{{ get_image_url(get_field($page,'homepage_business_logo')) }}" alt="{{get_field($page, 'homepage_business_title')}}">
                     <p class="name-img font-pri-bold font18 color-pri fontmb-small">THACO AUTO</p>
                     <p class="title font-pri-bold font40 color-gray fontmb-middle">{{get_field($page, 'homepage_business_title')}}</p>
-                    <P class="desc font-pri font20 color-gray">{{get_field($page, 'homepage_business_descrtiption')}}</P>
+                    <P class="desc font-pri font20 color-gray fontmb-small">{{get_field($page, 'homepage_business_descrtiption')}}</P>
                 </div>
                 <div class="bottom-right">
                     <div class="bottom-right-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
@@ -243,7 +243,7 @@
 {{-- quan hệ cổ đông --}}
 <div class="section-shareholder-home container-remake">
     <div class="shareholder-home-top" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out">
-        <h2 class="font-pri-bold font60 color-gray fontmb-large">Quan hệ cổ đông</h2>
+        <h2 class="font-pri-bold font60 color-gray fontmb-large ">Quan hệ cổ đông</h2>
         <div class="menu-tab-right font25 fontmb-small">
             <ul class="nav nav-pills font-pri-bold color-gray hidden-scrollbar" role="tablist">
                 <li class="nav-item" role="tab">

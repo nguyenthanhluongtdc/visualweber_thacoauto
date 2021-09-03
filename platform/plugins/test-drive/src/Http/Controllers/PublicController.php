@@ -68,8 +68,28 @@ class PublicController extends BaseController
         ]);
     }
 
-    public function postTestDrive(TestDriveInterface $testDriveInterface)
+    public function postTestDrive(TestDriveInterface $testDriveInterface, BaseHttpResponse $response)
     {
+
+        $rules = [
+            'name' => 'required|max:150',
+            'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10|max:11',
+            'email' => 'required|email:rfc,dns',
+            'provision1' => 'accepted',
+            'provision2' => 'accepted',
+            'provision3' => 'accepted',
+        ];
+
+        $customMessages = [
+            'required' => __('* Trường bắt buộc nhập'),
+            'regex' => __('* Dữ liệu phải là dãy số'),
+            'phone.min' => __('* Số điện thoại không hợp lệ (ít nhất 10 chữ số)'),
+            'phone.max' => __('* Số điện thoại không hợp lệ (tối đa 11 chữ số)'),
+            'email'  => __('* Email không hợp lệ'),
+        ];
+
+        $this->validate(request(), $rules, $customMessages);
+
         try {
             $testDriveInterface->createOrUpdate(request()->all());
 
@@ -83,7 +103,7 @@ class PublicController extends BaseController
             return redirect()->back()->with(
                 [
                     'type' => 'error',
-                    'message' => __('Có lỗi trong quá trình đăng ký, vui lòng thử lại!')
+                    'message' => __('Có lỗi trong quá trình đăng ký hoặc chưa điền đủ trường. Vui lòng thử lại!')
                 ]
             );
         }

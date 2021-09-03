@@ -58,7 +58,7 @@ Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
 
                             </div>
                         </div>
-                        <h3 class="product-detail__card-title font25 font-mi-bold fontmb-medium">{{has_sub_field($item, 'title')}}</h3>
+                        <h3 class="product-detail__card-title font25 font-mi-bold fontmb-middle text-uppercase">{{has_sub_field($item, 'title')}}</h3>
                         <div class="product-detail__card-desc font20 font-pri fontmb-small">
                             {!!has_sub_field($item, 'description')!!}
                         </div>

@@ -11,7 +11,31 @@ class PublicController extends BaseController{
         
     }
     public function store(Request $request){
+         $rules = [
+            'name' => 'required|max:255',
+            'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10|max:11',
+            'email'=> 'required|email:rfc,dns',
+            'note'=> 'max:400',
+            'country' => 'required',
+            'provision1' => 'accepted',
+            'provision2' => 'accepted',
+            'provision3' => 'accepted',
+         ];
+
+         $customMessages = [
+            'country.required' => __('* Vui lòng chọn showroom'),
+            'required' => __('* Trường bắt buộc nhập'),
+            'regex' => __('* Dữ liệu phải là dãy số'),
+            'phone.min' => __('* Số điện thoại không hợp lệ (ít nhất 10 chữ số)'),
+            'phone.max' => __('* Số điện thoại không hợp lệ (tối đa 11 chữ số)'),
+            'note.max' => __('* Dữ liệu nhỏ hơn 400 ký tư'),
+            'email'  => __('* Email không hợp lệ'),
+         ];
+
+         $this->validate($request, $rules, $customMessages);
+         
          try{
+
             DB::beginTransaction();
                $deposit = new \Platform\Deposit\Models\Deposit;
                $deposit = $deposit->create([

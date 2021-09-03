@@ -50,10 +50,13 @@ class PostForm extends FormAbstract
         }
 
         $regions = is_plugin_active('location') ? get_cities() : [];
-
+        if(auth()->user()->tenant->country ?? false){
+            $regions = [auth()->user()->tenant->country->id=>auth()->user()->tenant->country->name];
+        }
         $regions = ['' =>  __("Chọn khu vực")] + $regions;
+
         $status = BaseStatusEnum::labels();
-        if(auth()->user()->tenant->country){
+        if(auth()->user()->tenant->country ?? false){
             $index = array_search('published',array_keys($status));
             if($index !== false){
                 array_splice($status,$index,1);

@@ -46,6 +46,6 @@ class Tenant extends BaseModel
     }
 
     public function country(){
-        return $this->belongsTo(\Platform\Location\Models\TinhThanhPho::class,'country_id','matp');
+        return $this->belongsTo(\Platform\Location\Models\State::class,'country_id','id');
     }
 }

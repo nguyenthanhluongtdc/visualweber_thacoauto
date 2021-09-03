@@ -20,7 +20,7 @@ class BlogTenantScope implements Scope
     {
         $user = auth()->user();
         if($user && $user->tenant && $user->tenant->country){
-            $builder->whereIn('author_id',[$user->id]);
+            $builder->whereIn('author_id',[$user->id])->orWhereIn('city_id',[$user->tenant->country->id ?? '']);
         }
     }
 }

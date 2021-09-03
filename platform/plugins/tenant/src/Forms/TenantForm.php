@@ -15,6 +15,10 @@ class TenantForm extends FormAbstract
      */
     public function buildForm()
     {
+        $regions = is_plugin_active('location') ? get_cities() : [];
+
+        $regions = ['' =>  __("Chọn khu vực")] + $regions;
+
         $this
             ->setupModel(new Tenant)
             ->setValidatorClass(TenantRequest::class)
@@ -52,7 +56,7 @@ class TenantForm extends FormAbstract
                 'attr'       => [
                     'class' => 'form-control select-full',
                 ],
-                'choices'    => get_countries()->pluck('name','matp')->prepend(__("Chọn khu vực"),'')->toArray(),
+                'choices'    => $regions,
                 'help_block' => [
                     'text' => 'Lựa chọn nếu muốn quản lý tin tức của tỉnh thành',
                 ]

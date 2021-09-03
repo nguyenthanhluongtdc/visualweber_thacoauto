@@ -1,7 +1,7 @@
 {!! Theme::partial('templates.car-selection-menu', ['car' => $car]) !!}
 
-<div class="my-5 my-sm-3 container-remake MyriadPro-Regular font15 overflow-x-hidden">
-    <form action="{{ route('public.brand.deposit', [$car->slug]) }}" method="GET" class="row">
+<div class="my-5 my-sm-3 container-remake MyriadPro-Regular font15">
+    <form action="{{ route('public.brand.deposit', [$car->slug]) }}" method="GET" class="row overflow-x-hidden">
         @foreach (request()->all() as $key => $item)
             @if(is_array($item))
                 @foreach ($item as $child)
@@ -78,7 +78,8 @@
             'car' => $car,
             'color' => isset($color) ? $color : collect(),
             'accessories' => isset($accessories) ? $accessories : collect(),
-            'equipments' => isset($equipments) ? $equipments : collect()
+            'equipments' => isset($equipments) ? $equipments : collect(),
+            'promotionsArray' => isset($promotionsArray) ? $promotionsArray : collect()
         ])!!}
     </form>
 </div>

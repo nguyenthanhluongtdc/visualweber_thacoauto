@@ -338,6 +338,12 @@ var Helper = {
         if (!loading) return
 
         enable ? loading.removeClass('d-none') : loading.addClass('d-none')
+    },
+    resetTotalLoan: function(){
+        $('#total-loan-per-month').html("")
+        $('#total-month').html("")
+        $('#total-bank').html("")
+        $('#total-loan').html("")
     }
 };
 
@@ -438,10 +444,7 @@ var Ajax = {
         if (!resultBank) return
         
         $(document).on('change', '#banks', function(e){
-            $('#total-loan-per-month').html("")
-            $('#total-month').html("")
-            $('#total-bank').html("")
-            $('#total-loan').html("")
+            Helper.resetTotalLoan()
             $.ajax({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -486,12 +489,9 @@ var Ajax = {
     },
     getPercentLoans: () => {
         if (!resultBank) return
-        
+        Helper.resetTotalLoan()
         $(document).on('change', '#loan-month', function(e){
-            $('#total-loan-per-month').html("")
-            $('#total-month').html("")
-            $('#total-bank').html("")
-            $('#total-loan').html("")
+            
             $.ajax({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -568,6 +568,9 @@ var Ajax = {
             if(loanAmount.loanMoney != ""){
                 var total = loanAmount.loanMoney+loanAmount.loanMoney*loanAmount.interestRate
                 $('#total-loan').html(total.toLocaleString("it-IT", {style: "currency",currency: "VND", minimumFractionDigits: 0}))
+            }
+            else{
+                Helper.resetTotalLoan()
             }
         })
     }

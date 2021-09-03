@@ -208,18 +208,18 @@ if (!function_exists('get_cars_with_children')) {
    function get_cars_with_children()
    {
       $user = auth()->user();
-      $car_ids = [];
-      if($user && $user->tenant && $user->tenant->brand){
-            $car_ids = $user->tenant->brand->cars->pluck('id')->toArray() ?? [];
-      }
       $interface = app(CarInterface::class);
 
       $data = $interface->getModel()
-         ->where(['status' => BaseStatusEnum::PUBLISHED], [], ['id', 'name', 'parent_id'])
-         ->whereIn('id',$car_ids)
-         ->with([])
-         ->select(['*']);
+         ->where(['status' => BaseStatusEnum::PUBLISHED], [], ['id', 'name', 'parent_id']);
+         
 
+      if($user && $user->tenant && $user->tenant->brand){
+            $car_ids = $user->tenant->brand->cars->pluck('id')->toArray() ?? [];
+            $data = $data->whereIn('id',$car_ids);
+      }
+
+      $data = $data->with([])->select(['*']);
       $cars = $interface->applyBeforeExecuteQuery($data)->get();
 
       return app(SortItemsWithChildrenHelper::class)

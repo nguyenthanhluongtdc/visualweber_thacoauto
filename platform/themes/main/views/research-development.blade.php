@@ -127,9 +127,7 @@
 
         @includeIf("theme.main::views.pages.mechanical.mechanical-news")
         @includeIf("theme.main::views.pages.mechanical.mechanical-news-mobile")
+        @includeIf("theme.main::views.pages.mechanical.mechanical-contact")
 
-        <div class="form-contact-only-mobile">
-            @includeIf("theme.main::views.pages.mechanical.mechanical-contact")
-        </div>
     </div>
 </div>

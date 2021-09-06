@@ -8,18 +8,16 @@
         &__content {
             .read-more {
                 margin: 5px 0;
+                display: flex;
+                justify-content: end;
                 &__link {
-                    float: right;
                     text-transform: capitalize;
                     color: #01498B;
                     i{
                         font-size: 0.8vw;
-                    }
-                }
-
-                @media (max-width: 1080px) {
-                    &.desktop {
-                        display: none;
+                        @media (max-width: 1080px){
+                            font-size: 13px;
+                        }
                     }
                 }
             }

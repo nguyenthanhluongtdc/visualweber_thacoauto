@@ -137,6 +137,7 @@ var swiperRelatedSlide = new Swiper(".related-slide", {
             slidesPerView: 3.5,
         },
         "1080": {
+            navigation: false,
             slidesPerView: 4.5,
         },
     },

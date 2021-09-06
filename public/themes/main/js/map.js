@@ -35,6 +35,11 @@ const Distribution = {
         setTimeout(() => {
             window.__map.setView(new L.LatLng(-630.8, 254), 2)
         }, 300)
+        map.on('click', function(e){
+            var lt = String(e.latlng.lat),
+            lg = String(e.latlng.lng);
+            console.log('latitude: '+lt+', Longtitude: '+lg);
+        })
     },
     getTemplateDistrubition: function(map) {
         $.ajax({
@@ -161,6 +166,7 @@ const Distribution = {
 $(document).ready(function() {
     if (document.getElementById('map')) {
         Distribution.init()
+        
     }
     $("#city_id").change(function(e) {
         __map.eachLayer((layer) => {

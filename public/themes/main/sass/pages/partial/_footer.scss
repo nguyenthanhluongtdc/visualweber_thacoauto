@@ -390,6 +390,10 @@
 }
 
 .end-web {
+
+  .bus {
+    margin-right: 10px;
+  }
   height: 58px;
   @media (max-width: 1680px) {
     height: 50px;
@@ -402,6 +406,11 @@
   }
   @media (max-width: 1199px) {
     height: 32px;
+  }
+
+  @include mobilePaddingY(15);
+  @media (max-width: 1080px) {
+    height: max-content;
   }
   .container-remake {
     height: 100%;

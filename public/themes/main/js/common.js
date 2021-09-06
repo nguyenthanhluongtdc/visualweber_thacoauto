@@ -727,31 +727,31 @@ $(document).ready(function () {
         });
     }
 
-    // if ($('.form-search').length) {
-    //     $('input[name=cate]').change(function () {
-    //         if ($(this).val().length !== 0) {
-    //             filter_data($(this).val());
-    //         }
-    //     });
+    if ($('.form-search').length && window.URL_FILER) {
+        let uri_filter = window.URL_FILER;
+        $('input[name=category]').change(function () {
+            if ($(this).val().length !== 0) {
+                filter_data($(".form-search").serializeArray(), uri_filter);
+            }
+        });
 
-    //     $('.trigger').trigger('change');
-    // }
+        $('.trigger').trigger('change');
+    }
 
-    // function filter_data($value) {
-    //     // $('.filter_data').html('<div id="loading"></div>');
-    //     let cate = $value;
-    //     $.ajax({
-    //         headers: {
-    //             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    //         },
-    //         url: '/api/search',
-    //         type: 'get',
-    //         data: { cate: cate },
-    //         success: function (data) {
-    //             $('.section-content').html(data)
-    //         }
-    //     });
-    // }
+    function filter_data(url, uri_filter) {
+        // $('.filter_data').html('<div id="loading"></div>');
+        $.ajax({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            url: uri_filter,
+            type: 'get',
+            data: { filter: url },
+            success: function (data) {
+                $('.result-main').html(data)
+            }
+        });
+    }
 });
 
 $(document).ready(function () {

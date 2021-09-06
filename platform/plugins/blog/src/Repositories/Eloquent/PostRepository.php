@@ -207,7 +207,6 @@ class PostRepository extends RepositoriesAbstract implements PostInterface
         if ($paginate) {
             return $this->applyBeforeExecuteQuery($data)->paginate($paginate);
         }
-        dd('sdf');
 
         return $this->applyBeforeExecuteQuery($data)->get();
     }

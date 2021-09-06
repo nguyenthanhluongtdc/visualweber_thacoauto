@@ -75,91 +75,79 @@ Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
                 </div>
             </div>
 
-            {{-- <div class="search-range row pb-4 mt-5">
+            <div class="search-range row pb-4 mt-5">
                 <div class="col-md-10 col-12 search-cate">
-                    <div class="box">
-                        <input id="one" type="radio" name="cate" value="">
-                        <span class="check"></span>
-                        <label for="one" class="font-pri font15">Giới thiệu</label>
-                    </div>
-                    <div class="box item">
-                        <input id="two" type="radio" name="cate" value="">
-                        <span class="check"></span>
-                        <label for="two" class="font-pri font15">Lĩnh vực sản xuất kinh doanh</label>
-                    </div>
-                    <div class="box">
-                        <input id="three" class="trigger" type="radio" value="15" name="cate" checked>
-                        <span class="check"></span>
-                        <label for="three" class="font-pri font15">Truyền thông</label>
-                    </div>
-                    <div class="box">
-                        <input id="four" type="radio" name="cate" value="">
-                        <span class="check"></span>
-                        <label for="four" class="font-pri font15">Quan hệ cổ đông</label>
-                    </div>
-                    <div class="box">
-                        <input id="five" type="radio" name="cate" value="">
-                        <span class="check"></span>
-                        <label for="five" class="font-pri font15">Tuyển dụng</label>
-                    </div>
+                    {!!
+                        Menu::renderMenuLocation('menu-filter', [ 
+                            'options' => [],
+                            'theme'   => true,
+                            'view'=> 'menu-filter'
+                        ])
+                    !!}
                 </div>
-                <div class="col-md-2 col-12 search-time">
+                {{-- <div class="col-md-2 col-12 search-time">
                     <div class="time-picker">
                         <ion-icon name="calendar-outline" class=" pl-md-3 pl-1 font15 calendar"></ion-icon>
                         <input type="date" class="date-frame" id="birthday" name="birthday" class="font15">
                         <ion-icon name="chevron-down-outline" class="arrow font15"></ion-icon>
                     </div>
-                </div>
-            </div> --}}
+                </div> --}}
+            </div>
 
-            <div class="section-content pt-5">
-                @isset($posts)
-                    @forelse($posts as $post)
-                        <div class="search-result row mb-md-4 mb-5" data-aos="fade-up" data-aos-duration="1000"
-                            data-aos-easing="ease-in-out">
-                            <div class="col-lg-3 col-md-5 result-img">
-                                <a class="image h-100" href="{{$post->url}}" title="">
-                                    <img loading="lazy" src="{{ Storage::disk('public')->exists($post['image']) ? get_image_url($post['image']) : RvMedia::getDefaultImage() }}" alt="img-detail"
-                                        class="w-100 h-100 object-fit-cover">
-                                </a>
-                            </div>
-                            <div class="col-lg-9 col-md-7 result-content">
+            <div class="result-main">
+                <div class="section-content pt-5">
+                    @isset($posts)
+                        @forelse($posts as $post)
+                            <div class="search-result row mb-md-4 mb-5" data-aos="fade-up" data-aos-duration="1000"
+                                data-aos-easing="ease-in-out">
+                                <div class="col-lg-3 col-md-5 result-img">
+                                    <a class="image h-100" href="{{$post->url}}" title="">
+                                        <img loading="lazy" src="{{ Storage::disk('public')->exists($post['image']) ? get_image_url($post['image']) : RvMedia::getDefaultImage() }}" alt="img-detail"
+                                            class="w-100 h-100 object-fit-cover">
+                                    </a>
+                                </div>
+                                <div class="col-lg-9 col-md-7 result-content">
 
-                                <div class="content">
-                                    <a href="{{$post->url}}">
-                                        <h3 class="font-pri-bold font30 fontmb-middle color-gray">
-                                            {!! $post->name !!}
-                                        </h3>
-                                    </a>
-                                    <a href="{{$post->url}}">
-                                    <p class="font-pri my-3 font20 fontmb-small text-dark desc">
-                                        {!! empty($post->description) ? $post->name : $post->description !!}
-                                    </p>
-                                    </a>
-                                    <p class="font-pri date font15 fontmb-little">
-                                        {{$post->created_at->format('d-m-y')}}
-                                    </p>
+                                    <div class="content">
+                                        <a href="{{$post->url}}">
+                                            <h3 class="font-pri-bold font30 fontmb-middle color-gray">
+                                                {!! $post->name !!}
+                                            </h3>
+                                        </a>
+                                        <a href="{{$post->url}}">
+                                        <p class="font-pri my-3 font20 fontmb-small text-dark desc">
+                                            {!! empty($post->description) ? $post->name : $post->description !!}
+                                        </p>
+                                        </a>
+                                        <p class="font-pri date font15 fontmb-little">
+                                            {{$post->created_at->format('d-m-y')}}
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        @empty
-                        <i class="fal fa-empty-set"></i>
-                    @endforelse
+                            @empty
+                            <i class="fal fa-empty-set"></i>
+                        @endforelse
+                    @endisset
+                </div>
+                
+                @if(!isset($posts) || $posts->isEmpty())
+                    <p class="text-center font25">
+                        {!! __('Không tìm thấy kết quả nào') !!}
+                    </p>
+                @endif
+
+                @isset($posts)
+                    <div class="container-remake">
+                        {{ $posts->withQueryString()->links('vendor.pagination.custom') }}
+                    </div>
                 @endisset
             </div>
-            
-            @if(!isset($posts) || $posts->isEmpty())
-                <p class="text-center font25">
-                    {!! __('Không tìm thấy kết quả nào') !!}
-                </p>
-            @endif
-
-            @isset($posts)
-                <div class="container-remake">
-                    {{ $posts->withQueryString()->links('vendor.pagination.custom') }}
-                </div>
-            @endisset
         </div>
     </form>
 </div>
+
+<script>
+    window.URL_FILER = "{{route('public.api.search')}}";
+</script>

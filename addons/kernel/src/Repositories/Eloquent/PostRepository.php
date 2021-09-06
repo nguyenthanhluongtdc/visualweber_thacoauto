@@ -116,4 +116,32 @@ class PostRepository extends BlogPostRepository
 
         return $this->applyBeforeExecuteQuery($data)->first();
     }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getSearchByCategoryAndFilter($categoryId, $keyword, $paginate = 6)
+    {
+        if (!is_array($categoryId)) {
+            $categoryId = [$categoryId];
+        }
+        
+        $data = $this->getModel()
+            ->where('posts.status', BaseStatusEnum::PUBLISHED)
+            ->join('post_categories', 'post_categories.post_id', '=', 'posts.id')
+            ->join('categories', 'post_categories.category_id', '=', 'categories.id')
+            ->whereIn('post_categories.category_id', $categoryId)
+            ->where('posts.name', 'LIKE', '%' . $keyword . '%')
+            ->select('posts.*')
+            ->distinct()
+            ->with('slugable')
+            ->orderBy('posts.order', 'desc')
+            ->orderBy('posts.created_at', 'desc');
+
+            if ($paginate != 0) {
+                return $this->applyBeforeExecuteQuery($data)->paginate($paginate);
+            }
+    
+            return $this->applyBeforeExecuteQuery($data)->limit($limit)->get();
+    }
 }

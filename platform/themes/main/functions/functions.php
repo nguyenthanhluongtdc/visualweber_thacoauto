@@ -43,6 +43,7 @@ register_page_template([
 Menu::addMenuLocation('menu-tabs-support-industry', 'Tabs - Công nghiệp hỗ trợ');
 Menu::addMenuLocation('menu-tabs-production-assembly', 'Tabs - Tabs - Sản xuất lắp ráp');
 Menu::addMenuLocation('menu-tabs-mechanical', 'Tabs - Tabs - Cơ khí');
+Menu::addMenuLocation('menu-filter', 'Filter post categories');
 
 register_sidebar([
     'id'          => 'footer_introduce',

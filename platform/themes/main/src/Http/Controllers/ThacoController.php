@@ -9,6 +9,9 @@ use BaseHelper;
 use SlugHelper;
 use Illuminate\Support\Arr;
 use Illuminate\Http\Request;
+use Platform\Blog\Models\Post;
+use Platform\Blog\Models\Category;
+use Platform\Blog\Services\BlogService;
 use Platform\Page\Models\Page;
 use Illuminate\Support\Facades\Log;
 use Platform\Base\Enums\BaseStatusEnum;
@@ -281,23 +284,38 @@ class ThacoController extends PublicController
             ->render();
     }
 
-    public function getApiSearch(Request $request, PostInterface $postRepository)
+    public function getApiSearch(Request $request)
     {
-        // if($request->ajax() && $request->has('cate')) {
-        //     $data = get_posts_by_category($request->input('cate'), 5);
-        //     return view("theme.main::views.components.result-search", compact('data'))->render();
-        // }
+        if($request->ajax() && $request->has('filter')) {
+            $filter = $request->filter;
+            $posts = [];
 
-        if ($request->ajax()) {
-            $query = $request->input('keyword');
+            $keyword = $filter[0]['value'];
+            $category = $filter[1]['value'];
 
-            if (!$query) {
-                $posts = [];
-                return view("theme.main::views.components.result-search", compact('posts'))->render();
+            $slug = SlugHelper::getSlug($category, SlugHelper::getPrefix(Category::class));
+
+            if (!$slug) {
+                return view("theme.main::views.components.result-filter-cate", compact('posts'))->render();
             }
 
-            $posts = $postRepository->getSearch($query, 0, 5);
-            return view("theme.main::views.components.result-search", compact('posts'))->render();
+            $posts = app(InterfacesPostInterface::class)->getSearchByCategoryAndFilter($slug->reference_id, $keyword??"", 6);
+
+            return view("theme.main::views.components.result-filter-cate", compact('posts'))->render();
+        }
+
+        else {
+            if ($request->ajax()) {
+                $query = $request->input('keyword');
+    
+                if (!$query) {
+                    $posts = [];
+                    return view("theme.main::views.components.result-search", compact('posts'))->render();
+                }
+    
+                $posts = $postRepository->getSearch($query, 0, 5);
+                return view("theme.main::views.components.result-search", compact('posts'))->render();
+            }
         }
     }
 

@@ -1,5 +1,5 @@
 <div id="introduce-page" class="font-pri">
-    <div class="navbar-menu font20">
+    <div class="navbar-menu font20 introduce-menu-fixed">
         <div class="container-remake overflow-x-hidden">
             <ul class="nav font-pri-bold">
                 @if(has_field($page, 'title_module_aboutus_introduce'))

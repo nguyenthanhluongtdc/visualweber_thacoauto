@@ -106,6 +106,7 @@ Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
                                 </div>
 
                                 @endforeach
+                                
                                 @endif
                             </div>
                             <div class="swiper-button-next"></div>

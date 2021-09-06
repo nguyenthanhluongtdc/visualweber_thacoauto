@@ -419,6 +419,9 @@
           .swiper-button-prev::after {
             color: #7d7d7d;
           }
+          .swiper-button-disabled{
+            opacity: 0;
+          }
         }
         .item {
           width: 100%;

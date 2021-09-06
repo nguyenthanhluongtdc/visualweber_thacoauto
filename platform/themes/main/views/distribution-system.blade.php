@@ -270,7 +270,6 @@
 <script>
     $('.ui.dropdown.city').dropdown({
         ignoreDiacritics: true,
-        sortSelect: true,
         fullTextSearch:'exact',
     });
     var owl = $('.owl-carousel');

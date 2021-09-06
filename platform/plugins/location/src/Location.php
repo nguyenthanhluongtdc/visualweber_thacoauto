@@ -37,9 +37,11 @@ class Location
             'condition' => [
                 'status' => BaseStatusEnum::PUBLISHED,
             ],
-            'order_by'  => ['order' => 'DESC'],
+            'order_by'  => [
+                'is_default' => 'DESC',
+                'order'      => 'DESC'
+            ],
         ]);
-
         return $states->pluck('name', 'id')->all();
     }
 
@@ -54,6 +56,7 @@ class Location
                 'status'   => BaseStatusEnum::PUBLISHED,
                 'state_id' => $stateId,
             ],
+            'order_by'  => ['is_default' => 'DESC'],
             'order_by'  => ['order' => 'DESC'],
         ]);
 

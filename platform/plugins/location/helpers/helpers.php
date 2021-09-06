@@ -11,6 +11,7 @@ if (!function_exists('get_cities')) {
      */
     function get_cities(): array
     {
+        
         return Location::getStates();
     }
 }

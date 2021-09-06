@@ -44,7 +44,8 @@
         height: 100%;
         .detail-slide {
           background-color: white;
-          width: 81%;
+          // width: 81%;
+          width: 100%;
           height: 100%;
           float: left;
 
@@ -55,21 +56,38 @@
           .swiper-slide {
             width: 100%;
             height: 100%;
-            img {
-              width: 100%;
+            .image-slide {
+              width: 81%;
               height: 100%;
               object-fit: cover;
               transition: all 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
               &:hover {
                 transform: scale(1.1);
+                @media (max-width: 1081px) {
+                  transform: unset;
+                }
+              }
+              @media (max-width: 1081px) {
+                width: 100%;
+                height: 54vw;
               }
             }
           }
           .swiper-pagination-bullets {
             bottom: 2vw;
+            width: 81%;
+            @media (max-width: 1081px) {
+              width: 100%;
+              bottom: unset;
+              top: 48vw;
+            }
             .swiper-pagination-bullet {
               width: 0.8vw;
               height: 0.8vw;
+              @media (max-width: 1081px) {
+                width: 1.5vw;
+                height: 1.5vw;
+              }
               background-color: #e9eceb;
               opacity: 1;
               margin: 0 0.3vw;
@@ -78,6 +96,10 @@
               width: 0.8vw;
               height: 0.8vw;
               background-color: $color-primary;
+              @media (max-width: 1081px) {
+                width: 1.5vw;
+                height: 1.5vw;
+              }
             }
           }
         }
@@ -101,46 +123,46 @@
           position: absolute;
           pointer-events: none;
         }
-        @media (max-width: 1080px) and (min-width: 769px) {
-          position: absolute;
-          left: 0;
-          width: 40%;
-          height: 60%;
-          top: 50%;
-          transform: translateY(-50%);
-          z-index: 1;
-          &--frame {
-            .text {
-              p {
-                @include split_str(5);
-                line-height: 1.2;
-              }
+        // @media (max-width: 1080px) and (min-width: 769px) {
+        //   position: absolute;
+        //   left: 0;
+        //   width: 40%;
+        //   height: 60%;
+        //   top: 50%;
+        //   transform: translateY(-50%);
+        //   z-index: 1;
+        //   &--frame {
+        //     .text {
+        //       p {
+        //         @include split_str(5);
+        //         line-height: 1.2;
+        //       }
 
-              .btn-load-more {
-                opacity: 1;
-                pointer-events: all;
-                position: absolute;
-                right: 0;
-                bottom: 0;
-                background-color: #f7f7f7;
-                margin-bottom: 0;
-                color: #02498b;
-                padding-bottom: 3px;
-              }
+        //       .btn-load-more {
+        //         opacity: 1;
+        //         pointer-events: all;
+        //         position: absolute;
+        //         right: 0;
+        //         bottom: 0;
+        //         background-color: #f7f7f7;
+        //         margin-bottom: 0;
+        //         color: #02498b;
+        //         padding-bottom: 3px;
+        //       }
 
-              #expanded:checked ~ .btn-load-more {
-                opacity: 0;
-                visibility: hidden;
-                max-height: 0;
-              }
+        //       #expanded:checked ~ .btn-load-more {
+        //         opacity: 0;
+        //         visibility: hidden;
+        //         max-height: 0;
+        //       }
 
-              #expanded:checked ~ p {
-                -webkit-line-clamp: unset;
-                width: auto;
-              }
-            }
-          }
-        }
+        //       #expanded:checked ~ p {
+        //         -webkit-line-clamp: unset;
+        //         width: auto;
+        //       }
+        //     }
+        //   }
+        // }
 
         @media (max-width: 768px) {
             &--frame {
@@ -187,7 +209,7 @@
       }
 
       //mobile
-      @media (max-width: 768px) {
+      @media (max-width: 1080px) {
         padding-bottom: 0;
 
         &--frame {

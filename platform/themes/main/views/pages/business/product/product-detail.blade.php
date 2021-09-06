@@ -18,18 +18,34 @@ Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
                 <div class="product-detail__slide--frame">
                     <div class="swiper-container detail-slide">
                         <div class="swiper-wrapper">
-                            @if(!blank(get_field($data, 'car_category_detail_slide')))
-                            @foreach (get_field($data, 'car_category_detail_slide') as $item)
+                            @if(!blank(get_field($data, 'car_category_detail_slide_description')))
+                            @foreach (get_field($data, 'car_category_detail_slide_description') as $item)
                             <div class="swiper-slide">
-                                <img loading="lazy" src="{{get_image_url(has_sub_field($item, 'image'))}}" alt="{{$data->name}}">
+                                <img class="image-slide" loading="lazy" src="{{get_image_url(has_sub_field($item, 'image'))}}" alt="{{$data->name}}">
+                                <div class="detail-info">
+                                    <div class="detail-info--frame">
+            
+                                        <div class="text font15 fontmb-little font-pri">
+                                            <div class="logo mb-4">
+                                                <img loading="lazy" src="{{get_image_url(has_sub_field($item, 'logo'))}}" alt="{{$data->name}}">
+                                            </div>
+                                            <div class="position-relative">
+                                                <input type="checkbox" id="expanded">
+                                                <p class="fontmb-small font20">
+                                                    {!!has_sub_field($item, 'description')!!}
+                                                </p>
+                                                <label for="expanded" role="button" class="btn-load-more">... {{__('Readmore')}} </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-
                             @endforeach
                             @endif
                         </div>
                         <div class="swiper-pagination"></div>
                     </div>
-                    <div class="detail-info">
+                    {{-- <div class="detail-info">
                         <div class="detail-info--frame">
 
                             <div class="text font15 fontmb-little font-pri">
@@ -45,7 +61,7 @@ Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
             <div class="product-detail__features">

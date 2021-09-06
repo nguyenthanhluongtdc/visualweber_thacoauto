@@ -514,3 +514,8 @@
 .fb_dialog.fb_dialog_advanced {
   display: none !important;
 }
+.fb_dialog_content{
+  iframe:first-child{
+    display: none;
+  }
+}

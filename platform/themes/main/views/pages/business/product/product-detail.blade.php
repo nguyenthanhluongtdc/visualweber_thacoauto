@@ -14,11 +14,11 @@ Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
             <div class="product-detail__desc font-pri font20 fontmb-small">
                 {!!get_field($data, 'car_category_detail_description')!!}
             </div>
+            @if(!blank(get_field($data, 'car_category_detail_slide_description')))
             <div class="product-detail__slide">
                 <div class="product-detail__slide--frame">
                     <div class="swiper-container detail-slide">
                         <div class="swiper-wrapper">
-                            @if(!blank(get_field($data, 'car_category_detail_slide_description')))
                             @foreach (get_field($data, 'car_category_detail_slide_description') as $item)
                             <div class="swiper-slide">
                                 <img class="image-slide" loading="lazy" src="{{get_image_url(has_sub_field($item, 'image'))}}" alt="{{$data->name}}">
@@ -41,13 +41,12 @@ Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
                                 </div>
                             </div>
                             @endforeach
-                            @endif
                         </div>
                         <div class="swiper-pagination"></div>
                     </div>
                     {{-- <div class="detail-info">
                         <div class="detail-info--frame">
-
+                            
                             <div class="text font15 fontmb-little font-pri">
                                 <div class="logo mb-4">
                                     <img loading="lazy" src="{{get_image_url(has_field($data, 'car_category_detail_logo'))}}" alt="{{$data->name}}">
@@ -64,6 +63,7 @@ Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
                     </div> --}}
                 </div>
             </div>
+            @endif
             <div class="product-detail__features">
                 @if(!blank(get_field($data, 'car_category_detail_slogan')))
                     @foreach (get_field($data, 'car_category_detail_slogan') as $item)
@@ -83,7 +83,7 @@ Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
                 @endif
             </div>
 
-            <div class="relate-product">
+            {{-- <div class="relate-product">
                 <h2 class="title font-mi-bold font60 fontmb-large fontmb-cond-bold">
                     {{has_field($data, 'car_category_related_parent_title')}}
                 </h2>
@@ -131,7 +131,7 @@ Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
                     </div>
                     @endforeach
                 @endif
-            </div>
+            </div> --}}
         </div>
     </div>
 </div>

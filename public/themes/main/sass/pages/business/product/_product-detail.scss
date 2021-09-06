@@ -84,14 +84,16 @@
       }
 
       .detail-info {
-        position: absolute;
-        width: 34%;
-        right: 0;
-        height: 60%;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 1;
-        transition: all 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        @media (min-width: 1081px) {
+          position: absolute;
+          width: 34%;
+          right: 0;
+          height: 60%;
+          top: 50%;
+          transform: translateY(-50%);
+          z-index: 1;
+          transition: all 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
       
         #expanded,
         .btn-load-more {
@@ -99,10 +101,14 @@
           position: absolute;
           pointer-events: none;
         }
-        @media (max-width: 1080px) {
-          right: inherit;
+        @media (max-width: 1080px) and (min-width: 769px) {
+          position: absolute;
           left: 0;
           width: 40%;
+          height: 60%;
+          top: 50%;
+          transform: translateY(-50%);
+          z-index: 1;
           &--frame {
             .text {
               p {
@@ -136,15 +142,11 @@
           }
         }
 
-        // @media (max-width: 768px) {
-        //     &--frame {
-        //         .text {
-        //             p {
-        //                 @include split_str(8);
-        //             }
-        //         }
-        //     }
-        // }
+        @media (max-width: 768px) {
+            &--frame {
+                
+            }
+        }
 
         &:hover {
           right: -17%;

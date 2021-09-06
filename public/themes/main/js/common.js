@@ -113,7 +113,10 @@ var swiperDetailSlide = new Swiper(".detail-slide", {
 });
 
 var swiperRelatedSlide = new Swiper(".related-slide", {
-    autoplay: true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
     slidesPerView: 2,
     navigation: {
         nextEl: ".swiper-button-next",

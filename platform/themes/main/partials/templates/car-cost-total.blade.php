@@ -173,6 +173,10 @@
                 @php
                     $total = $equipments_price + $accessories_price + $price + $fee + $fee_license_plate - $promotion - $priceDiscountTotal;
                 @endphp
+                <input type="hidden" name="fee" value="{{$fee}}">
+                <input type="hidden" name="fee_license_plate" value="{{$fee_license_plate}}">
+                <input type="hidden" name="price_discount_total" value="{{$priceDiscountTotal}}">
+                <input type="hidden" name="total_price" value="{{$total}}">
                 <p class="font18 MyriadPro-BoldCond text-uppercase d-block mb-5 text-danger mb-sm-4 mb-md-5 fontmb-middle">{{ number_format($total, 0, '.', ',') . 'đ' ?? '0đ' }}</p>
                 <button class="deposit__info-button btn-block btn btn-primary MyriadPro-Regular font18 fontmb-small" type="submit">{{ __("Gửi yêu cầu báo giá") }}</button>
             </div>

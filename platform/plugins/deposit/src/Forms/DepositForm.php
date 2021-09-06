@@ -15,16 +15,21 @@ class DepositForm extends FormAbstract
      */
     public function buildForm()
     {
+
+        \Assets::addScriptsDirectly('vendor/core/plugins/contact/js/contact.js')
+            ->addStylesDirectly('vendor/core/plugins/contact/css/contact.css');
+
         $this
             ->setupModel(new Deposit)
             ->setValidatorClass(DepositRequest::class)
             ->withCustomFields()
-            ->add('name', 'text', [
-                'label'      => trans('core/base::forms.name'),
-                'label_attr' => ['class' => 'control-label required'],
-                'attr'       => [
-                    'placeholder'  => trans('core/base::forms.name_placeholder'),
-                    'data-counter' => 120,
+            ->addMetaBoxes([
+                'information' => [
+                    'title'      => trans('plugins/contact::contact.contact_information'),
+                    'content'    => view('plugins/deposit::contact-info', ['deposit' => $this->getModel()])->render(),
+                    'attributes' => [
+                        'style' => 'margin-top: 0',
+                    ],
                 ],
             ])
             ->add('status', 'customSelect', [

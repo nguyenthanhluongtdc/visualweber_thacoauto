@@ -43,16 +43,16 @@ class DepositController extends BaseController
         return $table->renderTable();
     }
 
-    /**
-     * @param FormBuilder $formBuilder
-     * @return string
-     */
-    public function create(FormBuilder $formBuilder)
-    {
-        page_title()->setTitle(trans('plugins/deposit::deposit.create'));
+    // /**
+    //  * @param FormBuilder $formBuilder
+    //  * @return string
+    //  */
+    // public function create(FormBuilder $formBuilder)
+    // {
+    //     page_title()->setTitle(trans('plugins/deposit::deposit.create'));
 
-        return $formBuilder->create(DepositForm::class)->renderForm();
-    }
+    //     return $formBuilder->create(DepositForm::class)->renderForm();
+    // }
 
     /**
      * @param DepositRequest $request

@@ -15,3 +15,16 @@ if (!function_exists('get_cities')) {
         return Location::getStates();
     }
 }
+
+if (!function_exists('get_cities_by_id')) {
+    /**
+     * Undocumented function
+     *
+     * @return void
+     */
+    function get_cities_by_id($id)
+    {
+        
+        return Location::getStateNameById($id);
+    }
+}

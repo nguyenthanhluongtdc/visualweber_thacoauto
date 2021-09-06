@@ -11,24 +11,26 @@
                     </div>
                 </div>
                 <div class="right">
-                    <h2 class="showroom-name font30">{{ $item->name }}
-                        <div class="logo-container">
-                            <img loading="lazy" class="img-fluid" src="{{ has_field($item, "logo_showroom") ? get_image_url(get_field($item, 'logo_showroom')) : "" }}" alt="{{ $item->name }}">
-                        </div>
-                    </h2>
-                    <ul class="showroom-info">
-                        <li>
-                            <p class="font20"><span>{{ __("Địa chỉ") }}: </span>{{ has_field($item, 'dia_chi_showroom') ? get_field($item, 'dia_chi_showroom') : '' }}</p>
-                        </li>
-                        <li>
-                            <p class="font20"><span>{{ __("Hotline") }}: </span>{{ has_field($item, 'hotline_showroom') ? get_field($item, 'hotline_showroom') : '' }}</p>
-                        </li>
-                        <li>
-                            <p class="font20"><span>{{ __("Website") }}: </span>{{ has_field($item, 'website_showroom') ? get_field($item, 'website_showroom') : '' }}</p>
-                        </li>
-                    </ul>
+                    <div>
+                        <h2 class="showroom-name font30">{{ $item->name }}
+                            <div class="logo-container">
+                                <img loading="lazy" class="img-fluid" src="{{ has_field($item, "logo_showroom") ? get_image_url(get_field($item, 'logo_showroom')) : "" }}" alt="{{ $item->name }}">
+                            </div>
+                        </h2>
+                        <ul class="showroom-info">
+                            <li>
+                                <p class="font20"><span>{{ __("Địa chỉ") }}: </span>{{ has_field($item, 'dia_chi_showroom') ? get_field($item, 'dia_chi_showroom') : '' }}</p>
+                            </li>
+                            <li>
+                                <p class="font20"><span>{{ __("Hotline") }}: </span>{{ has_field($item, 'hotline_showroom') ? get_field($item, 'hotline_showroom') : '' }}</p>
+                            </li>
+                            <li>
+                                <p class="font20"><span>{{ __("Website") }}: </span>{{ has_field($item, 'website_showroom') ? get_field($item, 'website_showroom') : '' }}</p>
+                            </li>
+                        </ul>
+                    </div>
                    
-                    <div class="d-flex align-items-end justify-content-between flex-wrap">
+                    <div class="d-flex align-items-end justify-content-between flex-wrap w-100">
                         @if(has_field($item, 'link_dat_hen_online_showroom'))
                             <a href="{{ get_field($item, 'link_dat_hen_online_showroom') }}" class="online-service-booking font20">{{ __("đặt hẹn dịch vụ online") }}</a>
                         @endif

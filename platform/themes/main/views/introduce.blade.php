@@ -284,7 +284,7 @@
                                         <img loading="lazy" src="{{Storage::disk('public')->exists(has_sub_field($row, 'symbol')) ? get_image_url(has_sub_field($row, 'symbol')) : RvMedia::getDefaultImage()}}"
                                             alt=" {!! has_sub_field($row, 'name') !!}">
                                     </div>
-                                    <a href="{{get_field($page, 'homepage_production_block_1_link')}}" class="name font30 fontmb-small">
+                                    <div class="name font30 fontmb-small">
                                         {!! has_sub_field($row, 'name') !!}
                                     </div>
                                 </div>

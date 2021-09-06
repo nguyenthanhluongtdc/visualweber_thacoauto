@@ -73,6 +73,7 @@
                 </div>
                 <div class="language">
                     <ul class="nav-lang">
+                        @if (theme_option('language_switch_enabled', 'yes') == 'yes')
                         @foreach($supportedLocales as $name => $language)
                         <li class="nav-item lang-vi text-uppercase {{$name==$currentLanguage?'active':''}}">
                             <a class="nav-link font-pri-bold font18" rel="alternate" hreflang="{{$name}}"
@@ -81,6 +82,14 @@
                             </a>
                         </li>
                         @endforeach
+                        @else
+                        <li class="nav-item lang-vi text-uppercase active">
+                            <a class="nav-link font-pri-bold font18" rel="alternate" hreflang=""
+                                href="">
+                                VI
+                            </a>
+                        </li>
+                        @endif
                         {{-- <li class="nav-item lang-en">
                             <a class="nav-link font-pri-bold font18" rel="alternate" hreflang="en"
                                 href="{{ Language::getLocalizedURL('en') }}">EN</a>

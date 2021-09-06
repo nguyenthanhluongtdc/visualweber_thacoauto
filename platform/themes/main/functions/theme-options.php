@@ -206,6 +206,7 @@ app()->booted(function () {
                 ]
             ),
         ])
+
         ->setField([
             'id'         => 'facebook_page_id',
             'section_id' => 'opt-text-subsection-general',
@@ -236,6 +237,23 @@ app()->booted(function () {
                     'class' => 'form-control',
                 ],
             ],
+        ])
+        ->setField([
+            'id'         => 'language_switch_enabled',
+            'section_id' => 'opt-text-subsection-general',
+            'type'       => 'select',
+            'label'      => __('Enable Language Switch?'),
+            'attributes' => [
+                'name'    => 'language_switch_enabled',
+                'list'    => [
+                    'no'  => trans('core/base::base.no'),
+                    'yes' => trans('core/base::base.yes'),
+                ],
+                'value'   => 'no',
+                'options' => [
+                    'class' => 'form-control',
+                ],
+            ]
         ])
 
         ->setSection([

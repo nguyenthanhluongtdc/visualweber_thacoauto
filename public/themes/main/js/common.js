@@ -120,13 +120,21 @@ var swiperRelatedSlide = new Swiper(".related-slide", {
         prevEl: ".swiper-button-prev",
     },
     breakpoints: {
-        "480": {
-            slidesPerView: 2,
+        "0": {
+            navigation: {
+                nextEl: "",
+                prevEl: "",
+            },
+            slidesPerView: 1.85,
         },
-        "768": {
-            slidesPerView: 3,
+        "576": {
+            slidesPerView: 2.5,
+        },
+        "992": {
+            slidesPerView: 3.5,
         },
         "1080": {
+            navigation: false,
             slidesPerView: 4.5,
         },
     },

@@ -113,7 +113,10 @@
         </div>
         <div class="end-web" style="background: url('{{ Theme::asset()->url('images/main/end.jpg') }}')">
             <div class="container-remake">
-                <p class="font-pri color-white font20">{{__('business license')}}: {!! theme_option('tax-code-company') !!}</p>
+                <p class="font-pri color-white font20 d-flex justify-content-between">
+                    {{__('business license')}}: {!! theme_option('tax-code-company') !!}
+                    <span> {!! __('Copyright on footer of site') !!} </span>
+                </p>
             </div>
         </div>
         <button id="myBtn" title="Go to top">

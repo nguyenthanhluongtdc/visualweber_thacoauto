@@ -38,7 +38,7 @@ Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
                                 </div>
                                 <div class="position-relative">
                                     <input type="checkbox" id="expanded">
-                                    <p class="fontmb-small">
+                                    <p class="fontmb-small font20">
                                         {!!get_field($data, 'car_category_detail_description_2')!!}
                                     </p>
                                     <label for="expanded" role="button" class="btn-load-more">... {{__('Readmore')}} </label>

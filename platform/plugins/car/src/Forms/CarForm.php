@@ -57,7 +57,10 @@ class CarForm extends FormAbstract
                 'attr'       => [
                     'class' => 'form-control select-full',
                 ],
-                'choices'    => config('base.fuel_types',[]),
+                'choices'    => [
+                    'gasoline' => __('Xăng'),
+                    'petroleum' => __('Dầu')
+                ],
             ])
             ->add('gear', 'customSelect', [
                 'label'      => trans('plugins/car::car.gear-type'),
@@ -65,7 +68,10 @@ class CarForm extends FormAbstract
                 'attr'       => [
                     'class' => 'form-control select-full',
                 ],
-                'choices'    => config('base.gears',[]),
+                'choices'    => [
+                    'automatic_transmission' => __('Số tự động'),
+                    'manual_transmission' => __('Số sàn')
+                ],
             ])
             ->add('fee', 'number', [
                 'label'      => trans('plugins/car::car.fee'),

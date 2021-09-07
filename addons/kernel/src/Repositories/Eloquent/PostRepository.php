@@ -142,7 +142,7 @@ class PostRepository extends BlogPostRepository
             }
 
             if($filter['birthday']) {
-                $data->where('posts.created_at', '<=', $filter['birthday']);
+                $data->where('posts.created_at', '>=', $filter['birthday']);
             }
 
             if ($paginate != 0) {

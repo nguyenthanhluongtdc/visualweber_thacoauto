@@ -246,7 +246,6 @@
         }
 
         async function changeCar(value) {
-            console.log(value)
             const response = await $.get(window.__urlAjaxCar, {
                 showroom_id: value
             })

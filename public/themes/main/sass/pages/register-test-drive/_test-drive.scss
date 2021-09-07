@@ -42,12 +42,12 @@
           outline: none;
           text-transform: uppercase;
           font-family: $font-primary-bold;
-          background-color: #f6f6f6;
+          background-color: white;
           color: #292929;
           height: 100%;
         }
         &-link.active {
-          background-color: white;
+          background-color: #f6f6f6;
           @media only screen and (max-width: 1080px) {
             background-color: #f6f6f6;
           }

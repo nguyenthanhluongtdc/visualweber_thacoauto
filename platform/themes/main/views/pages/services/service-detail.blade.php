@@ -47,7 +47,7 @@
                     @if(has_field($data, 'mo_ta_slide_service_2'))
                         <div class="detail-info">
                             <div class="detail-info--frame">
-                                <div class="text font15 font-pri">{!! get_field($data, 'mo_ta_slide_service_2') !!}</div>
+                                <div class="text font20 font-pri">{!! get_field($data, 'mo_ta_slide_service_2') !!}</div>
                             </div>
                         </div>
                     @endif

@@ -29,7 +29,7 @@
                     </div>
                     <div class="detail-info">
                         <div class="detail-info--frame">
-                            <div class="text font15 font-pri fontmb-small">
+                            <div class="text font20 font-pri fontmb-small">
                                 <div class="logo mb-4 ml-4">
                                     <img loading="lazy" src="{{Theme::asset()->url('images/services/logo-peugeot.png')}}" alt="Ảnh thông tin chi tiết">
                                 </div>

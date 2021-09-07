@@ -16,6 +16,7 @@ class CarForm extends FormAbstract
      */
     public function buildForm()
     {
+        // Assets::addScripts(['input-mask']);
         $selectedShowrooms = [];
         if ($this->getModel()) {
             $selectedShowrooms = $this->getModel()->showrooms()->pluck('showroom_id')->all();
@@ -39,14 +40,14 @@ class CarForm extends FormAbstract
                 'label'      => trans('core/base::forms.description'),
                 'label_attr' => ['class' => 'control-label'],
                 'attr'       => [
-                    'placeholder'  => trans('core/base::forms.name_placeholder'),
+                    'placeholder'  => trans('Nhập mô tả'),
                 ],
             ])
             ->add('horse_power', 'number', [
                 'label'      => trans('plugins/car::car.horse-power-hp'),
                 'label_attr' => ['class' => 'control-label'],
                 'attr'       => [
-                    'placeholder'  => trans('core/base::forms.name_placeholder'),
+                    'placeholder'  => trans('Nhập thông số mã lực (Hp)'),
                     'data-counter' => 120,
                 ],
             ])
@@ -70,35 +71,36 @@ class CarForm extends FormAbstract
                 'label'      => trans('plugins/car::car.fee'),
                 'label_attr' => ['class' => 'control-label'],
                 'attr'       => [
-                    'placeholder'  => trans('core/base::forms.name_placeholder'),
+                    'placeholder'  => trans('Nhập phí rước bạ'),
                 ],
             ])
             ->add('fee_license_plate', 'number', [
                 'label'      => trans('plugins/car::car.fee-license-plate'),
                 'label_attr' => ['class' => 'control-label'],
                 'attr'       => [
-                    'placeholder'  => trans('core/base::forms.name_placeholder'),
+                    'placeholder'  => trans('Nhập phí ra biển số'),
                 ],
             ])
             ->add('promotion', 'number', [
                 'label'      => trans('plugins/car::car.promotion'),
                 'label_attr' => ['class' => 'control-label'],
                 'attr'       => [
-                    'placeholder'  => trans('core/base::forms.name_placeholder'),
+                    'placeholder'  => trans('Nhập khuyến mãi giảm giá trực tiếp nếu có'),
                 ],
             ])
             ->add('engine', 'number', [
                 'label'      => trans('plugins/car::car.engine'),
                 'label_attr' => ['class' => 'control-label'],
                 'attr'       => [
-                    'placeholder'  => trans('core/base::forms.name_placeholder'),
+                    'placeholder'  => trans('Nhập số động cơ'),
                 ],
             ])
             ->add('price', 'number', [
                 'label'      => trans('plugins/car::car.price'),
                 'label_attr' => ['class' => 'control-label'],
                 'attr'       => [
-                    'placeholder'  => trans('core/base::forms.name_placeholder'),
+                    'placeholder'  => trans('Giá sản phẩm'),
+                    'class' => 'form-control input-mask-number',
                 ],
             ])
             ->add('status', 'customSelect', [
@@ -123,7 +125,7 @@ class CarForm extends FormAbstract
                 'choices'    => \Platform\Vehicle\Models\Vehicle::pluck('name','id')->prepend('NULL','')->toArray(),
             ])
             ->add('parent_id', 'customSelect', [
-                'label'      => trans('Parent'),
+                'label'      => trans('Phiên bản cha'),
                 'label_attr' => ['class' => 'control-label'],
                 'attr'       => [
                     'class' => 'form-control select-full',
@@ -137,7 +139,7 @@ class CarForm extends FormAbstract
                 'value'      => old('showrooms', $selectedShowrooms),
             ])
             ->add('image', 'mediaImage', [
-                'label'      => __('Image'),
+                'label'      => __('Image').' (790x440px)',
                 'label_attr' => ['class' => 'control-label'],
             ])
             ->add('brochure', 'mediaFile', [

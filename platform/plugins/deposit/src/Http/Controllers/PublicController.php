@@ -38,7 +38,7 @@ class PublicController extends BaseController{
          try{
 
             DB::beginTransaction();
-            dd($request->type_payment);
+            // dd($request->type_payment);
                $deposit = new \Platform\Deposit\Models\Deposit;
                $deposit = $deposit->create([
                   'name'=>$request->name,

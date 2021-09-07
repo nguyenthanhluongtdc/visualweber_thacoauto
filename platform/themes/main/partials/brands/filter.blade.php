@@ -66,7 +66,7 @@
                     
                     {{-- Showroom --}}
                     <div class="d-flex">
-                        <div class="mr-5">
+                        <div class="mr-sm-5 mr-2">
                             <select class="font18 font-pri country selectjs d-none" name="country" onchange="submitFormPrice(this)"style="width:200px;">
                                 <option selected disabled>{{ __("Công ty tỉnh thành") }}</option>
                                 @foreach (is_plugin_active('location') ? get_cities() : collect() as $key => $item)
@@ -103,14 +103,17 @@
                 <a href="#" class="font18 font-pri pre-order ml-auto text-uppercase">{{ __("PRE-ORDER") }}</a>
             </div>
             <div class="car-filter--bottom position-relative">
-                <button type="button" class="modal-button btn-join">
+                {{-- <button type="button" class="modal-button btn-join">
                     <span class="frame text-uppercase">
                         <img loading="lazy" src="{{Theme::asset()->url('images/business/brand-detail/filter.png')}}" alt="filter icon">
                         {{ __("BỘ LỌC NÂNG CAO") }}
                     </span>
-                </button>
-
-                <div class="overlay">
+                </button> --}}
+                <a data-fancybox data-src="#modal-filter" href="javascript:;" class="modal-button"><span class="frame text-uppercase">
+                    <img loading="lazy" src="{{Theme::asset()->url('images/business/brand-detail/filter.png')}}" alt="filter icon">
+                    <p>{{ __("BỘ LỌC NÂNG CAO") }}</p>
+                </span></a>
+                <div class="overlay-filter" id="modal-filter">
                     <div class="row-filter">
                         <input type="hidden" name="production">
                         <div class="row-filter__title font25">

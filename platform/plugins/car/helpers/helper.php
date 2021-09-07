@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Eloquent\Collection;
 use Platform\Bank\Repositories\Interfaces\BankInterface;
+use Platform\Bankloans\Repositories\Interfaces\BankloansInterface;
 use Platform\Base\Enums\BaseStatusEnum;
 use Platform\Base\Supports\SortItemsWithChildrenHelper;
 use Platform\Car\Repositories\Interfaces\CarInterface;
@@ -291,6 +292,19 @@ if (!function_exists('get_bank_by_id')) {
    function get_bank_by_id($id)
    {
       return app(BankInterface::class)->getFirstBy([
+         "id" => $id
+      ]);
+   }
+}
+
+if (!function_exists('get_bank_loan_by_id')) {
+   /**
+    * @return \Illuminate\Support\Collection
+    * @throws Exception
+    */
+   function get_bank_loan_by_id($id)
+   {
+      return app(BankloansInterface::class)->getFirstBy([
          "id" => $id
       ]);
    }

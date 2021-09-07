@@ -9,8 +9,8 @@
     <p>{{ trans('Hãng xe') }}: <i>{{ $deposit->car_id ? get_car_by_id($deposit->car_id)->brand->name : 'N/A' }}</i></p>
     <p>{{ trans('Màu sắc') }}: <i>{{ $deposit->color_id ? get_color_by_id($deposit->color_id)->name : 'N/A' }}</i></p>
     <p>{{ trans('Giá gốc') }}: <i>{{ $deposit->car_id ? number_format(get_car_by_id($deposit->car_id)->price, 0, '.', ',') . 'đ' : '0đ'}}</i></p>
-    <p>{{ trans('Phí rước bạ') }}: <i>{{ $deposit->subject ? $deposit->subject : 'N/A' }}</i></p>
-    <p>{{ trans('Phí ra biển số') }}: <i>{{ $deposit->subject ? $deposit->subject : 'N/A' }}</i></p>
+    <p>{{ trans('Phí rước bạ') }}: <i>{{ $deposit->fee ? number_format($deposit->fee, 0, '.', ',') : 'N/A' }}</i></p>
+    <p>{{ trans('Phí ra biển số') }}: <i>{{ $deposit->fee_license_plate ? number_format($deposit->fee_license_plate, 0, '.', ',') : 'N/A' }}</i></p>
     <p>{{ trans('Phụ kiện đi kèm') }}: <i>
         @if(!empty(get_deposit_accessories_by_id($deposit->id)))
         @foreach (get_deposit_accessories_by_id($deposit->id) as $item)
@@ -48,17 +48,22 @@
     <p>{{ trans('Tổng tiền') }}: <i class="">{{ $deposit->total_price ? number_format($deposit->total_price, 0, '.', ',') . 'đ' : '0đ'}}</i></p>
     <p>{{ trans('Hình thức thanh toán') }}: 
         <i class="">
-        @if ($deposit->type_payment == 'in_showroom')
+        @if ($deposit->type_paynent == 'in_showroom')
             {{ trans('Thanh toán tại showroom') }}
-        @elseif ($deposit->type_payment == 'is_installment')
+        @elseif ($deposit->type_paynent == 'is_installment')
             {{ trans('Thanh toán trả góp') }}
         @endif
 
         </i>
     </p>
-    @if ($deposit->type_payment == 'is_installment')
+    @if ($deposit->type_paynent == 'is_installment')
+    @php
+        $loanMoney = $deposit->total_price*$deposit->percent_loan/100;
+        
+    @endphp
     <p class="mr-4">{{ trans('Ngân hàng') }}: <i>{{ get_bank_by_id($deposit->bank_id) ? get_bank_by_id($deposit->bank_id)->name : 'N/A' }}</i></p>
-    <p class="mr-4">{{ trans('Số tháng trả góp - lãi suất') }}: <i>{{ $deposit->car_id ? get_car_by_id($deposit->car_id)->name : 'N/A' }}</i></p>
+    <p class="mr-4">{{ trans('Số tháng trả góp - lãi suất') }}: <i>{{ get_bank_loan_by_id($deposit->loan_month)->months ? get_bank_loan_by_id($deposit->loan_month)->months : 'N/A'}} {{__('Month')}} - {{ $deposit->interest_rate ? $deposit->interest_rate : 'N/A'}}%</i></p>
+    <p class="mr-4">{{ trans('Số tiền vay') }}: <i>{{$deposit->percent_loan ? number_format($loanMoney, 0, '.', ',') . 'đ' : '0đ'}} ({{$deposit->percent_loan ? $deposit->percent_loan.'%' : 'N/A'}})</i></p>
     @endif
     <p>{{ trans('Ghi chú của khách hàng') }}:</p>
     <pre class="message-content">{{ $deposit->note ? $deposit->note : '...' }}</pre>

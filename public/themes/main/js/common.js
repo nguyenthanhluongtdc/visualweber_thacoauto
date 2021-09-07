@@ -734,8 +734,6 @@ $(document).ready(function () {
                 filter_data($(".form-search").serializeArray(), uri_filter);
             }
         });
-
-        $('.trigger').trigger('change');
     }
 
     function filter_data(url, uri_filter) {
@@ -748,6 +746,7 @@ $(document).ready(function () {
             type: 'get',
             data: { filter: url },
             success: function (data) {
+                console.log(data)
                 $('.result-main').html(data)
             }
         });

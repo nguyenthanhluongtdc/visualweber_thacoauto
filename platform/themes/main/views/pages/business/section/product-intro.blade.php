@@ -16,7 +16,7 @@
                 </div>
 
                
-                <a href="#" class="product-intro--left__button font-pri font18 fontmb-small">{{ __("Readmore") }}</a>
+                <a href="{{has_sub_field($item, 'link')}}" class="product-intro--left__button font-pri font18 fontmb-small">{{ __("Readmore") }}</a>
             </div>
           
             <div class="product-intro--right">
@@ -174,7 +174,7 @@
                 </div>
 
              
-                <a href="#" class="product-intro--left__button font-pri font18 fontmb-small">{{ __("Readmore") }}</a>
+                <a href="{{has_sub_field($item, 'link')}}" class="product-intro--left__button font-pri font18 fontmb-small">{{ __("Readmore") }}</a>
             </div>
             <div class="product-intro--right">
                 <div class="product-intro__image">

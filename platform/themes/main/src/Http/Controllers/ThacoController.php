@@ -284,7 +284,7 @@ class ThacoController extends PublicController
             ->render();
     }
 
-    public function getApiSearch(Request $request)
+    public function getApiSearch(Request $request, PostInterface $postRepository)
     {
         if($request->ajax() && $request->has('filter')) {
             $filter = $request->filter;
@@ -296,6 +296,7 @@ class ThacoController extends PublicController
             $slug = SlugHelper::getSlug($category, SlugHelper::getPrefix(Category::class));
 
             if (!$slug) {
+                $posts = $postRepository->getSearch($keyword, 0, 6);
                 return view("theme.main::views.components.result-filter-cate", compact('posts'))->render();
             }
 

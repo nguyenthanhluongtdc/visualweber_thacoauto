@@ -44,7 +44,7 @@ class BrandServiceProvider extends ServiceProvider
                 'priority'    => 6,
                 'parent_id'   => 'cms-plugins-cars-menu',
                 'name'        => 'plugins/brand::brand.name',
-                'icon'        => 'fa fa-list',
+                // 'icon'        => 'fa fa-list',
                 'url'         => route('brand.index'),
                 'permissions' => ['brand.index'],
             ]);

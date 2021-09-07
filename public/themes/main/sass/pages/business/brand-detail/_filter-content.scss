@@ -5,6 +5,7 @@
         }
         display: flex;
         justify-content: start;
+        flex-wrap: wrap;
         margin: 5.5% 0;
         &__item{
             max-width: 22%;

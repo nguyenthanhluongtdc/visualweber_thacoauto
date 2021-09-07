@@ -166,7 +166,7 @@
                             }
                             &__left {
                                 display: flex;
-                                align-items: flex-end;
+                                align-items: center;
                                 flex-wrap: wrap;
                                 flex-grow: 1; 
                                 @media (max-width: 640px) {
@@ -175,8 +175,9 @@
 
                                 .logo-item {
                                     width: 20%;
+                                    text-align: center;
                                     img {
-                                        max-width: 100px;
+                                        max-width: 90%;
                                         max-height: 100px;
                                         object-fit: cover; 
                                     }

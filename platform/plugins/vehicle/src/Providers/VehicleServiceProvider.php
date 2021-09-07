@@ -44,7 +44,7 @@ class VehicleServiceProvider extends ServiceProvider
                 'priority'    => 7,
                 'parent_id'   => 'cms-plugins-cars-menu',
                 'name'        => 'plugins/vehicle::vehicle.name',
-                'icon'        => 'fa fa-list',
+                // 'icon'        => 'fa fa-list',
                 'url'         => route('vehicle.index'),
                 'permissions' => ['vehicle.index'],
             ]);

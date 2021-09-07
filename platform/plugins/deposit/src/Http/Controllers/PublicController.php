@@ -11,19 +11,20 @@ class PublicController extends BaseController{
         
     }
     public function store(Request $request){
+         // dd($request);
          $rules = [
             'name' => 'required|max:255',
             'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10|max:11',
             'email'=> 'required|email:rfc,dns',
             'note'=> 'max:400',
-            'country' => 'required',
+            'showroom_id' => 'required',
             'provision1' => 'accepted',
             'provision2' => 'accepted',
             'provision3' => 'accepted',
          ];
 
          $customMessages = [
-            'country.required' => __('* Vui lòng chọn showroom'),
+            'showroom_id.required' => __('* Vui lòng chọn showroom'),
             'required' => __('* Trường bắt buộc nhập'),
             'regex' => __('* Dữ liệu phải là dãy số'),
             'phone.min' => __('* Số điện thoại không hợp lệ (ít nhất 10 chữ số)'),
@@ -37,19 +38,28 @@ class PublicController extends BaseController{
          try{
 
             DB::beginTransaction();
+            dd($request->type_payment);
                $deposit = new \Platform\Deposit\Models\Deposit;
                $deposit = $deposit->create([
-                  'name'=>$request->get('name'),
-                  "phone"=>$request->get('phone'),
-                  "email"=>$request->get('email'),
-                  "note"=>$request->get('note'),
-                  "showroom_id"=>$request->get('showroom_id'),
-                  "car_id"=>$request->get('car_id'),
-                  "color_id"=>$request->get('color_id'),
-                  "price"=>$request->get('price'),
-                  "fee"=>$request->get('fee'),
-                  "fee_license_plate"=>$request->get('fee_license_plate'),
-                  "promotion"=>$request->get('promotion'),
+                  'name'=>$request->name,
+                  "phone"=>$request->phone,
+                  "email"=>$request->email,
+                  "note"=>$request->note,
+                  "showroom_id"=>$request->showroom_id,
+                  "car_id"=>$request->car_id,
+                  "color_id"=>$request->color_id,
+                  "price"=>$request->price,
+                  "fee"=>$request->fee,
+                  "fee_license_plate"=>$request->fee_license_plate,
+                  "promotion"=>$request->promotion,
+                  "city_id"=>$request->city,
+                  'type_paynent'=>$request->type_payment,
+                  'price_discount_total'=>$request->price_discount_total,
+                  'total_price'=>$request->total_price,
+                  'bank_id'=>$request->bank,
+                  'loan_month'=>$request->get('loan-month'),
+                  'percent_loan'=>$request->get('percent-loan'),
+                  'interest_rate'=>$request->get('interest-rate'),
                ]);
                if($deposit instanceof \Platform\Deposit\Models\Deposit){
                   if($request->get('accessories')){
@@ -73,6 +83,18 @@ class PublicController extends BaseController{
                            $data->create([
                               'name'=>$value->name,
                               'price'=>$value->price,
+                              'deposit_id'=>$deposit->id,
+                           ]);
+                        }
+                     }
+                  }
+                  if($request->get('promotions')){
+                     $promotionInterface = resolve('Platform\Promotions\Repositories\Interfaces\PromotionsInterface');
+                     foreach($request->get('promotions') as $promotion){
+                        if($value = $promotionInterface->findById($promotion)){
+                           $data = new \Platform\Deposit\Models\DepositPromotion;
+                           $data->create([
+                              'name' =>$value->name,
                               'deposit_id'=>$deposit->id,
                            ]);
                         }

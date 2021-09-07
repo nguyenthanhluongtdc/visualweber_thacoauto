@@ -22,7 +22,7 @@ const Helpers = {
 
         $('.js-showroom-showlist').click(function (e) {
             e.preventDefault()
-            Helpers.handleRenderShowroom(item.data('brand-id'), item.data('category-id'))
+            Helpers.handleRenderShowroom($(this).data('brand-id'), $(this).data('category-id'))
         })
     },
     handleToggleLoading: function (enable = true) {

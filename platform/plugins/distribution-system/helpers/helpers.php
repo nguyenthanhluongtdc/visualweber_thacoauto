@@ -7,6 +7,7 @@ use Platform\DistributionSystem\Models\ShowroomBrand;
 use Platform\DistributionSystem\Repositories\Interfaces\DistributionSystemInterface;
 use Platform\DistributionSystem\Repositories\Interfaces\ShowroomBrandInterface;
 use Platform\DistributionSystem\Repositories\Interfaces\ShowroomInterface;
+use Platform\Location\Repositories\Interfaces\StateInterface;
 
 if(!function_exists('get_distribution_systems')) {
     /**
@@ -87,5 +88,18 @@ if(!function_exists('get_showroom_by_state')){
             }
         }
         return $showroomInterface->applyBeforeExecuteQuery($showroomModel)->get();
+    }
+}
+
+if(!function_exists('get_showroom_by_id')){
+
+    function get_showroom_by_id($id){
+        
+        $state = app(ShowroomInterface::class)->getFirstBy([
+            'id'     => $id,
+            'status' => BaseStatusEnum::PUBLISHED,
+        ]);
+
+        return $state;
     }
 }

@@ -7,6 +7,7 @@ use Platform\Base\Traits\EnumCastable;
 use Platform\Base\Enums\BaseStatusEnum;
 use Platform\Base\Models\BaseModel;
 use Platform\Car\Models\Car;
+use Platform\Deposit\Models\Deposit;
 
 class Promotions extends BaseModel
 {
@@ -45,5 +46,10 @@ class Promotions extends BaseModel
     public function cars(): BelongsToMany
     {
         return $this->belongsToMany(Car::class, 'app__promotion_cars', 'promotion_id');
+    }
+
+    public function deposits(): BelongsToMany
+    {
+        return $this->belongsToMany(Deposit::class, 'app__promotion_cars', 'promotion_id');
     }
 }

@@ -112,13 +112,13 @@ class DepositTable extends TableAbstract
         ];
     }
 
-    /**
-     * {@inheritDoc}
-     */
-    public function buttons()
-    {
-        return $this->addCreateButton(route('deposit.create'), 'deposit.create');
-    }
+    // /**
+    //  * {@inheritDoc}
+    //  */
+    // public function buttons()
+    // {
+    //     return $this->addCreateButton(route('deposit.create'), 'deposit.create');
+    // }
 
     /**
      * {@inheritDoc}

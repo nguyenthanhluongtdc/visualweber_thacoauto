@@ -1,9 +1,14 @@
 <?php
 
 use Illuminate\Database\Eloquent\Collection;
+use Platform\Bank\Repositories\Interfaces\BankInterface;
 use Platform\Base\Enums\BaseStatusEnum;
 use Platform\Base\Supports\SortItemsWithChildrenHelper;
 use Platform\Car\Repositories\Interfaces\CarInterface;
+use Platform\Car\Repositories\Interfaces\ColorInterface;
+use Platform\Deposit\Models\DepositAccessories;
+use Platform\Deposit\Models\DepositEquipment;
+use Platform\Deposit\Models\DepositPromotion;
 
 if (!function_exists('get_car_lines')) {
    function get_vehicles($brand = null)
@@ -226,5 +231,67 @@ if (!function_exists('get_cars_with_children')) {
          ->setChildrenProperty('childrents')
          ->setItems($cars)
          ->sort();
+   }
+}
+
+if (!function_exists('get_color_by_id')) {
+   /**
+    * @return \Illuminate\Support\Collection
+    * @throws Exception
+    */
+   function get_color_by_id($id)
+   {
+      return app(ColorInterface::class)->getFirstBy([
+         "id" => $id
+      ]);
+   }
+}
+
+if (!function_exists('get_deposit_equipments_by_id')) {
+   /**
+    * @return \Illuminate\Support\Collection
+    * @throws Exception
+    */
+   function get_deposit_equipments_by_id($id)
+   {
+      return app(DepositEquipment::class)
+      ->where("deposit_id", $id)->get();
+   }
+}
+
+if (!function_exists('get_deposit_accessories_by_id')) {
+   /**
+    * @return \Illuminate\Support\Collection
+    * @throws Exception
+    */
+   function get_deposit_accessories_by_id($id)
+   {
+      return app(DepositAccessories::class)
+      ->where("deposit_id", $id)->get();
+   }
+}
+
+if (!function_exists('get_deposit_promotions_by_id')) {
+   /**
+    * @return \Illuminate\Support\Collection
+    * @throws Exception
+    */
+   function get_deposit_promotions_by_id($id)
+   {
+      return app(DepositPromotion::class)
+      ->where("deposit_id", $id)->get();
+   }
+}
+
+if (!function_exists('get_bank_by_id')) {
+   /**
+    * @return \Illuminate\Support\Collection
+    * @throws Exception
+    */
+   function get_bank_by_id($id)
+   {
+      return app(BankInterface::class)->getFirstBy([
+         "id" => $id
+      ]);
    }
 }

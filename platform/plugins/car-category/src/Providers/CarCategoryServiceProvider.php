@@ -56,7 +56,7 @@ class CarCategoryServiceProvider extends ServiceProvider
                     'priority'    => 5,
                     'parent_id'   => 'cms-plugins-cars-menu',
                     'name'        => 'plugins/car-category::car-category.name',
-                    'icon'        => 'fa fa-list',
+                    // 'icon'        => 'fa fa-list',
                     'url'         => route('car-category.index'),
                     'permissions' => ['car-category.index'],
                 ]);

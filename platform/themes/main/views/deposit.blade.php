@@ -38,7 +38,7 @@
                 </div>
                 <div class="form-group span-3">
                     <div class="ui fluid selection dropdown">
-                        <input required type="hidden" name="country">
+                        <input required type="hidden" name="showroom_id">
                         <i class="dropdown icon"></i>
                         <div class="default text MyriadPro-Regular font15 fontmb-small">
                             {!! __('Chọn showroom gần bạn') !!}

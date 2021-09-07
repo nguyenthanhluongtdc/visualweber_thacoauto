@@ -120,23 +120,30 @@ class PostRepository extends BlogPostRepository
     /**
      * {@inheritDoc}
      */
-    public function getSearchByCategoryAndFilter($categoryId, $keyword, $paginate = 6)
+    public function getSearchByCategoryAndFilter($filter = [], $paginate = 6)
     {
-        if (!is_array($categoryId)) {
-            $categoryId = [$categoryId];
+        if (!is_array($filter['category'])) {
+            $categoryId = [$filter['category']];
         }
         
         $data = $this->getModel()
             ->where('posts.status', BaseStatusEnum::PUBLISHED)
             ->join('post_categories', 'post_categories.post_id', '=', 'posts.id')
             ->join('categories', 'post_categories.category_id', '=', 'categories.id')
-            ->whereIn('post_categories.category_id', $categoryId)
-            ->where('posts.name', 'LIKE', '%' . $keyword . '%')
+            ->where('posts.name', 'LIKE', '%' . $filter['keyword'] . '%')
             ->select('posts.*')
             ->distinct()
             ->with('slugable')
             ->orderBy('posts.order', 'desc')
             ->orderBy('posts.created_at', 'desc');
+
+            if($filter['category']) {
+                $data->whereIn('post_categories.category_id', $categoryId);
+            }
+
+            if($filter['birthday']) {
+                $data->where('posts.created_at', '<=', $filter['birthday']);
+            }
 
             if ($paginate != 0) {
                 return $this->applyBeforeExecuteQuery($data)->paginate($paginate);

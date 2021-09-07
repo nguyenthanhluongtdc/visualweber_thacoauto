@@ -44,5 +44,5 @@ interface PostInterface extends BlogPostInterface
      */
     public function getAllWithFeatured(int $limit = 5, array $with = []);
 
-    public function getSearchByCategoryAndFilter(int $categoryId, string $keyword, int $paginate = 6);
+    public function getSearchByCategoryAndFilter(array $filter = [], int $paginate = 6);
 }

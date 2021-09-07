@@ -46,7 +46,7 @@ class PostCacheDecorator extends BlogPostCacheDecorator
         return $this->getDataIfExistCache(__FUNCTION__, func_get_args());
     }
 
-    public function getSearchByCategoryAndFilter(int $categoryId, string $keyword, int $paginate = 6){
+    public function getSearchByCategoryAndFilter(array $filter = [], int $paginate = 6){
         return $this->getDataIfExistCache(__FUNCTION__, func_get_args());
     }
 

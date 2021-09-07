@@ -271,7 +271,15 @@ class ThacoController extends PublicController
         SeoHelper::setTitle($title)
             ->setDescription($title);
 
-        $posts = $postRepository->getSearch($query, 0, 5);
+        if($request->category) {
+            $slug = SlugHelper::getSlug($request->category, SlugHelper::getPrefix(Category::class));
+        }
+
+        $filter['keyword'] = $request->keyword;
+        $filter['category'] = $slug->reference_id??null;
+        $filter['birthday'] = $request->birthday??null;
+
+        $posts = app(InterfacesPostInterface::class)->getSearchByCategoryAndFilter($filter, 6);
 
         // Theme::breadcrumb()
         //     ->add(__('Home'), route('public.index'))
@@ -288,19 +296,23 @@ class ThacoController extends PublicController
     {
         if($request->ajax() && $request->has('filter')) {
             $filter = $request->filter;
-            $posts = [];
 
-            $keyword = $filter[0]['value'];
-            $category = $filter[1]['value'];
-
-            $slug = SlugHelper::getSlug($category, SlugHelper::getPrefix(Category::class));
-
-            if (!$slug) {
-                $posts = $postRepository->getSearch($keyword, 0, 6);
-                return view("theme.main::views.components.result-filter-cate", compact('posts'))->render();
+            if($filter['category']) {
+                $slug = SlugHelper::getSlug($filter['category'], SlugHelper::getPrefix(Category::class));
             }
 
-            $posts = app(InterfacesPostInterface::class)->getSearchByCategoryAndFilter($slug->reference_id, $keyword??"", 6);
+            // if (!$slug) {
+            //     $posts = $postRepository->getSearch($keyword, 0, 6);
+            //     return view("theme.main::views.components.result-filter-cate", compact('posts'))->render();
+            // }
+
+            $filter['category'] = $slug->reference_id??null;
+
+            $filter['keyword'] = $filter['keyword']??"";
+
+            $filter['birthday'] = $filter['birthday']??null;
+
+            $posts = app(InterfacesPostInterface::class)->getSearchByCategoryAndFilter($filter, 6);
 
             return view("theme.main::views.components.result-filter-cate", compact('posts'))->render();
         }

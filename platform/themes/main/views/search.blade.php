@@ -85,13 +85,13 @@ Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
                         ])
                     !!}
                 </div>
-                {{-- <div class="col-md-2 col-12 search-time">
+                <div class="col-md-2 col-12 search-time">
                     <div class="time-picker">
                         <ion-icon name="calendar-outline" class=" pl-md-3 pl-1 font15 calendar"></ion-icon>
                         <input type="date" class="date-frame" id="birthday" name="birthday" class="font15">
                         <ion-icon name="chevron-down-outline" class="arrow font15"></ion-icon>
                     </div>
-                </div> --}}
+                </div>
             </div>
 
             <div class="result-main">

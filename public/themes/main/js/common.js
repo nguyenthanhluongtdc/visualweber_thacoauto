@@ -729,24 +729,32 @@ $(document).ready(function () {
 
     if ($('.form-search').length && window.URL_FILER) {
         let uri_filter = window.URL_FILER;
+
+        $('input[type="date"]').change(function() {
+            filter_data(uri_filter)
+        })
+
         $('input[name=category]').change(function () {
-            if ($(this).val().length !== 0) {
-                filter_data($(".form-search").serializeArray(), uri_filter);
-            }
+            filter_data(uri_filter)
         });
     }
 
-    function filter_data(url, uri_filter) {
+    function filter_data(uri_filter) {
         // $('.filter_data').html('<div id="loading"></div>');
+        var formdata = $(".form-search").serializeArray();
+        var filter = {};
+        $(formdata ).each(function(index, obj){
+            filter[obj.name] = obj.value;
+        });
+
         $.ajax({
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
             url: uri_filter,
             type: 'get',
-            data: { filter: url },
+            data: { filter: filter },
             success: function (data) {
-                console.log(data)
                 $('.result-main').html(data)
             }
         });

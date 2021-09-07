@@ -2,7 +2,7 @@
 @foreach ($menu_nodes as $key => $row)
     @php $slug = explode ("/", parse_url($row->url)['path'])[1]; @endphp
     <div class="box item">
-        <input id="{{Str::slug($row->name, '_')}}" type="radio" name="category" checked="{{Request::get('category')==$slug?'checked':''}}" value="{{$slug}}">
+        <input id="{{Str::slug($row->name, '_')}}" type="radio" name="category" value="{{$slug}}">
         <span class="check"></span>
         <label for="{{Str::slug($row->name, '_')}}" class="font-pri font15"> {!! $row->name !!} </label>
     </div>
@@ -27,3 +27,12 @@
     <span class="check"></span>
     <label for="five" class="font-pri font15">Tuyển dụng</label>
 </div> --}}
+
+<script>
+    let category = "{{Request::get('category')}}";
+    $('input[type="radio"]').each(function() {
+        if($(this).val()==category) {
+            $(this).attr('checked', true);
+        }
+    })
+</script>

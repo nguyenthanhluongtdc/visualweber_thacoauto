@@ -1,5 +1,5 @@
 
-@foreach($posts as $post)
+@forelse($posts as $post)
 
 <div class="search-result row mb-md-4 mb-5" data-aos="fade-up" data-aos-duration="1000"
 data-aos-easing="ease-in-out">
@@ -10,7 +10,6 @@ data-aos-easing="ease-in-out">
     </a>
 </div>
 <div class="col-lg-9 col-md-7 result-content">
-
     <div class="content">
         <a href="{{$post->url}}">
             <h3 class="font-pri-bold font30 fontmb-middle color-gray">
@@ -29,7 +28,13 @@ data-aos-easing="ease-in-out">
 </div>
 </div>
 
-@endforeach
+@empty
+
+<p class="text-center font25">
+    {!! __('Không tìm thấy kết quả nào') !!}
+</p>
+
+@endforelse
 
 @isset($posts)
 <div class="container-remake">

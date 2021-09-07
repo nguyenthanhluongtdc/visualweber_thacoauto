@@ -39,12 +39,20 @@ class PromotionsServiceProvider extends ServiceProvider
                \Language::registerModule([Promotions::class]);
             }
 
+            // dashboard_menu()->registerItem([
+            //     'id'          => 'cms-plugins-promotions',
+            //     'priority'    => 5,
+            //     'parent_id'   => null,
+            //     'name'        => 'plugins/promotions::promotions.name',
+            //     'icon'        => 'fas fa-percent',
+            //     'url'         => route('promotions.index'),
+            //     'permissions' => ['promotions.index'],
+            // ]);
             dashboard_menu()->registerItem([
                 'id'          => 'cms-plugins-promotions',
-                'priority'    => 5,
-                'parent_id'   => null,
+                'priority'    => 8,
+                'parent_id'   => 'cms-plugins-car-menu',
                 'name'        => 'plugins/promotions::promotions.name',
-                'icon'        => 'fas fa-percent',
                 'url'         => route('promotions.index'),
                 'permissions' => ['promotions.index'],
             ]);

@@ -40,9 +40,9 @@
                         <span>{{ __($car->gear) }}</span>
                     </li>
                 </ul>
-                <div class="button">
+                <a href="" class="button d-block">
                     <img src="{{Theme::asset()->url('images/business/brand-detail/360.png')}}" alt="">
-                </div>
+                </a>
             </div>
 
             <form action="{{ route('public.brand.cost-estimate', $car->slug) }}" method="GET" class="car-selection-content__right d-flex flex-column col-sm-12 col-md-12">

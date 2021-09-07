@@ -66,7 +66,7 @@ class ColorForm extends FormAbstract
                 'choices'    => \Platform\Car\Models\Car::pluck('name','id')->toArray(),
             ])
             ->add('image', 'mediaImage', [
-                'label'      => __('Image'),
+                'label'      => __('Image').' (1080x675px)',
                 'label_attr' => ['class' => 'control-label'],
             ])
             ->setBreakFieldPoint('status');

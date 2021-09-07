@@ -145,7 +145,7 @@ class CarForm extends FormAbstract
                 'value'      => old('showrooms', $selectedShowrooms),
             ])
             ->add('image', 'mediaImage', [
-                'label'      => __('Image').' (790x440px)',
+                'label'      => __('Image').' (1517x777px)',
                 'label_attr' => ['class' => 'control-label'],
             ])
             ->add('brochure', 'mediaFile', [

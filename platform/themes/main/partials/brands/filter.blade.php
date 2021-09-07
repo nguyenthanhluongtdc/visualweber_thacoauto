@@ -180,7 +180,7 @@
                             @endforelse
                         </div>
                     </div>
-                    <div class="row-filter">
+                    {{-- <div class="row-filter">
                         <input type="hidden" name="color">
                         <div class="row-filter__title font25">
                         Màu sơn
@@ -212,7 +212,7 @@
                         @empty
                         @endforelse
                         </div>
-                    </div>
+                    </div> --}}
                     <div class="row-filter">
                         <input type="hidden" name="engine">
                         <div class="row-filter__title font25">

@@ -1,5 +1,5 @@
 @php
-    $cars = get_cars($slug->key,request()->get('vehicle'),request()) ?? collect();
+    $cars = get_cars_no_children($slug->key,request()->get('vehicle'),request()) ?? collect();
     $carFeature = count($cars) ? $cars[0] : null;
     if(request()->get('car')){
         $carFeature = get_car_by_slug(request()->get('car'));

@@ -92,7 +92,74 @@ if (!function_exists('get_cars')) {
             $carModel = $carModel->where('vehicle_id', $slug->reference_id);
          }
       }
-      return $carInterface->applyBeforeExecuteQuery($carModel)->get();;
+      return $carInterface->applyBeforeExecuteQuery($carModel)->get();
+   }
+}
+
+if (!function_exists('get_cars_no_children')) {
+   function get_cars_no_children($brand = null, $vehicle = null, $request = null)
+   {
+      $carInterface = resolve('Platform\Car\Repositories\Interfaces\CarInterface');
+      $slugRepository = resolve('Platform\Slug\Repositories\Interfaces\SlugInterface');
+      $carModel = new \Platform\Car\Models\Car;
+      $carModel = $carModel->where('parent_id', null);
+      // $carModel = $carModel->addGlobalScope(new Platform\Car\Scopes\CarTenantScope);
+      /**
+       *
+       */
+      if ($request instanceof \Illuminate\Http\Request) {
+         $slugRepository = resolve('Platform\Slug\Repositories\Interfaces\SlugInterface');
+         if ($request->get('horse_power')) {
+            $carModel = $carModel->where('horse_power', $request->get('horse_power'));
+         }
+         if ($request->get('vehicle')) {
+            $slug = $slugRepository->getFirstBy(['key' => $request->get('vehicle'), 'reference_type' => \Platform\Vehicle\Models\Vehicle::class]);
+            if ($slug) {
+               $carModel = $carModel->whereHas('vehicle', function ($q) use ($slug) {
+                  return $q->whereIn('id', [$slug->reference_id]);
+               });
+            }
+         }
+         if ($request->get('engine')) {
+            $carModel = $carModel->where('engine', $request->get('engine'));
+         }
+         if ($request->get('color')) {
+            $carModel = $carModel->whereHas('colors', function ($q) use ($request) {
+               return $q->where('code', $request->get('color'));
+            });
+         }
+         if ($request->get('fuel_type')) {
+            $carModel = $carModel->where('fuel_type', $request->get('fuel_type'));
+         }
+         if ($request->get('gear')) {
+            $carModel = $carModel->where('gear', $request->get('gear'));
+         }
+         if ($request->get('price')) {
+            $carModel = $carModel->where('price', '<=', $request->get('price'));
+         }
+         if ($request->get('showroom')) {
+            $slug = $slugRepository->getFirstBy(['key' => $request->get('showroom'), 'reference_type' => \Platform\DistributionSystem\Models\Showroom::class]);
+            if ($slug) {
+               $carModel = $carModel->whereHas('showrooms', function ($q) use ($slug) {
+                  return $q->whereIn('showroom_id', [$slug->reference_id]);
+               });
+            }
+         }
+      }
+      //
+      if ($brand) {
+         $slug = $slugRepository->getFirstBy(['key' => $brand, 'reference_type' => \Platform\Brand\Models\Brand::class]);
+         if ($slug) {
+            $carModel = $carModel->where('brand_id', $slug->reference_id);
+         }
+      }
+      if ($vehicle) {
+         $slug = $slugRepository->getFirstBy(['key' => $vehicle, 'reference_type' => \Platform\Vehicle\Models\Vehicle::class]);
+         if ($slug) {
+            $carModel = $carModel->where('vehicle_id', $slug->reference_id);
+         }
+      }
+      return $carInterface->applyBeforeExecuteQuery($carModel)->get();
    }
 }
 
@@ -181,7 +248,6 @@ if (!function_exists('get_engine_by_brand_and_vehicle')) {
       return collect();
    }
 }
-
 
 if (!function_exists('get_car_relations')) {
    function get_car_relations($brand = null, $limit = 4)

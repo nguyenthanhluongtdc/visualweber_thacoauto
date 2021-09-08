@@ -41,7 +41,7 @@ class PostCacheDecorator extends BlogPostCacheDecorator
     /**
      * {@inheritDoc}
      */
-    public function getAllWithFeatured(int $limit = 5, array $with = [])
+    public function getAllWithFeatured(int $limit = 5, array $except = [], array $with = [])
     {
         return $this->getDataIfExistCache(__FUNCTION__, func_get_args());
     }

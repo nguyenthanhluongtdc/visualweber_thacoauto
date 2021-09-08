@@ -37,14 +37,19 @@ class PostRepository extends BlogPostRepository
     /**
      * {@inheritDoc}
      */
-    public function getAllWithFeatured(int $limit = 5, array $with = [])
+    public function getAllWithFeatured(int $limit = 5, array $except = [], array $with = [])
     {
-
+        if (!is_array($except)) {
+            $except = [$except];
+        }
         $data = $this->model
             ->where([
                 'posts.status'      => BaseStatusEnum::PUBLISHED,
-            ])
-            ->select('posts.*')
+            ]);
+                $data->whereHas('categories', function ($q) use ($except) {
+                    $q->whereNotIn('categories.id', $except);
+                });
+            $data->select('posts.*')
             ->limit($limit)
             ->with(array_merge(['slugable'], $with))
             ->orderBy('posts.is_featured', 'desc')
@@ -64,17 +69,15 @@ class PostRepository extends BlogPostRepository
         }
 
         $data = $this->model
-            ->where([
-                'posts.status'      => BaseStatusEnum::PUBLISHED,
-            ])
-            ->join('post_categories', 'post_categories.post_id', '=', 'posts.id')
-            ->join('categories', 'post_categories.category_id', '=', 'categories.id')
-            ->whereIn('post_categories.category_id', $categoryId)
-            ->where('posts.is_featured', 1)
+            ->whereStatus(BaseStatusEnum::PUBLISHED)
+            ->whereHas('categories', function ($q) use ($categoryId) {
+                $q->whereIn('categories.id', $categoryId);
+            })
             ->select('posts.*')
             ->limit($limit)
-            ->distinct()
             ->with(array_merge(['slugable'], $with))
+            ->orderBy('posts.is_featured', 'desc')
+            ->orderBy('posts.order', 'desc')
             ->orderBy('posts.created_at', 'desc');
 
         return $this->applyBeforeExecuteQuery($data)->get();

@@ -14,9 +14,10 @@
     <h2 class="font-pri-bold font60 fontmb-large color-gray" data-aos-anchor=".content-news" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out">{{ __('TIN TỨC VÀ SỰ KIỆN') }}</h2>
     <div class="content content-news">
         <div class="left left-desktop" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
+            {{-- @dd(theme_option('default_category_gallery')) --}}
             @php
-                $postDesktop = get_all_with_featured(4);
-                $postMobile = get_all_with_featured(2);
+                $postDesktop = get_only_featured_posts_by_category(theme_option('default_category_news'),4);
+                $postMobile = get_only_featured_posts_by_category(theme_option('default_category_news'),2);
             @endphp
             @if (!empty($postDesktop))
                 @foreach ($postDesktop as $post)

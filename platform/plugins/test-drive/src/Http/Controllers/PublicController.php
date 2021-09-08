@@ -50,7 +50,7 @@ class PublicController extends BaseController
     {
         $showroomID = $distributionSystemInterface->getFirstBy([
             "id" => request('showroom_id')
-        ], ['*'], ['showrooms'])
+        ], ['*'], ['showrooms'])['showrooms']
             ->pluck('id')
             ->toArray() ?? [];
 

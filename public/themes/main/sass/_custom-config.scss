@@ -82,20 +82,20 @@ a:hover {
 .font60 {
   font-size: 60px;
   @media (max-width: 1680px) {
-    font-size: 50px;
-  }
-  @media (max-width: 1560px) {
-    font-size: 45px;
-  }
-  @media (max-width: 1440px) {
     font-size: 40px;
   }
-  @media (max-width: 1366px) {
+  @media (max-width: 1560px) {
     font-size: 35px;
   }
-  @media (max-width: 1199px) {
-    font-size: 30px;
-  }
+  // @media (max-width: 1440px) {
+  //   font-size: 40px;
+  // }
+  // @media (max-width: 1366px) {
+  //   font-size: 35px;
+  // }
+  // @media (max-width: 1199px) {
+  //   font-size: 30px;
+  // }
 }
 
 .font50 {

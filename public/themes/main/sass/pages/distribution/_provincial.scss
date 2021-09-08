@@ -40,6 +40,7 @@
         @include paddingBottom(65);
         .description {
             font-family: $font-primary;
+            text-align: justify;
         }
         .description {
             &.mobile {
@@ -52,6 +53,7 @@
                 }
                 &.mobile {
                     display: block;
+                    text-align: justify;
                     @include mobilePaddingY(40);
                 }
             }

@@ -25,7 +25,7 @@
 
                     @if($count != 0)
                         <div class="col-1"></div>
-                        @if($count > 6)
+                        @if($count > 0)
                             <div class="tab col-2 item-right">
                                 @foreach($menu_nodes as $key => $item)
                                     <button class="tablink font25 text-uppercase fontmb-medium" id-name="{{Str::Slug(has_sub_field($item, 'title_one'), '_').$key}}"
@@ -47,7 +47,7 @@
                             </div>
                         @endif
 
-                        <div class="{{$count>6?'col-6':'col-7'}} item-top">
+                        <div class="{{$count > 0?'col-6':'col-7'}} item-top">
                             @foreach($menu_nodes as $key => $item)
                                 <div id="{{Str::Slug(has_sub_field($item, 'title_one'), '_').$key}}" class="tabcontents">
                                     <img loading="lazy" src="{{ Storage::disk('public')->exists(has_sub_field($item, 'image')) ? get_image_url(has_sub_field($item, 'image')) : RvMedia::getDefaultImage()}}" alt=" {!! has_sub_field($item, 'title_two') !!}"
@@ -67,7 +67,7 @@
                             @endforeach
                         </div>
 
-                        @if($count > 6)
+                        @if($count > 0)
                             <div class="tab col-2 item-left">
                                 @for($i = ceil(count($menu_nodes)/2); $i < $count; $i++ )
                                     <button class="font25 text-uppercase tablink fontmb-medium" id-name="{{Str::Slug(has_sub_field($menu_nodes[$i], 'title_one'), '_').$i}}">

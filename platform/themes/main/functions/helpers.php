@@ -22,9 +22,9 @@ if (!function_exists('get_all_with_featured')) {
      * @param array $with
      * @return \Illuminate\Support\Collection
      */
-    function get_all_with_featured($limit, array $with = [])
+    function get_all_with_featured($limit, $except = [], array $with = [])
     {
-        return app(PostInterface::class)->getAllWithFeatured($limit, $with);
+        return app(PostInterface::class)->getAllWithFeatured($limit, $except, $with);
     }
 }
 

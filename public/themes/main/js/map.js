@@ -125,19 +125,20 @@ const Distribution = {
     },
     createMarketPoint: function (map, { popup_info, lat, lng }, status = '') {
         let popupDetailWrap = '';
-        if(!popup_info.content) return
-        popup_info.content.forEach(element => {
-            let popupDetailItem = `<div class="branch-body-item">`
-            element.forEach((el, index) => {
-                if(index == 0) {
-                    popupDetailItem += `<p class="info-number font30">${el.value}</p>`
-                }else if(index == 1) {
-                    popupDetailItem += `<p class="info-text font15">${el.value}</p>`
-                }
-            })
-            popupDetailItem += '</div>'
-            popupDetailWrap += popupDetailItem
-        });
+        if(popup_info.content) {
+            popup_info.content.forEach(element => {
+                let popupDetailItem = `<div class="branch-body-item">`
+                element.forEach((el, index) => {
+                    if(index == 0) {
+                        popupDetailItem += `<p class="info-number font30">${el.value}</p>`
+                    }else if(index == 1) {
+                        popupDetailItem += `<p class="info-text font15">${el.value}</p>`
+                    }
+                })
+                popupDetailItem += '</div>'
+                popupDetailWrap += popupDetailItem
+            });
+        }
 
         let popupContent = `<div class="branch-popup" data-popup="${popup_info.id}">
                                 <h2 class="branch-name font20">${popup_info.name}</h2>

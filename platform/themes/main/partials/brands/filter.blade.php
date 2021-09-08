@@ -18,6 +18,7 @@
                             'slug' => $slug->key,
                         ])}}" class="text-uppercase">{{ __('Tất cả') }}</a>
                 </li>
+                {{-- @dd(get_vehicles($slug ? $slug->key : null)) --}}
                 @foreach (get_vehicles($slug ? $slug->key : null) ?? collect() as $item)
                     <li class="car-model__item {{ request('vehicle', '') == $item->name ? 'active' : ''  }} ">
                         <a href="{{route('public.brand.index',[

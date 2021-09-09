@@ -10,7 +10,6 @@
         margin-top: 4%;
     }
     h1.title {
-        font-family: $font-my-bold;
         margin-bottom: 75px;
         @media(max-width : 1440px){
             margin-bottom: 60px;
@@ -23,12 +22,12 @@
         }
     }
     h2.showroom-name {
-        font-family: $font-primary-bold;
+        font-family: "MyriadPro-BoldCond";
         text-transform: uppercase;
         color: $color-primary;
     }
     h3.title {
-        font-family: $font-primary-bold;
+        font-family: "MyriadPro-BoldCond";
         color: $color-primary;
     }
     .img-container {
@@ -253,7 +252,7 @@
                     background-color: #1e5499;
                     color: #ffffff;
                     text-transform: uppercase;
-                    font-family: $font-primary-bold;
+                    font-family: "MyriadPro-BoldCond";
                     border: unset;
                     height: 45px;
                     line-height: 45px;
@@ -332,7 +331,7 @@
                             }
                             p {
                                 margin-top: 5px;
-                                font-family: $font-primary-bold;
+                                font-family: "MyriadPro-BoldCond";
                                 color: #3c3c3c;
                             }
                         }
@@ -409,7 +408,7 @@
                                 }
                                 p {
                                     margin-top: 0.3rem;
-                                    font-family: $font-primary-bold;
+                                    font-family: "MyriadPro-BoldCond";
                                     color: #3c3c3c;
                                 }
                             }
@@ -449,7 +448,7 @@
                         background-color: unset;
                         border-color: unset;
                         border: unset;
-                        font-family: $font-primary-bold;
+                        font-family: "MyriadPro-BoldCond";
                         min-width: 342px;
                         text-align: center;
                         padding: 15px;
@@ -525,7 +524,7 @@
                 height: 100%;
             }
             &--name {
-                font-family: $font-primary-bold;
+                font-family: "MyriadPro-BoldCond";
                 white-space: nowrap; 
                 overflow: hidden;
                 text-overflow: ellipsis;
@@ -552,7 +551,7 @@
             &--more {
                 background-color: #1e5499;
                 color: #ffffff;
-                font-family: $font-primary-bold;
+                font-family: "MyriadPro-BoldCond";
                 border: unset;
                 padding: 10px 35px;
                 margin-top: 15px;

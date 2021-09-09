@@ -26,7 +26,7 @@
                         {!! dynamic_sidebar('footer_introduce') !!}
                     </div>
                     <div class="item">
-                        <p class="title font-pri-bold font30 color-gray fontmb-medium" id="menu-footer">{{__('The media')}}</p>
+                        <h2 class="title font-pri-bold font30 color-gray fontmb-medium" id="menu-footer">{{__('The media')}}</h2>
                         {!! dynamic_sidebar('footer_media') !!}
                         {{-- <li><a href="" class="color-gray">Tin tức hoạt động</a></li>
                                 <li><a href="" class="color-gray">Hoạt động cộng đồng</a></li>

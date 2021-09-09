@@ -16,7 +16,7 @@
                             </a>
                         </div>
                         <div class="item-content flex-fill">
-                            <h4 class="title font-pri-bold font30 text-uppercase fontmb-middle">
+                            <h4 class="title font-pri-bold font30 text-uppercasex fontmb-middle">
                                 <a href="{{$post->url}}">{{$post->name}}</a>
                             </h4>
                             <div class="bottom">

@@ -243,35 +243,35 @@
                 @if (has_sub_field($item, 'address_contact_office'))
                 <div class="item">
                     <ion-icon name="location-outline"></ion-icon>
-                    <p class="font-pri"><span class="font-pri-bold">{{__('Address')}}: </span>{{ get_sub_field($item, 'address_contact_office') }}</p>
+                    <p class="font-pri font18"><span class="font-pri-bold">{{__('Address')}}: </span>{{ get_sub_field($item, 'address_contact_office') }}</p>
                 </div>
                 @endif
 
                 @if (has_sub_field($item, 'hotline_contact_office'))
                 <div class="item">
                     <ion-icon name="call-outline"></ion-icon>
-                    <p class="font-pri"><span class="font-pri-bold">Hotline: </span>{{ get_sub_field($item, 'hotline_contact_office') }}</p>
+                    <p class="font-pri font18"><span class="font-pri-bold">Hotline: </span>{{ get_sub_field($item, 'hotline_contact_office') }}</p>
                 </div>
                 @endif
 
                 @if (has_sub_field($item, 'fax_contact_office'))
                 <div class="item">
                     <ion-icon name="print-outline"></ion-icon>
-                    <p class="font-pri"><span class="font-pri-bold">Fax: </span>{{ get_sub_field($item, 'fax_contact_office') }}</p>
+                    <p class="font-pri font18"><span class="font-pri-bold">Fax: </span>{{ get_sub_field($item, 'fax_contact_office') }}</p>
                 </div>
                 @endif
 
                 @if (has_sub_field($item, 'website_contact_office'))
                 <div class="item">
                     <ion-icon name="at-outline"></ion-icon>
-                    <p class="font-pri"><span class="font-pri-bold">Website: </span>{{ get_sub_field($item, 'website_contact_office') }}</p>
+                    <p class="font-pri font18"><span class="font-pri-bold">Website: </span>{{ get_sub_field($item, 'website_contact_office') }}</p>
                 </div>
                 @endif
 
                 @if (has_sub_field($item, 'email_contact_office'))
                 <div class="item">
                     <ion-icon name="mail-outline"></ion-icon>
-                    <p class="font-pri"><span class="font-pri-bold">Email: </span>{{ get_sub_field($item, 'email_contact_office') }}</p>
+                    <p class="font-pri font18"><span class="font-pri-bold">Email: </span>{{ get_sub_field($item, 'email_contact_office') }}</p>
                 </div>
                 @endif
 
@@ -297,21 +297,21 @@
                     TRƯỜNG HẢI</h3>
                 <div class="item">
                     <ion-icon name="location-outline"></ion-icon>
-                    <p class="font-pri"><span class="font-pri-bold">Địa chỉ: </span>Thôn 4, Xã Tam Hiệp, Huyện Núi
+                    <p class="font-pri font18"><span class="font-pri-bold">Địa chỉ: </span>Thôn 4, Xã Tam Hiệp, Huyện Núi
                         thành, Tỉnh Quảng Nam.</p>
                 </div>
                 <div class="item">
                     <ion-icon name="call-outline"></ion-icon>
-                    <p class="font-pri"><span class="font-pri-bold">Hotline: </span>+84-0510.3567.161 - 0510.3567.162 -
+                    <p class="font-pri font18"><span class="font-pri-bold">Hotline: </span>+84-0510.3567.161 - 0510.3567.162 -
                         0510.3567.163</p>
                 </div>
                 <div class="item">
                     <ion-icon name="print-outline"></ion-icon>
-                    <p class="font-pri"><span class="font-pri-bold">Fax: </span> +84 - (0)510 - 3565777</p>
+                    <p class="font-pri font18"><span class="font-pri-bold">Fax: </span> +84 - (0)510 - 3565777</p>
                 </div>
                 <div class="item">
                     <ion-icon name="mail-outline"></ion-icon>
-                    <p class="font-pri"><span class="font-pri-bold">Email: </span> chulai-truonghai@dng.vnn.vn</p>
+                    <p class="font-pri font18"><span class="font-pri-bold">Email: </span> chulai-truonghai@dng.vnn.vn</p>
                 </div>
 
 
@@ -334,16 +334,16 @@
                 <h3 class="detail-title font40 font-pri-bold mt-3 mb-3">VĂN PHÒNG THACO TẠI HÀ NỘI</h3>
                 <div class="item">
                     <ion-icon name="location-outline"></ion-icon>
-                    <p class="font-pri"><span class="font-pri-bold">Địa chỉ: </span>Lô D6, KCN Hà Nội Đài Tư, 386 Nguyễn
+                    <p class="font-pri font18"><span class="font-pri-bold">Địa chỉ: </span>Lô D6, KCN Hà Nội Đài Tư, 386 Nguyễn
                         Văn Linh, Sài Đồng, Long Biên, Hà Nội</p>
                 </div>
                 <div class="item">
                     <ion-icon name="call-outline"></ion-icon>
-                    <p class="font-pri"><span class="font-pri-bold">Hotline: </span>+84 - (0)43.8758914</p>
+                    <p class="font-pri font18"><span class="font-pri-bold">Hotline: </span>+84 - (0)43.8758914</p>
                 </div>
                 <div class="item">
                     <ion-icon name="print-outline"></ion-icon>
-                    <p class="font-pri"><span class="font-pri-bold">Fax: </span>043.8759857</p>
+                    <p class="font-pri font18"><span class="font-pri-bold">Fax: </span>043.8759857</p>
                 </div>
 
 
@@ -375,24 +375,24 @@
                     HẢI TẠI TP. HỒ CHÍ MINH </h3>
                 <div class="item">
                     <ion-icon name="location-outline"></ion-icon>
-                    <p class="font-pri"><span class="font-pri-bold">Địa chỉ: </span>Số 10 Mai Chí Thọ, P.Thủ Thiêm,
+                    <p class="font-pri font18"><span class="font-pri-bold">Địa chỉ: </span>Số 10 Mai Chí Thọ, P.Thủ Thiêm,
                         TP.Thủ Đức, TP.HCM</p>
                 </div>
                 <div class="item">
                     <ion-icon name="call-outline"></ion-icon>
-                    <p class="font-pri"><span class="font-pri-bold">Hotline: </span>1900545591</p>
+                    <p class="font-pri font18"><span class="font-pri-bold">Hotline: </span>1900545591</p>
                 </div>
                 <div class="item">
                     <ion-icon name="print-outline"></ion-icon>
-                    <p class="font-pri"><span class="font-pri-bold">Fax: </span>+84 (0)8-39977.742</p>
+                    <p class="font-pri font18"><span class="font-pri-bold">Fax: </span>+84 (0)8-39977.742</p>
                 </div>
                 <div class="item">
                     <ion-icon name="at-outline"></ion-icon>
-                    <p class="font-pri"><span class="font-pri-bold">Website: </span>www.truonghaiauto.com.vn</p>
+                    <p class="font-pri font18"><span class="font-pri-bold">Website: </span>www.truonghaiauto.com.vn</p>
                 </div>
                 <div class="item">
                     <ion-icon name="mail-outline"></ion-icon>
-                    <p class="font-pri"><span class="font-pri-bold">Email: </span>rep.office@thaco.com.vn</p>
+                    <p class="font-pri font18"><span class="font-pri-bold">Email: </span>rep.office@thaco.com.vn</p>
                 </div>
 
 
@@ -415,21 +415,21 @@
                     TRƯỜNG HẢI</h3>
                 <div class="item">
                     <ion-icon name="location-outline"></ion-icon>
-                    <p class="font-pri"><span class="font-pri-bold">Địa chỉ: </span>Thôn 4, Xã Tam Hiệp, Huyện Núi
+                    <p class="font-pri font18"><span class="font-pri-bold">Địa chỉ: </span>Thôn 4, Xã Tam Hiệp, Huyện Núi
                         thành, Tỉnh Quảng Nam.</p>
                 </div>
                 <div class="item">
                     <ion-icon name="call-outline"></ion-icon>
-                    <p class="font-pri"><span class="font-pri-bold">Hotline: </span>+84-0510.3567.161 - 0510.3567.162 -
+                    <p class="font-pri font18"><span class="font-pri-bold">Hotline: </span>+84-0510.3567.161 - 0510.3567.162 -
                         0510.3567.163</p>
                 </div>
                 <div class="item">
                     <ion-icon name="print-outline"></ion-icon>
-                    <p class="font-pri"><span class="font-pri-bold">Fax: </span> +84 - (0)510 - 3565777</p>
+                    <p class="font-pri font18"><span class="font-pri-bold">Fax: </span> +84 - (0)510 - 3565777</p>
                 </div>
                 <div class="item">
                     <ion-icon name="mail-outline"></ion-icon>
-                    <p class="font-pri"><span class="font-pri-bold">Email: </span> chulai-truonghai@dng.vnn.vn</p>
+                    <p class="font-pri font18"><span class="font-pri-bold">Email: </span> chulai-truonghai@dng.vnn.vn</p>
                 </div>
 
 
@@ -452,16 +452,16 @@
                 <h3 class="detail-title font40 font-pri-bold mt-3 mb-3">VĂN PHÒNG THACO TẠI HÀ NỘI</h3>
                 <div class="item">
                     <ion-icon name="location-outline"></ion-icon>
-                    <p class="font-pri"><span class="font-pri-bold">Địa chỉ: </span>Lô D6, KCN Hà Nội Đài Tư, 386 Nguyễn
+                    <p class="font-pri font18"><span class="font-pri-bold">Địa chỉ: </span>Lô D6, KCN Hà Nội Đài Tư, 386 Nguyễn
                         Văn Linh, Sài Đồng, Long Biên, Hà Nội</p>
                 </div>
                 <div class="item">
                     <ion-icon name="call-outline"></ion-icon>
-                    <p class="font-pri"><span class="font-pri-bold">Hotline: </span>+84 - (0)43.8758914</p>
+                    <p class="font-pri font18"><span class="font-pri-bold">Hotline: </span>+84 - (0)43.8758914</p>
                 </div>
                 <div class="item">
                     <ion-icon name="print-outline"></ion-icon>
-                    <p class="font-pri"><span class="font-pri-bold">Fax: </span>043.8759857</p>
+                    <p class="font-pri font18"><span class="font-pri-bold">Fax: </span>043.8759857</p>
                 </div>
 
 
@@ -520,30 +520,30 @@
                 <div class="right">
                     @if (has_sub_field($item, 'address_contact_office'))
                     <div class="item location">
-                        <p class="font-pri"> {{ get_sub_field($item, 'address_contact_office') }}</p>
+                        <p class="font-pri font18"> {{ get_sub_field($item, 'address_contact_office') }}</p>
                     </div>
                     @endif
 
                     @if (has_sub_field($item, 'hotline_contact_office'))
                     <div class="item ">
-                        <p class="font-pri">{{ get_sub_field($item, 'hotline_contact_office') }}</p>
+                        <p class="font-pri font18">{{ get_sub_field($item, 'hotline_contact_office') }}</p>
                     </div>
                     @endif
 
                     @if (has_sub_field($item, 'fax_contact_office'))
                     <div class="item">
-                        <p class="font-pri"> {{ get_sub_field($item, 'fax_contact_office') }}</p>
+                        <p class="font-pri font18"> {{ get_sub_field($item, 'fax_contact_office') }}</p>
                     </div>
                     @endif
 
                     @if (has_sub_field($item, 'website_contact_office'))
                     <div class="item">
-                        <p class="font-pri">{{ get_sub_field($item, 'website_contact_office') }} </p>
+                        <p class="font-pri font18">{{ get_sub_field($item, 'website_contact_office') }} </p>
                     </div>
                     @endif
                     @if (has_sub_field($item, 'email_contact_office'))
                     <div class="item">
-                        <p class="font-pri"> {{ get_sub_field($item, 'email_contact_office') }}</p>
+                        <p class="font-pri font18"> {{ get_sub_field($item, 'email_contact_office') }}</p>
                     </div>
                     @endif
                 </div>
@@ -578,16 +578,16 @@
                 </div>
                 <div class="right">
                     <div class="item location">
-                        <p class="font-pri">Thôn 4, Xã Tam Hiệp, Huyện Núi thành, Tỉnh Quảng Nam.</p>
+                        <p class="font-pri font18">Thôn 4, Xã Tam Hiệp, Huyện Núi thành, Tỉnh Quảng Nam.</p>
                     </div>
                     <div class="item ">
-                        <p class="font-pri">+84-0510.3567.161 - 0510.3567.162 - 0510.3567.163</p>
+                        <p class="font-pri font18">+84-0510.3567.161 - 0510.3567.162 - 0510.3567.163</p>
                     </div>
                     <div class="item">
-                        <p class="font-pri"> +84 - (0)510 - 3565777</p>
+                        <p class="font-pri font18"> +84 - (0)510 - 3565777</p>
                     </div>
                     <div class="item">
-                        <p class="font-pri">chulai-truonghai@dng.vnn.vn</p>
+                        <p class="font-pri font18">chulai-truonghai@dng.vnn.vn</p>
                     </div>
 
                 </div>
@@ -619,14 +619,14 @@
                 </div>
                 <div class="right">
                     <div class="item location">
-                        <p class="font-pri">Lô D6, KCN Hà Nội Đài Tư, 386 Nguyễn Văn Linh, Sài Đồng, Long Biên, Hà Nội
+                        <p class="font-pri font18">Lô D6, KCN Hà Nội Đài Tư, 386 Nguyễn Văn Linh, Sài Đồng, Long Biên, Hà Nội
                         </p>
                     </div>
                     <div class="item ">
-                        <p class="font-pri">+84 - (0)43.8758914</p>
+                        <p class="font-pri font18">+84 - (0)43.8758914</p>
                     </div>
                     <div class="item">
-                        <p class="font-pri">043.8759857</p>
+                        <p class="font-pri font18">043.8759857</p>
                     </div>
 
                 </div>

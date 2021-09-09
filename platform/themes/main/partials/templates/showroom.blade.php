@@ -25,7 +25,7 @@
                                 <p class="font20"><span>{{ __("Hotline") }}: </span>{{ has_field($item, 'hotline_showroom') ? get_field($item, 'hotline_showroom') : '' }}</p>
                             </li>
                             <li>
-                                <p class="font20"><span>{{ __("Website") }}: </span>{{ has_field($item, 'website_showroom') ? get_field($item, 'website_showroom') : '' }}</p>
+                                <a href="{{ has_field($item, 'website_showroom')}}" class="font20 text-black"><span>{{ __("Website") }}: </span>{{ has_field($item, 'website_showroom') ? get_field($item, 'website_showroom') : '' }}</a>
                             </li>
                         </ul>
                     </div>

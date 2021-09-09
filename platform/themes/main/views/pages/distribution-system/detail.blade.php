@@ -12,7 +12,7 @@
     <div class="distribution-detail overflow-x-hidden">
         <div class="thacoauto-provincial">
             <div class="container-remake">
-                <h1 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000" class="title font60 fontmb-large">{{ $data->name }}</h1>
+                <h1 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000" class="title font60 font-mi-bold fontmb-large">{{ $data->name }}</h1>
                 <div class="thacoauto-provincial__wrap">
                     <div data-aos="fade-right" data-aos-duration="1500" class="left">
                         {{-- <h3 class="title fontmb-medium font25">{{ $data->name }}</h3> --}}
@@ -45,7 +45,7 @@
         </div>
         <div class="business-activities mt-85">
             <div class="container-remake">
-                <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 fontmb-large text-uppercase">{{ __('hoạt động kinh doanh') }}</h1>
+                <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 font-mi-bold fontmb-large text-uppercase">{{ __('hoạt động kinh doanh') }}</h1>
                 <div class="vehicle-category__wrap" data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-duration="1000">
                     @forelse (get_brand_of_distribution($data->id) ?? collect() as $key => $item)
                         <div class="vehicle-category__item">
@@ -74,7 +74,7 @@
         @endphp
         <div class="event-news mt-55 mb-155">
             <div class="container-remake">
-                <h1 class="title font60 fontmb-large mb-0">{{ __('tin tức & sự kiện') }}</h1>
+                <h1 class="title font60 font-mi-bold fontmb-large mb-0">{{ __('tin tức & sự kiện') }}</h1>
             </div>
             <div class="event-news__wrap mt-40">
                 <div class="container-remake">

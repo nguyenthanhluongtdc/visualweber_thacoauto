@@ -128,34 +128,108 @@
                 &::-webkit-scrollbar {
                     display: none;
                 }
+                .logo-square, .logo-rectangle {
+                    max-width: 10%;
+                    flex: 1 10%;
+                    margin-right: 5%;
+                    position: relative;
+                    a{
+                        display: block;
+                        width: 100%;
+                        padding-bottom: 100%;
+                        height: 0;
+                        position: relative;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            position: absolute;
+                        }
+
+                    }
+                    @media (max-width: 1080px){
+                        max-width: 20%;
+                        flex: 1 20%;
+                        @media (max-width: 768px){
+                            max-width: 25%;
+                            flex: 1 25%;
+                        }
+                        @media (max-width: 480px){
+                            // min-width: 25%;
+                            // img{
+                            //     max-width: 60%;
+                            // }
+                        }
+                    }
+                    &:last-child {
+                        margin-right: unset;
+                    }
+                    &::before{
+                        position: absolute;
+                        top: 0;
+                        left: -65%;
+                        z-index: 2;
+                        display: block;
+                        content: '';
+                        width: 0%;
+                        height: 100%;
+                        background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.5) 100%);
+                        background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.5) 100%);
+                        -webkit-transform: skewX(-25deg);
+                        transform: skewX(-25deg);
+                    }
+                    &:hover {
+                        &::before {
+                            width: 50%;
+                            -webkit-animation: shine 1s;
+                            animation: shine 1s;
+                        }
+                    }
+                    @-webkit-keyframes shine {
+                        100% {
+                            left: 100%;
+                        }
+                    }
+                    @keyframes shine {
+                        100% {
+                            left: 100%;
+                        }
+                    }
+                }
+                .logo-rectangle{
+                    max-width: 20%;
+                    flex: 1 20%;
+                    a{
+                        padding-bottom: 50%;
+                    }
+                }
                 li {
                     display: flex; 
                     align-items: center;
                     min-width: 160px;
                     position: relative;
                     img {
-                        max-width: 150px;
-                        max-height: 100px; 
+                        height: 70px; 
                         object-fit: cover;
                     }
                     @media (max-width: 1080px){
                         min-width: 20%;
                         display: flex;
                         justify-content: center;
-                        img{
-                            max-width: 80%;
-                        }
+                        // img{
+                        //     max-width: 80%;
+                        // }
                         @media (max-width: 768px){
                             min-width: 20%;
-                            img{
-                                max-width: 70%;
-                            }
+                            // img{
+                            //     max-width: 70%;
+                            // }
                         }
                         @media (max-width: 480px){
                             min-width: 25%;
-                            img{
-                                max-width: 60%;
-                            }
+                            // img{
+                            //     max-width: 60%;
+                            // }
                         }
                     }
                     &:last-child {

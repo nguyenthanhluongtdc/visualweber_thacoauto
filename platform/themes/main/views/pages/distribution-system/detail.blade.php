@@ -51,13 +51,14 @@
                         <div class="vehicle-category__item">
                             <h3 class="title font25">{{ $key }}</h3>
                             <ul>
+                                
                                 @foreach ($item as $child)
-                                    <li>
+                                    <li class="">
                                         <a class="js-showroom-showlist" href="javascript:;" data-brand-id="{{ $child->brand_id }}" data-category-id="{{ $child->category_id }}">
-                                            <img loading="lazy" class="img-fluid" width="70" src="{{ isset($child->brand->image) && !blank($child->brand->image) ? get_image_url($child->brand->image) : '' }}" alt="{{ $child->brand->name ?? '' }}">
+                                            <img loading="lazy" class="img-fluid" src="{{ isset($child->brand->image) && !blank($child->brand->image) ? get_image_url($child->brand->image) : '' }}" alt="{{ $child->brand->name ?? 'logo' }}">
                                         </a>
                                     </li>
-                                @endforeach
+                                    @endforeach
                             </ul>
                         </div>
                     @empty

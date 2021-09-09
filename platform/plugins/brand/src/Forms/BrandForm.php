@@ -58,7 +58,7 @@ class BrandForm extends FormAbstract
                 'value'      => old('categories', $selectedCategories),
             ])
             ->add('image', 'mediaImage', [
-                'label'      => __('Image'),
+                'label'      => __('Image').'(300x300 hoặc 300x150)',
                 'label_attr' => ['class' => 'control-label'],
             ])
             ->setBreakFieldPoint('status');

@@ -60,7 +60,10 @@ class CommentTable extends TableAbstract
                 return $item->time;
             })
             ->editColumn('reference', function($item) {
-                return Html::link($item->reference->url . '#bb-comment', $item->reference->name, ['target' => '_blank']);
+                if(!empty($item->reference)){
+                    return Html::link($item->reference->url . '#bb-comment', $item->reference->name, ['target' => '_blank']);
+                }
+                return __('Bài viết này không tồn tại');
             })
             ->editColumn('user', function($item) {
                 return $item->user ? $item->user->name : 'Guest';

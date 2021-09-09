@@ -16,11 +16,11 @@
                 <div class="thacoauto-provincial__wrap">
                     <div data-aos="fade-right" data-aos-duration="1500" class="left">
                         <h3 class="title fontmb-medium font25">{{ $data->name }}</h3>
-                        <p class="description font20">{{ has_field($data, 'mo_ta_he_thong_phan_phoi_16299906705') ? get_field($data, 'mo_ta_he_thong_phan_phoi_16299906705') : '' }}</p>
+                        <p class="description font20">{!! has_field($data, 'mo_ta_he_thong_phan_phoi_16299906705') ? get_field($data, 'mo_ta_he_thong_phan_phoi_16299906705') : '' !!}</p>
                         <ul>
                             <li>
                                 <img loading="lazy" src="{{Theme::asset()->url('images/distribution/icon_address.png')}}" alt="">
-                                <p class="font20">{{ has_field($data, 'dia_chi_he_thong_phan_phoi') ? get_field($data, 'dia_chi_he_thong_phan_phoi') : '' }}</p>
+                                <p class="font20">{!! has_field($data, 'address_he_thong_phan_phoi') ? get_field($data, 'address_he_thong_phan_phoi') : '' !!}</p>
                             </li>
                             <li>
                                 <img loading="lazy" src="{{Theme::asset()->url('images/distribution/icon_email.png')}}" alt="">

@@ -6,7 +6,7 @@ data-aos-easing="ease-in-out">
 <div class="col-lg-3 col-md-5 result-img">
     <a class="image h-100" href="{{$post->url}}" title="">
         <img loading="lazy" src="{{ Storage::disk('public')->exists($post['image']) ? get_image_url($post['image']) : RvMedia::getDefaultImage() }}" alt="img-detail"
-            class="w-100 h-100 object-fit-cover">
+            class="w-100 object-fit-cover">
     </a>
 </div>
 <div class="col-lg-9 col-md-7 result-content">

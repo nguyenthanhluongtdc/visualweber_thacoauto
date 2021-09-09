@@ -151,6 +151,10 @@
                                             <select id="want_to_buy" name="want_to_buy_id"
                                                 class="font20 font-mi-cond js-example-disabled-results">
                                                 <option selected disabled>{{ __("Vui lòng chọn") }}</option>
+                                                <option value="1" {{ old('time') == "1" ? "selected" : "" }}>{{ '1 '. __('More year') }}</option>
+                                                <option value="2" {{ old('time') == "2" ? "selected" : "" }}>{{ '2 '.__('More year') }}</option>
+                                                <option value="5" {{ old('time') == "5" ? "selected" : "" }}>{{ '5 '.__('More year') }}</option>
+                                                <option value="more_5" {{ old('time') == "more_5" ? "selected" : "" }}>{{ __("Nhiều hơn 5 năm") }}</option>
                                             </select>
                                         </div>
 
@@ -253,7 +257,7 @@
             const { data } = response.data
             if(data instanceof Array) {
                 let result = data.map((el, index) => `<option value="${el.id}" selected>${ el.name }</option>`)
-                $('#want_to_buy').html(result.join("")).trigger('change')
+                // $('#want_to_buy').html(result.join("")).trigger('change')
                 $('#test_drive').html(result.join("")).trigger('change')
             }
         }

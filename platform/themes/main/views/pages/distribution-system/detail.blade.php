@@ -12,11 +12,11 @@
     <div class="distribution-detail overflow-x-hidden">
         <div class="thacoauto-provincial">
             <div class="container-remake">
-                <h1 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000" class="title font60 fontmb-large">{{ __("thaco auto tỉnh thành") }}</h1>
+                <h1 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000" class="title font60 fontmb-large">{{ $data->name }}</h1>
                 <div class="thacoauto-provincial__wrap">
                     <div data-aos="fade-right" data-aos-duration="1500" class="left">
-                        <h3 class="title fontmb-medium font25">{{ $data->name }}</h3>
-                        <p class="description font20">{!! has_field($data, 'mo_ta_he_thong_phan_phoi_16299906705') ? get_field($data, 'mo_ta_he_thong_phan_phoi_16299906705') : '' !!}</p>
+                        {{-- <h3 class="title fontmb-medium font25">{{ $data->name }}</h3> --}}
+                        <div class="description font20">{!! has_field($data, 'mo_ta_he_thong_phan_phoi_16299906705') ? get_field($data, 'mo_ta_he_thong_phan_phoi_16299906705') : '' !!}</div>
                         <ul>
                             <li>
                                 <img loading="lazy" src="{{Theme::asset()->url('images/distribution/icon_address.png')}}" alt="">

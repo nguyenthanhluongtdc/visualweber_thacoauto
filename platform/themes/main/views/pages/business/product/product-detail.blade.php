@@ -4,7 +4,7 @@ Theme::asset()->usePath()->add('reset_css', 'css/reset.css');
 <section class="section-product-detail">
     <div class="container-remake">
         <div class="product-detail">
-            <h2 class="product-detail__title font-mi-bold font60 fontmb-large">
+            <h2 class="product-detail__title font-mi-bold font60 fontmb-large text-uppercase">
                 {{$data->name}}
             </h2>
             <img loading="lazy" src="{{get_image_url(get_field($data, 'car_category_banner'))}}" alt="{{$data->name}}" class="product-detail__banner">

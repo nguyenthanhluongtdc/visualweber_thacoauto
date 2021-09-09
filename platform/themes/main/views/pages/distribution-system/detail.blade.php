@@ -45,7 +45,7 @@
         </div>
         <div class="business-activities mt-85">
             <div class="container-remake">
-                <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 fontmb-large text-upercase">{{ __('hoạt động kinh doanh') }}</h1>
+                <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 fontmb-large text-uppercase">{{ __('hoạt động kinh doanh') }}</h1>
                 <div class="vehicle-category__wrap" data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-duration="1000">
                     @forelse (get_brand_of_distribution($data->id) ?? collect() as $key => $item)
                         <div class="vehicle-category__item">

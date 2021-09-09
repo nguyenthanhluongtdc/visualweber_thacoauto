@@ -20,15 +20,15 @@
                         <ul>
                             <li>
                                 <img loading="lazy" src="{{Theme::asset()->url('images/distribution/icon_address.png')}}" alt="">
-                                <p class="font20">{!! has_field($data, 'address_he_thong_phan_phoi') ? get_field($data, 'address_he_thong_phan_phoi') : '' !!}</p>
+                                <div class="font20">{!! has_field($data, 'address_he_thong_phan_phoi') ? get_field($data, 'address_he_thong_phan_phoi') : '' !!}</div>
                             </li>
                             <li>
                                 <img loading="lazy" src="{{Theme::asset()->url('images/distribution/icon_email.png')}}" alt="">
-                                <p class="font20">{{ has_field($data, 'email_he_thong_phan_phoi') ? get_field($data, 'email_he_thong_phan_phoi') : '' }}</p>
+                                <div class="font20">{{ has_field($data, 'email_he_thong_phan_phoi') ? get_field($data, 'email_he_thong_phan_phoi') : '' }}</div>
                             </li>
                             <li>
                                 <img loading="lazy" src="{{Theme::asset()->url('images/distribution/icon_phone.png')}}" alt="">
-                                <p class="font20">{{ has_field($data, 'phone_he_thong_phan_phoi') ? get_field($data, 'phone_he_thong_phan_phoi') : '' }}</p>
+                                <div class="font20">{{ has_field($data, 'phone_he_thong_phan_phoi') ? get_field($data, 'phone_he_thong_phan_phoi') : '' }}</div>
                             </li>
                         </ul>
                     </div>

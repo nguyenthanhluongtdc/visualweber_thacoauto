@@ -75,7 +75,7 @@
         @endphp
         <div class="event-news mt-55 mb-155">
             <div class="container-remake">
-                <h1 class="title font60 font-mi-bold fontmb-large mb-0">{{ __('tin tức & sự kiện') }}</h1>
+                <h1 class="title font60 font-mi-bold fontmb-large mb-0 text-uppercase">{{ __('tin tức & sự kiện') }}</h1>
             </div>
             <div class="event-news__wrap mt-40">
                 <div class="container-remake">

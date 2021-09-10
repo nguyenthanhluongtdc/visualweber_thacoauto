@@ -196,7 +196,7 @@ if (!function_exists('get_horse_power_by_brand_and_vehicle')) {
    {
       $cars = get_cars($brand, $vehicle, null);
       if (count($cars)) {
-         return $cars->pluck('horse_power')->toArray();
+         return array_unique($cars->pluck('horse_power')->toArray());
       }
       return collect();
    }
@@ -243,7 +243,7 @@ if (!function_exists('get_engine_by_brand_and_vehicle')) {
    {
       $cars = get_cars($brand, $vehicle, null);
       if (count($cars)) {
-         return $cars->pluck('engine')->toArray();
+         return array_unique($cars->pluck('engine')->toArray());
       }
       return collect();
    }

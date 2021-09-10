@@ -11,6 +11,7 @@ use Platform\Car\Repositories\Interfaces\CarInterface;
 use Platform\DistributionSystem\Repositories\Interfaces\DistributionSystemInterface;
 use Platform\Location\Repositories\Interfaces\CityInterface;
 use Platform\TestDrive\Repositories\Interfaces\TestDriveInterface;
+use Illuminate\Support\Facades\Log;
 
 class PublicController extends BaseController
 {
@@ -48,15 +49,11 @@ class PublicController extends BaseController
 
     public function getCarByShowroom(BaseHttpResponse $response, DistributionSystemInterface $distributionSystemInterface, CarInterface $carInterface)
     {
-        $showroomID = $distributionSystemInterface->getFirstBy([
-            "id" => request('showroom_id')
-        ], ['*'], ['showrooms'])['showrooms']
-            ->pluck('id')
-            ->toArray() ?? [];
+        $showroomID = $distributionSystemInterface->getFirstBy(["id" => request()->get('showroom_id')],['*'],['showrooms']);
 
         $data = $carInterface->getModel()
             ->whereHas('showrooms', function ($q) use ($showroomID) {
-                $q->where('app_showrooms.id', $showroomID);
+                $q->where('app_showrooms.id', $showroomID ? $showroomID->showrooms->pluck('id')->toArray() : []);
             })
             ->select('id', 'name')
             ->where('app_cars.status', BaseStatusEnum::PUBLISHED);
@@ -79,7 +76,6 @@ class PublicController extends BaseController
             'provision2' => 'accepted',
             'provision3' => 'accepted',
         ];
-
         $customMessages = [
             'required' => __('* Trường bắt buộc nhập'),
             'regex' => __('* Dữ liệu phải là dãy số'),
@@ -89,17 +85,17 @@ class PublicController extends BaseController
         ];
 
         $this->validate(request(), $rules, $customMessages);
-
         try {
-            $testDriveInterface->createOrUpdate(request()->all());
-
-            return redirect()->route('public.index')->with(
+            $data = $testDriveInterface->createOrUpdate(request()->all());
+            return redirect()->route('public.test-drive.get-car')->with(
                 [
                     'type' => 'success',
                     'message' => __('Bạn đã đăng ký thành công, xin cảm ơn!')
                 ]
             );
         } catch (\Throwable $th) {
+            dd($th->getMessage());
+            Log::error($th->getMessage());
             return redirect()->back()->with(
                 [
                     'type' => 'error',

@@ -234,7 +234,7 @@
             <script>
                 Swal.fire({
                         icon: 'error',
-                        title: trans('Có lỗi xảy ra'),
+                        title: "{{trans('Có lỗi xảy ra')}}",
                         text: "{!!Session::get('message')!!}",
                         })
             </script>

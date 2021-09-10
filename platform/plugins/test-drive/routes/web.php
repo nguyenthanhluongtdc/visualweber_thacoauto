@@ -25,11 +25,11 @@ Route::group(['namespace' => 'Platform\TestDrive\Http\Controllers', 'middleware'
             'uses' => 'PublicController@getShowroomByState'
         ])->name('test-drive.get-showroom');
 
-        Route::get('get-car-by-car', [
+        Route::get('get-car-by-showroom', [
             'uses' => 'PublicController@getCarByShowroom'
         ])->name('test-drive.get-car');
 
-        Route::post('get-car-by-car', [
+        Route::post('post-test-driver', [
             'uses' => 'PublicController@postTestDrive'
         ])->name('test-drive.post-test-driver');
     });

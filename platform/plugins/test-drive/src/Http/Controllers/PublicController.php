@@ -39,8 +39,10 @@ class PublicController extends BaseController
                 'state_id' => request('state_id'),
             ],
             'order_by'  => ['created_at' => 'DESC'],
-            'select' => ['id', 'name']
-        ]);
+            'select' => ['id', 'name'],
+        ])->pluck('showrooms')->toArray() ?? [];
+
+        $showrooms = call_user_func_array('array_merge', $showrooms);
 
         return $response->setData([
             "data" => $showrooms
@@ -49,11 +51,11 @@ class PublicController extends BaseController
 
     public function getCarByShowroom(BaseHttpResponse $response, DistributionSystemInterface $distributionSystemInterface, CarInterface $carInterface)
     {
-        $showroomID = $distributionSystemInterface->getFirstBy(["id" => request()->get('showroom_id')],['*'],['showrooms']);
+        // $showroomID = $distributionSystemInterface->getFirstBy(["id" => request()->get('showroom_id')], ['*'], ['showrooms']);
 
         $data = $carInterface->getModel()
-            ->whereHas('showrooms', function ($q) use ($showroomID) {
-                $q->where('app_showrooms.id', $showroomID ? $showroomID->showrooms->pluck('id')->toArray() : []);
+            ->whereHas('showrooms', function ($q) {
+                $q->where('app_showrooms.id',  request('showroom_id'));
             })
             ->select('id', 'name')
             ->where('app_cars.status', BaseStatusEnum::PUBLISHED);

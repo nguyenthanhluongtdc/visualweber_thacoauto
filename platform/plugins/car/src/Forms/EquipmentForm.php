@@ -64,7 +64,7 @@ class EquipmentForm extends FormAbstract
                 'value'      => old('cars', $selectedCategories),
             ])
             ->add('image', 'mediaImage', [
-                'label'      => __('Image'),
+                'label'      => __('Image').' (150x150px)',
                 'label_attr' => ['class' => 'control-label'],
             ])
             ->setBreakFieldPoint('status');

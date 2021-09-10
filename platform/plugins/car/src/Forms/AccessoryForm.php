@@ -59,7 +59,7 @@ class AccessoryForm extends FormAbstract
                 'choices'    => \Platform\Car\Models\Car::pluck('name','id')->toArray(),
             ])
             ->add('image', 'mediaImage', [
-                'label'      => __('Image'),
+                'label'      => __('Image').'(150x150px)',
                 'label_attr' => ['class' => 'control-label'],
             ])
             ->setBreakFieldPoint('status');

@@ -5,6 +5,7 @@ use Platform\Bank\Repositories\Interfaces\BankInterface;
 use Platform\Bankloans\Repositories\Interfaces\BankloansInterface;
 use Platform\Base\Enums\BaseStatusEnum;
 use Platform\Base\Supports\SortItemsWithChildrenHelper;
+use Platform\Car\Models\Equipment;
 use Platform\Car\Repositories\Interfaces\CarInterface;
 use Platform\Car\Repositories\Interfaces\ColorInterface;
 use Platform\Deposit\Models\DepositAccessories;
@@ -53,6 +54,7 @@ if (!function_exists('get_cars')) {
                });
             }
          }
+         
          if ($request->get('engine')) {
             $carModel = $carModel->where('engine', $request->get('engine'));
          }
@@ -113,9 +115,11 @@ if (!function_exists('get_cars_no_children')) {
             $carModel = $carModel->where('horse_power', $request->get('horse_power'));
          }
          if ($request->get('vehicle')) {
-            $slug = $slugRepository->getFirstBy(['key' => $request->get('vehicle'), 'reference_type' => \Platform\Vehicle\Models\Vehicle::class]);
+            
+            $slug = $slugRepository->getFirstBy(['key' => $request->get('vehicle'), 'reference_type' => \Platform\Car\Models\Equipment::class]);
+            // dd($slug);
             if ($slug) {
-               $carModel = $carModel->whereHas('vehicle', function ($q) use ($slug) {
+               $carModel = $carModel->whereHas('equipments', function ($q) use ($slug) {
                   return $q->whereIn('id', [$slug->reference_id]);
                });
             }

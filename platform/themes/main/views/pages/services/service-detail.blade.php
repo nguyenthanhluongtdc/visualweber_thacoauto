@@ -30,8 +30,8 @@
                         <div class="swiper-wrapper">
                             @if(has_field($data, 'slides'))
                                 @foreach (get_field($data, 'slides') as $item)
-                                    <div class="swiper-slide">
-                                        <img loading="lazy" src="{{ has_sub_field($item, 'hinh_anh') ? get_image_url(get_sub_field($item, 'hinh_anh')) : "" }}" alt="">
+                                    <div  class="swiper-slide">
+                                        <img class="image-slide" loading="lazy" src="{{ has_sub_field($item, 'hinh_anh') ? get_image_url(get_sub_field($item, 'hinh_anh')) : "" }}" alt="">
                                     </div>
                                 @endforeach
                             {{-- <div class="swiper-slide">

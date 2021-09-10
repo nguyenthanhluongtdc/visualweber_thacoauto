@@ -140,6 +140,35 @@
         }
     }
 
+    var app = {
+        dropdownCarVersions: function () {
+            $(document).on('click', '#car-version-select', function () {
+                if ($(this).hasClass('active')) {
+                    $(this).removeClass('active')
+                    $(this).parent().parent().find('#car-version-list').css({
+                        'height': 'auto',
+                        'transition': "0.2s",
+                    })
+                }
+                else {
+                    $(this).addClass('active')
+                    $(this).parent().parent().find('#car-version-list').css({
+                        'height': '0',
+                        'transition': "0.2s",
+                    })
+                }
+            });
+        },
+        handlePickerColorCar: () => {
+            $(document).on('click', '.info-color__item', function () {
+                $('.info-color__item').removeClass('active')
+                $(this).addClass('active')
+                const value = $(this).data('value')
+                $('#picker-color').val(value)
+            })
+        }
+    }
+    
     $(document).ready(function() {
         app.dropdownCarVersions()
         app.handlePickerColorCar()

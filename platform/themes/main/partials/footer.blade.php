@@ -126,7 +126,6 @@
 
         <!-- JS Library-->
         {!! Theme::footer() !!}
-
         @if (theme_option('facebook_comment_enabled_in_post', 'yes') == 'yes' || (theme_option('facebook_chat_enabled', 'yes') == 'yes' && theme_option('facebook_page_id')))
 
         <div id="fb-root"></div>
@@ -163,37 +162,35 @@
 
         <script>
             $('.slider-main-carousel').owlCarousel({
-            smartSpeed: 1000,
-            loop: true,
-            autoplay: true,
-            dots: true,
-            nav: false,
-            animateIn: 'fadeIn',
-            animateOut: 'fadeOut',
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 1
-                },
-                1000: {
-                    items: 1
+                smartSpeed: 1000,
+                loop: true,
+                autoplay: true,
+                dots: true,
+                nav: false,
+                animateIn: 'fadeIn',
+                animateOut: 'fadeOut',
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 1
+                    },
+                    1000: {
+                        items: 1
+                    }
                 }
-            }
-        });
-
-        $(function () {
-            x=8;
-            $('#myList li').slice(0, 8).show();
-            $('#loadMore').on('click', function (e) {
-                e.preventDefault();
-                x = x+4;
-                $('#myList li').slice(0, x).slideDown();
             });
-        });
 
-
+            $(function () {
+                x=8;
+                $('#myList li').slice(0, 8).show();
+                $('#loadMore').on('click', function (e) {
+                    e.preventDefault();
+                    x = x+4;
+                    $('#myList li').slice(0, x).slideDown();
+                });
+            });
         </script>
 
         <script>

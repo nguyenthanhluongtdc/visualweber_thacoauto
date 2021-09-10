@@ -89,14 +89,13 @@ class PublicController extends BaseController
         $this->validate(request(), $rules, $customMessages);
         try {
             $data = $testDriveInterface->createOrUpdate(request()->all());
-            return redirect()->route('public.test-drive.get-car')->with(
+            return redirect()->back()->with(
                 [
                     'type' => 'success',
                     'message' => __('Bạn đã đăng ký thành công, xin cảm ơn!')
                 ]
             );
         } catch (\Throwable $th) {
-            dd($th->getMessage());
             Log::error($th->getMessage());
             return redirect()->back()->with(
                 [

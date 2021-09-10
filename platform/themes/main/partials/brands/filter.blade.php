@@ -335,9 +335,9 @@
         const button = document.querySelector(".btn-join");
         const modal = document.querySelector(".overlay");
 
-        button.addEventListener("click",function(){
+        button ? button.addEventListener("click",function(){
             modal.classList.toggle("active");
-        })
+        }) : ''
 
         document.body.addEventListener("click",function(e){
             if(e.target.classList[0]=="overlay") {

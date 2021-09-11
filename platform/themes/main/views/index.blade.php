@@ -11,9 +11,11 @@
 </div>
 
 <div class="section-news-home container-remake">
-    <h2 class="font-pri-bold font60 fontmb-large color-gray" data-aos-anchor=".content-news" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out">{{ __('TIN TỨC VÀ SỰ KIỆN') }}</h2>
+    <h2 class="font-pri-bold font60 fontmb-large color-gray" >{{ __('TIN TỨC VÀ SỰ KIỆN') }}</h2>
     <div class="content content-news">
-        <div class="left left-desktop" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
+        {{-- data-aos-anchor=".content-news" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out" --}}
+        <div class="left left-desktop" >
+            {{-- data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out" --}}
             {{-- @dd(theme_option('default_category_gallery')) --}}
             @php
                 $postDesktop = get_only_featured_posts_by_category(theme_option('default_category_news'),4);
@@ -93,7 +95,8 @@
             @endif
         </div>
         <div class="right">
-            <div class="top" data-aos="fade-left" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="250">
+            <div class="top">
+                {{-- data-aos="fade-left" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="250" --}}
                 @php
                     $post = is_plugin_active('blog') ? get_first_video_post() : collect();
                 @endphp
@@ -111,7 +114,8 @@
                 @endif
             </div>
 
-            <div class="bottom" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="50">
+            <div class="bottom" >
+                {{-- data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="50" --}}
                 <div class="summary">
                     <p class="title font-pri-bold font30 fontmb-middle">
                         {{ __("Điểm tin") }}

@@ -115,7 +115,7 @@
             <div class="container-remake">
                 <p class="font-pri color-white font20 d-flex flex-wrap justify-content-between">
                     <span class="bus">{{__('business license')}}: {!! theme_option('tax-code-company') !!}</span>
-                    <span class="copy-right"> {!! __('Copyright on footer of site') !!} </span>
+                    <span class="copy-right"> {!! theme_option('copyright') !!} </span>
                 </p>
             </div>
         </div>

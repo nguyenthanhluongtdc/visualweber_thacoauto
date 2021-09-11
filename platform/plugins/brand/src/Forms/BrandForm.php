@@ -24,6 +24,7 @@ class BrandForm extends FormAbstract
         if (!$this->formHelper->hasCustomField('categoryMulti')) {
             $this->formHelper->addCustomField('categoryMulti', CategoryMultiField::class);
         }
+        // dd(\Platform\CarCategory\Models\CarCategory::whereNotNull('parent_id')->get());
         $this
             ->setupModel(new Brand)
             ->setValidatorClass(BrandRequest::class)
@@ -54,7 +55,7 @@ class BrandForm extends FormAbstract
             ->add('categories[]', 'categoryMulti', [
                 'label'      => trans('plugins/blog::posts.form.categories'),
                 'label_attr' => ['class' => 'control-label required'],
-                'choices'    => \Platform\CarCategory\Models\CarCategory::whereNotNull('parent_id')->where('parent_id','!=',0)->get(),
+                'choices'    => \Platform\CarCategory\Models\CarCategory::whereNotNull('parent_id')->get(),
                 'value'      => old('categories', $selectedCategories),
             ])
             ->add('image', 'mediaImage', [

@@ -195,6 +195,9 @@
     .span-2 {
       grid-column: span 2;
     }
+    .custom-control{
+      margin-left: 2%;
+    }
     @media only screen and (max-width: 1080px){
       .span-3 {
         grid-column: span 2;

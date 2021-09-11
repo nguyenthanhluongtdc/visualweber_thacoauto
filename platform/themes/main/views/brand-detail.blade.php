@@ -1,6 +1,6 @@
 <section class="section-brand-list">
     <div class="brand-list__banner">
-        <img loading="lazy" class="brand-list__banner__img" src="{{Theme::asset()->url('images/business/brand-detail/brand-detail-banner.jpg')}}" alt="Banner brand">
+        <img loading="lazy" class="brand-list__banner__img" src="{{get_image_url(has_field($data, 'brand_banner'))}}" alt="Banner brand">
         <div class="brand-list__banner__content">
             <h2 class= "font60 font-cond-bold text-uppercase">{{ __('tìm các dòng xe :brand', ['brand' => $data->name]) }}</h2>
             <p class="font20 font-pri">{{ __("Tìm dòng xe và đăng kí lái thử hoặc đặt hàng thanh toán") }}</p>

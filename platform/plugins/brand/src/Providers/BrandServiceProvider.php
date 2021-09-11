@@ -51,5 +51,19 @@ class BrandServiceProvider extends ServiceProvider
         });
         \SlugHelper::registerModule(Brand::class);
         \SlugHelper::setPrefix(Brand::class, 'brands');
+        $this->app->booted(function () {
+
+            if (defined('CUSTOM_FIELD_MODULE_SCREEN_NAME')) {
+                \CustomField::registerModule(Brand::class)
+                    ->registerRule('basic', trans('plugins/brand::brand.name'), Brand::class, function () {
+                        return $this->app->make(BrandInterface::class)->pluck('app_brands.name', 'app_brands.id');
+                    })
+                    ->expandRule('other', trans('plugins/custom-field::rules.model_name'), 'model_name', function () {
+                        return [
+                            Brand::class => trans('plugins/brand::brand.name'),
+                        ];
+                    });
+            }
+        });
     }
 }

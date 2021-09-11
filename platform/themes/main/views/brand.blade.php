@@ -22,6 +22,7 @@
                         <input type="radio" name="{{ 'tabs_' . $item->id }}" id="{{ 'tab_' . $item->id . '_' . $children->id }}" @if($key == 0) checked="checked" @endif>
                         <label for="{{ 'tab_' . $item->id . '_' . $children->id }}" class="font-pri font18">{{ $children->name }}</label>
                         <div class="tab">
+                            {{-- @dd($children->description) --}}
                             <h1 class="font-pri-bold font20 mb-3 fontmb-medium">{{ $children->description }}</h1>
                             <div class="font-pri font18 fontmb-little">{!! $children->content !!}</div>
                             <div class="brand-logo">

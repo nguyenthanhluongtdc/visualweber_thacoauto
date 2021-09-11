@@ -23,6 +23,7 @@ class CarCategory extends BaseModel
     protected $fillable = [
         'name',
         'description',
+        'content',
         'author_id',
         'author_type',
         'status',

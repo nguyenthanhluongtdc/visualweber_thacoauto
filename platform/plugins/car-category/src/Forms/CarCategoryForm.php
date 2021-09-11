@@ -47,6 +47,13 @@ class CarCategoryForm extends FormAbstract
                     'placeholder'  => trans('core/base::forms.name_placeholder'),
                 ],
             ])
+            ->add('content', 'editor', [
+                'label'      => trans('core/base::forms.content'),
+                'label_attr' => ['class' => 'control-label required'],
+                'attr'       => [
+                    'placeholder'     => trans('core/base::forms.description_placeholder'),
+                ],
+            ])
             ->add('status', 'customSelect', [
                 'label'      => trans('core/base::tables.status'),
                 'label_attr' => ['class' => 'control-label required'],

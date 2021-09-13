@@ -24,14 +24,13 @@ class PostRepository extends BlogPostRepository
             ->join('categories', 'post_categories.category_id', '=', 'categories.id')
             ->whereIn('post_categories.category_id', $categoryId)
             ->select('posts.*')
-            ->limit($limit)
             ->distinct()
             ->with(array_merge(['slugable'], $with))
             ->orderBy('posts.is_featured', 'desc')
             ->orderBy('posts.order', 'desc')
             ->orderBy('posts.created_at', 'desc');
 
-        return $this->applyBeforeExecuteQuery($data)->get();
+        return $this->applyBeforeExecuteQuery($data)->paginate($limit);
     }
 
     /**

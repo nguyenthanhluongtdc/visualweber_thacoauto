@@ -1,5 +1,5 @@
 @php
-    $posts = get_all_posts(true,3);
+    $posts = get_posts_by_category(theme_option('default_category_news'),3);
 @endphp
 <div class="section-list-news-wrapper-mobile mechandical">
     <div class="container-remake">
@@ -84,8 +84,10 @@
             </div>
         </div>
     </div>
+    @if(!empty($posts))
     <div class="container-remake">
         {{ $posts->links('vendor.pagination.custom') }}
     </div>
+    @endif
 </div>
 

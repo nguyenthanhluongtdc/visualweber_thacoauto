@@ -13,7 +13,8 @@
             </div>
 
             <div class="content">
-                @foreach(get_latest_posts(3) as $post)
+                @if(!empty(get_posts_by_category(theme_option('default_category_news'),3)))
+                @foreach(get_posts_by_category(theme_option('default_category_news'),3) as $post)
                     <div class="item mx-0" data-aos="fade-left" data-aos-duration="1500" data-aos-easing="ease-in-out"
                         data-aos-delay="50">
                         <div class="item__left">
@@ -55,7 +56,13 @@
                         </div>
                     </div>
                 @endforeach
+                @endif
             </div>
+            @if(!empty(get_posts_by_category(theme_option('default_category_news'),3)))
+            <div class="container-remake">
+                {{ get_posts_by_category(theme_option('default_category_news'),3)->links('vendor.pagination.custom') }}
+            </div>
+            @endif
         </div>
     </div>
 

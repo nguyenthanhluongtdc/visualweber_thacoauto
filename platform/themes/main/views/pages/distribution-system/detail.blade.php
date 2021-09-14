@@ -7,7 +7,6 @@
 @php
     Theme::asset()->container('footer')->usePath()->add('distribution', 'js/distribution.js', [], [], time());
 @endphp
-
 @if (isset($data) && !blank($data))
     <div class="distribution-detail overflow-x-hidden">
         <div class="thacoauto-provincial">
@@ -70,9 +69,10 @@
             <div class="js-showroom-content container-remake"></div>
         </div>
         @php
-            $posts = get_posts_by_category(theme_option('default_category_news'), 4);
-            $pictures = get_posts_by_category(theme_option('default_category_gallery'), 4);
+            $posts = get_featured_posts_by_category_with_province_id(theme_option('default_category_news'),$data->state_id, 4);
+            $pictures = get_featured_posts_by_category_with_province_id(theme_option('default_category_gallery'),$data->state_id, 4);
         @endphp
+        {{-- @dd($posts) --}}
         <div class="event-news mt-55 mb-155">
             <div class="container-remake">
                 <h1 class="title font60 font-mi-bold fontmb-large mb-0 text-uppercase">{{ __('tin tức & sự kiện') }}</h1>

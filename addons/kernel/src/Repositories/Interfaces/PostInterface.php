@@ -20,6 +20,13 @@ interface PostInterface extends BlogPostInterface
      * @param array $with
      * @return mixed
      */
+    public function getFeaturedByCategoryWithProvinceId($categoryId, $provinceId, int $paginate = 5, array $with = []);
+    /**
+     * @param array $categoryId
+     * @param int $limit
+     * @param array $with
+     * @return mixed
+     */
     public function getOnlyFeaturedByCategory($categoryId, int $limit = 5, array $with = []);
 
     /**

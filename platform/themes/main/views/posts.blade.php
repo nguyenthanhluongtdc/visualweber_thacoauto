@@ -36,8 +36,8 @@
         <div class="media-bottom">
             <div class="list-all-post">
                 <div class="list-all-post-wrap">
-                    @if (!empty($posts))
-                        @foreach ($posts as $post)
+                    @if (!empty($postsLatest))
+                        @foreach ($postsLatest as $post)
                         <div class="all-post-item">
                             <div class="post-thumbnail-wrap">
                                 <div class="post-thumbnail fontmb-medium">
@@ -59,8 +59,8 @@
                     @endif
 
                 </div>
-                @if(!empty($posts))
-                    {{ $posts->links('vendor.pagination.custom') }}
+                @if(!empty($postsLatest))
+                    {{ $postsLatest->links('vendor.pagination.custom') }}
                 @endif
             </div>
             <div class="list-post-new" data-aos="fade-left" data-aos-duration="500" data-aos-delay="50" class="aos-init aos-animate">

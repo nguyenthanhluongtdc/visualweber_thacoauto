@@ -40,7 +40,7 @@
 
                     </div>
 
-                    {!! Form::open(['route' => 'public.send.contact', 'method' => 'POST', 'class' => 'contact-form']) !!}
+                    {{-- {!! Form::open(['route' => 'public.send.contact', 'method' => 'POST', 'class' => 'contact-form']) !!}
                     <div class="mechanical-contact__info">
                         <div class="row input-container">
                             <div class="col-6">
@@ -110,7 +110,7 @@
                     </div>
                 @endif
             @endif
-                    {!! Form::close() !!}
+                    {!! Form::close() !!} --}}
                 </div>
             </div>
         </div>

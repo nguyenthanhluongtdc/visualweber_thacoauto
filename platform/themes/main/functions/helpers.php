@@ -40,6 +40,19 @@ if (!function_exists('get_only_featured_posts_by_category')) {
         return app(PostInterface::class)->getOnlyFeaturedByCategory($categoryId, $limit, $with);
     }
 }
+if (!function_exists('get_featured_posts_by_category_with_province_id')) {
+    /**
+     * @param array $categoryId
+     * @param int $limit
+     * @param array $with
+     * @return \Illuminate\Support\Collection
+     */
+    function get_featured_posts_by_category_with_province_id($categoryId, $provinceId, $paginate, array $with = [])
+    {
+        return app(PostInterface::class)->getFeaturedByCategoryWithProvinceId($categoryId, $provinceId, $paginate, $with);
+    }
+}
+
 if (!function_exists('get_file_name')) {
     function get_file_name($reference)
     {

@@ -17,6 +17,15 @@ class PostCacheDecorator extends BlogPostCacheDecorator
     /**
      * {@inheritDoc}
      */
+    public function getFeaturedByCategoryWithProvinceId($categoryId, $provinceId, int $paginate = 5, array $with = [])
+    {
+        return $this->getDataIfExistCache(__FUNCTION__, func_get_args());
+    }
+
+
+    /**
+     * {@inheritDoc}
+     */
     public function getOnlyFeaturedByCategory($categoryId, int $limit = 5, array $with = [])
     {
         return $this->getDataIfExistCache(__FUNCTION__, func_get_args());

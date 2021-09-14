@@ -5,7 +5,7 @@
             // $posts = get_posts_by_category(16, 3);
         // }
         // else{
-            $posts = get_posts_by_category($category->id ?? 16, 3);
+            $posts = get_posts_by_category($category->id ?? 16, 10);
         // }
     @endphp
     @if (!empty($posts))

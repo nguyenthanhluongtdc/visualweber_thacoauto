@@ -36,6 +36,31 @@ class PostRepository extends BlogPostRepository
     /**
      * {@inheritDoc}
      */
+    public function getFeaturedByCategoryWithProvinceId($categoryId, $provinceId, int $paginate = 5, array $with = [])
+    {
+        if (!is_array($categoryId)) {
+            $categoryId = [$categoryId];
+        }
+
+        $data = $this->model
+            ->whereStatus(BaseStatusEnum::PUBLISHED)
+            ->whereHas('categories', function ($q) use ($categoryId) {
+                $q->whereIn('categories.id', $categoryId);
+            })
+            ->where('posts.city_id', $provinceId)
+            ->select('posts.*')
+            ->distinct()
+            ->with(array_merge(['slugable'], $with))
+            ->orderBy('posts.is_featured', 'desc')
+            ->orderBy('posts.order', 'desc')
+            ->orderBy('posts.created_at', 'desc');
+
+        return $this->applyBeforeExecuteQuery($data)->paginate($paginate);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function getAllWithFeatured(int $limit = 5, array $except = [], array $with = [])
     {
         if (!is_array($except)) {
@@ -103,6 +128,7 @@ class PostRepository extends BlogPostRepository
 
         return $this->applyBeforeExecuteQuery($data)->paginate($limit);
     }
+    
 
     /**
      * {@inheritDoc}

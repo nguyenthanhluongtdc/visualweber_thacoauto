@@ -184,7 +184,7 @@ class ThacoController extends PublicController
 
     public function getNewPosts()
     {
-        $data['posts'] = $this->postInterface->getOnlyFeaturedByCategoryCreated(15, request('limit', 5));
+        $data['posts'] = $this->postInterface->getOnlyFeaturedByCategoryCreated(15, request('limit', 10));
 
         return response([
             "data" => Theme::partial('templates/post', $data),

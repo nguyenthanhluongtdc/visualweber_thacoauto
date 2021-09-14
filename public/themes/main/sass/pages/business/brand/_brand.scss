@@ -135,7 +135,9 @@
                         position: relative;
                         width: 100%;
                         height: auto;
-
+                        @media (min-width: 1080px) {
+                            transform: scale(0.8);
+                        }
                     }
                     &::before{
                         position: absolute;

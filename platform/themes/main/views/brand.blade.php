@@ -28,7 +28,8 @@
                             <div class="brand-logo">
                                 @foreach ($children->brands ?? collect() as $brand)
                                     <div class="logo-img">
-                                        <a href="{{ $brand->url }}">
+                                        {{-- @dd($brand) --}}
+                                        <a href="{{ has_field($brand, 'brand_external_link') }}">
                                             <img loading="lazy" src="{{ get_image_url($brand->image) }}" alt="{{ $brand->name }}" >
                                         </a>
                                     </div>

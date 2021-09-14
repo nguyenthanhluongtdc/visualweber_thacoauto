@@ -568,6 +568,10 @@
         display: grid;
         grid-template-columns: 20% 80%;
         @include marginTop(60, "+");
+        @media (max-width: 480px){
+            display: flex;
+            flex-wrap: wrap;
+        }
 
         &:first-child {
             margin-top: 0;
@@ -578,6 +582,11 @@
             text-transform: uppercase;
             color: #333333;
             // @include paddingTop(30);
+            @media (max-width: 480px){
+                max-width: 100%;
+                flex: 1 100%
+            }
+            
         }
 
         &__content {

@@ -35,12 +35,12 @@
                         <div id="contact-form" class="form-horizontal form-contact-us">
                             {!! Form::open(['route' => 'public.send.contact', 'method' => 'POST', 'class' => 'contact-form']) !!}
                             <div class="form-group row">
-                                <label for="" class="col-sm-3 text-label mt-3">{{ __('Send to') }}:</label>
+                                <label for="company" class="col-sm-3 text-label mt-3">{{ __('Send to') }}:</label>
                                 <div class="col-sm-6 pr-0">
                                     <select name="company" id="contact_company">
                                         @if (has_field($page, 'send_to_list'))
                                         @foreach (get_field($page, 'send_to_list') as $key => $item)
-                                        <option value="{{ get_sub_field($item, 'send_to_item') }}">{{ get_sub_field($item, 'send_to_item') }}</option>
+                                        <option value="{{ get_sub_field($item, 'email') }}">{{ get_sub_field($item, 'send_to_item') }}</option>
                                         @endforeach
 
                                         @endif
@@ -131,6 +131,18 @@
 
                 <div id="contact-form" class="form-horizontal form-contact-us">
                     {!! Form::open(['route' => 'public.send.contact', 'method' => 'POST']) !!}
+                    <div class="contact-input">
+                        <label class="fontmb-medium font-pri-bold text-uppercase">{{ __('Send to') }}<span>*</span></label>
+                            <select name="company" class="contact-form-input" id="contact_company">
+                                @if (has_field($page, 'send_to_list'))
+                                @foreach (get_field($page, 'send_to_list') as $key => $item)
+                                <option value="{{ get_sub_field($item, 'email') }}">{{ get_sub_field($item, 'send_to_item') }}</option>
+                                @endforeach
+
+                                @endif
+                            </select>
+
+                    </div>
                     <div class="contact-input">
                         <label class="fontmb-medium font-pri-bold text-uppercase">{{ __('Full name') }}<span>*</span></label>
                         <input type="text" class="contact-form-input" name="name" value="{{ old('name') }}" id="contact_name"

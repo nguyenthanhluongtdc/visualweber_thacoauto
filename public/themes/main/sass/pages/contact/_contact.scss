@@ -339,7 +339,7 @@
                 }
             }
             
-            input, textarea{
+            input, textarea, select{
                 border: 0;
                 width: 100%;
                 background-color: #f1f1f1;
@@ -690,7 +690,7 @@
 }
 
 @media(max-width : 1024px){
-    .section-info-contact-mobile .info-contact .contact-input input, .section-info-contact-mobile .info-contact .contact-input textarea{
+    .section-info-contact-mobile .info-contact .contact-input input, .section-info-contact-mobile .info-contact .contact-input textarea, .section-info-contact-mobile .info-contact .contact-input select{
         padding: 10px;
     }
 }

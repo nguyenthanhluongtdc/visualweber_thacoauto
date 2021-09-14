@@ -59,7 +59,14 @@ class PublicController extends Controller
                     'contact_address' => $contact->address ?? 'N/A',
                     'contact_content' => $contact->content ?? 'N/A',
                 ])
-                ->sendUsingTemplate('notice');
+                ->sendUsingTemplate('notice',$request->company);
+                // ->send(
+                //     'notice',
+                //     'Liên hệ',
+                //     $request->company,
+                //     [],
+                //     true
+                // );
             return $response->setMessage(__('Send message successfully!'));
         } catch (Exception $exception) {
             info($exception->getMessage());

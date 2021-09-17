@@ -71,6 +71,39 @@ var SlideSwiper = {
     }
 }
 
+var swiperHotnews = new Swiper('.swiper-hotnews', {
+    slidesPerView: 3,
+    direction: "vertical",
+    breakpoints: {
+        "480": {
+            slidesPerView: 3,
+        },
+        "768": {
+            slidesPerView: 4,
+        },
+    },
+});
+var swiperHotnewsTitle = new Swiper('.swiper-hotnews-title', {
+    slidesPerView: 3,
+    direction: "vertical",
+    scrollbar: {
+        el: ".swiper-scrollbar",
+        draggable: true,
+        // scrollHiden: false
+     },
+    breakpoints: {
+        "480": {
+            slidesPerView: 3,
+        },
+        "768": {
+            slidesPerView: 4,
+        },
+    },
+});
+
+swiperHotnewsTitle.controller.control = swiperHotnews;
+swiperHotnews.controller.control = swiperHotnewsTitle;
+
 var galleryTop = new Swiper('.distribution-slide-left', {
     centeredSlides: true,
     loop: true,
@@ -296,29 +329,6 @@ var Helper = {
                 $(".header").removeClass("header-fixed");
             }
         }); //missing );
-    },
-    scrollNewsHomepage: () => {
-        if ($('#hours .logo-frame').length > 0) {
-            var numOfHours = $('#hours .logo-frame').length
-            if (numOfHours != null) {
-                for (i = 0; i <= numOfHours/2; i++) {
-                    var cellHeight = $('#cells').children('.flag-' + i).outerHeight()
-                    $('#hours').children('.flag-' + i).height(cellHeight)
-
-                    //mobile
-                    var cellMbHeight = $('#cells').children('.flag-mb-' + i).outerHeight()
-                    $('#hours').children('.flag-mb-' + i).height(cellMbHeight)
-                    console.log(cellMbHeight);
-                }
-            }
-            // console.log($('#cells').children('.flag-' + 0).outerHeight());
-            $('#cells').on('scroll', function () {
-                $('#hours').scrollTop($(this).scrollTop());
-            });
-            $('#hours').on('scroll', function () {
-                $('#cells').scrollTop($(this).scrollTop());
-            });
-        }
     },
     zeynepInit: function () {
         let is_enable_menu = false
@@ -631,7 +641,6 @@ $(document).ready(function () {
     Helper.transitionHeaderFixed();
     Helper.addSelect2toCarFilterProvinces();
     Helper.RangeFilterBranddetail();
-    Helper.scrollNewsHomepage();
     Helper.zeynepInit();
     Ajax.handleLoadCarOption();
     Ajax.getMonthsAcceptLoans();

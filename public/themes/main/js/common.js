@@ -301,12 +301,17 @@ var Helper = {
         if ($('#hours .logo-frame').length > 0) {
             var numOfHours = $('#hours .logo-frame').length
             if (numOfHours != null) {
-                for (i = 1; i <= numOfHours; i++) {
+                for (i = 0; i <= numOfHours/2; i++) {
                     var cellHeight = $('#cells').children('.flag-' + i).outerHeight()
                     $('#hours').children('.flag-' + i).height(cellHeight)
+
+                    //mobile
+                    var cellMbHeight = $('#cells').children('.flag-mb-' + i).outerHeight()
+                    $('#hours').children('.flag-mb-' + i).height(cellMbHeight)
+                    console.log(cellMbHeight);
                 }
             }
-
+            // console.log($('#cells').children('.flag-' + 0).outerHeight());
             $('#cells').on('scroll', function () {
                 $('#hours').scrollTop($(this).scrollTop());
             });

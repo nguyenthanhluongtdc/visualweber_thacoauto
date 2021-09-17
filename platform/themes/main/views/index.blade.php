@@ -101,21 +101,49 @@
                 <p class="title font-pri-bold font30 fontmb-middle">
                     {{ __("Điểm tin") }}
                 </p>
-                <a href="{{get_category_by_id(theme_option('default_category_news_summary'))->url}}" class="font-pri-bold font20 fontmb-middle">
+                <a href="{{get_category_by_id(theme_option('default_category_news_summary'))->url}}" class="font-pri-bold font20 fontmb-small">
                     {{_('Xem tất cả')}} <span><i class="fas fa-arrow-right scale07"></i></span>
                 </a>
                 {{-- <a class="font-pri-bold font20 fontmb-small" href="{{get_category_by_id(theme_option('default_category_news_summary'))->url}}">Xem thêm</a> --}}
             </div>
 
-            <div class="scollbar-wrap-home">
+            <div class="scollbar-wrap">
                 @php
                     $postsHot = get_posts_by_category(theme_option('default_category_news_summary'), 10)
                     
                 @endphp
-                <div id="hours">
+                <div class="swiper-container swiper-hotnews">
+                    <div class="swiper-wrapper">
+                        @if (!empty($postsHot))
+                        @foreach ($postsHot as $key => $post)
+                        <div class="swiper-slide">
+                            {{-- {{ Theme::asset()->url('images/favicon.png') }} --}}
+                            <img src='{{ get_image_url(has_field($post, 'hot_news_image')) }}'
+                            alt='{{$post->name}}' />
+                        </div>
+                        @endforeach
+                        @endif
+                  </div>
+                </div>
+                <div class="swiper-container swiper-hotnews-title">
+                    <div class="swiper-wrapper">
+                        @if (!empty($postsHot))
+                        @foreach ($postsHot as $key => $post)
+                        <div class="swiper-slide">
+                            <span class="font-pri-bold font25 fontmb-small">
+                                <a href="{{$post->url}}" class="text-uppercase-none">{{$post->name}}</a>
+                            </span>
+                        </div>
+                        @endforeach
+                        @endif
+                  </div>
+                      <!-- Add Scrollbar -->
+                    <div class="swiper-scrollbar"></div>
+                </div>
+                {{-- <div id="hours">
                     @if (!empty($postsHot))
-                        @foreach ($postsHot as $post)
-                        <img loading="lazy" class="logo-frame flag-1" src="{{ get_image_url(has_field($post, 'hot_news_image')) }}" alt="{{$post->name}}">
+                        @foreach ($postsHot as $key => $post)
+                        <div class="logo-frame flag-{{$key}}" ></div>
                         @endforeach
                     @else
                         
@@ -124,10 +152,10 @@
                 <div id="cells">
 
                     @if (!empty($postsHot))
-                        @foreach ($postsHot as $post)
-                        <div class="cell-item flag-1">
+                        @foreach ($postsHot as $key => $post)
+                        <div class="cell-item flag-{{$key}}">
                             <div class="frame">
-                                <img loading="lazy" src="{{ get_image_url(has_field($post, 'hot_news_image')) }}" alt="{{$post->name}}">
+                                <img loading="lazy" src="{{ Theme::asset()->url('images/favicon.png') }}" alt="{{$post->name}}">
                             </div>
                             <span class="font-pri-bold font25 fontmb-small">
                                 <a href="{{$post->url}}" class="text-uppercase-none">{{$post->name}}</a>
@@ -138,156 +166,13 @@
                         {{__('No data to show')}}
                     @endif
                     </h5>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
 
 
-    <div class="content content-news">
-        {{-- data-aos-anchor=".content-news" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out" --}}
-        <div class="left left-desktop " >
-            {{-- data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out" --}}
-            {{-- @dd(theme_option('default_category_gallery')) --}}
-            
-            @if (!empty($postDesktop))
-                @foreach ($postDesktop as $post)
-                    @if($loop->first)
-                    <div class="left-top">
-                        <div class="frame">
-                            <div class="item-img-main">
-                                <a href="{{$post->url}}"><img loading="lazy" src="{{ get_object_image($post->image, 'post-large') }}" alt="{{$post->name}}"></a>
-                            </div>
-
-                            <div class="item-main">
-                                <div class="item-content">
-                                    <h3 class="title font-pri-bold font30  text-uppercase-none fontmb-middle">
-                                        <a href="{{$post->url}}" >{{$post->name}}</a>
-                                    </h3>
-                                    <p class="desc font-pri font18 fontmb-small">
-                                        {{Str::words($post->description,30)}}
-                                    </p>
-                                    <div class="city-day font-pri font18 fontmb-little">
-                                        <span class="city">{{ $post->city->name ?? '--' }}</span>
-                                        <span class="day">{{date_format($post->created_at,"d-m-Y")}}</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    @else
-                    <div class="item">
-                        <div class="item-content">
-                            <h3 class="title font-pri-bold font30 fontmb-middle text-uppercase-none">
-                                <a href="{{$post->url}}">{{$post->name}}</a>
-                            </h3>
-                            <p class="desc font-pri font18 fontmb-small">
-                                {{Str::words($post->description,25)}}
-                            </p>
-                            <div class="city-day font-pri font18 fontmb-little">
-                                <span class="city">{{ $post->city->name ?? '--' }}</span>
-                                <span class="day">{{date_format($post->created_at,"d-m-Y")}}</span>
-                            </div>
-                        </div>
-                    </div>
-                    @endif
-                @endforeach
-            @endif
-
-            <div class="avatar-news">
-                <img loading="lazy" src="{{ Theme::asset()->url('images/main/avt.png') }}" alt="avatar">
-            </div>
-        </div>
-        <div class="left left-mobile">
-            @if (!empty($postMobile))
-                @if($postMobile->first())
-                    <div class="item-img-main">
-                        <a href="{{$postMobile->first()->url}}"><img loading="lazy" src="{{ get_object_image($postMobile->first()->image, 'post-large') }}" alt="{{$post->name}}"></a>
-                    </div>
-                @endif
-                @foreach ($postMobile as $post)
-                    <div class="item">
-                        <div class="item-content">
-                            <h3 class="title font-pri-bold font20 text-uppercase-none fontmb-medium">
-                                <a href="{{$post->url}}">{{$post->name}}</a>
-                            </h3>
-                            <p class="desc font-pri font18 fontmb-small">
-                                {{Str::words($post->description,20)}}
-                            </p>
-                            <div class="city-day font-pri font18">
-                                <span class="city">{{ $post->city->name ?? '--' }}</span>
-                                <span class="day">{{date_format($post->created_at,"d-m-Y")}}</span>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-            @endif
-        </div>
-        <div class="right">
-            <div class="top">
-                {{-- data-aos="fade-left" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="250" --}}
-                @php
-                    $post = is_plugin_active('blog') ? get_first_video_post() : collect();
-                @endphp
-
-                @if(!blank($post) && isset(get_field($post, 'video_gallery')[0]))
-                    <div class="img-item">
-                        <a data-fancybox href="https://www.youtube.com/watch?v={{get_sub_field(get_field($post, 'video_gallery')[0], 'youtube_code')}}">
-                            <div class="play"></div>
-                            <img loading="lazy" src="{{ get_object_image($post->image) }}" alt="{{$post->name}}">
-                        </a>
-                    </div>
-                    <h3 class="title font30 fontmb-small text-uppercase-none">
-                        <a data-fancybox href="https://www.youtube.com/watch?v={{get_sub_field(get_field($post, 'video_gallery')[0], 'youtube_code')}}" class="font-pri-bold color-gray font30 fontmb-small">{{$post->name}}</a>
-                    </h3>
-                @endif
-            </div>
-
-            <div class="bottom" >
-                {{-- data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="50" --}}
-                <div class="summary">
-                    <p class="title font-pri-bold font30 fontmb-middle">
-                        {{ __("Điểm tin") }}
-                    </p>
-                    <a class="font-pri-bold font20 fontmb-small" href="{{get_category_by_id(theme_option('default_category_news_summary'))->url}}">Xem thêm</a>
-                </div>
-
-                <div class="scollbar-wrap-home">
-                    @php
-                        $postsHot = get_posts_by_category(theme_option('default_category_news_summary'), 10)
-                        
-                    @endphp
-                    <div id="hours">
-                        @if (!empty($postsHot))
-                            @foreach ($postsHot as $post)
-                            <img loading="lazy" class="logo-frame flag-1" src="{{ get_image_url(has_field($post, 'hot_news_image')) }}" alt="{{$post->name}}">
-                            @endforeach
-                        @else
-                            
-                        @endif
-                    </div>
-                    <div id="cells">
-
-                        @if (!empty($postsHot))
-                            @foreach ($postsHot as $post)
-                            <div class="cell-item flag-1">
-                                <div class="frame">
-                                    <img loading="lazy" src="{{ get_image_url(has_field($post, 'hot_news_image')) }}" alt="{{$post->name}}">
-                                </div>
-                                <span class="font-pri-bold font25 fontmb-small">
-                                    <a href="{{$post->url}}" class="text-uppercase-none">{{$post->name}}</a>
-                                </span>
-                            </div>
-                            @endforeach
-                        @else
-                            {{__('No data to show')}}
-                        @endif
-                        </h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 </div>
 
 {{-- lĩnh vực hoạt động --}}

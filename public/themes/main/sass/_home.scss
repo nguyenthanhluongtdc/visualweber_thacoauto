@@ -118,7 +118,7 @@
     overflow-y: auto;
     overflow-x: hidden;
     border-radius: 5px;
-    @media (max-width: 1680px) {left: 17%; height: 185%;}
+    @media (max-width: 1680px) {left: 17%;}
     @media (max-width: 1440px) {left: 20%;}
     @media (max-width: 1300px) {left: 20%;}
     .logo-frame {
@@ -273,6 +273,9 @@
       }
       .title{
         flex-shrink: 0;
+        a{
+          @include split_str(2);
+        }
       }
     }
     .news-4{

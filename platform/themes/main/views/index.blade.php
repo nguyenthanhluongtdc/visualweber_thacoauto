@@ -11,16 +11,145 @@
 </div>
 
 <div class="section-news-home container-remake">
+    @php
+        $postDesktop = get_only_featured_posts_by_category(theme_option('default_category_news'),4);
+        $postMobile = get_only_featured_posts_by_category(theme_option('default_category_news'),2);
+    @endphp
+
     <h2 class="font-pri-bold font60 fontmb-large color-gray" >{{ __('TIN TỨC VÀ SỰ KIỆN') }}</h2>
+
+
+    <div class="news-hompage">
+        <div class="news-item news-1">
+            <a href="{{$postDesktop[0]->url}}"><img loading="lazy" src="{{ get_object_image($postDesktop[0]->image, 'post-large') }}" alt="{{$postDesktop[0]->name}}"></a>
+        </div>
+        <div class="news-item news-2">
+            <div class="content-top">
+                <h3 class="title font-pri-bold font30  text-uppercase-none fontmb-middle">
+                    <a href="{{$postDesktop[0]->url}}" >{{$postDesktop[0]->name}}</a>
+                </h3>
+                <p class="desc font-pri font18 fontmb-small">
+                    {{$postDesktop[0]->description}}
+                </p>
+            </div>
+            <div class="city-day font-pri font18 fontmb-little">
+                <span class="city">{{ $postDesktop[0]->city->name ?? '--' }}</span>
+                <span class="day">{{date_format($postDesktop[0]->created_at,"d-m-Y")}}</span>
+            </div>
+        </div>
+        <div class="news-item news-3">
+            @php
+                $post = is_plugin_active('blog') ? get_first_video_post() : collect();
+            @endphp
+
+            @if(!blank($post) && isset(get_field($post, 'video_gallery')[0]))
+                <div class="img-item">
+                    <a data-fancybox href="https://www.youtube.com/watch?v={{get_sub_field(get_field($post, 'video_gallery')[0], 'youtube_code')}}">
+                        <i class="fab fa-youtube"></i>
+                        <img loading="lazy" src="{{ get_object_image($post->image) }}" alt="{{$post->name}}">
+                    </a>
+                </div>
+                <h3 class="title font30 fontmb-small text-uppercase-none">
+                    <a data-fancybox href="https://www.youtube.com/watch?v={{get_sub_field(get_field($post, 'video_gallery')[0], 'youtube_code')}}" class="font-pri-bold color-gray font30 fontmb-small">{{$post->name}}</a>
+                </h3>
+            @endif
+        </div>
+        <div class="news-item news-4">
+            <div class="news-item-content">
+                <h3 class="title font-pri-bold font30 fontmb-middle text-uppercase-none">
+                    <a href="{{$postDesktop[1]->url}}">{{$postDesktop[1]->name}}</a>
+                </h3>
+                <p class="desc font-pri font18 fontmb-small">
+                    {{$postDesktop[1]->description}}
+                </p>
+            </div>
+            <div class="city-day font-pri font18 fontmb-little">
+                <span class="city">{{ $postDesktop[1]->city->name ?? '--' }}</span>
+                <span class="day">{{date_format($postDesktop[1]->created_at,"d-m-Y")}}</span>
+            </div>
+        </div>
+        <div class="news-item news-5">
+            <div class="news-item-content">
+                <h3 class="title font-pri-bold font30 fontmb-middle text-uppercase-none">
+                    <a href="{{$postDesktop[2]->url}}">{{$postDesktop[2]->name}}</a>
+                </h3>
+                <p class="desc font-pri font18 fontmb-small">
+                    {{$postDesktop[2]->description}}
+                </p>
+            </div>
+            <div class="city-day font-pri font18 fontmb-little">
+                <span class="city">{{ $postDesktop[2]->city->name ?? '--' }}</span>
+                <span class="day">{{date_format($postDesktop[2]->created_at,"d-m-Y")}}</span>
+            </div>
+        </div>
+        <div class="news-item news-6">
+            <div class="news-item-content">
+                <h3 class="title font-pri-bold font30 fontmb-middle text-uppercase-none">
+                    <a href="{{$postDesktop[3]->url}}">{{$postDesktop[3]->name}}</a>
+                </h3>
+                <p class="desc font-pri font18 fontmb-small">
+                    {{$postDesktop[3]->description}}
+                </p>
+            </div>
+            <div class="city-day font-pri font18 fontmb-little">
+                <span class="city">{{ $postDesktop[3]->city->name ?? '--' }}</span>
+                <span class="day">{{date_format($postDesktop[3]->created_at,"d-m-Y")}}</span>
+            </div>
+        </div>
+        <div class="news-item news-7">
+            <div class="summary">
+                <p class="title font-pri-bold font30 fontmb-middle">
+                    {{ __("Điểm tin") }}
+                </p>
+                <a href="{{get_category_by_id(theme_option('default_category_news_summary'))->url}}" class="font-pri-bold font20 fontmb-middle">
+                    {{_('Xem tất cả')}} <span><i class="fas fa-arrow-right scale07"></i></span>
+                </a>
+                {{-- <a class="font-pri-bold font20 fontmb-small" href="{{get_category_by_id(theme_option('default_category_news_summary'))->url}}">Xem thêm</a> --}}
+            </div>
+
+            <div class="scollbar-wrap-home">
+                @php
+                    $postsHot = get_posts_by_category(theme_option('default_category_news_summary'), 10)
+                    
+                @endphp
+                <div id="hours">
+                    @if (!empty($postsHot))
+                        @foreach ($postsHot as $post)
+                        <img loading="lazy" class="logo-frame flag-1" src="{{ get_image_url(has_field($post, 'hot_news_image')) }}" alt="{{$post->name}}">
+                        @endforeach
+                    @else
+                        
+                    @endif
+                </div>
+                <div id="cells">
+
+                    @if (!empty($postsHot))
+                        @foreach ($postsHot as $post)
+                        <div class="cell-item flag-1">
+                            <div class="frame">
+                                <img loading="lazy" src="{{ get_image_url(has_field($post, 'hot_news_image')) }}" alt="{{$post->name}}">
+                            </div>
+                            <span class="font-pri-bold font25 fontmb-small">
+                                <a href="{{$post->url}}" class="text-uppercase-none">{{$post->name}}</a>
+                            </span>
+                        </div>
+                        @endforeach
+                    @else
+                        {{__('No data to show')}}
+                    @endif
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <div class="content content-news">
         {{-- data-aos-anchor=".content-news" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out" --}}
-        <div class="left left-desktop" >
+        <div class="left left-desktop " >
             {{-- data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out" --}}
             {{-- @dd(theme_option('default_category_gallery')) --}}
-            @php
-                $postDesktop = get_only_featured_posts_by_category(theme_option('default_category_news'),4);
-                $postMobile = get_only_featured_posts_by_category(theme_option('default_category_news'),2);
-            @endphp
+            
             @if (!empty($postDesktop))
                 @foreach ($postDesktop as $post)
                     @if($loop->first)

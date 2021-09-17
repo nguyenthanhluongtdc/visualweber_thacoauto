@@ -92,6 +92,8 @@
   height: 12px;
 }
 
+
+
 .scollbar-wrap-home {
   display: flex;
   align-items: center;
@@ -106,7 +108,7 @@
     -moz-appearance: none;
     position: absolute;
     top: 0;
-    height: 180%;
+    height: 100%;
     left: 16%;
     z-index: 2;
     display: block;
@@ -131,7 +133,7 @@
   #cells {
     display: block;
     width: 100%;
-    height: 180%;
+    height: 100%;
     top: 0;
     left: 0;
     line-height: 20px;
@@ -177,6 +179,157 @@
 }
 
 .section-news-home {
+  .news-hompage{
+    @media (max-width:1080px){
+      display: none;
+    }
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1.2fr;
+    grid-template-rows: 23vw 23vw;
+    grid-gap: 20px;
+    grid-template-areas: 
+      "n1 n1 n2 n3"
+      "n4 n5 n6 n7"
+    ;
+    .news-1{
+      
+      grid-area: n1;
+      background-color: blanchedalmond;
+      position: relative;
+      a{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    .news-2{
+      grid-area: n2;
+      display: flex;
+      flex-direction: column;
+      .content-top{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        .title{
+          a{
+            color: black;
+            @include split_str(2);
+          }
+        }
+        .desc{
+          text-align: justify;
+          @include split_str(6);
+        }
+      }
+      .city-day{
+        flex-shrink: 0;
+      }
+    }
+    .news-3{
+      grid-area: n3;
+      display: flex;
+      flex-direction: column;
+      .img-item{
+        flex: 1;
+        a{
+          width: 100%;
+          position: relative;
+          .fa-youtube{
+            font-size: 7vw;
+            color: red;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            &::after{
+              position: absolute;
+              content: "";
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+              width: 50%;
+              height: 50%;
+              background-color: white;
+              z-index: -1;
+            }
+          }
+          &:hover{
+            .fa-youtube{
+              color: black;
+            }
+          }
+        }
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .title{
+        flex-shrink: 0;
+      }
+    }
+    .news-4{
+      grid-area: n4;
+    }
+    .news-5{
+      grid-area: n5;
+    }
+    .news-6{
+      grid-area: n6;
+    }
+    .news-7{
+      grid-area: n7;
+      display: flex;
+      flex-direction: column;
+      
+      .summary{
+        flex-shrink: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .title{
+          margin: 0;
+        }
+        a{
+          color: black;
+        }
+      }
+      .scollbar-wrap-home{
+        flex: 1;
+        overflow-y: hidden;
+      }
+    }
+
+    .news-4, .news-5, .news-6{
+      display: flex;
+      flex-direction: column;
+      .news-item-content{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        a{
+          color: black;
+          @include split_str(2);
+        }
+        .desc{
+          text-align: justify;
+          @include split_str(6);
+        }
+      }
+      .city-day{
+        flex-shrink: 0;
+      }
+    }
+  }
+
+
   padding: 90px 0 60px 0;
   @media (max-width: 1680px) {
     padding: 75px 0 55px 0;
@@ -202,7 +355,7 @@
   .content {
     display: flex;
     justify-content: space-between;
-
+    
     .left {
       width: 70%;
       display: flex;
@@ -482,6 +635,14 @@
     }
     .left-mobile {
       display: none;
+    }
+    .left-desktop {
+      display: none;
+    }
+    @media (min-width: 1081px) {
+      .left, .right{
+        display: none;
+      }
     }
     //mobile
     @media (max-width: 1080px) {
@@ -1726,4 +1887,7 @@
   .slider-banner-image {
     height: 280px;
   }
+}
+.scale07{
+  transform: scale(0.7);
 }

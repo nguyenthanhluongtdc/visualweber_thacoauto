@@ -6,7 +6,7 @@
         $postsFeatures = get_featured_posts_by_category($category->id ?? 19, 2);
         
         @endphp
-        @if (!empty($postsFeatures))
+        @if (!empty($postsFeatures)) 
         @foreach ($postsFeatures as $post)
         <div class="item">
             <div class="item-img">
@@ -24,10 +24,15 @@
                 <p class="desc font-pri font20">
                     {{Str::words($post->description,30)}}
                 </p>
-                <a href="{{$post->url}}" class="view-detail font-pri font15">
-                    {{ __("Xem chi tiết") }}<span><i class="fas fa-arrow-right font15"></i></span>
-                </a>
-
+                <div class="news-download mr-4">
+                    {{-- <a href="{{ get_object_image(get_field($post, 'newspaper_file')) }}"
+                        class="font-pri">{{ __("Tải về") }}</a> --}}
+                        <a href="{{ get_object_image(get_field($post, 'newspaper_file')) }}">  
+                            <button type="button" class="btn btn-primary">{{ __("Tải về") }}
+                            </button>
+                        </a>
+                      
+                </div>
                 <p class="size-dowload">
                     <span class="font-pri"><a href="">{{ __("DOWNLOAD") }}</a></span>
                 </p>
@@ -44,20 +49,29 @@
             <div class="item-shareholder">
                 <div class="item-wrap">
                     <div class="left">
-                        <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="{{$post->name}}" class="up-show">
-                        <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="{{$post->name}}" class="down-hide">
+                        <img loading="lazy" src="{{ Theme::asset()->url('images/main/right-btn.png') }}" alt="{{$post->name}}" class="">
+                        {{-- <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="{{$post->name}}" class="down-hide"> --}}
                     </div>
                     <div class="mid">
-                        <h5 class="title font-pri-bold font25 color-gray">
-                            {{$post->name}}
-                        </h5>
+                        <a href="{{$post->url}}">
+                            <h5 class="title font-pri-bold font25 color-gray">
+                                {{$post->name}}
+                            </h5>
+                        </a>
+                       
 
+                    </div>
+                    <div class="news-download mr-4">
+                        <a href="{{ get_object_image(get_field($post, 'newspaper_file')) }}">  
+                            <button type="button" class="btn btn-primary">{{ __("Tải về") }}
+                            </button>
+                        </a>
                     </div>
                     <div class="right font-pri color-gray">
                         {{date_format($post->created_at,"d-m-Y")}}
                     </div>
                 </div>
-                <div class="desc-none">
+                {{-- <div class="desc-none">
                     <div class="wrap">
                         <div class="desc-left font-cond font20">{{@get_file_name(get_field($post, 'newspaper_file'))}}
                         </div>
@@ -67,7 +81,7 @@
                                 class="font-pri">{{ __("DOWNLOAD") }}</a>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
 
         </li>

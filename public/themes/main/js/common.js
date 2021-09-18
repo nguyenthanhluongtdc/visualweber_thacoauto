@@ -397,6 +397,21 @@ var Helper = {
         $('#total-month').html("")
         $('#total-bank').html("")
         $('#total-loan').html("")
+    },
+    hoverChangeImage: function(){
+        if($('.hover-image-homepage').length){
+            $('.hover-image-homepage').hover(function(){
+                $(this).children('.blue').removeClass('d-none')
+                $(this).children('.black').addClass('d-none')
+                // $(this).children('.symbol').children('blue').removeClass('d-none')
+                // $(this).children('.symbol').children('black').addClass('d-none')
+            }, function(){
+                $(this).children('.black').removeClass('d-none')
+                $(this).children('.blue').addClass('d-none')
+                // $(this).children('.symbol').children('black').removeClass('d-none')
+                // $(this).children('.symbol').children('blue').addClass('d-none')
+            })
+        }
     }
 };
 
@@ -708,6 +723,7 @@ $(document).ready(function() {
     Helper.addSelect2toCarFilterProvinces();
     Helper.RangeFilterBranddetail();
     Helper.zeynepInit();
+    Helper.hoverChangeImage();
     Ajax.handleLoadCarOption();
     Ajax.getMonthsAcceptLoans();
     Ajax.getPercentLoans();

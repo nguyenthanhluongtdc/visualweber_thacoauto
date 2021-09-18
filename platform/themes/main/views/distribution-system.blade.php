@@ -121,9 +121,9 @@
         @php
             $librarys = get_posts_by_category(theme_option('default_category_gallery'), 10);
         @endphp
-        <div class="container-library" data-aos="fade-up" data-aos-duration="1500"
+        <div class="container-remake container-library " data-aos="fade-up" data-aos-duration="1500"
             data-aos-anchor-placement="center-bottom">
-            <div class="owl-carousel owl-theme">
+            <div class="owl-carousel gallery-olw">
                 @foreach ($librarys as $library)
                 <div class="library-item">
                     <div class="img-container">
@@ -136,7 +136,8 @@
                     <div class="library-item__content">
                         <a  class="library-title font25 fontmb-medium" data-fancybox data-type="ajax" data-src="{{$library->url}}" data-filter="#gallery" href="javascript:;">{{$library->name}}</a>
                         {{-- <a href="{{$library->url}}" class="library-title font25 fontmb-medium">{{$library->name}}</a> --}}
-                        <p class="library-description font20 fontmb-little">{{Str::words($library->description,40)}}</p>
+                        {{-- <p class="library-description font20 fontmb-little">{{Str::words($library->description,40)}}</p> --}}
+                        <span class="time">{{date_format($library->created_at,"d-m-Y")}}</span>
                     </div>
                 </div>
                 @endforeach

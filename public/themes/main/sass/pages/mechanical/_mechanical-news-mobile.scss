@@ -1,39 +1,33 @@
 .section-list-news-wrapper-mobile.mechandical {
     display: none;
-   
-    @media only screen and (max-width: 1080px){
+    @media only screen and (max-width: 800px) {
         display: block;
         @include marginBottom(80, "+");
-    .section-list-news {
-        
-        @include paddingTop(60);
-        .title {
-            font-family: $font-my-bold;
-            
-        }
-        .content { 
-            margin-top: 3%;
-            h3 {
-                @include split_str(3);
+        .section-list-news {
+            @include paddingTop(60);
+            .title {
+                font-family: $font-my-bold;
             }
-            
-            img {
-                max-width: 100%;
-            }
-            .item {
-                .item-mobile{
-                    padding-bottom: 8%;
-                    
-                        .img{
-                            .sub-left{
-
+            .content {
+                margin-top: 3%;
+                h3 {
+                    @include split_str(3);
+                }
+                img {
+                    max-width: 100%;
+                }
+                .item {
+                    .item-mobile {
+                        padding-bottom: 8%;
+                        .img {
+                            .sub-left {
                                 background-color: $color-primary;
                                 text-align: center;
                                 color: $color-white;
                                 display: flex;
                                 flex-wrap: wrap;
                                 align-content: center;
-                                position: absolute; 
+                                position: absolute;
                                 padding: 30px 0;
                                 // @media only screen and (max-width: 992px){
                                 //     width: 20%;
@@ -43,7 +37,6 @@
                                 //     width: 18%;
                                 //     height: 25%;
                                 // }
-                                
                                 // @media only screen and (max-width: 600px){
                                 //     width: 22%;
                                 //     height: 25%;
@@ -54,10 +47,8 @@
                                 // }
                                 // @include width(200);
                                 // @include height(196);
-
                                 @include mobileWidth(143);
                                 @include mobileHeight(143);
-
                                 >div {
                                     flex: 0 0 100%;
                                     max-width: 100%;
@@ -68,65 +59,61 @@
                                     text-transform: uppercase;
                                     font-weight: bold;
                                     line-height: 35px;
-                                    @media(max-width : 700px){
+                                    @media(max-width: 700px) {
                                         font-size: 25px;
                                     }
-                                    @media only screen and (max-width: 992px){
+                                    @media only screen and (max-width: 992px) {
                                         font-size: 30px;
                                         line-height: 30px;
                                     }
-                                    @media only screen and (max-width: 768px){
+                                    @media only screen and (max-width: 768px) {
                                         font-size: 22px;
                                         line-height: 28px;
                                     }
-                                    @media only screen and (max-width: 600px){
+                                    @media only screen and (max-width: 600px) {
                                         font-size: 18px;
                                         line-height: 18px;
                                     }
-                                    @media only screen and (max-width: 400px){
+                                    @media only screen and (max-width: 400px) {
                                         font-size: 13px;
                                         line-height: 12px;
                                     }
                                 }
                                 .year {
                                     font-size: 20px;
-                                    @media(max-width : 700px){
+                                    @media(max-width: 700px) {
                                         font-size: 15px;
                                     }
-                                    @media only screen and (max-width: 992px){
+                                    @media only screen and (max-width: 992px) {
                                         font-size: 18px;
                                     }
-                                    @media only screen and (max-width: 768px){
+                                    @media only screen and (max-width: 768px) {
                                         font-size: 15px;
                                     }
-                                    @media only screen and (max-width: 600px){
+                                    @media only screen and (max-width: 600px) {
                                         font-size: 10px;
                                     }
-                                    @media only screen and (max-width: 400px){
+                                    @media only screen and (max-width: 400px) {
                                         margin-top: -5px;
                                     }
                                 }
                             }
-                            .sub-right{
+                            .sub-right {
                                 width: 100%;
                                 padding-right: 0;
-                                img{
+                                img {
                                     width: 100%;
                                 }
                             }
                         }
-                        
-                    
+                    }
                 }
-               
             }
         }
     }
 }
-    
-}
 
-.page-pagination{
+.page-pagination {
     ul {
         display: flex;
         flex-wrap: wrap;
@@ -138,25 +125,23 @@
         li {
             @include flex(35);
             @include mobileFlex(55);
-             margin-right: 0 !important;
-            
-             @include mobileMarginBottom(40, "+");
-
-             @media (max-width: 1080px) {
-                 font-size: 28px;
-             }
-             @media (max-width: 992px) {
-                 font-size: 25px;
-             }
-             @media (max-width: 768px) {
-                 font-size: 20px;
-             }
-             @media (max-width: 576px) {
-                 font-size: 17px;
-             }
-             @media (max-width: 480px) {
-                 font-size: 15px;
-             }
+            margin-right: 0 !important;
+            @include mobileMarginBottom(40, "+");
+            @media (max-width: 1080px) {
+                font-size: 28px;
+            }
+            @media (max-width: 992px) {
+                font-size: 25px;
+            }
+            @media (max-width: 768px) {
+                font-size: 20px;
+            }
+            @media (max-width: 576px) {
+                font-size: 17px;
+            }
+            @media (max-width: 480px) {
+                font-size: 15px;
+            }
         }
     }
- }
+}

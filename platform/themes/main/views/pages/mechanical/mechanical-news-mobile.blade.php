@@ -1,5 +1,5 @@
 @php
-    $posts = get_posts_by_category(theme_option('default_category_news'),3);
+    $posts = get_posts_by_category(theme_option('default_category_news'),6);
 @endphp
 <div class="section-list-news-wrapper-mobile mechandical">
     <div class="container-remake">

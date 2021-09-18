@@ -14,8 +14,8 @@ $categoryNews = get_category_by_id(theme_option('default_category_news'));
             </div>
 
             <div class="content">
-                @if(!empty(get_posts_by_category(theme_option('default_category_news'),3)))
-                @foreach(get_posts_by_category(theme_option('default_category_news'),3) as $post)
+                @if(!empty(get_posts_by_category(theme_option('default_category_news'),6)))
+                @foreach(get_posts_by_category(theme_option('default_category_news'),6) as $post)
                     <div class="item" data-aos="fade-left" data-aos-duration="1500" data-aos-easing="ease-in-out"
                         data-aos-delay="50">
                         <div class="item__left">
@@ -59,9 +59,9 @@ $categoryNews = get_category_by_id(theme_option('default_category_news'));
                 @endforeach
                 @endif
             </div>
-            @if(!empty(get_posts_by_category(theme_option('default_category_news'),3)))
+            @if(!empty(get_posts_by_category(theme_option('default_category_news'),6)))
             <div class="container-remake">
-                {{ get_posts_by_category(theme_option('default_category_news'),3)->links('vendor.pagination.custom') }}
+                {{ get_posts_by_category(theme_option('default_category_news'),6)->links('vendor.pagination.custom') }}
             </div>
             @endif
         </div>

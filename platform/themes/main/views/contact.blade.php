@@ -70,14 +70,6 @@
                                 </div>
 
                             </div>
-                            {{-- <div class="form-group row">
-                                <label for="" class="col-sm-3 text-label mt-3">{{ __('Email') }}:</label>
-                                <div class="col-sm-9">
-                                    <input type="text" class="form-control" id="contact_email" placeholder=""
-                                        name="email" value="{{ old('email') }}">
-                                </div>
-
-                            </div> --}}
                             <div class="form-group row">
                                 <label for="" class="col-sm-3 text-label mt-3">{{ __('Content') }}:</label>
                                 <div class="col-sm-9">
@@ -102,9 +94,12 @@
                                         </div>
                                     </div>
                                  @endif
-                                <button class="btn btn-secondary" type="submit" value="SEND">
-                                    {{ __('Send') }}
-                                </button>
+                                 <div class="btn-control text-center">
+                                    <button class="btn btn-secondary" type="submit" value="SEND">
+                                        {{ __('Send') }}
+                                    </button>
+                                 </div>
+                               
 
                             </div>
 
@@ -172,12 +167,12 @@
                         <label class="fontmb-medium font-pri-bold text-uppercase">{{ __('Subject') }}<span>*</span></label>
                         <input type="text" class="contact-form-input" name="subject" value="{{ old('subject') }}" id="contact_subject"
                        placeholder="{{ __('Subject') }}" required>
-                        {{-- <input type="text" required /> --}}
+                     
                     </div>
                     <div class="contact-input wide">
                         <label class="fontmb-medium font-pri-bold text-uppercase">{{ __('Content') }}<span>*</span></label>
                         <textarea name="content" id="contact_content2" class="contact-form-input" rows="5" placeholder="{{ __('Message') }}" required>{{ old('content') }}</textarea>
-                        {{-- <textarea required></textarea> --}}
+                      
 
                     </div>
                     <div class="contact-noti">
@@ -307,199 +302,10 @@
 
     @endforeach
 
-    {{-- <div class="detail-contact" data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease-in-out">
-        <div class="row content-contact">
-            <div class="col-md-4 img-detail">
-                <div class="image">
-                    <div class="post-thumbnail">
-                        <a href=""> <img loading="lazy" src="{{ Theme::asset()->url('images/contact/detail-contact2.png') }}"
-                                alt="img-detail"></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-8 detail-content-wrap">
-                <h3 class="detail-title font40 font-pri-bold mt-3 mb-3">VĂN PHÒNG THACO TẠI KHU PHỨC HỢP CHU LAI -
-                    TRƯỜNG HẢI</h3>
-                <div class="item">
-                    <ion-icon name="location-outline"></ion-icon>
-                    <p class="font-pri font18"><span class="font-pri-bold">Địa chỉ: </span>Thôn 4, Xã Tam Hiệp, Huyện Núi
-                        thành, Tỉnh Quảng Nam.</p>
-                </div>
-                <div class="item">
-                    <ion-icon name="call-outline"></ion-icon>
-                    <p class="font-pri font18"><span class="font-pri-bold">Hotline: </span>+84-0510.3567.161 - 0510.3567.162 -
-                        0510.3567.163</p>
-                </div>
-                <div class="item">
-                    <ion-icon name="print-outline"></ion-icon>
-                    <p class="font-pri font18"><span class="font-pri-bold">Fax: </span> +84 - (0)510 - 3565777</p>
-                </div>
-                <div class="item">
-                    <ion-icon name="mail-outline"></ion-icon>
-                    <p class="font-pri font18"><span class="font-pri-bold">Email: </span> chulai-truonghai@dng.vnn.vn</p>
-                </div>
-
-
-
-
-            </div>
-        </div>
-    </div>
-    <div class="detail-contact" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
-        <div class="row content-contact">
-            <div class="col-md-4 img-detail">
-                <div class="image">
-                    <div class="post-thumbnail">
-                        <a href=""><img loading="lazy" src="{{ Theme::asset()->url('images/contact/detail-contcact1.png') }}"
-                                alt="img-detail"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-8 detail-content-wrap">
-                <h3 class="detail-title font40 font-pri-bold mt-3 mb-3">VĂN PHÒNG THACO TẠI HÀ NỘI</h3>
-                <div class="item">
-                    <ion-icon name="location-outline"></ion-icon>
-                    <p class="font-pri font18"><span class="font-pri-bold">Địa chỉ: </span>Lô D6, KCN Hà Nội Đài Tư, 386 Nguyễn
-                        Văn Linh, Sài Đồng, Long Biên, Hà Nội</p>
-                </div>
-                <div class="item">
-                    <ion-icon name="call-outline"></ion-icon>
-                    <p class="font-pri font18"><span class="font-pri-bold">Hotline: </span>+84 - (0)43.8758914</p>
-                </div>
-                <div class="item">
-                    <ion-icon name="print-outline"></ion-icon>
-                    <p class="font-pri font18"><span class="font-pri-bold">Fax: </span>043.8759857</p>
-                </div>
-
-
-
-            </div>
-        </div>
-    </div> --}}
+   
 </div>
 
 @endif
-
-{{-- <div class="contact-info-bottom container-remake">
-    <div class="detail-contact" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
-        <div class="row content-contact ">
-            <div class="col-md-4 img-detail">
-                <div class="image">
-                    <div class="post-thumbnail">
-
-                        <a href=""><img loading="lazy" src="{{ Theme::asset()->url('images/contact/detail-contcact1.png') }}"
-                                alt="img-detail"></a>
-                    </div>
-                </div>
-
-
-            </div>
-            <div class="col-md-8 detail-content-wrap">
-
-                <h3 class="detail-title font40 font-pri-bold mt-4 mb-3">TRỤ SỞ CHÍNH CÔNG TY <span> Ô TÔ</span> TRƯỜNG
-                    HẢI TẠI TP. HỒ CHÍ MINH </h3>
-                <div class="item">
-                    <ion-icon name="location-outline"></ion-icon>
-                    <p class="font-pri font18"><span class="font-pri-bold">Địa chỉ: </span>Số 10 Mai Chí Thọ, P.Thủ Thiêm,
-                        TP.Thủ Đức, TP.HCM</p>
-                </div>
-                <div class="item">
-                    <ion-icon name="call-outline"></ion-icon>
-                    <p class="font-pri font18"><span class="font-pri-bold">Hotline: </span>1900545591</p>
-                </div>
-                <div class="item">
-                    <ion-icon name="print-outline"></ion-icon>
-                    <p class="font-pri font18"><span class="font-pri-bold">Fax: </span>+84 (0)8-39977.742</p>
-                </div>
-                <div class="item">
-                    <ion-icon name="at-outline"></ion-icon>
-                    <p class="font-pri font18"><span class="font-pri-bold">Website: </span>www.truonghaiauto.com.vn</p>
-                </div>
-                <div class="item">
-                    <ion-icon name="mail-outline"></ion-icon>
-                    <p class="font-pri font18"><span class="font-pri-bold">Email: </span>rep.office@thaco.com.vn</p>
-                </div>
-
-
-            </div>
-        </div>
-    </div>
-    <div class="detail-contact" data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease-in-out">
-        <div class="row content-contact">
-            <div class="col-md-4 img-detail">
-                <div class="image">
-                    <div class="post-thumbnail">
-                        <a href=""> <img loading="lazy" src="{{ Theme::asset()->url('images/contact/detail-contact2.png') }}"
-                                alt="img-detail"></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-8 detail-content-wrap">
-                <h3 class="detail-title font40 font-pri-bold mt-3 mb-3">VĂN PHÒNG THACO TẠI KHU PHỨC HỢP CHU LAI -
-                    TRƯỜNG HẢI</h3>
-                <div class="item">
-                    <ion-icon name="location-outline"></ion-icon>
-                    <p class="font-pri font18"><span class="font-pri-bold">Địa chỉ: </span>Thôn 4, Xã Tam Hiệp, Huyện Núi
-                        thành, Tỉnh Quảng Nam.</p>
-                </div>
-                <div class="item">
-                    <ion-icon name="call-outline"></ion-icon>
-                    <p class="font-pri font18"><span class="font-pri-bold">Hotline: </span>+84-0510.3567.161 - 0510.3567.162 -
-                        0510.3567.163</p>
-                </div>
-                <div class="item">
-                    <ion-icon name="print-outline"></ion-icon>
-                    <p class="font-pri font18"><span class="font-pri-bold">Fax: </span> +84 - (0)510 - 3565777</p>
-                </div>
-                <div class="item">
-                    <ion-icon name="mail-outline"></ion-icon>
-                    <p class="font-pri font18"><span class="font-pri-bold">Email: </span> chulai-truonghai@dng.vnn.vn</p>
-                </div>
-
-
-
-
-            </div>
-        </div>
-    </div>
-    <div class="detail-contact" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
-        <div class="row content-contact">
-            <div class="col-md-4 img-detail">
-                <div class="image">
-                    <div class="post-thumbnail">
-                        <a href=""><img loading="lazy" src="{{ Theme::asset()->url('images/contact/detail-contcact1.png') }}"
-                                alt="img-detail"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-8 detail-content-wrap">
-                <h3 class="detail-title font40 font-pri-bold mt-3 mb-3">VĂN PHÒNG THACO TẠI HÀ NỘI</h3>
-                <div class="item">
-                    <ion-icon name="location-outline"></ion-icon>
-                    <p class="font-pri font18"><span class="font-pri-bold">Địa chỉ: </span>Lô D6, KCN Hà Nội Đài Tư, 386 Nguyễn
-                        Văn Linh, Sài Đồng, Long Biên, Hà Nội</p>
-                </div>
-                <div class="item">
-                    <ion-icon name="call-outline"></ion-icon>
-                    <p class="font-pri font18"><span class="font-pri-bold">Hotline: </span>+84 - (0)43.8758914</p>
-                </div>
-                <div class="item">
-                    <ion-icon name="print-outline"></ion-icon>
-                    <p class="font-pri font18"><span class="font-pri-bold">Fax: </span>043.8759857</p>
-                </div>
-
-
-
-            </div>
-        </div>
-    </div>
-</div> --}}
-
-
-
-
 @if (has_field($page, 'list_contact_office'))
 
 @endif
@@ -580,87 +386,4 @@
         </div>
     </div>
     @endforeach
-    {{-- <div class="detail-contact" data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease-in-out">
-        <div class="row content-contact ">
-            <h3 class="detail-title font40 font-pri-bold mt-4 mb-3">VĂN PHÒNG THACO CHU LAI</h3>
-            <div class="detail-content-wrap">
-                <div class="left">
-                    <div class="item location">
-                        <ion-icon name="location-outline"></ion-icon>
-                        <p class="font-pri-bold">Địa chỉ: </p>
-                    </div>
-                    <div class="item ">
-                        <ion-icon name="call-outline"></ion-icon>
-                        <p class="font-pri-bold">Hotline: </p>
-                    </div>
-                    <div class="item">
-                        <ion-icon name="print-outline"></ion-icon>
-                        <p class="font-pri-bold">Fax: </p>
-                    </div>
-                    <div class="item">
-                        <ion-icon name="mail-outline"></ion-icon>
-                        <p class="font-pri-bold">Email: </p>
-                    </div>
-                </div>
-                <div class="right">
-                    <div class="item location">
-                        <p class="font-pri font18">Thôn 4, Xã Tam Hiệp, Huyện Núi thành, Tỉnh Quảng Nam.</p>
-                    </div>
-                    <div class="item ">
-                        <p class="font-pri font18">+84-0510.3567.161 - 0510.3567.162 - 0510.3567.163</p>
-                    </div>
-                    <div class="item">
-                        <p class="font-pri font18"> +84 - (0)510 - 3565777</p>
-                    </div>
-                    <div class="item">
-                        <p class="font-pri font18">chulai-truonghai@dng.vnn.vn</p>
-                    </div>
-
-                </div>
-
-
-
-            </div>
-        </div>
-    </div>
-
-    <div class="detail-contact" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
-        <div class="row content-contact ">
-            <h3 class="detail-title font40 font-pri-bold mt-4 mb-3">VĂN PHÒNG THACO TẠI HÀ NỘI</h3>
-            <div class="detail-content-wrap">
-                <div class="left">
-                    <div class="item location">
-                        <ion-icon name="location-outline"></ion-icon>
-                        <p class="font-pri-bold">Địa chỉ: </p>
-                    </div>
-                    <div class="item ">
-                        <ion-icon name="call-outline"></ion-icon>
-                        <p class="font-pri-bold">Hotline: </p>
-                    </div>
-                    <div class="item">
-                        <ion-icon name="print-outline"></ion-icon>
-                        <p class="font-pri-bold">Fax: </p>
-                    </div>
-
-                </div>
-                <div class="right">
-                    <div class="item location">
-                        <p class="font-pri font18">Lô D6, KCN Hà Nội Đài Tư, 386 Nguyễn Văn Linh, Sài Đồng, Long Biên, Hà Nội
-                        </p>
-                    </div>
-                    <div class="item ">
-                        <p class="font-pri font18">+84 - (0)43.8758914</p>
-                    </div>
-                    <div class="item">
-                        <p class="font-pri font18">043.8759857</p>
-                    </div>
-
-                </div>
-
-
-
-            </div>
-        </div>
-    </div> --}}
-
 </div>

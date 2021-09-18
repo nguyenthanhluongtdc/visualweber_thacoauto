@@ -1052,7 +1052,7 @@
 
 .item-shareholder {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   cursor: pointer;
   margin-bottom: 25px;
   @media (max-width: 1680px) {
@@ -1063,6 +1063,11 @@
   }
   .down-hide {
     display: none;
+  }
+  .left{
+    i{
+      color: $color-primary;
+    }
   }
   .mid {
     flex: 1;
@@ -1077,21 +1082,22 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        .desc-right {
-          display: flex;
-          align-items: center;
-          span {
-            margin-right: 15px;
-          }
-          a {
-            background: #284089;
-            padding: 7px 10px 5px;
-            display: inline-block;
-            color: #fff;
-            font-size: 13px;
-          }
-        }
       }
+    }
+  }
+  .desc-right {
+    display: flex;
+    align-items: center;
+    span {
+      margin-right: 15px;
+    }
+    .btn {
+      background: $color-primary;
+      padding: 4px 10px 3px;
+      display: inline-block;
+      color: #fff;
+      font-size: 13px;
+      border-radius: 0;
     }
   }
 }

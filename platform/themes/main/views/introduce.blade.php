@@ -290,7 +290,7 @@
                         <div class="box-center-bark">
                             <img loading="lazy" src="{{Storage::disk('public')->exists(has_sub_field($row, 'image')) ? get_image_url(has_sub_field($row, 'image')) : RvMedia::getDefaultImage()}}"
                                 alt="Icon tiêu chí 8T">
-                            <div class="defect-shape">
+                            {{-- <div class="defect-shape">
                                 <div class="box-center">
                                     <img loading="lazy" src="{{get_image_url(has_sub_field($row, 'symbol'))}}" alt=" {!! has_sub_field($row, 'title') !!}">
                                     <div class="name font25 fontmb-middle text-uppercase">
@@ -300,7 +300,7 @@
                                         {!! has_sub_field($row, 'description') !!}
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                     @break($loop->index == 3)
@@ -314,7 +314,7 @@
                         <div class="box-center-bark">
                             <img loading="lazy" src="{{Storage::disk('public')->exists(has_sub_field($criteria[$i], 'image')) ? get_image_url(has_sub_field($criteria[$i], 'image')) : RvMedia::getDefaultImage()}}"
                                 alt="Icon tiêu chí 8T">
-                            <div class="defect-shape">
+                            {{-- <div class="defect-shape">
                                 <div class="box-center">
                                     <img loading="lazy" src="{{get_image_url(has_sub_field($criteria[$i], 'symbol'))}}" alt=" {!! has_sub_field($criteria[$i], 'title') !!}">
                                     <div class="name font25 fontmb-middle text-uppercase">
@@ -324,7 +324,7 @@
                                         {!! has_sub_field($criteria[$i], 'description') !!}
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                 </div>
                 @endfor
@@ -360,7 +360,7 @@
                             <div class="box-center-bark">
                                 <img loading="lazy" src="{{Storage::disk('public')->exists(has_sub_field($row, 'image')) ? get_image_url(has_sub_field($row, 'image')) : RvMedia::getDefaultImage()}}"
                                     alt="Ảnh tiêu chí 8T">
-                                <div class="defect-shape">
+                                {{-- <div class="defect-shape">
                                     <div class="box-center">
                                         <img loading="lazy" src="{{get_image_url(has_sub_field($row, 'symbol'))}}" alt="Ảnh tiêu chí 8T">
                                         <div class="name  font25 fontmb-middle text-uppercase">
@@ -370,7 +370,7 @@
                                             {!! has_sub_field($row, 'description') !!}
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>

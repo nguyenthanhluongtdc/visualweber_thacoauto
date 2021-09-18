@@ -7,6 +7,7 @@
             <div class="top">
                 <div class="top-left" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" >
                     <img loading="lazy" src="{{ get_image_url(get_field($page,'homepage_production_logo')) }}" alt="{{get_field($page, 'homepage_production_title')}}">
+                    <img loading="lazy" src="{{ get_image_url(get_field($page,'homepage_production_logo')) }}" alt="{{get_field($page, 'homepage_production_title')}}">
                     <p class="name-img font-pri-bold font18 color-pri fontmb-small">THACO AUTO</p>
                     <a href="{{get_field($page, 'homepage_production_link')}}" class="title font-pri-bold font40 fontmb-middle color-gray">{{get_field($page, 'homepage_production_title')}}</a>
                     <P class="desc font-pri font20 color-gray fontmb-small">{{get_field($page, 'homepage_production_descrtiption')}}</p>

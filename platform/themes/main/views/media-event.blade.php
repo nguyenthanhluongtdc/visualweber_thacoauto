@@ -29,8 +29,8 @@
                 </div>
                 <div class="content">
                     <p class="font25 font-pri">{{Str::words($post->description,100)}}</p>
-                    <div class="view-detail font-pri-bold font18">
-                        <a href="{{$post->url}}">{{ __("VIEW DETAIL") }}</a>
+                    <div class="view-detail font-pri-bold font20">
+                        <a href="{{$post->url}}">{{ __("Xem chi tiết") }}</a>
                     </div>
                 </div>
             </div>

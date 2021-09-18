@@ -223,9 +223,9 @@
                             <div class="item-shareholder">
                                 
                                 <div class="left">
-                                    {{-- <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
-                                    class="up-show"> --}}
-                                    <i class="fas fa-caret-right font18"></i>
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
+                                    class="up-show">
+                                    {{-- <i class="fas fa-caret-right font18"></i> --}}
                                 </div>
                                 <div class="mid">
                                     <h5 class="title font25 font-pri-bold color-gray fontmb-small">
@@ -245,7 +245,7 @@
                                 </div>
                                 <div class="right font-pri color-gray font20">
                                     <div class="desc-right">
-                                        <a href="{{get_image_url($item->file)}}" class="font-pri fontmb-small btn">{{__('Tải xuống')}}</a>
+                                        <a href="{{get_image_url($item->file)}}" class="font-pri fontmb-small btn">{{__('Tải về')}}</a>
                                     </div>
                                 </div>
                             </div>

@@ -75,7 +75,7 @@
         @endif
     </ul>
     <div id="loadMore" class="font20 hidden">
-        <span>{{ __("Readmore") }}</span>
+        <span>{{ __("Xem tất cả") }}</span>
         <span>
             <i class="fas fa-arrow-right font15"></i>
         </span>

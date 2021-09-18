@@ -4,13 +4,17 @@ $categoryNews = get_category_by_id(theme_option('default_category_news'));
 <div class="section-list-news-wrapper mechandical">
     <div class="container-remake">
         <div class="section-list-news">
-            <div class="section-list-news-header  d-flex  align-items-center">
+            <div class="section-list-news-header  d-flex  align-items-center justify-content-between">
                 <h2 class="title font-pri-bold font60 text-uppercase">
                     {{ __("News") }}
                 </h2>
-              
+{{--               
                 <a href="{{ is_plugin_active('blog') ? ($categoryNews ? $categoryNews->url : '') : '' }}" title="{!!__('Readmore')!!}" class="read-moree text-dark font20 font-pri"> {!!__('Readmore')!!} <img loading="lazy" width="" height=""
                         src="{{Theme::asset()->url('images/mechandical/chevron-double-right.svg')}}" alt="" /></a>
+                         --}}
+                         <a href="{{get_category_by_id(theme_option('default_category_news_summary'))->url}}" class="text-dark font20 font-pri">
+                            {{_('Xem tất cả')}} <span><i class="fas fa-arrow-right scale07"></i></span>
+                        </a>
             </div>
 
             <div class="content">

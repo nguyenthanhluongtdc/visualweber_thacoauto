@@ -1,3 +1,6 @@
+@php
+$categoryNews = get_category_by_id(theme_option('default_category_news'));
+@endphp
 <div class="section-list-news-wrapper mechandical">
     <div class="container-remake">
         <div class="section-list-news">
@@ -5,9 +8,7 @@
                 <h2 class="title font-pri-bold font60 text-uppercase">
                     {{ __("News") }}
                 </h2>
-                @php
-                    $categoryNews = get_category_by_id(theme_option('default_category_news'));
-                @endphp
+              
                 <a href="{{ is_plugin_active('blog') ? ($categoryNews ? $categoryNews->url : '') : '' }}" title="{!!__('Readmore')!!}" class="read-moree text-dark font20 font-pri"> {!!__('Readmore')!!} <img loading="lazy" width="" height=""
                         src="{{Theme::asset()->url('images/mechandical/chevron-double-right.svg')}}" alt="" /></a>
             </div>
@@ -15,7 +16,7 @@
             <div class="content">
                 @if(!empty(get_posts_by_category(theme_option('default_category_news'),3)))
                 @foreach(get_posts_by_category(theme_option('default_category_news'),3) as $post)
-                    <div class="item mx-0" data-aos="fade-left" data-aos-duration="1500" data-aos-easing="ease-in-out"
+                    <div class="item" data-aos="fade-left" data-aos-duration="1500" data-aos-easing="ease-in-out"
                         data-aos-delay="50">
                         <div class="item__left">
                             <div class="sub--left font-pri-bold">
@@ -49,10 +50,10 @@
                                 </p>
                             </div>
 
-                            <a href="{{$post->url}}" title="{!!__('Readmore')!!}" class="read-more text-dark font20 font-pri">
+                            {{-- <a href="{{$post->url}}" title="{!!__('Readmore')!!}" class="read-more text-dark font20 font-pri">
                                 {!!__('Readmore')!!} <img loading="lazy" width="" height=""
                                     src="{{Theme::asset()->url('images/mechandical/chevron-double-right.svg')}}"
-                                    alt=" {!! $post->name !!}" /></a>
+                                    alt=" {!! $post->name !!}" /></a> --}}
                         </div>
                     </div>
                 @endforeach

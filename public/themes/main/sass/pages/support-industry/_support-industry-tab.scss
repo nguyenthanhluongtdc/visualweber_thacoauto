@@ -1,38 +1,26 @@
 .section-support-industry-tab {
-
     .mechanical-tab-wrapper {
-       background-size: cover;
-    //    position: relative;
-    //    &::after{
-    //     position: absolute;
-    //     inset: 0;
-    //     content: "";
-    //     width: 100%;
-    //     height: 100%;
-    //     background-color: black;
-    //    }
-        .mechanical-tab__content{
+        background-size: cover;
+        .mechanical-tab__content {
             @media (min-width: 1081px) {
                 .row {
                     padding: 0;
                 }
             }
-            
-            @media only screen and (max-width: 1080px){
-                .item-top{
+            @media only screen and (max-width: 1080px) {
+                .item-top {
                     flex: 0 0 100%;
                     max-width: 100%;
                     order: 1;
-                   
                     @include mobileMarginBottom(30, "+");
                 }
-                .item-left{
+                .item-left {
                     flex: 0 0 50%;
                     max-width: 50%;
                     order: 2;
                     @include mobilePaddingRight(16);
                 }
-                .item-right{
+                .item-right {
                     flex: 0 0 100%;
                     max-width: 100%;
                     order: 3;
@@ -42,18 +30,16 @@
                     }
                 }
             }
-           
             .item-top {
-                
                 >div {
                     .content-bottom {
                         display: flex;
                         flex-wrap: wrap;
                         @include paddingX(20);
                         @include paddingY(15);
-                        .top{
+                        .top {
                             @include heightResponsiveDesktop(170);
-                            @media (max-width: 1080px){
+                            @media (max-width: 1080px) {
                                 height: auto;
                             }
                         }
@@ -61,7 +47,6 @@
                             margin: 0;
                             padding: 0;
                             height: max-content;
-
                             a {
                                 padding: 5px 10px;
                                 display: inline-block;
@@ -70,18 +55,18 @@
                                 font-family: $font-primary-bold;
                             }
                         }
-
-                        h4{
+                        h4 {
                             font-family: $font-primary-bold;
-                        
                         }
-                        .description{
+                        .description {
                             @include split_str(5);
+                            @media screen and(max-width: 1440px) {
+                                @include split_str(4);
+                            }
                         }
                     }
                 }
             }
-            
             .tab {
                 float: left;
                 width: 100%;
@@ -91,15 +76,12 @@
                     padding-left: 0;
                     padding-right: 0;
                 }
-                
-                .tablink{
+                .tablink {
                     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
                     font-family: $font-primary-bold;
                     @include paddingX(15);
                     @include mobilePaddingX(15);
-                
                 }
-
                 button {
                     display: block;
                     margin-bottom: 6.4%;
@@ -114,13 +96,12 @@
                     cursor: pointer;
                     box-shadow: rgba(0, 0, 0, 0.04) 0px 1px 3px;
                     transition: .3s ease-in-out;
-                    @media(max-width : 1600px){
+                    @media(max-width: 1600px) {
                         padding: 9.7% 0;
                         margin-bottom: 5.2%;
-                    } 
+                    }
                     @include mobilePaddingY(27);
                 }
-
                 button:hover {
                     background-color: $color-primary;
                     color: #fff;
@@ -129,26 +110,17 @@
                     background-color: $color-primary;
                     color: #fff;
                 }
-            
             }
-                
             .tabcontents {
                 width: 100%;
-                color: #fff ;
+                color: #fff;
                 background-color: $color-primary;
                 border-left: none;
                 height: auto;
-
-                img{
+                img {
                     width: 100%;
                 }
-                
             }
         }
     }
-
 }
-    
-        
-   
- 

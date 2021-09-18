@@ -61,7 +61,7 @@
                                                 {!! has_sub_field($item, 'description') !!}
                                             </div>
                                         </div>
-                                        <div class="read-more font18"><a target="_blank" href="{{has_sub_field($item, 'link')}}"> {!! __('Readmore') !!} </a></div>
+                                        <div class="read-more font18"><a target="_blank" href="{{has_sub_field($item, 'link')}}"> {!! __('Xem tất cả') !!} </a></div>
                                     </div>
                                 </div>
                             @endforeach

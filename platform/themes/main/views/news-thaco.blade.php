@@ -11,7 +11,7 @@
         <div class="item">
             <div class="item-img">
                 <div class="post-thumbnail">
-                    <a href=""><img loading="lazy" src="{{ get_object_image($post->image) }}" alt="Bản tin Thaco"></a>
+                    <a href="{{$post->url}}"><img loading="lazy" src="{{ get_object_image($post->image) }}" alt="Bản tin Thaco"></a>
                 </div>
             </div>
             <div class="item-content">
@@ -97,7 +97,7 @@
                     </div>
                     <div class="item-content">
                         <h5 class="title font30 font-pri-bold">
-                            <a href="">{{$post->name}}</a>
+                            <a href="{{$post->url}}">{{$post->name}}</a>
                         </h5>
                         <p class="day font15 font-pri color-gray">
                             {{date_format($post->created_at,"d-m-Y")}}

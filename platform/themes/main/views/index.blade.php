@@ -21,9 +21,12 @@
 
     <div class="news-hompage">
         <div class="news-item news-1">
+            @if(count($postDesktop)>=1)
             <a href="{{$postDesktop[0]->url}}"><img loading="lazy" src="{{ get_object_image($postDesktop[0]->image, 'post-large') }}" alt="{{$postDesktop[0]->name}}"></a>
+            @endif
         </div>
         <div class="news-item news-2">
+            @if(count($postDesktop)>=1)
             <div class="content-top">
                 <h3 class="title font-pri-bold font30  text-uppercase-none fontmb-middle">
                     <a href="{{$postDesktop[0]->url}}" >{{$postDesktop[0]->name}}</a>
@@ -36,6 +39,7 @@
                 <span class="city">{{ $postDesktop[0]->city->name ?? '--' }}</span>
                 <span class="day">{{date_format($postDesktop[0]->created_at,"d-m-Y")}}</span>
             </div>
+            @endif
         </div>
         <div class="news-item news-3">
             @php
@@ -55,6 +59,7 @@
             @endif
         </div>
         <div class="news-item news-4">
+            @if(count($postDesktop)>=2)
             <div class="news-item-content">
                 <h3 class="title font-pri-bold font30 fontmb-middle text-uppercase-none">
                     <a href="{{$postDesktop[1]->url}}">{{$postDesktop[1]->name}}</a>
@@ -67,8 +72,10 @@
                 <span class="city">{{ $postDesktop[1]->city->name ?? '--' }}</span>
                 <span class="day">{{date_format($postDesktop[1]->created_at,"d-m-Y")}}</span>
             </div>
+            @endif
         </div>
         <div class="news-item news-5">
+            @if(count($postDesktop)>=3)
             <div class="news-item-content">
                 <h3 class="title font-pri-bold font30 fontmb-middle text-uppercase-none">
                     <a href="{{$postDesktop[2]->url}}">{{$postDesktop[2]->name}}</a>
@@ -81,8 +88,24 @@
                 <span class="city">{{ $postDesktop[2]->city->name ?? '--' }}</span>
                 <span class="day">{{date_format($postDesktop[2]->created_at,"d-m-Y")}}</span>
             </div>
+            @endif
         </div>
         <div class="news-item news-6">
+            @if(!empty(get_post_featerd_member(1) && count(get_post_featerd_member(1))>0))
+            <div class="news-item-content">
+                <h3 class="title font-pri-bold font30 fontmb-middle text-uppercase-none">
+                    <a href="{{get_post_featerd_member(1)[0]->url}}">{{get_post_featerd_member(1)[0]->name}}</a>
+                </h3>
+                <p class="desc font-pri font18 fontmb-small">
+                    {{get_post_featerd_member(1)[0]->description}}
+                </p>
+            </div>
+            <div class="city-day font-pri font18 fontmb-little">
+                <span class="city">{{ get_post_featerd_member(1)[0]->city->name ?? '--' }}</span>
+                <span class="day">{{date_format(get_post_featerd_member(1)[0]->created_at,"d-m-Y")}}</span>
+            </div>
+            <img src="{{get_image_url(get_post_featerd_member(1)[0]->featured_member_image)}}" alt="{{get_post_featerd_member(1)[0]->name}}" class="member-avatar">
+            @elseif(count($postDesktop)>=4)
             <div class="news-item-content">
                 <h3 class="title font-pri-bold font30 fontmb-middle text-uppercase-none">
                     <a href="{{$postDesktop[3]->url}}">{{$postDesktop[3]->name}}</a>
@@ -95,6 +118,7 @@
                 <span class="city">{{ $postDesktop[3]->city->name ?? '--' }}</span>
                 <span class="day">{{date_format($postDesktop[3]->created_at,"d-m-Y")}}</span>
             </div>
+            @endif
         </div>
         <div class="news-item news-7">
             <div class="summary">

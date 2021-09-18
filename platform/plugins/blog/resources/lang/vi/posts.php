@@ -27,6 +27,6 @@ return [
     'categories'          => 'Categories',
     'category'            => 'Category',
     'author'              => 'Author',
-    'is_featured_member'  => 'Featured member',
-    'featured_member_image'  => 'Featured member avatar'
+    'is_featured_member'  => 'Thành viên nổi bật',
+    'featured_member_image'  => 'Ảnh đại diện thành viên nổi bật'
 ];

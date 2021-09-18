@@ -148,7 +148,7 @@ class PostRepository extends BlogPostRepository
     /**
      * {@inheritDoc}
      */
-    public function getSearchByCategoryAndFilter($filter = [], $paginate = 6)
+    public function getSearchByCategoryAndFilter($filter = [], $paginate = 6, $limit = 5)
     {
         if (!is_array($filter['category'])) {
             $categoryId = [$filter['category']];
@@ -178,5 +178,23 @@ class PostRepository extends BlogPostRepository
             }
     
             return $this->applyBeforeExecuteQuery($data)->limit($limit)->get();
+    }
+    /**
+     * {@inheritDoc}
+     */
+    public function getFeaturedMember(int $paginate = 5, array $with = [])
+    {
+
+
+        $data = $this->model
+            ->whereStatus(BaseStatusEnum::PUBLISHED)
+            ->where('is_featured_member', 1)
+            ->select('posts.*')
+            ->with(array_merge(['slugable'], $with))
+            ->orderBy('posts.is_featured', 'desc')
+            ->orderBy('posts.order', 'desc')
+            ->orderBy('posts.created_at', 'desc');
+
+        return $this->applyBeforeExecuteQuery($data)->paginate($paginate);
     }
 }

@@ -1,0 +1,9 @@
+{
+    "name": "Shareholder",
+    "namespace": "Platform\\Shareholder\\",
+    "provider": "Platform\\Shareholder\\Providers\\ShareholderServiceProvider",
+    "author": "Laravel Developer Team",
+    "url": "https://developers.laravel.com",
+    "version": "1.0",
+    "description": "The description for module shareholder"
+}

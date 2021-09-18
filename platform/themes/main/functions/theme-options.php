@@ -513,7 +513,22 @@ app()->booted(function () {
                     'class' => 'form-control select-full-search',
                 ],
             ],
-        ])->setSection([ // Set section with some fields
+        ])
+        ->setField([
+            'id' => 'default_category_shareholder',
+            'section_id' => 'opt-text-subsection-config',
+            'type' => 'select', // select or customSelect
+            'label' => __('Trang quan hệ cổ đông'),
+            'attributes' => [
+                'name' => 'default_category_shareholder',
+                'data' => ["" => "Chọn trang"] + (get_all_pages()->pluck('name', 'id')->toArray()),
+                'value' => null, // default value
+                'options' => [
+                    'class' => 'form-control select-full-search',
+                ],
+            ],
+        ])
+        ->setSection([ // Set section with some fields
             'title' => __('Điều khoản'),
             'desc' => __('Điều khoản'),
             'id' => 'opt-text-subsection-provision',

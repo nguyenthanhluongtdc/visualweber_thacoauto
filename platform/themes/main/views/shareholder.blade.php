@@ -21,7 +21,7 @@
     <div class="news-thaco-top">
         @php
         $shareholderCategory = get_shareholder_categories()->last();
-        $posts = get_shareholder_by_category_id($shareholderCategory->id, 999);
+        $posts = get_all_shareholders();
         $count = 0;
         @endphp
         @if (!empty($posts)) 
@@ -70,7 +70,7 @@
     <ul class="news-thaco-list" id="myList">
         @if (!empty($posts))
         @foreach ($posts as  $key => $post)
-        @if($count>1 && $key>1)
+        @if($key>1)
         <li class="news-thaco-item">
             <div class="item-shareholder">
                 <div class="item-wrap">

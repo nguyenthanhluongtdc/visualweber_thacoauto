@@ -1,6 +1,7 @@
 <?php
 
 use Platform\Base\Enums\BaseStatusEnum;
+use Platform\Page\Repositories\Interfaces\PageInterface;
 use Platform\Kernel\Repositories\Interfaces\PostInterface;
 use Platform\Shareholder\Repositories\Interfaces\ShareholderInterface;
 use Platform\Blog\Repositories\Interfaces\PostInterface as InterfacesPostInterface;
@@ -232,5 +233,37 @@ if (!function_exists('get_shareholder_by_category_id')) {
             ->getByCategoryId($categoryId, $paginate);
 
         return $data;
+    }
+}
+
+if (!function_exists('get_all_shareholders')) {
+    /**
+     * @param boolean $active
+     * @return mixed
+     */
+    function get_all_shareholders()
+    {
+        return app(ShareholderInterface::class)
+        ->advancedGet([
+            'condition' => [
+                'status' => BaseStatusEnum::PUBLISHED,
+            ]
+        ]);
+    }
+}
+if (!function_exists('get_page_by_id')) {
+    /**
+     * @param boolean $active
+     * @return mixed
+     */
+    function get_page_by_id($id)
+    {
+        return app(PageInterface::class)
+        ->advancedGet([
+            'condition' => [
+                'id' => $id,
+                'status' => BaseStatusEnum::PUBLISHED,
+            ]
+        ])->first();
     }
 }

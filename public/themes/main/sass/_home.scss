@@ -105,6 +105,15 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1.2fr;
     grid-template-rows: 23vw 17vw;
+    @media (min-width:1921px){
+      grid-template-rows: 360px 360px;
+    }
+    @media (max-width:1366px){
+      grid-template-rows: 23vw 20vw;
+    }
+    @media (max-width:1199px){
+      grid-template-rows: 23vw 21vw;
+    }
     grid-gap: 20px;
     grid-template-areas: 
       "n1 n1 n2 n3"
@@ -242,6 +251,15 @@
     }
     .news-6{
       grid-area: n6;
+      position: relative;
+      .member-avatar{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
       @media (max-width:1080px){
         display: none;
       }

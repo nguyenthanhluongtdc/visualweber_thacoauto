@@ -245,7 +245,7 @@
                                 </div>
                                 <div class="right font-pri color-gray font20">
                                     <div class="desc-right">
-                                        <a href="{{get_image_url($item->file)}}" class="font-pri btn">{{__('Tải xuống')}}</a>
+                                        <a href="{{get_image_url($item->file)}}" class="font-pri fontmb-small btn">{{__('Tải xuống')}}</a>
                                     </div>
                                 </div>
                             </div>

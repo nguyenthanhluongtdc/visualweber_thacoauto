@@ -2,6 +2,7 @@
 
 use Platform\Base\Enums\BaseStatusEnum;
 use Platform\Kernel\Repositories\Interfaces\PostInterface;
+use Platform\Shareholder\Repositories\Interfaces\ShareholderInterface;
 use Platform\Blog\Repositories\Interfaces\PostInterface as InterfacesPostInterface;
 use Platform\Shareholdercateogry\Repositories\Interfaces\ShareholdercateogryInterface;
 
@@ -217,5 +218,19 @@ if (!function_exists('get_shareholder_categories')) {
             ->getAllCategories();
 
         return $categories;
+    }
+}
+
+if (!function_exists('get_shareholder_by_category_id')) {
+    /**
+     * @return \Illuminate\Support\Collection
+     * @throws Exception
+     */
+    function get_shareholder_by_category_id($categoryId, $paginate = 5)
+    {
+        $data = app(ShareholderInterface::class)
+            ->getByCategoryId($categoryId, $paginate);
+
+        return $data;
     }
 }

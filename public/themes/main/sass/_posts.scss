@@ -961,6 +961,8 @@
                 .news-download{
                     button{
                         border-radius: unset !important;
+                        background-color: $color-primary !important;
+                        border: unset;
                     }
                 }
                 .size-dowload {
@@ -1035,7 +1037,12 @@
                 .news-download{
                     button{
                         border-radius: unset !important;
+                        background-color: $color-primary !important;
+                        border: unset;
+                        
                     }
+                   
+
                 }
             }
         }

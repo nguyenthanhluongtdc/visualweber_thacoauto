@@ -1,16 +1,16 @@
 .services{
-    margin-top: 55px;
-    @media(max-width : 1440px){
-        margin-top: 50px;
-    }
-    @media(max-width : 1199px){
-        margin-top: 50px;
-    }
+    margin-top: 50px;
+    // @media(max-width : 1440px){
+    //     margin-top: 50px;
+    // }
+    // @media(max-width : 1199px){
+    //     margin-top: 50px;
+    // }
     .services-block{
         width: 100%;
         padding-bottom: 36.5%;
         position: relative;
-        margin-bottom: 65px;
+        margin-bottom: 50px;
         overflow: hidden;
 
         @media (max-width: 1080px) {

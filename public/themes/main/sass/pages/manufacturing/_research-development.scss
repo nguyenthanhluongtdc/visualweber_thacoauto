@@ -1,6 +1,6 @@
 #research-development-page {
     .section-intro-wrapper {
-        @include marginTop(80, "+");
+        @include marginTop(60, "+");
         .section-intro {
             border-top: 10px solid $color-primary;
             border-left: 2px solid $color787878;
@@ -256,7 +256,7 @@
         }
     }
     .section-info-more-wrapper {
-        @include marginTop(80, "+");
+        @include marginTop(60, "+");
         @media only screen and (max-width: 1080px) {
             @include marginTop(40, "+");
         }

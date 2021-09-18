@@ -1,7 +1,7 @@
 
 <div class="section-support-industry-overview">
     <div class="container-remake">
-        <div class="mechandical-overview mt-60 mb-60">
+        <div class="mechandical-overview mt-40 mb-40">
             @if(has_field($page, 'tittle_mechanical'))
                 <h2 class="mechandical-overview__title font60 font-pri-bold fontmb-large text-uppercase"> {!! has_field($page,
                 'tittle_mechanical') !!} </h2>

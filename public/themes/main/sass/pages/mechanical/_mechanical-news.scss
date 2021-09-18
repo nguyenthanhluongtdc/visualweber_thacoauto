@@ -2,7 +2,7 @@
     @media only screen and (max-width: 820px) {
         display: none;
     }
-    @include marginBottom(80, "+");
+    @include marginBottom(60, "+");
     .section-list-news {
         @include paddingTop(60);
         .title a {

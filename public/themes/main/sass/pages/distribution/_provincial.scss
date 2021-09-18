@@ -1,11 +1,11 @@
 .distribution {
-    margin-top: 55px;
-    @media(max-width: 1440px) {
-        margin-top: 50px;
-    }
-    @media(max-width: 1199px) {
-        margin-top: 50px;
-    }
+    margin-top: 50px;
+    // @media(max-width: 1440px) {
+    //     margin-top: 50px;
+    // }
+    // @media(max-width: 1199px) {
+    //     margin-top: 50px;
+    // }
     @media(max-width: 1080px) {
         margin-top: 2%;
     }
@@ -37,7 +37,7 @@
     }
     .provincial-company {
         background-color: $color-white;
-        @include paddingBottom(65);
+        @include paddingBottom(50);
         .description {
             font-family: $font-primary;
             text-align: justify;

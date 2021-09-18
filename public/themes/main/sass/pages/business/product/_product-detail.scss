@@ -1,12 +1,12 @@
 .section-product-detail {
-  margin-top: 55px;
+  margin-top: 50px;
   @media (max-width: 1080px) {
     margin-top: 0;
   }
   .product-detail {
     overflow: hidden;
     &__title {
-      margin-bottom: 2%;
+     padding-bottom: 45px;
       text-transform: uppercase;
 
       @media (max-width: 1080px) {

@@ -23,7 +23,7 @@
                         <p class="size-dowload">
                             @if(get_field($post, 'newspaper_file'))
                             <span class="left font-cond color-gray font24 fontmb-small">{{@get_file_size(get_field($post, 'newspaper_file'))}}</span>
-                            <span class="font-pri fontmb-small"><a href="{{ get_image_url(get_field($post, 'newspaper_file')) }}">{{ __("DOWNLOAD") }}</a></span>
+                            <span class="font-pri fontmb-small"><a href="{{ get_image_url(get_field($post, 'newspaper_file')) }}">{{ __("Tải về") }}</a></span>
                             @else
                             <span class="left font-cond color-gray font24 fontmb-small">{{__('Không có dữ liệu để tải về')}}</span>
                             @endif

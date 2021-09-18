@@ -8,7 +8,7 @@
         <a href="{{get_sub_field($item, 'link')}}"><img loading="lazy" src="{{ get_image_url(get_sub_field($item, 'image')) }}" alt="Banner trang chủ"></a>
     </div>
     @empty
-
+ 
     @endforelse
 </div>
 

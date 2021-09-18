@@ -301,6 +301,10 @@ var swiper = new Swiper(".researchDevSwiper", {
     },
 });
 
+$('.top-right-item,bottom-right-item ').hover(function() {
+    $(this).find()
+});
+
 var Helper = {
     addSelect2toNewsFilter: function() {
         if ($('.js-example-disabled-results').length > 0) {

@@ -1,7 +1,9 @@
 <?php
 
-use Platform\Blog\Repositories\Interfaces\PostInterface as InterfacesPostInterface;
+use Platform\Base\Enums\BaseStatusEnum;
 use Platform\Kernel\Repositories\Interfaces\PostInterface;
+use Platform\Blog\Repositories\Interfaces\PostInterface as InterfacesPostInterface;
+use Platform\Shareholdercateogry\Repositories\Interfaces\ShareholdercateogryInterface;
 
 if (!function_exists('get_featured_posts_by_category')) {
     /**
@@ -201,5 +203,19 @@ if (!function_exists('get_discount_price')) {
         else{
             return $discount->direct_discount;
         }
+    }
+}
+
+if (!function_exists('get_shareholder_categories_with_children')) {
+    /**
+     * @return \Illuminate\Support\Collection
+     * @throws Exception
+     */
+    function get_shareholder_categories_with_children()
+    {
+        $categories = app(ShareholdercateogryInterface::class)
+            ->getAllCategories(['status' => BaseStatusEnum::PUBLISHED], [], ['id', 'name', 'parent_id']);
+
+        return $categories;
     }
 }

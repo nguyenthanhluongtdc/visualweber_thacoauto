@@ -1,13 +1,14 @@
 <?php
 
-namespace Platform\Shareholder\Models;
+namespace Platform\Shareholdercateogry\Models;
 
 use Platform\Base\Models\BaseModel;
 use Platform\Slug\Traits\SlugTrait;
 use Platform\Base\Traits\EnumCastable;
 use Platform\Base\Enums\BaseStatusEnum;
+use Platform\Shareholder\Models\Shareholder;
 
-class Shareholder extends BaseModel
+class Shareholdercateogry extends BaseModel
 {
     use EnumCastable, SlugTrait;
 
@@ -16,7 +17,7 @@ class Shareholder extends BaseModel
      *
      * @var string
      */
-    protected $table = 'app_shareholders';
+    protected $table = 'app_shareholdercateogries';
 
     /**
      * @var array
@@ -26,11 +27,8 @@ class Shareholder extends BaseModel
         'status',
         'description',
         'image',
-        'content',
-        'file',
-        'is_featured',
+        'status',
         'order',
-
     ];
 
     /**
@@ -43,8 +41,8 @@ class Shareholder extends BaseModel
     /**
      * @return BelongsToMany
      */
-    public function categories(): BelongsToMany
+    public function shareholders(): BelongsToMany
     {
-        return $this->belongsToMany(ShareholderCategory::class, 'app__shareholder_category', 'category_id','shareholder_id')->with('slugable');;
+        return $this->belongsToMany(Shareholder::class, 'app__shareholder_category', 'shareholder_id', 'category_id')->with('slugable');
     }
 }

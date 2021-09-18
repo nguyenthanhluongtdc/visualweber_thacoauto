@@ -1,0 +1,9 @@
+{
+    "name": "Shareholdercateogry",
+    "namespace": "Platform\\Shareholdercateogry\\",
+    "provider": "Platform\\Shareholdercateogry\\Providers\\ShareholdercateogryServiceProvider",
+    "author": "Laravel Developer Team",
+    "url": "https://developers.laravel.com",
+    "version": "1.0",
+    "description": "The description for module shareholdercateogry"
+}

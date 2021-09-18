@@ -49,5 +49,10 @@ class ShareholderServiceProvider extends ServiceProvider
                 'permissions' => ['shareholder.index'],
             ]);
         });
+
+        $this->app->booted(function () {
+            \SlugHelper::registerModule(Shareholder::class);
+            \SlugHelper::setPrefix(Shareholder::class, 'shareholder');
+         });
     }
 }

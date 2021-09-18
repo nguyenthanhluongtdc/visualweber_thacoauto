@@ -16,7 +16,7 @@
             </div>
             <div class="item-content">
                 <h5 class="title font30 font-pri-bold">
-                    <a href="">{{$post->name}}</a>
+                    <a href="{{$post->url}}">{{$post->name}}</a>
                 </h5>
                 <p class="day font15 font-pri color-gray">
                     {{date_format($post->created_at,"d-m-Y")}}

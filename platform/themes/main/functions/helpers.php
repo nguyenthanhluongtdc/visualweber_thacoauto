@@ -214,7 +214,7 @@ if (!function_exists('get_shareholder_categories_with_children')) {
     function get_shareholder_categories_with_children()
     {
         $categories = app(ShareholdercateogryInterface::class)
-            ->getAllCategories(['status' => BaseStatusEnum::PUBLISHED], [], ['id', 'name', 'parent_id']);
+            ->getAllCategories();
 
         return $categories;
     }

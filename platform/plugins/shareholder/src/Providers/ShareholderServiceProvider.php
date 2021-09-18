@@ -50,9 +50,7 @@ class ShareholderServiceProvider extends ServiceProvider
             ]);
         });
 
-        $this->app->booted(function () {
             \SlugHelper::registerModule(Shareholder::class);
             \SlugHelper::setPrefix(Shareholder::class, 'shareholder');
-         });
     }
 }

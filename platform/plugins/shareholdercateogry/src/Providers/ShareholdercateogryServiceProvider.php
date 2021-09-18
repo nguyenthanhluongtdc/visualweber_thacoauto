@@ -49,9 +49,7 @@ class ShareholdercateogryServiceProvider extends ServiceProvider
                 'permissions' => ['shareholdercateogry.index'],
             ]);
         });
-        $this->app->booted(function () {
             \SlugHelper::registerModule(Shareholdercateogry::class);
             \SlugHelper::setPrefix(Shareholdercateogry::class, 'shareholder-category');
-         });
     }
 }

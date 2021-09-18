@@ -10,7 +10,7 @@ class ShareholdercateogryCacheDecorator extends CacheAbstractDecorator implement
     /**
      * {@inheritDoc}
      */
-    public function getAllCategories(array $condition = [], array $with = [])
+    public function getAllCategories()
     {
         return $this->getDataIfExistCache(__FUNCTION__, func_get_args());
     }

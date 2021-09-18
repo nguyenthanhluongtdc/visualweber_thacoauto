@@ -11,5 +11,5 @@ interface ShareholdercateogryInterface extends RepositoryInterface
      * @param array $with
      * @return array
      */
-    public function getAllCategories(array $condition = [], array $with = []);
+    public function getAllCategories();
 }

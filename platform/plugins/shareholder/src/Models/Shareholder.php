@@ -6,6 +6,8 @@ use Platform\Base\Models\BaseModel;
 use Platform\Slug\Traits\SlugTrait;
 use Platform\Base\Traits\EnumCastable;
 use Platform\Base\Enums\BaseStatusEnum;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Platform\Shareholdercateogry\Models\Shareholdercateogry;
 
 class Shareholder extends BaseModel
 {
@@ -45,6 +47,6 @@ class Shareholder extends BaseModel
      */
     public function categories(): BelongsToMany
     {
-        return $this->belongsToMany(ShareholderCategory::class, 'app__shareholder_category', 'category_id','shareholder_id')->with('slugable');;
+        return $this->belongsToMany(Shareholdercateogry::class, 'app__shareholder_category', 'category_id','shareholder_id')->with('slugable');
     }
 }

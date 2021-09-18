@@ -21,7 +21,7 @@ class ShareholderForm extends FormAbstract
         if ($this->getModel()) {
             $selectedCategories = $this->getModel()->categories()->pluck('category_id')->all();
         }
-
+        dd($this->getModel()->categories());
         if (empty($selectedCategories)) {
             $selectedCategories = app(Shareholdercateogry::class)
                 ->getModel()

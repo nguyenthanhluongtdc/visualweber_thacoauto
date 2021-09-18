@@ -39,94 +39,35 @@
     <div class="activity-news-desktop">
         <div class="container-remake">
             @php
-                $posts = get_posts_by_category(theme_option('default_category_news'), 4);
+                $posts = get_posts_by_category(theme_option('default_category_news'), 3);
             @endphp
             <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 mb-20 fontmb-large">{{ __("tin tức hoạt động") }}</h1>
             <div class="activity-news-desktop__wrap">
-                @if (!empty($posts[0]))
+                @foreach ( $posts as $post)
+                    
+               
                 <div data-aos="fade-right" data-aos-duration="1500" class="activity-news-desktop__item">
                     <div class="img-container">
                         <div class="skewed">
-                            <a href="{{$posts[0]->url}}">
-                                <img loading="lazy" src="{{ Storage::disk('public')->exists($posts[0]->image) ? get_object_image($posts[0]->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Tin tức">
+                            <a href="{{$post->url}}">
+                                <img loading="lazy" src="{{ Storage::disk('public')->exists($post->image) ? get_object_image($post->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Tin tức">
                             </a>
                         </div>
                     </div>
                     <div class="news-body">
-                        <a class="news-title font30" href="{{$posts[0]->url}}">{{$posts[0]->name}}</a>
-                        <p class="news-description font18">{{Str::words($posts[0]->description,40)}}</p>
+                        <a class="news-title font30" href="{{$post->url}}">{{$post->name}}</a>
+                        <p class="news-description font18">{{Str::words($post->description,40)}}</p>
                         <div class="news-info">
                             <div class="news-info__item font15">
-                                <p>{{ $posts[0]->city->name ?? '--' }}</p>
+                                <p>{{ $post->city->name ?? '--' }}</p>
                             </div>
                             <div class="news-info__item font15">
-                                <p>{{date_format($posts[0]->created_at,"d-m-Y")}}</p>
+                                <p>{{date_format($post->created_at,"d-m-Y")}}</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                @endif
-                <div class="activity-news-desktop__item">
-                    @if (!empty($posts[1]))
-                    <div data-aos="flip-up" data-aos-duration="1500" class="item-top news-body">
-                        <a class="news-title font25" href="{{$posts[1]->url}}">{{$posts[1]->name}}</a>
-                        <p class="news-description font15">{{Str::words($posts[1]->description,40)}}</p>
-                        <div class="news-info">
-                            <div class="news-info__item font15">
-                                <p>{{ $posts[1]->city->name ?? '--' }}</p>
-                            </div>
-                            <div class="news-info__item font15">
-                                <p>{{date_format($posts[1]->created_at,"d-m-Y")}}</p>
-                            </div>
-                        </div>
-                    </div>
-                    @endif
-                    @if (!empty($posts[2]))
-                    <div data-aos="flip-down" data-aos-duration="1500" class="item-bottom">
-                        <div class="img-container">
-                            <div class="skewed">
-                                <a href="{{$posts[2]->url}}">
-                                    <img loading="lazy" src="{{ Storage::disk('public')->exists($posts[2]->image) ? get_object_image($posts[2]->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Tin tức">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="news-body">
-                            <a class="news-title font30" href="{{$posts[2]->url}}">{{$posts[2]->name}}</a>
-                            <div class="news-info">
-                                <div class="news-info__item font15">
-                                    <p>{{ $posts[2]->city->name ?? '--' }}</p>
-                                </div>
-                                <div class="news-info__item font15">
-                                    <p>{{date_format($posts[2]->created_at,"d-m-Y")}}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    @endif
-                </div>
-                @if (!empty($posts[3]))
-                <div data-aos="fade-left" data-aos-duration="1500" class="activity-news-desktop__item">
-                    <div class="img-container">
-                        <div class="skewed">
-                            <a href="{{$posts[3]->url}}">
-                                <img loading="lazy" src="{{ Storage::disk('public')->exists($posts[3]->image) ? get_object_image($posts[3]->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Tin tức">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="news-body">
-                        <a class="news-title font30" href="{{$posts[3]->url}}">{{$posts[3]->name}}</a>
-                        <p class="news-description font18 fontmb-little">{{Str::words($posts[3]->description,40)}}</p>
-                        <div class="news-info">
-                            <div class="news-info__item font15">
-                                <p>{{ $posts[3]->city->name ?? '--' }}</p>
-                            </div>
-                            <div class="news-info__item font15">
-                                <p>{{date_format($posts[3]->created_at,"d-m-Y")}}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                @endif
+                @endforeach
             </div>
         </div>
     </div>
@@ -136,78 +77,29 @@
             <h2 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 mb-20 text-uppercase fontmb-large font-pri-bold">
                 {{ __("tin tức hoạt động") }}
             </h2>
-            @if (!empty($posts[0]))
+            @foreach ($posts as $post_mb)
             <div class="news-item">
                 <div class="img-container">
                     <div class="skewed">
-                        <a href="{{$posts[0]->url}}">
-                            <img loading="lazy" src="{{ Storage::disk('public')->exists($posts[0]->image) ? get_object_image($posts[0]->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Tin tức">
+                        <a href="{{$post_mb->url}}">
+                            <img loading="lazy" src="{{ Storage::disk('public')->exists($post_mb->image) ? get_object_image($post_mb->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Tin tức">
                         </a>
                     </div>
                 </div>
                 <div class="news-body">
-                    <a class="news-title font-pri-bold fontmb-middle" href="{{$posts[0]->url}}">{{$posts[0]->name}}</a>
-                    <p class="news-description fontmb-small">{{Str::words($posts[0]->description,40)}}</p>
+                    <a class="news-title font-pri-bold fontmb-middle" href="{{$post_mb->url}}">{{$post_mb->name}}</a>
+                    <p class="news-description fontmb-small">{{Str::words($post_mb->description,40)}}</p>
                     <div class="news-info">
                         <div class="news-info__item fontmb-little">
-                            <p>{{ $posts[0]->city->name ?? '--' }}</p>
+                            <p>{{ $post_mb->city->name ?? '--' }}</p>
                         </div>
                         <div class="news-info__item fontmb-little">
-                            <p>{{date_format($posts[0]->created_at,"d-m-Y")}}</p>
+                            <p>{{date_format($post_mb->created_at,"d-m-Y")}}</p>
                         </div>
                     </div>
                 </div>
             </div>
-            @endif
-
-            @if (!empty($posts[1]))
-            <div class="news-item">
-                <div class="img-container">
-                    <div class="skewed">
-                        <a href="{{$posts[1]->url}}">
-                            <img loading="lazy" src="{{ Storage::disk('public')->exists($posts[1]->image) ? get_object_image($posts[1]->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Tin tức">
-                        </a>
-                    </div>
-                </div>
-                <div class="news-body">
-                    <a class="news-title font-pri-bold fontmb-middle" href="{{$posts[1]->url}}">{{$posts[1]->name}}</a>
-                    <p class="news-description fontmb-small">{{Str::words($posts[1]->description,40)}}</p>
-                    <div class="news-info">
-                        <div class="news-info__item fontmb-little">
-                            <p>{{ $posts[1]->city->name ?? '--' }}</p>
-                        </div>
-                        <div class="news-info__item  fontmb-little">
-                            <p>{{date_format($posts[1]->created_at,"d-m-Y")}}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            @endif
-
-            @if (!empty($posts[2]))
-            <div class="news-item">
-                <div class="img-container">
-                    <div class="skewed">
-                        <a href="{{$posts[2]->url}}">
-                            <img loading="lazy" src="{{ Storage::disk('public')->exists($posts[2]->image) ? get_object_image($posts[2]->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="Tin tức">
-                        </a>
-                    </div>
-                </div>
-                <div class="news-body">
-                    <a class="news-title font-pri-bold fontmb-middle" href="{{$posts[2]->url}}">{{$posts[2]->name}}</a>
-                    <p class="news-description fontmb-small">{{Str::words($posts[2]->description,40)}}</p>
-                    <div class="news-info">
-                        <div class="news-info__item  fontmb-little">
-                            <p>{{ $posts[2]->city->name ?? '--' }}</p>
-                        </div>
-                        <div class="news-info__item fontmb-little">
-                            <p>{{date_format($posts[2]->created_at,"d-m-Y")}}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            @endif
-
+            @endforeach
              @if(!empty($posts))
                 {{ $posts->links('vendor.pagination.custom-distribution') }}
             @endif

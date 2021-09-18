@@ -33,6 +33,7 @@ use Platform\DistributionSystem\Repositories\Interfaces\ShowroomInterface;
 use Platform\DistributionSystem\Repositories\Interfaces\ShowroomBrandInterface;
 use Platform\DistributionSystem\Repositories\Interfaces\DistributionSystemInterface;
 use Platform\Kernel\Repositories\Interfaces\PostInterface as InterfacesPostInterface;
+use Platform\Shareholdercateogry\Models\Shareholdercateogry;
 
 class ThacoController extends PublicController
 {
@@ -395,6 +396,30 @@ class ThacoController extends PublicController
                     'type' => 'success',
                     'month' => $loanHasMonth->months,
                     "interestRate" => $loanHasMonth->interest_rate,
+                ]
+            );
+        } catch (\Throwable $th) {
+            Log::error('Có lỗi xảy ra khi lấy danh sách đại lý theo tỉnh thành', [$th->getMessage(), $th->getFile(), $th->getLine()]);
+            return response()->json(
+                [
+                    'type' => 'error',
+                    'message' => $th->getMessage(),
+
+                ]
+            )->setStatusCode(Response::HTTP_INTERNAL_SERVER_ERROR);
+        }
+    }
+    public function getShareholder(Request $request, BankloansInterface $bankloansInterface){
+        try {
+            
+            $data['data']  = get_shareholder_by_category_id($request->categoryId);
+            
+            $image = get_image_url(Shareholdercateogry::where('id', $request->categoryId)->first()->image);
+            return response()->json(
+                [
+                    'shareholders' => Theme::partial('templates/shareholder', $data),
+                    'type' => 'success',
+                    'image' => $image,
                 ]
             );
         } catch (\Throwable $th) {

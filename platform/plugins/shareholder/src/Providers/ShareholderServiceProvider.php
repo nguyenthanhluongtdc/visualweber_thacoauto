@@ -43,8 +43,14 @@ class ShareholderServiceProvider extends ServiceProvider
                 'id'          => 'cms-plugins-shareholder',
                 'priority'    => 5,
                 'parent_id'   => null,
-                'name'        => 'plugins/shareholder::shareholder.name',
-                'icon'        => 'fa fa-list',
+                'name'        => __('Quan hệ cổ đông'),
+                'icon'        => 'fas fa-file-contract',
+            ])
+            ->registerItem([
+                'id'          => 'cms-plugins-shareholder-child',
+                'priority'    => 5,
+                'parent_id'   => 'cms-plugins-shareholder',
+                'name'        => __('Quan hệ cổ đông'),
                 'url'         => route('shareholder.index'),
                 'permissions' => ['shareholder.index'],
             ]);

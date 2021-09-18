@@ -1,5 +1,7 @@
 {{-- @php Theme::layout('no-sidebar') @endphp --}}
-
+<script>
+    const getShareholderUrl = '{{route('public.ajax.getShareholder')}}'
+</script>
 <div class="slider-main-carousel owl-carousel owl-theme">
     @forelse (get_field($page, 'main_banner_homepage') as $item)
     <div class="slider-main-item">
@@ -173,18 +175,17 @@
 @include('theme.main::partials.field-of-activity',$page)
 
 {{-- quan hệ cổ đông --}}
+@if(!empty(get_shareholder_categories()))
 <div class="section-shareholder-home container-remake">
     <div class="shareholder-home-top" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out">
         <h2 class="font-pri-bold font60 color-gray fontmb-large ">Quan hệ cổ đông</h2>
         <div class="menu-tab-right font25 fontmb-small">
             <ul class="nav nav-pills font-pri-bold color-gray hidden-scrollbar" role="tablist">
-                @if(!empty(get_shareholder_categories()))
                 @foreach (get_shareholder_categories() as $key => $item)
                 <li class="nav-item" role="tab">
                     <a class="nav-link shareholder-link {{$loop->first ? "active" : ""}}" data-category={{$item->id}} href="javascript:;">{{$item->name}}</a>
                 </li>
                 @endforeach
-                @endif
                 <li class="nav-item link-views-all">
                     <a href="#" class="color-gray">
                         {{__('Xem tất cả')}} <span><i class="fas fa-arrow-right font15"></i></span>
@@ -198,704 +199,71 @@
             </div> --}}
         </div>
     </div>
-
+    
     <div class="shareholder-home-content">
-        <div class="tab-content font-25 fontmb-small" >
-            <div id="shareholder1" class="tab-pane active ">
+        @php
+            $shareholderCategory = get_shareholder_categories()->last();
+            
+        @endphp
+        <div class="loading d-none">
+            <img src="{{Theme::asset()->url('images/media/loading.gif')}}" alt="Loading">
+        </div>
+        <div class=" font-25 fontmb-small" >
+            <div>
                 <div class="tab-content-item">
                     <div class="tab-content-left" data-aos="fade-right" data-aos-duration="1200" data-aos-easing="ease-in-out">
                         <img loading="lazy" src="{{ Theme::asset()->url('images/main/cthome1.jpg') }}" alt="Icon">
                     </div>
                     <div class="tab-content-right" data-aos="fade-right" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="250">
                         <div class="list-content">
+                            {{-- @dd($shareholderCategory->id) --}}
+                            @if(!empty(get_shareholder_by_category_id($shareholderCategory->id)))
+                            @foreach (get_shareholder_by_category_id($shareholderCategory->id) as $item)
+                                
                             <div class="item-shareholder">
+                                
                                 <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
-                                        class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
-                                        class="down-hide">
+                                    {{-- <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
+                                    class="up-show"> --}}
+                                    <i class="fas fa-caret-right font18"></i>
                                 </div>
                                 <div class="mid">
                                     <h5 class="title font25 font-pri-bold color-gray fontmb-small">
-                                        Công bố thông tin phát hành cổ phiếu để tăng vốn cổ phần từ nguồn vốn chủ sở hữu
+                                        {{$item->name}}
                                     </h5>
-                                    <div class="desc-none">
+                                    {{-- <div class="desc-none">
                                         <div class="wrap">
                                             <div class="desc-left font20 font-cond font20 fontmb-small">CBTT phat hanh co phieu tang von co
-                                                phan.pdf</div>
+                                                phan.pdf
+                                            </div>
                                             <div class="desc-right">
                                                 <span class="font-cond font20 fontmb-small">804,24KB</span>
                                                 <a href="#" class="font-pri">DOWNLOAD</a>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                 </div>
                                 <div class="right font-pri color-gray font20">
-                                    10/07/2020
-                                </div>
-                            </div>
-
-                            <div class="item-shareholder">
-                                <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
-                                        class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
-                                        class="down-hide">
-                                </div>
-                                <div class="mid">
-                                    <h5 class="title font25 font-pri-bold color-gray fontmb-small">
-                                        Nghị quyết Đại hội đồng Cổ đông Công ty Cổ phần Ô tô Trường Hải
-                                    </h5>
-                                    <div class="desc-none">
-                                        <div class="wrap">
-                                            <div class="desc-left font-cond font20 fontmb-small">CBTT phat hanh co phieu tang von co
-                                                phan.pdf</div>
-                                            <div class="desc-right">
-                                                <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                #
-                                            </div>
-                                        </div>
+                                    <div class="desc-right">
+                                        <a href="{{get_image_url($item->file)}}" class="font-pri btn">{{__('Tải xuống')}}</a>
                                     </div>
                                 </div>
-                                <div class="right font-pri color-gray">
-                                    10/07/2020
-                                </div>
                             </div>
-
-                            <div class="item-shareholder">
-                                <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
-                                        class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
-                                        class="down-hide">
-                                </div>
-                                <div class="mid">
-                                    <h5 class="title font25 font-pri-bold color-gray fontmb-small">
-                                        Biên bản kiểm phiếu lấy ý kiến Cổ đông bằng văn bản
-                                    </h5>
-                                    <div class="desc-none">
-                                        <div class="wrap">
-                                            <div class="desc-left font-cond font20 fontmb-small">CBTT phat hanh co phieu tang von co
-                                                phan.pdf</div>
-                                            <div class="desc-right">
-                                                <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                #
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right font-pri color-gray">
-                                    10/07/2020
-                                </div>
-                            </div>
-
-                            <div class="item-shareholder">
-                                <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
-                                        class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
-                                        class="down-hide">
-                                </div>
-                                <div class="mid">
-                                    <h5 class="title font25 font-pri-bold color-gray fontmb-small">
-                                        Biên bản và Nghị quyết ĐHĐCĐ năm 2018
-                                    </h5>
-                                    <div class="desc-none">
-                                        <div class="wrap">
-                                            <div class="desc-left font20 font-cond font20 fontmb-small">CBTT phat hanh co phieu tang von co
-                                                phan.pdf</div>
-                                            <div class="desc-right">
-                                                <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                #
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right font-pri color-gray">
-                                    10/07/2020
-                                </div>
-                            </div>
-                            <div class="item-shareholder">
-                                <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
-                                        class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
-                                        class="down-hide">
-                                </div>
-                                <div class="mid">
-                                    <h5 class="title font25 font-pri-bold color-gray fontmb-small">
-                                        Công bố thông tin ngày đăng ký cuối cùng để thực hiện quyền tham dự Đại hội cổ
-                                        đông năm 2018
-                                    </h5>
-                                    <div class="desc-none">
-                                        <div class="wrap">
-                                            <div class="desc-left font-cond font20 fontmb-small">CBTT phat hanh co phieu tang von co
-                                                phan.pdf</div>
-                                            <div class="desc-right">
-                                                <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                #
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right font-pri color-gray">
-                                    10/07/2020
-                                </div>
-                            </div>
-                            <div class="item-shareholder">
-                                <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
-                                        class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
-                                        class="down-hide">
-                                </div>
-                                <div class="mid">
-                                    <h5 class="title font25 font-pri-bold color-gray fontmb-small">
-                                        Công bố thông tin về việc bổ sung ngành nghề kinh doanh và sửa đổi điều lệ THACO
-                                    </h5>
-                                    <div class="desc-none">
-                                        <div class="wrap">
-                                            <div class="desc-left font-cond font20 fontmb-small">CBTT phat hanh co phieu tang von co
-                                                phan.pdf</div>
-                                            <div class="desc-right">
-                                                <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                #
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right font-pri color-gray">
-                                    10/07/2020
-                                </div>
-                            </div>
-
+                            @endforeach
+                            @endif
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id="shareholder2" class="tab-pane fade">
-                <div class="tab-content-item">
-                    <div class="tab-content-left">
-                        <img loading="lazy" src="{{ Theme::asset()->url('images/main/cthome2.jpg') }}" alt="Icon">
-                    </div>
-                    <div class="tab-content-right">
-                        <div class="list-content">
-                            <div class="item-shareholder">
-                                <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
-                                        class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
-                                        class="down-hide">
-                                </div>
-                                <div class="mid">
-                                    <h5 class="title font25 font-pri-bold color-gray fontmb-small">
-                                        Công bố thông tin phát hành cổ phiếu để tăng vốn cổ phần từ nguồn vốn chủ sở hữu
-                                    </h5>
-                                    <div class="desc-none">
-                                        <div class="wrap">
-                                            <div class="desc-left font-cond font20 fontmb-small">CBTT phat hanh co phieu tang von co
-                                                phan.pdf</div>
-                                            <div class="desc-right">
-                                                <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                #
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right font-pri color-gray">
-                                    10/07/2020
-                                </div>
-                            </div>
-
-                            <div class="item-shareholder">
-                                <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
-                                        class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
-                                        class="down-hide">
-                                </div>
-                                <div class="mid">
-                                    <h5 class="title font25 font-pri-bold color-gray fontmb-small">
-                                        Nghị quyết Đại hội đồng Cổ đông Công ty Cổ phần Ô tô Trường Hải
-                                    </h5>
-                                    <div class="desc-none">
-                                        <div class="wrap">
-                                            <div class="desc-left font-cond font20 fontmb-small">CBTT phat hanh co phieu tang von co
-                                                phan.pdf</div>
-                                            <div class="desc-right">
-                                                <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                #
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right font-pri color-gray">
-                                    10/07/2020
-                                </div>
-                            </div>
-
-                            <div class="item-shareholder">
-                                <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
-                                        class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
-                                        class="down-hide">
-                                </div>
-                                <div class="mid">
-                                    <h5 class="title font25 font-pri-bold color-gray fontmb-small">
-                                        Biên bản kiểm phiếu lấy ý kiến Cổ đông bằng văn bản
-                                    </h5>
-                                    <div class="desc-none">
-                                        <div class="wrap">
-                                            <div class="desc-left font-cond font20 fontmb-small">CBTT phat hanh co phieu tang von co
-                                                phan.pdf</div>
-                                            <div class="desc-right">
-                                                <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                #
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right font-pri color-gray">
-                                    10/07/2020
-                                </div>
-                            </div>
-
-                            <div class="item-shareholder">
-                                <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
-                                        class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
-                                        class="down-hide">
-                                </div>
-                                <div class="mid">
-                                    <h5 class="title font25 font-pri-bold color-gray fontmb-small">
-                                        Biên bản và Nghị quyết ĐHĐCĐ năm 2018
-                                    </h5>
-                                    <div class="desc-none">
-                                        <div class="wrap">
-                                            <div class="desc-left font-cond font20 fontmb-small">CBTT phat hanh co phieu tang von co
-                                                phan.pdf</div>
-                                            <div class="desc-right">
-                                                <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                #
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right font-pri color-gray">
-                                    10/07/2020
-                                </div>
-                            </div>
-                            <div class="item-shareholder">
-                                <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
-                                        class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
-                                        class="down-hide">
-                                </div>
-                                <div class="mid">
-                                    <h5 class="title font25 font-pri-bold color-gray fontmb-small">
-                                        Công bố thông tin ngày đăng ký cuối cùng để thực hiện quyền tham dự Đại hội cổ
-                                        đông năm 2018
-                                    </h5>
-                                    <div class="desc-none">
-                                        <div class="wrap">
-                                            <div class="desc-left font-cond font20 fontmb-small">CBTT phat hanh co phieu tang von co
-                                                phan.pdf</div>
-                                            <div class="desc-right">
-                                                <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                #
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right font-pri color-gray">
-                                    10/07/2020
-                                </div>
-                            </div>
-                            <div class="item-shareholder">
-                                <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
-                                        class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
-                                        class="down-hide">
-                                </div>
-                                <div class="mid">
-                                    <h5 class="title font25 font-pri-bold color-gray fontmb-small">
-                                        Công bố thông tin về việc bổ sung ngành nghề kinh doanh và sửa đổi điều lệ THACO
-                                    </h5>
-                                    <div class="desc-none">
-                                        <div class="wrap">
-                                            <div class="desc-left font-cond font20 fontmb-small">CBTT phat hanh co phieu tang von co
-                                                phan.pdf</div>
-                                            <div class="desc-right">
-                                                <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                #
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right font-pri color-gray">
-                                    10/07/2020
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="shareholder3" class="tab-pane fade">
-                <div class="tab-content-item">
-                    <div class="tab-content-left">
-                        <img loading="lazy" src="{{ Theme::asset()->url('images/main/cthome3.jpg') }}" alt="Icon">
-                    </div>
-                    <div class="tab-content-right">
-                        <div class="list-content">
-                            <div class="item-shareholder">
-                                <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
-                                        class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
-                                        class="down-hide">
-                                </div>
-                                <div class="mid">
-                                    <h5 class="title font25 font-pri-bold color-gray fontmb-small">
-                                        Công bố thông tin phát hành cổ phiếu để tăng vốn cổ phần từ nguồn vốn chủ sở hữu
-                                    </h5>
-                                    <div class="desc-none">
-                                        <div class="wrap">
-                                            <div class="desc-left font-cond font20 fontmb-small">CBTT phat hanh co phieu tang von co
-                                                phan.pdf</div>
-                                            <div class="desc-right">
-                                                <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                #
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right font-pri color-gray">
-                                    10/07/2020
-                                </div>
-                            </div>
-
-                            <div class="item-shareholder">
-                                <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
-                                        class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
-                                        class="down-hide">
-                                </div>
-                                <div class="mid">
-                                    <h5 class="title font25 font-pri-bold color-gray fontmb-small">
-                                        Nghị quyết Đại hội đồng Cổ đông Công ty Cổ phần Ô tô Trường Hải
-                                    </h5>
-                                    <div class="desc-none">
-                                        <div class="wrap">
-                                            <div class="desc-left font-cond font20 fontmb-small">CBTT phat hanh co phieu tang von co
-                                                phan.pdf</div>
-                                            <div class="desc-right">
-                                                <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                #
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right font-pri color-gray">
-                                    10/07/2020
-                                </div>
-                            </div>
-
-                            <div class="item-shareholder">
-                                <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
-                                        class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
-                                        class="down-hide">
-                                </div>
-                                <div class="mid">
-                                    <h5 class="title font25 font-pri-bold color-gray fontmb-small">
-                                        Biên bản kiểm phiếu lấy ý kiến Cổ đông bằng văn bản
-                                    </h5>
-                                    <div class="desc-none">
-                                        <div class="wrap">
-                                            <div class="desc-left font-cond font20 fontmb-small">CBTT phat hanh co phieu tang von co
-                                                phan.pdf</div>
-                                            <div class="desc-right">
-                                                <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                #
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right font-pri color-gray">
-                                    10/07/2020
-                                </div>
-                            </div>
-
-                            <div class="item-shareholder">
-                                <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
-                                        class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
-                                        class="down-hide">
-                                </div>
-                                <div class="mid">
-                                    <h5 class="title font25 font-pri-bold color-gray fontmb-small">
-                                        Biên bản và Nghị quyết ĐHĐCĐ năm 2018
-                                    </h5>
-                                    <div class="desc-none">
-                                        <div class="wrap">
-                                            <div class="desc-left font-cond font20 fontmb-small">CBTT phat hanh co phieu tang von co
-                                                phan.pdf</div>
-                                            <div class="desc-right">
-                                                <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                #
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right font-pri color-gray">
-                                    10/07/2020
-                                </div>
-                            </div>
-                            <div class="item-shareholder">
-                                <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
-                                        class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
-                                        class="down-hide">
-                                </div>
-                                <div class="mid">
-                                    <h5 class="title font25 font-pri-bold color-gray fontmb-small">
-                                        Công bố thông tin ngày đăng ký cuối cùng để thực hiện quyền tham dự Đại hội cổ
-                                        đông năm 2018
-                                    </h5>
-                                    <div class="desc-none">
-                                        <div class="wrap">
-                                            <div class="desc-left font-cond font20 fontmb-small">CBTT phat hanh co phieu tang von co
-                                                phan.pdf</div>
-                                            <div class="desc-right">
-                                                <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                #
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right font-pri color-gray">
-                                    10/07/2020
-                                </div>
-                            </div>
-                            <div class="item-shareholder">
-                                <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
-                                        class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
-                                        class="down-hide">
-                                </div>
-                                <div class="mid">
-                                    <h5 class="title font25 font-pri-bold color-gray fontmb-small">
-                                        Công bố thông tin về việc bổ sung ngành nghề kinh doanh và sửa đổi điều lệ THACO
-                                    </h5>
-                                    <div class="desc-none">
-                                        <div class="wrap">
-                                            <div class="desc-left font-cond font20 fontmb-small">CBTT phat hanh co phieu tang von co
-                                                phan.pdf</div>
-                                            <div class="desc-right">
-                                                <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                #
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right font-pri color-gray">
-                                    10/07/2020
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="shareholder4" class="tab-pane fade">
-                <div class="tab-content-item">
-                    <div class="tab-content-left">
-                        <img loading="lazy" src="{{ Theme::asset()->url('images/main/cthome1.jpg') }}" alt="Icon">
-                    </div>
-                    <div class="tab-content-right">
-                        <div class="list-content">
-                            <div class="item-shareholder">
-                                <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
-                                        class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
-                                        class="down-hide">
-                                </div>
-                                <div class="mid">
-                                    <h5 class="title font25 font-pri-bold color-gray fontmb-small">
-                                        Công bố thông tin phát hành cổ phiếu để tăng vốn cổ phần từ nguồn vốn chủ sở hữu
-                                    </h5>
-                                    <div class="desc-none">
-                                        <div class="wrap">
-                                            <div class="desc-left font-cond font20 fontmb-small">CBTT phat hanh co phieu tang von co
-                                                phan.pdf</div>
-                                            <div class="desc-right">
-                                                <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                #
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right font-pri color-gray">
-                                    10/07/2020
-                                </div>
-                            </div>
-
-                            <div class="item-shareholder">
-                                <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
-                                        class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
-                                        class="down-hide">
-                                </div>
-                                <div class="mid">
-                                    <h5 class="title font25 font-pri-bold color-gray fontmb-small">
-                                        Nghị quyết Đại hội đồng Cổ đông Công ty Cổ phần Ô tô Trường Hải
-                                    </h5>
-                                    <div class="desc-none">
-                                        <div class="wrap">
-                                            <div class="desc-left font-cond font20 fontmb-small">CBTT phat hanh co phieu tang von co
-                                                phan.pdf</div>
-                                            <div class="desc-right">
-                                                <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                #
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right font-pri color-gray">
-                                    10/07/2020
-                                </div>
-                            </div>
-
-                            <div class="item-shareholder">
-                                <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
-                                        class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
-                                        class="down-hide">
-                                </div>
-                                <div class="mid">
-                                    <h5 class="title font25 font-pri-bold color-gray fontmb-small">
-                                        Biên bản kiểm phiếu lấy ý kiến Cổ đông bằng văn bản
-                                    </h5>
-                                    <div class="desc-none">
-                                        <div class="wrap">
-                                            <div class="desc-left font-cond font20 fontmb-small">CBTT phat hanh co phieu tang von co
-                                                phan.pdf</div>
-                                            <div class="desc-right">
-                                                <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                #
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right font-pri color-gray">
-                                    10/07/2020
-                                </div>
-                            </div>
-
-                            <div class="item-shareholder">
-                                <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
-                                        class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
-                                        class="down-hide">
-                                </div>
-                                <div class="mid">
-                                    <h5 class="title font25 font-pri-bold color-gray fontmb-small">
-                                        Biên bản và Nghị quyết ĐHĐCĐ năm 2018
-                                    </h5>
-                                    <div class="desc-none">
-                                        <div class="wrap">
-                                            <div class="desc-left font-cond font20 fontmb-small">CBTT phat hanh co phieu tang von co
-                                                phan.pdf</div>
-                                            <div class="desc-right">
-                                                <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                #
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right font-pri color-gray">
-                                    10/07/2020
-                                </div>
-                            </div>
-                            <div class="item-shareholder">
-                                <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
-                                        class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
-                                        class="down-hide">
-                                </div>
-                                <div class="mid">
-                                    <h5 class="title font25 font-pri-bold color-gray fontmb-small">
-                                        Công bố thông tin ngày đăng ký cuối cùng để thực hiện quyền tham dự Đại hội cổ
-                                        đông năm 2018
-                                    </h5>
-                                    <div class="desc-none">
-                                        <div class="wrap">
-                                            <div class="desc-left font-cond font20 fontmb-small">CBTT phat hanh co phieu tang von co
-                                                phan.pdf</div>
-                                            <div class="desc-right">
-                                                <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                #
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right font-pri color-gray">
-                                    10/07/2020
-                                </div>
-                            </div>
-                            <div class="item-shareholder">
-                                <div class="left">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
-                                        class="up-show">
-                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="Down icon"
-                                        class="down-hide">
-                                </div>
-                                <div class="mid">
-                                    <h5 class="title font25 font-pri-bold color-gray fontmb-small">
-                                        Công bố thông tin về việc bổ sung ngành nghề kinh doanh và sửa đổi điều lệ THACO
-                                    </h5>
-                                    <div class="desc-none">
-                                        <div class="wrap">
-                                            <div class="desc-left font-cond font20 fontmb-small">CBTT phat hanh co phieu tang von co
-                                                phan.pdf</div>
-                                            <div class="desc-right">
-                                                <span class="font-cond font20 fontmb-small">804,24KB</span>
-                                                #
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right font-pri color-gray">
-                                    10/07/2020
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div>
 </div>
-
-{{-- đối tác --}}
-<div class="section-partner-home container-remake" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out">
-    <h2 class="font-pri-bold font60 color-gray fontmb-large text-uppercase">{{get_field($page, 'homepage_partner_title')}}</h2>
+    @endif
+    
+    {{-- đối tác --}}
+    <div class="section-partner-home container-remake" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out">
+        <h2 class="font-pri-bold font60 color-gray fontmb-large text-uppercase">{{get_field($page, 'homepage_partner_title')}}</h2>
     <div class="partner-home-carousel owl-carousel">
         @if(has_field($page, 'homepage_slide_partner'))
             @forelse (get_field($page, 'homepage_slide_partner') as $item)

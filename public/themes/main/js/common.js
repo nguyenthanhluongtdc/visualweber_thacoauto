@@ -613,7 +613,46 @@ var Ajax = {
                 Helper.resetTotalLoan()
             }
         })
-    }
+    },
+    getShareholder: () => {
+        const shareholderResult = $('.section-shareholder-home')
+        if(!shareholderResult) return
+        $(document).on('click', '.shareholder-link', function(){
+            $(this).addClass('active').parent().siblings().children().removeClass('active')
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                url: getShareholderUrl,
+                data: {
+                    categoryId: $(this).data('category')
+                },
+                method: "GET",
+                dataType: "json",
+                beforeSend: function() {
+                    $('.loading').removeClass('d-none')
+                },
+                success: function (data) {
+                    if($('.list-content').length){
+                        $('.list-content').html(data.shareholders)
+                    }
+                    if($('.tab-content-left img').length){
+                        $('.tab-content-left').html(
+                            '<img loading="lazy" src="'+data.image+'" alt="Icon">'
+                        )
+                    }
+                },
+                error: function (xhr, thrownError) {
+                    console.log(xhr.responseText);
+                    console.log(thrownError)
+                    $('.loading').addClass('d-none')
+                },
+                complete: function(xhr, status) {
+                    $('.loading').addClass('d-none')
+                }
+            })
+        })
+    },
 }
 
 $(document).ready(function() {
@@ -662,6 +701,7 @@ $(document).ready(function() {
     Ajax.getPercentLoans();
     Ajax.onChangePercentLoan();
     Ajax.getTotalLoan();
+    Ajax.getShareholder()
 });
 
 $(document).ready(function() {

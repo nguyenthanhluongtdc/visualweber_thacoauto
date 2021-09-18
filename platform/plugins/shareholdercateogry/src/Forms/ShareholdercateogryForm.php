@@ -53,7 +53,7 @@ class ShareholdercateogryForm extends FormAbstract
                 'choices'    => BaseStatusEnum::labels(),
             ])
             ->add('image', 'mediaImage', [
-                'label'      => __('Image').' (1517x777px)',
+                'label'      => __('Image').' (650x400px)',
                 'label_attr' => ['class' => 'control-label'],
             ])
             ->setBreakFieldPoint('status');

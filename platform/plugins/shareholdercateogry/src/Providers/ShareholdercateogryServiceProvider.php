@@ -42,9 +42,8 @@ class ShareholdercateogryServiceProvider extends ServiceProvider
             dashboard_menu()->registerItem([
                 'id'          => 'cms-plugins-shareholdercateogry',
                 'priority'    => 5,
-                'parent_id'   => null,
-                'name'        => 'plugins/shareholdercateogry::shareholdercateogry.name',
-                'icon'        => 'fa fa-list',
+                'parent_id'   => 'cms-plugins-shareholder',
+                'name'        => __('Danh mục'),
                 'url'         => route('shareholdercateogry.index'),
                 'permissions' => ['shareholdercateogry.index'],
             ]);

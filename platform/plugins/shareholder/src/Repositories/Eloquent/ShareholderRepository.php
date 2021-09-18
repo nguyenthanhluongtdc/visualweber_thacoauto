@@ -17,7 +17,7 @@ class ShareholderRepository extends RepositoriesAbstract implements ShareholderI
         }
         $data = $this->getModel()
         ->whereHas('categories', function ($q) use ($categoryId) {
-            $q->whereIn('app__shareholder_category.id', $categoryId);
+            $q->whereIn('app_shareholdercateogries.id', $categoryId);
         })
         ->whereStatus(BaseStatusEnum::PUBLISHED)
         ->orderBy('is_featured', 'desc')

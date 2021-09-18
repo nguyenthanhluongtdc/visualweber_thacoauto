@@ -95,6 +95,13 @@
 
 
                                 </div>
+                                @if (setting('enable_captcha') && is_plugin_active('captcha'))
+                                    <div class="col-md-12 d-flex justify-content-center">
+                                        <div class="form-group">
+                                            {!! Captcha::display() !!}
+                                        </div>
+                                    </div>
+                                 @endif
                                 <button class="btn btn-secondary" type="submit" value="SEND">
                                     {{ __('Send') }}
                                 </button>
@@ -207,8 +214,15 @@
                         @endforeach
                     </div>
                 @endif
+                @endif
+                
+            @if (setting('enable_captcha') && is_plugin_active('captcha'))
+                <div class="col-md-12 d-flex justify-content-center">
+                    <div class="form-group">
+                        {!! Captcha::display() !!}
+                    </div>
+                </div>
             @endif
-
                 <button class="btn-lrg  submit-btn fontmb-medium text-uppercase" type="submit" value="SEND">
                     {{ __('Send') }}
                 </button>

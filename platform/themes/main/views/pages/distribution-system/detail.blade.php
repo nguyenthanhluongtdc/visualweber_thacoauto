@@ -104,7 +104,7 @@
                                         <p class="event-news__item--date font20">{{date_format($post->created_at,"d-m-Y")}}</p>
                                         <p class="event-news__item--description font20">{{Str::words($post->description,40)}}</p>
                                         <a href="{{$post->url}}">
-                                            <button class="event-news__item--more font15">{{ __("Readmore") }}</button>
+                                            <button class="event-news__item--more font15">{{ __("Xem tất cả") }}</button>
                                         </a>
                                     </div>
                                 </div>
@@ -127,7 +127,7 @@
                                         <p class="event-news__item--date font20">{{date_format($picture->created_at,"d-m-Y")}}</p>
                                         <p class="event-news__item--description font20">{{Str::words($picture->description,40)}}</p>
                                         <a data-fancybox data-type="ajax" data-src="{{$picture->url}}" data-filter="#gallery" href="javascript:;">
-                                            <button class="event-news__item--more font15">{{ __("Readmore") }}</button>
+                                            <button class="event-news__item--more font15">{{ __("Xem tất cả") }}</button>
                                         </a>
                                     </div>
                                 </div>

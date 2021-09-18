@@ -2,19 +2,21 @@
 
 namespace Platform\Shareholdercateogry\Http\Controllers;
 
-use Platform\Base\Events\BeforeEditContentEvent;
-use Platform\Shareholdercateogry\Http\Requests\ShareholdercateogryRequest;
-use Platform\Shareholdercateogry\Repositories\Interfaces\ShareholdercateogryInterface;
-use Platform\Base\Http\Controllers\BaseController;
-use Illuminate\Http\Request;
 use Exception;
-use Platform\Shareholdercateogry\Tables\ShareholdercateogryTable;
+use Illuminate\Http\Request;
+use Platform\Base\Forms\FormBuilder;
 use Platform\Base\Events\CreatedContentEvent;
 use Platform\Base\Events\DeletedContentEvent;
 use Platform\Base\Events\UpdatedContentEvent;
+use Platform\Base\Events\BeforeEditContentEvent;
+use Platform\Base\Http\Controllers\BaseController;
 use Platform\Base\Http\Responses\BaseHttpResponse;
+use Platform\Slug\Repositories\Interfaces\SlugInterface;
+use Platform\Shareholdercateogry\Models\Shareholdercateogry;
 use Platform\Shareholdercateogry\Forms\ShareholdercateogryForm;
-use Platform\Base\Forms\FormBuilder;
+use Platform\Shareholdercateogry\Tables\ShareholdercateogryTable;
+use Platform\Shareholdercateogry\Http\Requests\ShareholdercateogryRequest;
+use Platform\Shareholdercateogry\Repositories\Interfaces\ShareholdercateogryInterface;
 
 class ShareholdercateogryController extends BaseController
 {
@@ -154,5 +156,33 @@ class ShareholdercateogryController extends BaseController
         }
 
         return $response->setMessage(trans('core/base::notices.delete_success_message'));
+    }
+    public function getShareholdercateogryBySlug($slug, SlugInterface $slugRepository)
+    {
+        $slug = $slugRepository->getFirstBy(['key' => $slug, 'reference_type' => Shareholdercateogry::class]);
+        if (!$slug) {
+            abort(404);
+        }
+        $data = app(ShareholdercateogryInterface::class)->getFirstBy(['id' => $slug->reference_id]);
+
+        if (!$data) {
+            abort(404);
+        }
+
+        $meta = \MetaBox::getMetaData($data, 'seo_meta', true);
+        \SeoHelper::setTitle(isset($meta['seo_title']) ? $meta['seo_title'] : $data->name)
+            ->setDescription((isset($meta['seo_description']) ? $meta['seo_description'] : $data->description) ?: theme_option('site_description'))
+            ->openGraph()
+            ->setImage(\RvMedia::getImageUrl(@$data->image, 'og', false, \RvMedia::getImageUrl(theme_option('seo_og_image'))))
+            ->addProperties(
+                [
+                    'image:width' => '1200',
+                    'image:height' => '630'
+                ]
+            );
+
+        do_action(BASE_ACTION_PUBLIC_RENDER_SINGLE, BRAND_MODULE_SCREEN_NAME, $data);
+
+        return \Theme::scope('shareholder-category', compact('data', 'slug'))->render();
     }
 }

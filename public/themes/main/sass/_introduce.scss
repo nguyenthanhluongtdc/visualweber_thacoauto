@@ -13,8 +13,14 @@
                     color: $colorDark;
 
                     &:hover {
-                        color: $color-primary
+                        color: $color-primary;
                     }
+                }
+                
+            }
+            .active{
+                a {
+                    color: $color-primary;
                 }
             }
         }

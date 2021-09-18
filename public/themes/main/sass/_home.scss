@@ -1088,6 +1088,7 @@
     margin: 0 20px;
     h5 {
       line-height: 30px;
+      @include split_str(2);
     }
     .desc-none {
       margin-top: 15px;

@@ -941,6 +941,7 @@
                 background: #f3f3f3;
                 h5 a {
                     color: #2e3a41;
+                    @include split_str(2);
                 }
                 p.day {
                     margin: 5px 0 10px 0;
@@ -1085,6 +1086,7 @@
     }
     #loadMore:hover {
         color: black;
+        
     }
 }
 

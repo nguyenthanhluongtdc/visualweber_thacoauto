@@ -37,7 +37,8 @@ register_page_template([
     'pre-order' => "Pre-order",
     'distribution-system' => 'Distribution system',
     'car-selection' => "Car selection",
-    'news-summary' => 'News summary'
+    'news-summary' => 'News summary',
+    'shareholder' => 'Quan hệ cổ đông'
 ]);
 
 Menu::addMenuLocation('menu-tabs-support-industry', 'Tabs - Công nghiệp hỗ trợ');

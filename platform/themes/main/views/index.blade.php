@@ -178,21 +178,16 @@
         <h2 class="font-pri-bold font60 color-gray fontmb-large ">Quan hệ cổ đông</h2>
         <div class="menu-tab-right font25 fontmb-small">
             <ul class="nav nav-pills font-pri-bold color-gray hidden-scrollbar" role="tablist">
+                @if(!empty(get_shareholder_categories()))
+                @foreach (get_shareholder_categories() as $key => $item)
                 <li class="nav-item" role="tab">
-                    <a class="nav-link active" data-toggle="pill" href="#shareholder1">Công bố thông tin</a>
+                    <a class="nav-link shareholder-link {{$loop->first ? "active" : ""}}" data-category={{$item->id}} href="javascript:;">{{$item->name}}</a>
                 </li>
-                <li class="nav-item" role="tab">
-                    <a class="nav-link" data-toggle="pill" href="#shareholder2">Thông tin cổ đông</a>
-                </li>
-                <li class="nav-item" role="tab">
-                    <a class="nav-link" data-toggle="pill" href="#shareholder3">Báo cáo thường nhiên</a>
-                </li>
-                <li class="nav-item" role="tab">
-                    <a class="nav-link" data-toggle="pill" href="#shareholder4">Báo cáo tài chính</a>
-                </li>
+                @endforeach
+                @endif
                 <li class="nav-item link-views-all">
                     <a href="#" class="color-gray">
-                        Xem tất cả <span><i class="fas fa-arrow-right font15"></i></span>
+                        {{__('Xem tất cả')}} <span><i class="fas fa-arrow-right font15"></i></span>
                     </a>
                 </li>
             </ul>

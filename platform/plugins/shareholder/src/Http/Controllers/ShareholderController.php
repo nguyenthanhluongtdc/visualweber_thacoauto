@@ -63,6 +63,12 @@ class ShareholderController extends BaseController
     {
         $shareholder = $this->shareholderRepository->createOrUpdate($request->input());
 
+        // store car
+        $categories = $request->input('categories');
+        if (!empty($categories) && is_array($categories)) {
+            $shareholder->categories()->sync($categories);
+        }
+
         event(new CreatedContentEvent(SHAREHOLDER_MODULE_SCREEN_NAME, $request, $shareholder));
 
         return $response
@@ -81,6 +87,7 @@ class ShareholderController extends BaseController
     {
         $shareholder = $this->shareholderRepository->findOrFail($id);
 
+        
         event(new BeforeEditContentEvent($request, $shareholder));
 
         page_title()->setTitle(trans('plugins/shareholder::shareholder.edit') . ' "' . $shareholder->name . '"');
@@ -101,6 +108,12 @@ class ShareholderController extends BaseController
         $shareholder->fill($request->input());
 
         $shareholder = $this->shareholderRepository->createOrUpdate($shareholder);
+
+        $categories = $request->input('categories');
+        
+        if (!empty($categories) && is_array($categories)) {
+            $shareholder->categories()->sync($categories);
+        }
 
         event(new UpdatedContentEvent(SHAREHOLDER_MODULE_SCREEN_NAME, $request, $shareholder));
 

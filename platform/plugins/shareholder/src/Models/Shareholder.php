@@ -47,6 +47,6 @@ class Shareholder extends BaseModel
      */
     public function categories(): BelongsToMany
     {
-        return $this->belongsToMany(Shareholdercateogry::class, 'app__shareholder_category', 'category_id','shareholder_id')->with('slugable');
+        return $this->belongsToMany(Shareholdercateogry::class, 'app__shareholder_category','shareholder_id', 'category_id')->with('slugable');
     }
 }

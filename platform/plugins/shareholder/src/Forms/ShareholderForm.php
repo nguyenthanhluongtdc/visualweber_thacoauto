@@ -21,13 +21,7 @@ class ShareholderForm extends FormAbstract
         if ($this->getModel()) {
             $selectedCategories = $this->getModel()->categories()->pluck('category_id')->all();
         }
-        dd($this->getModel()->categories());
-        if (empty($selectedCategories)) {
-            $selectedCategories = app(Shareholdercateogry::class)
-                ->getModel()
-                ->pluck('id')
-                ->all();
-        }
+        // dd($this->getModel()->categories());
         if (!$this->formHelper->hasCustomField('categoryMulti')) {
             $this->formHelper->addCustomField('categoryMulti', CategoryMultiField::class);
         }
@@ -69,7 +63,7 @@ class ShareholderForm extends FormAbstract
             ])
             ->add('file', 'mediaFile', [
                 'label'      => trans('core/base::forms.content'),
-                'label_attr' => ['class' => 'control-label'],
+                'label_attr' => ['class' => 'control-label required'],
             ])
 
             
@@ -92,12 +86,12 @@ class ShareholderForm extends FormAbstract
             ->add('categories[]', 'categoryMulti', [
                 'label'      => trans('plugins/blog::posts.form.categories'),
                 'label_attr' => ['class' => 'control-label required'],
-                'choices'    => get_shareholder_categories_with_children(),
+                'choices'    => get_shareholder_categories(),
                 'value'      => old('categories', $selectedCategories),
             ])
             ->add('image', 'mediaImage', [
                 'label'      => __('Image').' (1517x777px)',
-                'label_attr' => ['class' => 'control-label'],
+                'label_attr' => ['class' => 'control-label required'],
             ])
 
             ->setBreakFieldPoint('status');

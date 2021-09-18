@@ -206,12 +206,12 @@ if (!function_exists('get_discount_price')) {
     }
 }
 
-if (!function_exists('get_shareholder_categories_with_children')) {
+if (!function_exists('get_shareholder_categories')) {
     /**
      * @return \Illuminate\Support\Collection
      * @throws Exception
      */
-    function get_shareholder_categories_with_children()
+    function get_shareholder_categories()
     {
         $categories = app(ShareholdercateogryInterface::class)
             ->getAllCategories();

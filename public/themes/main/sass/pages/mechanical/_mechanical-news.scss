@@ -58,12 +58,10 @@
                     .sub--right {
                         padding-left: 0;
                         @include height(200);
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        @media (max-width: 768px) {
-                            width: max-content;
-                        }
+                        // @media (max-width: 768px) {
+                        //     width: max-content;
+                        // }
+                        width: 70%;
                         a {
                             height: 100%;
                         }

@@ -301,8 +301,20 @@ var swiper = new Swiper(".researchDevSwiper", {
     },
 });
 
-$('.top-right-item,bottom-right-item ').hover(function() {
-    $(this).find()
+$('.top-right-item').mouseover(function() {
+    // alert(123);
+    $('div').siblings('.top-right-item.item-1').addClass('active');
+    $('div').siblings('.top-right-item.item-2').addClass('active');
+    $('div').siblings('.top-right-item.item-3').addClass('active');
+    $('div').siblings('.top-right-item.item-4').addClass('active');
+
+
+
+}).mouseout(function() {
+    $('div').siblings('.top-right-item.item-1').removeClass('active');
+    $('div').siblings('.top-right-item.item-2').removeClass('active');
+    $('div').siblings('.top-right-item.item-3').removeClass('active');
+    $('div').siblings('.top-right-item.item-4').removeClass('active');
 });
 
 var Helper = {
@@ -616,8 +628,8 @@ var Ajax = {
     },
     getShareholder: () => {
         const shareholderResult = $('.section-shareholder-home')
-        if(!shareholderResult) return
-        $(document).on('click', '.shareholder-link', function(){
+        if (!shareholderResult) return
+        $(document).on('click', '.shareholder-link', function() {
             $(this).addClass('active').parent().siblings().children().removeClass('active')
             $.ajax({
                 headers: {
@@ -632,17 +644,17 @@ var Ajax = {
                 beforeSend: function() {
                     $('.loading').removeClass('d-none')
                 },
-                success: function (data) {
-                    if($('.list-content').length){
+                success: function(data) {
+                    if ($('.list-content').length) {
                         $('.list-content').html(data.shareholders)
                     }
-                    if($('.tab-content-left img').length){
+                    if ($('.tab-content-left img').length) {
                         $('.tab-content-left').html(
-                            '<img loading="lazy" src="'+data.image+'" alt="Icon">'
+                            '<img loading="lazy" src="' + data.image + '" alt="Icon">'
                         )
                     }
                 },
-                error: function (xhr, thrownError) {
+                error: function(xhr, thrownError) {
                     console.log(xhr.responseText);
                     console.log(thrownError)
                     $('.loading').addClass('d-none')

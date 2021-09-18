@@ -341,9 +341,9 @@
   // @media (max-width: 1199px) {
   //   padding: 40px 0 40px 0;
   // }
-  // @media (max-width: 1080px) {
-  //   padding: 3% 0 3% 0;
-  // }
+  @media (max-width: 1080px) {
+    padding: 3% 0 3% 0;
+  }
   h2 {
     margin-bottom: 45px;
     @media (max-width: 1080px) {

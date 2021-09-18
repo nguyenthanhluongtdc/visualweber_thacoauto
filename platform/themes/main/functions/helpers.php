@@ -105,6 +105,18 @@ if (!function_exists('get_first_video_post')) {
     }
 }
 
+if (!function_exists('get_post_featerd_member')) {
+    /**
+     * Get first video post function
+     *
+     * @return void
+     */
+    function get_post_featerd_member($paginate)
+    {
+        return app(PostInterface::class)->getFeaturedMember($paginate) ?? collect();
+    }
+}
+
 if (!function_exists('get_comment_count')) {
     /**
      * Get comment count function

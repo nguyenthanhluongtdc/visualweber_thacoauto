@@ -98,6 +98,15 @@ class PostForm extends FormAbstract
                     'with-short-code' => true,
                 ],
             ])
+            ->add('is_featured_member', 'onOff', [
+                'label'         => trans('plugins/blog::posts.is_featured_member'),
+                'label_attr'    => ['class' => 'control-label'],
+                'default_value' => false,
+            ])
+            ->add('featured_member_image', 'mediaImage', [
+                'label'      => trans('plugins/blog::posts.featured_member_image') . ' (50x50px)',
+                'label_attr' => ['class' => 'control-label'],
+            ])
             ->add('status', 'customSelect', [
                 'label'      => trans('core/base::tables.status'),
                 'label_attr' => ['class' => 'control-label required'],

@@ -75,6 +75,8 @@ class Post extends BaseModel
         'author_id',
         'author_type',
         'city_id',
+        'is_featured_member',
+        'featured_member_image',
         'order'
     ];
 

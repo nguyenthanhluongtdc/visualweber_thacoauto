@@ -43,7 +43,7 @@
                 <p class="desc font-pri font20">
                     {{Str::words($post->description,30)}}
                 </p>
-                <div class="news-download mr-4">
+                <div class="news-download font20 font-pri-bold font20 mr-4">
                     {{-- <a href="{{ get_object_image(get_field($post, 'newspaper_file')) }}"
                         class="font-pri">{{ __("Tải về") }}</a> --}}
                         <a href="{{ get_object_image($post->file) }}">  
@@ -86,7 +86,7 @@
                        
 
                     </div>
-                    <div class="news-download mr-4">
+                    <div class="news-download font20 font-pri-bold mr-4">
                         <a href="{{ get_object_image($post->file) }}">  
                            {{ __("Tải về") }}
                         </a>

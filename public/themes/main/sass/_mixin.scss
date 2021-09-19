@@ -18,11 +18,13 @@
 }
 
 @mixin split_str($line_number) {
+  display: block;
+  display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
-  display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: $line_number;
+  // -webkit-white-space: break-spaces;
 }
 
 @function calculatorPixel($size, $screen) {

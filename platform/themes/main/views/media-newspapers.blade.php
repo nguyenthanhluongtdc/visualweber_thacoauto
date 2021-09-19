@@ -8,10 +8,10 @@
                 @foreach ($posts as $post)
                 <div class="item-newspaper">
                     <div class="row__top">
-                        <h5 class=" title font-pri-bold font30 color-gray text-uppercase fontmb-middle">
+                        <h5 data-mh="title" class="match title font-pri-bold font30 color-gray text-uppercase fontmb-middle">
                             <a href="">{{$post->name}}</a>
                         </h5>
-                        <p class="match desc font-pri color-gray font21 fontmb-small">
+                        <p data-mh="desc" class="match desc font-pri color-gray font21 fontmb-small">
                             {{$post->description}}
                         </p>
                     </div>
@@ -51,5 +51,11 @@
     {{ $posts->links('vendor.pagination.custom') }}
 </div>
 
-    
+<script>
+    $(document).ready(function(){
+        $('.match')
+          .matchHeight({})
+        ;
+    })
+</script>
     

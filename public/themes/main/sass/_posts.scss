@@ -406,7 +406,7 @@
                 width: 60%;
                 display: flex;
                 flex-direction: column;
-                .content-wrapper {
+                .content-wrapper{
                     flex: 1;
                     h4 {
                         a {
@@ -414,6 +414,7 @@
                         }
                         @include mobileMarginBottom(25, "+");
                     }
+
                 }
                 p.desc {
                     flex-shrink: 0;
@@ -508,7 +509,7 @@
         justify-content: flex-end;
         padding-bottom: 20px;
         a {
-            color: #000;
+            color: #303030;
             span {
                 margin-left: 10px;
             }
@@ -765,28 +766,27 @@
         .row__top {
             width: 100%;
             @include marginBottom(30, "+");
-            // flex: 1;
-            // display: flex;
-            // flex-direction: column;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
             .title {
                 flex-shrink: 0;
                 @include marginBottom(30, "+");
-                @include split_str(2);
                 a {
                     color: #2e3a41;
                 }
             }
             p.desc {
                 color: #2e3a41;
-                // flex: 1;
+                flex: 1;
                 text-align: justify;
-                @include split_str(6);
             }
         }
         .row__bottom {
             width: 100%;
             @include paddingTop(30);
             border-top: 1px solid #2e3a41;
+            margin-top: auto;
             flex-shrink: 0;
             .size-dowload {
                 margin: 15px 0;
@@ -900,7 +900,7 @@
 
 // bản tin thaco auto
 .news-thaco-content {
-    &.show-mobile {
+    &.show-mobile { 
         display: none;
     }
     @media(max-width: 1080px) {
@@ -959,14 +959,15 @@
                     @include split_str(3);
                     @include marginBottom(70, "+");
                 }
+                
                 .view-detail {
                     color: #2e3a41;
                     span {
                         margin-left: 10px;
                     }
                 }
-                .news-download {
-                    a {
+                .news-download{
+                    a{
                         background: #01498b;
                         color: #fff;
                         padding: 7px 10px 5px;
@@ -1043,14 +1044,17 @@
                 align-items: center;
                 justify-content: space-between;
                 width: 100%;
-                .news-download {
-                    a {
-                        background: #01498b;
-                        color: #fff;
-                        padding: 7px 10px 5px;
+                .news-download{
+                    a{
+                        color: #01498b;
+                        padding: 5px 10px 5px;
                         font-size: 13px;
                         border-radius: 3px;
+                        border: 2px solid #01498b;
+                        
                     }
+                   
+
                 }
             }
         }
@@ -1093,6 +1097,7 @@
     }
     #loadMore:hover {
         color: black;
+        
     }
 }
 

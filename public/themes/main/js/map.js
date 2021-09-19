@@ -2,10 +2,10 @@ const Distribution = {
     init: function () {
         // code to render map here...
         var map = L.map('map', {
-            minZoom: 1,
+            minZoom: 0,
             maxZoom: 3,
             center: [0, 0],
-            zoom: 1,
+            zoom: 0,
             crs: L.CRS.Simple
         });
         var w = 2049;
@@ -33,7 +33,7 @@ const Distribution = {
         Distribution.getTemplateDistrubition(map)
     
         setTimeout(() => {
-            window.__map.setView(new L.LatLng(-630.8, 254), 2)
+            window.__map.setView(new L.LatLng(-385.4499969482422,  257.58210909131753), 0)
         }, 300)
         map.on('click', function(e){
             var lt = String(e.latlng.lat),

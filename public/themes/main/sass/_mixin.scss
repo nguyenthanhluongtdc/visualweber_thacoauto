@@ -20,6 +20,7 @@
 @mixin split_str($line_number) {
   display: block;
   display: -webkit-box;
+  width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;

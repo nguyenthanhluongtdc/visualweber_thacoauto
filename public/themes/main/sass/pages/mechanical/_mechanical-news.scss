@@ -6,7 +6,7 @@
     .section-list-news {
         @include paddingTop(60);
         .title a {
-            font-family: $font-my-bold;
+            // font-family: $font-my-bold;
         }
         .content {
             display: flex;

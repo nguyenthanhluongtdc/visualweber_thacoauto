@@ -401,15 +401,15 @@ var Helper = {
     hoverChangeImage: function(){
         if($('.hover-image-homepage').length){
             $('.hover-image-homepage').hover(function(){
-                $(this).children('.blue').removeClass('d-none')
-                $(this).children('.black').addClass('d-none')
-                // $(this).children('.symbol').children('blue').removeClass('d-none')
-                // $(this).children('.symbol').children('black').addClass('d-none')
+                $(this).children('.blue').removeClass('invisible-height-0')
+                $(this).children('.black').addClass('invisible-height-0')
+                // $(this).children('.symbol').children('blue').removeClass('invisible-height-0 ')
+                // $(this).children('.symbol').children('black').addClass('invisible-height-0 ')
             }, function(){
-                $(this).children('.black').removeClass('d-none')
-                $(this).children('.blue').addClass('d-none')
-                // $(this).children('.symbol').children('black').removeClass('d-none')
-                // $(this).children('.symbol').children('blue').addClass('d-none')
+                $(this).children('.black').removeClass('invisible-height-0')
+                $(this).children('.blue').addClass('invisible-height-0')
+                // $(this).children('.symbol').children('black').removeClass('invisible-height-0 ')
+                // $(this).children('.symbol').children('blue').addClass('invisible-height-0 ')
             })
         }
     }

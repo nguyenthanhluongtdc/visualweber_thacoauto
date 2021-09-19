@@ -1335,3 +1335,12 @@
 .scale07{
   transform: scale(0.7);
 }
+.invisible-height-0{
+  height: 0;
+  visibility: hidden;
+}
+.hover-image-homepage:hover{
+  a{
+    color: $color-primary;
+  }
+}

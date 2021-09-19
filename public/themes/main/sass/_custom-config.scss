@@ -35,7 +35,8 @@ a:hover {
 
 .font-pri-bold {
   // font-family: $font-primary-bold;
-  font-family: "MyriadPro-BoldCond";
+  // font-family: "MyriadPro-BoldCond";
+  font-family: "MyriadPro-Bold";
 }
 
 .font-pri {
@@ -47,11 +48,13 @@ a:hover {
 }
 
 .font-cond-bold {
-  font-family: "MyriadPro-BoldCond";
+  // font-family: "MyriadPro-BoldCond";
+  font-family: "MyriadPro-Bold";
 }
 .font-mi-bold {
   // font-family: $font-my-bold;
-  font-family: "MyriadPro-BoldCond";
+  // font-family: "MyriadPro-BoldCond";
+  font-family: "MyriadPro-Bold";
 }
 
 .font-semi {
@@ -728,7 +731,8 @@ a:hover {
 
 @media (max-width: 1080px) {
   .fontmb-cond-bold {
-    font-family: "MyriadPro-BoldCond";
+    // font-family: "MyriadPro-BoldCond";
+    font-family: "MyriadPro-Bold";
   }
 }
 

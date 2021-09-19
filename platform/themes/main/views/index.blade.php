@@ -187,7 +187,7 @@
                 </li>
                 @endforeach
                 <li class="nav-item link-views-all">
-                    <a href="{{get_page_by_id(theme_option('default_category_shareholder'))->url}}" class="color-gray">
+                    <a href="{{get_page_by_id(theme_option('default_category_shareholder'))->url}}" class=" font20 color-gray">
                         {{__('Xem tất cả')}} <span><i class="fas fa-arrow-right font15"></i></span>
                     </a>
                 </li>

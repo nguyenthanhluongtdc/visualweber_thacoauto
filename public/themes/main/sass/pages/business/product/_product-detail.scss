@@ -10,6 +10,7 @@
       text-transform: uppercase;
 
       @media (max-width: 1080px) {
+        padding-bottom: 0;
         @include mobileMarginBottom(25, "+");
         @include mobileMarginTop(70, "+");
       }

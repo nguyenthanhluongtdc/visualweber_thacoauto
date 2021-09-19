@@ -47,8 +47,7 @@
                     {{-- <a href="{{ get_object_image(get_field($post, 'newspaper_file')) }}"
                         class="font-pri">{{ __("Tải về") }}</a> --}}
                         <a href="{{ get_object_image($post->file) }}">  
-                            <button type="button" class="btn btn-primary">{{ __("Tải về") }}
-                            </button>
+                         {{ __("Tải về") }}
                         </a>
                       
                 </div>

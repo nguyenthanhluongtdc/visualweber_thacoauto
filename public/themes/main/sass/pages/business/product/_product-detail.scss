@@ -1,12 +1,12 @@
 .section-product-detail {
-    margin-top: 50px;
+    margin-top: 40px;
     @media (max-width: 1080px) {
         margin-top: 0;
     }
     .product-detail {
         overflow: hidden;
         &__title {
-            padding-bottom: 45px;
+            padding-bottom: 35px;
             text-transform: uppercase;
             margin-bottom: 0;
             @media (max-width: 1080px) {
@@ -26,7 +26,7 @@
         &__desc {
             text-align: justify;
             line-height: 1.2;
-            margin-bottom: 45px;
+            margin-bottom: 35px;
             @media (max-width: 1080px) {
                 @include mobileMarginBottom(77, "+");
             }

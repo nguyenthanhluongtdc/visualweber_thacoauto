@@ -282,24 +282,25 @@ $('.slider-nav').slick({
 });
 
 var swiper = new Swiper(".researchDevSwiper", {
-    slidesPerView: 2,
+    slidesPerView: 3,
     spaceBetween: 40,
+    loop: true,
     scrollbar: {
         el: ".swiper-scrollbar"
     },
-    breakpoints: {
-        "@0.00": {
-            spaceBetween: 10,
-        },
-        "@0.75": {
-            slidesPerView: 2,
-            spaceBetween: 20,
-        },
-        "@1.00": {
-            slidesPerView: 3,
-            spaceBetween: 30,
-        },
-    },
+    // breakpoints: {
+    //     "@0.00": {
+    //         spaceBetween: 10,
+    //     },
+    //     // "@0.75": {
+    //     //     slidesPerView: 2,
+    //     //     spaceBetween: 20,
+    //     // },
+    //     // "@1.00": {
+    //     //     slidesPerView: 3,
+    //     //     spaceBetween: 30,
+    //     // },
+    // },
 });
 
 $('.top-right-item').mouseover(function() {
@@ -399,18 +400,18 @@ var Helper = {
         $('#total-bank').html("")
         $('#total-loan').html("")
     },
-    hoverChangeImage: function(){
-        if($('.hover-image-homepage').length){
-            $('.hover-image-homepage').hover(function(){
+    hoverChangeImage: function() {
+        if ($('.hover-image-homepage').length) {
+            $('.hover-image-homepage').hover(function() {
                 $(this).children('.blue').removeClass('invisible-height-0')
                 $(this).children('.black').addClass('invisible-height-0')
-                // $(this).children('.symbol').children('blue').removeClass('invisible-height-0 ')
-                // $(this).children('.symbol').children('black').addClass('invisible-height-0 ')
-            }, function(){
+                    // $(this).children('.symbol').children('blue').removeClass('invisible-height-0 ')
+                    // $(this).children('.symbol').children('black').addClass('invisible-height-0 ')
+            }, function() {
                 $(this).children('.black').removeClass('invisible-height-0')
                 $(this).children('.blue').addClass('invisible-height-0')
-                // $(this).children('.symbol').children('black').removeClass('invisible-height-0 ')
-                // $(this).children('.symbol').children('blue').addClass('invisible-height-0 ')
+                    // $(this).children('.symbol').children('black').removeClass('invisible-height-0 ')
+                    // $(this).children('.symbol').children('blue').addClass('invisible-height-0 ')
             })
         }
     }

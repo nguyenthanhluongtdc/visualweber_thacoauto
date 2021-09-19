@@ -78,32 +78,30 @@
                 }
                 &__right {
                     display: flex;
-                    flex-wrap: wrap;
-                    align-content: space-between;
-                    flex-grow: 1;
+                    flex-direction: column;
+
                     width: 52%;
-                    @include paddingY(20);
+                    // @include paddingY(20);
                     @media (max-width: 768px) {
                         flex: 0 0 100%;
                         max-width: 100%;
                         padding-left: 0;
                     }
                     &__top {
-                        flex: 0 0 100%;
-                        max-width: 100%;
-                    }
-                    .title a {
-                        font-family: $font-primary;
-                        color: #01498b;
-                        @include split_str(1);
-                        @include marginBottom(12, "+");
-                    }
-                    .description {
-                        color: #01498b;
-                        font-family: $font-primary;
-                        @include split_str(3);
-                        @media (max-width: 992px) {
+                        flex-shrink: 0;
+                        .title a {
+                            font-family: $font-primary;
+                            color: #01498b;
                             @include split_str(2);
+                            @include marginBottom(12, "+");
+                        }
+                    }
+                    &__bottom{
+                        flex: 1;
+                        .description {
+                            color: #01498b;
+                            font-family: $font-primary;
+                            @include split_str(3);
                         }
                     }
                 }

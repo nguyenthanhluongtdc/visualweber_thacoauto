@@ -12,7 +12,7 @@ $categoryNews = get_category_by_id(theme_option('default_category_news'));
                 <a href="{{ is_plugin_active('blog') ? ($categoryNews ? $categoryNews->url : '') : '' }}" title="{!!__('Readmore')!!}" class="read-moree text-dark font20 font-pri"> {!!__('Readmore')!!} <img loading="lazy" width="" height=""
                         src="{{Theme::asset()->url('images/mechandical/chevron-double-right.svg')}}" alt="" /></a>
                          --}}
-                         <a href="{{get_category_by_id(theme_option('default_category_news_summary'))->url}}" class="text-dark font20 font-pri">
+                         <a href="{{get_category_by_id(theme_option('default_category_news_summary'))->url}}" class="color-black font20 font-pri">
                             {{_('Xem tất cả')}} <span><i class="fas fa-arrow-right scale07"></i></span>
                         </a>
             </div>

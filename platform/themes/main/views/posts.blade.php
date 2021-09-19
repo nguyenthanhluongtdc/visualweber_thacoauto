@@ -47,8 +47,10 @@
                                 </div>
                             </div>
                             <div class="post-content">
-                                <h4 class="font-mi-bold font30 fontmb-medium"><a href="{{$post->url}}" class="fontmb-middle">{{$post->name}}</a></h4>
-                                <p class="desc font-pri font20 fontmb-small">{{Str::words($post->description,40)}}</p>
+                                <div class="content-wrapper">
+                                    <h4 class="font-mi-bold font30 fontmb-medium"><a href="{{$post->url}}" class="fontmb-middle">{{$post->name}}</a></h4>
+                                    <p class="desc font-pri font20 fontmb-small">{{$post->description}}</p>
+                                </div>
                                 <p class="city-day font-pri font15 fontmb-small">
                                     <span class="city">{{ $post->city->name ?? '--' }}</span>
                                     <span>{{date_format($post->created_at,"d-m-Y")}}</span>

@@ -322,6 +322,7 @@
             a{
               color: black;
               @include split_str(2);
+              line-height: 1;
               @media (max-width: 480px) {
                 @include split_str(2);
               }

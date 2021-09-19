@@ -101,6 +101,7 @@
                         .description {
                             color: #01498b;
                             font-family: $font-primary;
+                            text-align: justify;
                             @include split_str(3);
                         }
                     }

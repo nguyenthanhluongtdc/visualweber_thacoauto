@@ -43,8 +43,8 @@ $categoryNews = get_category_by_id(theme_option('default_category_news'));
 
                         <div class="item__right">
                             <div class="item__right__top">
-                                <h3 class="font30 title">
-                                    <a href="{{$post->url}}"> {!! $post->name !!} </a>
+                                <h3 class="font30 font-pri-bold title">
+                                    <a class="font30 font-pri-bold" href="{{$post->url}}"> {!! $post->name !!} </a>
                                 </h3>
                             </div>
                             <div class="item__right__bottom">

@@ -90,8 +90,8 @@
                     &__top {
                         flex-shrink: 0;
                         .title a {
-                            font-family: $font-primary;
-                            color: #01498b;
+                            // font-family: $font-primary;
+                            color: black;
                             @include split_str(2);
                             @include marginBottom(12, "+");
                         }

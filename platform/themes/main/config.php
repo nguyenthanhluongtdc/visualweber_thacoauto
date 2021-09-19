@@ -92,7 +92,7 @@ return [
             $theme->asset()->container('header')->usePath()->add('semantic', 'js/semantic/semantic.min.js');
             $theme->asset()->container('header')->add('leaflet_js', '//unpkg.com/leaflet@1.7.1/dist/leaflet.js');
             $theme->asset()->container('header')->add('sweetalert2_js', '//cdn.jsdelivr.net/npm/sweetalert2@11.1.4/dist/sweetalert2.min.js');
-            $theme->asset()->container('header')->usePath()->add('map_js', 'js/map.js');
+            $theme->asset()->container('header')->usePath()->add('map_js', 'js/map.js',[],[],time());
 
             $theme->asset()->container('footer')->usePath()->add('script', 'js/common.js', [], [], time());
         },

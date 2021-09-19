@@ -8,16 +8,16 @@
                 @foreach ($posts as $post)
                 <div class="item-newspaper">
                     <div class="row__top">
-                        <h5 class="title font-pri-bold font30 color-gray text-uppercase fontmb-middle">
+                        <h5 class=" title font-pri-bold font30 color-gray text-uppercase fontmb-middle">
                             <a href="">{{$post->name}}</a>
                         </h5>
-                        <p class="desc font-pri color-gray font21 fontmb-small">
+                        <p class="match desc font-pri color-gray font21 fontmb-small">
                             {{$post->description}}
                         </p>
                     </div>
     
                     <div class="row__bottom">
-                        <p class="title-docx font-cond color-gray font24 fontmb-small">
+                        <p class=" title-docx font-cond color-gray font24 fontmb-small">
                             {{get_file_name(get_field($post, 'newspaper_file')) ? get_file_name(get_field($post, 'newspaper_file')) : 'N/A'}}
                         </p>
                         <p class="size-dowload">
@@ -29,12 +29,12 @@
                             @endif
                         </p>
     
-                        <div class="tags">
+                        <div class="tags match">
                             <div class="tag-name">
                                 <span class="name-tag font-pri-bold font13">{{ __("Tags") }}: </span>
                             </div>
     
-                            <div class="tag-list">
+                            <div class="tag-list ">
                                 @foreach ($post->tags as $tag)
                                 <p class="tag-title font-pri font13 mb-3 fontmb-small">
                                     <span>{{$tag->name}}</span>

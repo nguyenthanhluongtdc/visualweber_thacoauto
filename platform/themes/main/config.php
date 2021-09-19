@@ -89,11 +89,12 @@ return [
             $theme->asset()->container('footer')->add('script_alert', '//cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js');
             $theme->asset()->container('footer')->add('zeynep_js', '//raw.githack.com/hsynlms/zeynepjs/master/dist/zeynep.min.js');
             $theme->asset()->container('footer')->usePath()->add('semantic_ui_js', 'semantic-ui/semantic.min.js');
+            $theme->asset()->container('footer')->add('matchheight', '//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.6.0/jquery.matchHeight-min.js');
             $theme->asset()->container('header')->usePath()->add('semantic', 'js/semantic/semantic.min.js');
             $theme->asset()->container('header')->add('leaflet_js', '//unpkg.com/leaflet@1.7.1/dist/leaflet.js');
             $theme->asset()->container('header')->add('sweetalert2_js', '//cdn.jsdelivr.net/npm/sweetalert2@11.1.4/dist/sweetalert2.min.js');
             $theme->asset()->container('header')->usePath()->add('map_js', 'js/map.js',[],[],time());
-
+            
             $theme->asset()->container('footer')->usePath()->add('script', 'js/common.js', [], [], time());
         },
 

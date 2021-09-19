@@ -128,14 +128,14 @@
 
                                             <div class="d-flex align-content-between flex-wrap car-content">
                                                 <div class="info h-100">
-                                                    <h3 class="car-name font-mi-bold font25 mb-2 fontmb-cond-bold fontmb-medium">
+                                                    <h3 class="car-name font-mi-bold font25 mb-2 fontmb-cond-bold fontmb-medium match">
                                                         {{has_sub_field($child,'ten')}}
                                                     </h3>
                                                     <p class="car-decs font-mi-bold font18 fontmb-cond-bold fontmb-little">
                                                         {!!has_sub_field($child,'loai')!!}
                                                     </p>
                                                     <a href="{{has_sub_field($child,'link')}}" class="readmore font-mi-bold font18 fontmb-cond-bold fontmb-little">
-                                                        {{__('VIEW DETAIL')}} ->
+                                                        {{__('Xem chi tiết')}} <i class="fas fa-arrow-right scale07"></i>
                                                     </a>
                                                 </div>
 

@@ -360,6 +360,11 @@ var Helper = {
             }
         }); //missing );
     },
+    matchHeight: function () {
+        $('.match')
+          .matchHeight({})
+        ;
+      },
     zeynepInit: function() {
         let is_enable_menu = false
         const zeynep = $('.zeynep').zeynep({
@@ -726,6 +731,7 @@ $(document).ready(function() {
     Helper.addSelect2toCarFilterProvinces();
     Helper.RangeFilterBranddetail();
     Helper.zeynepInit();
+    Helper.matchHeight();
     Helper.hoverChangeImage();
     Ajax.handleLoadCarOption();
     Ajax.getMonthsAcceptLoans();

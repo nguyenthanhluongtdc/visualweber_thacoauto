@@ -62,7 +62,7 @@
                                     <img loading="lazy" src="{{ has_sub_field($item, 'hinh_anh') ? get_image_url(get_sub_field($item, 'hinh_anh')) : "" }}" alt="">
                                 </div>
                             </div>
-                            <h3 class="product-detail__card-title font30 font-mi-bold">{{ has_sub_field($item, 'tieu_de') ? get_sub_field($item, 'tieu_de') : "" }}</h3>
+                            <h3 class="product-detail__card-title match match font30 font-mi-bold">{{ has_sub_field($item, 'tieu_de') ? get_sub_field($item, 'tieu_de') : "" }}</h3>
                             <div class="product-detail__card-desc font20 font-pri">
                                 {!! has_sub_field($item, 'mo_ta') ? get_sub_field($item, 'mo_ta') : "" !!}
                             </div>

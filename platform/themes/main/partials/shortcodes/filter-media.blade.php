@@ -24,7 +24,7 @@
             </select>
             <select name="select_month" value="2" id="select_month" name="select_month"
                 class="font20 font-mi-cond js-example-disabled-results">
-                <option selected disabled>{{ __("Tháng") }}</option>
+                <option selected disabled>{{ __("Tháng") }}</option>
                 @for ($i = 1; $i < 12; $i++)
                     <option {{ intval(request('select_month', -1)) == $i ? 'selected' : '' }} value="{{ $i }}">{{ __("Tháng") . ' ' . $i }}</option>
                 @endfor

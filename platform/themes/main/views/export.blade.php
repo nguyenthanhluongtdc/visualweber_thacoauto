@@ -58,11 +58,13 @@
                         @if(has_field($page, 'repeater_slider_export'))
                         @foreach(has_field($page, 'repeater_slider_export') as $item)
                         <div class="swiper-slide">
-                            <img loading="lazy" width="" height="" src="{{get_image_url(has_sub_field($item,'slider_image'))}}" alt="Ảnh slider Xuất khẩu" class="image"/>
+                            <img loading="lazy" width="" height="" src="{{get_image_url(has_sub_field($item,'slider_image'))}}" alt="{{has_sub_field($item,'desc')}}" class="image"/>
+                            @if(!empty(has_sub_field($item,'desc')))
                             <div class="overlay">
-                                <div class="text text-uppercase font30 font-pri-bold">thaco xuất khẩu ô tô qua thái lan</div>
-                                <div class="read-more"><a href="">Xem chi tiết</a></div>
+                                <div class="text font30 font-pri-bold">{{has_sub_field($item,'desc')}}</div>
+                                <div class="read-more"><a target="_blank" href="{{has_sub_field($item,'link')}}">{{__('Xem chi tiết')}}</a></div>
                             </div>
+                            @endif
                         </div>
                         @endforeach
                         @endif

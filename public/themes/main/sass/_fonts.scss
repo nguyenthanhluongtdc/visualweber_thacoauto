@@ -5,13 +5,11 @@
 @include font-face("MyriadPro-SemiboldCond", "fonts/MyriadPro-SemiboldCond");
 
 .MyriadPro-Cond {
-  // font-family: "MyriadPro-Cond";
-  font-family: "MyriadPro-Regular";
+  font-family: "MyriadPro-Cond";
 }
 
 .MyriadPro-BoldCond {
-  // font-family: "MyriadPro-BoldCond";
-  font-family: "MyriadPro-Bold";
+  font-family: "MyriadPro-BoldCond";
 }
 
 .MyriadPro-Regular {
@@ -19,20 +17,17 @@
 }
 
 .MyriadPro-Bold {
-  font-family: "MyriadPro-Bold";
-  // font-family: "MyriadPro-BoldCond";
+  // font-family: "MyriadPro-Bold";
+  font-family: "MyriadPro-BoldCond";
 }
 
 .MyriadPro-SemiboldCond {
-  // font-family: "MyriadPro-SemiboldCond";
-  font-family: "MyriadPro-Bold";
+  font-family: "MyriadPro-SemiboldCond";
 }
 
 .Lineheight-Regular {
   line-height: 1.5;
 }
-//thay font vì khách muốn đồng bộ
-
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   line-height: 1.2;

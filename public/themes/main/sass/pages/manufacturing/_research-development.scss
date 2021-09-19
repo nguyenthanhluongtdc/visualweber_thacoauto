@@ -344,13 +344,14 @@
                     max-width: 100%;
                 }
                 >div {
-                    padding-left: 15px;
-                    padding-right: 15px;
+                    // padding-left: 15px;
+                    // padding-right: 15px;
                 }
                 padding-bottom: 20px;
-                margin-left: -100px;
-                margin-right: -100px;
-                width: calc(100% + 200px);
+                // margin-left: -100px;
+                // margin-right: -100px;
+                // width: calc(100% + 200px);
+                width: 100%;
                 .swiper-scrollbar {
                     width: calc(80% - 185px);
                     left: 50%;

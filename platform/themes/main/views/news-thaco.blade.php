@@ -28,8 +28,7 @@
                     {{-- <a href="{{ get_object_image(get_field($post, 'newspaper_file')) }}"
                         class="font-pri">{{ __("Tải về") }}</a> --}}
                         <a href="{{ get_object_image(get_field($post, 'newspaper_file')) }}">  
-                            <button type="button" class="btn btn-primary">{{ __("Tải về") }}
-                            </button>
+                            {{ __("Tải về") }}
                         </a>
                       
                 </div>
@@ -63,8 +62,8 @@
                     </div>
                     <div class="news-download mr-4">
                         <a href="{{ get_object_image(get_field($post, 'newspaper_file')) }}">  
-                            <button type="button" class="btn btn-primary">{{ __("Tải về") }}
-                            </button>
+                           {{ __("Tải về") }}
+                            
                         </a>
                     </div>
                     <div class="right font-pri color-gray">

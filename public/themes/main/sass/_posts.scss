@@ -966,10 +966,12 @@
                     }
                 }
                 .news-download {
-                    button {
-                        border-radius: unset !important;
-                        background-color: $color-primary !important;
-                        border: unset;
+                    a {
+                        background: #01498b;
+                        color: #fff;
+                        padding: 7px 10px 5px;
+                        font-size: 13px;
+                        border-radius: 3px;
                     }
                 }
                 .size-dowload {
@@ -1042,10 +1044,12 @@
                 justify-content: space-between;
                 width: 100%;
                 .news-download {
-                    button {
-                        border-radius: unset !important;
-                        background-color: $color-primary !important;
-                        border: unset;
+                    a {
+                        background: #01498b;
+                        color: #fff;
+                        padding: 7px 10px 5px;
+                        font-size: 13px;
+                        border-radius: 3px;
                     }
                 }
             }

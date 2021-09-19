@@ -16,18 +16,18 @@
                             </a>
                         </div>
                         <div class="item-content flex-fill">
-                            <h4 class="title font-pri-bold font30 text-uppercasex fontmb-middle">
-                                <a href="{{$post->url}}">{{$post->name}}</a>
-                            </h4>
-                            <div class="bottom">
+                            <div class="top">
+                                <h4 class="title font-pri-bold font30 text-uppercasex fontmb-middle">
+                                    <a href="{{$post->url}}">{{$post->name}}</a>
+                                </h4>
                                 <p class="desc font-pri font20 fontmb-small">
                                     {{$loop->first ? Str::words($post->description,40): Str::words($post->description,20)}}
                                 </p>
-                                <p class="city-day font-pri font15">
-                                    <span class="city">{{ $post->city->name ?? '--' }}</span>
-                                    <span>{{date_format($post->created_at,"d-m-Y")}}</span>
-                                </p>
                             </div>
+                            <p class="city-day font-pri font15">
+                                <span class="city">{{ $post->city->name ?? '--' }}</span>
+                                <span>{{date_format($post->created_at,"d-m-Y")}}</span>
+                            </p>
                         </div>
                     </div>
                 @endforeach

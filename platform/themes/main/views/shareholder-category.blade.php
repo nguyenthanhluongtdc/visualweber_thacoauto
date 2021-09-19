@@ -35,7 +35,7 @@
             </div>
             <div class="item-content">
                 <h5 class="title font30 font-pri-bold">
-                    <a href="{{$post->url}}">{{$post->name}}</a>
+                    <a href="javscritpt:;">{{$post->name}}</a>
                 </h5>
                 <p class="day font15 font-pri color-gray">
                     {{date_format($post->created_at,"d-m-Y")}}
@@ -47,8 +47,7 @@
                     {{-- <a href="{{ get_object_image(get_field($post, 'newspaper_file')) }}"
                         class="font-pri">{{ __("Tải về") }}</a> --}}
                         <a href="{{ get_object_image($post->file) }}">  
-                            <button type="button" class="btn btn-primary">{{ __("Tải về") }}
-                            </button>
+                           {{ __("Tải về") }}
                         </a>
                       
                 </div>
@@ -79,7 +78,7 @@
                         {{-- <img loading="lazy" src="{{ Theme::asset()->url('images/main/down.png') }}" alt="{{$post->name}}" class="down-hide"> --}}
                     </div>
                     <div class="mid">
-                        <a href="{{$post->url}}">
+                        <a href="javscritpt:;">
                             <h5 class="title font-pri-bold font25 color-gray">
                                 {{$post->name}}
                             </h5>
@@ -89,8 +88,7 @@
                     </div>
                     <div class="news-download mr-4">
                         <a href="{{ get_object_image($post->file) }}">  
-                            <button type="button" class="btn btn-primary">{{ __("Tải về") }}
-                            </button>
+                           {{ __("Tải về") }}
                         </a>
                     </div>
                     <div class="right font-pri color-gray">

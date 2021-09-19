@@ -89,7 +89,6 @@
                     <div class="news-download mr-4">
                         <a href="{{ get_object_image($post->file) }}">  
                            {{ __("Tải về") }}
-                            
                         </a>
                     </div>
                     <div class="right font-pri color-gray">

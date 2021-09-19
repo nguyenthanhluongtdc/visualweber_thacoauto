@@ -79,12 +79,12 @@ const Distribution = {
         const locateItem = $('.locate_item')
         if (!locateItem) return
 
-        $(".locate_item").each(function() {
-            const itemData = $(this).data('item');
-            if (!!itemData) {
-                Distribution.addMarkerAndContentPopup(map, itemData)
-            }
-        });
+        // $(".locate_item").each(function() {
+        //     const itemData = $(this).data('item');
+        //     if (!!itemData) {
+        //         Distribution.addMarkerAndContentPopup(map, itemData)
+        //     }
+        // });
         
         locateItem
             .mouseenter(function () {

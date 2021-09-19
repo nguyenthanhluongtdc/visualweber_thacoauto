@@ -125,7 +125,6 @@ const Distribution = {
     },
     createMarketPoint: function (map, { popup_info, lat, lng }, status = '') {
         let popupDetailWrap = '';
-        console.log(popup_info, typeof popup_info.content, typeof popup_info.content === 'Array' || typeof popup_info.content === 'object');
         if(popup_info && popup_info.content && (typeof popup_info.content === 'Array' || typeof popup_info.content === 'object')) {
             popup_info.content.forEach(element => {
                 let popupDetailItem = `<div class="branch-body-item">`

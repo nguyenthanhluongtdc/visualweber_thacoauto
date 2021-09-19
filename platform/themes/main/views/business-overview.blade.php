@@ -3,7 +3,7 @@
     <div class="distribution">
         <div class="provincial-company">
             <div class="container-remake">
-                <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 fontmb-large">{{ __("Công ty tỉnh thành") }}</h1>
+                <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 font-pri-bold fontmb-large">{{ __("Công ty tỉnh thành") }}</h1>
                 <div data-aos="fade-left" data-aos-duration="1500" class="description desktop font20 mt-20">{!! $page->content !!}</div>
                 <div data-aos="zoom-in-up" data-aos-duration="2000" class="select-list mt-40 mb-40">
                     <form action="" id="distribution-system-form">

@@ -1,7 +1,7 @@
 <div class="distribution overflow-x-hidden">
     <div class="provincial-company">
         <div class="container-remake">
-            <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 fontmb-large">{{ __("Công ty tỉnh thành") }}</h1>
+            <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 font-pri-bold fontmb-large">{{ __("Công ty tỉnh thành") }}</h1>
             <div data-aos="fade-left" data-aos-duration="1500" class="description desktop font20 mt-20">{!! $page->content !!}</div>
             <div data-aos="zoom-in-up" data-aos-duration="2000" class="select-list mt-40 mb-40">
                 <form action="" id="distribution-system-form">
@@ -41,7 +41,7 @@
             @php
                 $posts = get_posts_by_category(theme_option('default_category_news'), 3);
             @endphp
-            <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 mb-20 fontmb-large">{{ __("tin tức hoạt động") }}</h1>
+            <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 font-pri-bold mb-20 fontmb-large">{{ __("tin tức hoạt động") }}</h1>
             <div class="activity-news-desktop__wrap">
                 @foreach ( $posts as $post)
                     
@@ -74,7 +74,7 @@
 
     <div class="activity-news-mobile font-pri">
         <div class="container-remake">
-            <h2 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 mb-20 text-uppercase fontmb-large font-pri-bold">
+            <h2 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font-pri-bold font60 mb-20 text-uppercase fontmb-large font-pri-bold">
                 {{ __("tin tức hoạt động") }}
             </h2>
             @foreach ($posts as $post_mb)
@@ -109,7 +109,7 @@
     <div class="library mb-60">
         <div class="container-remake">
             <div class="library-header">
-                <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font60 fontmb-middle">{{ __("thư viện") }}</h1>
+                <h1 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="title font-pri-bold font60 fontmb-middle">{{ __("thư viện") }}</h1>
                 <div class="library-button">
                     <img loading="lazy" class="customPrevBtn" src="{{Theme::asset()->url('images/distribution/icon_left.png')}}"
                         alt="Button Previous">
@@ -127,7 +127,7 @@
                 @foreach ($librarys as $library)
                 <div class="library-item">
                     <div class="img-container">
-                        <div class="skewed">
+                        <div class="skewed-gallery">
                             <a data-fancybox data-type="ajax" data-src="{{$library->url}}" data-filter="#gallery" href="javascript:;">
                                 <img loading="lazy" src="{{ Storage::disk('public')->exists($library->image) ? get_object_image($library->image, 'post-related') : RvMedia::getDefaultImage() }}" alt="{{$library->name}}">
                             </a>
@@ -137,7 +137,7 @@
                         <a  class="library-title font25 fontmb-medium" data-fancybox data-type="ajax" data-src="{{$library->url}}" data-filter="#gallery" href="javascript:;">{{$library->name}}</a>
                         {{-- <a href="{{$library->url}}" class="library-title font25 fontmb-medium">{{$library->name}}</a> --}}
                         {{-- <p class="library-description font20 fontmb-little">{{Str::words($library->description,40)}}</p> --}}
-                        <span class="time">{{date_format($library->created_at,"d-m-Y")}}</span>
+                        <span class="time font-18 font-pri">{{date_format($library->created_at,"d-m-Y")}}</span>
                     </div>
                 </div>
                 @endforeach
@@ -175,10 +175,10 @@
         responsiveClass: true,
         responsive:{
             0:{
-                items: 1.5,
+                items: 2,
             },
             1081:{
-                items:2.5,
+                items:3,
             }
         }
     });

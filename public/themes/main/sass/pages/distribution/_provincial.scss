@@ -13,18 +13,38 @@
         transform: unset;
     }
     h1.title {
-        font-family: $font-my-bold;
+        // font-family: $font-my-bold;
         text-transform: uppercase;
     }
     .img-container {
         overflow: hidden;
         width: 100%;
-        height: 75%;
+        // height: 100%;
         .skewed {
             width: 100%;
-            height: 100%;
+            height: 0;
+            position: relative;
+            padding-bottom: 58%;
             overflow: hidden;
             img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.3s, visibility 0.3s ease-in;
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+        .skewed-gallery{
+            width: 100%;
+            height: 0;
+            position: relative;
+            padding-bottom: 78%;
+            overflow: hidden;
+            img {
+                position: absolute;
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
@@ -452,7 +472,7 @@
                 }
             }
             .img-container {
-                height: 160px;
+                height: 8vw;
             }
             @media (max-width: 1080px) {
                 .img-container {

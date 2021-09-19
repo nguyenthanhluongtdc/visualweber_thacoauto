@@ -44,6 +44,7 @@ $('.post-relate-carousel').owlCarousel({
         }
     }
 });
+
 $('.gallery-olw').owlCarousel({
 
     dots: false,

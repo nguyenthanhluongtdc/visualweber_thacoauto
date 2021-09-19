@@ -223,6 +223,8 @@
         .news-6 {
             display: flex;
             flex-direction: column;
+            position: relative;
+            
             .news-item-content {
                 flex: 1;
                 display: flex;
@@ -252,6 +254,16 @@
         .news-6 {
             grid-area: n6;
             position: relative;
+            &::after{
+              position: absolute;
+              content: "";
+              height: 70%;
+              top: 50%;
+              transform: translateY(-50%);
+              width: 0.7px;
+              background: #b9b9b9;
+              left: -4%;
+            }
             .member-avatar {
                 width: 50px;
                 height: 50px;

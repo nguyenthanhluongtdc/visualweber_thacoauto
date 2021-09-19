@@ -1,9 +1,12 @@
 {!! do_shortcode('[filter-media category="' . $category->id . '"][/filter-media]') !!}
 
 @php
-    $posts = get_featured_posts_by_category($category->id, 1000);
-    $imageFeatures = collect($posts)->where('format_type' , 'gallery');
-    $videoFeatures = collect($posts)->where('format_type' , 'video');
+    $imageFeatures = get_featured_posts_by_category($category->id, 100, ['format_type' =>'gallery']);
+    $videoFeatures = get_featured_posts_by_category($category->id, 100, ['format_type' =>'video']);
+
+    // $imageFeatures = collect($posts)->where('format_type' , 'gallery');
+    // $videoFeatures = collect($posts)->where('format_type' , 'video');
+    // dd($posts);
 @endphp
 <div class="tabs-mobile overflow-x-hidden">
     <div class="container-remake">

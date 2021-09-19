@@ -12,7 +12,7 @@ interface PostInterface extends BlogPostInterface
      * @param array $with
      * @return mixed
      */
-    public function getFeaturedByCategory($categoryId, int $limit = 5, array $with = []);
+    public function getFeaturedByCategory($categoryId, int $limit = 5, array $condition = [], array $with = []);
 
     /**
      * @param array $categoryId

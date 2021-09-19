@@ -14,9 +14,9 @@ if (!function_exists('get_featured_posts_by_category')) {
      * @param array $with
      * @return \Illuminate\Support\Collection
      */
-    function get_featured_posts_by_category($categoryId, $limit, array $with = [])
+    function get_featured_posts_by_category($categoryId, $limit, array $condition = [], array $with = [])
     {
-        return app(PostInterface::class)->getFeaturedByCategory($categoryId, $limit, $with);
+        return app(PostInterface::class)->getFeaturedByCategory($categoryId, $limit,$condition , $with);
     }
 }
 
@@ -251,6 +251,23 @@ if (!function_exists('get_all_shareholders')) {
         ]);
     }
 }
+if (!function_exists('get_page_by_id')) {
+    /**
+     * @param boolean $active
+     * @return mixed
+     */
+    function get_page_by_id($id)
+    {
+        return app(PageInterface::class)
+        ->advancedGet([
+            'condition' => [
+                'id' => $id,
+                'status' => BaseStatusEnum::PUBLISHED,
+            ]
+        ])->first();
+    }
+}
+
 if (!function_exists('get_page_by_id')) {
     /**
      * @param boolean $active

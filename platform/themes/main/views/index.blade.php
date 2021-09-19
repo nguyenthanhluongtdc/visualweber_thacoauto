@@ -178,7 +178,7 @@
 @if(!empty(get_shareholder_categories()))
 <div class="section-shareholder-home container-remake">
     <div class="shareholder-home-top" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out">
-        <h2 class="font-pri-bold font60 color-gray fontmb-large ">Quan hệ cổ đông</h2>
+        <h2 class="font-pri-bold font60 color-gray fontmb-large ">{{__('Quan hệ cổ đông')}}</h2>
         <div class="menu-tab-right font25 fontmb-small">
             <ul class="nav nav-pills font-pri-bold color-gray hidden-scrollbar" role="tablist">
                 @foreach (get_shareholder_categories() as $key => $item)

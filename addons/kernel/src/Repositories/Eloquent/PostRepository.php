@@ -10,7 +10,7 @@ class PostRepository extends BlogPostRepository
     /**
      * {@inheritDoc}
      */
-    public function getFeaturedByCategory($categoryId, int $limit = 5, array $with = [])
+    public function getFeaturedByCategory($categoryId, int $limit = 5, array $condition = [], array $with = [])
     {
         if (!is_array($categoryId)) {
             $categoryId = [$categoryId];
@@ -25,6 +25,7 @@ class PostRepository extends BlogPostRepository
             ->whereIn('post_categories.category_id', $categoryId)
             ->select('posts.*')
             ->distinct()
+            ->where($condition)
             ->with(array_merge(['slugable'], $with))
             ->orderBy('posts.is_featured', 'desc')
             ->orderBy('posts.order', 'desc')

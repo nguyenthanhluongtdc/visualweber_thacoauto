@@ -9,7 +9,7 @@ class PostCacheDecorator extends BlogPostCacheDecorator
     /**
      * {@inheritDoc}
      */
-    public function getFeaturedByCategory($categoryId, int $limit = 5, array $with = [])
+    public function getFeaturedByCategory($categoryId, int $limit = 5, array $condition = [], array $with = [])
     {
         return $this->getDataIfExistCache(__FUNCTION__, func_get_args());
     }

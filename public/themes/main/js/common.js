@@ -285,6 +285,7 @@ var swiper = new Swiper(".researchDevSwiper", {
     slidesPerView: 3,
     spaceBetween: 40,
     loop: true,
+    centeredSlides: true,
     scrollbar: {
         el: ".swiper-scrollbar"
     },

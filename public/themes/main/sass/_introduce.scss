@@ -3,15 +3,15 @@
     .navbar-menu {
         .nav {
             @include paddingY(15);
-            justify-content: flex-end;
+            justify-content: center;
             @include marginX(85, "-");
-
+            
             &-item {
                 @include paddingX(85);
 
                 a {
                     color: $colorDark;
-
+                    
                     &:hover {
                         color: $color-primary;
                     }

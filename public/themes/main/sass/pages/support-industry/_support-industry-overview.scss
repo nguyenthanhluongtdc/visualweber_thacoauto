@@ -41,15 +41,19 @@
                 margin-right: 2%;
                 padding: 2%;
                 max-width: 215px;
-                
-                img{
-                    margin-bottom: 5%;
-                    width: 5vw;
-                    height: 5vw;
-                }
-                .name {
-                    margin-top: 6%;
-                    line-height: 1.2;
+                .content{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    img{
+                        margin-bottom: 5%;
+                        object-fit: contain;
+                        max-width: 75%;
+                    }
+                    .name {
+                        margin-top: 6%;
+                        line-height: 1.2;
+                    }
                 }
 
                 @media (max-width: 1080px) {

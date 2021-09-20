@@ -7,6 +7,12 @@
     //   text-transform: uppercase;
     //   text-align: center;
     // }
+    h1,h2,h3,h4,h5,h6{
+      font-family: "MyriadPro-BoldCond" !important;
+    }
+    p, span{
+      font-family: "MyriadPro-Regular" !important;
+    }
     .post-author-wrap {
       margin-top: 35px;
       width: 100%;

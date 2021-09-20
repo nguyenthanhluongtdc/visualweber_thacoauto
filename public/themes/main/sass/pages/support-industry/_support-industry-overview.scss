@@ -27,6 +27,7 @@
                     flex: 1;
                     object-fit: contain;
                     max-height: 4vw;
+                    max-width: 70%;
                     @media (max-width: 1080px) {
                         max-height: 15vw;
                     }

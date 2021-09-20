@@ -263,6 +263,12 @@
               width: 0.7px;
               background: #b9b9b9;
               left: -4%;
+              @media (max-width: 1920px) {
+                left: -3%;
+              }
+              @media (max-width: 1680px) {
+                left: -4%;
+              }
             }
             .member-avatar {
                 width: 50px;

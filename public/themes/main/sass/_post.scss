@@ -12,6 +12,14 @@
     }
     p, span{
       font-family: "MyriadPro-Regular" !important;
+      font-size: 18px;
+      @media (max-width: 1080px) {
+        font-size: 16px;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 14px;
+      }
     }
     .post-author-wrap {
       margin-top: 35px;

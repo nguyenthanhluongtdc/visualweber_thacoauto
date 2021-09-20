@@ -54,7 +54,7 @@
                                         class="mb-2" />
                                     <div class="content-bottom">
                                         <div class="top">
-                                            <h4 class="font20 mb-2 text-uppercase fontmb-middle">
+                                            <h4 class="font25 mb-2 text-uppercase fontmb-middle">
                                                 {!! has_sub_field($item, 'title_two') !!}
                                             </h4>
                                             <div class="font-pri description font15 mb-2 fontmb-little">

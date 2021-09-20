@@ -48,7 +48,7 @@
                             padding: 0;
                             height: max-content;
                             a {
-                                padding: 5px 10px;
+                                padding: 3% 10px 4%;
                                 display: inline-block;
                                 border: 1px solid;
                                 color: #fff;
@@ -59,7 +59,8 @@
                             font-family: $font-primary-bold;
                         }
                         .description {
-                            @include split_str(5);
+                            @include split_str(4);
+                            margin-bottom: 5%;
                             @media screen and(max-width: 1440px) {
                                 @include split_str(4);
                             }

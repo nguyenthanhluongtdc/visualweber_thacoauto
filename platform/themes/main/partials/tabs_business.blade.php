@@ -35,7 +35,7 @@
                 <img loading="lazy" src="{{ Storage::disk('public')->exists($manufacturing->image) ? get_image_url($manufacturing->image) : RvMedia::getDefaultImage()}}" alt=""
                     class="mb-2">
                 <div class="content-bottom p-2">
-                    <h4 class="font20 mb-2 text-uppercase fontmb-middle">
+                    <h4 class="font25 mb-2 text-uppercase fontmb-middle">
                         {!! $item->name !!}
                     </h4>
                     <p class="font-pri font15 mb-2 fontmb-little description">

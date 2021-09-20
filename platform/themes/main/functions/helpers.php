@@ -241,14 +241,10 @@ if (!function_exists('get_all_shareholders')) {
      * @param boolean $active
      * @return mixed
      */
-    function get_all_shareholders()
+    function get_all_shareholders($paginate)
     {
         return app(ShareholderInterface::class)
-        ->advancedGet([
-            'condition' => [
-                'status' => BaseStatusEnum::PUBLISHED,
-            ]
-        ]);
+        ->getAll($paginate);
     }
 }
 if (!function_exists('get_page_by_id')) {

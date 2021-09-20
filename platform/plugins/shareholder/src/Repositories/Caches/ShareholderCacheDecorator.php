@@ -11,4 +11,8 @@ class ShareholderCacheDecorator extends CacheAbstractDecorator implements Shareh
     {
         return $this->getDataIfExistCache(__FUNCTION__, func_get_args());
     }
+    public function getAll($paginate = 5)
+    {
+        return $this->getDataIfExistCache(__FUNCTION__, func_get_args());
+    }
 }

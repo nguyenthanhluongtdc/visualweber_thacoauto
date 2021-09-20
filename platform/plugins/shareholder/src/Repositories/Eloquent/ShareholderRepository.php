@@ -25,4 +25,13 @@ class ShareholderRepository extends RepositoriesAbstract implements ShareholderI
         ->orderBy('id', 'desc');
         return $this->applyBeforeExecuteQuery($data)->paginate($paginate);
     }
+
+    public function getAll($paginate = 5){
+        $data = $this->getModel()
+        ->whereStatus(BaseStatusEnum::PUBLISHED)
+        ->orderBy('is_featured', 'desc')
+        ->orderBy('created_at', 'desc')
+        ->orderBy('id', 'desc');
+        return $this->applyBeforeExecuteQuery($data)->paginate($paginate);
+    }
 }

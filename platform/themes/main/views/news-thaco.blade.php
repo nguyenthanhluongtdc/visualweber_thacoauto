@@ -2,7 +2,7 @@
 <div class="news-thaco-content container-remake overflow-hidden show-desktop">
     <div class="news-thaco-top">
         @php
-        $posts = get_posts_by_category($category->id ?? 19, 999);
+        $posts = get_posts_by_category($category->id ?? 19, 6);
         $postsFeatures = get_featured_posts_by_category($category->id ?? 19, 2);
         
         @endphp
@@ -87,12 +87,17 @@
         @endforeach
         @endif
     </ul>
-    <div id="loadMore" class="font20 hidden">
+    <div class="page-pagination">
+        @if(!empty($posts))
+            {{ $posts->links('vendor.pagination.custom') }}
+        @endif
+    </div>
+    {{-- <div id="loadMore" class="font20 hidden">
         <span>{{ __("Xem tất cả") }}</span>
         <span>
             <i class="fas fa-arrow-right font15"></i>
         </span>
-    </div>
+    </div> --}}
 </div>
 
 <div class="news-thaco-content container-remake overflow-hidden show-mobile">

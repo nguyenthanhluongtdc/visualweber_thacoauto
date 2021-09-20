@@ -20,13 +20,11 @@
     
     <div class="news-thaco-top">
         @php
-        $shareholderCategory = get_shareholder_categories()->last();
-        $posts = get_shareholder_by_category_id($data->id, 999);
-        $count = 0;
+        $posts = get_shareholder_by_category_id($data->id, 8);
         @endphp
         @if (!empty($posts)) 
-        @foreach ($posts as $post)
-        @if($count<=1)
+        @foreach ($posts as $key => $post)
+        @if($key<=1)
         <div class="item">
             <div class="item-img">
                 <div class="post-thumbnail">
@@ -56,10 +54,6 @@
                 </p>
             </div>
         </div>
-        @php
-            $count++;
-            
-        @endphp
         @endif
 
         @endforeach
@@ -69,7 +63,7 @@
     <ul class="news-thaco-list" id="myList">
         @if (!empty($posts))
         @foreach ($posts as  $key => $post)
-        @if($count>1 && $key>1)
+        @if($key>1)
         <li class="news-thaco-item">
             <div class="item-shareholder">
                 <div class="item-wrap">
@@ -99,18 +93,14 @@
 
         </li>
         @endif
-        @php
-            $count++;
-            
-        @endphp
+
         @endforeach
         @endif
     </ul>
-    <div id="loadMore" class="font20 hidden">
-        <span>{{ __("Xem tất cả") }}</span>
-        <span>
-            <i class="fas fa-arrow-right font15"></i>
-        </span>
+    <div class="page-pagination">
+        @if(!empty($posts))
+            {{ $posts->links('vendor.pagination.custom') }}
+        @endif
     </div>
 </div>
 
@@ -149,8 +139,8 @@
     </div>
 
     <div class="page-pagination hidden-desktop">
-        @if(!empty($posts_mb))
-            {{ $posts_mb->links('vendor.pagination.custom') }}
+        @if(!empty($posts))
+            {{ $posts->links('vendor.pagination.custom') }}
         @endif
     </div>
 </div>

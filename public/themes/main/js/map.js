@@ -92,6 +92,7 @@ const Distribution = {
                 $(this).addClass('active')
 
                 const item = $(this).data('item')
+                // console.log(item);
                 const { popup_info } = item
                 $(".leaflet-popup").each(function() {
                     const popup = $(this).find('.branch-popup').data('popup');
@@ -139,16 +140,24 @@ const Distribution = {
                 popupDetailWrap += popupDetailItem
             });
         }
-
         let popupContent = `<div class="branch-popup" data-popup="${popup_info.id}">
-                                <h2 class="branch-name font20">${popup_info.name}</h2>
-                                <div class="branch-body">`
-                                + popupDetailWrap +
-                                `</div>
-                                <div class="branch-footer">
-                                    <a href="${popup_info.seemore}"><button>${window.__distribution ? window.__distribution.readmore : ''}</button></a>
-                                </div>
-                            </div>`
+                                    <h2 class="branch-name font20">${popup_info.title}</h2>
+                                    <div class="branch-footer">
+                                        <a href="${popup_info.seemore}"><button>${window.__distribution ? window.__distribution.readmore : ''}</button></a>
+                                    </div>
+                                </div>`
+        if(popup_info.name != ""){
+            popupContent = `<div class="branch-popup" data-popup="${popup_info.id}">
+                                    <h2 class="branch-name font20">${popup_info.name}</h2>
+                                    <div class="branch-body">`
+                                    + popupDetailWrap +
+                                    `</div>
+                                    <div class="branch-footer">
+                                        <a href="${popup_info.seemore}"><button>${window.__distribution ? window.__distribution.readmore : ''}</button></a>
+                                    </div>
+                                </div>`
+
+        }
         
 
         var greenIcon = L.icon({

@@ -30,8 +30,12 @@
         <div class="news-item news-2">
             @if(count($postDesktop)>=1)
             <div class="content-top">
+                <div class="image-frame">
+                    <a href="{{$postDesktop[0]->url}}"><img loading="lazy" src="{{ get_object_image($postDesktop[0]->image, 'post-large') }}" alt="{{$postDesktop[0]->name}}"></a>
+                </div>
+                {{-- <a href="{{$postDesktop[0]->url}}" >{{$postDesktop[0]->name}}</a> --}}
                 <h3 class="title font-pri-bold font30  text-uppercase-none fontmb-middle">
-                    <a href="{{$postDesktop[0]->url}}" >{{$postDesktop[0]->name}}</a>
+                    <a href="{{$postDesktop[0]->url}}">{{$postDesktop[0]->name}}</a>
                 </h3>
                 <p class="desc font-pri font18 fontmb-small">
                     {{$postDesktop[0]->description}}
@@ -63,6 +67,9 @@
         <div class="news-item news-4">
             @if(count($postDesktop)>=2)
             <div class="news-item-content">
+                <div class="image-frame">
+                    <a href="{{$postDesktop[1]->url}}"><img loading="lazy" src="{{ get_object_image($postDesktop[1]->image, 'post-large') }}" alt="{{$postDesktop[1]->name}}"></a>
+                </div>
                 <h3 class="title font-pri-bold font30 fontmb-middle text-uppercase-none">
                     <a href="{{$postDesktop[1]->url}}">{{$postDesktop[1]->name}}</a>
                 </h3>

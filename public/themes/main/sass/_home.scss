@@ -124,19 +124,23 @@
         grid-template-areas : "n1 n1 n2 n3" "n4 n5 n6 n7";
         @media (max-width:1080px) {
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: 45vw 50vw 50vw;
-            @media (max-width: 768px) {
-                grid-template-rows: 45vw 60vw 50vw;
+            grid-template-rows: auto auto auto 30vw;
+            @media (max-width:768px) {
+                grid-template-rows: auto auto auto 50vw;
             }
-            @media (max-width:480px) {
-                grid-template-rows: 45vw 70vw 60vw;
-            }
-            grid-template-areas : "n1 n1" "n2 n4" "n3 n7";
+            grid-template-areas :  
+            "n2 n4"
+            'n6 n6' 
+            "n3 n3"
+            "n7 n7";
         }
         .news-1 {
             grid-area: n1;
             background-color: blanchedalmond;
             position: relative;
+            @media (max-width: 1080px) {
+                display: none;
+            }
             a {
                 position: absolute;
                 width: 100%;
@@ -156,7 +160,30 @@
                 flex: 1;
                 display: flex;
                 flex-direction: column;
+                .image-frame{
+                    display: none;
+                    @media (max-width: 1080px) {
+                        margin-bottom: 3%;
+                        display: block;
+                        height: 0;
+                        width: 100%;
+                        padding-bottom: 40%;
+                        position: relative;
+                        a{
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            img{
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+                }
                 .title {
+                    margin-top: 0;
                     a {
                         color: black;
                         @include split_str(2);
@@ -169,7 +196,11 @@
             }
             .city-day {
                 flex-shrink: 0;
+                @media (max-width: 1080px) {
+                    margin-top: 3%;
+                }
             }
+            
         }
         .news-3 {
             grid-area: n3;
@@ -180,6 +211,16 @@
                 a {
                     width: 100%;
                     position: relative;
+                    @media (max-width: 1080px) {
+                        height: 0;
+                        padding-bottom: 50%;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            object-fit: cover;
+                        }
+                    }
                     .fa-youtube {
                         font-size: 7vw;
                         color: red;
@@ -240,10 +281,35 @@
             }
             .city-day {
                 flex-shrink: 0;
+                @media (max-width: 1080px) {
+                    margin-top: 3%;
+                }
             }
         }
         .news-4 {
             grid-area: n4;
+            .title{
+                margin-top: 0;
+            }
+            .image-frame{
+                display: none;
+                @media (max-width: 1080px) {
+                    display: block;
+                    margin-bottom: 3%;
+                    a{
+                        height: 0;
+                        width: 100%;
+                        padding-bottom: 40%;
+                        position: relative;
+                        img{
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
         }
         .news-5 {
             grid-area: n5;
@@ -278,9 +344,7 @@
                 bottom: 0;
                 right: 0;
             }
-            @media (max-width:1080px) {
-                display: none;
-            }
+            
         }
         .news-7 {
             grid-area: n7;
@@ -324,6 +388,9 @@
                         display: flex;
                         align-items: center;
                         margin-left: auto;
+                        @media (max-width:1080px) {
+                            height: fit-content;
+                        }
                         a {
                             color: black;
                             @include split_str(2);

@@ -3,7 +3,8 @@
         $popupData = [
             'popup_info' => [
                 'id' => $item->id,
-                'name' => has_field($item, 'ten_popup_he_thong_phan_phoi') ? get_field($item, 'ten_popup_he_thong_phan_phoi') : '',
+                'title' => $item->name,
+                 'name' => has_field($item, 'ten_popup_he_thong_phan_phoi') ? get_field($item, 'ten_popup_he_thong_phan_phoi') : '',
                 'content' => has_field($item, 'mo_ta_he_thong_phan_phoi') ? get_field($item, 'mo_ta_he_thong_phan_phoi') : '',
                 'seemore' => $item->url
             ],
@@ -12,7 +13,7 @@
     @endphp
     <div class="branch-item mb-20 locate_item" data-item="{{ json_encode($popupData) }}">
         <p class="branch-name font30 mb-20">{{ $item->name }}</p>
-        <p class="branch-address font20 mb-20">{!! has_field($item, 'address_he_thong_phan_phoi') ? get_field($item, 'address_he_thong_phan_phoi') : '' !!}</p>
+        <div class="branch-address font20 mb-20">{!! has_field($item, 'address_he_thong_phan_phoi') ? get_field($item, 'address_he_thong_phan_phoi') : '' !!}</div>
         <div class="logo-wrap mb-20">
             {{-- <div class="logo-wrap__left">
                 @if (has_field($item, 'danh_sach_thuong_hieu_he_thong_phan_phoi'))

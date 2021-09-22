@@ -27,12 +27,12 @@
                             <div class="font-pri font18 fontmb-little">{!! $children->content !!}</div>
                             <div class="brand-logo">
                                 @foreach ($children->brands ?? collect() as $brand)
-                                    <div class="logo-img">
+                                    {{-- <div class="logo-img"> --}}
                                         {{-- @dd($brand) --}}
                                         <a href="{{ has_field($brand, 'brand_external_link') }}" target="_blank">
                                             <img loading="lazy" src="{{ get_image_url($brand->image) }}" alt="{{ $brand->name }}" >
                                         </a>
-                                    </div>
+                                    {{-- </div> --}}
                                 @endforeach
                             </div>
                         </div>

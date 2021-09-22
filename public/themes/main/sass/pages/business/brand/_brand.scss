@@ -74,49 +74,59 @@
                     text-transform: uppercase;
                 }
                 .brand-logo {
-                    display: flex;
-                    flex-wrap: wrap;
-                    align-items: center;
-                    margin-top: 2%;
-                    margin-left: -7%;
-                    margin-right: -7%;
+                    // display: grid;
+                    // flex-wrap: wrap;
+                    // align-items: center;
+                    // margin-top: 2%;
+                    // margin-left: -7%;
+                    // margin-right: -7%;
+                    display: grid;
+                    grid-template-columns: repeat(4,1fr);
+                    grid-gap: 5vw;
+                    img{
+                        display: block;
+                        margin: 0 auto;
+                        max-width: 80%;
+                        height: 5vw;
+                        object-fit: contain;
+                    }
                     .logo-img {
-                        max-width: 25%;
-                        flex: 1 25%;
-                        padding-right: 7%;
-                        padding-left: 7%;
-                        position: relative;
-                        @media (max-width: 576px) {
-                            max-width: 33.33336%;
-                            flex: 0 0 33.33336%;
-                            padding-bottom: 20px;
-                        }
+                        // max-width: 25%;
+                        // flex: 1 25%;
+                        // padding-right: 7%;
+                        // padding-left: 7%;
+                        // position: relative;
+                        // @media (max-width: 576px) {
+                        //     max-width: 33.33336%;
+                        //     flex: 0 0 33.33336%;
+                        //     padding-bottom: 20px;
+                        // }
                         img {
-                            position: relative;
-                            width: 100%;
-                            height: auto;
-                            @media (min-width: 1080px) {
-                                transform: scale(0.8);
-                            }
+                            // position: relative;
+                            // width: 100%;
+                            // height: auto;
+                            // @media (min-width: 1080px) {
+                            //     transform: scale(0.8);
+                            // }
                         }
-                        &::before {
-                            position: absolute;
-                            top: 0;
-                            left: 0%;
-                            z-index: 2;
-                            display: block;
-                            content: '';
-                            width: 20%;
-                            height: 100%;
-                            background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .5) 100%);
-                            background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .5) 100%);
-                            -webkit-transform: skewX(-25deg);
-                            transform: skewX(-25deg);
-                        }
-                        &:hover::before {
-                            transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
-                            left: 70%;
-                        }
+                        // &::before {
+                        //     position: absolute;
+                        //     top: 0;
+                        //     left: 0%;
+                        //     z-index: 2;
+                        //     display: block;
+                        //     content: '';
+                        //     width: 20%;
+                        //     height: 100%;
+                        //     background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .5) 100%);
+                        //     background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .5) 100%);
+                        //     -webkit-transform: skewX(-25deg);
+                        //     transform: skewX(-25deg);
+                        // }
+                        // &:hover::before {
+                        //     transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+                        //     left: 70%;
+                        // }
                     }
                 }
             }
@@ -138,13 +148,6 @@
                     width: 100%;
                     margin-left: 50px;
                 }
-            }
-        }
-    }
-    .brand-block:first-child {
-        .tabs .tab .brand-logo .logo-img img {
-            @media (min-width: 1080px) {
-                transform: scale(0.6);
             }
         }
     }

@@ -82,12 +82,16 @@
                     // margin-right: -7%;
                     display: grid;
                     grid-template-columns: repeat(4,1fr);
+                    @media (max-width: 768px) {
+                        grid-template-columns: repeat(2,1fr);
+                    }
                     grid-gap: 5vw;
                     img{
                         display: block;
                         margin: 0 auto;
                         max-width: 80%;
-                        height: 5vw;
+                        height: 7vw;
+                        margin-top: 20px;
                         object-fit: contain;
                     }
                     .logo-img {

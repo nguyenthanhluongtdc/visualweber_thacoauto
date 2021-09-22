@@ -1,6 +1,8 @@
 <section class="section-brand overflow-x-hidden">
     <div class="container-remake">
         @forelse (get_car_categories_parent() ?? collect() as $item)
+        {{-- @dd($item->childrens->isEmpty()) --}}
+        @if($item->childrens->isEmpty() == false)
             <div class="brand-block">
                 <div class="tabs">
                     @if(!empty($item->childrens))
@@ -39,6 +41,7 @@
                     @endforeach
                 </div>
             </div>
+            @endif
         @empty
             {!! Theme::partial('templates/no-content') !!}
         @endforelse

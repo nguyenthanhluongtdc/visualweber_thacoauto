@@ -449,6 +449,7 @@
                         img {
                             width: 135px;
                             height: 135px;
+                            object-fit: cover;
                             border-radius: 50%;
                             @media screen and(max-width: 1680px) {
                                 width: 100px;

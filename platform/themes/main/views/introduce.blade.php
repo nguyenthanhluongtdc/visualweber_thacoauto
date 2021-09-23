@@ -212,7 +212,6 @@
                               
                                 <span>{!! has_sub_field($sub_item, 'birth_place') ? has_sub_field($sub_item,
                                     'birth_place') : __('chưa cập nhật') !!}</span>
-                               
                             </p>
                             @endif
                             @if(has_sub_field($sub_item, 'level'))

@@ -86,7 +86,7 @@
                             <img loading="lazy" src="{{get_image_url($post->image)}}" alt="{{$post->name}}">
                         </a>
                     </div>
-                    <h5 class="font-cond font20">
+                    <h5 class="font-cond-bold font30">
                         <a data-fancybox data-type="ajax" data-src="{{$post->url}}" data-filter="#gallery" href="javascript:;">
                             {{$post->name}}
                         </a>
@@ -110,7 +110,7 @@
                             <img loading="lazy" src="{{get_image_url($post->image)}}" alt="{{$post->name}}">
                         </a>
                     </div>
-                    <h5 class="font-cond font20">
+                    <h5 class="font-cond-bold font30">
                         <a data-fancybox data-type="ajax" data-src="{{$post->url}}" data-filter="#gallery" href="javascript:;">
                             {{$post->name}}
                         </a>

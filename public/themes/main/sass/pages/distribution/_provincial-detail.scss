@@ -604,6 +604,9 @@
                 text-overflow: ellipsis;
                 a {
                     color: #2a2a2a;
+                    &:hover{
+                        color: $color-primary;
+                    }
                 }
             }
             &--date {

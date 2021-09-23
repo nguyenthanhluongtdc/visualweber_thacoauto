@@ -253,6 +253,9 @@
         h4 {
             a {
                 color: #444444;
+                &:hover{
+                    color: $color-primary;
+                }
             }
         }
         p.desc {
@@ -359,6 +362,9 @@
                 flex: 0 0 100%;
                 a {
                     @include split_str(2);
+                    &:hover{
+                        color: $color-primary;
+                    }
                 }
             }
             p.desc {
@@ -411,6 +417,9 @@
                     h4 {
                         a {
                             color: #303030;
+                            &:hover{
+                                color: $color-primary;
+                            }
                         }
                         @include mobileMarginBottom(25, "+");
                     }
@@ -490,6 +499,9 @@
                         color: #303030;
                         text-align: justify;
                         @include split_str(3);
+                        &:hover{
+                            color: $color-primary;
+                        }
                     }
                 }
             }
@@ -595,9 +607,12 @@
             .title-wrap {
                 margin-left: 15px;
                 h5 {
-                    text-transform: uppercase;
+                    // text-transform: uppercase;
                     a {
                         color: #2e3a41;
+                        &:hover{
+                            color: $color-primary;
+                        }
                     }
                 }
                 p {
@@ -772,7 +787,12 @@
                 @include marginBottom(30, "+");
                 a {
                     color: #2e3a41;
-                    @include split_str(2)
+                    // @include split_str(2);
+                }
+                &:hover{
+                    a{
+                        color: $color-primary;
+                    }
                 }
             }
             p.desc {
@@ -949,6 +969,9 @@
                 h5 a {
                     color: #2e3a41;
                     @include split_str(2);
+                    &:hover{
+                        color: $color-primary;
+                    }
                 }
                 p.day {
                     margin: 5px 0 10px 0;
@@ -1255,6 +1278,9 @@
             }
             h5 a {
                 color: #444444;
+                &:hover{
+                    color: $color-primary;
+                }
             }
         }
     }

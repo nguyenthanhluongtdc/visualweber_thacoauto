@@ -302,6 +302,9 @@
                     margin-bottom: 25px;
                     line-height: 1.2;
                     @include split_str(2);
+                    &:hover{
+                        color: $color-primary;
+                    }
                 }
                 .news-description {
                     font-family: $font-primary;

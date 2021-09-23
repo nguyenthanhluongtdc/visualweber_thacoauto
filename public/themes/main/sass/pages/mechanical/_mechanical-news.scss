@@ -99,6 +99,9 @@
                             color: black;
                             @include split_str(2);
                             @include marginBottom(12, "+");
+                            &:hover{
+                                color: $color-primary;
+                            }
                         }
                     }
                     &__bottom{

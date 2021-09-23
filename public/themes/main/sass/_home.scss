@@ -187,6 +187,9 @@
                     a {
                         color: black;
                         @include split_str(2);
+                        &:hover{
+                            color: $color-primary;
+                        }
                     }
                 }
                 .desc {
@@ -266,6 +269,9 @@
                 flex-shrink: 0;
                 a {
                     @include split_str(2);
+                    &:hover{
+                        color: $color-primary;
+                    }
                 }
             }
         }
@@ -283,6 +289,9 @@
                 a {
                     color: black;
                     @include split_str(2);
+                    &:hover{
+                        color: $color-primary;
+                    }
                 }
                 .desc {
                     text-align: justify;
@@ -407,6 +416,9 @@
                             line-height: 1;
                             @media (max-width: 480px) {
                                 @include split_str(2);
+                            }
+                            &:hover{
+                                color: $color-primary;
                             }
                         }
                     }
@@ -1016,6 +1028,12 @@
                                 @media (max-width: 1080px) {
                                     line-height: normal;
                                 }
+                                &:hover{
+                                    a{
+
+                                        color: $color-primary;
+                                    }
+                                }
                             }
                             .desc-none {
                                 margin-top: 15px;
@@ -1161,6 +1179,12 @@
         h5 {
             line-height: 30px;
             @include split_str(2);
+        }
+        a{
+            color: black;
+            &:hover{
+                color: $color-primary;
+            }
         }
         .desc-none {
             margin-top: 15px;

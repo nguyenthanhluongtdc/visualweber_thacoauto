@@ -111,7 +111,7 @@ class PostForm extends FormAbstract
                 'label'      => trans('core/base::tables.status'),
                 'label_attr' => ['class' => 'control-label required'],
                 'choices'    => $status ?? [],
-                'selected'   => 'pending'
+                
 
             ])
             ->add('categories[]', 'categoryMulti', [

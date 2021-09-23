@@ -151,7 +151,7 @@ var shareholder = new Swiper('.shareholder-gallery', {
     thumbs: {
         swiper: shareholderTop,
     },
-    
+
 });
 // shareholderTop.controller.control = shareholder;
 // shareholder.controller.control = shareholderTop;
@@ -295,6 +295,24 @@ $('.slider-nav').slick({
         }
     }]
 });
+var swiper = new Swiper(".projectSwiper", {
+    // slidesPerView: 1,
+    // spaceBetween: 40,
+    loop: true,
+    // centeredSlides: true,
+    // scrollbar: {
+    //     el: ".swiper-scrollbar"
+    // },
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+        },
+        640: {
+            slidesPerView: 2,
+            spaceBetween: 30
+        }
+    },
+});
 
 var swiper = new Swiper(".researchDevSwiper", {
     slidesPerView: 3,
@@ -375,11 +393,10 @@ var Helper = {
             }
         }); //missing );
     },
-    matchHeight: function () {
+    matchHeight: function() {
         $('.match')
-          .matchHeight({})
-        ;
-      },
+            .matchHeight({});
+    },
     zeynepInit: function() {
         let is_enable_menu = false
         const zeynep = $('.zeynep').zeynep({

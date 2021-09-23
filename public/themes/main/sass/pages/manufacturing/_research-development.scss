@@ -304,6 +304,7 @@
                     }
                     .text {
                         line-height: 1.2;
+                        @include split_str(2);
                     }
                 }
                 .news {

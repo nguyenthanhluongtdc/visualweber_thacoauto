@@ -141,6 +141,21 @@ var galleryThumbs = new Swiper('.distribution-slide-right', {
 galleryTop.controller.control = galleryThumbs;
 galleryThumbs.controller.control = galleryTop;
 
+var shareholderTop = new Swiper('.shareholder-gallery-top', {
+    freeMode: true,
+    slidesPerView: 'auto',
+});
+var shareholder = new Swiper('.shareholder-gallery', {
+    centeredSlides: true,
+    slidesPerView: 1,
+    thumbs: {
+        swiper: shareholderTop,
+    },
+    
+});
+// shareholderTop.controller.control = shareholder;
+// shareholder.controller.control = shareholderTop;
+
 var swiperProductIntro = new Swiper(".product-intro__swiper", {
     navigation: {
         nextEl: ".product-intro__swiper--next",
@@ -738,7 +753,8 @@ $(document).ready(function() {
     Ajax.getPercentLoans();
     Ajax.onChangePercentLoan();
     Ajax.getTotalLoan();
-    Ajax.getShareholder()
+    Ajax.getShareholder();
+    // Ajax.getSlide();
 });
 
 $(document).ready(function() {

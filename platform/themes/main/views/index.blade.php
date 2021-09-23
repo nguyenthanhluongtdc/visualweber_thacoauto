@@ -199,17 +199,54 @@
                     </a>
                 </li>
             </ul>
-            {{-- <div class="link-views-all font-pri-bold font18 color-gray">
-                <a href="#" class="color-gray">
-                    Xem tất cả   <span><i class="fas fa-arrow-right font15"></i></span>
-                </a>
-            </div> --}}
         </div>
+        <div class="swiper-container shareholder-gallery-top">
+			<div class="swiper-wrapper">
+                @foreach (get_shareholder_categories() as $key => $item)
+                <div class="swiper-slide"><a class="font25 font-mi-bold fontmb-small shareholder-link {{$loop->first ? "active" : ""}}" data-category={{$item->id}} href="javascript:;">{{$item->name}}</a></div>
+                @endforeach
+            </div>
+        </div>
+        <div class="swiper-container shareholder-gallery">
+			<div class="swiper-wrapper">
+                @foreach (get_shareholder_categories() as $key => $item)
+                <div class="swiper-slide">
+                    <img class="banner" loading="lazy" src="{{ get_image_url($item->image) }}" alt="Icon">
+                        @if(!empty(get_shareholder_by_category_id($item->id)))
+                        @foreach (get_shareholder_by_category_id($item->id) as $child)
+                                
+                            <div class="item-shareholder">
+                                
+                                <div class="left">
+                                    <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
+                                    class="up-show">
+                                    {{-- <i class="fas fa-caret-right font18"></i> --}}
+                                </div>
+                                <div class="mid">
+                                    <h5 class="title font25 font-pri-bold color-gray fontmb-small">
+                                        {{$child->name}}
+                                    </h5>
+                                </div>
+                                <div class="right font-pri color-gray font20">
+                                    <div class="desc-right">
+                                        <a href="{{get_image_url($child->file)}}" class="font-pri fontmb-small btn">{{__('Tải về')}}</a>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                        @endif
+                    </div>
+                @endforeach
+            </div>
+        </div>
+        <a href="{{get_page_by_id(theme_option('default_category_shareholder'))->url}}" class=" font20 font-mi-bold color-gray viewmore-mb">
+            {{__('Xem tất cả')}} <span><i class="fas fa-arrow-right font15"></i></span>
+        </a>
     </div>
     
     <div class="shareholder-home-content">
         @php
-            $shareholderCategory = get_shareholder_categories()->last();
+            $shareholderCategory = get_shareholder_categories()->first();
             
         @endphp
         <div class="loading d-none">
@@ -219,7 +256,7 @@
             <div>
                 <div class="tab-content-item">
                     <div class="tab-content-left" data-aos="fade-right" data-aos-duration="1200" data-aos-easing="ease-in-out">
-                        <img loading="lazy" src="{{ Theme::asset()->url('images/main/cthome1.jpg') }}" alt="Icon">
+                        <img loading="lazy" src="{{ get_image_url($shareholderCategory->image) }}" alt="Icon">
                     </div>
                     <div class="tab-content-right" data-aos="fade-right" data-aos-duration="1200" data-aos-easing="ease-in-out" data-aos-delay="250">
                         <div class="list-content">

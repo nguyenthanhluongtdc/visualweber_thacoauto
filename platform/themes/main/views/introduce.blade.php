@@ -189,6 +189,7 @@
                             </p>
                         </div>
                         <div class="more-info fontmb-majority">
+                            @if(has_sub_field($sub_item, 'year_of_birth'))
                             <p>
                                 <span>
                                     {!! __('Sinh năm') !!}
@@ -201,14 +202,20 @@
                                     'year_of_birth') : __('chưa cập nhật') !!}
                                 </span>
                             </p>
+                            @endif
+                            @if(has_sub_field($sub_item, 'birth_place'))
                             <p>
                                 <span> {!!__('Nơi sinh')!!} </span>
                                 <span>
                                     :
                                 </span>
+                              
                                 <span>{!! has_sub_field($sub_item, 'birth_place') ? has_sub_field($sub_item,
                                     'birth_place') : __('chưa cập nhật') !!}</span>
+                               
                             </p>
+                            @endif
+                            @if(has_sub_field($sub_item, 'level'))
                             <p>
                                 <span>
                                     {!! __('Trình độ') !!}
@@ -216,9 +223,11 @@
                                 <span>
                                     :
                                 </span>
+
                                 <span>{!! has_sub_field($sub_item, 'level') ? has_sub_field($sub_item, 'level') :
                                     __('chưa cập nhật') !!}</span>
                             </p>
+                            @endif
                         </div>
                     </div>
                     @endforeach

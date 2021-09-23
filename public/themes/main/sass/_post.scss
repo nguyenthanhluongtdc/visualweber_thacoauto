@@ -10,15 +10,19 @@
     h1,h2,h3,h4,h5,h6{
       font-family: "MyriadPro-BoldCond" !important;
     }
-    p, span{
+    span{
+      font-size: unset;
+      font-family: unset;
+    }
+    p{
       font-family: "MyriadPro-Regular" !important;
-      font-size: 18px;
+      font-size: 18px !important;
       @media (max-width: 1080px) {
-        font-size: 16px;
+        font-size: 16px !important;
       }
 
       @media (max-width: 768px) {
-        font-size: 14px;
+        font-size: 14px !important;
       }
     }
     .post-author-wrap {

@@ -25,8 +25,10 @@
                 </div>
             </div>
             <div class="list-image-mobile container-remake">
-
+        <div class="swiper-container projectSwiper">
+            <div class="swiper-wrapper">
                 @if(has_field($page, 'repeater_main_project_module_export'))
+
                 @foreach(has_field($page, 'repeater_main_project_module_export') as $item)
                 <div class="swiper-slide">
                     <img loading="lazy" width="" height="" src="{{get_image_url(has_sub_field($item,'image'))}}" alt="{!! has_sub_field($item, 'description') ? has_sub_field($item, 'description') : '' !!}" class="image"/>
@@ -35,7 +37,8 @@
                 @endforeach
                 @endif
 
-
+            </div>
+        </div>
                 @if(has_field($page, 'repeater_side_project_module_export'))
                 @foreach(has_field($page, 'repeater_side_project_module_export') as $item)
                 <div class="news">

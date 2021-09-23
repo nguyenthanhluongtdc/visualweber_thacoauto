@@ -2,7 +2,8 @@
     @foreach ($data as $item)
     <div class="item-shareholder">
         <div class="left">
-            <i class="fas fa-caret-right font18"></i>
+            <img loading="lazy" src="{{ Theme::asset()->url('images/main/up.png') }}" alt="Up icon"
+                                    class="up-show">
         </div>
         <div class="mid">
             <h5 class="title font25 font-pri-bold color-gray fontmb-small">

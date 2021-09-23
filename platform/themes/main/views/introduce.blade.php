@@ -121,7 +121,7 @@
                     @endif
                 </div>
 
-                @if(has_field($page, 'repeat_business_module_value_introduce'))
+                {{-- @if(has_field($page, 'repeat_business_module_value_introduce'))
                 @if(!empty(has_field($page, 'repeat_business_module_value_introduce')))
                 <div class="services-mobile font-pri-bold">
                     <div class="row"> 
@@ -143,7 +143,7 @@
                     </div>
                 </div>
                 @endif
-                @endif
+                @endif --}}
             </div>
         </div>
     </div>

@@ -200,7 +200,13 @@
             .city-day {
                 flex-shrink: 0;
                 @media (max-width: 1080px) {
-                    margin-top: 3%;
+                    margin-top: 3%; 
+                }
+                @media (max-width: 480px) {
+                    span{
+                        display: block;
+                        border: none;
+                    }
                 }
             }
             
@@ -303,6 +309,12 @@
                 flex-shrink: 0;
                 @media (max-width: 1080px) {
                     margin-top: 3%;
+                }
+                @media (max-width: 480px) {
+                    span{
+                        display: block;
+                        border: none;
+                    }
                 }
             }
         }

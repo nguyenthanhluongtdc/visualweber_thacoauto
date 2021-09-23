@@ -59,8 +59,8 @@
                         <img loading="lazy" src="{{ get_object_image($post->image) }}" alt="{{$post->name}}">
                     </a>
                 </div>
-                <h3 class="title font30 fontmb-small text-uppercase-none">
-                    <a data-fancybox href="https://www.youtube.com/watch?v={{get_sub_field(get_field($post, 'video_gallery')[0], 'youtube_code')}}" class="font-pri-bold color-gray font30 fontmb-small">{{$post->name}}</a>
+                <h3 class="title font30 text-uppercase-none">
+                    <a data-fancybox href="https://www.youtube.com/watch?v={{get_sub_field(get_field($post, 'video_gallery')[0], 'youtube_code')}}" class="font-pri-bold color-gray font30">{{$post->name}}</a>
                 </h3>
             @endif
         </div>
@@ -163,7 +163,7 @@
                         @if (!empty($postsHot))
                         @foreach ($postsHot as $key => $post)
                         <div class="swiper-slide">
-                            <span class="font-pri-bold font25 fontmb-small">
+                            <span class="font-pri-bold font30">
                                 <a href="{{$post->url}}" class="text-uppercase-none">{{$post->name}}</a>
                             </span>
                         </div>

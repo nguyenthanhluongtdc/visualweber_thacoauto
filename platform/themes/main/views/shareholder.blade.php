@@ -27,11 +27,11 @@
         @foreach ($posts as $key => $post)
         @if($key<=1)
         <div class="item">
-            <div class="item-img">
+            {{-- <div class="item-img">
                 <div class="post-thumbnail">
-                    <a href="{{$post->url}}"><img loading="lazy" src="{{ get_object_image($post->image) }}" alt="Bản tin Thaco"></a>
                 </div>
-            </div>
+            </div> --}}
+            <a href="{{$post->url}}"><img loading="lazy" src="{{ get_object_image($post->image) }}" alt="Bản tin Thaco"></a>
             <div class="item-content">
                 <h5 class="title font30 font-pri-bold">
                     <a href="javscritpt:;">{{$post->name}}</a>
@@ -111,11 +111,11 @@
         @if (!empty($posts))
             @foreach ($posts as $post)
                 <div class="item">
-                    <div class="item-img">
+                    {{-- <div class="item-img">
                         <div class="post-thumbnail">
-                            <a href=""><img loading="lazy" src="{{ get_object_image($post->image) }}" alt="Bản tin Thaco"></a>
                         </div>
-                    </div>
+                    </div> --}}
+                    <a href=""><img loading="lazy" src="{{ get_object_image($post->image) }}" alt="Bản tin Thaco"></a>
                     <div class="item-content">
                         <h5 class="title font30 font-pri-bold">
                             <a href="{{$post->url}}">{{$post->name}}</a>

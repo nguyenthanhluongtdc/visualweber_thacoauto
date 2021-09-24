@@ -54,14 +54,14 @@
                     <div class="item list-media-mobile font-pri">
                         <p>{{__('connect with us')}}</p>
                         <ul class="list-media">
-                            <li><a href="{{ theme_option('facebook') }}" target="_blank" `rel="noopener"><img loading="lazy"
-                                        src="{{ Theme::asset()->url('images/main/iconfb.png') }}" alt="facebook"></a></li>
-                            <li><a href="{{ theme_option('linkedin') }}" target="_blank" `rel="noopener"><img loading="lazy"
-                                        src="{{ Theme::asset()->url('images/main/iconin.png') }}" alt="in"></a></li>
-                            <li><a href="{{ theme_option('youtube') }}" target="_blank" `rel="noopener"><img loading="lazy"
-                                        src="{{ Theme::asset()->url('images/main/iconyt.png') }}" alt="youtube"></a></li>
+                            <li class="{{ theme_option('facebook') ? "" : "d-none"}}"><a href="{{ theme_option('facebook') }}" target="_blank" `rel="noopener"><img loading="lazy"
+                                        src="{{ Theme::asset()->url(theme_option('facebook_icon')) }}" alt="facebook"></a></li>
+                            <li class="{{ theme_option('linkedin') ? "" : "d-none"}}><a href="{{ theme_option('linkedin') }}" target="_blank" `rel="noopener"><img loading="lazy"
+                                        src="{{ Theme::asset()->url(theme_option('linkedin_icon')) }}" alt="in"></a></li>
+                            <li class="{{ theme_option('youtube') ? "" : "d-none"}}><a href="{{ theme_option('youtube') }}" target="_blank" `rel="noopener"><img loading="lazy"
+                                        src="{{ Theme::asset()->url(theme_option('youtube_icon')) }}" alt="youtube"></a></li>
                         </ul>
-                        <div class="img-bct-mobile">
+                        <div class="img-bct-mobile {{ theme_option('link_bct') ? "" : "d-none"}}">
                             <a href="{{theme_option('link_bct')}}" title="">
                                 <img loading="lazy" src="{{ get_image_url(theme_option('logo_bct')) }}"
                                     alt="{!! __('Bộ công thương') !!}">
@@ -71,22 +71,22 @@
                 </div>
 
                 <div class="footer-left-bottom">
-                    <a class="img-bct d-inline-block" href="{{theme_option('link_bct')}}" title="">
+                    <a  class="img-bct d-inline-block " href="{{theme_option('link_bct')}}" title="">
                         <img loading="lazy" src="{{ get_image_url(theme_option('logo_bct')) }}"
                             alt="{!! __('Bộ công thương') !!}">
                     </a>
                     <ul class="list-media">
-                        <li>
+                        <li class="{{ theme_option('facebook') ? "" : "d-none"}}">
                             <a href="{{ theme_option('facebook') }}" target="_blank" `rel="noopener">
                                 <img loading="lazy" src="{{ get_image_url(theme_option('facebook_icon')) }}" alt="facebook">
                             </a>
                         </li>
-                        <li>
+                        <li class="{{ theme_option('linkedin') ? "" : "d-none"}}">
                             <a href="{{ theme_option('linkedin') }}" target="_blank" `rel="noopener">
                                 <img loading="lazy" src="{{ get_image_url(theme_option('linkedin_icon')) }}" alt="in">
                             </a>
                         </li>
-                        <li>
+                        <li class="{{ theme_option('youtube') ? "" : "d-none"}}">
                             <a href="{{ theme_option('youtube') }}" target="_blank" `rel="noopener">
                                 <img loading="lazy" src="{{ get_image_url(theme_option('youtube_icon')) }}" alt="youtube">
                             </a>
@@ -121,7 +121,7 @@
         </div>
         <button id="myBtn" title="Go to top">
             <img loading="lazy" src="{{ Theme::asset()->url('images/main/btt.png') }}"
-                alt="youtube">
+                alt="top">
         </button>
 
         <!-- JS Library-->

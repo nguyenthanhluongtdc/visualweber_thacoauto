@@ -70,11 +70,11 @@
                         data-aos-easing="ease-in-out">
                         <a href="{{ get_field($page, 'homepage_production_block_5_link') }}"  class="hover-image-homepage">
                             <img loading="lazy" class="black"
-                            src="{{ get_image_url(get_field($page, 'homepage_production_block_3_logo_black')) }}"
-                            alt="{{ get_field($page, 'homepage_production_block_3') }}">
+                            src="{{ get_image_url(get_field($page, 'homepage_production_block_5_logo_black')) }}"
+                            alt="{{ get_field($page, 'homepage_production_block_5') }}">
                         <img loading="lazy" class="invisible-height-0  blue"
-                            src="{{ get_image_url(get_field($page, 'homepage_production_block_3_logo_blue')) }}"
-                            alt="{{ get_field($page, 'homepage_production_block_3') }}">
+                            src="{{ get_image_url(get_field($page, 'homepage_production_block_5_logo_bue')) }}"
+                            alt="{{ get_field($page, 'homepage_production_block_5') }}">
                         <p class="top-right-item-title font-pri-bold font30 fontmb-small">
                                 {!! get_field($page, 'homepage_production_block_5') !!}</p>
                         </a>
@@ -170,11 +170,11 @@
 
                        <a href="{{ get_field($page, 'homepage_business_block_6_link') }}"  class="hover-image-homepage">
                         <img loading="lazy" class="black"
-                        src="{{ get_image_url(get_field($page, 'homepage_business_block_5_logo_black')) }}"
-                        alt="{{ get_field($page, 'homepage_business_block_5') }}">
+                        src="{{ get_image_url(get_field($page, 'homepage_business_block_6_logo_black')) }}"
+                        alt="{{ get_field($page, 'homepage_business_block_6') }}">
                     <img loading="lazy" class="invisible-height-0  blue"
-                        src="{{ get_image_url(get_field($page, 'homepage_business_block_5_logo_blue')) }}"
-                        alt="{{ get_field($page, 'homepage_business_block_5') }}">
+                        src="{{ get_image_url(get_field($page, 'homepage_business_block_6_logo_blue')) }}"
+                        alt="{{ get_field($page, 'homepage_business_block_6') }}">
                     <p class="bottom-right-item-title font-pri-bold font30 fontmb-small">{!! get_field($page, 'homepage_business_block_6') !!}</p>
                        </a>
                     </div>

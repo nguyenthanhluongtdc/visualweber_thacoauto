@@ -97,6 +97,9 @@ var swiperHotnews = new Swiper('.swiper-hotnews', {
         "768": {
             slidesPerView: 4,
         },
+        "1080": {
+            slidesPerView: 5,
+        },
     },
 });
 var swiperHotnewsTitle = new Swiper('.swiper-hotnews-title', {
@@ -113,6 +116,9 @@ var swiperHotnewsTitle = new Swiper('.swiper-hotnews-title', {
         },
         "768": {
             slidesPerView: 4,
+        },
+        "1080": {
+            slidesPerView: 5,
         },
     },
 });

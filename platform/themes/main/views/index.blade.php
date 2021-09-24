@@ -163,7 +163,7 @@
                         @if (!empty($postsHot))
                         @foreach ($postsHot as $key => $post)
                         <div class="swiper-slide">
-                            <span class="font-pri-bold font30">
+                            <span class="font-pri-bold font20">
                                 <a href="{{$post->url}}" class="text-uppercase-none">{{$post->name}}</a>
                             </span>
                         </div>

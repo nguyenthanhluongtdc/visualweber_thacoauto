@@ -23,7 +23,7 @@
                 <div class="top-right">
                     <div class="top-right-item hover-image-homepage" data-aos="zoom-in" data-aos-duration="1200"
                         data-aos-easing="ease-in-out">
-                        <a href="{{ get_field($page, 'homepage_production_block_1_link') }}">
+                        <a href="{{ get_field($page, 'homepage_production_block_1_link') }}" class="hover-image-homepage">
                             <img loading="lazy" class="black"
                                 src="{{ get_image_url(get_field($page, 'homepage_production_block_1_logo_black')) }}"
                                 alt="{{ get_field($page, 'homepage_production_block_1') }}">
@@ -39,7 +39,7 @@
                     </div>
                     <div class="top-right-item hover-image-homepage" data-aos="zoom-in" data-aos-duration="1200"
                         data-aos-easing="ease-in-out">
-                        <a href="{{ get_field($page, 'homepage_production_block_2_link') }}">
+                        <a href="{{ get_field($page, 'homepage_production_block_2_link') }}"  class="hover-image-homepage">
                             <img loading="lazy" class="black"
                             src="{{ get_image_url(get_field($page, 'homepage_production_block_2_logo_black')) }}"
                             alt="{{ get_field($page, 'homepage_production_block_2') }}">
@@ -54,7 +54,7 @@
                     {{-- công nghiệp hỗ trọ --}}
                     <div class="top-right-item hover-image-homepage" data-aos="zoom-in" data-aos-duration="1200"
                         data-aos-easing="ease-in-out">
-                       <a href="{{ get_field($page, 'homepage_production_block_3_link') }}">
+                       <a href="{{ get_field($page, 'homepage_production_block_3_link') }}"  class="hover-image-homepage">
                         <img loading="lazy" class="black"
                         src="{{ get_image_url(get_field($page, 'homepage_production_block_3_logo_black')) }}"
                         alt="{{ get_field($page, 'homepage_production_block_3') }}">
@@ -68,7 +68,7 @@
                     {{-- cơ khí --}}
                     <div class="top-right-item hover-image-homepage" data-aos="zoom-in" data-aos-duration="1200"
                         data-aos-easing="ease-in-out">
-                        <a href="{{ get_field($page, 'homepage_production_block_5_link') }}">
+                        <a href="{{ get_field($page, 'homepage_production_block_5_link') }}"  class="hover-image-homepage">
                             <img loading="lazy" class="black"
                             src="{{ get_image_url(get_field($page, 'homepage_production_block_3_logo_black')) }}"
                             alt="{{ get_field($page, 'homepage_production_block_3') }}">
@@ -82,7 +82,7 @@
 
                     <div class="top-right-item hover-image-homepage" data-aos="zoom-in" data-aos-duration="1200"
                         data-aos-easing="ease-in-out">
-                        <a href="{{ get_field($page, 'homepage_production_block_4_link') }}">
+                        <a href="{{ get_field($page, 'homepage_production_block_4_link') }}"  class="hover-image-homepage">
                             <img loading="lazy" class="black"
                             src="{{ get_image_url(get_field($page, 'homepage_production_block_4_logo_black')) }}"
                             alt="{{ get_field($page, 'homepage_production_block_4') }}">
@@ -114,7 +114,7 @@
                     <div class="bottom-right-item hover-image-homepage" data-aos="zoom-in" data-aos-duration="1200"
                         data-aos-easing="ease-in-out">
 
-                       <a href="{{ get_field($page, 'homepage_business_block_1_link') }}">
+                       <a href="{{ get_field($page, 'homepage_business_block_1_link') }}"  class="hover-image-homepage">
                         <img loading="lazy" class="black"
                         src="{{ get_image_url(get_field($page, 'homepage_business_block_1_logo_black')) }}"
                         alt="{{ get_field($page, 'homepage_business_block_1') }}">
@@ -127,7 +127,7 @@
                     <div class="bottom-right-item hover-image-homepage" data-aos="zoom-in" data-aos-duration="1200"
                         data-aos-easing="ease-in-out">
 
-                       <a href="{{ get_field($page, 'homepage_business_block_2_link') }}">
+                       <a href="{{ get_field($page, 'homepage_business_block_2_link') }}"  class="hover-image-homepage">
                         <img loading="lazy" class="black"
                         src="{{ get_image_url(get_field($page, 'homepage_business_block_2_logo_black')) }}"
                         alt="{{ get_field($page, 'homepage_business_block_2') }}">
@@ -141,7 +141,7 @@
                     <div class="bottom-right-item hover-image-homepage" data-aos="zoom-in" data-aos-duration="1200"
                         data-aos-easing="ease-in-out">
 
-                       <a href="{{ get_field($page, 'homepage_business_block_3_link') }}">
+                       <a href="{{ get_field($page, 'homepage_business_block_3_link') }}"  class="hover-image-homepage">
                         <img loading="lazy" class="black"
                         src="{{ get_image_url(get_field($page, 'homepage_business_block_3_logo_black')) }}"
                         alt="{{ get_field($page, 'homepage_business_block_3') }}">
@@ -154,7 +154,7 @@
                     <div class="bottom-right-item hover-image-homepage" data-aos="zoom-in" data-aos-duration="1200"
                         data-aos-easing="ease-in-out">
 
-                        <a href="{{ get_field($page, 'homepage_business_block_4_link') }}">
+                        <a href="{{ get_field($page, 'homepage_business_block_4_link') }}"  class="hover-image-homepage">
                             <img loading="lazy" class="black"
                             src="{{ get_image_url(get_field($page, 'homepage_business_block_4_logo_black')) }}"
                             alt="{{ get_field($page, 'homepage_business_block_4') }}">
@@ -168,7 +168,7 @@
                     <div class="bottom-right-item hover-image-homepage" data-aos="zoom-in" data-aos-duration="1200"
                         data-aos-easing="ease-in-out">
 
-                       <a href="{{ get_field($page, 'homepage_business_block_6_link') }}">
+                       <a href="{{ get_field($page, 'homepage_business_block_6_link') }}"  class="hover-image-homepage">
                         <img loading="lazy" class="black"
                         src="{{ get_image_url(get_field($page, 'homepage_business_block_5_logo_black')) }}"
                         alt="{{ get_field($page, 'homepage_business_block_5') }}">
@@ -183,7 +183,7 @@
                     <div class="bottom-right-item hover-image-homepage" data-aos="zoom-in" data-aos-duration="1200"
                         data-aos-easing="ease-in-out">
 
-                       <a href="{{ get_field($page, 'homepage_business_block_5_link') }}">
+                       <a href="{{ get_field($page, 'homepage_business_block_5_link') }}"  class="hover-image-homepage">
                         <img loading="lazy" class="black"
                         src="{{ get_image_url(get_field($page, 'homepage_business_block_5_logo_black')) }}"
                         alt="{{ get_field($page, 'homepage_business_block_5') }}">

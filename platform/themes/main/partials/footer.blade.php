@@ -71,7 +71,7 @@
                 </div>
 
                 <div class="footer-left-bottom">
-                    <a  class="img-bct d-inline-block " href="{{theme_option('link_bct')}}" title="">
+                    <a  class="img-bct {{ theme_option('link_bct') ? "d-inline-block" : "d-none"}}" href="{{theme_option('link_bct')}}" title="">
                         <img loading="lazy" src="{{ get_image_url(theme_option('logo_bct')) }}"
                             alt="{!! __('Bộ công thương') !!}">
                     </a>
